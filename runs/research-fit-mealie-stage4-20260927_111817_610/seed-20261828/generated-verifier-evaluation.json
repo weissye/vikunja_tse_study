@@ -1,0 +1,943 @@
+{
+  "concurrency_epochs_evaluated": 1,
+  "concurrency_oracle_families_exercised": 1,
+  "concurrency_oracles_exercised": 1,
+  "concurrency_oracles_generated_ready": 1,
+  "concurrency_oracles_ready": 1,
+  "contract_oracles_exercised": 17,
+  "contract_oracles_generated": 76,
+  "counts": {
+    "INCONCLUSIVE": 3,
+    "PASS": 64,
+    "VIOLATED": 0
+  },
+  "layer_counts": {
+    "concurrency": {
+      "INCONCLUSIVE": 0,
+      "PASS": 1,
+      "VIOLATED": 0
+    },
+    "contract": {
+      "INCONCLUSIVE": 0,
+      "PASS": 51,
+      "VIOLATED": 0
+    },
+    "state": {
+      "INCONCLUSIVE": 3,
+      "PASS": 12,
+      "VIOLATED": 0
+    }
+  },
+  "note": "Not-exercised operations are coverage facts, not automatically semantic failures.",
+  "profile": "openapi-only-generated-verifiers",
+  "run_status": "INCONCLUSIVE",
+  "schema_version": 1,
+  "server_error_candidates": [],
+  "source": {
+    "openapi_version": "3.1.0",
+    "sha256": "e398a26d25a5c038a50709d7c03a5d427b08c90e94d9b5248eb6dd39d4e28d52",
+    "title": "Mealie",
+    "version": "v3.27.0"
+  },
+  "witnesses": [
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_organizers_categories_post",
+      "result": "PASS",
+      "trigger_event": 0
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_households_mealplans_rules_post",
+      "result": "PASS",
+      "trigger_event": 1
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_recipes_post",
+      "result": "PASS",
+      "trigger_event": 2
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_organizers_tools_post",
+      "result": "PASS",
+      "trigger_event": 3
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_households_mealplans_post",
+      "result": "PASS",
+      "trigger_event": 4
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_organizers_tags_post",
+      "result": "PASS",
+      "trigger_event": 5
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_households_mealplans_rules_post",
+      "result": "PASS",
+      "trigger_event": 6
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_organizers_tools_post",
+      "result": "PASS",
+      "trigger_event": 7
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_organizers_tags_post",
+      "result": "PASS",
+      "trigger_event": 8
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_households_mealplans_rules_post",
+      "result": "PASS",
+      "trigger_event": 9
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_recipes_post",
+      "result": "PASS",
+      "trigger_event": 10
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_organizers_tags__item_id__get",
+      "result": "PASS",
+      "trigger_event": 11
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_recipes__slug__get",
+      "result": "PASS",
+      "trigger_event": 12
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_organizers_tools_post",
+      "result": "PASS",
+      "trigger_event": 13
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_recipes__slug__get",
+      "result": "PASS",
+      "trigger_event": 14
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_organizers_tags_post",
+      "result": "PASS",
+      "trigger_event": 15
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_organizers_categories_post",
+      "result": "PASS",
+      "trigger_event": 16
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_households_shopping_lists_post",
+      "result": "PASS",
+      "trigger_event": 17
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_recipes_post",
+      "result": "PASS",
+      "trigger_event": 18
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_households_mealplans_post",
+      "result": "PASS",
+      "trigger_event": 19
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_organizers_tags__item_id__get",
+      "result": "PASS",
+      "trigger_event": 20
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_organizers_categories_post",
+      "result": "PASS",
+      "trigger_event": 21
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_households_shopping_lists_post",
+      "result": "PASS",
+      "trigger_event": 22
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_households_mealplans_post",
+      "result": "PASS",
+      "trigger_event": 23
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_households_mealplans__item_id__get",
+      "result": "PASS",
+      "trigger_event": 24
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_households_mealplans_rules__item_id__get",
+      "result": "PASS",
+      "trigger_event": 25
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_organizers_tools__item_id__get",
+      "result": "PASS",
+      "trigger_event": 26
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_households_mealplans__item_id__get",
+      "result": "PASS",
+      "trigger_event": 27
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_organizers_tags__item_id__get",
+      "result": "PASS",
+      "trigger_event": 28
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_households_shopping_lists_post",
+      "result": "PASS",
+      "trigger_event": 29
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_households_mealplans__item_id__get",
+      "result": "PASS",
+      "trigger_event": 30
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_recipes__slug__get",
+      "result": "PASS",
+      "trigger_event": 31
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_households_mealplans_rules__item_id__get",
+      "result": "PASS",
+      "trigger_event": 32
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_organizers_tools__item_id__get",
+      "result": "PASS",
+      "trigger_event": 33
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_organizers_categories__item_id__get",
+      "result": "PASS",
+      "trigger_event": 34
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_organizers_categories__item_id__get",
+      "result": "PASS",
+      "trigger_event": 36
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_households_shopping_lists__item_id__get",
+      "result": "PASS",
+      "trigger_event": 37
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_households_shopping_lists__item_id__get",
+      "result": "PASS",
+      "trigger_event": 38
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_households_mealplans_rules__item_id__get",
+      "result": "PASS",
+      "trigger_event": 39
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_households_shopping_lists__item_id__get",
+      "result": "PASS",
+      "trigger_event": 40
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_households_shopping_items_post",
+      "result": "PASS",
+      "trigger_event": 41
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_recipes_timeline_events_post",
+      "result": "PASS",
+      "trigger_event": 42
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_organizers_categories__item_id__get",
+      "result": "PASS",
+      "trigger_event": 43
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_recipes_timeline_events_post",
+      "result": "PASS",
+      "trigger_event": 45
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_organizers_tools__item_id__get",
+      "result": "PASS",
+      "trigger_event": 46
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_recipes_timeline_events_post",
+      "result": "PASS",
+      "trigger_event": 47
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_recipes_timeline_events__item_id__get",
+      "result": "PASS",
+      "trigger_event": 49
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_recipes_timeline_events__item_id__get",
+      "result": "PASS",
+      "trigger_event": 50
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_households_shopping_items_post",
+      "result": "PASS",
+      "trigger_event": 51
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::get_one_api_recipes_timeline_events__item_id__get",
+      "result": "PASS",
+      "trigger_event": 52
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::create_one_api_households_shopping_items_post",
+      "result": "PASS",
+      "trigger_event": 54
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 39,
+      "oracle_id": "state::create_one_api_households_mealplans_rules_post",
+      "resource_path": "/api/households/mealplans/rules/d6034115-71bc-4939-9f81-979d2c06aae4",
+      "result": "PASS",
+      "trigger_event": 1
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 46,
+      "oracle_id": "state::create_one_api_organizers_tools_post",
+      "resource_path": "/api/organizers/tools/d5682115-52b9-4b9d-83dd-dddc384082cf",
+      "result": "PASS",
+      "trigger_event": 3
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 24,
+      "oracle_id": "state::create_one_api_households_mealplans_post",
+      "resource_path": "/api/households/mealplans/1",
+      "result": "PASS",
+      "trigger_event": 4
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 25,
+      "oracle_id": "state::create_one_api_households_mealplans_rules_post",
+      "resource_path": "/api/households/mealplans/rules/0642bdc8-9c39-4668-a600-e5923e959c30",
+      "result": "PASS",
+      "trigger_event": 6
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 33,
+      "oracle_id": "state::create_one_api_organizers_tools_post",
+      "resource_path": "/api/organizers/tools/d466216a-c5ca-4e83-a47c-d3347482ea99",
+      "result": "PASS",
+      "trigger_event": 7
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 32,
+      "oracle_id": "state::create_one_api_households_mealplans_rules_post",
+      "resource_path": "/api/households/mealplans/rules/e3bdfd67-188b-4c20-a483-03258da89935",
+      "result": "PASS",
+      "trigger_event": 9
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 26,
+      "oracle_id": "state::create_one_api_organizers_tools_post",
+      "resource_path": "/api/organizers/tools/e3c1537d-8d03-477c-b5a0-ca69b2313e73",
+      "result": "PASS",
+      "trigger_event": 13
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 38,
+      "oracle_id": "state::create_one_api_households_shopping_lists_post",
+      "reason": "acknowledged-state-unobservable",
+      "resource_path": "/api/households/shopping/lists/1e1b3803-ab5c-435b-9bda-6178843e8cf6",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 17
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 27,
+      "oracle_id": "state::create_one_api_households_mealplans_post",
+      "resource_path": "/api/households/mealplans/2",
+      "result": "PASS",
+      "trigger_event": 19
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 40,
+      "oracle_id": "state::create_one_api_households_shopping_lists_post",
+      "reason": "acknowledged-state-unobservable",
+      "resource_path": "/api/households/shopping/lists/1a704783-177e-4d76-9dbb-73fdc7de473b",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 22
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 30,
+      "oracle_id": "state::create_one_api_households_mealplans_post",
+      "resource_path": "/api/households/mealplans/3",
+      "result": "PASS",
+      "trigger_event": 23
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 37,
+      "oracle_id": "state::create_one_api_households_shopping_lists_post",
+      "reason": "acknowledged-state-unobservable",
+      "resource_path": "/api/households/shopping/lists/a5a6f481-b81d-43c9-83e0-a4d0f546a71e",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 29
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 50,
+      "oracle_id": "state::create_one_api_recipes_timeline_events_post",
+      "resource_path": "/api/recipes/timeline/events/edff21b0-4ee6-440d-a8cc-b31bcb9ae699",
+      "result": "PASS",
+      "trigger_event": 42
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 49,
+      "oracle_id": "state::create_one_api_recipes_timeline_events_post",
+      "resource_path": "/api/recipes/timeline/events/0ce89a22-303a-42a8-9c5a-fdbd2ba626ba",
+      "result": "PASS",
+      "trigger_event": 45
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 52,
+      "oracle_id": "state::create_one_api_recipes_timeline_events_post",
+      "resource_path": "/api/recipes/timeline/events/b0bcc3ed-4c45-451b-97d9-ffdb409d1164",
+      "result": "PASS",
+      "trigger_event": 47
+    },
+    {
+      "epoch_id": "generated-epoch-0",
+      "kind": "empirical-update-delete",
+      "observation_event": 64,
+      "oracle_id": "cross-method::update-delete::update_one_api_households_mealplans__item_id__put::delete_one_api_households_mealplans__item_id__delete",
+      "result": "PASS",
+      "trigger_events": [
+        62,
+        63
+      ]
+    }
+  ]
+}

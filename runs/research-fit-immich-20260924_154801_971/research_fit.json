@@ -1,0 +1,1161 @@
+{
+  "candidate": "immich",
+  "spec_path": "C:\\work\\temp\\vikunja_tse_study\\model\\immich\\immich-v3.2.0-openapi.json",
+  "sha256": "51719f0b6573ca75eb51834b01a7fdb9e963c9d60fcce813f10c1463a987b866",
+  "openapi_version": "3.0.0",
+  "operation_count": 275,
+  "families": {
+    "primary": {
+      "count": 39,
+      "operations": [
+        {
+          "method": "PUT",
+          "path": "/albums/assets",
+          "operation_id": "addAssetsToAlbums",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/albums/{id}/assets",
+          "operation_id": "addAssetsToAlbum",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/albums/{id}/assets",
+          "operation_id": "removeAssetFromAlbum",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/assets",
+          "operation_id": "uploadAsset",
+          "has_2xx": true,
+          "request_media": [
+            "multipart/form-data"
+          ],
+          "response_codes": [
+            "200",
+            "201"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/assets",
+          "operation_id": "updateAssets",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/assets",
+          "operation_id": "deleteAssets",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/assets/bulk-upload-check",
+          "operation_id": "checkBulkUpload",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/assets/copy",
+          "operation_id": "copyAsset",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/assets/jobs",
+          "operation_id": "runAssetJobs",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/assets/metadata",
+          "operation_id": "updateBulkAssetMetadata",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/assets/metadata",
+          "operation_id": "deleteBulkAssetMetadata",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/assets/statistics",
+          "operation_id": "getAssetStatistics",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/assets/{id}",
+          "operation_id": "getAssetInfo",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/assets/{id}",
+          "operation_id": "updateAsset",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/assets/{id}/edits",
+          "operation_id": "getAssetEdits",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/assets/{id}/edits",
+          "operation_id": "editAsset",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/assets/{id}/edits",
+          "operation_id": "removeAssetEdits",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/assets/{id}/metadata",
+          "operation_id": "getAssetMetadata",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/assets/{id}/metadata",
+          "operation_id": "updateAssetMetadata",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/assets/{id}/metadata/{key}",
+          "operation_id": "getAssetMetadataByKey",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/assets/{id}/metadata/{key}",
+          "operation_id": "deleteAssetMetadata",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/assets/{id}/ocr",
+          "operation_id": "getAssetOcr",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/assets/{id}/original",
+          "operation_id": "downloadAsset",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/assets/{id}/thumbnail",
+          "operation_id": "viewAsset",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/assets/{id}/video/playback",
+          "operation_id": "playAssetVideo",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/assets/{id}/video/stream/main.m3u8",
+          "operation_id": "getMainPlaylist",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/assets/{id}/video/stream/{sessionId}",
+          "operation_id": "endSession",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/assets/{id}/video/stream/{sessionId}/{variantIndex}/playlist.m3u8",
+          "operation_id": "getMediaPlaylist",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/assets/{id}/video/stream/{sessionId}/{variantIndex}/{filename}",
+          "operation_id": "getSegment",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/memories/{id}/assets",
+          "operation_id": "addMemoryAssets",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/memories/{id}/assets",
+          "operation_id": "removeMemoryAssets",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/search/large-assets",
+          "operation_id": "searchLargeAssets",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/shared-links/{id}/assets",
+          "operation_id": "addSharedLinkAssets",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/shared-links/{id}/assets",
+          "operation_id": "removeSharedLinkAssets",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/stacks/{id}/assets/{assetId}",
+          "operation_id": "removeAssetFromStack",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/tags/assets",
+          "operation_id": "bulkTagAssets",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/tags/{id}/assets",
+          "operation_id": "tagAssets",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/tags/{id}/assets",
+          "operation_id": "untagAssets",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/trash/restore/assets",
+          "operation_id": "restoreAssets",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        }
+      ]
+    },
+    "links": {
+      "count": 13,
+      "operations": [
+        {
+          "method": "GET",
+          "path": "/albums",
+          "operation_id": "getAllAlbums",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/albums",
+          "operation_id": "createAlbum",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/albums/assets",
+          "operation_id": "addAssetsToAlbums",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/albums/statistics",
+          "operation_id": "getAlbumStatistics",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "operation_id": "getAlbumInfo",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "operation_id": "updateAlbumInfo",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/albums/{id}",
+          "operation_id": "deleteAlbum",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/albums/{id}/assets",
+          "operation_id": "addAssetsToAlbum",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/albums/{id}/assets",
+          "operation_id": "removeAssetFromAlbum",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}/map-markers",
+          "operation_id": "getAlbumMapMarkers",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/albums/{id}/user/{userId}",
+          "operation_id": "updateAlbumUser",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/albums/{id}/user/{userId}",
+          "operation_id": "removeUserFromAlbum",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/albums/{id}/users",
+          "operation_id": "addUsersToAlbum",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        }
+      ]
+    },
+    "secondary": {
+      "count": 43,
+      "operations": [
+        {
+          "method": "GET",
+          "path": "/admin/users",
+          "operation_id": "searchUsersAdmin",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/admin/users",
+          "operation_id": "createUserAdmin",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/admin/users/{id}",
+          "operation_id": "getUserAdmin",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/admin/users/{id}",
+          "operation_id": "updateUserAdmin",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/admin/users/{id}",
+          "operation_id": "deleteUserAdmin",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/admin/users/{id}/calendar-heatmap",
+          "operation_id": "getUserCalendarHeatmapAdmin",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/admin/users/{id}/preferences",
+          "operation_id": "getUserPreferencesAdmin",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/admin/users/{id}/preferences",
+          "operation_id": "updateUserPreferencesAdmin",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/admin/users/{id}/restore",
+          "operation_id": "restoreUserAdmin",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/admin/users/{id}/sessions",
+          "operation_id": "getUserSessionsAdmin",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/admin/users/{id}/statistics",
+          "operation_id": "getUserStatisticsAdmin",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/albums/{id}/users",
+          "operation_id": "addUsersToAlbum",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/cluster-groups/{id}/users",
+          "operation_id": "getClusterGroupUsers",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/partners",
+          "operation_id": "getPartners",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/partners",
+          "operation_id": "createPartner",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/partners/{id}",
+          "operation_id": "createPartnerDeprecated",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "201"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/partners/{id}",
+          "operation_id": "updatePartner",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/partners/{id}",
+          "operation_id": "removePartner",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/shared-links",
+          "operation_id": "getAllSharedLinks",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/shared-links",
+          "operation_id": "createSharedLink",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/shared-links/login",
+          "operation_id": "sharedLinkLogin",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/shared-links/me",
+          "operation_id": "getMySharedLink",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/shared-links/{id}",
+          "operation_id": "getSharedLinkById",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PATCH",
+          "path": "/shared-links/{id}",
+          "operation_id": "updateSharedLink",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/shared-links/{id}",
+          "operation_id": "removeSharedLink",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/shared-links/{id}/assets",
+          "operation_id": "addSharedLinkAssets",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/shared-links/{id}/assets",
+          "operation_id": "removeSharedLinkAssets",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/users",
+          "operation_id": "searchUsers",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/users/me",
+          "operation_id": "getMyUser",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/users/me",
+          "operation_id": "updateMyUser",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/users/me/calendar-heatmap",
+          "operation_id": "getMyCalendarHeatmap",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/users/me/license",
+          "operation_id": "getUserLicense",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/users/me/license",
+          "operation_id": "setUserLicense",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/users/me/license",
+          "operation_id": "deleteUserLicense",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/users/me/onboarding",
+          "operation_id": "getUserOnboarding",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/users/me/onboarding",
+          "operation_id": "setUserOnboarding",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/users/me/onboarding",
+          "operation_id": "deleteUserOnboarding",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/users/me/preferences",
+          "operation_id": "getMyPreferences",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/users/me/preferences",
+          "operation_id": "updateMyPreferences",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/users/profile-image",
+          "operation_id": "createProfileImage",
+          "has_2xx": true,
+          "request_media": [
+            "multipart/form-data"
+          ],
+          "response_codes": [
+            "201"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/users/profile-image",
+          "operation_id": "deleteProfileImage",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/users/{id}",
+          "operation_id": "getUser",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/users/{id}/profile-image",
+          "operation_id": "getProfileImage",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200"
+          ]
+        }
+      ]
+    }
+  },
+  "generator": {
+    "exit_code": 0,
+    "timed_out": false,
+    "report_generated": true,
+    "coverage": {
+      "covered_operations": 275,
+      "total_operations": 275,
+      "uncovered_operations": []
+    },
+    "unsupported_constructs": {
+      "ambiguities": [
+        "Entity 'admin/notifications/templates' has no component-schema evidence; name derived from path segment (confidence=0.5).",
+        "Key inference for entity 'admin/database-backups' has reduced confidence (0.7); path parameter(s) ['filename'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'admin/integrity/report' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'admin/notifications/templates' has reduced confidence (0.6); path parameter(s) ['name'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'duplicates' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'jobs' has reduced confidence (0.7); path parameter(s) ['name'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'people' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema."
+      ],
+      "document_level": [],
+      "remote_refs": []
+    },
+    "warnings": [],
+    "dependency_nodes": 26,
+    "dependency_edges": 4,
+    "relevant_edges": [
+      {
+        "confidence": 0.9,
+        "field_name": "albumId",
+        "provenance": [
+          {
+            "detail": "Create request body property 'albumId' matches entity 'albums'",
+            "pointer": "#/paths/~1activities/post/requestBody/content/application~1json/properties/albumId",
+            "rule": "D2:D2:id_suffix_name_match"
+          }
+        ],
+        "source": "activities",
+        "target": "albums"
+      },
+      {
+        "confidence": 0.9,
+        "field_name": "assetId",
+        "provenance": [
+          {
+            "detail": "Create request body property 'assetId' matches entity 'assets'",
+            "pointer": "#/paths/~1activities/post/requestBody/content/application~1json/properties/assetId",
+            "rule": "D2:D2:id_suffix_name_match"
+          }
+        ],
+        "source": "activities",
+        "target": "assets"
+      },
+      {
+        "confidence": 0.9,
+        "field_name": "assetId",
+        "provenance": [
+          {
+            "detail": "Create request body property 'assetId' matches entity 'assets'",
+            "pointer": "#/paths/~1faces/post/requestBody/content/application~1json/properties/assetId",
+            "rule": "D2:D2:id_suffix_name_match"
+          }
+        ],
+        "source": "faces",
+        "target": "assets"
+      },
+      {
+        "confidence": 0.9,
+        "field_name": "albumId",
+        "provenance": [
+          {
+            "detail": "Create request body property 'albumId' matches entity 'albums'",
+            "pointer": "#/paths/~1shared-links/post/requestBody/content/application~1json/properties/albumId",
+            "rule": "D2:D2:id_suffix_name_match"
+          }
+        ],
+        "source": "shared-links",
+        "target": "albums"
+      }
+    ]
+  },
+  "dependency_path_gate": {
+    "connected": false,
+    "edges": [],
+    "meaning": "Static inferred entity edges only; no runtime witness or oracle is implied."
+  },
+  "static_path_gates": {
+    "primary_create": true,
+    "primary_read": true,
+    "primary_update": true,
+    "link_mutation": true,
+    "link_read": true
+  },
+  "outcome": "STATIC_PATH_ONLY",
+  "interpretation": "Generation proves only operations were described and JS was emitted; it does not prove execution, dependency availability, correct request bodies, real overlap, or that an oracle is derivable from OpenAPI."
+}

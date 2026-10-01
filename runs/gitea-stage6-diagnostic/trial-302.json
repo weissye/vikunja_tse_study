@@ -1,0 +1,64 @@
+{
+  "seed": 302,
+  "family": "/repos/{owner}/{repo}/tag_protections",
+  "status": "BLOCKED_ANCESTOR",
+  "reason": "Ancestor creation did not return a documented success and identity",
+  "unique": "s6-cc7b3f3e54fd",
+  "parallel": true,
+  "events": [
+    {
+      "method": "GET",
+      "path": "/user",
+      "status": 200,
+      "body": {
+        "id": 2,
+        "login": "sbt-gitea-20260923_142458_008",
+        "login_name": "",
+        "source_id": 0,
+        "full_name": "",
+        "email": "sbt-gitea-20260923_142458_008@example.invalid",
+        "avatar_url": "http://127.0.0.1:3477/avatars/2416da0432aa84c7df6fea6fdddbb90d",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008",
+        "language": "",
+        "is_admin": false,
+        "last_login": "1970-01-01T00:00:00Z",
+        "created": "2026-09-23T11:24:58Z",
+        "restricted": false,
+        "active": true,
+        "prohibit_login": false,
+        "location": "",
+        "website": "",
+        "description": "",
+        "visibility": "public",
+        "followers_count": 0,
+        "following_count": 0,
+        "starred_repos_count": 0,
+        "username": "sbt-gitea-20260923_142458_008"
+      },
+      "start_ns": 1790168638310285100,
+      "end_ns": 1790168638340655600
+    },
+    {
+      "method": "POST",
+      "path": "/user/repos",
+      "status": 422,
+      "body": {
+        "message": "failed to load label template file \"s6-cc7b3f3e54fd-issue_labels\": label template \"s6-cc7b3f3e54fd-issue_labels\" not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168638340655600,
+      "end_ns": 1790168638357615800,
+      "operation_id": "createCurrentUserRepo",
+      "documented_success": false,
+      "request_body": {
+        "issue_labels": "s6-cc7b3f3e54fd-issue_labels",
+        "license": "s6-cc7b3f3e54fd-license",
+        "name": "s6-cc7b3f3e54fd-name"
+      }
+    }
+  ],
+  "candidates": [],
+  "actions_executed": 0,
+  "successful_mutations": 0,
+  "valid_observation_pairs": 0
+}

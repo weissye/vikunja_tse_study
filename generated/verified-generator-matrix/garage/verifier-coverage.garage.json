@@ -1,0 +1,249 @@
+{
+  "counts": {
+    "concurrency_oracles": 46,
+    "contract_only_mutations": 2,
+    "contract_verifiers": 32,
+    "mutations": 20,
+    "operations": 32,
+    "state_verified_mutations": 18
+  },
+  "coverage_complete": true,
+  "manual_assumptions": [],
+  "mutation_coverage": [
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/chains",
+      "path_template": "/chains",
+      "source_pointer": "#/paths/~1chains/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/chains/{chainId}",
+      "path_template": "/chains/{chainId}",
+      "source_pointer": "#/paths/~1chains~1{chainId}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/chains/{chainId}",
+      "path_template": "/chains/{chainId}",
+      "source_pointer": "#/paths/~1chains~1{chainId}/delete",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "delete-absence"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/garages",
+      "path_template": "/garages",
+      "source_pointer": "#/paths/~1garages/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/garages/{garageId}",
+      "path_template": "/garages/{garageId}",
+      "source_pointer": "#/paths/~1garages~1{garageId}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/garages/{garageId}",
+      "path_template": "/garages/{garageId}",
+      "source_pointer": "#/paths/~1garages~1{garageId}/delete",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "delete-absence"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/customers",
+      "path_template": "/customers",
+      "source_pointer": "#/paths/~1customers/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/customers/{customerId}",
+      "path_template": "/customers/{customerId}",
+      "source_pointer": "#/paths/~1customers~1{customerId}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/customers/{customerId}",
+      "path_template": "/customers/{customerId}",
+      "source_pointer": "#/paths/~1customers~1{customerId}/delete",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "delete-absence"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/cars",
+      "path_template": "/cars",
+      "source_pointer": "#/paths/~1cars/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/cars/{vin}",
+      "path_template": "/cars/{vin}",
+      "source_pointer": "#/paths/~1cars~1{vin}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/cars/{vin}",
+      "path_template": "/cars/{vin}",
+      "source_pointer": "#/paths/~1cars~1{vin}/delete",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "delete-absence"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/periodic-maintenance",
+      "path_template": "/periodic-maintenance",
+      "source_pointer": "#/paths/~1periodic-maintenance/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/periodic-maintenance/{pmId}",
+      "path_template": "/periodic-maintenance/{pmId}",
+      "source_pointer": "#/paths/~1periodic-maintenance~1{pmId}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/periodic-maintenance/{pmId}",
+      "path_template": "/periodic-maintenance/{pmId}",
+      "source_pointer": "#/paths/~1periodic-maintenance~1{pmId}/delete",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "delete-absence"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/repair-orders",
+      "path_template": "/repair-orders",
+      "source_pointer": "#/paths/~1repair-orders/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/repair-orders/{roId}",
+      "path_template": "/repair-orders/{roId}",
+      "source_pointer": "#/paths/~1repair-orders~1{roId}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/repair-orders/{roId}",
+      "path_template": "/repair-orders/{roId}",
+      "source_pointer": "#/paths/~1repair-orders~1{roId}/delete",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "delete-absence"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/repair-orders/{roId}/approve",
+      "path_template": "/repair-orders/{roId}/approve",
+      "source_pointer": "#/paths/~1repair-orders~1{roId}~1approve/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/repair-orders/{roId}/close",
+      "path_template": "/repair-orders/{roId}/close",
+      "source_pointer": "#/paths/~1repair-orders~1{roId}~1close/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    }
+  ],
+  "policy": {
+    "all_operations_receive_contract_verifier": true,
+    "concurrency_executor_role": "transport-and-barrier-only",
+    "decision_owner": "generated-provengo-model-and-oracle-manifest",
+    "external_application_knowledge_allowed": false,
+    "state_claims_require_openapi-derived-observation": true,
+    "unobservable_mutations_are_reported_contract_only": true
+  },
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.3",
+    "sha256": "464b760928b607da4d6cef46a6beff7fbcba6063e5de54617c8e49e2df7574a5",
+    "title": "Garage Chain SUT API (Demo)",
+    "version": "1.0.0"
+  }
+}

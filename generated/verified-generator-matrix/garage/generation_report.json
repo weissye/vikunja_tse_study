@@ -1,0 +1,1122 @@
+{
+  "coverage": {
+    "covered_operations": 32,
+    "total_operations": 32,
+    "uncovered_operations": []
+  },
+  "entities": [
+    {
+      "collection_path": "/chains",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Chain",
+      "item_path": "/chains/{chainId}",
+      "key": "chains",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "chainId"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'chainId' matches required schema property",
+          "pointer": "#/components/schemas/Chain/properties/chainId",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['chainId']",
+          "pointer": "/chains/{chainId}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listChains",
+          "kind": "list",
+          "method": "GET",
+          "path": "/chains",
+          "source_pointer": "#/paths/~1chains/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400
+          ],
+          "has_default_response": false,
+          "js_function": "createChain",
+          "kind": "create",
+          "method": "POST",
+          "path": "/chains",
+          "source_pointer": "#/paths/~1chains/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "deleteChain",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/chains/{chainId}",
+          "source_pointer": "#/paths/~1chains~1{chainId}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "getChain",
+          "kind": "get",
+          "method": "GET",
+          "path": "/chains/{chainId}",
+          "source_pointer": "#/paths/~1chains~1{chainId}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "updateChain",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/chains/{chainId}",
+          "source_pointer": "#/paths/~1chains~1{chainId}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Chains",
+      "provenance": [
+        {
+          "detail": "List operation GET /chains response 200 references Chain",
+          "pointer": "#/paths/~1chains/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Chain"
+    },
+    {
+      "collection_path": "/garages",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "chainId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'chainId' matches entity 'chains'",
+              "pointer": "#/paths/~1garages/post/requestBody/content/application~1json/properties/chainId",
+              "rule": "D2:D_key_field_exact_match"
+            }
+          ],
+          "target": "chains"
+        }
+      ],
+      "display_name": "Garage",
+      "item_path": "/garages/{garageId}",
+      "key": "garages",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "garageId"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'garageId' matches required schema property",
+          "pointer": "#/components/schemas/Garage/properties/garageId",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['garageId']",
+          "pointer": "/garages/{garageId}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listGarages",
+          "kind": "list",
+          "method": "GET",
+          "path": "/garages",
+          "source_pointer": "#/paths/~1garages/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400
+          ],
+          "has_default_response": false,
+          "js_function": "createGarage",
+          "kind": "create",
+          "method": "POST",
+          "path": "/garages",
+          "source_pointer": "#/paths/~1garages/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "deleteGarage",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/garages/{garageId}",
+          "source_pointer": "#/paths/~1garages~1{garageId}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "getGarage",
+          "kind": "get",
+          "method": "GET",
+          "path": "/garages/{garageId}",
+          "source_pointer": "#/paths/~1garages~1{garageId}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "updateGarage",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/garages/{garageId}",
+          "source_pointer": "#/paths/~1garages~1{garageId}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Garages",
+      "provenance": [
+        {
+          "detail": "List operation GET /garages response 200 references Garage",
+          "pointer": "#/paths/~1garages/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Garage"
+    },
+    {
+      "collection_path": "/customers",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "preferredGarageId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'preferredGarageId' matches entity 'garages'",
+              "pointer": "#/paths/~1customers/post/requestBody/content/application~1json/properties/preferredGarageId",
+              "rule": "D2:D_distinctive_key_suffix_match"
+            }
+          ],
+          "target": "garages"
+        }
+      ],
+      "display_name": "Customer",
+      "item_path": "/customers/{customerId}",
+      "key": "customers",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "customerId"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'customerId' matches required schema property",
+          "pointer": "#/components/schemas/Customer/properties/customerId",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['customerId']",
+          "pointer": "/customers/{customerId}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listCustomers",
+          "kind": "list",
+          "method": "GET",
+          "path": "/customers",
+          "source_pointer": "#/paths/~1customers/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400
+          ],
+          "has_default_response": false,
+          "js_function": "createCustomer",
+          "kind": "create",
+          "method": "POST",
+          "path": "/customers",
+          "source_pointer": "#/paths/~1customers/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "deleteCustomer",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/customers/{customerId}",
+          "source_pointer": "#/paths/~1customers~1{customerId}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "getCustomer",
+          "kind": "get",
+          "method": "GET",
+          "path": "/customers/{customerId}",
+          "source_pointer": "#/paths/~1customers~1{customerId}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "updateCustomer",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/customers/{customerId}",
+          "source_pointer": "#/paths/~1customers~1{customerId}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Customers",
+      "provenance": [
+        {
+          "detail": "List operation GET /customers response 200 references Customer",
+          "pointer": "#/paths/~1customers/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Customer"
+    },
+    {
+      "collection_path": "/cars",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "homeGarageId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'homeGarageId' matches entity 'garages'",
+              "pointer": "#/paths/~1cars/post/requestBody/content/application~1json/properties/homeGarageId",
+              "rule": "D2:D_distinctive_key_suffix_match"
+            }
+          ],
+          "target": "garages"
+        },
+        {
+          "confidence": 0.9,
+          "field_name": "ownerCustomerId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'ownerCustomerId' matches entity 'customers'",
+              "pointer": "#/paths/~1cars/post/requestBody/content/application~1json/properties/ownerCustomerId",
+              "rule": "D2:D_distinctive_key_suffix_match"
+            }
+          ],
+          "target": "customers"
+        }
+      ],
+      "display_name": "Car",
+      "item_path": "/cars/{vin}",
+      "key": "cars",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "vin"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'vin' matches required schema property",
+          "pointer": "#/components/schemas/Car/properties/vin",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['vin']",
+          "pointer": "/cars/{vin}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listCars",
+          "kind": "list",
+          "method": "GET",
+          "path": "/cars",
+          "source_pointer": "#/paths/~1cars/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400
+          ],
+          "has_default_response": false,
+          "js_function": "createCar",
+          "kind": "create",
+          "method": "POST",
+          "path": "/cars",
+          "source_pointer": "#/paths/~1cars/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "deleteCar",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/cars/{vin}",
+          "source_pointer": "#/paths/~1cars~1{vin}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "getCar",
+          "kind": "get",
+          "method": "GET",
+          "path": "/cars/{vin}",
+          "source_pointer": "#/paths/~1cars~1{vin}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "updateCar",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/cars/{vin}",
+          "source_pointer": "#/paths/~1cars~1{vin}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Cars",
+      "provenance": [
+        {
+          "detail": "List operation GET /cars response 200 references Car",
+          "pointer": "#/paths/~1cars/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Car"
+    },
+    {
+      "collection_path": "/periodic-maintenance",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "carVin",
+          "provenance": [
+            {
+              "detail": "Create request body property 'carVin' matches entity 'cars'",
+              "pointer": "#/paths/~1periodic-maintenance/post/requestBody/content/application~1json/properties/carVin",
+              "rule": "D2:D_distinctive_key_suffix_match"
+            }
+          ],
+          "target": "cars"
+        },
+        {
+          "confidence": 0.9,
+          "field_name": "garageId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'garageId' matches entity 'garages'",
+              "pointer": "#/paths/~1periodic-maintenance/post/requestBody/content/application~1json/properties/garageId",
+              "rule": "D2:D_key_field_exact_match"
+            }
+          ],
+          "target": "garages"
+        }
+      ],
+      "display_name": "PeriodicMaintenance",
+      "item_path": "/periodic-maintenance/{pmId}",
+      "key": "periodic-maintenance",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "pmId"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'pmId' matches required schema property",
+          "pointer": "#/components/schemas/PeriodicMaintenance/properties/pmId",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['pmId']",
+          "pointer": "/periodic-maintenance/{pmId}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listPeriodicMaintenances",
+          "kind": "list",
+          "method": "GET",
+          "path": "/periodic-maintenance",
+          "source_pointer": "#/paths/~1periodic-maintenance/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400
+          ],
+          "has_default_response": false,
+          "js_function": "createPeriodicMaintenance",
+          "kind": "create",
+          "method": "POST",
+          "path": "/periodic-maintenance",
+          "source_pointer": "#/paths/~1periodic-maintenance/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "deletePeriodicMaintenance",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/periodic-maintenance/{pmId}",
+          "source_pointer": "#/paths/~1periodic-maintenance~1{pmId}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "getPeriodicMaintenance",
+          "kind": "get",
+          "method": "GET",
+          "path": "/periodic-maintenance/{pmId}",
+          "source_pointer": "#/paths/~1periodic-maintenance~1{pmId}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "updatePeriodicMaintenance",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/periodic-maintenance/{pmId}",
+          "source_pointer": "#/paths/~1periodic-maintenance~1{pmId}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PeriodicMaintenances",
+      "provenance": [
+        {
+          "detail": "List operation GET /periodic-maintenance response 200 references PeriodicMaintenance",
+          "pointer": "#/paths/~1periodic-maintenance/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PeriodicMaintenance"
+    },
+    {
+      "collection_path": "/repair-orders",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "carVin",
+          "provenance": [
+            {
+              "detail": "Create request body property 'carVin' matches entity 'cars'",
+              "pointer": "#/paths/~1repair-orders/post/requestBody/content/application~1json/properties/carVin",
+              "rule": "D2:D_distinctive_key_suffix_match"
+            }
+          ],
+          "target": "cars"
+        },
+        {
+          "confidence": 0.9,
+          "field_name": "customerId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'customerId' matches entity 'customers'",
+              "pointer": "#/paths/~1repair-orders/post/requestBody/content/application~1json/properties/customerId",
+              "rule": "D2:D_key_field_exact_match"
+            }
+          ],
+          "target": "customers"
+        },
+        {
+          "confidence": 0.9,
+          "field_name": "garageId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'garageId' matches entity 'garages'",
+              "pointer": "#/paths/~1repair-orders/post/requestBody/content/application~1json/properties/garageId",
+              "rule": "D2:D_key_field_exact_match"
+            }
+          ],
+          "target": "garages"
+        }
+      ],
+      "display_name": "RepairOrder",
+      "item_path": "/repair-orders/{roId}",
+      "key": "repair-orders",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "roId"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'roId' matches required schema property",
+          "pointer": "#/components/schemas/RepairOrder/properties/roId",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['roId']",
+          "pointer": "/repair-orders/{roId}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listRepairOrders",
+          "kind": "list",
+          "method": "GET",
+          "path": "/repair-orders",
+          "source_pointer": "#/paths/~1repair-orders/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400
+          ],
+          "has_default_response": false,
+          "js_function": "createRepairOrder",
+          "kind": "create",
+          "method": "POST",
+          "path": "/repair-orders",
+          "source_pointer": "#/paths/~1repair-orders/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "deleteRepairOrder",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/repair-orders/{roId}",
+          "source_pointer": "#/paths/~1repair-orders~1{roId}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "getRepairOrder",
+          "kind": "get",
+          "method": "GET",
+          "path": "/repair-orders/{roId}",
+          "source_pointer": "#/paths/~1repair-orders~1{roId}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "updateRepairOrder",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/repair-orders/{roId}",
+          "source_pointer": "#/paths/~1repair-orders~1{roId}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "approveRepairOrder",
+          "kind": "action",
+          "method": "POST",
+          "path": "/repair-orders/{roId}/approve",
+          "source_pointer": "#/paths/~1repair-orders~1{roId}~1approve/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "closeRepairOrder",
+          "kind": "action",
+          "method": "POST",
+          "path": "/repair-orders/{roId}/close",
+          "source_pointer": "#/paths/~1repair-orders~1{roId}~1close/post",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "RepairOrders",
+      "provenance": [
+        {
+          "detail": "List operation GET /repair-orders response 200 references RepairOrder",
+          "pointer": "#/paths/~1repair-orders/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "RepairOrder"
+    }
+  ],
+  "isolation_audit": {
+    "denied_file_count": 0,
+    "policy": "allow-listed OpenAPI/config inputs only; environment-specific paths excluded from deterministic report"
+  },
+  "meta": {
+    "cli_args": {
+      "base_url": "http://127.0.0.1:5000",
+      "command": "generate",
+      "generator_version": "0.25.5",
+      "instances_per_action": 1,
+      "instances_per_entity": 2,
+      "name": "garage",
+      "seed": 1,
+      "source_openapi_sha256": "464b760928b607da4d6cef46a6beff7fbcba6063e5de54617c8e49e2df7574a5",
+      "story_profile": "full"
+    },
+    "openapi_version": "3.0.3",
+    "title": "Garage Chain SUT API (Demo)"
+  },
+  "reproducibility": {
+    "artifact_sha256": {
+      "dependency_graph_json": "db490c3c717bf352e234cb462da31d6e16f771794270aec14d30076be185d9b2",
+      "interfaces_js": "a2470c5420566bc736f76a2104d80d27fd456c72958a896659f586a832b1894d",
+      "stories_js": "605eb2477056361ebdd3c8f5db5f76241163f17d4c58ef866814f223a0b15007"
+    },
+    "base_url": "http://127.0.0.1:5000",
+    "content_fingerprint_sha256": "bc26f56bd07d0a06a9af4596a1117736f12fde0937ddb65cfae58376617010c5",
+    "generator_version": "0.25.5",
+    "instances_per_action": 1,
+    "instances_per_entity": 2,
+    "scope": "semantic inputs and generated artifacts; filesystem paths and run-time ports are excluded",
+    "seed": 1,
+    "source_openapi_sha256": "464b760928b607da4d6cef46a6beff7fbcba6063e5de54617c8e49e2df7574a5"
+  },
+  "response_code_coverage": [
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/chains"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/chains"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/chains/{chainId}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/chains/{chainId}"
+    },
+    {
+      "declared_codes": [
+        "204",
+        "400",
+        "404"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/chains/{chainId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/garages"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/garages"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/garages/{garageId}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "400",
+        "404"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/garages/{garageId}"
+    },
+    {
+      "declared_codes": [
+        "204",
+        "400",
+        "404"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/garages/{garageId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/customers"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/customers"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/customers/{customerId}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "400",
+        "404"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/customers/{customerId}"
+    },
+    {
+      "declared_codes": [
+        "204",
+        "400",
+        "404"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/customers/{customerId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/cars"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/cars"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/cars/{vin}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "400",
+        "404"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/cars/{vin}"
+    },
+    {
+      "declared_codes": [
+        "204",
+        "400",
+        "404"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/cars/{vin}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/periodic-maintenance"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/periodic-maintenance"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/periodic-maintenance/{pmId}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "400",
+        "404"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/periodic-maintenance/{pmId}"
+    },
+    {
+      "declared_codes": [
+        "204",
+        "404"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/periodic-maintenance/{pmId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/repair-orders"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/repair-orders"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/repair-orders/{roId}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "400",
+        "404"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/repair-orders/{roId}"
+    },
+    {
+      "declared_codes": [
+        "204",
+        "404"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/repair-orders/{roId}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "400",
+        "404"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/repair-orders/{roId}/approve"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "400",
+        "404"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/repair-orders/{roId}/close"
+    }
+  ],
+  "security_schemes": {},
+  "standalone_operations": [],
+  "unsupported_constructs": {
+    "ambiguities": [],
+    "document_level": [],
+    "remote_refs": []
+  },
+  "warnings": []
+}

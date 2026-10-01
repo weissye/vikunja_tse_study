@@ -1,0 +1,859 @@
+{
+  "concurrency_epochs_evaluated": 2,
+  "concurrency_oracle_families_exercised": 2,
+  "concurrency_oracles_exercised": 2,
+  "concurrency_oracles_generated_ready": 2,
+  "concurrency_oracles_ready": 2,
+  "contract_oracles_exercised": 19,
+  "contract_oracles_generated": 243,
+  "counts": {
+    "INCONCLUSIVE": 16,
+    "PASS": 48,
+    "VIOLATED": 0
+  },
+  "layer_counts": {
+    "concurrency": {
+      "INCONCLUSIVE": 2,
+      "PASS": 0,
+      "VIOLATED": 0
+    },
+    "contract": {
+      "INCONCLUSIVE": 13,
+      "PASS": 34,
+      "VIOLATED": 0
+    },
+    "state": {
+      "INCONCLUSIVE": 1,
+      "PASS": 14,
+      "VIOLATED": 0
+    }
+  },
+  "note": "Not-exercised operations are coverage facts, not automatically semantic failures.",
+  "profile": "openapi-only-generated-verifiers",
+  "run_status": "INCONCLUSIVE",
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.0",
+    "sha256": "007f2882f09610dd59ca8723e298207da1c68ceb33cca904c58b59bf95d87b9f",
+    "title": "Immich",
+    "version": "3.2.0"
+  },
+  "witnesses": [
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createApiKey",
+      "result": "PASS",
+      "trigger_event": 0
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createAlbum",
+      "result": "PASS",
+      "trigger_event": 1
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createMemory",
+      "result": "PASS",
+      "trigger_event": 2
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 500
+      },
+      "oracle_id": "contract::createLibrary",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 3
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createApiKey",
+      "result": "PASS",
+      "trigger_event": 4
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createPartner",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 5
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createPerson",
+      "result": "PASS",
+      "trigger_event": 6
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 500
+      },
+      "oracle_id": "contract::createLibrary",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 7
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createMemory",
+      "result": "PASS",
+      "trigger_event": 8
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createSession",
+      "result": "PASS",
+      "trigger_event": 9
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createPartner",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 10
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createTag",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 11
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::createJob",
+      "result": "PASS",
+      "trigger_event": 12
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createUserAdmin",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 13
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 500
+      },
+      "oracle_id": "contract::createLibrary",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 14
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createUserAdmin",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 15
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createTag",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 16
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::createJob",
+      "result": "PASS",
+      "trigger_event": 17
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createUserAdmin",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 18
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createPartner",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 19
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createAlbum",
+      "result": "PASS",
+      "trigger_event": 20
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createApiKey",
+      "result": "PASS",
+      "trigger_event": 21
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getApiKey",
+      "result": "PASS",
+      "trigger_event": 22
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 23
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createMemory",
+      "result": "PASS",
+      "trigger_event": 24
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createTag",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 25
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createAlbum",
+      "result": "PASS",
+      "trigger_event": 26
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createWorkflow",
+      "result": "PASS",
+      "trigger_event": 27
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 28
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getApiKey",
+      "result": "PASS",
+      "trigger_event": 29
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getApiKey",
+      "result": "PASS",
+      "trigger_event": 30
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 31
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getPerson",
+      "result": "PASS",
+      "trigger_event": 32
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 33
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 34
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 35
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createActivity",
+      "result": "PASS",
+      "trigger_event": 36
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 37
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createSharedLink",
+      "result": "PASS",
+      "trigger_event": 38
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::createJob",
+      "result": "PASS",
+      "trigger_event": 39
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createSharedLink",
+      "result": "PASS",
+      "trigger_event": 40
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createSharedLink",
+      "result": "PASS",
+      "trigger_event": 41
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createActivity",
+      "result": "PASS",
+      "trigger_event": 42
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getSharedLinkById",
+      "result": "PASS",
+      "trigger_event": 43
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getSharedLinkById",
+      "result": "PASS",
+      "trigger_event": 44
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getSharedLinkById",
+      "result": "PASS",
+      "trigger_event": 45
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createActivity",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 46
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 30,
+      "oracle_id": "state::createApiKey",
+      "resource_path": "/api-keys/75d462cc-b5e0-4b0d-b6af-23513e160f95",
+      "result": "PASS",
+      "trigger_event": 0
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 37,
+      "oracle_id": "state::createAlbum",
+      "resource_path": "/albums/793d5bed-806e-4deb-ba27-83515cde502a",
+      "result": "PASS",
+      "trigger_event": 1
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 23,
+      "oracle_id": "state::createMemory",
+      "resource_path": "/memories/c65301ae-2752-4662-974e-116966256a00",
+      "result": "PASS",
+      "trigger_event": 2
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 22,
+      "oracle_id": "state::createApiKey",
+      "resource_path": "/api-keys/6411b006-2b6b-43c6-9bfd-9ae8a40d29aa",
+      "result": "PASS",
+      "trigger_event": 4
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 32,
+      "oracle_id": "state::createPerson",
+      "resource_path": "/people/2e7fd503-8410-441d-984e-0fa364f3a340",
+      "result": "PASS",
+      "trigger_event": 6
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 33,
+      "oracle_id": "state::createMemory",
+      "resource_path": "/memories/f8e8a693-1771-4f01-8442-c7262990b338",
+      "result": "PASS",
+      "trigger_event": 8
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": null,
+      "oracle_id": "state::createSession",
+      "reason": "observation-not-found",
+      "resource_path": "/admin/users/18a8217c-138c-43ea-87de-c44aeab98cba/sessions",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 9
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 35,
+      "oracle_id": "state::createAlbum",
+      "resource_path": "/albums/e52c18ca-f18b-4407-adff-22ba118c32ab",
+      "result": "PASS",
+      "trigger_event": 20
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 29,
+      "oracle_id": "state::createApiKey",
+      "resource_path": "/api-keys/49f0d445-3908-441c-82d8-23bbf66f1d8f",
+      "result": "PASS",
+      "trigger_event": 21
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 34,
+      "oracle_id": "state::createMemory",
+      "resource_path": "/memories/9872189f-f2ae-4b3b-8b30-b50c3e6605ac",
+      "result": "PASS",
+      "trigger_event": 24
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 31,
+      "oracle_id": "state::createAlbum",
+      "resource_path": "/albums/c6cf14f8-51c9-486c-ab0b-c13f15660823",
+      "result": "PASS",
+      "trigger_event": 26
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 28,
+      "oracle_id": "state::createWorkflow",
+      "resource_path": "/workflows/6a50bdd4-e6c9-4b22-8b2f-467cbf5242a6",
+      "result": "PASS",
+      "trigger_event": 27
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 44,
+      "oracle_id": "state::createSharedLink",
+      "resource_path": "/shared-links/5c30761e-33f5-4246-a63a-92beb73ff29d",
+      "result": "PASS",
+      "trigger_event": 38
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 43,
+      "oracle_id": "state::createSharedLink",
+      "resource_path": "/shared-links/60024f39-bc77-456c-a03c-84703e43acdd",
+      "result": "PASS",
+      "trigger_event": 40
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 45,
+      "oracle_id": "state::createSharedLink",
+      "resource_path": "/shared-links/d1feda71-8a90-4b3a-a039-959c3e67292a",
+      "result": "PASS",
+      "trigger_event": 41
+    },
+    {
+      "epoch_id": "generated-epoch-0",
+      "kind": "empirical-update-delete",
+      "observation_event": 74,
+      "oracle_id": "cross-method::update-delete::updateAlbumInfo::deleteAlbum",
+      "reason": "empirical-controls-not-proven",
+      "result": "INCONCLUSIVE",
+      "trigger_events": [
+        72,
+        73
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-1",
+      "kind": "empirical-update-delete",
+      "observation_event": 60,
+      "oracle_id": "cross-method::update-delete::updateSharedLink::removeSharedLink",
+      "reason": "empirical-controls-not-proven",
+      "result": "INCONCLUSIVE",
+      "trigger_events": [
+        58,
+        59
+      ]
+    }
+  ]
+}

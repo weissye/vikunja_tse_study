@@ -1,0 +1,34 @@
+{
+  "declaration_collisions": {
+    "collisions": {},
+    "ok": true
+  },
+  "independent_verification": {
+    "findings": [],
+    "method": "Re-parsed the OpenAPI file and re-ran inference/planning in memory (never trusting generation_report.json's content); extracted each claimed function's real body from the actual interfaces.*.js file via brace-matching; checked the correct svc.<method>() call and expectedResponseCodes are present INSIDE that specific function body."
+  },
+  "js_syntax": {
+    "C:\\work\\temp\\vikunja_tse_study\\runs\\keycloak-parallel-crud-live-4ccfd4e8ce594a659bdb2c5132bafcf0\\generated\\interfaces.keycloak_stage2.js": {
+      "checked_with": "node --check",
+      "ok": true,
+      "stderr": ""
+    },
+    "C:\\work\\temp\\vikunja_tse_study\\runs\\keycloak-parallel-crud-live-4ccfd4e8ce594a659bdb2c5132bafcf0\\generated\\stories.keycloak_stage2.js": {
+      "checked_with": "node --check",
+      "ok": true,
+      "stderr": ""
+    }
+  },
+  "ok": true,
+  "operation_coverage": {
+    "covered_operations": 413,
+    "total_operations": 413,
+    "uncovered_operations": []
+  },
+  "problems": [],
+  "response_code_coverage": {
+    "coverage_percent": 100.0,
+    "covered_declared_codes": 819,
+    "total_declared_codes": 819
+  }
+}

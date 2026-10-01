@@ -1,0 +1,166 @@
+{
+  "bug_candidate": true,
+  "confirmation_policy": "Reproduce twice, minimize the BP epoch, pass the sequential control, and exclude adapter, proxy, timing, contract and observation causes.",
+  "confirmed_product_bug": false,
+  "evaluation_basis": "Provengo-declared epochs plus adapter and proxy interval evidence plus post-join HTTP observation",
+  "oracle_summary": {
+    "concurrent-disjoint-patches-both-visible": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 1,
+        "VIOLATED": 5
+      },
+      "expected_witness_count": 6,
+      "status": "SEMANTIC_ANOMALY",
+      "witness_count": 6
+    }
+  },
+  "profile": "provengo-native-true-concurrent-disjoint-patches",
+  "run_status": "SEMANTIC_ANOMALY",
+  "witness_count": 6,
+  "witnesses": [
+    {
+      "adapter_overlap": true,
+      "epoch_id": "increment8-task-0",
+      "expected": {
+        "description": "increment8_task_0_description",
+        "title": "increment8_task_0_title"
+      },
+      "observation_event": 138,
+      "observed": {
+        "description": "increment8_task_0_description",
+        "status": 200,
+        "title": "increment8_task_0_title"
+      },
+      "oracle_id": "concurrent-disjoint-patches-both-visible",
+      "proxy_overlap": true,
+      "release_skew_ns": 134100,
+      "resource_path": "/tasks/384",
+      "result": "PASS",
+      "trigger_events": [
+        129,
+        130
+      ]
+    },
+    {
+      "adapter_overlap": true,
+      "epoch_id": "increment8-task-1",
+      "expected": {
+        "description": "increment8_task_1_description",
+        "title": "increment8_task_1_title"
+      },
+      "observation_event": 143,
+      "observed": {
+        "description": "increment7_2_task_1_description",
+        "status": 200,
+        "title": "increment8_task_1_title"
+      },
+      "oracle_id": "concurrent-disjoint-patches-both-visible",
+      "proxy_overlap": true,
+      "reason": "legal-concurrent-patch-failed",
+      "release_skew_ns": 134000,
+      "resource_path": "/tasks/387",
+      "result": "VIOLATED",
+      "trigger_events": [
+        139,
+        140
+      ]
+    },
+    {
+      "adapter_overlap": true,
+      "epoch_id": "increment8-task-2",
+      "expected": {
+        "description": "increment8_task_2_description",
+        "title": "increment8_task_2_title"
+      },
+      "observation_event": 144,
+      "observed": {
+        "description": "increment7_2_task_2_description",
+        "status": 200,
+        "title": "increment8_task_2_title"
+      },
+      "oracle_id": "concurrent-disjoint-patches-both-visible",
+      "proxy_overlap": true,
+      "reason": "legal-concurrent-patch-failed",
+      "release_skew_ns": 287100,
+      "resource_path": "/tasks/389",
+      "result": "VIOLATED",
+      "trigger_events": [
+        133,
+        134
+      ]
+    },
+    {
+      "adapter_overlap": true,
+      "epoch_id": "increment8-task-3",
+      "expected": {
+        "description": "increment8_task_3_description",
+        "title": "increment8_task_3_title"
+      },
+      "observation_event": 135,
+      "observed": {
+        "description": "increment7_2_task_3_description",
+        "status": 200,
+        "title": "increment8_task_3_title"
+      },
+      "oracle_id": "concurrent-disjoint-patches-both-visible",
+      "proxy_overlap": true,
+      "reason": "legal-concurrent-patch-failed",
+      "release_skew_ns": 294300,
+      "resource_path": "/tasks/388",
+      "result": "VIOLATED",
+      "trigger_events": [
+        131,
+        132
+      ]
+    },
+    {
+      "adapter_overlap": true,
+      "epoch_id": "increment8-task-4",
+      "expected": {
+        "description": "increment8_task_4_description",
+        "title": "increment8_task_4_title"
+      },
+      "observation_event": 141,
+      "observed": {
+        "description": "increment8_task_4_description",
+        "status": 200,
+        "title": "increment7_2_task_4_title"
+      },
+      "oracle_id": "concurrent-disjoint-patches-both-visible",
+      "proxy_overlap": true,
+      "reason": "legal-concurrent-patch-failed",
+      "release_skew_ns": 329300,
+      "resource_path": "/tasks/386",
+      "result": "VIOLATED",
+      "trigger_events": [
+        136,
+        137
+      ]
+    },
+    {
+      "adapter_overlap": true,
+      "epoch_id": "increment8-task-5",
+      "expected": {
+        "description": "increment8_task_5_description",
+        "title": "increment8_task_5_title"
+      },
+      "observation_event": 142,
+      "observed": {
+        "description": "increment7_2_task_5_description",
+        "status": 200,
+        "title": "increment8_task_5_title"
+      },
+      "oracle_id": "concurrent-disjoint-patches-both-visible",
+      "proxy_overlap": true,
+      "reason": "legal-concurrent-patch-failed",
+      "release_skew_ns": 216100,
+      "resource_path": "/tasks/385",
+      "result": "VIOLATED",
+      "trigger_events": [
+        127,
+        128
+      ]
+    }
+  ]
+}

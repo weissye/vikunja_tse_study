@@ -1,0 +1,297 @@
+﻿[
+    {
+        "Id": "c7a4c4a0feba28601e28cedb6c11e039c7c7185b2829658ef937c61fed7f5d75",
+        "Created": "2026-09-22T14:26:29.805344768Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "postgres"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 25516,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-09-22T14:26:30.731144618Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-09-22T14:26:57.403913631Z",
+                        "End": "2026-09-22T14:26:57.450858212Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    },
+                    {
+                        "Start": "2026-09-22T14:26:59.475474382Z",
+                        "End": "2026-09-22T14:26:59.512266422Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    },
+                    {
+                        "Start": "2026-09-22T14:27:01.527183445Z",
+                        "End": "2026-09-22T14:27:01.556902859Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    },
+                    {
+                        "Start": "2026-09-22T14:27:03.628629394Z",
+                        "End": "2026-09-22T14:27:03.702940892Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    },
+                    {
+                        "Start": "2026-09-22T14:27:05.720962357Z",
+                        "End": "2026-09-22T14:27:05.782975559Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:81bd698b4594e751a3269e4dcd3e03a4a0ec0daf7b72e7aa1abd43cce9887542",
+        "ResolvConfPath": "/var/lib/docker/containers/c7a4c4a0feba28601e28cedb6c11e039c7c7185b2829658ef937c61fed7f5d75/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/c7a4c4a0feba28601e28cedb6c11e039c7c7185b2829658ef937c61fed7f5d75/hostname",
+        "HostsPath": "/var/lib/docker/containers/c7a4c4a0feba28601e28cedb6c11e039c7c7185b2829658ef937c61fed7f5d75/hosts",
+        "LogPath": "/var/lib/docker/containers/c7a4c4a0feba28601e28cedb6c11e039c7c7185b2829658ef937c61fed7f5d75/c7a4c4a0feba28601e28cedb6c11e039c7c7185b2829658ef937c61fed7f5d75-json.log",
+        "Name": "/vikunja-increment8-2-db",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "vikunja_increment8_2_default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "vikunja_increment8_2_increment8_2_postgres_data",
+                    "Target": "/var/lib/postgresql/data",
+                    "VolumeOptions": {}
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/0aca17c4f88fbdac30e1189719feaccda1df55366224e596daef1e7f2f06c38c-init/diff:/var/lib/docker/overlay2/d5d68c27be0c54c12163e72dd50c6fdda2661807111a1264151934f437b75c5e/diff:/var/lib/docker/overlay2/c4256421b38658673fe1e3448affa7a5c4edd89b42b80cd09e2a8a65466827b0/diff:/var/lib/docker/overlay2/0167db6fa18999a6d58c2d013ce841b78de9a18d8e6bdc8bacdb5a954b4eedea/diff:/var/lib/docker/overlay2/ede2a122eda20cb178192a4eb74c34e9425b4cb390277f318ebe5361f379dac9/diff:/var/lib/docker/overlay2/8ebebdfd74c514e5b3751f5eb7354541a6f4414dcd866816fe356efc14697db5/diff:/var/lib/docker/overlay2/a2d2574c6ecab9ea5d1bb5359cd3311d48feab43977c0b17b6b097e27f8758ff/diff:/var/lib/docker/overlay2/3bcc6a7918026db926095d31c23b9ae827606494798b07bf2a10d5a7db38a241/diff:/var/lib/docker/overlay2/21c24384a954e2df9475cadcdb949dbebb7fd53e4280f2c4d3696b6ae4574972/diff:/var/lib/docker/overlay2/a676d600093b531d04c72145af6214424091f0e8281c1017c461c518a43d8f21/diff:/var/lib/docker/overlay2/c4078b80f8e8097b4bda4c4f76466f576fe9660078052d90366f2e91889d6230/diff:/var/lib/docker/overlay2/4c13c3f27f3e8c3ddfdd175e7a1a98adbd95fd8b00346f1ce9f5c01150df83d8/diff",
+                "MergedDir": "/var/lib/docker/overlay2/0aca17c4f88fbdac30e1189719feaccda1df55366224e596daef1e7f2f06c38c/merged",
+                "UpperDir": "/var/lib/docker/overlay2/0aca17c4f88fbdac30e1189719feaccda1df55366224e596daef1e7f2f06c38c/diff",
+                "WorkDir": "/var/lib/docker/overlay2/0aca17c4f88fbdac30e1189719feaccda1df55366224e596daef1e7f2f06c38c/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "vikunja_increment8_2_increment8_2_postgres_data",
+                "Source": "/var/lib/docker/volumes/vikunja_increment8_2_increment8_2_postgres_data/_data",
+                "Destination": "/var/lib/postgresql/data",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "c7a4c4a0feba",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "POSTGRES_USER=vikunja",
+                "POSTGRES_PASSWORD=Zywd8B1jSMh5mrkB7qAPX1x0m930jhxN9U3lDcETqrRTllF8",
+                "POSTGRES_DB=vikunja",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.19",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=16",
+                "PG_VERSION=16.15",
+                "PG_SHA256=c1575341fa7bd40f5274ea465b34390f4dc64cdd0770af327005caaeb9f6b7ed",
+                "DOCKER_PG_LLVM_DEPS=llvm21-dev \t\tclang21",
+                "PGDATA=/var/lib/postgresql/data"
+            ],
+            "Cmd": [
+                "postgres"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "pg_isready -U vikunja -d vikunja"
+                ],
+                "Interval": 2000000000,
+                "Timeout": 3000000000,
+                "Retries": 30
+            },
+            "Image": "postgres:16-alpine",
+            "Volumes": {
+                "/var/lib/postgresql/data": {}
+            },
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "a8695ec2fe8502482be9e2d3f23bf0cae36d6e06d708484006391924e97377e7",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:81bd698b4594e751a3269e4dcd3e03a4a0ec0daf7b72e7aa1abd43cce9887542",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "vikunja_increment8_2",
+                "com.docker.compose.project.config_files": "C:\\work\\temp\\vikunja_tse_study\\deployment\\increment8_2\\docker-compose.yml",
+                "com.docker.compose.project.environment_file": "C:\\work\\temp\\vikunja_tse_study\\deployment\\increment8_2\\.env",
+                "com.docker.compose.project.working_dir": "C:\\work\\temp\\vikunja_tse_study\\deployment\\increment8_2",
+                "com.docker.compose.service": "postgres",
+                "com.docker.compose.version": "2.23.3"
+            },
+            "StopSignal": "SIGINT"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "0580d4cf517f057abb126333aa4f421ea19dacac10b6eb338f2b8bf1dd7b1b96",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "5432/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/0580d4cf517f",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "vikunja_increment8_2_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "vikunja-increment8-2-db",
+                        "postgres",
+                        "c7a4c4a0feba"
+                    ],
+                    "MacAddress": "02:42:ac:14:00:03",
+                    "NetworkID": "15900fccd0d863ce1e6899493d673bdbfa1b09c5338a8c2f4262b800ee9b0d0f",
+                    "EndpointID": "c0bcd490acdaaea503101b523f60952c3790343ebc1e17bd03712e0a3b827408",
+                    "Gateway": "172.20.0.1",
+                    "IPAddress": "172.20.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

@@ -1,0 +1,61 @@
+{
+  "closed_events": [
+    "ConflictClosed:project:0:A",
+    "ConflictClosed:project:0:B",
+    "ConflictClosed:task:0:A",
+    "ConflictClosed:task:0:B",
+    "ConflictClosed:task:1:A",
+    "ConflictClosed:task:1:B",
+    "ConflictClosed:task:2:A",
+    "ConflictClosed:task:2:B",
+    "ConflictClosed:task:3:A",
+    "ConflictClosed:task:3:B",
+    "ConflictClosed:task:4:A",
+    "ConflictClosed:task:4:B",
+    "ConflictClosed:task:5:A",
+    "ConflictClosed:task:5:B",
+    "ConflictClosed:label:0:A",
+    "ConflictClosed:label:0:B",
+    "ConflictClosed:label:1:A",
+    "ConflictClosed:label:1:B",
+    "ConflictClosed:label:2:A",
+    "ConflictClosed:label:2:B",
+    "ConflictClosed:comment:0:A",
+    "ConflictClosed:comment:0:B",
+    "ConflictClosed:comment:1:A",
+    "ConflictClosed:comment:1:B",
+    "ConflictClosed:comment:2:A",
+    "ConflictClosed:comment:2:B",
+    "ConflictClosed:comment:3:A",
+    "ConflictClosed:comment:3:B"
+  ],
+  "expected": {
+    "comments": 4,
+    "conflict_reads": 28,
+    "conflict_writes": 28,
+    "labels": 3,
+    "tasks": 6
+  },
+  "oracles": [
+    {
+      "expected_witness_count": 2,
+      "oracle_id": "project-last-successful-write-visible"
+    },
+    {
+      "expected_witness_count": 12,
+      "oracle_id": "task-last-successful-write-visible"
+    },
+    {
+      "expected_witness_count": 6,
+      "oracle_id": "label-last-successful-write-visible"
+    },
+    {
+      "expected_witness_count": 8,
+      "oracle_id": "comment-last-successful-write-visible"
+    }
+  ],
+  "prefix": "conflict6_",
+  "profile": "linearizable-write-conflicts",
+  "schema_version": 1,
+  "source_openapi_sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941"
+}

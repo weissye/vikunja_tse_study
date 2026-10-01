@@ -1,0 +1,38 @@
+{
+  "error": "Sample omits full CRUD/verification; inspect sample-audit.json. Live requests were NOT started",
+  "generated_realms": [
+    "realm_89635"
+  ],
+  "instances_per_entity_per_process": 1,
+  "interval": {
+    "oracle_verdicts": "NOT_EVALUATED"
+  },
+  "processes": 1,
+  "provengo_exit": null,
+  "realm_after": {},
+  "realm_preflight": {
+    "realm_89635": 404
+  },
+  "result": "INCOMPLETE",
+  "sample_audit": {
+    "event_count": 17,
+    "expected_workers": 25,
+    "finish_reasons": {
+      "create-failed": 1,
+      "parent-unavailable": 14
+    },
+    "oracle_verdicts": "NOT_EVALUATED",
+    "parent_bindings": 0,
+    "ready_workers": 0,
+    "result": "SAMPLE_INCOMPLETE_STOP",
+    "steps": {},
+    "symbolic_rest": {
+      "POST": 1
+    },
+    "verified": {}
+  },
+  "sample_exit": 0,
+  "schema_version": 1,
+  "seed": 454453321,
+  "source_sha256": "ba68e1c3842c11701ec64c5f3ba23387cf53963f8d16dd7c3d45da103b9421db"
+}

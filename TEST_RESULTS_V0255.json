@@ -1,0 +1,36 @@
+{
+  "version": "0.25.5",
+  "unit_tests": {
+    "count": 112,
+    "result": "PASS"
+  },
+  "runtime_observation": {
+    "files": 2,
+    "replacements": 395,
+    "source_artifacts_modified": false,
+    "result": "PASS"
+  },
+  "six_system_matrix": {
+    "result": "PASS",
+    "systems": {
+      "library": {"operations": 13, "contract_verifiers": 13, "mutations": 8, "state_verified_mutations": 1, "concurrency_oracles": 0, "manual_assumptions": 0, "coverage_complete": true},
+      "garage": {"operations": 32, "contract_verifiers": 32, "mutations": 20, "state_verified_mutations": 18, "concurrency_oracles": 46, "manual_assumptions": 0, "coverage_complete": true},
+      "pharmacy": {"operations": 29, "contract_verifiers": 29, "mutations": 18, "state_verified_mutations": 10, "concurrency_oracles": 12, "manual_assumptions": 0, "coverage_complete": true},
+      "netbox": {"operations": 1156, "contract_verifiers": 1156, "mutations": 872, "state_verified_mutations": 364, "concurrency_oracles": 1396, "manual_assumptions": 0, "coverage_complete": true},
+      "todoist": {"operations": 28, "contract_verifiers": 28, "mutations": 17, "state_verified_mutations": 5, "concurrency_oracles": 0, "manual_assumptions": 0, "coverage_complete": true},
+      "vikunja": {"operations": 29, "contract_verifiers": 29, "mutations": 20, "state_verified_mutations": 12, "concurrency_oracles": 71, "manual_assumptions": 0, "coverage_complete": true}
+    }
+  },
+  "candidate_discovery": {
+    "evidence": "openapi-verified-vikunja-20260923_063238_202-review.zip",
+    "trace_events": 8,
+    "method": "PATCH",
+    "path": "/api/v2/projects/11",
+    "content_type": "application/merge-patch+json",
+    "body": {"is_archived": false},
+    "observed_status": 304,
+    "documented_success_statuses": [200],
+    "evaluation": {"PASS": 6, "VIOLATED": 1, "INCONCLUSIVE": 4, "run_status": "SEMANTIC_ANOMALY"},
+    "classification": "CANDIDATE_REQUIRES_DIRECT_CONFIRMATION"
+  }
+}

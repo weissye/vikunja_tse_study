@@ -1,0 +1,234 @@
+{
+  "previous_puts": [
+    {
+      "request_shape": {
+        "body_type": "object",
+        "keys": [
+          "date",
+          "groupId",
+          "id",
+          "text",
+          "userId"
+        ],
+        "missing_required": [],
+        "unknown_key_count": 0
+      },
+      "status": 422,
+      "trace_sequence": 73,
+      "validation": {
+        "body_type": "object",
+        "errors": [
+          {
+            "loc": [
+              "body",
+              "recipe_id"
+            ],
+            "message_kind": "other",
+            "type": "value_error"
+          }
+        ],
+        "top_level_keys": [
+          "detail"
+        ]
+      }
+    },
+    {
+      "request_shape": {
+        "body_type": "object",
+        "keys": [
+          "date",
+          "entryType",
+          "groupId",
+          "id",
+          "userId"
+        ],
+        "missing_required": [],
+        "unknown_key_count": 0
+      },
+      "status": 422,
+      "trace_sequence": 76,
+      "validation": {
+        "body_type": "object",
+        "errors": [
+          {
+            "loc": [
+              "body",
+              "recipe_id"
+            ],
+            "message_kind": "other",
+            "type": "value_error"
+          }
+        ],
+        "top_level_keys": [
+          "detail"
+        ]
+      }
+    },
+    {
+      "request_shape": {
+        "body_type": "object",
+        "keys": [
+          "date",
+          "groupId",
+          "id",
+          "userId"
+        ],
+        "missing_required": [],
+        "unknown_key_count": 0
+      },
+      "status": 422,
+      "trace_sequence": 85,
+      "validation": {
+        "body_type": "object",
+        "errors": [
+          {
+            "loc": [
+              "body",
+              "recipe_id"
+            ],
+            "message_kind": "other",
+            "type": "value_error"
+          }
+        ],
+        "top_level_keys": [
+          "detail"
+        ]
+      }
+    },
+    {
+      "request_shape": {
+        "body_type": "object",
+        "keys": [
+          "date",
+          "groupId",
+          "id",
+          "title",
+          "userId"
+        ],
+        "missing_required": [],
+        "unknown_key_count": 0
+      },
+      "status": 422,
+      "trace_sequence": 104,
+      "validation": {
+        "body_type": "object",
+        "errors": [
+          {
+            "loc": [
+              "body",
+              "recipe_id"
+            ],
+            "message_kind": "other",
+            "type": "value_error"
+          }
+        ],
+        "top_level_keys": [
+          "detail"
+        ]
+      }
+    }
+  ],
+  "required": [
+    "date",
+    "groupId",
+    "id",
+    "userId"
+  ],
+  "schema_version": 1,
+  "serial_control": {
+    "after_sparse_read_status": 200,
+    "classification": "FULL_READ_DERIVED_PUT_VALID",
+    "complete": {
+      "request_shape": {
+        "body_type": "object",
+        "keys": [
+          "date",
+          "entryType",
+          "groupId",
+          "id",
+          "recipeId",
+          "text",
+          "title",
+          "userId"
+        ],
+        "missing_required": [],
+        "unknown_key_count": 0
+      },
+      "status": 200
+    },
+    "create_keys": [
+      "date",
+      "text",
+      "title"
+    ],
+    "create_status": 201,
+    "final_read_status": 200,
+    "final_value_visible": true,
+    "read_shape": {
+      "body_type": "object",
+      "keys": [
+        "date",
+        "entryType",
+        "groupId",
+        "id",
+        "recipeId",
+        "text",
+        "title",
+        "userId"
+      ],
+      "missing_required": [],
+      "unknown_key_count": 2
+    },
+    "read_status": 200,
+    "sparse": {
+      "request_shape": {
+        "body_type": "object",
+        "keys": [
+          "date",
+          "text",
+          "title"
+        ],
+        "missing_required": [
+          "groupId",
+          "id",
+          "userId"
+        ],
+        "unknown_key_count": 0
+      },
+      "status": 422,
+      "validation": {
+        "body_type": "object",
+        "errors": [
+          {
+            "loc": [
+              "body",
+              "id"
+            ],
+            "message_kind": "field-required",
+            "type": "missing"
+          },
+          {
+            "loc": [
+              "body",
+              "groupId"
+            ],
+            "message_kind": "field-required",
+            "type": "missing"
+          },
+          {
+            "loc": [
+              "body",
+              "userId"
+            ],
+            "message_kind": "field-required",
+            "type": "missing"
+          }
+        ],
+        "top_level_keys": [
+          "detail"
+        ]
+      }
+    }
+  },
+  "spec_sha256": "a08fcb5e176e20c395cf14ef14d7f54277b062b04179ca5ec1b23462703ec3b8"
+}

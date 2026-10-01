@@ -1,0 +1,45 @@
+{
+  "counts": {
+    "INCONCLUSIVE": 1,
+    "PASS": 1
+  },
+  "evidence_policy": "proxy-confirmed overlap and independent evaluator verdict; no implied coverage from HTTP volume",
+  "families_observed": [
+    "updateAlbumInfo",
+    "updateSharedLink"
+  ],
+  "families_ready": [
+    "updateAlbumInfo",
+    "updateSharedLink"
+  ],
+  "generated_oracles": 2,
+  "observed_overlap_oracles": 2,
+  "oracles": [
+    {
+      "kind": "empirical-update-delete",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "cross-method::update-delete::updateAlbumInfo::deleteAlbum",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "empirical-update-delete",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "cross-method::update-delete::updateSharedLink::removeSharedLink",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    }
+  ],
+  "runtime_ready_oracles": 2,
+  "schema_version": 1
+}

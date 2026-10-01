@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openapi-to-sbt"
+version = "0.24.1"
+description = "Deterministic OpenAPI-to-Provengo story-based-testing (SBT) generator"
+requires-python = ">=3.9"
+dependencies = [
+    "PyYAML>=6.0,<7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4,<9.0",
+]
+# Needed only to run the example SUTs (holdout/sut/*.py, and the kit's own
+# validation_only/suts/*) for the real-HTTP end-to-end tests
+# (tests/integration/test_e2e.py) and scripts/run_e2e.py. NOT needed to
+# use the generator itself (generate/inspect/validate/compare-reference
+# have zero runtime dependency on Flask). Found missing entirely on an
+# external audit: e2e tests failed with TIMED_OUT_STARTING_SUT from a
+# genuinely clean `pip install -e ".[dev]"` because the SUTs they start
+# import Flask, which was not declared anywhere.
+e2e = [
+    "Flask>=3.0,<4.0",
+    "flask-cors>=4.0,<7.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["openapi_to_sbt*"]

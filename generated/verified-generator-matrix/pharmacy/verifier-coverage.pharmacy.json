@@ -1,0 +1,227 @@
+{
+  "counts": {
+    "concurrency_oracles": 12,
+    "contract_only_mutations": 8,
+    "contract_verifiers": 29,
+    "mutations": 18,
+    "operations": 29,
+    "state_verified_mutations": 10
+  },
+  "coverage_complete": true,
+  "manual_assumptions": [],
+  "mutation_coverage": [
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/drugs",
+      "path_template": "/drugs",
+      "source_pointer": "#/paths/~1drugs/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/drugs/{id}",
+      "path_template": "/drugs/{id}",
+      "source_pointer": "#/paths/~1drugs~1{id}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/drugs/{id}",
+      "path_template": "/drugs/{id}",
+      "source_pointer": "#/paths/~1drugs~1{id}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/patients",
+      "path_template": "/patients",
+      "source_pointer": "#/paths/~1patients/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/patients/{id}",
+      "path_template": "/patients/{id}",
+      "source_pointer": "#/paths/~1patients~1{id}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/patients/{id}",
+      "path_template": "/patients/{id}",
+      "source_pointer": "#/paths/~1patients~1{id}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/orders",
+      "path_template": "/orders",
+      "source_pointer": "#/paths/~1orders/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/orders/{id}",
+      "path_template": "/orders/{id}",
+      "source_pointer": "#/paths/~1orders~1{id}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/orders/{id}",
+      "path_template": "/orders/{id}",
+      "source_pointer": "#/paths/~1orders~1{id}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/prescriptions",
+      "path_template": "/prescriptions",
+      "source_pointer": "#/paths/~1prescriptions/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/prescriptions/{id}",
+      "path_template": "/prescriptions/{id}",
+      "source_pointer": "#/paths/~1prescriptions~1{id}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/prescriptions/{id}",
+      "path_template": "/prescriptions/{id}",
+      "source_pointer": "#/paths/~1prescriptions~1{id}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/inventory",
+      "path_template": "/inventory",
+      "source_pointer": "#/paths/~1inventory/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/inventory/{ndc}",
+      "path_template": "/inventory/{ndc}",
+      "source_pointer": "#/paths/~1inventory~1{ndc}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/inventory/{ndc}",
+      "path_template": "/inventory/{ndc}",
+      "source_pointer": "#/paths/~1inventory~1{ndc}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/stores",
+      "path_template": "/stores",
+      "source_pointer": "#/paths/~1stores/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/dispense",
+      "path_template": "/dispense",
+      "source_pointer": "#/paths/~1dispense/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/process-rx",
+      "path_template": "/process-rx",
+      "source_pointer": "#/paths/~1process-rx/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    }
+  ],
+  "policy": {
+    "all_operations_receive_contract_verifier": true,
+    "concurrency_executor_role": "transport-and-barrier-only",
+    "decision_owner": "generated-provengo-model-and-oracle-manifest",
+    "external_application_knowledge_allowed": false,
+    "state_claims_require_openapi-derived-observation": true,
+    "unobservable_mutations_are_reported_contract_only": true
+  },
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.3",
+    "sha256": "778e135d44190b98a07b1d84c315cb6f0ef9b8e9ad78340c3d17a8cbe53dc5ba",
+    "title": "Pharmacy API (Option 3: Idempotent DELETE + Conflict on Duplicates)",
+    "version": "1.2.0"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "stage": "Gitea Stage 6 long-prefix/concurrent-merge pilot",
+  "created_utc": "2026-09-23T14:49:13.256943+00:00",
+  "user": "sbt-gitea-20260923_142458_008",
+  "base_url": "http://127.0.0.1:3477/api/v1",
+  "prefix": 12,
+  "results": [
+    {
+      "trial": 1,
+      "upstream": "sbt-gitea-20260923_142458_008/s6-up-1882d0706a",
+      "fork": "s6-org-1882d0706a/s6-fork-1882d0706a",
+      "prefix_requested": 12,
+      "prefix_completed": 12,
+      "preconditions_verified": true,
+      "verdict": "CONCURRENT_DIVERGENCE_REJECTION_CANDIDATE",
+      "reason": "overlapping requests: one fast-forward succeeded; another claimed divergence; final head matches upstream; reproduce and inspect internal merge preconditions",
+      "branch": "main",
+      "upstream_sha": "3133e23bca066ef902d4384d63c9750b2ccfd41d",
+      "fork_before_sha": "2f4d0bda402e7f502c25c4b5ab2066e2d75bffbd",
+      "fork_after_sha": "3133e23bca066ef902d4384d63c9750b2ccfd41d",
+      "statuses": [
+        400,
+        200
+      ],
+      "overlap_ms": 156.0,
+      "overlapping": true
+    },
+    {
+      "trial": 2,
+      "upstream": "sbt-gitea-20260923_142458_008/s6-up-d24ff659fe",
+      "fork": "s6-org-d24ff659fe/s6-fork-d24ff659fe",
+      "prefix_requested": 12,
+      "prefix_completed": 12,
+      "preconditions_verified": true,
+      "verdict": "CONCURRENT_DIVERGENCE_REJECTION_CANDIDATE",
+      "reason": "overlapping requests: one fast-forward succeeded; another claimed divergence; final head matches upstream; reproduce and inspect internal merge preconditions",
+      "branch": "main",
+      "upstream_sha": "c8a13054aa457e697998c0c43de927b8f80f4227",
+      "fork_before_sha": "eca779f4a43bf9bb3d88591507a07a5f8dee4a8f",
+      "fork_after_sha": "c8a13054aa457e697998c0c43de927b8f80f4227",
+      "statuses": [
+        200,
+        400
+      ],
+      "overlap_ms": 328.0,
+      "overlapping": true
+    },
+    {
+      "trial": 3,
+      "upstream": "sbt-gitea-20260923_142458_008/s6-up-8812fc804c",
+      "fork": "s6-org-8812fc804c/s6-fork-8812fc804c",
+      "prefix_requested": 12,
+      "prefix_completed": 12,
+      "preconditions_verified": true,
+      "verdict": "CONCURRENT_DIVERGENCE_REJECTION_CANDIDATE",
+      "reason": "overlapping requests: one fast-forward succeeded; another claimed divergence; final head matches upstream; reproduce and inspect internal merge preconditions",
+      "branch": "main",
+      "upstream_sha": "cd79f028a2d1eb7f53e25495a4dac747e221268e",
+      "fork_before_sha": "3a4007564082656c96e609dc4e9adc8b45c4da32",
+      "fork_after_sha": "cd79f028a2d1eb7f53e25495a4dac747e221268e",
+      "statuses": [
+        400,
+        200
+      ],
+      "overlap_ms": 203.0,
+      "overlapping": true
+    }
+  ],
+  "counts": {
+    "CONCURRENT_DIVERGENCE_REJECTION_CANDIDATE": 3
+  },
+  "claim_boundary": "CANDIDATE is not a confirmed product defect; inspect trace and independently reproduce.",
+  "stage5_2_baseline": "10/10 valid fork merges passed; non-fork HTTP 500 is a robustness control."
+}

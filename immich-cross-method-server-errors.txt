@@ -1,0 +1,351 @@
+﻿
+  Query failed : {
+    durationMs: 2.4349309999961406,
+>   error: PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>       at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+        at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+        at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+        at Socket.emit (node:events:509:28)
+        at addChunk (node:internal/streams/readable:563:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+        at Readable.push (node:internal/streams/readable:394:5)
+        at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+>     severity_local: 'ERROR',
+>     severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (ownerId)=(2f77b6d6-f3a5-43e6-95a4-2665d4a35347) is not present in table "user".',
+      schema_name: 'public',
+      table_name: 'library',
+      constraint_name: 'library_ownerId_fkey',
+      file: 'ri_triggers.c',
+      line: '2528',
+      routine: 'ri_ReportViolation'
+      ]
+    ]
+  }
+> [31m[Nest] 35  - [39m09/26/2026, 7:12:28 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~d86kn8nm][39m [31mUnknown error: PostgresError: 
+insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"[39m
+> PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>     at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+      at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+      at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+  Query failed : {
+    durationMs: 0.9723839999642223,
+>   error: PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>       at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+        at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+        at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+        at Socket.emit (node:events:509:28)
+        at addChunk (node:internal/streams/readable:563:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+        at Readable.push (node:internal/streams/readable:394:5)
+        at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+>     severity_local: 'ERROR',
+>     severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (ownerId)=(a4660caf-340c-4162-813d-091ec5ea1d22) is not present in table "user".',
+      schema_name: 'public',
+      table_name: 'library',
+      constraint_name: 'library_ownerId_fkey',
+      file: 'ri_triggers.c',
+      line: '2528',
+      routine: 'ri_ReportViolation'
+      ]
+    ]
+  }
+> [31m[Nest] 35  - [39m09/26/2026, 7:12:31 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~g0je6z1x][39m [31mUnknown error: PostgresError: 
+insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"[39m
+> PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>     at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+      at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+      at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+  Query failed : {
+    durationMs: 9.146292999852449,
+>   error: PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>       at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+        at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+        at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+        at Socket.emit (node:events:509:28)
+        at addChunk (node:internal/streams/readable:563:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+        at Readable.push (node:internal/streams/readable:394:5)
+        at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+>     severity_local: 'ERROR',
+>     severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (ownerId)=(eb024e88-5b9b-4714-9f94-066c11e5d4a9) is not present in table "user".',
+      schema_name: 'public',
+      table_name: 'library',
+      constraint_name: 'library_ownerId_fkey',
+      file: 'ri_triggers.c',
+      line: '2528',
+      routine: 'ri_ReportViolation'
+  [32m[Nest] 7  - [39m09/26/2026, 7:17:39 PM [32m    LOG[39m [33m[Microservices:IntegrityService][39m [32mDeleting all entries for 
+checksum_mismatch integrity report[39m
+  [32m[Nest] 7  - [39m09/26/2026, 7:17:41 PM [32m    LOG[39m [33m[Microservices:IntegrityService][39m [32mDeleting all entries for 
+missing_file integrity report[39m
+  }
+> [31m[Nest] 35  - [39m09/26/2026, 7:12:33 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~gynwf3cn][39m [31mUnknown error: PostgresError: 
+insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"[39m
+> PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>     at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+      at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+      at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+> [31m[Nest] 35  - [39m09/26/2026, 7:12:43 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~hyzmxrzk][39m [31mUnknown error: Error: no 
+result[39m
+> Error: no result
+      at UpdateQueryBuilder.executeTakeFirstOrThrow 
+(/usr/src/app/server/node_modules/.pnpm/kysely@0.28.17/node_modules/kysely/dist/cjs/query-builder/update-query-builder.js:493:19)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async AlbumService.update (/usr/src/app/server/dist/services/album.service.js:114:30)
+  Query failed : {
+    durationMs: 1.829114000312984,
+>   error: PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>       at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+        at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+        at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+        at Socket.emit (node:events:509:28)
+        at addChunk (node:internal/streams/readable:563:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+        at Readable.push (node:internal/streams/readable:394:5)
+        at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+>     severity_local: 'ERROR',
+>     severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (ownerId)=(eb024e88-5b9b-4714-9f94-066c11e5d4a9) is not present in table "user".',
+      schema_name: 'public',
+      table_name: 'library',
+      constraint_name: 'library_ownerId_fkey',
+      file: 'ri_triggers.c',
+      line: '2528',
+      routine: 'ri_ReportViolation'
+      ]
+    ]
+  }
+> [31m[Nest] 35  - [39m09/26/2026, 7:17:37 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~ivipyyoq][39m [31mUnknown error: PostgresError: 
+insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"[39m
+> PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>     at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+      at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+      at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+  Query failed : {
+    durationMs: 3.118468999862671,
+>   error: PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>       at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+        at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+        at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+        at Socket.emit (node:events:509:28)
+        at addChunk (node:internal/streams/readable:563:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+        at Readable.push (node:internal/streams/readable:394:5)
+        at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+>     severity_local: 'ERROR',
+>     severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (ownerId)=(2f77b6d6-f3a5-43e6-95a4-2665d4a35347) is not present in table "user".',
+      schema_name: 'public',
+      table_name: 'library',
+      constraint_name: 'library_ownerId_fkey',
+      file: 'ri_triggers.c',
+      line: '2528',
+      routine: 'ri_ReportViolation'
+      ]
+    ]
+  }
+> [31m[Nest] 35  - [39m09/26/2026, 7:17:38 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~r5rgqs9j][39m [31mUnknown error: PostgresError: 
+insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"[39m
+> PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>     at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+      at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+      at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+  Query failed : {
+    durationMs: 3.404114999808371,
+>   error: PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>       at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+        at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+        at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+        at Socket.emit (node:events:509:28)
+        at addChunk (node:internal/streams/readable:563:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+        at Readable.push (node:internal/streams/readable:394:5)
+        at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+>     severity_local: 'ERROR',
+>     severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (ownerId)=(a4660caf-340c-4162-813d-091ec5ea1d22) is not present in table "user".',
+      schema_name: 'public',
+      table_name: 'library',
+      constraint_name: 'library_ownerId_fkey',
+      file: 'ri_triggers.c',
+      line: '2528',
+      routine: 'ri_ReportViolation'
+      ]
+    ]
+  }
+> [31m[Nest] 35  - [39m09/26/2026, 7:17:43 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~ehxvb9zg][39m [31mUnknown error: PostgresError: 
+insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"[39m
+> PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>     at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+      at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+      at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+> [31m[Nest] 35  - [39m09/26/2026, 7:17:52 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~d8hpvkpt][39m [31mUnknown error: Error: no 
+result[39m
+> Error: no result
+      at UpdateQueryBuilder.executeTakeFirstOrThrow 
+(/usr/src/app/server/node_modules/.pnpm/kysely@0.28.17/node_modules/kysely/dist/cjs/query-builder/update-query-builder.js:493:19)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async AlbumService.update (/usr/src/app/server/dist/services/album.service.js:114:30)
+  Query failed : {
+    durationMs: 1.5011950000189245,
+>   error: PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>       at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+        at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+        at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+        at Socket.emit (node:events:509:28)
+        at addChunk (node:internal/streams/readable:563:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+        at Readable.push (node:internal/streams/readable:394:5)
+        at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+  [32m[Nest] 7  - [39m09/26/2026, 7:18:01 PM [32m    LOG[39m [33m[Microservices:IntegrityService][39m [32mDeleting all entries for 
+missing_file integrity report[39m
+>     severity_local: 'ERROR',
+>     severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (ownerId)=(2f77b6d6-f3a5-43e6-95a4-2665d4a35347) is not present in table "user".',
+      schema_name: 'public',
+      table_name: 'library',
+      constraint_name: 'library_ownerId_fkey',
+      file: 'ri_triggers.c',
+      line: '2528',
+      routine: 'ri_ReportViolation'
+      ]
+    ]
+  }
+> [31m[Nest] 35  - [39m09/26/2026, 7:17:59 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~zmn8rdam][39m [31mUnknown error: PostgresError: 
+insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"[39m
+> PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>     at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+      at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+      at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+  Query failed : {
+    durationMs: 1.1443059998564422,
+>   error: PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>       at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+        at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+        at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+        at Socket.emit (node:events:509:28)
+        at addChunk (node:internal/streams/readable:563:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+        at Readable.push (node:internal/streams/readable:394:5)
+        at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+>     severity_local: 'ERROR',
+>     severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (ownerId)=(a4660caf-340c-4162-813d-091ec5ea1d22) is not present in table "user".',
+      schema_name: 'public',
+      table_name: 'library',
+      constraint_name: 'library_ownerId_fkey',
+      file: 'ri_triggers.c',
+      line: '2528',
+      routine: 'ri_ReportViolation'
+      ]
+    ]
+  }
+> [31m[Nest] 35  - [39m09/26/2026, 7:18:00 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~btgl3ioz][39m [31mUnknown error: PostgresError: 
+insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"[39m
+> PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>     at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+      at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+      at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+  Query failed : {
+    durationMs: 1.754604000132531,
+>   error: PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>       at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+        at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+        at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+        at Socket.emit (node:events:509:28)
+        at addChunk (node:internal/streams/readable:563:12)
+        at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+        at Readable.push (node:internal/streams/readable:394:5)
+        at TCP.onStreamRead (node:internal/stream_base_commons:189:23) {
+>     severity_local: 'ERROR',
+>     severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (ownerId)=(eb024e88-5b9b-4714-9f94-066c11e5d4a9) is not present in table "user".',
+      schema_name: 'public',
+      table_name: 'library',
+      constraint_name: 'library_ownerId_fkey',
+      file: 'ri_triggers.c',
+      line: '2528',
+      routine: 'ri_ReportViolation'
+      ]
+    ]
+  }
+> [31m[Nest] 35  - [39m09/26/2026, 7:18:02 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~rrcugqlk][39m [31mUnknown error: PostgresError: 
+insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"[39m
+> PostgresError: insert or update on table "library" violates foreign key constraint "library_ownerId_fkey"
+>     at ErrorResponse (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:815:30)
+      at handle (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:489:6)
+      at Socket.data (file:///usr/src/app/server/node_modules/.pnpm/postgres@3.4.9/node_modules/postgres/src/connection.js:324:9)
+      at Socket.emit (node:events:509:28)
+      at addChunk (node:internal/streams/readable:563:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+      at Readable.push (node:internal/streams/readable:394:5)
+      at TCP.onStreamRead (node:internal/stream_base_commons:189:23)
+> [31m[Nest] 35  - [39m09/26/2026, 7:18:13 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~f6lvc2gi][39m [31mUnknown error: Error: no 
+result[39m
+> Error: no result
+      at UpdateQueryBuilder.executeTakeFirstOrThrow 
+(/usr/src/app/server/node_modules/.pnpm/kysely@0.28.17/node_modules/kysely/dist/cjs/query-builder/update-query-builder.js:493:19)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async SharedLinkRepository.update (/usr/src/app/server/dist/repositories/shared-link.repository.js:159:24)
+      at async SharedLinkService.update (/usr/src/app/server/dist/services/shared-link.service.js:102:32)
+> [31m[Nest] 35  - [39m09/26/2026, 7:18:15 PM [31m  ERROR[39m [33m[Api:ErrorInterceptor~f80y5xld][39m [31mUnknown error: Error: no 
+result[39m
+> Error: no result
+      at UpdateQueryBuilder.executeTakeFirstOrThrow 
+(/usr/src/app/server/node_modules/.pnpm/kysely@0.28.17/node_modules/kysely/dist/cjs/query-builder/update-query-builder.js:493:19)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async AlbumService.update (/usr/src/app/server/dist/services/album.service.js:114:30)
+
+

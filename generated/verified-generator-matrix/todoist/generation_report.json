@@ -1,0 +1,894 @@
+{
+  "coverage": {
+    "covered_operations": 28,
+    "total_operations": 28,
+    "uncovered_operations": []
+  },
+  "entities": [
+    {
+      "collection_path": "/projects",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Project",
+      "item_path": "/projects/{projectId}",
+      "key": "projects",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "projectId"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'projectId' has no matching schema property; using path evidence only",
+          "pointer": "/projects/{projectId}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['projectId']",
+          "pointer": "/projects/{projectId}",
+          "rule": "K1/K2:item_path_parameters"
+        },
+        {
+          "detail": "Path parameter 'projectId' has no same-named schema property, but the schema has a generic 'id' property; treating that as the response-body identifier field for server-assigned-key handling.",
+          "pointer": "#/components/schemas/Project",
+          "rule": "K5:response_field_generic_id_fallback"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "getAllProjects",
+          "kind": "list",
+          "method": "GET",
+          "path": "/projects",
+          "source_pointer": "#/paths/~1projects/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "createProject",
+          "kind": "create",
+          "method": "POST",
+          "path": "/projects",
+          "source_pointer": "#/paths/~1projects/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "deleteProject",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/projects/{projectId}",
+          "source_pointer": "#/paths/~1projects~1{projectId}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "getProject",
+          "kind": "get",
+          "method": "GET",
+          "path": "/projects/{projectId}",
+          "source_pointer": "#/paths/~1projects~1{projectId}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "updateProject",
+          "kind": "action",
+          "method": "POST",
+          "path": "/projects/{projectId}",
+          "source_pointer": "#/paths/~1projects~1{projectId}/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "getAllCollaborators",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{projectId}/collaborators",
+          "source_pointer": "#/paths/~1projects~1{projectId}~1collaborators/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Projects",
+      "provenance": [
+        {
+          "detail": "List operation GET /projects response 200 references Project",
+          "pointer": "#/paths/~1projects/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Project"
+    },
+    {
+      "collection_path": "/sections",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.85,
+          "field_name": "project_id",
+          "provenance": [
+            {
+              "detail": "Create operation query parameter 'project_id' matches entity 'projects'",
+              "pointer": "#/paths/~1sections/post/parameters",
+              "rule": "D2q:D_key_field_exact_match"
+            }
+          ],
+          "target": "projects"
+        }
+      ],
+      "display_name": "Section",
+      "item_path": "/sections/{sectionId}",
+      "key": "sections",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "sectionId"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'sectionId' has no matching schema property; using path evidence only",
+          "pointer": "/sections/{sectionId}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['sectionId']",
+          "pointer": "/sections/{sectionId}",
+          "rule": "K1/K2:item_path_parameters"
+        },
+        {
+          "detail": "Path parameter 'sectionId' has no same-named schema property, but the schema has a generic 'id' property; treating that as the response-body identifier field for server-assigned-key handling.",
+          "pointer": "#/components/schemas/Section",
+          "rule": "K5:response_field_generic_id_fallback"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "getAllSections",
+          "kind": "list",
+          "method": "GET",
+          "path": "/sections",
+          "source_pointer": "#/paths/~1sections/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "createSection",
+          "kind": "create",
+          "method": "POST",
+          "path": "/sections",
+          "source_pointer": "#/paths/~1sections/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "deleteSection",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/sections/{sectionId}",
+          "source_pointer": "#/paths/~1sections~1{sectionId}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "getSingleSection",
+          "kind": "get",
+          "method": "GET",
+          "path": "/sections/{sectionId}",
+          "source_pointer": "#/paths/~1sections~1{sectionId}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "updateSection",
+          "kind": "action",
+          "method": "POST",
+          "path": "/sections/{sectionId}",
+          "source_pointer": "#/paths/~1sections~1{sectionId}/post",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Sections",
+      "provenance": [
+        {
+          "detail": "List operation GET /sections response 200 references Section",
+          "pointer": "#/paths/~1sections/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Section"
+    },
+    {
+      "collection_path": "/tasks",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "project_id",
+          "provenance": [
+            {
+              "detail": "Create request body property 'project_id' matches entity 'projects'",
+              "pointer": "#/paths/~1tasks/post/requestBody/content/application~1json/properties/project_id",
+              "rule": "D2:D_key_field_exact_match"
+            }
+          ],
+          "target": "projects"
+        },
+        {
+          "confidence": 0.9,
+          "field_name": "section_id",
+          "provenance": [
+            {
+              "detail": "Create request body property 'section_id' matches entity 'sections'",
+              "pointer": "#/paths/~1tasks/post/requestBody/content/application~1json/properties/section_id",
+              "rule": "D2:D_key_field_exact_match"
+            }
+          ],
+          "target": "sections"
+        }
+      ],
+      "display_name": "Task",
+      "item_path": "/tasks/{taskId}",
+      "key": "tasks",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "taskId"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'taskId' has no matching schema property; using path evidence only",
+          "pointer": "/tasks/{taskId}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['taskId']",
+          "pointer": "/tasks/{taskId}",
+          "rule": "K1/K2:item_path_parameters"
+        },
+        {
+          "detail": "Path parameter 'taskId' has no same-named schema property, but the schema has a generic 'id' property; treating that as the response-body identifier field for server-assigned-key handling.",
+          "pointer": "#/components/schemas/Task",
+          "rule": "K5:response_field_generic_id_fallback"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "getActiveTasks",
+          "kind": "list",
+          "method": "GET",
+          "path": "/tasks",
+          "source_pointer": "#/paths/~1tasks/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "createTask",
+          "kind": "create",
+          "method": "POST",
+          "path": "/tasks",
+          "source_pointer": "#/paths/~1tasks/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "deleteTask",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/tasks/{taskId}",
+          "source_pointer": "#/paths/~1tasks~1{taskId}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "getActiveTask",
+          "kind": "get",
+          "method": "GET",
+          "path": "/tasks/{taskId}",
+          "source_pointer": "#/paths/~1tasks~1{taskId}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "updateTask",
+          "kind": "action",
+          "method": "POST",
+          "path": "/tasks/{taskId}",
+          "source_pointer": "#/paths/~1tasks~1{taskId}/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "closeTask",
+          "kind": "action",
+          "method": "POST",
+          "path": "/tasks/{taskId}/close",
+          "source_pointer": "#/paths/~1tasks~1{taskId}~1close/post",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "reopenTask",
+          "kind": "action",
+          "method": "POST",
+          "path": "/tasks/{taskId}/reopen",
+          "source_pointer": "#/paths/~1tasks~1{taskId}~1reopen/post",
+          "success_codes": [
+            204
+          ]
+        }
+      ],
+      "plural_display_name": "Tasks",
+      "provenance": [
+        {
+          "detail": "List operation GET /tasks response 200 references Task",
+          "pointer": "#/paths/~1tasks/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Task"
+    },
+    {
+      "collection_path": "/comments",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.85,
+          "field_name": "project_id",
+          "provenance": [
+            {
+              "detail": "Create operation query parameter 'project_id' matches entity 'projects'",
+              "pointer": "#/paths/~1comments/post/parameters",
+              "rule": "D2q:D_key_field_exact_match"
+            }
+          ],
+          "target": "projects"
+        },
+        {
+          "confidence": 0.85,
+          "field_name": "task_id",
+          "provenance": [
+            {
+              "detail": "Create operation query parameter 'task_id' matches entity 'tasks'",
+              "pointer": "#/paths/~1comments/post/parameters",
+              "rule": "D2q:D_key_field_exact_match"
+            }
+          ],
+          "target": "tasks"
+        }
+      ],
+      "display_name": "Comment",
+      "item_path": "/comments/{comment_id}",
+      "key": "comments",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "comment_id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'comment_id' has no matching schema property; using path evidence only",
+          "pointer": "/comments/{comment_id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['comment_id']",
+          "pointer": "/comments/{comment_id}",
+          "rule": "K1/K2:item_path_parameters"
+        },
+        {
+          "detail": "Path parameter 'comment_id' has no same-named schema property, but the schema has a generic 'id' property; treating that as the response-body identifier field for server-assigned-key handling.",
+          "pointer": "#/components/schemas/Comment",
+          "rule": "K5:response_field_generic_id_fallback"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "getAllComments",
+          "kind": "list",
+          "method": "GET",
+          "path": "/comments",
+          "source_pointer": "#/paths/~1comments/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "createComment",
+          "kind": "create",
+          "method": "POST",
+          "path": "/comments",
+          "source_pointer": "#/paths/~1comments/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "deleteComment",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/comments/{comment_id}",
+          "source_pointer": "#/paths/~1comments~1{comment_id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "getComment",
+          "kind": "get",
+          "method": "GET",
+          "path": "/comments/{comment_id}",
+          "source_pointer": "#/paths/~1comments~1{comment_id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "updateComment",
+          "kind": "action",
+          "method": "POST",
+          "path": "/comments/{comment_id}",
+          "source_pointer": "#/paths/~1comments~1{comment_id}/post",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Comments",
+      "provenance": [
+        {
+          "detail": "List operation GET /comments response 200 references Comment",
+          "pointer": "#/paths/~1comments/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Comment"
+    },
+    {
+      "collection_path": "/labels",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Label",
+      "item_path": "/labels/{label_id}",
+      "key": "labels",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "label_id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'label_id' has no matching schema property; using path evidence only",
+          "pointer": "/labels/{label_id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['label_id']",
+          "pointer": "/labels/{label_id}",
+          "rule": "K1/K2:item_path_parameters"
+        },
+        {
+          "detail": "Path parameter 'label_id' has no same-named schema property, but the schema has a generic 'id' property; treating that as the response-body identifier field for server-assigned-key handling.",
+          "pointer": "#/components/schemas/Label",
+          "rule": "K5:response_field_generic_id_fallback"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "getAllPersonalLabels",
+          "kind": "list",
+          "method": "GET",
+          "path": "/labels",
+          "source_pointer": "#/paths/~1labels/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "createPersonalLabel",
+          "kind": "create",
+          "method": "POST",
+          "path": "/labels",
+          "source_pointer": "#/paths/~1labels/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "deletePersonalLabel",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/labels/{label_id}",
+          "source_pointer": "#/paths/~1labels~1{label_id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "getPersonalLabel",
+          "kind": "get",
+          "method": "GET",
+          "path": "/labels/{label_id}",
+          "source_pointer": "#/paths/~1labels~1{label_id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "updatePersonalLabel",
+          "kind": "action",
+          "method": "POST",
+          "path": "/labels/{label_id}",
+          "source_pointer": "#/paths/~1labels~1{label_id}/post",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Labels",
+      "provenance": [
+        {
+          "detail": "List operation GET /labels response 200 references Label",
+          "pointer": "#/paths/~1labels/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Label"
+    }
+  ],
+  "isolation_audit": {
+    "denied_file_count": 0,
+    "policy": "allow-listed OpenAPI/config inputs only; environment-specific paths excluded from deterministic report"
+  },
+  "meta": {
+    "cli_args": {
+      "base_url": "http://127.0.0.1:5000",
+      "command": "generate",
+      "generator_version": "0.25.5",
+      "instances_per_action": 1,
+      "instances_per_entity": 2,
+      "name": "todoist",
+      "seed": 1,
+      "source_openapi_sha256": "eac57779838a6327e497334d940be1da6130466afce9d4a7fbf773dc3197a709",
+      "story_profile": "full"
+    },
+    "openapi_version": "3.1.0",
+    "title": "Todoist_REST_V2"
+  },
+  "reproducibility": {
+    "artifact_sha256": {
+      "dependency_graph_json": "5a3cf8700ba8143f20f1103db7b198ba4acdb42c8f602f847cec3b7175389f4b",
+      "interfaces_js": "1051022383af27c11d363ffd950e15dcad3a48ecaeceb417750d773743fe0f20",
+      "stories_js": "b0ee3169d4825148e0954102853f4423c0f4b4978075ed671e1f7955928c613b"
+    },
+    "base_url": "http://127.0.0.1:5000",
+    "content_fingerprint_sha256": "239e55d665cf1140a21a90c91bf48ba177a3f45ad095dcec5b593a4174997bfd",
+    "generator_version": "0.25.5",
+    "instances_per_action": 1,
+    "instances_per_entity": 2,
+    "scope": "semantic inputs and generated artifacts; filesystem paths and run-time ports are excluded",
+    "seed": 1,
+    "source_openapi_sha256": "eac57779838a6327e497334d940be1da6130466afce9d4a7fbf773dc3197a709"
+  },
+  "response_code_coverage": [
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{projectId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects/{projectId}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/projects/{projectId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{projectId}/collaborators"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/sections"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/sections"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/sections/{sectionId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/sections/{sectionId}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/sections/{sectionId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{taskId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks/{taskId}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/tasks/{taskId}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks/{taskId}/close"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks/{taskId}/reopen"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/comments"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/comments"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/comments/{comment_id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/comments/{comment_id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/comments/{comment_id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/labels"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/labels"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/labels/{label_id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/labels/{label_id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/labels/{label_id}"
+    }
+  ],
+  "security_schemes": {
+    "api_key": {
+      "location": "header",
+      "param_name": "Authorization",
+      "scheme": "bearer",
+      "type": "http"
+    }
+  },
+  "standalone_operations": [],
+  "unsupported_constructs": {
+    "ambiguities": [
+      "Key inference for entity 'projects' has reduced confidence (0.7); path parameter(s) ['projectId'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'sections' has reduced confidence (0.7); path parameter(s) ['sectionId'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'tasks' has reduced confidence (0.7); path parameter(s) ['taskId'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'comments' has reduced confidence (0.7); path parameter(s) ['comment_id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'labels' has reduced confidence (0.7); path parameter(s) ['label_id'] could not be fully cross-validated against the schema."
+    ],
+    "document_level": [],
+    "remote_refs": []
+  },
+  "warnings": []
+}

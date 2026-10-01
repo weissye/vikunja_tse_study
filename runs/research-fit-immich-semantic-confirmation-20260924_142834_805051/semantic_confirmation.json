@@ -1,0 +1,576 @@
+{
+  "status": "COMPLETE",
+  "openapi_sha256": "51719f0b6573ca75eb51834b01a7fdb9e963c9d60fcce813f10c1463a987b866",
+  "trials": 3,
+  "prefix_rounds": 4,
+  "serial_only": true,
+  "results": [
+    {
+      "family": "tag-upsert",
+      "trial": 1,
+      "verdict": "PASS",
+      "reason": "upsert-preserved-earlier-tags",
+      "steps": [
+        {
+          "stage": "identity-before",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        },
+        {
+          "stage": "create-a",
+          "operation": "POST /tags",
+          "status": 201,
+          "value": "fse-confirm-tag-42515270c887-a",
+          "id": "5b83e95a-8ba7-46f6-8e36-305e576974b4"
+        },
+        {
+          "stage": "create-b",
+          "operation": "POST /tags",
+          "status": 201,
+          "value": "fse-confirm-tag-42515270c887-b",
+          "id": "1c752262-b1c9-4ce5-8654-9a752e08f16f"
+        },
+        {
+          "stage": "read-before-upsert-0",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-42515270c887-a",
+          "id": "5b83e95a-8ba7-46f6-8e36-305e576974b4"
+        },
+        {
+          "stage": "read-before-upsert-1",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-42515270c887-b",
+          "id": "1c752262-b1c9-4ce5-8654-9a752e08f16f"
+        },
+        {
+          "stage": "read-only-prefix-0",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-1",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-2",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-3",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-after-read-only-prefix-0",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-42515270c887-a",
+          "id": "5b83e95a-8ba7-46f6-8e36-305e576974b4"
+        },
+        {
+          "stage": "read-after-read-only-prefix-1",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-42515270c887-b",
+          "id": "1c752262-b1c9-4ce5-8654-9a752e08f16f"
+        },
+        {
+          "stage": "upsert-third-tag",
+          "operation": "PUT /tags",
+          "status": 200
+        },
+        {
+          "stage": "read-after-upsert-0",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-42515270c887-a",
+          "id": "5b83e95a-8ba7-46f6-8e36-305e576974b4"
+        },
+        {
+          "stage": "read-after-upsert-1",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-42515270c887-b",
+          "id": "1c752262-b1c9-4ce5-8654-9a752e08f16f"
+        },
+        {
+          "stage": "list-after-upsert",
+          "operation": "GET /tags",
+          "status": 200,
+          "tracked_ids_present": {
+            "5b83e95a-8ba7-46f6-8e36-305e576974b4": true,
+            "1c752262-b1c9-4ce5-8654-9a752e08f16f": true
+          }
+        },
+        {
+          "stage": "identity-after",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        }
+      ]
+    },
+    {
+      "family": "notification",
+      "trial": 1,
+      "verdict": "SEMANTIC_CANDIDATE",
+      "reason": "present-in-filtered-list-but-read-by-id-rejected",
+      "steps": [
+        {
+          "stage": "identity-before",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        },
+        {
+          "stage": "create-self",
+          "operation": "POST /admin/notifications",
+          "status": 201,
+          "value": "fse-confirm-notification-165b2fec22bd",
+          "id": "6505e52b-3beb-4949-ad54-dadb8adc6a76"
+        },
+        {
+          "stage": "immediate-by-id",
+          "operation": "GET /notifications/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "Notification not found"
+        },
+        {
+          "stage": "immediate-filtered-list",
+          "operation": "GET /notifications?id={id}",
+          "status": 200,
+          "matches_created_id": true
+        },
+        {
+          "stage": "read-only-prefix-0",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-1",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-2",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-3",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "after-prefix-by-id",
+          "operation": "GET /notifications/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "Notification not found"
+        },
+        {
+          "stage": "after-prefix-filtered-list",
+          "operation": "GET /notifications?id={id}",
+          "status": 200,
+          "matches_created_id": true
+        },
+        {
+          "stage": "identity-after",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        }
+      ]
+    },
+    {
+      "family": "tag-upsert",
+      "trial": 2,
+      "verdict": "PASS",
+      "reason": "upsert-preserved-earlier-tags",
+      "steps": [
+        {
+          "stage": "identity-before",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        },
+        {
+          "stage": "create-a",
+          "operation": "POST /tags",
+          "status": 201,
+          "value": "fse-confirm-tag-b413c6751495-a",
+          "id": "4f332c42-7b31-4e84-a91d-a385824a780d"
+        },
+        {
+          "stage": "create-b",
+          "operation": "POST /tags",
+          "status": 201,
+          "value": "fse-confirm-tag-b413c6751495-b",
+          "id": "2bc8c737-76d4-454d-975f-6326c915f68d"
+        },
+        {
+          "stage": "read-before-upsert-0",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-b413c6751495-a",
+          "id": "4f332c42-7b31-4e84-a91d-a385824a780d"
+        },
+        {
+          "stage": "read-before-upsert-1",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-b413c6751495-b",
+          "id": "2bc8c737-76d4-454d-975f-6326c915f68d"
+        },
+        {
+          "stage": "read-only-prefix-0",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-1",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-2",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-3",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-after-read-only-prefix-0",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-b413c6751495-a",
+          "id": "4f332c42-7b31-4e84-a91d-a385824a780d"
+        },
+        {
+          "stage": "read-after-read-only-prefix-1",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-b413c6751495-b",
+          "id": "2bc8c737-76d4-454d-975f-6326c915f68d"
+        },
+        {
+          "stage": "upsert-third-tag",
+          "operation": "PUT /tags",
+          "status": 200
+        },
+        {
+          "stage": "read-after-upsert-0",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-b413c6751495-a",
+          "id": "4f332c42-7b31-4e84-a91d-a385824a780d"
+        },
+        {
+          "stage": "read-after-upsert-1",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-b413c6751495-b",
+          "id": "2bc8c737-76d4-454d-975f-6326c915f68d"
+        },
+        {
+          "stage": "list-after-upsert",
+          "operation": "GET /tags",
+          "status": 200,
+          "tracked_ids_present": {
+            "4f332c42-7b31-4e84-a91d-a385824a780d": true,
+            "2bc8c737-76d4-454d-975f-6326c915f68d": true
+          }
+        },
+        {
+          "stage": "identity-after",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        }
+      ]
+    },
+    {
+      "family": "notification",
+      "trial": 2,
+      "verdict": "SEMANTIC_CANDIDATE",
+      "reason": "present-in-filtered-list-but-read-by-id-rejected",
+      "steps": [
+        {
+          "stage": "identity-before",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        },
+        {
+          "stage": "create-self",
+          "operation": "POST /admin/notifications",
+          "status": 201,
+          "value": "fse-confirm-notification-abbf0f404f95",
+          "id": "78b700d2-8e08-47cf-aa10-4ff68160a6a7"
+        },
+        {
+          "stage": "immediate-by-id",
+          "operation": "GET /notifications/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "Notification not found"
+        },
+        {
+          "stage": "immediate-filtered-list",
+          "operation": "GET /notifications?id={id}",
+          "status": 200,
+          "matches_created_id": true
+        },
+        {
+          "stage": "read-only-prefix-0",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-1",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-2",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-3",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "after-prefix-by-id",
+          "operation": "GET /notifications/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "Notification not found"
+        },
+        {
+          "stage": "after-prefix-filtered-list",
+          "operation": "GET /notifications?id={id}",
+          "status": 200,
+          "matches_created_id": true
+        },
+        {
+          "stage": "identity-after",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        }
+      ]
+    },
+    {
+      "family": "tag-upsert",
+      "trial": 3,
+      "verdict": "PASS",
+      "reason": "upsert-preserved-earlier-tags",
+      "steps": [
+        {
+          "stage": "identity-before",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        },
+        {
+          "stage": "create-a",
+          "operation": "POST /tags",
+          "status": 201,
+          "value": "fse-confirm-tag-5f580bc66c2e-a",
+          "id": "ec38c99d-f19c-42d5-860c-c28a625926ae"
+        },
+        {
+          "stage": "create-b",
+          "operation": "POST /tags",
+          "status": 201,
+          "value": "fse-confirm-tag-5f580bc66c2e-b",
+          "id": "268e0911-f2cc-4424-bc72-549851184f63"
+        },
+        {
+          "stage": "read-before-upsert-0",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-5f580bc66c2e-a",
+          "id": "ec38c99d-f19c-42d5-860c-c28a625926ae"
+        },
+        {
+          "stage": "read-before-upsert-1",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-5f580bc66c2e-b",
+          "id": "268e0911-f2cc-4424-bc72-549851184f63"
+        },
+        {
+          "stage": "read-only-prefix-0",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-1",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-2",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-3",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-after-read-only-prefix-0",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-5f580bc66c2e-a",
+          "id": "ec38c99d-f19c-42d5-860c-c28a625926ae"
+        },
+        {
+          "stage": "read-after-read-only-prefix-1",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-5f580bc66c2e-b",
+          "id": "268e0911-f2cc-4424-bc72-549851184f63"
+        },
+        {
+          "stage": "upsert-third-tag",
+          "operation": "PUT /tags",
+          "status": 200
+        },
+        {
+          "stage": "read-after-upsert-0",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-5f580bc66c2e-a",
+          "id": "ec38c99d-f19c-42d5-860c-c28a625926ae"
+        },
+        {
+          "stage": "read-after-upsert-1",
+          "operation": "GET /tags/{id}",
+          "status": 200,
+          "value": "fse-confirm-tag-5f580bc66c2e-b",
+          "id": "268e0911-f2cc-4424-bc72-549851184f63"
+        },
+        {
+          "stage": "list-after-upsert",
+          "operation": "GET /tags",
+          "status": 200,
+          "tracked_ids_present": {
+            "ec38c99d-f19c-42d5-860c-c28a625926ae": true,
+            "268e0911-f2cc-4424-bc72-549851184f63": true
+          }
+        },
+        {
+          "stage": "identity-after",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        }
+      ]
+    },
+    {
+      "family": "notification",
+      "trial": 3,
+      "verdict": "SEMANTIC_CANDIDATE",
+      "reason": "present-in-filtered-list-but-read-by-id-rejected",
+      "steps": [
+        {
+          "stage": "identity-before",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        },
+        {
+          "stage": "create-self",
+          "operation": "POST /admin/notifications",
+          "status": 201,
+          "value": "fse-confirm-notification-ff3ec2c500d0",
+          "id": "30f6924a-12c3-4378-9314-3948c18f161c"
+        },
+        {
+          "stage": "immediate-by-id",
+          "operation": "GET /notifications/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "Notification not found"
+        },
+        {
+          "stage": "immediate-filtered-list",
+          "operation": "GET /notifications?id={id}",
+          "status": 200,
+          "matches_created_id": true
+        },
+        {
+          "stage": "read-only-prefix-0",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-1",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-2",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-3",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "after-prefix-by-id",
+          "operation": "GET /notifications/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "Notification not found"
+        },
+        {
+          "stage": "after-prefix-filtered-list",
+          "operation": "GET /notifications?id={id}",
+          "status": 200,
+          "matches_created_id": true
+        },
+        {
+          "stage": "identity-after",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        }
+      ]
+    }
+  ]
+}

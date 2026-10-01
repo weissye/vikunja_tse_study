@@ -1,0 +1,348 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "cross-method::update-delete::updateAlbumInfo::deleteAlbum",
+      "create_binding": {
+        "evidence": {
+          "id": {
+            "confidence": "high",
+            "source": "openapi-property-name"
+          }
+        },
+        "request_path": {},
+        "response": {
+          "id": "id"
+        }
+      },
+      "create_operation_id": "createAlbum",
+      "family": "update-delete",
+      "limitation": "three-isolated-created-items-and-two-serial-absence-controls-needed",
+      "methods": [
+        "PATCH",
+        "DELETE"
+      ],
+      "observation_operation_id": "getAlbumInfo",
+      "operation_ids": [
+        "updateAlbumInfo",
+        "deleteAlbum"
+      ],
+      "path_template": "/albums/{id}",
+      "runtime_ready": false,
+      "source_pointers": [
+        "#/paths/~1albums~1{id}/patch",
+        "#/paths/~1albums~1{id}/delete",
+        "#/paths/~1albums~1{id}/get"
+      ]
+    },
+    {
+      "body_array_key": "ids",
+      "candidate_id": "cross-method::put-delete::addAssetsToAlbum::removeAssetFromAlbum::ids",
+      "family": "relation-put-delete",
+      "limitation": "independent-membership-read-and-two-real-member-ids-needed",
+      "member_id_type": "string",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation_operation_id": "getAlbumInfo",
+      "operation_ids": [
+        "addAssetsToAlbum",
+        "removeAssetFromAlbum"
+      ],
+      "parent_binding": {
+        "evidence": {
+          "id": {
+            "confidence": "high",
+            "source": "openapi-property-name"
+          }
+        },
+        "request_path": {},
+        "response": {
+          "id": "id"
+        }
+      },
+      "parent_create_operation_id": "createAlbum",
+      "parent_path_template": "/albums/{id}",
+      "path_template": "/albums/{id}/assets",
+      "runtime_ready": false,
+      "source_pointers": [
+        "#/paths/~1albums~1{id}~1assets/put",
+        "#/paths/~1albums~1{id}~1assets/delete",
+        "#/paths/~1albums~1{id}/get"
+      ]
+    },
+    {
+      "candidate_id": "cross-method::update-delete::updateAlbumUser::removeUserFromAlbum",
+      "create_binding": null,
+      "create_operation_id": null,
+      "family": "update-delete",
+      "limitation": "no-item-get",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation_operation_id": null,
+      "operation_ids": [
+        "updateAlbumUser",
+        "removeUserFromAlbum"
+      ],
+      "path_template": "/albums/{id}/user/{userId}",
+      "runtime_ready": false,
+      "source_pointers": [
+        "#/paths/~1albums~1{id}~1user~1{userId}/put",
+        "#/paths/~1albums~1{id}~1user~1{userId}/delete"
+      ]
+    },
+    {
+      "candidate_id": "cross-method::update-delete::reassignFacesById::deleteFace",
+      "create_binding": null,
+      "create_operation_id": null,
+      "family": "update-delete",
+      "limitation": "no-item-get",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation_operation_id": null,
+      "operation_ids": [
+        "reassignFacesById",
+        "deleteFace"
+      ],
+      "path_template": "/faces/{id}",
+      "runtime_ready": false,
+      "source_pointers": [
+        "#/paths/~1faces~1{id}/put",
+        "#/paths/~1faces~1{id}/delete"
+      ]
+    },
+    {
+      "body_array_key": "ids",
+      "candidate_id": "cross-method::put-delete::addMemoryAssets::removeMemoryAssets::ids",
+      "family": "relation-put-delete",
+      "limitation": "independent-membership-read-and-two-real-member-ids-needed",
+      "member_id_type": "string",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation_operation_id": "getMemory",
+      "operation_ids": [
+        "addMemoryAssets",
+        "removeMemoryAssets"
+      ],
+      "parent_binding": {
+        "evidence": {
+          "id": {
+            "confidence": "high",
+            "source": "openapi-property-name"
+          }
+        },
+        "request_path": {},
+        "response": {
+          "id": "id"
+        }
+      },
+      "parent_create_operation_id": "createMemory",
+      "parent_path_template": "/memories/{id}",
+      "path_template": "/memories/{id}/assets",
+      "runtime_ready": false,
+      "source_pointers": [
+        "#/paths/~1memories~1{id}~1assets/put",
+        "#/paths/~1memories~1{id}~1assets/delete",
+        "#/paths/~1memories~1{id}/get"
+      ]
+    },
+    {
+      "body_array_key": "ids",
+      "candidate_id": "cross-method::put-delete::updateNotifications::deleteNotifications::ids",
+      "family": "relation-put-delete",
+      "limitation": "no-parent-get",
+      "member_id_type": "string",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation_operation_id": null,
+      "operation_ids": [
+        "updateNotifications",
+        "deleteNotifications"
+      ],
+      "parent_binding": null,
+      "parent_create_operation_id": null,
+      "parent_path_template": "/",
+      "path_template": "/notifications",
+      "runtime_ready": false,
+      "source_pointers": [
+        "#/paths/~1notifications/put",
+        "#/paths/~1notifications/delete"
+      ]
+    },
+    {
+      "candidate_id": "cross-method::update-delete::updateNotification::deleteNotification",
+      "create_binding": {
+        "evidence": {
+          "id": {
+            "confidence": "high",
+            "source": "openapi-property-name"
+          }
+        },
+        "request_path": {},
+        "response": {
+          "id": "id"
+        }
+      },
+      "create_operation_id": "createNotification",
+      "family": "update-delete",
+      "limitation": "three-isolated-created-items-and-two-serial-absence-controls-needed",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation_operation_id": "getNotification",
+      "operation_ids": [
+        "updateNotification",
+        "deleteNotification"
+      ],
+      "path_template": "/notifications/{id}",
+      "runtime_ready": false,
+      "source_pointers": [
+        "#/paths/~1notifications~1{id}/put",
+        "#/paths/~1notifications~1{id}/delete",
+        "#/paths/~1notifications~1{id}/get"
+      ]
+    },
+    {
+      "candidate_id": "cross-method::update-delete::updatePartner::removePartner",
+      "create_binding": null,
+      "create_operation_id": null,
+      "family": "update-delete",
+      "limitation": "no-item-get",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation_operation_id": null,
+      "operation_ids": [
+        "updatePartner",
+        "removePartner"
+      ],
+      "path_template": "/partners/{id}",
+      "runtime_ready": false,
+      "source_pointers": [
+        "#/paths/~1partners~1{id}/put",
+        "#/paths/~1partners~1{id}/delete"
+      ]
+    },
+    {
+      "candidate_id": "cross-method::update-delete::updateSharedLink::removeSharedLink",
+      "create_binding": {
+        "evidence": {
+          "id": {
+            "confidence": "high",
+            "source": "openapi-property-name"
+          }
+        },
+        "request_path": {},
+        "response": {
+          "id": "id"
+        }
+      },
+      "create_operation_id": "createSharedLink",
+      "family": "update-delete",
+      "limitation": "three-isolated-created-items-and-two-serial-absence-controls-needed",
+      "methods": [
+        "PATCH",
+        "DELETE"
+      ],
+      "observation_operation_id": "getSharedLinkById",
+      "operation_ids": [
+        "updateSharedLink",
+        "removeSharedLink"
+      ],
+      "path_template": "/shared-links/{id}",
+      "runtime_ready": false,
+      "source_pointers": [
+        "#/paths/~1shared-links~1{id}/patch",
+        "#/paths/~1shared-links~1{id}/delete",
+        "#/paths/~1shared-links~1{id}/get"
+      ]
+    },
+    {
+      "body_array_key": "assetIds",
+      "candidate_id": "cross-method::put-delete::addSharedLinkAssets::removeSharedLinkAssets::assetIds",
+      "family": "relation-put-delete",
+      "limitation": "independent-membership-read-and-two-real-member-ids-needed",
+      "member_id_type": "string",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation_operation_id": "getSharedLinkById",
+      "operation_ids": [
+        "addSharedLinkAssets",
+        "removeSharedLinkAssets"
+      ],
+      "parent_binding": {
+        "evidence": {
+          "id": {
+            "confidence": "high",
+            "source": "openapi-property-name"
+          }
+        },
+        "request_path": {},
+        "response": {
+          "id": "id"
+        }
+      },
+      "parent_create_operation_id": "createSharedLink",
+      "parent_path_template": "/shared-links/{id}",
+      "path_template": "/shared-links/{id}/assets",
+      "runtime_ready": false,
+      "source_pointers": [
+        "#/paths/~1shared-links~1{id}~1assets/put",
+        "#/paths/~1shared-links~1{id}~1assets/delete",
+        "#/paths/~1shared-links~1{id}/get"
+      ]
+    },
+    {
+      "body_array_key": "ids",
+      "candidate_id": "cross-method::put-delete::tagAssets::untagAssets::ids",
+      "family": "relation-put-delete",
+      "limitation": "independent-membership-read-and-two-real-member-ids-needed",
+      "member_id_type": "string",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation_operation_id": "getTagById",
+      "operation_ids": [
+        "tagAssets",
+        "untagAssets"
+      ],
+      "parent_binding": {
+        "evidence": {
+          "id": {
+            "confidence": "high",
+            "source": "openapi-property-name"
+          }
+        },
+        "request_path": {},
+        "response": {
+          "id": "id"
+        }
+      },
+      "parent_create_operation_id": "createTag",
+      "parent_path_template": "/tags/{id}",
+      "path_template": "/tags/{id}/assets",
+      "runtime_ready": false,
+      "source_pointers": [
+        "#/paths/~1tags~1{id}~1assets/put",
+        "#/paths/~1tags~1{id}~1assets/delete",
+        "#/paths/~1tags~1{id}/get"
+      ]
+    }
+  ],
+  "policy": "discovery-only: serial controls and reference fixtures are required before execution",
+  "runtime_ready": 0,
+  "schema_version": 1
+}

@@ -1,0 +1,62 @@
+{
+  "generator_version": "0.26.9",
+  "parameters": {
+    "base_seed": 20261814,
+    "freeze_evidence": true,
+    "instances_per_action": 1,
+    "instances_per_entity": 2,
+    "max_concurrency_width": 2,
+    "max_field_pairs": 3,
+    "max_length": 25000,
+    "prefix_before_concurrency": 8,
+    "prefix_rounds": 8,
+    "preflight_only": false,
+    "root": "C:\\work\\temp\\vikunja_tse_study",
+    "runs": 1,
+    "story_profile": "long-interleaving"
+  },
+  "results": [
+    {
+      "concurrency_evaluated": 3,
+      "coverage_state": "VERIFIED_PREFIX_AND_ORACLE_COVERAGE",
+      "epoch_count": 4,
+      "evaluator_exit": 3,
+      "http_events": 257,
+      "http_statuses": {
+        "200": 220,
+        "201": 17,
+        "400": 4,
+        "404": 2,
+        "422": 13,
+        "500": 1
+      },
+      "max_prefix_rounds": 8,
+      "oracle_counts": {
+        "INCONCLUSIVE": 41,
+        "PASS": 256,
+        "VIOLATED": 0
+      },
+      "oracle_status": "INCONCLUSIVE",
+      "prefix_verified_epochs": 4,
+      "provengo_exit": 0,
+      "real_overlap_epochs": 4,
+      "runtime_ready_oracles": 11,
+      "seed": 20261814,
+      "story_event_counts": {
+        "ConcurrencyReady": 4,
+        "InstanceUnavailable": 4,
+        "LongStoryStep": 53,
+        "PrefixVerified": 53,
+        "StorySkipped": 19
+      },
+      "story_skip_reasons": {
+        "create-failed": 4,
+        "dependency-unavailable": 8,
+        "identity-change-requires-rebinding": 3,
+        "operation-failed": 4
+      },
+      "transport_errors": 0
+    }
+  ],
+  "state": "COMPLETE"
+}

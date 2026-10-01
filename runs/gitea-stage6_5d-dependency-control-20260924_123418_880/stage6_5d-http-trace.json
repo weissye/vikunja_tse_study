@@ -1,0 +1,358 @@
+﻿[
+    {
+        "timestamp_utc":  "2026-09-24T09:34:18.8989816Z",
+        "label":  "authenticated-user",
+        "method":  "GET",
+        "path":  "/user",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  2,
+                         "login":  "sbt-gitea-20260924_122158_450",
+                         "login_name":  "",
+                         "source_id":  0,
+                         "full_name":  "",
+                         "email":  "sbt-gitea-20260924_122158_450@example.invalid",
+                         "avatar_url":  "http://127.0.0.1:3477/avatars/46172ad3bc1b630496f34d52b734a884",
+                         "html_url":  "http://127.0.0.1:3477/sbt-gitea-20260924_122158_450",
+                         "language":  "",
+                         "is_admin":  false,
+                         "last_login":  "1970-01-01T00:00:00Z",
+                         "created":  "2026-09-24T09:21:58Z",
+                         "restricted":  false,
+                         "active":  true,
+                         "prohibit_login":  false,
+                         "location":  "",
+                         "website":  "",
+                         "description":  "",
+                         "visibility":  "public",
+                         "followers_count":  0,
+                         "following_count":  0,
+                         "starred_repos_count":  0,
+                         "username":  "sbt-gitea-20260924_122158_450"
+                     },
+        "elapsed_ms":  58.163
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:18.9571450Z",
+        "label":  "trial-1-hook-empty-config",
+        "method":  "POST",
+        "path":  "/user/hooks",
+        "request":  {
+                        "config":  {
+
+                                   },
+                        "active":  false,
+                        "type":  "gitea"
+                    },
+        "status":  422,
+        "response":  null,
+        "elapsed_ms":  22.636
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:18.9797812Z",
+        "label":  "trial-1-hook-with-local-url",
+        "method":  "POST",
+        "path":  "/user/hooks",
+        "request":  {
+                        "config":  {
+                                       "url":  "http://127.0.0.1:3477/api/v1/version",
+                                       "content_type":  "json"
+                                   },
+                        "active":  false,
+                        "events":  [
+                                       {
+                                           "Length":  4
+                                       }
+                                   ],
+                        "type":  "gitea"
+                    },
+        "status":  201,
+        "response":  {
+                         "id":  1,
+                         "name":  "",
+                         "type":  "gitea",
+                         "branch_filter":  "",
+                         "config":  {
+                                        "url":  "http://127.0.0.1:3477/api/v1/version",
+                                        "content_type":  "json"
+                                    },
+                         "events":  [
+                                        {
+                                            "Length":  4
+                                        }
+                                    ],
+                         "authorization_header":  "[REDACTED]",
+                         "active":  false,
+                         "updated_at":  "2026-09-24T09:34:19Z",
+                         "created_at":  "2026-09-24T09:34:19Z"
+                     },
+        "elapsed_ms":  70.264
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:19.0500452Z",
+        "label":  "trial-1-hook-read",
+        "method":  "GET",
+        "path":  "/user/hooks/1",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  1,
+                         "name":  "",
+                         "type":  "gitea",
+                         "branch_filter":  "",
+                         "config":  {
+                                        "url":  "http://127.0.0.1:3477/api/v1/version",
+                                        "content_type":  "json"
+                                    },
+                         "events":  [
+                                        {
+                                            "Length":  4
+                                        }
+                                    ],
+                         "authorization_header":  "[REDACTED]",
+                         "active":  false,
+                         "updated_at":  "2026-09-24T09:34:19Z",
+                         "created_at":  "2026-09-24T09:34:19Z"
+                     },
+        "elapsed_ms":  43.653
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:19.0997011Z",
+        "label":  "trial-1-oauth-empty",
+        "method":  "POST",
+        "path":  "/user/applications/oauth2",
+        "request":  {
+
+                    },
+        "status":  422,
+        "response":  null,
+        "elapsed_ms":  14.604
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:19.1153773Z",
+        "label":  "trial-1-oauth-name",
+        "method":  "POST",
+        "path":  "/user/applications/oauth2",
+        "request":  {
+                        "name":  "s65d-app-123418957-1"
+                    },
+        "status":  422,
+        "response":  null,
+        "elapsed_ms":  15.323
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:19.1319922Z",
+        "label":  "trial-1-oauth-name-and-redirect",
+        "method":  "POST",
+        "path":  "/user/applications/oauth2",
+        "request":  {
+                        "name":  "s65d-redirect-123418957-1",
+                        "redirect_uris":  [
+                                              {
+                                                  "Length":  22
+                                              }
+                                          ]
+                    },
+        "status":  201,
+        "response":  {
+                         "id":  5,
+                         "name":  "s65d-redirect-123418957-1",
+                         "client_id":  "92d067c3-44d5-4aaa-940f-1545b810e7c7",
+                         "client_secret":  "[REDACTED]",
+                         "confidential_client":  false,
+                         "skip_secondary_authorization":  "[REDACTED]",
+                         "redirect_uris":  [
+                                               {
+                                                   "Length":  22
+                                               }
+                                           ],
+                         "created":  "2026-09-24T09:34:19Z"
+                     },
+        "elapsed_ms":  103.07
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:19.2361291Z",
+        "label":  "trial-1-oauth-redirect-read",
+        "method":  "GET",
+        "path":  "/user/applications/oauth2/5",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  5,
+                         "name":  "s65d-redirect-123418957-1",
+                         "client_id":  "92d067c3-44d5-4aaa-940f-1545b810e7c7",
+                         "client_secret":  "[REDACTED]",
+                         "confidential_client":  false,
+                         "skip_secondary_authorization":  "[REDACTED]",
+                         "redirect_uris":  [
+                                               {
+                                                   "Length":  22
+                                               }
+                                           ],
+                         "created":  "2026-09-24T09:34:19Z"
+                     },
+        "elapsed_ms":  37.671
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:19.2763256Z",
+        "label":  "trial-2-hook-empty-config",
+        "method":  "POST",
+        "path":  "/user/hooks",
+        "request":  {
+                        "config":  {
+
+                                   },
+                        "active":  false,
+                        "type":  "gitea"
+                    },
+        "status":  422,
+        "response":  null,
+        "elapsed_ms":  16.236
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:19.2925619Z",
+        "label":  "trial-2-hook-with-local-url",
+        "method":  "POST",
+        "path":  "/user/hooks",
+        "request":  {
+                        "config":  {
+                                       "url":  "http://127.0.0.1:3477/api/v1/version",
+                                       "content_type":  "json"
+                                   },
+                        "active":  false,
+                        "events":  [
+                                       {
+                                           "Length":  4
+                                       }
+                                   ],
+                        "type":  "gitea"
+                    },
+        "status":  201,
+        "response":  {
+                         "id":  2,
+                         "name":  "",
+                         "type":  "gitea",
+                         "branch_filter":  "",
+                         "config":  {
+                                        "content_type":  "json",
+                                        "url":  "http://127.0.0.1:3477/api/v1/version"
+                                    },
+                         "events":  [
+                                        {
+                                            "Length":  4
+                                        }
+                                    ],
+                         "authorization_header":  "[REDACTED]",
+                         "active":  false,
+                         "updated_at":  "2026-09-24T09:34:19Z",
+                         "created_at":  "2026-09-24T09:34:19Z"
+                     },
+        "elapsed_ms":  39.396
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:19.3319581Z",
+        "label":  "trial-2-hook-read",
+        "method":  "GET",
+        "path":  "/user/hooks/2",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  2,
+                         "name":  "",
+                         "type":  "gitea",
+                         "branch_filter":  "",
+                         "config":  {
+                                        "url":  "http://127.0.0.1:3477/api/v1/version",
+                                        "content_type":  "json"
+                                    },
+                         "events":  [
+                                        {
+                                            "Length":  4
+                                        }
+                                    ],
+                         "authorization_header":  "[REDACTED]",
+                         "active":  false,
+                         "updated_at":  "2026-09-24T09:34:19Z",
+                         "created_at":  "2026-09-24T09:34:19Z"
+                     },
+        "elapsed_ms":  44.163
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:19.3766535Z",
+        "label":  "trial-2-oauth-empty",
+        "method":  "POST",
+        "path":  "/user/applications/oauth2",
+        "request":  {
+
+                    },
+        "status":  422,
+        "response":  null,
+        "elapsed_ms":  13.74
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:19.3909310Z",
+        "label":  "trial-2-oauth-name",
+        "method":  "POST",
+        "path":  "/user/applications/oauth2",
+        "request":  {
+                        "name":  "s65d-app-123419275-2"
+                    },
+        "status":  422,
+        "response":  null,
+        "elapsed_ms":  13.597
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:19.4050727Z",
+        "label":  "trial-2-oauth-name-and-redirect",
+        "method":  "POST",
+        "path":  "/user/applications/oauth2",
+        "request":  {
+                        "name":  "s65d-redirect-123419275-2",
+                        "redirect_uris":  [
+                                              {
+                                                  "Length":  22
+                                              }
+                                          ]
+                    },
+        "status":  201,
+        "response":  {
+                         "id":  6,
+                         "name":  "s65d-redirect-123419275-2",
+                         "client_id":  "f254fcff-084e-48f2-a497-54a71b5d4aa2",
+                         "client_secret":  "[REDACTED]",
+                         "confidential_client":  false,
+                         "skip_secondary_authorization":  "[REDACTED]",
+                         "redirect_uris":  [
+                                               {
+                                                   "Length":  22
+                                               }
+                                           ],
+                         "created":  "2026-09-24T09:34:19Z"
+                     },
+        "elapsed_ms":  106.21
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:34:19.5112829Z",
+        "label":  "trial-2-oauth-redirect-read",
+        "method":  "GET",
+        "path":  "/user/applications/oauth2/6",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  6,
+                         "name":  "s65d-redirect-123419275-2",
+                         "client_id":  "f254fcff-084e-48f2-a497-54a71b5d4aa2",
+                         "client_secret":  "[REDACTED]",
+                         "confidential_client":  false,
+                         "skip_secondary_authorization":  "[REDACTED]",
+                         "redirect_uris":  [
+                                               {
+                                                   "Length":  22
+                                               }
+                                           ],
+                         "created":  "2026-09-24T09:34:19Z"
+                     },
+        "elapsed_ms":  46.307
+    }
+]

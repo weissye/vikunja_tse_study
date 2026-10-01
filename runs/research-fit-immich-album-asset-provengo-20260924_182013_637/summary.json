@@ -1,0 +1,72 @@
+{
+  "candidate": "immich",
+  "counts": {
+    "INCONCLUSIVE": 0,
+    "PASS": 2,
+    "SEMANTIC_CANDIDATE": 0
+  },
+  "parameters": {
+    "max_length": 1500,
+    "prefix_rounds": 8,
+    "seed": 20261423,
+    "trials": 2
+  },
+  "results": [
+    {
+      "adapter_overlap": true,
+      "asset_ids": {
+        "a": "9d6b0579-7960-4135-a226-2e5d2718e542",
+        "b": "b00af219-68d1-4e17-ba22-c82e2f92665f"
+      },
+      "cleanup_album_status": 204,
+      "cleanup_assets_status": 204,
+      "epoch_id": "immich-membership-bf03927f8a6b",
+      "final_count": 1,
+      "final_members": [
+        "b00af219-68d1-4e17-ba22-c82e2f92665f"
+      ],
+      "http_witness": true,
+      "overlap": true,
+      "prefix_rounds_verified": 8,
+      "real_thumbnail_verified": true,
+      "reason": "both-disjoint-membership-updates-persisted",
+      "repeat_count": 1,
+      "repeat_members": [
+        "b00af219-68d1-4e17-ba22-c82e2f92665f"
+      ],
+      "trial": 1,
+      "two_serial_orders_verified": true,
+      "verdict": "PASS"
+    },
+    {
+      "adapter_overlap": true,
+      "asset_ids": {
+        "a": "527dfae8-b3ba-4676-bd2e-38d868e697ee",
+        "b": "385a6df6-ba72-4e34-86e5-c21c90aa70ee"
+      },
+      "cleanup_album_status": 204,
+      "cleanup_assets_status": 204,
+      "epoch_id": "immich-membership-2eb4db2ce547",
+      "final_count": 1,
+      "final_members": [
+        "385a6df6-ba72-4e34-86e5-c21c90aa70ee"
+      ],
+      "http_witness": true,
+      "overlap": true,
+      "prefix_rounds_verified": 8,
+      "real_thumbnail_verified": true,
+      "reason": "both-disjoint-membership-updates-persisted",
+      "repeat_count": 1,
+      "repeat_members": [
+        "385a6df6-ba72-4e34-86e5-c21c90aa70ee"
+      ],
+      "trial": 2,
+      "two_serial_orders_verified": true,
+      "verdict": "PASS"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "verified serial fixture; generated REST interface; focused Provengo epoch story; generic OpenAPI adapter; independent HTTP oracle",
+  "source_spec_sha256": "51719f0b6573ca75eb51834b01a7fdb9e963c9d60fcce813f10c1463a987b866",
+  "version": "v3.2.0"
+}

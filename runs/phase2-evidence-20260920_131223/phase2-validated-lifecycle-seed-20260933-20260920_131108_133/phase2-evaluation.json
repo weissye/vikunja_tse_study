@@ -1,0 +1,47 @@
+{
+  "deletion_observation_policy": {
+    "label": [
+      403,
+      404
+    ],
+    "label_403_requires_predelete_read": true,
+    "project": [
+      404
+    ],
+    "task": [
+      404
+    ]
+  },
+  "evaluation_basis": "external redacted HTTP trace",
+  "event_count": 19,
+  "observed_ids": {
+    "label_id": 8,
+    "project_id": 9,
+    "task_id": 8
+  },
+  "passed_count": 15,
+  "persisted_update_fields": {
+    "done": true,
+    "title": true
+  },
+  "phase2_passed": true,
+  "profile": "validated-lifecycle",
+  "required_count": 15,
+  "witnesses": {
+    "01_project_created": true,
+    "02_project_read": true,
+    "03_task_created_under_project": true,
+    "04_task_read": true,
+    "05_task_updated": true,
+    "06_update_persisted": true,
+    "07_label_created": true,
+    "08_label_attached": true,
+    "09_attach_observable": true,
+    "10_label_detached": true,
+    "11_detach_observable": true,
+    "12_task_deleted": true,
+    "13_label_deleted": true,
+    "14_project_deleted": true,
+    "15_deletions_observable": true
+  }
+}

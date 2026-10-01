@@ -1,0 +1,127 @@
+{
+  "boundary": "multi-resource",
+  "operation_count": 29,
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/projects"
+    },
+    {
+      "method": "POST",
+      "path": "/projects"
+    },
+    {
+      "method": "DELETE",
+      "path": "/projects/{id}"
+    },
+    {
+      "method": "GET",
+      "path": "/projects/{id}"
+    },
+    {
+      "method": "PATCH",
+      "path": "/projects/{id}"
+    },
+    {
+      "method": "PUT",
+      "path": "/projects/{id}"
+    },
+    {
+      "method": "GET",
+      "path": "/projects/{project}/tasks"
+    },
+    {
+      "method": "POST",
+      "path": "/projects/{project}/tasks"
+    },
+    {
+      "method": "DELETE",
+      "path": "/tasks/{task}"
+    },
+    {
+      "method": "GET",
+      "path": "/tasks/{task}"
+    },
+    {
+      "method": "PATCH",
+      "path": "/tasks/{task}"
+    },
+    {
+      "method": "PUT",
+      "path": "/tasks/{task}"
+    },
+    {
+      "method": "GET",
+      "path": "/labels"
+    },
+    {
+      "method": "POST",
+      "path": "/labels"
+    },
+    {
+      "method": "DELETE",
+      "path": "/labels/{id}"
+    },
+    {
+      "method": "GET",
+      "path": "/labels/{id}"
+    },
+    {
+      "method": "PATCH",
+      "path": "/labels/{id}"
+    },
+    {
+      "method": "PUT",
+      "path": "/labels/{id}"
+    },
+    {
+      "method": "GET",
+      "path": "/tasks/{task}/labels"
+    },
+    {
+      "method": "POST",
+      "path": "/tasks/{task}/labels"
+    },
+    {
+      "method": "DELETE",
+      "path": "/tasks/{task}/labels/{label}"
+    },
+    {
+      "method": "GET",
+      "path": "/tasks/{task}/comments"
+    },
+    {
+      "method": "POST",
+      "path": "/tasks/{task}/comments"
+    },
+    {
+      "method": "DELETE",
+      "path": "/tasks/{task}/comments/{commentid}"
+    },
+    {
+      "method": "GET",
+      "path": "/tasks/{task}/comments/{commentid}"
+    },
+    {
+      "method": "PATCH",
+      "path": "/tasks/{task}/comments/{commentid}"
+    },
+    {
+      "method": "PUT",
+      "path": "/tasks/{task}/comments/{commentid}"
+    },
+    {
+      "method": "POST",
+      "path": "/tasks/{task}/relations"
+    },
+    {
+      "method": "DELETE",
+      "path": "/tasks/{task}/relations/{relationKind}/{otherTask}"
+    }
+  ],
+  "policy": "fixed operation boundary; no schema/story/binding injection",
+  "projection": "C:\\work\\temp\\vikunja_tse_study\\phase13-disjoint-update-commutativity\\vikunja-multi-resource-openapi.json",
+  "projection_sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941",
+  "source": "C:\\work\\temp\\vikunja_tse_study\\vikunja-openapi-3.0.json",
+  "source_sha256": "207ec830ffe3f73be3324dda465a33e1d6ae4afca5b2e4d35e66d2e371e0510d"
+}

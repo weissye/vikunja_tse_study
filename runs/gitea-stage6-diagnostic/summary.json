@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "scheduler": "provengo",
+  "spec_sha256": "c962e3c8cbdc1183693f2b2f0b2471c414ba283bff86407c453031640af788bd",
+  "seeds": [
+    301,
+    302,
+    303
+  ],
+  "completed": 0,
+  "trials": [
+    {
+      "seed": 301,
+      "status": "BLOCKED_CREATE",
+      "family": "/repos/{owner}/{repo}/tags",
+      "reason": "Family creation did not return a documented success",
+      "events": 3,
+      "actions_executed": 0,
+      "successful_mutations": 0,
+      "valid_observation_pairs": 0
+    },
+    {
+      "seed": 302,
+      "status": "BLOCKED_ANCESTOR",
+      "family": "/repos/{owner}/{repo}/tag_protections",
+      "reason": "Ancestor creation did not return a documented success and identity",
+      "events": 2,
+      "actions_executed": 0,
+      "successful_mutations": 0,
+      "valid_observation_pairs": 0
+    },
+    {
+      "seed": 303,
+      "status": "BLOCKED_CREATE",
+      "family": "/repos/{owner}/{repo}/keys",
+      "reason": "Family creation did not return a documented success",
+      "events": 3,
+      "actions_executed": 0,
+      "successful_mutations": 0,
+      "valid_observation_pairs": 0
+    }
+  ],
+  "candidate_count": 0,
+  "repeated": [],
+  "outcome_variation": [],
+  "confirmed_bugs": 0,
+  "note": "No automatic promotion to confirmed bug without valid preconditions, independent before/after oracle and replay review."
+}

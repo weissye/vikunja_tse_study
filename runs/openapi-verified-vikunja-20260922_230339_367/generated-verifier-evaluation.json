@@ -1,0 +1,44 @@
+{
+  "contract_oracles_exercised": 0,
+  "contract_oracles_generated": 29,
+  "counts": {
+    "INCONCLUSIVE": 1,
+    "PASS": 0,
+    "VIOLATED": 0
+  },
+  "layer_counts": {
+    "concurrency": {
+      "INCONCLUSIVE": 0,
+      "PASS": 0,
+      "VIOLATED": 0
+    },
+    "contract": {
+      "INCONCLUSIVE": 0,
+      "PASS": 0,
+      "VIOLATED": 0
+    },
+    "state": {
+      "INCONCLUSIVE": 0,
+      "PASS": 0,
+      "VIOLATED": 0
+    }
+  },
+  "note": "Not-exercised operations are coverage facts, not automatically semantic failures.",
+  "profile": "openapi-only-generated-verifiers",
+  "run_status": "INCONCLUSIVE",
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.3",
+    "sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941",
+    "title": "Vikunja API",
+    "version": "v2.6.0-469-g94e6f165"
+  },
+  "witnesses": [
+    {
+      "kind": "run-evidence",
+      "oracle_id": "run::coverage",
+      "reason": "no-generated-oracle-was-exercised",
+      "result": "INCONCLUSIVE"
+    }
+  ]
+}

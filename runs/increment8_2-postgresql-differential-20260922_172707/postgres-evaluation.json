@@ -1,0 +1,527 @@
+{
+  "counts": {
+    "CONTRACT_REJECTION": 0,
+    "INCONCLUSIVE": 0,
+    "LOST_UPDATE": 20,
+    "PASS": 0,
+    "SERVER_FAILURE": 0
+  },
+  "direct_defect_reproduced": true,
+  "evaluation_basis": "raw direct-client intervals, responses, sequential control, reset, and independent post-join GET",
+  "experiment": "vikunja-increment8.1-direct-confirmation",
+  "increment8_adapter_used": false,
+  "interpretation": {
+    "CONTRACT_REJECTION": "At least one legal PATCH returned a non-200 non-5xx response under proven true overlap.",
+    "INCONCLUSIVE": "The control, reset, transport, overlap, connection-independence, or observation evidence was insufficient.",
+    "LOST_UPDATE": "Both legal PATCH requests returned 200, true overlap was proven, but one disjoint update was absent after join.",
+    "PASS": "Both legal PATCH requests returned 200 and both disjoint updates were visible after join.",
+    "SERVER_FAILURE": "At least one legal PATCH returned 5xx under proven true overlap."
+  },
+  "provengo_used": false,
+  "research_proxy_used": false,
+  "run_status": "DIRECT_DEFECT_REPRODUCED",
+  "schema_version": 1,
+  "trial_count": 20,
+  "trials": [
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_0_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_0_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_0_base_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_0_concurrent_title"
+      },
+      "overlap_ns": 16000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 1,
+      "trial_id": "trial-000"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_1_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_1_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_1_concurrent_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_1_base_title"
+      },
+      "overlap_ns": 31000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 2,
+      "trial_id": "trial-001"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_2_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_2_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_2_base_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_2_concurrent_title"
+      },
+      "overlap_ns": 16000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 3,
+      "trial_id": "trial-002"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_3_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_3_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_3_base_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_3_concurrent_title"
+      },
+      "overlap_ns": 31000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 4,
+      "trial_id": "trial-003"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_4_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_4_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_4_concurrent_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_4_base_title"
+      },
+      "overlap_ns": 47000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 5,
+      "trial_id": "trial-004"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_5_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_5_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_5_base_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_5_concurrent_title"
+      },
+      "overlap_ns": 31000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 6,
+      "trial_id": "trial-005"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_6_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_6_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_6_concurrent_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_6_base_title"
+      },
+      "overlap_ns": 31000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 7,
+      "trial_id": "trial-006"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_7_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_7_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_7_base_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_7_concurrent_title"
+      },
+      "overlap_ns": 16000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 8,
+      "trial_id": "trial-007"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_8_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_8_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_8_concurrent_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_8_base_title"
+      },
+      "overlap_ns": 31000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 9,
+      "trial_id": "trial-008"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_9_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_9_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_9_base_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_9_concurrent_title"
+      },
+      "overlap_ns": 16000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 10,
+      "trial_id": "trial-009"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_10_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_10_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_10_base_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_10_concurrent_title"
+      },
+      "overlap_ns": 31000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 11,
+      "trial_id": "trial-010"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_11_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_11_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_11_base_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_11_concurrent_title"
+      },
+      "overlap_ns": 15000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 12,
+      "trial_id": "trial-011"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_12_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_12_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_12_base_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_12_concurrent_title"
+      },
+      "overlap_ns": 31000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 13,
+      "trial_id": "trial-012"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_13_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_13_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_13_base_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_13_concurrent_title"
+      },
+      "overlap_ns": 16000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 14,
+      "trial_id": "trial-013"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_14_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_14_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_14_concurrent_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_14_base_title"
+      },
+      "overlap_ns": 15000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 15,
+      "trial_id": "trial-014"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_15_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_15_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_15_concurrent_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_15_base_title"
+      },
+      "overlap_ns": 31000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 16,
+      "trial_id": "trial-015"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_16_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_16_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_16_base_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_16_concurrent_title"
+      },
+      "overlap_ns": 31000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 17,
+      "trial_id": "trial-016"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_17_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_17_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_17_concurrent_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_17_base_title"
+      },
+      "overlap_ns": 32000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 18,
+      "trial_id": "trial-017"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_18_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_18_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_18_concurrent_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_18_base_title"
+      },
+      "overlap_ns": 16000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 19,
+      "trial_id": "trial-018"
+    },
+    {
+      "distinct_connections": true,
+      "expected": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_19_concurrent_description",
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_19_concurrent_title"
+      },
+      "observed": {
+        "description": "i8_1_increment8.1-20260922T142708Z-8834bf27_19_concurrent_description",
+        "status": 200,
+        "title": "i8_1_increment8.1-20260922T142708Z-8834bf27_19_base_title"
+      },
+      "overlap_ns": 32000000,
+      "overlap_observed": true,
+      "reason": "both-patches-succeeded-but-disjoint-update-was-not-visible",
+      "release_skew_ns": 0,
+      "reset_pass": true,
+      "result": "LOST_UPDATE",
+      "sequential_control_pass": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "task_id": 20,
+      "trial_id": "trial-019"
+    }
+  ]
+}

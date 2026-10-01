@@ -1,0 +1,5205 @@
+{
+  "concurrency_epochs_evaluated": 12,
+  "concurrency_oracle_families_exercised": 2,
+  "concurrency_oracles_exercised": 12,
+  "concurrency_oracles_generated_ready": 25,
+  "concurrency_oracles_ready": 25,
+  "contract_oracles_exercised": 118,
+  "contract_oracles_generated": 243,
+  "counts": {
+    "INCONCLUSIVE": 58,
+    "PASS": 318,
+    "VIOLATED": 1
+  },
+  "layer_counts": {
+    "concurrency": {
+      "INCONCLUSIVE": 5,
+      "PASS": 7,
+      "VIOLATED": 0
+    },
+    "contract": {
+      "INCONCLUSIVE": 48,
+      "PASS": 283,
+      "VIOLATED": 1
+    },
+    "state": {
+      "INCONCLUSIVE": 5,
+      "PASS": 28,
+      "VIOLATED": 0
+    }
+  },
+  "note": "Not-exercised operations are coverage facts, not automatically semantic failures.",
+  "profile": "openapi-only-generated-verifiers",
+  "run_status": "CONTRACT_DEVIATION",
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.0",
+    "sha256": "007f2882f09610dd59ca8723e298207da1c68ceb33cca904c58b59bf95d87b9f",
+    "title": "Immich",
+    "version": "3.2.0"
+  },
+  "witnesses": [
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::setupPinCode",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 0
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::uploadAsset",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 1
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createUserAdmin",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 2
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::setUserOnboarding",
+      "result": "PASS",
+      "trigger_event": 4
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumStatistics",
+      "result": "PASS",
+      "trigger_event": 5
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMaintenanceStatus",
+      "result": "PASS",
+      "trigger_event": 6
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::updateNotifications",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 7
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUniqueOriginalPaths",
+      "result": "PASS",
+      "trigger_event": 8
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::updateAdminOnboarding",
+      "result": "PASS",
+      "trigger_event": 9
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 307
+      },
+      "oracle_id": "contract::redirectOAuthToMobile",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 11
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getServerVersion",
+      "result": "PASS",
+      "trigger_event": 12
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createMemory",
+      "result": "PASS",
+      "trigger_event": 13
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::searchAssetStatistics",
+      "result": "PASS",
+      "trigger_event": 14
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getStorage",
+      "result": "PASS",
+      "trigger_event": 15
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::linkOAuthAccount",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 18
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::restoreAssets",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 19
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::getMyApiKey",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 20
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAdminConfig",
+      "result": "PASS",
+      "trigger_event": 21
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createApiKey",
+      "result": "PASS",
+      "trigger_event": 22
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::getServerLicense",
+      "result": "PASS",
+      "trigger_event": 23
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createLibrary",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 24
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getVersionCheckState",
+      "result": "PASS",
+      "trigger_event": 25
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::searchRandom",
+      "result": "PASS",
+      "trigger_event": 26
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAssetsByCity",
+      "result": "PASS",
+      "trigger_event": 27
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::searchPluginMethods",
+      "result": "PASS",
+      "trigger_event": 28
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createWorkflow",
+      "result": "PASS",
+      "trigger_event": 30
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::updateBulkAssetMetadata",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 31
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMyCalendarHeatmap",
+      "result": "PASS",
+      "trigger_event": 32
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 33
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getPublicConfigDefaults",
+      "result": "PASS",
+      "trigger_event": 34
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserOnboarding",
+      "result": "PASS",
+      "trigger_event": 35
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::upsertTags",
+      "result": "PASS",
+      "trigger_event": 36
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getSupportedMediaTypes",
+      "result": "PASS",
+      "trigger_event": 37
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::unlinkOAuthAccount",
+      "result": "PASS",
+      "trigger_event": 38
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::searchSmart",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 39
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::getDownloadInfo",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 40
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::createJob",
+      "result": "PASS",
+      "trigger_event": 41
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::validateAccessToken",
+      "result": "PASS",
+      "trigger_event": 42
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::checkBulkUpload",
+      "result": "PASS",
+      "trigger_event": 43
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::searchAssets",
+      "result": "PASS",
+      "trigger_event": 44
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::logoutOAuth",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 45
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::changePinCode",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 46
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createProfileImage",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 47
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createPartner",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 48
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::setUserLicense",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 49
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMyUser",
+      "result": "PASS",
+      "trigger_event": 50
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getTimeBuckets",
+      "result": "PASS",
+      "trigger_event": 51
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::uploadDatabaseBackup",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 52
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getSyncStream",
+      "result": "PASS",
+      "trigger_event": 53
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getStorageTemplateOptions",
+      "result": "PASS",
+      "trigger_event": 55
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createSharedLink",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 56
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::restoreTrash",
+      "result": "PASS",
+      "trigger_event": 58
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::unlinkAllOAuthAccountsAdmin",
+      "result": "PASS",
+      "trigger_event": 60
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::pingServer",
+      "result": "PASS",
+      "trigger_event": 61
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 62
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::uploadAsset",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 63
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::searchPluginTemplates",
+      "result": "PASS",
+      "trigger_event": 65
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createTag",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 67
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMyPreferences",
+      "result": "PASS",
+      "trigger_event": 68
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::updateAdminConfig",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 70
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::copyAsset",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 71
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getServerStatistics",
+      "result": "PASS",
+      "trigger_event": 72
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getVersionCheck",
+      "result": "PASS",
+      "trigger_event": 73
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::startOAuth",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 74
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAboutInfo",
+      "result": "PASS",
+      "trigger_event": 75
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::getMySharedLink",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 76
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::createJob",
+      "result": "PASS",
+      "trigger_event": 78
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::sharedLinkLogin",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 79
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createSession",
+      "result": "PASS",
+      "trigger_event": 80
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::sendTestEmailAdmin",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 81
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getExploreData",
+      "result": "PASS",
+      "trigger_event": 83
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAssetStatistics",
+      "result": "PASS",
+      "trigger_event": 84
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getReverseGeocodingState",
+      "result": "PASS",
+      "trigger_event": 85
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMapMarkers",
+      "result": "PASS",
+      "trigger_event": 86
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createTag",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 87
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::memoriesStatistics",
+      "result": "PASS",
+      "trigger_event": 88
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflowTriggers",
+      "result": "PASS",
+      "trigger_event": 89
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::resolveDuplicates",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 90
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::finishOAuth",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 91
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createAlbum",
+      "result": "PASS",
+      "trigger_event": 92
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createPartner",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 93
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createLibrary",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 95
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createMemory",
+      "result": "PASS",
+      "trigger_event": 96
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserConfigDefaults",
+      "result": "PASS",
+      "trigger_event": 97
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::setServerLicense",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 98
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::detectPriorInstall",
+      "result": "PASS",
+      "trigger_event": 99
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getVersionHistory",
+      "result": "PASS",
+      "trigger_event": 100
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getApiKey",
+      "result": "PASS",
+      "trigger_event": 101
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getSyncAck",
+      "result": "PASS",
+      "trigger_event": 102
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getIntegrityReportSummary",
+      "result": "PASS",
+      "trigger_event": 103
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::getUserLicense",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 104
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getApkLinks",
+      "result": "PASS",
+      "trigger_event": 105
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAuthStatus",
+      "result": "PASS",
+      "trigger_event": 106
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createApiKey",
+      "result": "PASS",
+      "trigger_event": 107
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAdminOnboarding",
+      "result": "PASS",
+      "trigger_event": 108
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::maintenanceLogin",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 109
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createAlbum",
+      "result": "PASS",
+      "trigger_event": 110
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createPerson",
+      "result": "PASS",
+      "trigger_event": 111
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 112
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserConfig",
+      "result": "PASS",
+      "trigger_event": 114
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 116
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAdminConfigDefaults",
+      "result": "PASS",
+      "trigger_event": 117
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::updatePeople",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 118
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::emptyTrash",
+      "result": "PASS",
+      "trigger_event": 119
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::sendSyncAck",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 121
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createUserAdmin",
+      "result": "PASS",
+      "trigger_event": 122
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 123
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 401
+      },
+      "oracle_id": "contract::login",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 124
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getApiKey",
+      "result": "PASS",
+      "trigger_event": 125
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getPublicConfig",
+      "result": "PASS",
+      "trigger_event": 126
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::signUpAdmin",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 127
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::addMemoryAssets",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 128
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 130
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflowLogs",
+      "result": "PASS",
+      "trigger_event": 131
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 133
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 134
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflowForShare",
+      "result": "PASS",
+      "trigger_event": 135
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserStatisticsAdmin",
+      "result": "PASS",
+      "trigger_event": 136
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::createActivity",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 137
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::getClusterGroupUsers",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 139
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 141
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::rotateApiKey",
+      "result": "PASS",
+      "trigger_event": 142
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 144
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 145
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 146
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::restoreUserAdmin",
+      "result": "PASS",
+      "trigger_event": 147
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserCalendarHeatmapAdmin",
+      "result": "PASS",
+      "trigger_event": 148
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 151
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserPreferencesAdmin",
+      "result": "PASS",
+      "trigger_event": 152
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserSessionsAdmin",
+      "result": "PASS",
+      "trigger_event": 154
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::addAssetsToAlbum",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 155
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createActivity",
+      "result": "PASS",
+      "trigger_event": 156
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumMapMarkers",
+      "result": "PASS",
+      "trigger_event": 157
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 159
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 160
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::addUsersToAlbum",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 161
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 162
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getPerson",
+      "result": "PASS",
+      "trigger_event": 163
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::updateAlbumUser",
+      "result": "PASS",
+      "trigger_event": 164
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 165
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 166
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 167
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createNotification",
+      "result": "PASS",
+      "trigger_event": 168
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 169
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 171
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 172
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 174
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 176
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 177
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 179
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 180
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 182
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 185
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 186
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 187
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 188
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 190
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 191
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 192
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 193
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 194
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 195
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 197
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 198
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 199
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 200
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 201
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 203
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 204
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 205
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 206
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 207
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 209
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 210
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 212
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 215
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 216
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 217
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 218
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 219
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 220
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 221
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 223
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 224
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 225
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 227
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 228
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 229
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 230
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 232
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 233
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 234
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 235
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 236
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 237
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 238
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 242
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 244
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 245
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 246
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 247
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 249
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 250
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 252
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 253
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 254
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 255
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 256
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 257
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 258
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 260
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 261
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 262
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 264
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 265
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 266
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 267
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 269
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 271
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 272
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 275
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 277
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 278
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 279
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 280
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 281
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 282
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 283
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 286
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 287
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 288
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 290
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 291
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 292
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 293
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 294
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 296
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 297
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 299
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 302
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 303
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 305
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 306
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 307
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 308
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 311
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 312
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 313
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 314
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 317
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 318
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 319
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 320
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 321
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 322
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 324
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 325
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 326
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 328
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 329
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 330
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 332
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 333
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 334
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 335
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 336
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 337
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 339
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 341
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 343
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 344
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 345
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 346
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 347
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 349
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 350
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 351
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 352
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 353
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 355
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 356
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 357
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 358
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 359
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 361
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 362
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 365
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 366
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 367
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 368
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 370
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 373
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 374
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 375
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 376
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 377
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 378
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflow",
+      "result": "PASS",
+      "trigger_event": 380
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 381
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 382
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 383
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 384
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getMemory",
+      "result": "PASS",
+      "trigger_event": 387
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 388
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserAdmin",
+      "result": "PASS",
+      "trigger_event": 392
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 393
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 394
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 397
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 398
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 400
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 405
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 409
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 413
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 417
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 421
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 425
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 433
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 438
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 448
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 452
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 460
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 465
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 475
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 479
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 483
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 487
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 495
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 500
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 510
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 515
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 525
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateAlbumInfo",
+      "result": "PASS",
+      "trigger_event": 529
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 33,
+      "oracle_id": "state::createMemory",
+      "resource_path": "/memories/d887aaea-f0c4-4fd7-9e71-145ab3887883",
+      "result": "PASS",
+      "trigger_event": 13
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 101,
+      "oracle_id": "state::createApiKey",
+      "resource_path": "/api-keys/84e4a39e-9cb8-4889-ac91-e166c53e5a3e",
+      "result": "PASS",
+      "trigger_event": 22
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 62,
+      "oracle_id": "state::createWorkflow",
+      "resource_path": "/workflows/de759a3f-3cb0-4557-810b-971be25b7f68",
+      "result": "PASS",
+      "trigger_event": 30
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": null,
+      "oracle_id": "state::createSession",
+      "reason": "observation-not-found",
+      "resource_path": "/admin/users/36236e01-ad7f-4632-9984-ae779a0eec93/sessions",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 80
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 134,
+      "oracle_id": "state::createAlbum",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 92
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 116,
+      "oracle_id": "state::createMemory",
+      "resource_path": "/memories/386e9719-218c-400c-96e2-c29d52e0e23c",
+      "result": "PASS",
+      "trigger_event": 96
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 125,
+      "oracle_id": "state::createApiKey",
+      "resource_path": "/api-keys/1d158309-5c8d-4bd3-aee6-fec2681331be",
+      "result": "PASS",
+      "trigger_event": 107
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 123,
+      "oracle_id": "state::createAlbum",
+      "resource_path": "/albums/45488c17-3162-4442-aa44-4b9c5a928a92",
+      "result": "PASS",
+      "trigger_event": 110
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 163,
+      "oracle_id": "state::createPerson",
+      "resource_path": "/people/4f904419-ce82-46f2-9086-d9d578ba3d02",
+      "result": "PASS",
+      "trigger_event": 111
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 133,
+      "oracle_id": "state::createUserAdmin",
+      "resource_path": "/admin/users/95d55115-d6e8-4e8e-b4fc-940bfc42107b",
+      "result": "PASS",
+      "trigger_event": 122
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::updateAlbumInfo",
+      "reason": "superseded-before-observation",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 160
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": null,
+      "oracle_id": "state::createNotification",
+      "reason": "observation-not-found",
+      "resource_path": "/notifications/4e3c91c5-f7c0-44f1-b137-0d6f3427adcd",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 168
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 179,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 169
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::updateAlbumInfo",
+      "reason": "superseded-before-observation",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 191
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 193,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 192
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 205,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 204
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 210,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 207
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 228,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 216
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 235,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 232
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 237,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 236
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 252,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 249
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 257,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 253
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 279,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 277
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 291,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 280
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 322,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 318
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 326,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 324
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 339,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 337
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 346,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 344
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::updateAlbumInfo",
+      "reason": "superseded-before-observation",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 352
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 356,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 353
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 376,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 368
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 383,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 382
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 399,
+      "oracle_id": "state::updateAlbumInfo",
+      "resource_path": "/albums/2cf2018b-626f-4d12-a106-60e4a70635b5",
+      "result": "PASS",
+      "trigger_event": 398
+    },
+    {
+      "epoch_id": "generated-epoch-0",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 432,
+      "oracle_id": "concurrency::disjoint-domain::updateAlbumInfo",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        400,
+        200
+      ],
+      "trigger_events": [
+        430,
+        431
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-1",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 494,
+      "oracle_id": "concurrency::disjoint-domain::updateAlbumInfo",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        492,
+        493
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-10",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 532,
+      "oracle_id": "concurrency::same-field-domain::updateAlbumInfo",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        530,
+        531
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-11",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 420,
+      "oracle_id": "concurrency::same-field-domain::updateAlbumInfo",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        418,
+        419
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-2",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 459,
+      "oracle_id": "concurrency::disjoint-domain::updateAlbumInfo",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        457,
+        458
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-3",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 404,
+      "oracle_id": "concurrency::disjoint-domain::updateAlbumInfo",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        402,
+        403
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-4",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 474,
+      "oracle_id": "concurrency::disjoint-domain::updateAlbumInfo",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        200,
+        400,
+        200
+      ],
+      "trigger_events": [
+        471,
+        472,
+        473
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-5",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 447,
+      "oracle_id": "concurrency::disjoint-domain::updateAlbumInfo",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        400,
+        200,
+        200
+      ],
+      "trigger_events": [
+        444,
+        445,
+        446
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-6",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 524,
+      "oracle_id": "concurrency::disjoint-domain::updateAlbumInfo",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        200,
+        400,
+        200
+      ],
+      "trigger_events": [
+        521,
+        522,
+        523
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-7",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 509,
+      "oracle_id": "concurrency::disjoint-domain::updateAlbumInfo",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200,
+        200
+      ],
+      "trigger_events": [
+        506,
+        507,
+        508
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-8",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 412,
+      "oracle_id": "concurrency::same-field-domain::updateAlbumInfo",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        410,
+        411
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-9",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 482,
+      "oracle_id": "concurrency::same-field-domain::updateAlbumInfo",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        400,
+        400
+      ],
+      "trigger_events": [
+        480,
+        481
+      ]
+    }
+  ]
+}

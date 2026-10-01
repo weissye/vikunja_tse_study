@@ -1,0 +1,139 @@
+{
+  "creation_order": [
+    "admin/actions/runners",
+    "admin/cron",
+    "admin/hooks",
+    "admin/unadopted",
+    "admin/users",
+    "gitignore/templates",
+    "label/templates",
+    "licenses",
+    "notifications/threads",
+    "packages",
+    "repositories",
+    "user/actions/runners",
+    "user/actions/variables",
+    "user/applications/oauth2",
+    "user/blocks",
+    "user/following",
+    "user/gpg_keys",
+    "user/hooks",
+    "user/keys",
+    "user/starred",
+    "users",
+    "orgs",
+    "repos",
+    "teams",
+    "user/actions/secrets"
+  ],
+  "cycle_edges_removed": [],
+  "deletion_order": [
+    "user/actions/secrets",
+    "teams",
+    "repos",
+    "orgs",
+    "users",
+    "user/starred",
+    "user/keys",
+    "user/hooks",
+    "user/gpg_keys",
+    "user/following",
+    "user/blocks",
+    "user/applications/oauth2",
+    "user/actions/variables",
+    "user/actions/runners",
+    "repositories",
+    "packages",
+    "notifications/threads",
+    "licenses",
+    "label/templates",
+    "gitignore/templates",
+    "admin/users",
+    "admin/unadopted",
+    "admin/hooks",
+    "admin/cron",
+    "admin/actions/runners"
+  ],
+  "edges": [
+    {
+      "confidence": 0.9,
+      "field_name": "username",
+      "provenance": [
+        {
+          "detail": "Create request body property 'username' matches entity 'admin/users'",
+          "pointer": "#/paths/~1orgs/post/parameters/body/properties/username",
+          "rule": "D2:D_key_field_exact_match"
+        }
+      ],
+      "source": "orgs",
+      "target": "admin/users"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "username",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/users/{username}/repos' is nested under '/admin/users/{username}'",
+          "pointer": "/admin/users/{username}/repos",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "repos",
+      "target": "admin/users"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "org",
+      "provenance": [
+        {
+          "detail": "Collection path '/orgs/{org}/teams' is nested under '/orgs/{org}'",
+          "pointer": "/orgs/{org}/teams",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "teams",
+      "target": "orgs"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "org",
+      "provenance": [
+        {
+          "detail": "Collection path '/orgs/{org}/actions/secrets' is nested under '/orgs/{org}'",
+          "pointer": "/orgs/{org}/actions/secrets",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "user/actions/secrets",
+      "target": "orgs"
+    }
+  ],
+  "had_cycle": false,
+  "nodes": [
+    "admin/actions/runners",
+    "admin/cron",
+    "admin/hooks",
+    "admin/unadopted",
+    "admin/users",
+    "gitignore/templates",
+    "label/templates",
+    "licenses",
+    "notifications/threads",
+    "orgs",
+    "packages",
+    "repos",
+    "repositories",
+    "teams",
+    "user/actions/runners",
+    "user/actions/secrets",
+    "user/actions/variables",
+    "user/applications/oauth2",
+    "user/blocks",
+    "user/following",
+    "user/gpg_keys",
+    "user/hooks",
+    "user/keys",
+    "user/starred",
+    "users"
+  ]
+}

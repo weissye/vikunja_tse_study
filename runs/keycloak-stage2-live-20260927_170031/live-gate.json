@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "generator_version": "0.26.17",
+  "openapi_sha256": "ba68e1c3842c11701ec64c5f3ba23387cf53963f8d16dd7c3d45da103b9421db",
+  "basis": "live prerequisite gate for the generated realm-to-user relation",
+  "runtime_status": "LIVE_PREREQUISITES_VERIFIED",
+  "runtime_verified_entities": 2,
+  "runtime_verified_edges": 1,
+  "prefix_verified_rounds": 8,
+  "concurrency_status": "NOT_RUN",
+  "steps": [
+    {
+      "name": "discovery",
+      "status": 200
+    },
+    {
+      "name": "admin_token",
+      "status": 200
+    },
+    {
+      "name": "create_realm",
+      "status": 201
+    },
+    {
+      "name": "read_realm",
+      "status": 200
+    },
+    {
+      "name": "create_user",
+      "status": 201,
+      "location_id_bound": true
+    },
+    {
+      "name": "read_user",
+      "status": 200,
+      "id_confirmed": true
+    },
+    {
+      "name": "verified_prefix_round",
+      "round": 1,
+      "update_status": 204,
+      "read_status": 200
+    },
+    {
+      "name": "verified_prefix_round",
+      "round": 2,
+      "update_status": 204,
+      "read_status": 200
+    },
+    {
+      "name": "verified_prefix_round",
+      "round": 3,
+      "update_status": 204,
+      "read_status": 200
+    },
+    {
+      "name": "verified_prefix_round",
+      "round": 4,
+      "update_status": 204,
+      "read_status": 200
+    },
+    {
+      "name": "verified_prefix_round",
+      "round": 5,
+      "update_status": 204,
+      "read_status": 200
+    },
+    {
+      "name": "verified_prefix_round",
+      "round": 6,
+      "update_status": 204,
+      "read_status": 200
+    },
+    {
+      "name": "verified_prefix_round",
+      "round": 7,
+      "update_status": 204,
+      "read_status": 200
+    },
+    {
+      "name": "verified_prefix_round",
+      "round": 8,
+      "update_status": 204,
+      "read_status": 200
+    }
+  ],
+  "resource_paths": {
+    "realm": "/admin/realms/fse-stage2-57d97f22e7d0",
+    "user": "/admin/realms/fse-stage2-57d97f22e7d0/users/bbcde296-185b-4baa-bde3-b90a151ff29b"
+  },
+  "completed_utc": "2026-09-27T17:00:35Z"
+}

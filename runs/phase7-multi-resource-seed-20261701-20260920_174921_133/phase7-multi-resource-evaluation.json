@@ -1,0 +1,66 @@
+{
+  "anomalies": [],
+  "checks": {
+    "comment_updates_persisted": true,
+    "comments_created": true,
+    "comments_deleted": true,
+    "deletions_externally_observable": true,
+    "labels_attached_and_observed": true,
+    "labels_created": true,
+    "labels_deleted": true,
+    "labels_detached_and_observed": true,
+    "no_semantic_anomalies": true,
+    "project_created": true,
+    "project_deleted": true,
+    "relations_created_and_observed": true,
+    "relations_deleted_and_observed": true,
+    "task_updates_persisted": true,
+    "tasks_created": true,
+    "tasks_deleted": true
+  },
+  "counts": {
+    "comment_updates": 4,
+    "relation_creates": 5,
+    "relation_deletes": 5,
+    "task_updates": 6
+  },
+  "evaluation_basis": "external redacted HTTP trace",
+  "event_count": 116,
+  "expected": {
+    "comments": 4,
+    "labels": 3,
+    "tasks": 6
+  },
+  "observed_ids": {
+    "comments": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "labels": [
+      12,
+      13,
+      14
+    ],
+    "project": 34,
+    "tasks": [
+      180,
+      181,
+      182,
+      183,
+      184,
+      185
+    ]
+  },
+  "passed_count": 16,
+  "phase7_passed": true,
+  "profile": "multi-resource-interleaving",
+  "required_count": 16,
+  "trace_recovery": {
+    "canonical_evidence_eligible": true,
+    "malformed_lines_skipped": [],
+    "probe_file": null,
+    "used": false
+  }
+}

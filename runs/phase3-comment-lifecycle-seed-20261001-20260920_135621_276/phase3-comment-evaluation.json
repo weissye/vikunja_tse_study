@@ -1,0 +1,30 @@
+{
+  "evaluation_basis": "external redacted HTTP trace",
+  "event_count": 7,
+  "observed_ids": {
+    "comment_id": 1,
+    "project_id": 10,
+    "task_id": 9
+  },
+  "passed_count": 5,
+  "phase3_pilot_passed": false,
+  "profile": "validated-action-lifecycle",
+  "required_count": 15,
+  "witnesses": {
+    "01_project_created": true,
+    "02_project_read": true,
+    "03_task_created": true,
+    "04_task_read": true,
+    "05_comment_created": true,
+    "06_comment_read": false,
+    "07_comment_listed": false,
+    "08_comment_updated": false,
+    "09_update_persisted": false,
+    "10_comment_deleted": false,
+    "11_comment_absent_from_list": false,
+    "12_comment_inaccessible": false,
+    "13_task_deleted": false,
+    "14_project_deleted": false,
+    "15_deletions_observable": false
+  }
+}

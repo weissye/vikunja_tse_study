@@ -1,0 +1,8653 @@
+{
+  "concurrency_oracles_exercised": 7,
+  "concurrency_oracles_ready": 60,
+  "contract_oracles_exercised": 21,
+  "contract_oracles_generated": 29,
+  "counts": {
+    "INCONCLUSIVE": 2,
+    "PASS": 43,
+    "VIOLATED": 531
+  },
+  "layer_counts": {
+    "concurrency": {
+      "INCONCLUSIVE": 0,
+      "PASS": 1,
+      "VIOLATED": 43
+    },
+    "contract": {
+      "INCONCLUSIVE": 0,
+      "PASS": 35,
+      "VIOLATED": 488
+    },
+    "state": {
+      "INCONCLUSIVE": 2,
+      "PASS": 7,
+      "VIOLATED": 0
+    }
+  },
+  "note": "Not-exercised operations are coverage facts, not automatically semantic failures.",
+  "profile": "openapi-only-generated-verifiers",
+  "run_status": "SEMANTIC_ANOMALY",
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.3",
+    "sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941",
+    "title": "Vikunja API",
+    "version": "v2.6.0-469-g94e6f165"
+  },
+  "witnesses": [
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::labels-create",
+      "result": "PASS",
+      "trigger_event": 2
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::projects-create",
+      "result": "PASS",
+      "trigger_event": 3
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 4
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::projects-create",
+      "result": "PASS",
+      "trigger_event": 5
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::tasks-create",
+      "result": "PASS",
+      "trigger_event": 6
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::labels-create",
+      "result": "PASS",
+      "trigger_event": 7
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 8
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 9
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 10
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "result": "PASS",
+      "trigger_event": 11
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 12
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "result": "PASS",
+      "trigger_event": 13
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 14
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 15
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "result": "PASS",
+      "trigger_event": 16
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "result": "PASS",
+      "trigger_event": 17
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::task-comments-list",
+      "result": "PASS",
+      "trigger_event": 18
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::tasks-create",
+      "result": "PASS",
+      "trigger_event": 19
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::task-labels-create",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 20
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 21
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::task-comments-create",
+      "result": "PASS",
+      "trigger_event": 22
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-relations-create",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 23
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 24
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "result": "PASS",
+      "trigger_event": 25
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 26
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 412
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 27
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 28
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 412
+      },
+      "oracle_id": "contract::task-labels-delete",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 29
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::task-labels-list",
+      "result": "PASS",
+      "trigger_event": 30
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 31
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 412
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 32
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 33
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 34
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-update",
+      "result": "PASS",
+      "trigger_event": 35
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 36
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 37
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 38
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 39
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 40
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 41
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 412
+      },
+      "oracle_id": "contract::tasks-delete",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 42
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 43
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 44
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::tasks-delete",
+      "result": "PASS",
+      "trigger_event": 45
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::projects-delete",
+      "result": "PASS",
+      "trigger_event": 46
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 47
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::projects-delete",
+      "result": "PASS",
+      "trigger_event": 48
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 49
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::labels-delete",
+      "result": "PASS",
+      "trigger_event": 50
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 51
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 52
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::labels-delete",
+      "result": "PASS",
+      "trigger_event": 53
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 54
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 55
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 56
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 57
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 58
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 59
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 60
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 61
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 62
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 63
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 64
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 65
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 66
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 67
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 68
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 69
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 70
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 71
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 72
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 73
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 74
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 75
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 76
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 77
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 78
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 79
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 80
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 81
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 82
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 83
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 84
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 85
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 86
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 87
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 88
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 89
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 90
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 91
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 92
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 93
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 94
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 95
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 96
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 97
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 98
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 99
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 100
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 101
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 102
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 103
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 104
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 105
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 106
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 107
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 108
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 109
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 110
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 111
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 112
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 113
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 114
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 115
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 116
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 117
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 118
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 119
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 120
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 121
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 122
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 123
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 124
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 125
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 126
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 127
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 128
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 129
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 130
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 131
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 132
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 133
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 134
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 135
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 136
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 137
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 138
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 139
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 140
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 141
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 142
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 143
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 144
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 145
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 146
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 147
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 148
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 149
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 150
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 151
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 152
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 153
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 154
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 155
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 156
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 157
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 158
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 159
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 160
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 161
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 162
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 163
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 164
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 165
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 166
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 167
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 168
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 169
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 170
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 171
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 172
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 173
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 174
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 175
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 176
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 177
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 178
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 179
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 180
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 181
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 182
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 183
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 184
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 185
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 186
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 187
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 188
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 189
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 190
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 191
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 192
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 193
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 194
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 195
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 196
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 197
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 198
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 199
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 200
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 201
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 202
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 203
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 204
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 205
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 206
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 207
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 208
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 209
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 210
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 211
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 212
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 213
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 214
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 215
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 216
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 217
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 218
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 219
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 220
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 221
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 222
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 223
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 224
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 225
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 226
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 227
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 228
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 229
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 230
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 231
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 232
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 233
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 234
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 235
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 236
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 237
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 238
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 239
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 240
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 241
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 242
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 243
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 244
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 245
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 246
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 247
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 248
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 249
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 250
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 251
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 252
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 253
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 254
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 255
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 256
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 257
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 258
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 259
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 260
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 261
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 262
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 263
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 264
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 265
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 266
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 267
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 268
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 269
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 270
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 271
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 272
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 273
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 274
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 275
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 276
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 277
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 278
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 279
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 280
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 281
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 282
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 283
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 284
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 285
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 286
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 287
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 288
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 289
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 290
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 291
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 292
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 293
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 294
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 295
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 296
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 297
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 298
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 299
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 300
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 301
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 302
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 303
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 304
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 305
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 306
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 307
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 308
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 309
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 310
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 311
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 312
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 313
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 314
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 315
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 316
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 317
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 318
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 319
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 320
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 321
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 322
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 323
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 324
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 325
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 326
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 327
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 328
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 329
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 330
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 331
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 332
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 333
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 334
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 335
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 336
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 337
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 338
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 339
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 340
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 341
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 342
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 343
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 344
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 345
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 346
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 347
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 348
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 349
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 350
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 351
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 352
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 353
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 354
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 355
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 356
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 357
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 358
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 359
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 360
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 361
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 362
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 363
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 364
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 365
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 366
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 367
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 368
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 369
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 370
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 371
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 372
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 373
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 374
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 375
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 376
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 377
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 378
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 379
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 380
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 381
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 382
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 383
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 384
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 385
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 386
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 387
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 388
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 389
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 390
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 391
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 392
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 393
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 394
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 395
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 396
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 397
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 398
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 399
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 400
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 401
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 402
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 403
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 404
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 405
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 406
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 407
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 408
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 409
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 410
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 411
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 412
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 413
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 414
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 415
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 416
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 417
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 418
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 419
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 420
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 421
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 422
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 423
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 424
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 425
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 426
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 427
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 428
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 429
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 430
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 431
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 432
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 433
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 434
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 435
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 436
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 437
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 438
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 439
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 440
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 441
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 442
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 443
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 444
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 445
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 446
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 447
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 448
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 449
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 450
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 451
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 452
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 453
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 454
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 455
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 456
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 457
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 458
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 459
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 460
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 461
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 462
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 463
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 464
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 465
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 466
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 467
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 468
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 469
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 470
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 471
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 472
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 473
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 474
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 475
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 476
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 477
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 478
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 479
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 480
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 481
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 482
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 483
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 484
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 485
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 486
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 487
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 488
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 489
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 490
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 491
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 492
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 493
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 494
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 495
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 496
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 497
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 498
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 499
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 500
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 501
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 502
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 503
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 504
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 505
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 506
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 507
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 508
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 509
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 510
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 511
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 512
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 513
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 514
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 515
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 516
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 517
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 518
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 519
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 520
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 521
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 522
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 523
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 524
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 10,
+      "oracle_id": "state::labels-create",
+      "resource_path": "/labels/12",
+      "result": "PASS",
+      "trigger_event": 2
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 4,
+      "oracle_id": "state::projects-create",
+      "resource_path": "/projects/33",
+      "result": "PASS",
+      "trigger_event": 3
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 8,
+      "oracle_id": "state::projects-create",
+      "resource_path": "/projects/34",
+      "result": "PASS",
+      "trigger_event": 5
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 15,
+      "oracle_id": "state::tasks-create",
+      "resource_path": "/tasks/39",
+      "result": "PASS",
+      "trigger_event": 6
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 26,
+      "oracle_id": "state::labels-create",
+      "resource_path": "/labels/13",
+      "result": "PASS",
+      "trigger_event": 7
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 28,
+      "oracle_id": "state::tasks-create",
+      "resource_path": "/tasks/40",
+      "result": "PASS",
+      "trigger_event": 19
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": null,
+      "oracle_id": "state::task-comments-create",
+      "reason": "observation-not-found",
+      "resource_path": "/tasks/39/comments/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 22
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 31,
+      "oracle_id": "state::patch-projects-read",
+      "resource_path": "/projects/33",
+      "result": "PASS",
+      "trigger_event": 25
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::labels-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/labels/13",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 35
+    },
+    {
+      "epoch_id": "generated-epoch-16",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 406,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        404,
+        405
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-17",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 346,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        344,
+        345
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-18",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 128,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        126,
+        127
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-19",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 458,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        456,
+        457
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-2",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 338,
+      "oracle_id": "concurrency::same-field-domain::labels-update",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        336,
+        337
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-20",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 322,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        320,
+        321
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-21",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 102,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        100,
+        101
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-22",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 198,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "trigger_events": [
+        195,
+        196,
+        197
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-23",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 356,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "trigger_events": [
+        353,
+        354,
+        355
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-24",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 164,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "trigger_events": [
+        161,
+        162,
+        163
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-25",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 306,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "trigger_events": [
+        303,
+        304,
+        305
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-26",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 94,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "trigger_events": [
+        91,
+        92,
+        93
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-27",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 76,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "trigger_events": [
+        73,
+        74,
+        75
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-28",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 264,
+      "oracle_id": "concurrency::same-field-domain::patch-projects-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        262,
+        263
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-29",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 66,
+      "oracle_id": "concurrency::same-field-domain::patch-projects-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        64,
+        65
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-3",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 398,
+      "oracle_id": "concurrency::disjoint-domain::patch-labels-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        403,
+        403
+      ],
+      "trigger_events": [
+        396,
+        397
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-30",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 188,
+      "oracle_id": "concurrency::same-field-domain::patch-projects-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        186,
+        187
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-31",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 84,
+      "oracle_id": "concurrency::same-field-domain::patch-projects-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        82,
+        83
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-32",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 24,
+      "oracle_id": "concurrency::same-field-domain::patch-projects-read",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        16,
+        17
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-33",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 154,
+      "oracle_id": "concurrency::same-field-domain::patch-projects-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        152,
+        153
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-4",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 230,
+      "oracle_id": "concurrency::disjoint-domain::patch-labels-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        403,
+        403
+      ],
+      "trigger_events": [
+        228,
+        229
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-40",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 238,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        236,
+        237
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-41",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 432,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        430,
+        431
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-42",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 296,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        294,
+        295
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-43",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 414,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        412,
+        413
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-44",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 500,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        498,
+        499
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-45",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 180,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        178,
+        179
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-46",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 256,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "trigger_events": [
+        253,
+        254,
+        255
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-47",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 120,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "trigger_events": [
+        117,
+        118,
+        119
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-48",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 382,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "trigger_events": [
+        379,
+        380,
+        381
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-49",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 468,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "trigger_events": [
+        465,
+        466,
+        467
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-5",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 372,
+      "oracle_id": "concurrency::disjoint-domain::patch-labels-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        403,
+        403
+      ],
+      "trigger_events": [
+        370,
+        371
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-50",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 424,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "trigger_events": [
+        421,
+        422,
+        423
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-51",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 138,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "trigger_events": [
+        135,
+        136,
+        137
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-52",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 330,
+      "oracle_id": "concurrency::same-field-domain::patch-tasks-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        328,
+        329
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-53",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 172,
+      "oracle_id": "concurrency::same-field-domain::patch-tasks-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        170,
+        171
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-54",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 524,
+      "oracle_id": "concurrency::same-field-domain::patch-tasks-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        522,
+        523
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-55",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 222,
+      "oracle_id": "concurrency::same-field-domain::patch-tasks-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        220,
+        221
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-56",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 47,
+      "oracle_id": "concurrency::same-field-domain::patch-tasks-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        422,
+        422
+      ],
+      "trigger_events": [
+        43,
+        44
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-57",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 484,
+      "oracle_id": "concurrency::same-field-domain::patch-tasks-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        404,
+        404
+      ],
+      "trigger_events": [
+        482,
+        483
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-6",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 442,
+      "oracle_id": "concurrency::disjoint-domain::patch-labels-read",
+      "reason": "legal-concurrent-write-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        403,
+        403,
+        403
+      ],
+      "trigger_events": [
+        439,
+        440,
+        441
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-7",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 288,
+      "oracle_id": "concurrency::same-field-domain::patch-labels-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        403,
+        403
+      ],
+      "trigger_events": [
+        286,
+        287
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-8",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 246,
+      "oracle_id": "concurrency::same-field-domain::patch-labels-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        403,
+        403
+      ],
+      "trigger_events": [
+        244,
+        245
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-9",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 450,
+      "oracle_id": "concurrency::same-field-domain::patch-labels-read",
+      "reason": "same-field-operation-or-observation-failed",
+      "result": "VIOLATED",
+      "statuses": [
+        403,
+        403
+      ],
+      "trigger_events": [
+        448,
+        449
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+﻿{
+    "schema_version":  1,
+    "stage":  "gitea-stage6.8-oauth-serial",
+    "spec_sha256":  "a0baa9a766c22492bd8c45744157c611d3e95cfc0dc73d6f5d14f294cdddce38",
+    "trials":  2,
+    "results":  [
+                    {
+                        "trial":  1,
+                        "verdict":  "FULL_PATCH_PERSISTS_PARTIAL_422",
+                        "create":  201,
+                        "before":  200,
+                        "partial":  422,
+                        "after_partial":  200,
+                        "full":  200,
+                        "after_full":  200,
+                        "partial_unchanged":  true,
+                        "full_persists":  true
+                    },
+                    {
+                        "trial":  2,
+                        "verdict":  "FULL_PATCH_PERSISTS_PARTIAL_422",
+                        "create":  201,
+                        "before":  200,
+                        "partial":  422,
+                        "after_partial":  200,
+                        "full":  200,
+                        "after_full":  200,
+                        "partial_unchanged":  true,
+                        "full_persists":  true
+                    }
+                ]
+}

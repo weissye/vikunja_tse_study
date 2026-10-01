@@ -1,0 +1,510 @@
+﻿[
+    {
+        "timestamp_utc":  "2026-09-24T09:16:06.7934691Z",
+        "trial_label":  "authenticated-user",
+        "method":  "GET",
+        "path":  "/user",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  2,
+                         "login":  "sbt-gitea-20260924_112024_858",
+                         "login_name":  "",
+                         "source_id":  0,
+                         "full_name":  "",
+                         "email":  "sbt-gitea-20260924_112024_858@example.invalid",
+                         "avatar_url":  "http://127.0.0.1:3477/avatars/6fe1bbef61976a2a1c377b1aaa8d317b",
+                         "html_url":  "http://127.0.0.1:3477/sbt-gitea-20260924_112024_858",
+                         "language":  "",
+                         "is_admin":  false,
+                         "last_login":  "1970-01-01T00:00:00Z",
+                         "created":  "2026-09-24T08:20:25Z",
+                         "restricted":  false,
+                         "active":  true,
+                         "prohibit_login":  false,
+                         "location":  "",
+                         "website":  "",
+                         "description":  "",
+                         "visibility":  "public",
+                         "followers_count":  0,
+                         "following_count":  0,
+                         "starred_repos_count":  0,
+                         "username":  "sbt-gitea-20260924_112024_858"
+                     },
+        "elapsed_ms":  29.007
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:06.8234873Z",
+        "trial_label":  "trial-1-create-org",
+        "method":  "POST",
+        "path":  "/orgs",
+        "request":  {
+                        "username":  "s65-org-121606823-1"
+                    },
+        "status":  201,
+        "response":  {
+                         "id":  9,
+                         "name":  "s65-org-121606823-1",
+                         "full_name":  "",
+                         "email":  "",
+                         "avatar_url":  "http://127.0.0.1:3477/avatars/f082280cd77b78443df1e0c09b5cbdf8",
+                         "description":  "",
+                         "website":  "",
+                         "location":  "",
+                         "visibility":  "public",
+                         "repo_admin_change_team_access":  false,
+                         "username":  "s65-org-121606823-1"
+                     },
+        "elapsed_ms":  41.205
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:06.8662131Z",
+        "trial_label":  "trial-1-observe-org",
+        "method":  "GET",
+        "path":  "/orgs/s65-org-121606823-1",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  9,
+                         "name":  "s65-org-121606823-1",
+                         "full_name":  "",
+                         "email":  "",
+                         "avatar_url":  "http://127.0.0.1:3477/avatars/f082280cd77b78443df1e0c09b5cbdf8",
+                         "description":  "",
+                         "website":  "",
+                         "location":  "",
+                         "visibility":  "public",
+                         "repo_admin_change_team_access":  false,
+                         "username":  "s65-org-121606823-1"
+                     },
+        "elapsed_ms":  29.969
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:06.8977433Z",
+        "trial_label":  "trial-1-team-minimal",
+        "method":  "POST",
+        "path":  "/orgs/s65-org-121606823-1/teams",
+        "request":  {
+                        "name":  "s65-min-121606823-1"
+                    },
+        "status":  500,
+        "response":  null,
+        "elapsed_ms":  19.265
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:06.9186575Z",
+        "trial_label":  "trial-1-team-documented-optionals",
+        "method":  "POST",
+        "path":  "/orgs/s65-org-121606823-1/teams",
+        "request":  {
+                        "permission":  "read",
+                        "description":  "Stage 6.5 serial control",
+                        "name":  "s65-full-121606823-1",
+                        "visibility":  "private"
+                    },
+        "status":  500,
+        "response":  null,
+        "elapsed_ms":  21.298
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:06.9410343Z",
+        "trial_label":  "trial-1-team-units-example",
+        "method":  "POST",
+        "path":  "/orgs/s65-org-121606823-1/teams",
+        "request":  {
+                        "permission":  "read",
+                        "description":  "Stage 6.5 documented units control",
+                        "name":  "s65-units-121606823-1",
+                        "units":  [
+                                      "repo.code"
+                                  ],
+                        "visibility":  "private"
+                    },
+        "status":  201,
+        "response":  {
+                         "id":  8,
+                         "name":  "s65-units-121606823-1",
+                         "description":  "Stage 6.5 documented units control",
+                         "organization":  {
+                                              "id":  9,
+                                              "name":  "s65-org-121606823-1",
+                                              "full_name":  "",
+                                              "email":  "",
+                                              "avatar_url":  "http://127.0.0.1:3477/avatars/f082280cd77b78443df1e0c09b5cbdf8",
+                                              "description":  "",
+                                              "website":  "",
+                                              "location":  "",
+                                              "visibility":  "public",
+                                              "repo_admin_change_team_access":  false,
+                                              "username":  "s65-org-121606823-1"
+                                          },
+                         "includes_all_repositories":  false,
+                         "permission":  "none",
+                         "units":  [
+                                       "repo.code"
+                                   ],
+                         "units_map":  {
+                                           "repo.code":  "read"
+                                       },
+                         "can_create_org_repo":  false,
+                         "visibility":  "private"
+                     },
+        "elapsed_ms":  39.885
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:06.9814831Z",
+        "trial_label":  "trial-1-team-units-map",
+        "method":  "POST",
+        "path":  "/orgs/s65-org-121606823-1/teams",
+        "request":  {
+                        "permission":  "read",
+                        "description":  "Stage 6.5 documented units map control",
+                        "name":  "s65-map-121606823-1",
+                        "units_map":  {
+                                          "repo.code":  "read"
+                                      },
+                        "visibility":  "private"
+                    },
+        "status":  201,
+        "response":  {
+                         "id":  9,
+                         "name":  "s65-map-121606823-1",
+                         "description":  "Stage 6.5 documented units map control",
+                         "organization":  {
+                                              "id":  9,
+                                              "name":  "s65-org-121606823-1",
+                                              "full_name":  "",
+                                              "email":  "",
+                                              "avatar_url":  "http://127.0.0.1:3477/avatars/f082280cd77b78443df1e0c09b5cbdf8",
+                                              "description":  "",
+                                              "website":  "",
+                                              "location":  "",
+                                              "visibility":  "public",
+                                              "repo_admin_change_team_access":  false,
+                                              "username":  "s65-org-121606823-1"
+                                          },
+                         "includes_all_repositories":  false,
+                         "permission":  "none",
+                         "units":  [
+                                       "repo.code"
+                                   ],
+                         "units_map":  {
+                                           "repo.code":  "read"
+                                       },
+                         "can_create_org_repo":  false,
+                         "visibility":  "private"
+                     },
+        "elapsed_ms":  31.847
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:07.0150517Z",
+        "trial_label":  "trial-1-observe-units-team",
+        "method":  "GET",
+        "path":  "/teams/8",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  8,
+                         "name":  "s65-units-121606823-1",
+                         "description":  "Stage 6.5 documented units control",
+                         "organization":  {
+                                              "id":  9,
+                                              "name":  "s65-org-121606823-1",
+                                              "full_name":  "",
+                                              "email":  "",
+                                              "avatar_url":  "http://127.0.0.1:3477/avatars/f082280cd77b78443df1e0c09b5cbdf8",
+                                              "description":  "",
+                                              "website":  "",
+                                              "location":  "",
+                                              "visibility":  "public",
+                                              "repo_admin_change_team_access":  false,
+                                              "username":  "s65-org-121606823-1"
+                                          },
+                         "includes_all_repositories":  false,
+                         "permission":  "none",
+                         "units":  [
+                                       "repo.code"
+                                   ],
+                         "units_map":  {
+                                           "repo.code":  "read"
+                                       },
+                         "can_create_org_repo":  false,
+                         "visibility":  "private"
+                     },
+        "elapsed_ms":  25.561
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:07.0415692Z",
+        "trial_label":  "trial-1-observe-units-map-team",
+        "method":  "GET",
+        "path":  "/teams/9",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  9,
+                         "name":  "s65-map-121606823-1",
+                         "description":  "Stage 6.5 documented units map control",
+                         "organization":  {
+                                              "id":  9,
+                                              "name":  "s65-org-121606823-1",
+                                              "full_name":  "",
+                                              "email":  "",
+                                              "avatar_url":  "http://127.0.0.1:3477/avatars/f082280cd77b78443df1e0c09b5cbdf8",
+                                              "description":  "",
+                                              "website":  "",
+                                              "location":  "",
+                                              "visibility":  "public",
+                                              "repo_admin_change_team_access":  false,
+                                              "username":  "s65-org-121606823-1"
+                                          },
+                         "includes_all_repositories":  false,
+                         "permission":  "none",
+                         "units":  [
+                                       "repo.code"
+                                   ],
+                         "units_map":  {
+                                           "repo.code":  "read"
+                                       },
+                         "can_create_org_repo":  false,
+                         "visibility":  "private"
+                     },
+        "elapsed_ms":  27.676
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:07.0757336Z",
+        "trial_label":  "trial-2-create-org",
+        "method":  "POST",
+        "path":  "/orgs",
+        "request":  {
+                        "username":  "s65-org-121607075-2"
+                    },
+        "status":  201,
+        "response":  {
+                         "id":  10,
+                         "name":  "s65-org-121607075-2",
+                         "full_name":  "",
+                         "email":  "",
+                         "avatar_url":  "http://127.0.0.1:3477/avatars/1b701fa11f486201fea9efe5a05d629b",
+                         "description":  "",
+                         "website":  "",
+                         "location":  "",
+                         "visibility":  "public",
+                         "repo_admin_change_team_access":  false,
+                         "username":  "s65-org-121607075-2"
+                     },
+        "elapsed_ms":  43.317
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:07.1190510Z",
+        "trial_label":  "trial-2-observe-org",
+        "method":  "GET",
+        "path":  "/orgs/s65-org-121607075-2",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  10,
+                         "name":  "s65-org-121607075-2",
+                         "full_name":  "",
+                         "email":  "",
+                         "avatar_url":  "http://127.0.0.1:3477/avatars/1b701fa11f486201fea9efe5a05d629b",
+                         "description":  "",
+                         "website":  "",
+                         "location":  "",
+                         "visibility":  "public",
+                         "repo_admin_change_team_access":  false,
+                         "username":  "s65-org-121607075-2"
+                     },
+        "elapsed_ms":  31.386
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:07.1504370Z",
+        "trial_label":  "trial-2-team-minimal",
+        "method":  "POST",
+        "path":  "/orgs/s65-org-121607075-2/teams",
+        "request":  {
+                        "name":  "s65-min-121607075-2"
+                    },
+        "status":  500,
+        "response":  null,
+        "elapsed_ms":  15.898
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:07.1663353Z",
+        "trial_label":  "trial-2-team-documented-optionals",
+        "method":  "POST",
+        "path":  "/orgs/s65-org-121607075-2/teams",
+        "request":  {
+                        "permission":  "read",
+                        "description":  "Stage 6.5 serial control",
+                        "name":  "s65-full-121607075-2",
+                        "visibility":  "private"
+                    },
+        "status":  500,
+        "response":  null,
+        "elapsed_ms":  15.143
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:07.1820741Z",
+        "trial_label":  "trial-2-team-units-example",
+        "method":  "POST",
+        "path":  "/orgs/s65-org-121607075-2/teams",
+        "request":  {
+                        "permission":  "read",
+                        "description":  "Stage 6.5 documented units control",
+                        "name":  "s65-units-121607075-2",
+                        "units":  [
+                                      "repo.code"
+                                  ],
+                        "visibility":  "private"
+                    },
+        "status":  201,
+        "response":  {
+                         "id":  11,
+                         "name":  "s65-units-121607075-2",
+                         "description":  "Stage 6.5 documented units control",
+                         "organization":  {
+                                              "id":  10,
+                                              "name":  "s65-org-121607075-2",
+                                              "full_name":  "",
+                                              "email":  "",
+                                              "avatar_url":  "http://127.0.0.1:3477/avatars/1b701fa11f486201fea9efe5a05d629b",
+                                              "description":  "",
+                                              "website":  "",
+                                              "location":  "",
+                                              "visibility":  "public",
+                                              "repo_admin_change_team_access":  false,
+                                              "username":  "s65-org-121607075-2"
+                                          },
+                         "includes_all_repositories":  false,
+                         "permission":  "none",
+                         "units":  [
+                                       "repo.code"
+                                   ],
+                         "units_map":  {
+                                           "repo.code":  "read"
+                                       },
+                         "can_create_org_repo":  false,
+                         "visibility":  "private"
+                     },
+        "elapsed_ms":  28.65
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:07.2112564Z",
+        "trial_label":  "trial-2-team-units-map",
+        "method":  "POST",
+        "path":  "/orgs/s65-org-121607075-2/teams",
+        "request":  {
+                        "permission":  "read",
+                        "description":  "Stage 6.5 documented units map control",
+                        "name":  "s65-map-121607075-2",
+                        "units_map":  {
+                                          "repo.code":  "read"
+                                      },
+                        "visibility":  "private"
+                    },
+        "status":  201,
+        "response":  {
+                         "id":  12,
+                         "name":  "s65-map-121607075-2",
+                         "description":  "Stage 6.5 documented units map control",
+                         "organization":  {
+                                              "id":  10,
+                                              "name":  "s65-org-121607075-2",
+                                              "full_name":  "",
+                                              "email":  "",
+                                              "avatar_url":  "http://127.0.0.1:3477/avatars/1b701fa11f486201fea9efe5a05d629b",
+                                              "description":  "",
+                                              "website":  "",
+                                              "location":  "",
+                                              "visibility":  "public",
+                                              "repo_admin_change_team_access":  false,
+                                              "username":  "s65-org-121607075-2"
+                                          },
+                         "includes_all_repositories":  false,
+                         "permission":  "none",
+                         "units":  [
+                                       "repo.code"
+                                   ],
+                         "units_map":  {
+                                           "repo.code":  "read"
+                                       },
+                         "can_create_org_repo":  false,
+                         "visibility":  "private"
+                     },
+        "elapsed_ms":  30.467
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:07.2422558Z",
+        "trial_label":  "trial-2-observe-units-team",
+        "method":  "GET",
+        "path":  "/teams/11",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  11,
+                         "name":  "s65-units-121607075-2",
+                         "description":  "Stage 6.5 documented units control",
+                         "organization":  {
+                                              "id":  10,
+                                              "name":  "s65-org-121607075-2",
+                                              "full_name":  "",
+                                              "email":  "",
+                                              "avatar_url":  "http://127.0.0.1:3477/avatars/1b701fa11f486201fea9efe5a05d629b",
+                                              "description":  "",
+                                              "website":  "",
+                                              "location":  "",
+                                              "visibility":  "public",
+                                              "repo_admin_change_team_access":  false,
+                                              "username":  "s65-org-121607075-2"
+                                          },
+                         "includes_all_repositories":  false,
+                         "permission":  "none",
+                         "units":  [
+                                       "repo.code"
+                                   ],
+                         "units_map":  {
+                                           "repo.code":  "read"
+                                       },
+                         "can_create_org_repo":  false,
+                         "visibility":  "private"
+                     },
+        "elapsed_ms":  24.931
+    },
+    {
+        "timestamp_utc":  "2026-09-24T09:16:07.2677096Z",
+        "trial_label":  "trial-2-observe-units-map-team",
+        "method":  "GET",
+        "path":  "/teams/12",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  12,
+                         "name":  "s65-map-121607075-2",
+                         "description":  "Stage 6.5 documented units map control",
+                         "organization":  {
+                                              "id":  10,
+                                              "name":  "s65-org-121607075-2",
+                                              "full_name":  "",
+                                              "email":  "",
+                                              "avatar_url":  "http://127.0.0.1:3477/avatars/1b701fa11f486201fea9efe5a05d629b",
+                                              "description":  "",
+                                              "website":  "",
+                                              "location":  "",
+                                              "visibility":  "public",
+                                              "repo_admin_change_team_access":  false,
+                                              "username":  "s65-org-121607075-2"
+                                          },
+                         "includes_all_repositories":  false,
+                         "permission":  "none",
+                         "units":  [
+                                       "repo.code"
+                                   ],
+                         "units_map":  {
+                                           "repo.code":  "read"
+                                       },
+                         "can_create_org_repo":  false,
+                         "visibility":  "private"
+                     },
+        "elapsed_ms":  24.632
+    }
+]

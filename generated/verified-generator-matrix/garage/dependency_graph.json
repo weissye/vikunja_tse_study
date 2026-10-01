@@ -1,0 +1,147 @@
+{
+  "creation_order": [
+    "chains",
+    "garages",
+    "customers",
+    "cars",
+    "periodic-maintenance",
+    "repair-orders"
+  ],
+  "cycle_edges_removed": [],
+  "deletion_order": [
+    "repair-orders",
+    "periodic-maintenance",
+    "cars",
+    "customers",
+    "garages",
+    "chains"
+  ],
+  "edges": [
+    {
+      "confidence": 0.9,
+      "field_name": "chainId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'chainId' matches entity 'chains'",
+          "pointer": "#/paths/~1garages/post/requestBody/content/application~1json/properties/chainId",
+          "rule": "D2:D_key_field_exact_match"
+        }
+      ],
+      "source": "garages",
+      "target": "chains"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "preferredGarageId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'preferredGarageId' matches entity 'garages'",
+          "pointer": "#/paths/~1customers/post/requestBody/content/application~1json/properties/preferredGarageId",
+          "rule": "D2:D_distinctive_key_suffix_match"
+        }
+      ],
+      "source": "customers",
+      "target": "garages"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "ownerCustomerId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'ownerCustomerId' matches entity 'customers'",
+          "pointer": "#/paths/~1cars/post/requestBody/content/application~1json/properties/ownerCustomerId",
+          "rule": "D2:D_distinctive_key_suffix_match"
+        }
+      ],
+      "source": "cars",
+      "target": "customers"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "homeGarageId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'homeGarageId' matches entity 'garages'",
+          "pointer": "#/paths/~1cars/post/requestBody/content/application~1json/properties/homeGarageId",
+          "rule": "D2:D_distinctive_key_suffix_match"
+        }
+      ],
+      "source": "cars",
+      "target": "garages"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "carVin",
+      "provenance": [
+        {
+          "detail": "Create request body property 'carVin' matches entity 'cars'",
+          "pointer": "#/paths/~1periodic-maintenance/post/requestBody/content/application~1json/properties/carVin",
+          "rule": "D2:D_distinctive_key_suffix_match"
+        }
+      ],
+      "source": "periodic-maintenance",
+      "target": "cars"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "garageId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'garageId' matches entity 'garages'",
+          "pointer": "#/paths/~1periodic-maintenance/post/requestBody/content/application~1json/properties/garageId",
+          "rule": "D2:D_key_field_exact_match"
+        }
+      ],
+      "source": "periodic-maintenance",
+      "target": "garages"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "carVin",
+      "provenance": [
+        {
+          "detail": "Create request body property 'carVin' matches entity 'cars'",
+          "pointer": "#/paths/~1repair-orders/post/requestBody/content/application~1json/properties/carVin",
+          "rule": "D2:D_distinctive_key_suffix_match"
+        }
+      ],
+      "source": "repair-orders",
+      "target": "cars"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "customerId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'customerId' matches entity 'customers'",
+          "pointer": "#/paths/~1repair-orders/post/requestBody/content/application~1json/properties/customerId",
+          "rule": "D2:D_key_field_exact_match"
+        }
+      ],
+      "source": "repair-orders",
+      "target": "customers"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "garageId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'garageId' matches entity 'garages'",
+          "pointer": "#/paths/~1repair-orders/post/requestBody/content/application~1json/properties/garageId",
+          "rule": "D2:D_key_field_exact_match"
+        }
+      ],
+      "source": "repair-orders",
+      "target": "garages"
+    }
+  ],
+  "had_cycle": false,
+  "nodes": [
+    "chains",
+    "garages",
+    "customers",
+    "cars",
+    "periodic-maintenance",
+    "repair-orders"
+  ]
+}

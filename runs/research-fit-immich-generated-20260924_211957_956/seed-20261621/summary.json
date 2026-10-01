@@ -1,0 +1,88 @@
+{
+  "active_operations": 243,
+  "adapter_overlap_epochs": 0,
+  "coverage_gate": {
+    "missing_operations": [
+      "updateAlbumInfo",
+      "updateSharedLink"
+    ],
+    "new_target_overlap": false,
+    "observed_operations": []
+  },
+  "deprecated_operations": 22,
+  "distinct_paths_observed": 27,
+  "epochs": 0,
+  "evaluator_exit": 3,
+  "generated_operations": 265,
+  "http_events": 47,
+  "invalid_token_events": 0,
+  "long_story_selected": 0,
+  "methods": {
+    "GET": 14,
+    "POST": 33
+  },
+  "observed_path_counts": {
+    "/activities": 3,
+    "/admin/users": 3,
+    "/albums": 3,
+    "/albums/27364c52-5f46-44cb-83c3-a3c6c8270a80": 1,
+    "/albums/5a943510-44f6-4029-9343-a2f8a75ae448": 1,
+    "/albums/fbf3b760-8129-4be4-91eb-0373dedbc6c5": 1,
+    "/api-keys": 3,
+    "/api-keys/166909e0-6e19-4804-866b-03099232a1ea": 1,
+    "/api-keys/5d3d68aa-8a47-4da6-baff-8e426b451a41": 1,
+    "/api-keys/c5d09291-5d9b-45fe-ac0c-2e4d6b9d8793": 1,
+    "/jobs": 3,
+    "/libraries": 3,
+    "/memories": 3,
+    "/memories/32bcfb0e-97ce-4035-b2f9-392f04009a77": 1,
+    "/memories/4bd2a3dd-7497-46c3-a447-412eb88fd056": 1,
+    "/memories/513e395b-0d78-4e31-8e57-f9bd5cedf3df": 1,
+    "/partners": 3,
+    "/people": 1,
+    "/people/e367e82b-429d-4873-bd06-a7a49982b399": 1,
+    "/sessions": 1,
+    "/shared-links": 3,
+    "/shared-links/253dd347-f8f4-4254-a9ad-8235691f20f5": 1,
+    "/shared-links/5c49555c-7452-4e6b-8375-b9ef980481c1": 1,
+    "/shared-links/cd6de22c-f84c-4ce7-adff-234c47ed0714": 1,
+    "/tags": 3,
+    "/workflows": 1,
+    "/workflows/9ae203e1-f758-4a50-bc5a-0b3e97f10ca5": 1
+  },
+  "oracle_layers": {
+    "concurrency": {
+      "INCONCLUSIVE": 0,
+      "PASS": 0,
+      "VIOLATED": 0
+    },
+    "contract": {
+      "INCONCLUSIVE": 13,
+      "PASS": 34,
+      "VIOLATED": 0
+    },
+    "state": {
+      "INCONCLUSIVE": 1,
+      "PASS": 14,
+      "VIOLATED": 0
+    }
+  },
+  "oracle_status": "INCONCLUSIVE",
+  "provengo_exit": 0,
+  "proxy_overlap_epochs": 0,
+  "real_overlap_epochs": 0,
+  "selected_events": 236,
+  "source_operations": 265,
+  "status": "NO_REAL_OVERLAP",
+  "statuses": {
+    "200": 14,
+    "201": 17,
+    "204": 3,
+    "400": 10,
+    "500": 3
+  },
+  "transport_error_events": 0,
+  "unverified_active_operations": 0,
+  "verifier_coverage_complete": true,
+  "verifier_operations": 243
+}

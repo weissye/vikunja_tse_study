@@ -1,0 +1,7706 @@
+{
+  "concurrency_epochs_evaluated": 47,
+  "concurrency_oracle_families_exercised": 9,
+  "concurrency_oracles_exercised": 47,
+  "concurrency_oracles_generated_ready": 74,
+  "concurrency_oracles_ready": 74,
+  "contract_oracles_exercised": 172,
+  "contract_oracles_generated": 478,
+  "counts": {
+    "INCONCLUSIVE": 80,
+    "PASS": 452,
+    "VIOLATED": 2
+  },
+  "layer_counts": {
+    "concurrency": {
+      "INCONCLUSIVE": 9,
+      "PASS": 37,
+      "VIOLATED": 1
+    },
+    "contract": {
+      "INCONCLUSIVE": 33,
+      "PASS": 370,
+      "VIOLATED": 1
+    },
+    "state": {
+      "INCONCLUSIVE": 38,
+      "PASS": 45,
+      "VIOLATED": 0
+    }
+  },
+  "note": "Not-exercised operations are coverage facts, not automatically semantic failures.",
+  "profile": "openapi-only-generated-verifiers",
+  "run_status": "SEMANTIC_ANOMALY",
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "2.0",
+    "sha256": "a0baa9a766c22492bd8c45744157c611d3e95cfc0dc73d6f5d14f294cdddce38",
+    "title": "Gitea API",
+    "version": "1.27.3"
+  },
+  "witnesses": [
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getVersion",
+      "result": "PASS",
+      "trigger_event": 0
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetCurrent",
+      "result": "PASS",
+      "trigger_event": 1
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::adminCreateRunnerRegistrationToken",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 2
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          400,
+          403,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::adminCreateUser",
+      "result": "PASS",
+      "trigger_event": 3
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getVersion",
+      "result": "PASS",
+      "trigger_event": 4
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::userCurrentPostGPGKey",
+      "result": "PASS",
+      "trigger_event": 5
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userCurrentListSubscriptions",
+      "result": "PASS",
+      "trigger_event": 6
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::orgCreate",
+      "result": "PASS",
+      "trigger_event": 7
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::renderMarkdownRaw",
+      "reason": "invalid-test-input:required-request-body-missing",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 8
+    },
+    {
+      "expected": {
+        "status_in": [
+          205
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 205
+      },
+      "oracle_id": "contract::notifyReadList",
+      "result": "PASS",
+      "trigger_event": 9
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserSettings",
+      "result": "PASS",
+      "trigger_event": 10
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::userCurrentPostKey",
+      "result": "PASS",
+      "trigger_event": 11
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userCurrentTrackedTimes",
+      "result": "PASS",
+      "trigger_event": 12
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::userAddEmail",
+      "result": "PASS",
+      "trigger_event": 13
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueSearchIssues",
+      "result": "PASS",
+      "trigger_event": 14
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getGeneralRepositorySettings",
+      "result": "PASS",
+      "trigger_event": 15
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::userCurrentPostGPGKey",
+      "result": "PASS",
+      "trigger_event": 16
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::adminGetAllEmails",
+      "result": "PASS",
+      "trigger_event": 17
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userCreateRunnerRegistrationToken",
+      "result": "PASS",
+      "trigger_event": 18
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::notifyNewAvailable",
+      "result": "PASS",
+      "trigger_event": 19
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::renderMarkup",
+      "result": "PASS",
+      "trigger_event": 20
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userSearch",
+      "result": "PASS",
+      "trigger_event": 21
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::updateUserSettings",
+      "result": "PASS",
+      "trigger_event": 22
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          400
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::userCreateOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 23
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoSearch",
+      "result": "PASS",
+      "trigger_event": 24
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::adminSearchEmails",
+      "result": "PASS",
+      "trigger_event": 25
+    },
+    {
+      "expected": {
+        "status_in": [
+          204
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::userUpdateAvatar",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 26
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          409,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::repoMigrate",
+      "result": "PASS",
+      "trigger_event": 27
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userCurrentListRepos",
+      "result": "PASS",
+      "trigger_event": 28
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::orgCreate",
+      "result": "PASS",
+      "trigger_event": 29
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          400,
+          403,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::adminCreateUser",
+      "result": "PASS",
+      "trigger_event": 30
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::getSigningKey",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 31
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userListEmails",
+      "result": "PASS",
+      "trigger_event": 32
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::listAdminWorkflowRuns",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 33
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getCurrentToken",
+      "result": "PASS",
+      "trigger_event": 34
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getGeneralAPISettings",
+      "result": "PASS",
+      "trigger_event": 35
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::userCurrentPostKey",
+      "result": "PASS",
+      "trigger_event": 36
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgListCurrentUserOrgs",
+      "result": "PASS",
+      "trigger_event": 37
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userListTeams",
+      "result": "PASS",
+      "trigger_event": 38
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userCurrentListFollowers",
+      "result": "PASS",
+      "trigger_event": 39
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserWorkflowRuns",
+      "result": "PASS",
+      "trigger_event": 40
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::listAdminWorkflowJobs",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 41
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::adminCreateHook",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 42
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::userCreateHook",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 43
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          400,
+          409,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createCurrentUserRepo",
+      "result": "PASS",
+      "trigger_event": 44
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetCurrent",
+      "result": "PASS",
+      "trigger_event": 45
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getGeneralAttachmentSettings",
+      "result": "PASS",
+      "trigger_event": 46
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getUserWorkflowJobs",
+      "result": "PASS",
+      "trigger_event": 47
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 49
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetStopWatches",
+      "result": "PASS",
+      "trigger_event": 50
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::notifyGetList",
+      "result": "PASS",
+      "trigger_event": 51
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::userCreateHook",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 52
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::getSigningKeySSH",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 53
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::adminCreateHook",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 54
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 55
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::adminGetAllOrgs",
+      "result": "PASS",
+      "trigger_event": 56
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          403,
+          404,
+          422,
+          500
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::ActionsListRepositoryWorkflows",
+      "result": "PASS",
+      "trigger_event": 57
+    },
+    {
+      "expected": {
+        "status_in": [
+          205
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 205
+      },
+      "oracle_id": "contract::notifyReadRepoList",
+      "result": "PASS",
+      "trigger_event": 58
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          403,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListPushMirrors",
+      "result": "PASS",
+      "trigger_event": 59
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoCreateRunnerRegistrationToken",
+      "result": "PASS",
+      "trigger_event": 60
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetAssignees",
+      "result": "PASS",
+      "trigger_event": 61
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          500
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListPullRequests",
+      "result": "PASS",
+      "trigger_event": 62
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getGeneralUISettings",
+      "result": "PASS",
+      "trigger_event": 63
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::issueCreateMilestone",
+      "result": "PASS",
+      "trigger_event": 64
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListActivityFeeds",
+      "result": "PASS",
+      "trigger_event": 65
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getArtifacts",
+      "result": "PASS",
+      "trigger_event": 66
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 67
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetMilestonesList",
+      "result": "PASS",
+      "trigger_event": 68
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 69
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          405,
+          409,
+          422,
+          423
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::repoCreateTag",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 70
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListPinnedIssues",
+      "result": "PASS",
+      "trigger_event": 71
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          409,
+          422,
+          423
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::repoCreatePullRequest",
+      "result": "PASS",
+      "trigger_event": 72
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetLicenses",
+      "result": "PASS",
+      "trigger_event": 73
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgCreateRunnerRegistrationToken",
+      "result": "PASS",
+      "trigger_event": 74
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::organizationListBlocks",
+      "result": "PASS",
+      "trigger_event": 76
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          403,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::repoAddPushMirror",
+      "result": "PASS",
+      "trigger_event": 77
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          409
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetAllCommits",
+      "result": "PASS",
+      "trigger_event": 78
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::repoGetWikiPages",
+      "result": "PASS",
+      "trigger_event": 79
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getVerificationToken",
+      "result": "PASS",
+      "trigger_event": 80
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetRepoComments",
+      "result": "PASS",
+      "trigger_event": 81
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::orgCreateHook",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 82
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          403,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoTrackedTimes",
+      "result": "PASS",
+      "trigger_event": 83
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListTagProtection",
+      "result": "PASS",
+      "trigger_event": 84
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetLanguages",
+      "result": "PASS",
+      "trigger_event": 85
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          404,
+          409,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::repoCreateRelease",
+      "result": "PASS",
+      "trigger_event": 86
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoPushMirrorSync",
+      "result": "PASS",
+      "trigger_event": 87
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::rejectRepoTransfer",
+      "result": "PASS",
+      "trigger_event": 89
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgListActivityFeeds",
+      "result": "PASS",
+      "trigger_event": 90
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::orgCreateTeam",
+      "result": "PASS",
+      "trigger_event": 91
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 92
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 93
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListBranches",
+      "result": "PASS",
+      "trigger_event": 94
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userCurrentPutSubscription",
+      "result": "PASS",
+      "trigger_event": 95
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          422,
+          423
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::repoCreateBranchProtection",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 96
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          409,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::generateRepo",
+      "result": "PASS",
+      "trigger_event": 97
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::repoCreateKey",
+      "result": "PASS",
+      "trigger_event": 98
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          400
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::userCreateOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 99
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueListIssues",
+      "result": "PASS",
+      "trigger_event": 100
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetLatestRelease",
+      "result": "PASS",
+      "trigger_event": 101
+    },
+    {
+      "expected": {
+        "status_in": [
+          204,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::repoUpdateAvatar",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 102
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueListLabels",
+      "result": "PASS",
+      "trigger_event": 103
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          400,
+          403,
+          404,
+          423
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::repoCreateWikiPage",
+      "result": "PASS",
+      "trigger_event": 104
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          422,
+          423
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::repoChangeFiles",
+      "result": "PASS",
+      "trigger_event": 105
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::renderMarkdown",
+      "result": "PASS",
+      "trigger_event": 106
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getOrgVariablesList",
+      "result": "PASS",
+      "trigger_event": 107
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgListHooks",
+      "result": "PASS",
+      "trigger_event": 108
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getWorkflowRuns",
+      "result": "PASS",
+      "trigger_event": 109
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::repoCreateHook",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 110
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListBranchProtection",
+      "result": "PASS",
+      "trigger_event": 111
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListCollaborators",
+      "result": "PASS",
+      "trigger_event": 112
+    },
+    {
+      "expected": {
+        "status_in": [
+          202,
+          403,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::acceptRepoTransfer",
+      "result": "PASS",
+      "trigger_event": 113
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getOrgRunners",
+      "result": "PASS",
+      "trigger_event": 114
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          403,
+          404,
+          409,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::ListActionTasks",
+      "result": "PASS",
+      "trigger_event": 115
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 500
+      },
+      "oracle_id": "contract::repoMergeUpstream",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 116
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoValidateIssueConfig",
+      "result": "PASS",
+      "trigger_event": 117
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgListRepos",
+      "result": "PASS",
+      "trigger_event": 118
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 405
+      },
+      "oracle_id": "contract::repoListTeams",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 119
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          400,
+          403,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::createOrgRepo",
+      "result": "PASS",
+      "trigger_event": 120
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::listForks",
+      "result": "PASS",
+      "trigger_event": 121
+    },
+    {
+      "expected": {
+        "status_in": [
+          204,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::orgUpdateAvatar",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 122
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 123
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::repoListGitHooks",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 124
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListTags",
+      "result": "PASS",
+      "trigger_event": 125
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getOrgWorkflowRuns",
+      "result": "PASS",
+      "trigger_event": 126
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::repoGetFileContentsPost",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 127
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          409,
+          423
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::repoCreateBranch",
+      "result": "PASS",
+      "trigger_event": 128
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          422,
+          423
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::repoCreateTagProtection",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 129
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::notifyGetRepoList",
+      "result": "PASS",
+      "trigger_event": 130
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 400
+      },
+      "oracle_id": "contract::repoMirrorSync",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 131
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListPinnedPullRequests",
+      "result": "PASS",
+      "trigger_event": 132
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 133
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 134
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::userVerifyGPGKey",
+      "result": "PASS",
+      "trigger_event": 135
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListStargazers",
+      "result": "PASS",
+      "trigger_event": 136
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userCurrentCheckSubscription",
+      "result": "PASS",
+      "trigger_event": 137
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 138
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetIssueConfig",
+      "result": "PASS",
+      "trigger_event": 139
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 140
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::repoSigningKey",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 141
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          412,
+          422,
+          423
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::issueCreateIssue",
+      "result": "PASS",
+      "trigger_event": 142
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::teamSearch",
+      "result": "PASS",
+      "trigger_event": 143
+    },
+    {
+      "expected": {
+        "status_in": [
+          204,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 204
+      },
+      "oracle_id": "contract::repoUpdateTopics",
+      "result": "PASS",
+      "trigger_event": 144
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getOrgWorkflowJobs",
+      "result": "PASS",
+      "trigger_event": 145
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetContentsList",
+      "result": "PASS",
+      "trigger_event": 146
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getRepoVariablesList",
+      "result": "PASS",
+      "trigger_event": 147
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgListLabels",
+      "result": "PASS",
+      "trigger_event": 148
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::getRepoRunners",
+      "result": "PASS",
+      "trigger_event": 149
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetIssueTemplates",
+      "result": "PASS",
+      "trigger_event": 150
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          423
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 500
+      },
+      "oracle_id": "contract::repoApplyDiffPatch",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 151
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListTopics",
+      "result": "PASS",
+      "trigger_event": 152
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 153
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::orgCreateLabel",
+      "result": "PASS",
+      "trigger_event": 154
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 155
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::listWorkflowJobs",
+      "result": "PASS",
+      "trigger_event": 156
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::repoSigningKeySSH",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 157
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 158
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 159
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetReviewers",
+      "result": "PASS",
+      "trigger_event": 160
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgListMembers",
+      "result": "PASS",
+      "trigger_event": 161
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgListPublicMembers",
+      "result": "PASS",
+      "trigger_event": 162
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListReleases",
+      "result": "PASS",
+      "trigger_event": 164
+    },
+    {
+      "expected": {
+        "status_in": [
+          202,
+          403,
+          404,
+          409,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 202
+      },
+      "oracle_id": "contract::createFork",
+      "result": "PASS",
+      "trigger_event": 165
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 166
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 167
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListAllGitRefs",
+      "result": "PASS",
+      "trigger_event": 168
+    },
+    {
+      "expected": {
+        "status_in": [
+          202,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::repoTransfer",
+      "result": "PASS",
+      "trigger_event": 169
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 170
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::issueCreateLabel",
+      "result": "PASS",
+      "trigger_event": 171
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 172
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoNewPinAllowed",
+      "result": "PASS",
+      "trigger_event": 173
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListActionsSecrets",
+      "result": "PASS",
+      "trigger_event": 174
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::orgEdit",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 175
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListSubscribers",
+      "result": "PASS",
+      "trigger_event": 176
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 178
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::orgCreateTeam",
+      "result": "PASS",
+      "trigger_event": 179
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 180
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListHooks",
+      "result": "PASS",
+      "trigger_event": 181
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 182
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::userUpdateOAuth2Application",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 183
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoListKeys",
+      "result": "PASS",
+      "trigger_event": 185
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userUpdateOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 186
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 189
+    },
+    {
+      "expected": {
+        "status_in": [
+          204,
+          404,
+          422,
+          423
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 423
+      },
+      "oracle_id": "contract::repoUpdateBranchProtectionPriories",
+      "result": "PASS",
+      "trigger_event": 190
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 191
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 192
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::userUpdateOAuth2Application",
+      "reason": "undocumented-error-preconditions-unproven",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 193
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 194
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 195
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 196
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 197
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 198
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 199
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 200
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 201
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 202
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 203
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 204
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 205
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          405
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 405
+      },
+      "oracle_id": "contract::repoCheckTeam",
+      "result": "PASS",
+      "trigger_event": 206
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 207
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgListTeamRepos",
+      "result": "PASS",
+      "trigger_event": 208
+    },
+    {
+      "expected": {
+        "status_in": [
+          204,
+          403,
+          404,
+          405,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 405
+      },
+      "oracle_id": "contract::repoAddTeam",
+      "result": "PASS",
+      "trigger_event": 209
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 210
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 211
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgListTeamMembers",
+      "result": "PASS",
+      "trigger_event": 212
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::orgListTeamRepo",
+      "result": "PASS",
+      "trigger_event": 213
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 214
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::issueEditMilestone",
+      "result": "PASS",
+      "trigger_event": 215
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 216
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 217
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 218
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 219
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgListTeamActivityFeeds",
+      "result": "PASS",
+      "trigger_event": 220
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 221
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 222
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 223
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 224
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 225
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 227
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 228
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 229
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 230
+    },
+    {
+      "expected": {
+        "status_in": [
+          204,
+          403,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "contract::orgAddTeamRepository",
+      "result": "PASS",
+      "trigger_event": 231
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 232
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 233
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userUpdateOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 234
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 235
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 236
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 237
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 238
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 239
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 240
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 241
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 243
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 244
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 247
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 248
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 249
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 250
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 251
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 252
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 253
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 254
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 255
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 256
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 257
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 258
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 259
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 260
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 261
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 262
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 263
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 264
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 267
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 269
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 270
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userUpdateOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 271
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 272
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 273
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 274
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 275
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 276
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 277
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 278
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 279
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 280
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 281
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 282
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 283
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 284
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 285
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 286
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 287
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 288
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 289
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 290
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 291
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 292
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 293
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 294
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 295
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 296
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 297
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 298
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 300
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 301
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 302
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 303
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 304
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 305
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 306
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 307
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 308
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 310
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 311
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 312
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 314
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 315
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 316
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 317
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 318
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 319
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 320
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 321
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 322
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 323
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 326
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 327
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 328
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 329
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 331
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 332
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 333
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetLabel",
+      "result": "PASS",
+      "trigger_event": 334
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 336
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 339
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 340
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditLabel",
+      "result": "PASS",
+      "trigger_event": 341
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 345
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userUpdateOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 349
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetRelease",
+      "result": "PASS",
+      "trigger_event": 353
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEditRelease",
+      "result": "PASS",
+      "trigger_event": 357
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 361
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 365
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetLabel",
+      "result": "PASS",
+      "trigger_event": 369
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditLabel",
+      "result": "PASS",
+      "trigger_event": 373
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetIssue",
+      "result": "PASS",
+      "trigger_event": 377
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          412
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::issueEditIssue",
+      "result": "PASS",
+      "trigger_event": 381
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetMilestone",
+      "result": "PASS",
+      "trigger_event": 385
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueEditMilestone",
+      "result": "PASS",
+      "trigger_event": 389
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 393
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "reason": "invalid-test-input:required-request-fields-missing:name",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 397
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 401
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 405
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetRelease",
+      "result": "PASS",
+      "trigger_event": 409
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEditRelease",
+      "result": "PASS",
+      "trigger_event": 413
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 417
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "reason": "invalid-test-input:required-request-fields-missing:name",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 421
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 425
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 429
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetLabel",
+      "result": "PASS",
+      "trigger_event": 433
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueEditLabel",
+      "result": "PASS",
+      "trigger_event": 437
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 441
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 445
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetLabel",
+      "result": "PASS",
+      "trigger_event": 449
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditLabel",
+      "result": "PASS",
+      "trigger_event": 453
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 457
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "result": "PASS",
+      "trigger_event": 461
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 465
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "reason": "invalid-test-input:required-request-fields-missing:name",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 469
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 473
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 477
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetRelease",
+      "result": "PASS",
+      "trigger_event": 481
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEditRelease",
+      "result": "PASS",
+      "trigger_event": 485
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetMilestone",
+      "result": "PASS",
+      "trigger_event": 489
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueEditMilestone",
+      "result": "PASS",
+      "trigger_event": 493
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetRelease",
+      "result": "PASS",
+      "trigger_event": 497
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEditRelease",
+      "result": "PASS",
+      "trigger_event": 501
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetIssue",
+      "result": "PASS",
+      "trigger_event": 505
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          412
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::issueEditIssue",
+      "result": "PASS",
+      "trigger_event": 509
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetMilestone",
+      "result": "PASS",
+      "trigger_event": 513
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueEditMilestone",
+      "result": "PASS",
+      "trigger_event": 517
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetRelease",
+      "result": "PASS",
+      "trigger_event": 521
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEditRelease",
+      "result": "PASS",
+      "trigger_event": 525
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 529
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "reason": "invalid-test-input:required-request-fields-missing:name",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 533
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 537
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userUpdateOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 541
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetLabel",
+      "result": "PASS",
+      "trigger_event": 545
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueEditLabel",
+      "result": "PASS",
+      "trigger_event": 549
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 553
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 557
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetLabel",
+      "result": "PASS",
+      "trigger_event": 561
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditLabel",
+      "result": "PASS",
+      "trigger_event": 565
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetLabel",
+      "result": "PASS",
+      "trigger_event": 569
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueEditLabel",
+      "result": "PASS",
+      "trigger_event": 573
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 577
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 581
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetIssue",
+      "result": "PASS",
+      "trigger_event": 585
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          412
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::issueEditIssue",
+      "result": "PASS",
+      "trigger_event": 589
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetIssue",
+      "result": "PASS",
+      "trigger_event": 593
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          412
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::issueEditIssue",
+      "result": "PASS",
+      "trigger_event": 597
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetLabel",
+      "result": "PASS",
+      "trigger_event": 601
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueEditLabel",
+      "result": "PASS",
+      "trigger_event": 605
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userGetOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 609
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          400,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::userUpdateOAuth2Application",
+      "result": "PASS",
+      "trigger_event": 613
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGetRelease",
+      "result": "PASS",
+      "trigger_event": 617
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEditRelease",
+      "result": "PASS",
+      "trigger_event": 621
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetMilestone",
+      "result": "PASS",
+      "trigger_event": 625
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueEditMilestone",
+      "result": "PASS",
+      "trigger_event": 629
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetLabel",
+      "result": "PASS",
+      "trigger_event": 633
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueEditLabel",
+      "result": "PASS",
+      "trigger_event": 637
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetTeam",
+      "result": "PASS",
+      "trigger_event": 641
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditTeam",
+      "reason": "invalid-test-input:required-request-fields-missing:name",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 645
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetIssue",
+      "result": "PASS",
+      "trigger_event": 649
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          412
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::issueEditIssue",
+      "result": "PASS",
+      "trigger_event": 653
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::issueGetIssue",
+      "result": "PASS",
+      "trigger_event": 657
+    },
+    {
+      "expected": {
+        "status_in": [
+          201,
+          403,
+          404,
+          412
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::issueEditIssue",
+      "result": "PASS",
+      "trigger_event": 661
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGet",
+      "result": "PASS",
+      "trigger_event": 665
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEdit",
+      "result": "PASS",
+      "trigger_event": 669
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoGet",
+      "result": "PASS",
+      "trigger_event": 673
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          403,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::repoEdit",
+      "result": "PASS",
+      "trigger_event": 677
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgGetLabel",
+      "result": "PASS",
+      "trigger_event": 681
+    },
+    {
+      "expected": {
+        "status_in": [
+          200,
+          404,
+          422
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::orgEditLabel",
+      "result": "PASS",
+      "trigger_event": 685
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 49,
+      "oracle_id": "state::orgCreate",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 7
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 133,
+      "oracle_id": "state::userCreateOAuth2Application",
+      "resource_path": "/user/applications/oauth2/5",
+      "result": "PASS",
+      "trigger_event": 23
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 55,
+      "oracle_id": "state::orgCreate",
+      "resource_path": "/orgs/1_41417",
+      "result": "PASS",
+      "trigger_event": 29
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 385,
+      "oracle_id": "state::issueCreateMilestone",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891/milestones/1",
+      "result": "PASS",
+      "trigger_event": 64
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::repoEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 69
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 353,
+      "oracle_id": "state::repoCreateRelease",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891/releases/2",
+      "result": "PASS",
+      "trigger_event": 86
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 172,
+      "oracle_id": "state::orgCreateTeam",
+      "resource_path": "/teams/3",
+      "result": "PASS",
+      "trigger_event": 91
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::repoEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 92
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 140,
+      "oracle_id": "state::userCreateOAuth2Application",
+      "resource_path": "/user/applications/oauth2/6",
+      "result": "PASS",
+      "trigger_event": 99
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/orgs/2_14611",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 138
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 377,
+      "oracle_id": "state::issueCreateIssue",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891/issues/1",
+      "result": "PASS",
+      "trigger_event": 142
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/orgs/2_14611",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 153
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 334,
+      "oracle_id": "state::orgCreateLabel",
+      "persistence_result": "PASS",
+      "reason": "server-canonicalized-request-value",
+      "resource_path": "/orgs/2_14611/labels/1",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 154
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 158,
+      "oracle_id": "state::repoEdit",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "PASS",
+      "trigger_event": 155
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/orgs/2_14611",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 159
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::repoEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 167
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::repoEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 170
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 433,
+      "oracle_id": "state::issueCreateLabel",
+      "persistence_result": "PASS",
+      "reason": "server-canonicalized-request-value",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891/labels/2",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 171
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::repoEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 178
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 200,
+      "oracle_id": "state::orgCreateTeam",
+      "resource_path": "/teams/4",
+      "result": "PASS",
+      "trigger_event": 179
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 191,
+      "oracle_id": "state::userUpdateOAuth2Application",
+      "resource_path": "/user/applications/oauth2/5",
+      "result": "PASS",
+      "trigger_event": 186
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 197,
+      "oracle_id": "state::repoEdit",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "PASS",
+      "trigger_event": 189
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/orgs/2_14611",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 194
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 196,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 195
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/orgs/2_14611",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 199
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/orgs/2_14611",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 201
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 214,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 203
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 207,
+      "oracle_id": "state::repoEdit",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "PASS",
+      "trigger_event": 205
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::repoEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 210
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 211
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::repoEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 216
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 228,
+      "oracle_id": "state::repoEdit",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "PASS",
+      "trigger_event": 217
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 219,
+      "oracle_id": "state::orgEditTeam",
+      "resource_path": "/teams/3",
+      "result": "PASS",
+      "trigger_event": 218
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 224,
+      "oracle_id": "state::orgEditTeam",
+      "resource_path": "/teams/3",
+      "result": "PASS",
+      "trigger_event": 222
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 226,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 223
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 225
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 235,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 229
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 230
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 247,
+      "oracle_id": "state::userUpdateOAuth2Application",
+      "resource_path": "/user/applications/oauth2/5",
+      "result": "PASS",
+      "trigger_event": 234
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 249,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 236
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 240,
+      "oracle_id": "state::orgEditTeam",
+      "resource_path": "/teams/3",
+      "result": "PASS",
+      "trigger_event": 239
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 241
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::repoEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 244
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 250,
+      "oracle_id": "state::orgEditTeam",
+      "resource_path": "/teams/3",
+      "result": "PASS",
+      "trigger_event": 248
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 251
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/orgs/2_14611",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 252
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 254,
+      "oracle_id": "state::repoEdit",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "PASS",
+      "trigger_event": 253
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 255
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 272,
+      "oracle_id": "state::orgEditTeam",
+      "resource_path": "/teams/3",
+      "result": "PASS",
+      "trigger_event": 256
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/orgs/2_14611",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 257
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 264,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 258
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 261,
+      "oracle_id": "state::repoEdit",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "PASS",
+      "trigger_event": 260
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::repoEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 263
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 293,
+      "oracle_id": "state::userUpdateOAuth2Application",
+      "resource_path": "/user/applications/oauth2/5",
+      "result": "PASS",
+      "trigger_event": 271
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 274
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 283,
+      "oracle_id": "state::repoEdit",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "PASS",
+      "trigger_event": 275
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 291,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 276
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 278,
+      "oracle_id": "state::orgEditTeam",
+      "resource_path": "/teams/3",
+      "result": "PASS",
+      "trigger_event": 277
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 280
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 282,
+      "oracle_id": "state::orgEditTeam",
+      "persistence_result": "PASS",
+      "reason": "server-canonicalized-request-value",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 281
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 295,
+      "oracle_id": "state::repoEdit",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "PASS",
+      "trigger_event": 285
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 286
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 287
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 288
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 290,
+      "oracle_id": "state::orgEditTeam",
+      "resource_path": "/teams/3",
+      "result": "PASS",
+      "trigger_event": 289
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 294,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 292
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/orgs/2_14611",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 296
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 298
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 302,
+      "oracle_id": "state::orgEditTeam",
+      "resource_path": "/teams/3",
+      "result": "PASS",
+      "trigger_event": 300
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 304,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 301
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 307,
+      "oracle_id": "state::orgEditTeam",
+      "resource_path": "/teams/3",
+      "result": "PASS",
+      "trigger_event": 305
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/orgs/2_14611",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 306
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 315,
+      "oracle_id": "state::orgEditTeam",
+      "persistence_result": "PASS",
+      "reason": "server-canonicalized-request-value",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 310
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 314,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 311
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 313,
+      "oracle_id": "state::repoEdit",
+      "resource_path": "/repos/sbt-gitea-20260924_133519_093/1_55891",
+      "result": "PASS",
+      "trigger_event": 312
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 321,
+      "oracle_id": "state::orgEditTeam",
+      "resource_path": "/teams/3",
+      "result": "PASS",
+      "trigger_event": 316
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 322,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 319
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 327,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 323
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEditTeam",
+      "reason": "superseded-before-observation",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 326
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 332,
+      "oracle_id": "state::orgEditTeam",
+      "resource_path": "/teams/3",
+      "result": "PASS",
+      "trigger_event": 328
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::orgEdit",
+      "reason": "superseded-before-observation",
+      "resource_path": "/orgs/2_14611",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 329
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 333,
+      "oracle_id": "state::orgEdit",
+      "resource_path": "/orgs/2_14611",
+      "result": "PASS",
+      "trigger_event": 331
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 340,
+      "oracle_id": "state::orgEditTeam",
+      "persistence_result": "PASS",
+      "reason": "server-canonicalized-request-value",
+      "resource_path": "/teams/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 339
+    },
+    {
+      "epoch_id": "generated-epoch-14",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 568,
+      "oracle_id": "concurrency::same-field-domain::orgEditLabel",
+      "reason": "sequential-control-state-mismatch",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        566,
+        567
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-15",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 456,
+      "oracle_id": "concurrency::same-field-domain::orgEditLabel",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        454,
+        455
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-16",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 376,
+      "oracle_id": "concurrency::same-field-domain::orgEditLabel",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        374,
+        375
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-17",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 688,
+      "oracle_id": "concurrency::same-field-domain::orgEditLabel",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        686,
+        687
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-18",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 344,
+      "oracle_id": "concurrency::same-field-domain::orgEditLabel",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        342,
+        343
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-19",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 268,
+      "oracle_id": "concurrency::same-field-domain::repoEdit",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        265,
+        266
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-20",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 680,
+      "oracle_id": "concurrency::same-field-domain::repoEdit",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        678,
+        679
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-21",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 330,
+      "oracle_id": "concurrency::same-field-domain::repoEdit",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        324,
+        325
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-22",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 560,
+      "oracle_id": "concurrency::same-field-domain::repoEdit",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        200
+      ],
+      "trigger_events": [
+        558,
+        559
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-23",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 448,
+      "oracle_id": "concurrency::same-field-domain::repoEdit",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        446,
+        447
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-24",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 408,
+      "oracle_id": "concurrency::same-field-domain::repoEdit",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        406,
+        407
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-31",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 600,
+      "oracle_id": "concurrency::same-field-domain::issueEditIssue",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        500,
+        500
+      ],
+      "trigger_events": [
+        598,
+        599
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-32",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 664,
+      "oracle_id": "concurrency::same-field-domain::issueEditIssue",
+      "result": "PASS",
+      "statuses": [
+        409,
+        201
+      ],
+      "trigger_events": [
+        662,
+        663
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-33",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 592,
+      "oracle_id": "concurrency::same-field-domain::issueEditIssue",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        409,
+        409
+      ],
+      "trigger_events": [
+        590,
+        591
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-34",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 656,
+      "oracle_id": "concurrency::same-field-domain::issueEditIssue",
+      "reason": "sequential-control-state-mismatch",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        201,
+        201
+      ],
+      "trigger_events": [
+        654,
+        655
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-35",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 512,
+      "oracle_id": "concurrency::same-field-domain::issueEditIssue",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        201,
+        500
+      ],
+      "trigger_events": [
+        510,
+        511
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-36",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 384,
+      "oracle_id": "concurrency::same-field-domain::issueEditIssue",
+      "result": "PASS",
+      "statuses": [
+        201,
+        201
+      ],
+      "trigger_events": [
+        382,
+        383
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-38",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 608,
+      "oracle_id": "concurrency::same-field-domain::issueEditLabel",
+      "reason": "sequential-control-state-mismatch",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        606,
+        607
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-39",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 552,
+      "oracle_id": "concurrency::same-field-domain::issueEditLabel",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        550,
+        551
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-4",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 432,
+      "oracle_id": "concurrency::same-field-domain::orgEdit",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        430,
+        431
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-40",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 640,
+      "oracle_id": "concurrency::same-field-domain::issueEditLabel",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        638,
+        639
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-41",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 576,
+      "oracle_id": "concurrency::same-field-domain::issueEditLabel",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        574,
+        575
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-42",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 440,
+      "oracle_id": "concurrency::same-field-domain::issueEditLabel",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        438,
+        439
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-43",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 392,
+      "oracle_id": "concurrency::same-field-domain::issueEditMilestone",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        390,
+        391
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-44",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 632,
+      "oracle_id": "concurrency::same-field-domain::issueEditMilestone",
+      "reason": "sequential-control-state-mismatch",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        630,
+        631
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-45",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 496,
+      "oracle_id": "concurrency::same-field-domain::issueEditMilestone",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        494,
+        495
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-46",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 520,
+      "oracle_id": "concurrency::same-field-domain::issueEditMilestone",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        518,
+        519
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-5",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 584,
+      "oracle_id": "concurrency::same-field-domain::orgEdit",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        582,
+        583
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-53",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 504,
+      "oracle_id": "concurrency::same-field-domain::repoEditRelease",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        502,
+        503
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-54",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 360,
+      "oracle_id": "concurrency::same-field-domain::repoEditRelease",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        358,
+        359
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-55",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 528,
+      "oracle_id": "concurrency::same-field-domain::repoEditRelease",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        526,
+        527
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-56",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 488,
+      "oracle_id": "concurrency::same-field-domain::repoEditRelease",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        486,
+        487
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-57",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 416,
+      "oracle_id": "concurrency::same-field-domain::repoEditRelease",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        414,
+        415
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-58",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 624,
+      "oracle_id": "concurrency::same-field-domain::repoEditRelease",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        622,
+        623
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-6",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 226,
+      "oracle_id": "concurrency::same-field-domain::orgEdit",
+      "reason": "same-field-final-value-not-linearizable",
+      "result": "VIOLATED",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        187,
+        188
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-61",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 648,
+      "oracle_id": "concurrency::same-field-domain::orgEditTeam",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        646,
+        647
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-62",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 472,
+      "oracle_id": "concurrency::same-field-domain::orgEditTeam",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        470,
+        471
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-63",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 424,
+      "oracle_id": "concurrency::same-field-domain::orgEditTeam",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        422,
+        423
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-64",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 464,
+      "oracle_id": "concurrency::same-field-domain::orgEditTeam",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        462,
+        463
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-65",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 400,
+      "oracle_id": "concurrency::same-field-domain::orgEditTeam",
+      "reason": "sequential-control-state-mismatch",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        398,
+        399
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-66",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 536,
+      "oracle_id": "concurrency::same-field-domain::orgEditTeam",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        534,
+        535
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-67",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 544,
+      "oracle_id": "concurrency::same-field-domain::userUpdateOAuth2Application",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        542,
+        543
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-68",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 352,
+      "oracle_id": "concurrency::same-field-domain::userUpdateOAuth2Application",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        350,
+        351
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-69",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 616,
+      "oracle_id": "concurrency::same-field-domain::userUpdateOAuth2Application",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        614,
+        615
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-7",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 368,
+      "oracle_id": "concurrency::same-field-domain::orgEdit",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        366,
+        367
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-8",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 480,
+      "oracle_id": "concurrency::same-field-domain::orgEdit",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        478,
+        479
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-9",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 672,
+      "oracle_id": "concurrency::same-field-domain::orgEdit",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        670,
+        671
+      ]
+    }
+  ]
+}

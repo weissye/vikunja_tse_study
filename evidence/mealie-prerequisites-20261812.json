@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "classification": "PREREQUISITE_DIAGNOSTICS_ONLY",
+  "operations": [
+    {
+      "method": "PATCH",
+      "path_template": "/api/recipes",
+      "operation_id": "patch_many_api_recipes_patch",
+      "statuses": {
+        "422": 1
+      },
+      "required_fields": [],
+      "request_fields": [],
+      "validation_fields": [],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "POST",
+      "path_template": "/api/households/mealplans",
+      "operation_id": "create_one_api_households_mealplans_post",
+      "statuses": {
+        "422": 2
+      },
+      "required_fields": [
+        "date"
+      ],
+      "request_fields": [
+        "date",
+        "entryType",
+        "recipeId",
+        "text",
+        "title"
+      ],
+      "validation_fields": [
+        "recipe_id"
+      ],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "POST",
+      "path_template": "/api/households/shopping/items",
+      "operation_id": "create_one_api_households_shopping_items_post",
+      "statuses": {
+        "422": 2
+      },
+      "required_fields": [
+        "shoppingListId"
+      ],
+      "request_fields": [
+        "checked",
+        "display",
+        "extras",
+        "food",
+        "foodId",
+        "id",
+        "labelId",
+        "note",
+        "position",
+        "quantity",
+        "recipeReferences",
+        "referencedRecipe",
+        "shoppingListId",
+        "unit",
+        "unitId"
+      ],
+      "validation_fields": [
+        "shoppingListId"
+      ],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "POST",
+      "path_template": "/api/households/shopping/items/create-bulk",
+      "operation_id": "create_many_api_households_shopping_items_create_bulk_post",
+      "statuses": {
+        "422": 1
+      },
+      "required_fields": [],
+      "request_fields": [],
+      "validation_fields": [],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "POST",
+      "path_template": "/api/households/shopping/lists/{item_id}/recipe",
+      "operation_id": "add_recipe_ingredients_to_list_api_households_shopping_lists__item_id__recipe_post",
+      "statuses": {
+        "422": 1
+      },
+      "required_fields": [],
+      "request_fields": [],
+      "validation_fields": [],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "POST",
+      "path_template": "/api/organizers/categories",
+      "operation_id": "create_one_api_organizers_categories_post",
+      "statuses": {
+        "409": 2
+      },
+      "required_fields": [
+        "name"
+      ],
+      "request_fields": [
+        "name"
+      ],
+      "validation_fields": [],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "POST",
+      "path_template": "/api/organizers/categories/{item_id}",
+      "operation_id": null,
+      "statuses": {
+        "422": 1
+      },
+      "required_fields": [],
+      "request_fields": [],
+      "validation_fields": [
+        "fromId",
+        "toId"
+      ],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "POST",
+      "path_template": "/api/organizers/tags",
+      "operation_id": "create_one_api_organizers_tags_post",
+      "statuses": {
+        "409": 2
+      },
+      "required_fields": [
+        "name"
+      ],
+      "request_fields": [
+        "name"
+      ],
+      "validation_fields": [],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "POST",
+      "path_template": "/api/organizers/tags/{item_id}",
+      "operation_id": null,
+      "statuses": {
+        "422": 1
+      },
+      "required_fields": [],
+      "request_fields": [],
+      "validation_fields": [
+        "fromId",
+        "toId"
+      ],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "POST",
+      "path_template": "/api/organizers/tools",
+      "operation_id": "create_one_api_organizers_tools_post",
+      "statuses": {
+        "409": 2
+      },
+      "required_fields": [
+        "name"
+      ],
+      "request_fields": [
+        "householdsWithTool",
+        "name"
+      ],
+      "validation_fields": [],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "POST",
+      "path_template": "/api/recipes/create/html-or-json",
+      "operation_id": "create_recipe_from_html_or_json_api_recipes_create_html_or_json_post",
+      "statuses": {
+        "400": 1
+      },
+      "required_fields": [
+        "data"
+      ],
+      "request_fields": [
+        "data",
+        "includeCategories",
+        "includeTags",
+        "url"
+      ],
+      "validation_fields": [],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "POST",
+      "path_template": "/api/recipes/test-scrape-url",
+      "operation_id": "test_parse_recipe_url_api_recipes_test_scrape_url_post",
+      "statuses": {
+        "500": 1
+      },
+      "required_fields": [
+        "url"
+      ],
+      "request_fields": [
+        "url",
+        "useOpenAI"
+      ],
+      "validation_fields": [],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "POST",
+      "path_template": "/api/recipes/timeline/events",
+      "operation_id": "create_one_api_recipes_timeline_events_post",
+      "statuses": {
+        "422": 2
+      },
+      "required_fields": [
+        "eventType",
+        "recipeId",
+        "subject"
+      ],
+      "request_fields": [
+        "eventMessage",
+        "eventType",
+        "image",
+        "recipeId",
+        "subject",
+        "timestamp",
+        "userId"
+      ],
+      "validation_fields": [
+        "recipeId"
+      ],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "PUT",
+      "path_template": "/api/households/shopping/items",
+      "operation_id": "update_many_api_households_shopping_items_put",
+      "statuses": {
+        "422": 1
+      },
+      "required_fields": [],
+      "request_fields": [],
+      "validation_fields": [],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "PUT",
+      "path_template": "/api/households/shopping/lists/{item_id}",
+      "operation_id": "update_one_api_households_shopping_lists__item_id__put",
+      "statuses": {
+        "422": 1
+      },
+      "required_fields": [
+        "groupId",
+        "id",
+        "userId"
+      ],
+      "request_fields": [
+        "createdAt",
+        "extras",
+        "groupId",
+        "id",
+        "listItems",
+        "name",
+        "update_at",
+        "userId"
+      ],
+      "validation_fields": [
+        "groupId",
+        "id",
+        "userId"
+      ],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "PUT",
+      "path_template": "/api/households/shopping/lists/{item_id}/label-settings",
+      "operation_id": "update_label_settings_api_households_shopping_lists__item_id__label_settings_put",
+      "statuses": {
+        "422": 1
+      },
+      "required_fields": [],
+      "request_fields": [],
+      "validation_fields": [],
+      "diagnosis": "requires-contract-and-serial-control"
+    },
+    {
+      "method": "PUT",
+      "path_template": "/api/recipes",
+      "operation_id": "update_many_api_recipes_put",
+      "statuses": {
+        "422": 1
+      },
+      "required_fields": [],
+      "request_fields": [],
+      "validation_fields": [],
+      "diagnosis": "requires-contract-and-serial-control"
+    }
+  ]
+}

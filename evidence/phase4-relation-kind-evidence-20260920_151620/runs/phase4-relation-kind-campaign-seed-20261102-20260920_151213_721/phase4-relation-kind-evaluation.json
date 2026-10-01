@@ -1,0 +1,65 @@
+{
+  "anomalies": [],
+  "campaign_passed": true,
+  "checks": {
+    "all_deletions_externally_observable": true,
+    "all_relation_targets_distinct": true,
+    "all_relations_absent_after_unlink": true,
+    "all_tasks_deleted": true,
+    "all_updates_persisted": true,
+    "eleven_relation_kinds_created": true,
+    "eleven_relations_deleted": true,
+    "four_updates_executed": true,
+    "initial_graph_bidirectionally_observable": true,
+    "no_semantic_anomalies": true,
+    "project_created": true,
+    "project_deleted": true,
+    "six_cascade_observations_clean": true,
+    "six_relations_recreated": true,
+    "twelve_tasks_created": true
+  },
+  "counts": {
+    "cascade_observations": 6,
+    "initial_relation_creates": 11,
+    "relation_deletes": 11,
+    "relation_recreates": 6,
+    "task_creates": 12,
+    "task_deletes": 12,
+    "updates": 4
+  },
+  "evaluation_basis": "external redacted HTTP trace",
+  "event_count": 127,
+  "observed_ids": {
+    "hub_task_id": 46,
+    "project_id": 21,
+    "spoke_task_ids": [
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+    ]
+  },
+  "passed_count": 15,
+  "profile": "relation-kind-campaign",
+  "relation_kinds": [
+    "subtask",
+    "parenttask",
+    "related",
+    "duplicateof",
+    "duplicates",
+    "blocking",
+    "blocked",
+    "precedes",
+    "follows",
+    "copiedfrom",
+    "copiedto"
+  ],
+  "required_count": 15
+}

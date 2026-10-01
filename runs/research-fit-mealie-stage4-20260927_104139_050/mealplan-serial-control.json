@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "case": "date_only",
+      "field_names": [
+        "date"
+      ],
+      "status": 422,
+      "validation": {
+        "body_type": "object",
+        "errors": [
+          {
+            "loc": [
+              "body",
+              "recipe_id"
+            ],
+            "message_kind": "other",
+            "type": "value_error"
+          }
+        ],
+        "top_level_keys": [
+          "detail"
+        ]
+      }
+    },
+    {
+      "case": "text_only",
+      "field_names": [
+        "date",
+        "text"
+      ],
+      "status": 422,
+      "validation": {
+        "body_type": "object",
+        "errors": [
+          {
+            "loc": [
+              "body",
+              "recipe_id"
+            ],
+            "message_kind": "other",
+            "type": "value_error"
+          }
+        ],
+        "top_level_keys": [
+          "detail"
+        ]
+      }
+    },
+    {
+      "case": "title_and_text",
+      "field_names": [
+        "date",
+        "text",
+        "title"
+      ],
+      "status": 201
+    }
+  ],
+  "classification": "ISOLATED_MEALPLAN_SERIAL_CONTROLS",
+  "recipe_prerequisite": {
+    "create_status": 201,
+    "read_status": null
+  },
+  "schema_version": 1
+}

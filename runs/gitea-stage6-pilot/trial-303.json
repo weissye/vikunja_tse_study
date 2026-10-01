@@ -1,0 +1,1609 @@
+{
+  "seed": 303,
+  "family": "/repos/{owner}/{repo}/milestones",
+  "status": "COMPLETE",
+  "unique": "s6-f6cf82de03bc",
+  "parallel": true,
+  "events": [
+    {
+      "method": "GET",
+      "path": "/user",
+      "status": 200,
+      "body": {
+        "id": 2,
+        "login": "sbt-gitea-20260923_142458_008",
+        "login_name": "",
+        "source_id": 0,
+        "full_name": "",
+        "email": "sbt-gitea-20260923_142458_008@example.invalid",
+        "avatar_url": "http://127.0.0.1:3477/avatars/2416da0432aa84c7df6fea6fdddbb90d",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008",
+        "language": "",
+        "is_admin": false,
+        "last_login": "1970-01-01T00:00:00Z",
+        "created": "2026-09-23T11:24:58Z",
+        "restricted": false,
+        "active": true,
+        "prohibit_login": false,
+        "location": "",
+        "website": "",
+        "description": "",
+        "visibility": "public",
+        "followers_count": 0,
+        "following_count": 0,
+        "starred_repos_count": 0,
+        "username": "sbt-gitea-20260923_142458_008"
+      },
+      "start_ns": 1790168355099488700,
+      "end_ns": 1790168355123827100
+    },
+    {
+      "method": "POST",
+      "path": "/user/repos",
+      "status": 201,
+      "body": {
+        "id": 52,
+        "owner": {
+          "id": 2,
+          "login": "sbt-gitea-20260923_142458_008",
+          "login_name": "",
+          "source_id": 0,
+          "full_name": "",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "avatar_url": "http://127.0.0.1:3477/avatars/2416da0432aa84c7df6fea6fdddbb90d",
+          "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008",
+          "language": "",
+          "is_admin": false,
+          "last_login": "0001-01-01T00:00:00Z",
+          "created": "2026-09-23T11:24:58Z",
+          "restricted": false,
+          "active": false,
+          "prohibit_login": false,
+          "location": "",
+          "website": "",
+          "description": "",
+          "visibility": "public",
+          "followers_count": 0,
+          "following_count": 0,
+          "starred_repos_count": 0,
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "name": "s6-f6cf82de03bc-name",
+        "full_name": "sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name",
+        "description": "s6-f6cf82de03bc-description",
+        "empty": true,
+        "private": false,
+        "fork": false,
+        "template": false,
+        "mirror": false,
+        "size": 23,
+        "language": "",
+        "languages_url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/languages",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name",
+        "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name",
+        "link": "",
+        "ssh_url": "git@localhost:sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name.git",
+        "clone_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name.git",
+        "original_url": "",
+        "website": "",
+        "stars_count": 0,
+        "forks_count": 0,
+        "watchers_count": 1,
+        "branch_count": 0,
+        "open_issues_count": 0,
+        "open_pr_counter": 0,
+        "release_counter": 0,
+        "default_branch": "main",
+        "archived": false,
+        "created_at": "2026-09-23T12:59:15Z",
+        "updated_at": "2026-09-23T12:59:15Z",
+        "archived_at": "1970-01-01T00:00:00Z",
+        "permissions": {
+          "admin": true,
+          "push": true,
+          "pull": true
+        },
+        "has_code": true,
+        "has_issues": true,
+        "internal_tracker": {
+          "enable_time_tracker": true,
+          "allow_only_contributors_to_track_time": true,
+          "enable_issue_dependencies": true
+        },
+        "has_wiki": true,
+        "has_pull_requests": true,
+        "has_projects": true,
+        "projects_mode": "all",
+        "has_releases": true,
+        "has_packages": true,
+        "has_actions": true,
+        "ignore_whitespace_conflicts": false,
+        "allow_merge_commits": true,
+        "allow_rebase": true,
+        "allow_rebase_explicit": true,
+        "allow_squash_merge": true,
+        "allow_fast_forward_only_merge": true,
+        "allow_merge_update": true,
+        "allow_rebase_update": true,
+        "allow_manual_merge": false,
+        "autodetect_manual_merge": false,
+        "default_delete_branch_after_merge": false,
+        "default_merge_style": "merge",
+        "default_update_style": "merge",
+        "default_allow_maintainer_edit": true,
+        "avatar_url": "",
+        "internal": false,
+        "mirror_interval": "",
+        "object_format_name": "sha1",
+        "mirror_updated": "0001-01-01T00:00:00Z",
+        "mirror_last_sync_at": "0001-01-01T00:00:00Z",
+        "topics": [],
+        "licenses": []
+      },
+      "start_ns": 1790168355123827100,
+      "end_ns": 1790168355188737600,
+      "operation_id": "createCurrentUserRepo",
+      "documented_success": true,
+      "request_body": {
+        "auto_init": false,
+        "description": "s6-f6cf82de03bc-description",
+        "name": "s6-f6cf82de03bc-name"
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones",
+      "status": 201,
+      "body": {
+        "id": 6,
+        "title": "",
+        "description": "",
+        "state": "open",
+        "open_issues": 0,
+        "closed_issues": 0,
+        "created_at": "2026-09-23T12:59:15Z",
+        "updated_at": "2026-09-23T12:59:15Z",
+        "closed_at": null,
+        "due_on": null
+      },
+      "start_ns": 1790168355188737600,
+      "end_ns": 1790168355212092200,
+      "operation_id": "issueCreateMilestone",
+      "documented_success": true,
+      "request_body": {}
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 200,
+      "body": {
+        "id": 6,
+        "title": "",
+        "description": "",
+        "state": "open",
+        "open_issues": 0,
+        "closed_issues": 0,
+        "created_at": "2026-09-23T12:59:15Z",
+        "updated_at": "2026-09-23T12:59:15Z",
+        "closed_at": null,
+        "due_on": null
+      },
+      "start_ns": 1790168355212092200,
+      "end_ns": 1790168355228437700,
+      "operation_id": "issueGetMilestone",
+      "documented_success": true,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 204,
+      "body": "",
+      "start_ns": 1790168355228437700,
+      "end_ns": 1790168355289942700,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": true,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355290493400,
+      "end_ns": 1790168355311019700,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355311019700,
+      "end_ns": 1790168355327760900,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355327760900,
+      "end_ns": 1790168355344350300,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {
+        "description": "s6-f6cf82de03bc-description",
+        "state": "open"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355344350300,
+      "end_ns": 1790168355383660200,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355383660200,
+      "end_ns": 1790168355400621700,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355407142400,
+      "end_ns": 1790168355458756500,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {}
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355407666000,
+      "end_ns": 1790168355456314800,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {}
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355459904500,
+      "end_ns": 1790168355495215100,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355495215100,
+      "end_ns": 1790168355548629000,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355548629000,
+      "end_ns": 1790168355598388800,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355598388800,
+      "end_ns": 1790168355623008100,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355623008100,
+      "end_ns": 1790168355640784000,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355640784000,
+      "end_ns": 1790168355657408400,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355657408400,
+      "end_ns": 1790168355675280400,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355675749300,
+      "end_ns": 1790168355693094300,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355693677300,
+      "end_ns": 1790168355714401500,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355694216700,
+      "end_ns": 1790168355724815900,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355724815900,
+      "end_ns": 1790168355743854600,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355743854600,
+      "end_ns": 1790168355763671000,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355763671000,
+      "end_ns": 1790168355804290200,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {
+        "description": "s6-f6cf82de03bc-description",
+        "due_on": "2030-01-01T00:00:00Z"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355804805000,
+      "end_ns": 1790168355826277600,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355826813000,
+      "end_ns": 1790168355848556300,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355848556300,
+      "end_ns": 1790168355866318300,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {
+        "description": "s6-f6cf82de03bc-description"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355866318300,
+      "end_ns": 1790168355910391700,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355910391700,
+      "end_ns": 1790168355930225000,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355930782000,
+      "end_ns": 1790168355975064300,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355931380500,
+      "end_ns": 1790168355980835000,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355981374700,
+      "end_ns": 1790168355998493100,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168355998493100,
+      "end_ns": 1790168356014625500,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356014625500,
+      "end_ns": 1790168356050240400,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {
+        "title": "s6-f6cf82de03bc-title"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356050240400,
+      "end_ns": 1790168356084934300,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356085477100,
+      "end_ns": 1790168356104290700,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356104290700,
+      "end_ns": 1790168356119308400,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {
+        "description": "s6-f6cf82de03bc-description",
+        "title": "s6-f6cf82de03bc-title"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356119308400,
+      "end_ns": 1790168356140151100,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356140151100,
+      "end_ns": 1790168356177698700,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356178220200,
+      "end_ns": 1790168356217833200,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356179302000,
+      "end_ns": 1790168356198738700,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356217833200,
+      "end_ns": 1790168356235182500,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356235182500,
+      "end_ns": 1790168356250935500,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356250935500,
+      "end_ns": 1790168356266689700,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {}
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356266689700,
+      "end_ns": 1790168356282508900,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356282508900,
+      "end_ns": 1790168356299862800,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356299862800,
+      "end_ns": 1790168356316204800,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356316204800,
+      "end_ns": 1790168356332028400,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356332028400,
+      "end_ns": 1790168356348807700,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356349352800,
+      "end_ns": 1790168356369432000,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {
+        "title": "s6-f6cf82de03bc-title"
+      }
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356349888600,
+      "end_ns": 1790168356367621100,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {
+        "title": "s6-f6cf82de03bc-title"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356369432000,
+      "end_ns": 1790168356408032300,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356408032300,
+      "end_ns": 1790168356425125900,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356425125900,
+      "end_ns": 1790168356441004600,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {
+        "state": "open"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356441004600,
+      "end_ns": 1790168356497732000,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356497732000,
+      "end_ns": 1790168356541373200,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356542098100,
+      "end_ns": 1790168356584330600,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356584330600,
+      "end_ns": 1790168356627333800,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356627333800,
+      "end_ns": 1790168356646629400,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356647183800,
+      "end_ns": 1790168356674016800,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356647730100,
+      "end_ns": 1790168356670372700,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356674564100,
+      "end_ns": 1790168356726170800,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356726170800,
+      "end_ns": 1790168356764076000,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356764076000,
+      "end_ns": 1790168356786813900,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356786813900,
+      "end_ns": 1790168356805298100,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356805298100,
+      "end_ns": 1790168356860806800,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356860806800,
+      "end_ns": 1790168356893612500,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356894246600,
+      "end_ns": 1790168356911456200,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356911456200,
+      "end_ns": 1790168356950174700,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356951246600,
+      "end_ns": 1790168356968421600,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356952047100,
+      "end_ns": 1790168356998079500,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168356998679600,
+      "end_ns": 1790168357016399600,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357016399600,
+      "end_ns": 1790168357033062400,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357033062400,
+      "end_ns": 1790168357049240100,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357049240100,
+      "end_ns": 1790168357086055900,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357086055900,
+      "end_ns": 1790168357120416500,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357120416500,
+      "end_ns": 1790168357138285100,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {}
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357138285100,
+      "end_ns": 1790168357186422200,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357186422200,
+      "end_ns": 1790168357203833100,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357203833100,
+      "end_ns": 1790168357224416200,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357204387800,
+      "end_ns": 1790168357223016900,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357224932100,
+      "end_ns": 1790168357240457700,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357240457700,
+      "end_ns": 1790168357258961400,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357258961400,
+      "end_ns": 1790168357277229000,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {
+        "description": "s6-f6cf82de03bc-description",
+        "state": "closed"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357277229000,
+      "end_ns": 1790168357294286500,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357294286500,
+      "end_ns": 1790168357310689500,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357310689500,
+      "end_ns": 1790168357327855500,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {
+        "due_on": "2030-01-01T00:00:00Z",
+        "title": "s6-f6cf82de03bc-title"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357327855500,
+      "end_ns": 1790168357344980700,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357344980700,
+      "end_ns": 1790168357362140100,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357362672700,
+      "end_ns": 1790168357380255800,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357363198300,
+      "end_ns": 1790168357395151500,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357395539300,
+      "end_ns": 1790168357413289400,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357413289400,
+      "end_ns": 1790168357429933000,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "PATCH",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357429933000,
+      "end_ns": 1790168357446393700,
+      "operation_id": "issueEditMilestone",
+      "documented_success": false,
+      "request_body": {
+        "title": "s6-f6cf82de03bc-title"
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357446393700,
+      "end_ns": 1790168357462323400,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357462323400,
+      "end_ns": 1790168357479594200,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357479594200,
+      "end_ns": 1790168357496289700,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357496289700,
+      "end_ns": 1790168357513451800,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357513451800,
+      "end_ns": 1790168357557926800,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357558482300,
+      "end_ns": 1790168357572996200,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "DELETE",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357559628800,
+      "end_ns": 1790168357572996200,
+      "operation_id": "issueDeleteMilestone",
+      "documented_success": false,
+      "request_body": null
+    },
+    {
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/s6-f6cf82de03bc-name/milestones/6",
+      "status": 404,
+      "body": {
+        "message": "not found",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "start_ns": 1790168357572996200,
+      "end_ns": 1790168357601358200,
+      "operation_id": "issueGetMilestone",
+      "documented_success": false,
+      "request_body": null
+    }
+  ],
+  "candidates": []
+}

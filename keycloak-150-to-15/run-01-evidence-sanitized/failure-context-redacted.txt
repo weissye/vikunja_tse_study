@@ -1,0 +1,16 @@
+22:39:09.668 INFO [RUN>TEST-1] Selected: [SBT:BindParent {index:0.0, type:"admin/realms", child:"P2:admin/realms/{realm}/groups:3"}]
+22:39:09.697 INFO [RUN>TEST-1] Selected: [SBT:BindParent {index:0.0, type:"admin/realms", child:"P2:admin/realms/{realm}/roles:4"}]
+22:39:09.716 INFO [RUN>TEST-1] Selected: [SBT:BindParent {index:0.0, type:"admin/realms", child:"P2:admin/realms/{realm}/organizations:2"}]
+22:39:09.746 INFO [RUN>TEST-1] Selected: [SBT:BindParent {index:0.0, type:"admin/realms", child:"P2:admin/realms/{realm}/client-scopes:4"}]
+22:39:09.763 INFO [RUN>TEST-1] Selected: [SBT:ParentsBound {owner:"P2:admin/realms/{realm}/workflows:6", parents:{admin/realms:{realm:"realm_96574"}}}]
+22:39:09.779 INFO [RUN>TEST-1] Selected: [SBT:ParentsBound {owner:"P2:admin/realms/{realm}/authentication/flows:7", parents:{admin/realms:{realm:"realm_96574"}}}]
+22:39:09.811 INFO [RUN>TEST-1] Selected: [SBT:BindParent {index:0.0, type:"admin/realms", child:"P2:admin/realms/{realm}/authentication/config:6"}]
+22:39:09.842 INFO [RUN>TEST-1] Selected: [SBT:BindParent {index:0.0, type:"admin/realms", child:"P2:admin/realms/{realm}/workflows:8"}]
+22:39:09.859 INFO [RUN>TEST-1] Selected: [SBT:BindParent {index:0.0, type:"admin/realms", child:"P2:admin/realms/{realm}/identity-provider/instances:1"}]
+22:39:09.891 INFO [RUN>TEST-1] Selected: [SBT:CrudVerified {owner:"P1:admin/realms:8", stage:"readback", ok:true}]
+22:39:09.907 INFO [RUN>TEST-1] Selected: [POST {headers:{Authorization:"Bearer [REDACTED]"}, expectedResponseCodes:[0:201.0], lib:"REST", method:"POST", callback:{}, body:"{"alias":"alias_59612"}", parameters:{}, url:"http://127.0.0.1:9938/admin/realms/realm_96574/authentication/flows"}]
+22:39:10.157 WARN [RUN>TEST-1] FAIL: A REST call returned the unexpected response code.
+actual 409, expected: [201].
+22:39:10.157 WARN [RUN>TEST-1] ### Switching to test fail mode. ###
+22:39:10.180 INFO [RUN>TEST-1] Selected: [POST {headers:{Authorization:"Bearer [REDACTED]"}, expectedResponseCodes:[0:201.0], lib:"REST", method:"POST", callback:{}, body:"{"name":"name_91158"}", parameters:{}, url:"http://127.0.0.1:9938/admin/realms/realm_96574/workflows"}]
+22:39:10.189 INFO [RUN>TEST-1] Test Fail Mode, skipping actuation

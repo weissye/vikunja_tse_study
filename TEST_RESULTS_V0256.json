@@ -1,0 +1,27 @@
+{
+  "version": "0.25.6",
+  "date_utc": "2026-09-23",
+  "unit_tests": {
+    "command": "PYTHONPATH=generator_baseline python -m unittest discover -s generator_baseline/tests/unit -p test_*.py",
+    "run": 115,
+    "failures": 0,
+    "errors": 0,
+    "status": "PASS"
+  },
+  "six_system_generation_matrix": [
+    {"system": "library", "operations": 13, "contract_verifiers": 13, "mutations": 8, "state_verified_mutations": 1, "concurrency_oracles": 0, "manual_assumptions": 0, "coverage_complete": true},
+    {"system": "garage", "operations": 32, "contract_verifiers": 32, "mutations": 20, "state_verified_mutations": 18, "concurrency_oracles": 46, "manual_assumptions": 0, "coverage_complete": true},
+    {"system": "pharmacy", "operations": 29, "contract_verifiers": 29, "mutations": 18, "state_verified_mutations": 10, "concurrency_oracles": 12, "manual_assumptions": 0, "coverage_complete": true},
+    {"system": "netbox", "operations": 1156, "contract_verifiers": 1156, "mutations": 872, "state_verified_mutations": 364, "concurrency_oracles": 1396, "manual_assumptions": 0, "coverage_complete": true},
+    {"system": "todoist", "operations": 28, "contract_verifiers": 28, "mutations": 17, "state_verified_mutations": 5, "concurrency_oracles": 0, "manual_assumptions": 0, "coverage_complete": true},
+    {"system": "vikunja", "operations": 29, "contract_verifiers": 29, "mutations": 20, "state_verified_mutations": 12, "concurrency_oracles": 71, "manual_assumptions": 0, "coverage_complete": true}
+  ],
+  "vikunja_offline_reevaluation": {
+    "source_evidence_sha256": "f7cf5897a75b86efa429982c7ea68178c8dd258d505b414c9a38c9fc1c59fbda",
+    "original_counts": {"INCONCLUSIVE": 72, "PASS": 121, "VIOLATED": 42},
+    "corrected_counts": {"INCONCLUSIVE": 74, "PASS": 121, "VIOLATED": 40},
+    "corrected_concurrency_counts": {"INCONCLUSIVE": 48, "PASS": 10, "VIOLATED": 0},
+    "reclassified_epochs": ["generated-epoch-34", "generated-epoch-52"],
+    "status": "PASS"
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "experiment": "keycloak-user-disjoint-field-put-overlap",
+  "openapi_sha256": "ba68e1c3842c11701ec64c5f3ba23387cf53963f8d16dd7c3d45da103b9421db",
+  "generator_version": "0.26.17",
+  "generated_oracle_reference": "concurrency::same-field-domain::put:/admin/realms/{realm}/users/{user-id}",
+  "generated_oracle_runtime_ready": false,
+  "scope": "focused empirical diagnostic; not a generated Provengo campaign verdict",
+  "fixture_binding": "verified POST Location ID followed by item GET",
+  "fields": [
+    "firstName",
+    "lastName"
+  ],
+  "prefix_rounds_requested": 8,
+  "realm_path": "/admin/realms/fse-overlap-94c74f52c238",
+  "instances": {
+    "ab": {
+      "path": "/admin/realms/fse-overlap-94c74f52c238/users/ba96b681-66f4-434c-be08-05e1be51056d",
+      "create_status": 201,
+      "location_id_bound": true,
+      "prefix": [
+        {
+          "round": 1,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round1",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 2,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round2",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 3,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round3",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 4,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round4",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 5,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round5",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 6,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round6",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 7,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round7",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 8,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round8",
+            "lastName": "Pilot"
+          }
+        }
+      ]
+    },
+    "ba": {
+      "path": "/admin/realms/fse-overlap-94c74f52c238/users/74987fb7-fe51-49fd-b828-9905a966591c",
+      "create_status": 201,
+      "location_id_bound": true,
+      "prefix": [
+        {
+          "round": 1,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round1",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 2,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round2",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 3,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round3",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 4,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round4",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 5,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round5",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 6,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round6",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 7,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round7",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 8,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round8",
+            "lastName": "Pilot"
+          }
+        }
+      ]
+    },
+    "overlap": {
+      "path": "/admin/realms/fse-overlap-94c74f52c238/users/0709e806-eb6a-4109-a386-d40ca1e278bc",
+      "create_status": 201,
+      "location_id_bound": true,
+      "prefix": [
+        {
+          "round": 1,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round1",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 2,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round2",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 3,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round3",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 4,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round4",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 5,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round5",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 6,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round6",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 7,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round7",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "round": 8,
+          "put_status": 204,
+          "get_status": 200,
+          "fields": {
+            "firstName": "Stage2Round8",
+            "lastName": "Pilot"
+          }
+        }
+      ]
+    }
+  },
+  "controls": {
+    "ab": {
+      "initial": {
+        "firstName": "Stage2Round8",
+        "lastName": "Pilot"
+      },
+      "order": [
+        "firstName",
+        "lastName"
+      ],
+      "statuses": [
+        204,
+        204
+      ],
+      "read_statuses": [
+        200,
+        200
+      ],
+      "after_each": [
+        {
+          "firstName": "ConcurrentFirst",
+          "lastName": "Pilot"
+        },
+        {
+          "firstName": "ConcurrentFirst",
+          "lastName": "ConcurrentLast"
+        }
+      ],
+      "final": {
+        "firstName": "ConcurrentFirst",
+        "lastName": "ConcurrentLast"
+      }
+    },
+    "ba": {
+      "initial": {
+        "firstName": "Stage2Round8",
+        "lastName": "Pilot"
+      },
+      "order": [
+        "lastName",
+        "firstName"
+      ],
+      "statuses": [
+        204,
+        204
+      ],
+      "read_statuses": [
+        200,
+        200
+      ],
+      "after_each": [
+        {
+          "firstName": "Stage2Round8",
+          "lastName": "ConcurrentLast"
+        },
+        {
+          "firstName": "ConcurrentFirst",
+          "lastName": "ConcurrentLast"
+        }
+      ],
+      "final": {
+        "firstName": "ConcurrentFirst",
+        "lastName": "ConcurrentLast"
+      }
+    }
+  },
+  "race": {
+    "initial": {
+      "firstName": "Stage2Round8",
+      "lastName": "Pilot"
+    },
+    "statuses": [
+      204,
+      204
+    ],
+    "intervals": [
+      [
+        83616777367400,
+        83616791410600
+      ],
+      [
+        83616777608100,
+        83616806607900
+      ]
+    ],
+    "errors": []
+  },
+  "final_reads": [
+    {
+      "status": 200,
+      "fields": {
+        "firstName": "ConcurrentFirst",
+        "lastName": "ConcurrentLast"
+      }
+    },
+    {
+      "status": 200,
+      "fields": {
+        "firstName": "ConcurrentFirst",
+        "lastName": "ConcurrentLast"
+      }
+    }
+  ],
+  "verdict": "PASS",
+  "reason": "matches-observed-serial-control",
+  "completed_utc": "2026-09-27T17:17:42Z"
+}

@@ -1,0 +1,90 @@
+{
+  "active_operations": 243,
+  "adapter_overlap_epochs": 2,
+  "coverage_gate": {
+    "missing_operations": [],
+    "new_target_overlap": true,
+    "observed_operations": [
+      "updateAlbumInfo",
+      "updateSharedLink"
+    ]
+  },
+  "deprecated_operations": 22,
+  "distinct_paths_observed": 27,
+  "epochs": 2,
+  "evaluator_exit": 3,
+  "generated_operations": 265,
+  "http_events": 75,
+  "invalid_token_events": 0,
+  "long_story_selected": 0,
+  "methods": {
+    "DELETE": 6,
+    "GET": 30,
+    "PATCH": 6,
+    "POST": 33
+  },
+  "observed_path_counts": {
+    "/activities": 3,
+    "/admin/users": 3,
+    "/albums": 3,
+    "/albums/793d5bed-806e-4deb-ba27-83515cde502a": 6,
+    "/albums/c6cf14f8-51c9-486c-ab0b-c13f15660823": 6,
+    "/albums/e52c18ca-f18b-4407-adff-22ba118c32ab": 5,
+    "/api-keys": 3,
+    "/api-keys/49f0d445-3908-441c-82d8-23bbf66f1d8f": 1,
+    "/api-keys/6411b006-2b6b-43c6-9bfd-9ae8a40d29aa": 1,
+    "/api-keys/75d462cc-b5e0-4b0d-b6af-23513e160f95": 1,
+    "/jobs": 3,
+    "/libraries": 3,
+    "/memories": 3,
+    "/memories/9872189f-f2ae-4b3b-8b30-b50c3e6605ac": 1,
+    "/memories/c65301ae-2752-4662-974e-116966256a00": 1,
+    "/memories/f8e8a693-1771-4f01-8442-c7262990b338": 1,
+    "/partners": 3,
+    "/people": 1,
+    "/people/2e7fd503-8410-441d-984e-0fa364f3a340": 1,
+    "/sessions": 1,
+    "/shared-links": 3,
+    "/shared-links/5c30761e-33f5-4246-a63a-92beb73ff29d": 6,
+    "/shared-links/60024f39-bc77-456c-a03c-84703e43acdd": 5,
+    "/shared-links/d1feda71-8a90-4b3a-a039-959c3e67292a": 6,
+    "/tags": 3,
+    "/workflows": 1,
+    "/workflows/6a50bdd4-e6c9-4b22-8b2f-467cbf5242a6": 1
+  },
+  "oracle_layers": {
+    "concurrency": {
+      "INCONCLUSIVE": 2,
+      "PASS": 0,
+      "VIOLATED": 0
+    },
+    "contract": {
+      "INCONCLUSIVE": 13,
+      "PASS": 34,
+      "VIOLATED": 0
+    },
+    "state": {
+      "INCONCLUSIVE": 1,
+      "PASS": 14,
+      "VIOLATED": 0
+    }
+  },
+  "oracle_status": "INCONCLUSIVE",
+  "provengo_exit": 0,
+  "proxy_overlap_epochs": 2,
+  "real_overlap_epochs": 2,
+  "selected_events": 273,
+  "source_operations": 265,
+  "status": "ORACLE_INCONCLUSIVE",
+  "statuses": {
+    "200": 24,
+    "201": 17,
+    "204": 9,
+    "400": 20,
+    "500": 5
+  },
+  "transport_error_events": 0,
+  "unverified_active_operations": 0,
+  "verifier_coverage_complete": true,
+  "verifier_operations": 243
+}

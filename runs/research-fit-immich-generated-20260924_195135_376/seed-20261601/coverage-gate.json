@@ -1,0 +1,67 @@
+{
+  "excluded_operations": [],
+  "missing_operations": [
+    "updateNotification"
+  ],
+  "new_target_overlap": true,
+  "observed_operations": [
+    "updateAlbumInfo",
+    "updateSharedLink"
+  ],
+  "overlap_count": 44,
+  "overlapping_oracle_ids": [
+    "concurrency::disjoint3::updateAlbumInfo::albumName::albumThumbnailAssetId::description",
+    "concurrency::disjoint3::updateAlbumInfo::albumName::albumThumbnailAssetId::isActivityEnabled",
+    "concurrency::disjoint3::updateAlbumInfo::albumName::albumThumbnailAssetId::order",
+    "concurrency::disjoint3::updateAlbumInfo::albumName::description::isActivityEnabled",
+    "concurrency::disjoint3::updateAlbumInfo::albumName::description::order",
+    "concurrency::disjoint3::updateAlbumInfo::albumName::isActivityEnabled::order",
+    "concurrency::disjoint3::updateAlbumInfo::albumThumbnailAssetId::description::isActivityEnabled",
+    "concurrency::disjoint3::updateAlbumInfo::albumThumbnailAssetId::description::order",
+    "concurrency::disjoint3::updateSharedLink::allowDownload::allowUpload::description",
+    "concurrency::disjoint3::updateSharedLink::allowDownload::allowUpload::expiresAt",
+    "concurrency::disjoint3::updateSharedLink::allowDownload::allowUpload::password",
+    "concurrency::disjoint3::updateSharedLink::allowDownload::allowUpload::showMetadata",
+    "concurrency::disjoint3::updateSharedLink::allowDownload::allowUpload::slug",
+    "concurrency::disjoint3::updateSharedLink::allowDownload::description::expiresAt",
+    "concurrency::disjoint3::updateSharedLink::allowDownload::description::password",
+    "concurrency::disjoint3::updateSharedLink::allowDownload::description::showMetadata",
+    "concurrency::disjoint::updateAlbumInfo::albumName::albumThumbnailAssetId",
+    "concurrency::disjoint::updateAlbumInfo::albumName::description",
+    "concurrency::disjoint::updateAlbumInfo::albumName::isActivityEnabled",
+    "concurrency::disjoint::updateAlbumInfo::albumName::order",
+    "concurrency::disjoint::updateAlbumInfo::albumThumbnailAssetId::description",
+    "concurrency::disjoint::updateAlbumInfo::albumThumbnailAssetId::isActivityEnabled",
+    "concurrency::disjoint::updateAlbumInfo::albumThumbnailAssetId::order",
+    "concurrency::disjoint::updateAlbumInfo::description::isActivityEnabled",
+    "concurrency::disjoint::updateSharedLink::allowDownload::allowUpload",
+    "concurrency::disjoint::updateSharedLink::allowDownload::description",
+    "concurrency::disjoint::updateSharedLink::allowDownload::expiresAt",
+    "concurrency::disjoint::updateSharedLink::allowDownload::password",
+    "concurrency::disjoint::updateSharedLink::allowDownload::showMetadata",
+    "concurrency::disjoint::updateSharedLink::allowDownload::slug",
+    "concurrency::disjoint::updateSharedLink::allowUpload::description",
+    "concurrency::disjoint::updateSharedLink::allowUpload::expiresAt",
+    "concurrency::same-field::updateAlbumInfo::albumName",
+    "concurrency::same-field::updateAlbumInfo::albumThumbnailAssetId",
+    "concurrency::same-field::updateAlbumInfo::description",
+    "concurrency::same-field::updateAlbumInfo::isActivityEnabled",
+    "concurrency::same-field::updateAlbumInfo::order",
+    "concurrency::same-field::updateSharedLink::allowDownload",
+    "concurrency::same-field::updateSharedLink::allowUpload",
+    "concurrency::same-field::updateSharedLink::description",
+    "concurrency::same-field::updateSharedLink::expiresAt",
+    "concurrency::same-field::updateSharedLink::password",
+    "concurrency::same-field::updateSharedLink::showMetadata",
+    "concurrency::same-field::updateSharedLink::slug"
+  ],
+  "overlaps_by_operation": {
+    "updateAlbumInfo": 21,
+    "updateSharedLink": 23
+  },
+  "ready_operations": [
+    "updateAlbumInfo",
+    "updateNotification",
+    "updateSharedLink"
+  ]
+}

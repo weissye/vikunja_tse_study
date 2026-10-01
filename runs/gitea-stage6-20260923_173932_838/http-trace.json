@@ -1,0 +1,1562 @@
+[
+  {
+    "at_utc": "2026-09-23T14:39:33.151702+00:00",
+    "label": "authenticated-user",
+    "method": "GET",
+    "path": "/user",
+    "request": null,
+    "status": 200,
+    "response": {
+      "id": 2,
+      "login": "sbt-gitea-20260923_142458_008",
+      "login_name": "",
+      "source_id": 0,
+      "full_name": "",
+      "email": "sbt-gitea-20260923_142458_008@example.invalid",
+      "avatar_url": "http://127.0.0.1:3477/avatars/2416da0432aa84c7df6fea6fdddbb90d",
+      "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008",
+      "language": "",
+      "is_admin": false,
+      "last_login": "1970-01-01T00:00:00Z",
+      "created": "2026-09-23T11:24:58Z",
+      "restricted": false,
+      "active": true,
+      "prohibit_login": false,
+      "location": "",
+      "website": "",
+      "description": "",
+      "visibility": "public",
+      "followers_count": 0,
+      "following_count": 0,
+      "starred_repos_count": 0,
+      "username": "sbt-gitea-20260923_142458_008"
+    },
+    "start_ns": 640459437000000,
+    "end_ns": 640459484000000,
+    "duration_ms": 47.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:33.197972+00:00",
+    "label": "create-upstream",
+    "method": "POST",
+    "path": "/user/repos",
+    "request": {
+      "name": "s6-up-d2e8f3be40",
+      "auto_init": true,
+      "default_branch": "main",
+      "description": "Stage 6 isolated research fixture"
+    },
+    "status": 201,
+    "response": {
+      "id": 55,
+      "owner": {
+        "id": 2,
+        "login": "sbt-gitea-20260923_142458_008",
+        "login_name": "",
+        "source_id": 0,
+        "full_name": "",
+        "email": "sbt-gitea-20260923_142458_008@example.invalid",
+        "avatar_url": "http://127.0.0.1:3477/avatars/2416da0432aa84c7df6fea6fdddbb90d",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008",
+        "language": "",
+        "is_admin": false,
+        "last_login": "0001-01-01T00:00:00Z",
+        "created": "2026-09-23T11:24:58Z",
+        "restricted": false,
+        "active": false,
+        "prohibit_login": false,
+        "location": "",
+        "website": "",
+        "description": "",
+        "visibility": "public",
+        "followers_count": 0,
+        "following_count": 0,
+        "starred_repos_count": 0,
+        "username": "sbt-gitea-20260923_142458_008"
+      },
+      "name": "s6-up-d2e8f3be40",
+      "full_name": "sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+      "description": "Stage 6 isolated research fixture",
+      "empty": false,
+      "private": false,
+      "fork": false,
+      "template": false,
+      "mirror": false,
+      "size": 24,
+      "language": "",
+      "languages_url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/languages",
+      "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+      "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+      "link": "",
+      "ssh_url": "git@localhost:sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40.git",
+      "clone_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40.git",
+      "original_url": "",
+      "website": "",
+      "stars_count": 0,
+      "forks_count": 0,
+      "watchers_count": 1,
+      "branch_count": 1,
+      "open_issues_count": 0,
+      "open_pr_counter": 0,
+      "release_counter": 0,
+      "default_branch": "main",
+      "archived": false,
+      "created_at": "2026-09-23T14:39:33Z",
+      "updated_at": "2026-09-23T14:39:33Z",
+      "archived_at": "1970-01-01T00:00:00Z",
+      "permissions": {
+        "admin": true,
+        "push": true,
+        "pull": true
+      },
+      "has_code": true,
+      "has_issues": true,
+      "internal_tracker": {
+        "enable_time_tracker": true,
+        "allow_only_contributors_to_track_time": true,
+        "enable_issue_dependencies": true
+      },
+      "has_wiki": true,
+      "has_pull_requests": true,
+      "has_projects": true,
+      "projects_mode": "all",
+      "has_releases": true,
+      "has_packages": true,
+      "has_actions": true,
+      "ignore_whitespace_conflicts": false,
+      "allow_merge_commits": true,
+      "allow_rebase": true,
+      "allow_rebase_explicit": true,
+      "allow_squash_merge": true,
+      "allow_fast_forward_only_merge": true,
+      "allow_merge_update": true,
+      "allow_rebase_update": true,
+      "allow_manual_merge": false,
+      "autodetect_manual_merge": false,
+      "default_delete_branch_after_merge": false,
+      "default_merge_style": "merge",
+      "default_update_style": "merge",
+      "default_allow_maintainer_edit": true,
+      "avatar_url": "",
+      "internal": false,
+      "mirror_interval": "",
+      "object_format_name": "sha1",
+      "mirror_updated": "0001-01-01T00:00:00Z",
+      "mirror_last_sync_at": "0001-01-01T00:00:00Z",
+      "topics": [],
+      "licenses": []
+    },
+    "start_ns": 640459484000000,
+    "end_ns": 640459968000000,
+    "duration_ms": 484.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:33.676207+00:00",
+    "label": "verify-repository",
+    "method": "GET",
+    "path": "/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+    "request": null,
+    "status": 200,
+    "response": {
+      "id": 55,
+      "owner": {
+        "id": 2,
+        "login": "sbt-gitea-20260923_142458_008",
+        "login_name": "",
+        "source_id": 0,
+        "full_name": "",
+        "email": "sbt-gitea-20260923_142458_008@example.invalid",
+        "avatar_url": "http://127.0.0.1:3477/avatars/2416da0432aa84c7df6fea6fdddbb90d",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008",
+        "language": "",
+        "is_admin": false,
+        "last_login": "0001-01-01T00:00:00Z",
+        "created": "2026-09-23T11:24:58Z",
+        "restricted": false,
+        "active": false,
+        "prohibit_login": false,
+        "location": "",
+        "website": "",
+        "description": "",
+        "visibility": "public",
+        "followers_count": 0,
+        "following_count": 0,
+        "starred_repos_count": 0,
+        "username": "sbt-gitea-20260923_142458_008"
+      },
+      "name": "s6-up-d2e8f3be40",
+      "full_name": "sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+      "description": "Stage 6 isolated research fixture",
+      "empty": false,
+      "private": false,
+      "fork": false,
+      "template": false,
+      "mirror": false,
+      "size": 24,
+      "language": "",
+      "languages_url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/languages",
+      "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+      "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+      "link": "",
+      "ssh_url": "git@localhost:sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40.git",
+      "clone_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40.git",
+      "original_url": "",
+      "website": "",
+      "stars_count": 0,
+      "forks_count": 0,
+      "watchers_count": 1,
+      "branch_count": 1,
+      "open_issues_count": 0,
+      "open_pr_counter": 0,
+      "release_counter": 0,
+      "default_branch": "main",
+      "archived": false,
+      "created_at": "2026-09-23T14:39:33Z",
+      "updated_at": "2026-09-23T14:39:33Z",
+      "archived_at": "1970-01-01T00:00:00Z",
+      "permissions": {
+        "admin": true,
+        "push": true,
+        "pull": true
+      },
+      "has_code": true,
+      "has_issues": true,
+      "internal_tracker": {
+        "enable_time_tracker": true,
+        "allow_only_contributors_to_track_time": true,
+        "enable_issue_dependencies": true
+      },
+      "has_wiki": true,
+      "has_pull_requests": true,
+      "has_projects": true,
+      "projects_mode": "all",
+      "has_releases": true,
+      "has_packages": true,
+      "has_actions": true,
+      "ignore_whitespace_conflicts": false,
+      "allow_merge_commits": true,
+      "allow_rebase": true,
+      "allow_rebase_explicit": true,
+      "allow_squash_merge": true,
+      "allow_fast_forward_only_merge": true,
+      "allow_merge_update": true,
+      "allow_rebase_update": true,
+      "allow_manual_merge": false,
+      "autodetect_manual_merge": false,
+      "default_delete_branch_after_merge": false,
+      "default_merge_style": "merge",
+      "default_update_style": "merge",
+      "default_allow_maintainer_edit": true,
+      "avatar_url": "",
+      "internal": false,
+      "mirror_interval": "",
+      "object_format_name": "sha1",
+      "mirror_updated": "0001-01-01T00:00:00Z",
+      "mirror_last_sync_at": "0001-01-01T00:00:00Z",
+      "topics": [],
+      "licenses": []
+    },
+    "start_ns": 640459968000000,
+    "end_ns": 640459984000000,
+    "duration_ms": 16.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:33.700095+00:00",
+    "label": "create-organization",
+    "method": "POST",
+    "path": "/orgs",
+    "request": {
+      "username": "s6-org-d2e8f3be40",
+      "full_name": "Stage 6 research fixture",
+      "visibility": "private"
+    },
+    "status": 201,
+    "response": {
+      "id": 23,
+      "name": "s6-org-d2e8f3be40",
+      "full_name": "Stage 6 research fixture",
+      "email": "",
+      "avatar_url": "http://127.0.0.1:3477/avatars/e4bb2e2de4bda63d72ca1aa07945ad25",
+      "description": "",
+      "website": "",
+      "location": "",
+      "visibility": "private",
+      "repo_admin_change_team_access": false,
+      "username": "s6-org-d2e8f3be40"
+    },
+    "start_ns": 640459984000000,
+    "end_ns": 640460046000000,
+    "duration_ms": 62.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:33.751637+00:00",
+    "label": "create-fork",
+    "method": "POST",
+    "path": "/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/forks",
+    "request": {
+      "organization": "s6-org-d2e8f3be40",
+      "name": "s6-fork-d2e8f3be40"
+    },
+    "status": 202,
+    "response": {
+      "id": 56,
+      "owner": {
+        "id": 23,
+        "login": "s6-org-d2e8f3be40",
+        "login_name": "",
+        "source_id": 0,
+        "full_name": "Stage 6 research fixture",
+        "email": "",
+        "avatar_url": "http://127.0.0.1:3477/avatars/e4bb2e2de4bda63d72ca1aa07945ad25",
+        "html_url": "http://127.0.0.1:3477/s6-org-d2e8f3be40",
+        "language": "",
+        "is_admin": false,
+        "last_login": "0001-01-01T00:00:00Z",
+        "created": "2026-09-23T14:39:33Z",
+        "restricted": false,
+        "active": false,
+        "prohibit_login": false,
+        "location": "",
+        "website": "",
+        "description": "",
+        "visibility": "private",
+        "followers_count": 0,
+        "following_count": 0,
+        "starred_repos_count": 0,
+        "username": "s6-org-d2e8f3be40"
+      },
+      "name": "s6-fork-d2e8f3be40",
+      "full_name": "s6-org-d2e8f3be40/s6-fork-d2e8f3be40",
+      "description": "Stage 6 isolated research fixture",
+      "empty": false,
+      "private": false,
+      "fork": true,
+      "template": false,
+      "parent": {
+        "id": 55,
+        "owner": {
+          "id": 2,
+          "login": "sbt-gitea-20260923_142458_008",
+          "login_name": "",
+          "source_id": 0,
+          "full_name": "",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "avatar_url": "http://127.0.0.1:3477/avatars/2416da0432aa84c7df6fea6fdddbb90d",
+          "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008",
+          "language": "",
+          "is_admin": false,
+          "last_login": "0001-01-01T00:00:00Z",
+          "created": "2026-09-23T11:24:58Z",
+          "restricted": false,
+          "active": false,
+          "prohibit_login": false,
+          "location": "",
+          "website": "",
+          "description": "",
+          "visibility": "public",
+          "followers_count": 0,
+          "following_count": 0,
+          "starred_repos_count": 0,
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "name": "s6-up-d2e8f3be40",
+        "full_name": "sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+        "description": "Stage 6 isolated research fixture",
+        "empty": false,
+        "private": false,
+        "fork": false,
+        "template": false,
+        "mirror": false,
+        "size": 24,
+        "language": "",
+        "languages_url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/languages",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+        "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+        "link": "",
+        "ssh_url": "git@localhost:sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40.git",
+        "clone_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40.git",
+        "original_url": "",
+        "website": "",
+        "stars_count": 0,
+        "forks_count": 1,
+        "watchers_count": 1,
+        "branch_count": 1,
+        "open_issues_count": 0,
+        "open_pr_counter": 0,
+        "release_counter": 0,
+        "default_branch": "main",
+        "archived": false,
+        "created_at": "2026-09-23T14:39:33Z",
+        "updated_at": "2026-09-23T14:39:33Z",
+        "archived_at": "1970-01-01T00:00:00Z",
+        "permissions": {
+          "admin": true,
+          "push": true,
+          "pull": true
+        },
+        "has_code": true,
+        "has_issues": true,
+        "internal_tracker": {
+          "enable_time_tracker": true,
+          "allow_only_contributors_to_track_time": true,
+          "enable_issue_dependencies": true
+        },
+        "has_wiki": true,
+        "has_pull_requests": true,
+        "has_projects": true,
+        "projects_mode": "all",
+        "has_releases": true,
+        "has_packages": true,
+        "has_actions": true,
+        "ignore_whitespace_conflicts": false,
+        "allow_merge_commits": true,
+        "allow_rebase": true,
+        "allow_rebase_explicit": true,
+        "allow_squash_merge": true,
+        "allow_fast_forward_only_merge": true,
+        "allow_merge_update": true,
+        "allow_rebase_update": true,
+        "allow_manual_merge": false,
+        "autodetect_manual_merge": false,
+        "default_delete_branch_after_merge": false,
+        "default_merge_style": "merge",
+        "default_update_style": "merge",
+        "default_allow_maintainer_edit": true,
+        "avatar_url": "",
+        "internal": false,
+        "mirror_interval": "",
+        "object_format_name": "sha1",
+        "mirror_updated": "0001-01-01T00:00:00Z",
+        "mirror_last_sync_at": "0001-01-01T00:00:00Z",
+        "topics": [],
+        "licenses": []
+      },
+      "mirror": false,
+      "size": 0,
+      "language": "",
+      "languages_url": "http://127.0.0.1:3477/api/v1/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/languages",
+      "html_url": "http://127.0.0.1:3477/s6-org-d2e8f3be40/s6-fork-d2e8f3be40",
+      "url": "http://127.0.0.1:3477/api/v1/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40",
+      "link": "",
+      "ssh_url": "git@localhost:s6-org-d2e8f3be40/s6-fork-d2e8f3be40.git",
+      "clone_url": "http://127.0.0.1:3477/s6-org-d2e8f3be40/s6-fork-d2e8f3be40.git",
+      "original_url": "",
+      "website": "",
+      "stars_count": 0,
+      "forks_count": 0,
+      "watchers_count": 0,
+      "branch_count": 1,
+      "open_issues_count": 0,
+      "open_pr_counter": 0,
+      "release_counter": 0,
+      "default_branch": "main",
+      "archived": false,
+      "created_at": "2026-09-23T14:39:33Z",
+      "updated_at": "2026-09-23T14:39:33Z",
+      "archived_at": "1970-01-01T00:00:00Z",
+      "permissions": {
+        "admin": true,
+        "push": true,
+        "pull": true
+      },
+      "has_code": true,
+      "has_issues": false,
+      "has_wiki": false,
+      "has_pull_requests": true,
+      "has_projects": false,
+      "projects_mode": "all",
+      "has_releases": false,
+      "has_packages": false,
+      "has_actions": false,
+      "ignore_whitespace_conflicts": false,
+      "allow_merge_commits": true,
+      "allow_rebase": true,
+      "allow_rebase_explicit": true,
+      "allow_squash_merge": true,
+      "allow_fast_forward_only_merge": true,
+      "allow_merge_update": true,
+      "allow_rebase_update": true,
+      "allow_manual_merge": false,
+      "autodetect_manual_merge": false,
+      "default_delete_branch_after_merge": false,
+      "default_merge_style": "merge",
+      "default_update_style": "merge",
+      "default_allow_maintainer_edit": true,
+      "avatar_url": "",
+      "internal": true,
+      "mirror_interval": "",
+      "object_format_name": "sha1",
+      "mirror_updated": "0001-01-01T00:00:00Z",
+      "mirror_last_sync_at": "0001-01-01T00:00:00Z",
+      "topics": [],
+      "licenses": []
+    },
+    "start_ns": 640460046000000,
+    "end_ns": 640460187000000,
+    "duration_ms": 141.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:33.904613+00:00",
+    "label": "verify-repository",
+    "method": "GET",
+    "path": "/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40",
+    "request": null,
+    "status": 200,
+    "response": {
+      "id": 56,
+      "owner": {
+        "id": 23,
+        "login": "s6-org-d2e8f3be40",
+        "login_name": "",
+        "source_id": 0,
+        "full_name": "Stage 6 research fixture",
+        "email": "",
+        "avatar_url": "http://127.0.0.1:3477/avatars/e4bb2e2de4bda63d72ca1aa07945ad25",
+        "html_url": "http://127.0.0.1:3477/s6-org-d2e8f3be40",
+        "language": "",
+        "is_admin": false,
+        "last_login": "0001-01-01T00:00:00Z",
+        "created": "2026-09-23T14:39:33Z",
+        "restricted": false,
+        "active": false,
+        "prohibit_login": false,
+        "location": "",
+        "website": "",
+        "description": "",
+        "visibility": "private",
+        "followers_count": 0,
+        "following_count": 0,
+        "starred_repos_count": 0,
+        "username": "s6-org-d2e8f3be40"
+      },
+      "name": "s6-fork-d2e8f3be40",
+      "full_name": "s6-org-d2e8f3be40/s6-fork-d2e8f3be40",
+      "description": "Stage 6 isolated research fixture",
+      "empty": false,
+      "private": false,
+      "fork": true,
+      "template": false,
+      "parent": {
+        "id": 55,
+        "owner": {
+          "id": 2,
+          "login": "sbt-gitea-20260923_142458_008",
+          "login_name": "",
+          "source_id": 0,
+          "full_name": "",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "avatar_url": "http://127.0.0.1:3477/avatars/2416da0432aa84c7df6fea6fdddbb90d",
+          "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008",
+          "language": "",
+          "is_admin": false,
+          "last_login": "0001-01-01T00:00:00Z",
+          "created": "2026-09-23T11:24:58Z",
+          "restricted": false,
+          "active": false,
+          "prohibit_login": false,
+          "location": "",
+          "website": "",
+          "description": "",
+          "visibility": "public",
+          "followers_count": 0,
+          "following_count": 0,
+          "starred_repos_count": 0,
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "name": "s6-up-d2e8f3be40",
+        "full_name": "sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+        "description": "Stage 6 isolated research fixture",
+        "empty": false,
+        "private": false,
+        "fork": false,
+        "template": false,
+        "mirror": false,
+        "size": 24,
+        "language": "",
+        "languages_url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/languages",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+        "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40",
+        "link": "",
+        "ssh_url": "git@localhost:sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40.git",
+        "clone_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40.git",
+        "original_url": "",
+        "website": "",
+        "stars_count": 0,
+        "forks_count": 1,
+        "watchers_count": 1,
+        "branch_count": 1,
+        "open_issues_count": 0,
+        "open_pr_counter": 0,
+        "release_counter": 0,
+        "default_branch": "main",
+        "archived": false,
+        "created_at": "2026-09-23T14:39:33Z",
+        "updated_at": "2026-09-23T14:39:33Z",
+        "archived_at": "1970-01-01T00:00:00Z",
+        "permissions": {
+          "admin": true,
+          "push": true,
+          "pull": true
+        },
+        "has_code": true,
+        "has_issues": true,
+        "internal_tracker": {
+          "enable_time_tracker": true,
+          "allow_only_contributors_to_track_time": true,
+          "enable_issue_dependencies": true
+        },
+        "has_wiki": true,
+        "has_pull_requests": true,
+        "has_projects": true,
+        "projects_mode": "all",
+        "has_releases": true,
+        "has_packages": true,
+        "has_actions": true,
+        "ignore_whitespace_conflicts": false,
+        "allow_merge_commits": true,
+        "allow_rebase": true,
+        "allow_rebase_explicit": true,
+        "allow_squash_merge": true,
+        "allow_fast_forward_only_merge": true,
+        "allow_merge_update": true,
+        "allow_rebase_update": true,
+        "allow_manual_merge": false,
+        "autodetect_manual_merge": false,
+        "default_delete_branch_after_merge": false,
+        "default_merge_style": "merge",
+        "default_update_style": "merge",
+        "default_allow_maintainer_edit": true,
+        "avatar_url": "",
+        "internal": false,
+        "mirror_interval": "",
+        "object_format_name": "sha1",
+        "mirror_updated": "0001-01-01T00:00:00Z",
+        "mirror_last_sync_at": "0001-01-01T00:00:00Z",
+        "topics": [],
+        "licenses": []
+      },
+      "mirror": false,
+      "size": 24,
+      "language": "",
+      "languages_url": "http://127.0.0.1:3477/api/v1/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/languages",
+      "html_url": "http://127.0.0.1:3477/s6-org-d2e8f3be40/s6-fork-d2e8f3be40",
+      "url": "http://127.0.0.1:3477/api/v1/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40",
+      "link": "",
+      "ssh_url": "git@localhost:s6-org-d2e8f3be40/s6-fork-d2e8f3be40.git",
+      "clone_url": "http://127.0.0.1:3477/s6-org-d2e8f3be40/s6-fork-d2e8f3be40.git",
+      "original_url": "",
+      "website": "",
+      "stars_count": 0,
+      "forks_count": 0,
+      "watchers_count": 1,
+      "branch_count": 1,
+      "open_issues_count": 0,
+      "open_pr_counter": 0,
+      "release_counter": 0,
+      "default_branch": "main",
+      "archived": false,
+      "created_at": "2026-09-23T14:39:33Z",
+      "updated_at": "2026-09-23T14:39:33Z",
+      "archived_at": "1970-01-01T00:00:00Z",
+      "permissions": {
+        "admin": true,
+        "push": true,
+        "pull": true
+      },
+      "has_code": true,
+      "has_issues": false,
+      "has_wiki": false,
+      "has_pull_requests": true,
+      "has_projects": false,
+      "projects_mode": "all",
+      "has_releases": false,
+      "has_packages": false,
+      "has_actions": false,
+      "ignore_whitespace_conflicts": false,
+      "allow_merge_commits": true,
+      "allow_rebase": true,
+      "allow_rebase_explicit": true,
+      "allow_squash_merge": true,
+      "allow_fast_forward_only_merge": true,
+      "allow_merge_update": true,
+      "allow_rebase_update": true,
+      "allow_manual_merge": false,
+      "autodetect_manual_merge": false,
+      "default_delete_branch_after_merge": false,
+      "default_merge_style": "merge",
+      "default_update_style": "merge",
+      "default_allow_maintainer_edit": true,
+      "avatar_url": "",
+      "internal": true,
+      "mirror_interval": "",
+      "object_format_name": "sha1",
+      "mirror_updated": "0001-01-01T00:00:00Z",
+      "mirror_last_sync_at": "0001-01-01T00:00:00Z",
+      "topics": [],
+      "licenses": []
+    },
+    "start_ns": 640460187000000,
+    "end_ns": 640460218000000,
+    "duration_ms": 31.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:33.935221+00:00",
+    "label": "observe-head",
+    "method": "GET",
+    "path": "/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/branches/main",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "main",
+      "commit": {
+        "id": "40385e4cd0d8b6a108350f363fd6f26fbd4d9abe",
+        "message": "Initial commit\n",
+        "url": "http://127.0.0.1:3477/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/commit/40385e4cd0d8b6a108350f363fd6f26fbd4d9abe",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "verification": {
+          "verified": false,
+          "reason": "gpg.error.not_signed_commit",
+          "signature": "",
+          "signer": null,
+          "payload": ""
+        },
+        "timestamp": "2026-09-23T14:39:33Z",
+        "added": null,
+        "removed": null,
+        "modified": null
+      },
+      "protected": false,
+      "required_approvals": 0,
+      "enable_status_check": false,
+      "status_check_contexts": [],
+      "user_can_push": true,
+      "user_can_merge": true,
+      "effective_branch_protection_name": ""
+    },
+    "start_ns": 640460218000000,
+    "end_ns": 640460281000000,
+    "duration_ms": 63.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:33.998921+00:00",
+    "label": "advance-upstream",
+    "method": "POST",
+    "path": "/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/contents/s6_01_001.txt",
+    "request": {
+      "branch": "main",
+      "content": "dHJpYWw9MSBzdGVwPTEK",
+      "message": "Stage 6 upstream step 1"
+    },
+    "status": 201,
+    "response": {
+      "content": {
+        "name": "s6_01_001.txt",
+        "path": "s6_01_001.txt",
+        "sha": "f8299dcd0213b7c2022fc328c08579c502cd6acc",
+        "last_commit_sha": "c474d3f0258e4f0a5fd0a8a06eef4d627a8410ee",
+        "last_committer_date": "2026-09-23T14:39:34Z",
+        "last_author_date": "2026-09-23T14:39:34Z",
+        "type": "file",
+        "size": 15,
+        "encoding": "base64",
+        "content": "dHJpYWw9MSBzdGVwPTEK",
+        "target": null,
+        "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/contents/s6_01_001.txt?ref=main",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/src/branch/main/s6_01_001.txt",
+        "git_url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/blobs/f8299dcd0213b7c2022fc328c08579c502cd6acc",
+        "download_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/raw/branch/main/s6_01_001.txt",
+        "submodule_git_url": null,
+        "_links": {
+          "self": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/contents/s6_01_001.txt?ref=main",
+          "git": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/blobs/f8299dcd0213b7c2022fc328c08579c502cd6acc",
+          "html": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/src/branch/main/s6_01_001.txt"
+        }
+      },
+      "commit": {
+        "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/commits/c474d3f0258e4f0a5fd0a8a06eef4d627a8410ee",
+        "sha": "c474d3f0258e4f0a5fd0a8a06eef4d627a8410ee",
+        "created": "0001-01-01T00:00:00Z",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/commit/c474d3f0258e4f0a5fd0a8a06eef4d627a8410ee",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "date": "2026-09-23T14:39:34Z"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "date": "2026-09-23T14:39:34Z"
+        },
+        "parents": [
+          {
+            "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/commits/40385e4cd0d8b6a108350f363fd6f26fbd4d9abe",
+            "sha": "40385e4cd0d8b6a108350f363fd6f26fbd4d9abe",
+            "created": "0001-01-01T00:00:00Z"
+          }
+        ],
+        "message": "Stage 6 upstream step 1\n",
+        "tree": {
+          "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/trees/edd45ce9c29c50915ffa17254dfdf59d74002ad3",
+          "sha": "edd45ce9c29c50915ffa17254dfdf59d74002ad3",
+          "created": "0001-01-01T00:00:00Z"
+        }
+      },
+      "verification": {
+        "verified": false,
+        "reason": "gpg.error.not_signed_commit",
+        "signature": "",
+        "signer": null,
+        "payload": ""
+      }
+    },
+    "start_ns": 640460281000000,
+    "end_ns": 640460609000000,
+    "duration_ms": 328.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:34.319606+00:00",
+    "label": "observe-head",
+    "method": "GET",
+    "path": "/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/branches/main",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "main",
+      "commit": {
+        "id": "c474d3f0258e4f0a5fd0a8a06eef4d627a8410ee",
+        "message": "Stage 6 upstream step 1\n",
+        "url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/commit/c474d3f0258e4f0a5fd0a8a06eef4d627a8410ee",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "verification": {
+          "verified": false,
+          "reason": "gpg.error.not_signed_commit",
+          "signature": "",
+          "signer": null,
+          "payload": ""
+        },
+        "timestamp": "2026-09-23T14:39:34Z",
+        "added": null,
+        "removed": null,
+        "modified": null
+      },
+      "protected": false,
+      "required_approvals": 0,
+      "enable_status_check": false,
+      "status_check_contexts": [],
+      "user_can_push": true,
+      "user_can_merge": true,
+      "effective_branch_protection_name": ""
+    },
+    "start_ns": 640460609000000,
+    "end_ns": 640460656000000,
+    "duration_ms": 47.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:34.361956+00:00",
+    "label": "prefix-merge",
+    "method": "POST",
+    "path": "/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/merge-upstream",
+    "request": {
+      "branch": "main",
+      "ff_only": true
+    },
+    "status": 200,
+    "response": {
+      "merge_type": "fast-forward"
+    },
+    "start_ns": 640460656000000,
+    "end_ns": 640460921000000,
+    "duration_ms": 265.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:34.628437+00:00",
+    "label": "observe-head",
+    "method": "GET",
+    "path": "/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/branches/main",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "main",
+      "commit": {
+        "id": "c474d3f0258e4f0a5fd0a8a06eef4d627a8410ee",
+        "message": "Stage 6 upstream step 1\n",
+        "url": "http://127.0.0.1:3477/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/commit/c474d3f0258e4f0a5fd0a8a06eef4d627a8410ee",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "verification": {
+          "verified": false,
+          "reason": "gpg.error.not_signed_commit",
+          "signature": "",
+          "signer": null,
+          "payload": ""
+        },
+        "timestamp": "2026-09-23T14:39:34Z",
+        "added": null,
+        "removed": null,
+        "modified": null
+      },
+      "protected": false,
+      "required_approvals": 0,
+      "enable_status_check": false,
+      "status_check_contexts": [],
+      "user_can_push": true,
+      "user_can_merge": true,
+      "effective_branch_protection_name": ""
+    },
+    "start_ns": 640460921000000,
+    "end_ns": 640460937000000,
+    "duration_ms": 16.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:34.652365+00:00",
+    "label": "advance-upstream",
+    "method": "POST",
+    "path": "/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/contents/s6_01_002.txt",
+    "request": {
+      "branch": "main",
+      "content": "dHJpYWw9MSBzdGVwPTIK",
+      "message": "Stage 6 upstream step 2"
+    },
+    "status": 201,
+    "response": {
+      "content": {
+        "name": "s6_01_002.txt",
+        "path": "s6_01_002.txt",
+        "sha": "e10502f7c7ab06134c6726b668613888715e8120",
+        "last_commit_sha": "fdba5ddba69404fb0d98aaa7cb48811f08b41d06",
+        "last_committer_date": "2026-09-23T14:39:34Z",
+        "last_author_date": "2026-09-23T14:39:34Z",
+        "type": "file",
+        "size": 15,
+        "encoding": "base64",
+        "content": "dHJpYWw9MSBzdGVwPTIK",
+        "target": null,
+        "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/contents/s6_01_002.txt?ref=main",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/src/branch/main/s6_01_002.txt",
+        "git_url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/blobs/e10502f7c7ab06134c6726b668613888715e8120",
+        "download_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/raw/branch/main/s6_01_002.txt",
+        "submodule_git_url": null,
+        "_links": {
+          "self": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/contents/s6_01_002.txt?ref=main",
+          "git": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/blobs/e10502f7c7ab06134c6726b668613888715e8120",
+          "html": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/src/branch/main/s6_01_002.txt"
+        }
+      },
+      "commit": {
+        "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/commits/fdba5ddba69404fb0d98aaa7cb48811f08b41d06",
+        "sha": "fdba5ddba69404fb0d98aaa7cb48811f08b41d06",
+        "created": "0001-01-01T00:00:00Z",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/commit/fdba5ddba69404fb0d98aaa7cb48811f08b41d06",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "date": "2026-09-23T14:39:34Z"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "date": "2026-09-23T14:39:34Z"
+        },
+        "parents": [
+          {
+            "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/commits/c474d3f0258e4f0a5fd0a8a06eef4d627a8410ee",
+            "sha": "c474d3f0258e4f0a5fd0a8a06eef4d627a8410ee",
+            "created": "0001-01-01T00:00:00Z"
+          }
+        ],
+        "message": "Stage 6 upstream step 2\n",
+        "tree": {
+          "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/trees/4f5547401e1a4270f6bbc36bed337a999bda129c",
+          "sha": "4f5547401e1a4270f6bbc36bed337a999bda129c",
+          "created": "0001-01-01T00:00:00Z"
+        }
+      },
+      "verification": {
+        "verified": false,
+        "reason": "gpg.error.not_signed_commit",
+        "signature": "",
+        "signer": null,
+        "payload": ""
+      }
+    },
+    "start_ns": 640460937000000,
+    "end_ns": 640461203000000,
+    "duration_ms": 266.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:34.916193+00:00",
+    "label": "observe-head",
+    "method": "GET",
+    "path": "/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/branches/main",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "main",
+      "commit": {
+        "id": "fdba5ddba69404fb0d98aaa7cb48811f08b41d06",
+        "message": "Stage 6 upstream step 2\n",
+        "url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/commit/fdba5ddba69404fb0d98aaa7cb48811f08b41d06",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "verification": {
+          "verified": false,
+          "reason": "gpg.error.not_signed_commit",
+          "signature": "",
+          "signer": null,
+          "payload": ""
+        },
+        "timestamp": "2026-09-23T14:39:34Z",
+        "added": null,
+        "removed": null,
+        "modified": null
+      },
+      "protected": false,
+      "required_approvals": 0,
+      "enable_status_check": false,
+      "status_check_contexts": [],
+      "user_can_push": true,
+      "user_can_merge": true,
+      "effective_branch_protection_name": ""
+    },
+    "start_ns": 640461203000000,
+    "end_ns": 640461234000000,
+    "duration_ms": 31.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:34.939602+00:00",
+    "label": "prefix-merge",
+    "method": "POST",
+    "path": "/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/merge-upstream",
+    "request": {
+      "branch": "main",
+      "ff_only": true
+    },
+    "status": 200,
+    "response": {
+      "merge_type": "fast-forward"
+    },
+    "start_ns": 640461234000000,
+    "end_ns": 640461453000000,
+    "duration_ms": 219.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:35.168026+00:00",
+    "label": "observe-head",
+    "method": "GET",
+    "path": "/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/branches/main",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "main",
+      "commit": {
+        "id": "fdba5ddba69404fb0d98aaa7cb48811f08b41d06",
+        "message": "Stage 6 upstream step 2\n",
+        "url": "http://127.0.0.1:3477/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/commit/fdba5ddba69404fb0d98aaa7cb48811f08b41d06",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "verification": {
+          "verified": false,
+          "reason": "gpg.error.not_signed_commit",
+          "signature": "",
+          "signer": null,
+          "payload": ""
+        },
+        "timestamp": "2026-09-23T14:39:34Z",
+        "added": null,
+        "removed": null,
+        "modified": null
+      },
+      "protected": false,
+      "required_approvals": 0,
+      "enable_status_check": false,
+      "status_check_contexts": [],
+      "user_can_push": true,
+      "user_can_merge": true,
+      "effective_branch_protection_name": ""
+    },
+    "start_ns": 640461453000000,
+    "end_ns": 640461500000000,
+    "duration_ms": 47.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:35.213003+00:00",
+    "label": "advance-upstream",
+    "method": "POST",
+    "path": "/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/contents/s6_01_003.txt",
+    "request": {
+      "branch": "main",
+      "content": "dHJpYWw9MSBzdGVwPTMK",
+      "message": "Stage 6 upstream step 3"
+    },
+    "status": 201,
+    "response": {
+      "content": {
+        "name": "s6_01_003.txt",
+        "path": "s6_01_003.txt",
+        "sha": "6a0ed44af87f72230f4ef4f04f382510a5152bff",
+        "last_commit_sha": "f3c6f187881e86af5c26bbe8032b46d1f78fdd1d",
+        "last_committer_date": "2026-09-23T14:39:35Z",
+        "last_author_date": "2026-09-23T14:39:35Z",
+        "type": "file",
+        "size": 15,
+        "encoding": "base64",
+        "content": "dHJpYWw9MSBzdGVwPTMK",
+        "target": null,
+        "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/contents/s6_01_003.txt?ref=main",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/src/branch/main/s6_01_003.txt",
+        "git_url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/blobs/6a0ed44af87f72230f4ef4f04f382510a5152bff",
+        "download_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/raw/branch/main/s6_01_003.txt",
+        "submodule_git_url": null,
+        "_links": {
+          "self": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/contents/s6_01_003.txt?ref=main",
+          "git": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/blobs/6a0ed44af87f72230f4ef4f04f382510a5152bff",
+          "html": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/src/branch/main/s6_01_003.txt"
+        }
+      },
+      "commit": {
+        "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/commits/f3c6f187881e86af5c26bbe8032b46d1f78fdd1d",
+        "sha": "f3c6f187881e86af5c26bbe8032b46d1f78fdd1d",
+        "created": "0001-01-01T00:00:00Z",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/commit/f3c6f187881e86af5c26bbe8032b46d1f78fdd1d",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "date": "2026-09-23T14:39:35Z"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "date": "2026-09-23T14:39:35Z"
+        },
+        "parents": [
+          {
+            "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/commits/fdba5ddba69404fb0d98aaa7cb48811f08b41d06",
+            "sha": "fdba5ddba69404fb0d98aaa7cb48811f08b41d06",
+            "created": "0001-01-01T00:00:00Z"
+          }
+        ],
+        "message": "Stage 6 upstream step 3\n",
+        "tree": {
+          "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/trees/7c7ea4fa684231dc23183402d119ea6384355e88",
+          "sha": "7c7ea4fa684231dc23183402d119ea6384355e88",
+          "created": "0001-01-01T00:00:00Z"
+        }
+      },
+      "verification": {
+        "verified": false,
+        "reason": "gpg.error.not_signed_commit",
+        "signature": "",
+        "signer": null,
+        "payload": ""
+      }
+    },
+    "start_ns": 640461500000000,
+    "end_ns": 640461750000000,
+    "duration_ms": 250.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:35.459527+00:00",
+    "label": "observe-head",
+    "method": "GET",
+    "path": "/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/branches/main",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "main",
+      "commit": {
+        "id": "f3c6f187881e86af5c26bbe8032b46d1f78fdd1d",
+        "message": "Stage 6 upstream step 3\n",
+        "url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/commit/f3c6f187881e86af5c26bbe8032b46d1f78fdd1d",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "verification": {
+          "verified": false,
+          "reason": "gpg.error.not_signed_commit",
+          "signature": "",
+          "signer": null,
+          "payload": ""
+        },
+        "timestamp": "2026-09-23T14:39:35Z",
+        "added": null,
+        "removed": null,
+        "modified": null
+      },
+      "protected": false,
+      "required_approvals": 0,
+      "enable_status_check": false,
+      "status_check_contexts": [],
+      "user_can_push": true,
+      "user_can_merge": true,
+      "effective_branch_protection_name": ""
+    },
+    "start_ns": 640461750000000,
+    "end_ns": 640461796000000,
+    "duration_ms": 46.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:35.512478+00:00",
+    "label": "prefix-merge",
+    "method": "POST",
+    "path": "/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/merge-upstream",
+    "request": {
+      "branch": "main",
+      "ff_only": true
+    },
+    "status": 200,
+    "response": {
+      "merge_type": "fast-forward"
+    },
+    "start_ns": 640461796000000,
+    "end_ns": 640462218000000,
+    "duration_ms": 422.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:35.934745+00:00",
+    "label": "observe-head",
+    "method": "GET",
+    "path": "/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/branches/main",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "main",
+      "commit": {
+        "id": "f3c6f187881e86af5c26bbe8032b46d1f78fdd1d",
+        "message": "Stage 6 upstream step 3\n",
+        "url": "http://127.0.0.1:3477/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/commit/f3c6f187881e86af5c26bbe8032b46d1f78fdd1d",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "verification": {
+          "verified": false,
+          "reason": "gpg.error.not_signed_commit",
+          "signature": "",
+          "signer": null,
+          "payload": ""
+        },
+        "timestamp": "2026-09-23T14:39:35Z",
+        "added": null,
+        "removed": null,
+        "modified": null
+      },
+      "protected": false,
+      "required_approvals": 0,
+      "enable_status_check": false,
+      "status_check_contexts": [],
+      "user_can_push": true,
+      "user_can_merge": true,
+      "effective_branch_protection_name": ""
+    },
+    "start_ns": 640462218000000,
+    "end_ns": 640462265000000,
+    "duration_ms": 47.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:35.975675+00:00",
+    "label": "advance-upstream",
+    "method": "POST",
+    "path": "/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/contents/s6_01_004.txt",
+    "request": {
+      "branch": "main",
+      "content": "dHJpYWw9MSBzdGVwPTQK",
+      "message": "Stage 6 upstream step 4"
+    },
+    "status": 201,
+    "response": {
+      "content": {
+        "name": "s6_01_004.txt",
+        "path": "s6_01_004.txt",
+        "sha": "fbe8ea438787e6cc2e59566825029557dd8bbc15",
+        "last_commit_sha": "e610fec957df7e12b3ea4f3746dabd3d66673374",
+        "last_committer_date": "2026-09-23T14:39:36Z",
+        "last_author_date": "2026-09-23T14:39:36Z",
+        "type": "file",
+        "size": 15,
+        "encoding": "base64",
+        "content": "dHJpYWw9MSBzdGVwPTQK",
+        "target": null,
+        "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/contents/s6_01_004.txt?ref=main",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/src/branch/main/s6_01_004.txt",
+        "git_url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/blobs/fbe8ea438787e6cc2e59566825029557dd8bbc15",
+        "download_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/raw/branch/main/s6_01_004.txt",
+        "submodule_git_url": null,
+        "_links": {
+          "self": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/contents/s6_01_004.txt?ref=main",
+          "git": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/blobs/fbe8ea438787e6cc2e59566825029557dd8bbc15",
+          "html": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/src/branch/main/s6_01_004.txt"
+        }
+      },
+      "commit": {
+        "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/commits/e610fec957df7e12b3ea4f3746dabd3d66673374",
+        "sha": "e610fec957df7e12b3ea4f3746dabd3d66673374",
+        "created": "0001-01-01T00:00:00Z",
+        "html_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/commit/e610fec957df7e12b3ea4f3746dabd3d66673374",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "date": "2026-09-23T14:39:36Z"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "date": "2026-09-23T14:39:36Z"
+        },
+        "parents": [
+          {
+            "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/commits/f3c6f187881e86af5c26bbe8032b46d1f78fdd1d",
+            "sha": "f3c6f187881e86af5c26bbe8032b46d1f78fdd1d",
+            "created": "0001-01-01T00:00:00Z"
+          }
+        ],
+        "message": "Stage 6 upstream step 4\n",
+        "tree": {
+          "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/git/trees/6e22e6c5c709ca98ee648c4105745d18e70b8898",
+          "sha": "6e22e6c5c709ca98ee648c4105745d18e70b8898",
+          "created": "0001-01-01T00:00:00Z"
+        }
+      },
+      "verification": {
+        "verified": false,
+        "reason": "gpg.error.not_signed_commit",
+        "signature": "",
+        "signer": null,
+        "payload": ""
+      }
+    },
+    "start_ns": 640462265000000,
+    "end_ns": 640462718000000,
+    "duration_ms": 453.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:36.422202+00:00",
+    "label": "observe-head",
+    "method": "GET",
+    "path": "/repos/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/branches/main",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "main",
+      "commit": {
+        "id": "e610fec957df7e12b3ea4f3746dabd3d66673374",
+        "message": "Stage 6 upstream step 4\n",
+        "url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/s6-up-d2e8f3be40/commit/e610fec957df7e12b3ea4f3746dabd3d66673374",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "verification": {
+          "verified": false,
+          "reason": "gpg.error.not_signed_commit",
+          "signature": "",
+          "signer": null,
+          "payload": ""
+        },
+        "timestamp": "2026-09-23T14:39:36Z",
+        "added": null,
+        "removed": null,
+        "modified": null
+      },
+      "protected": false,
+      "required_approvals": 0,
+      "enable_status_check": false,
+      "status_check_contexts": [],
+      "user_can_push": true,
+      "user_can_merge": true,
+      "effective_branch_protection_name": ""
+    },
+    "start_ns": 640462718000000,
+    "end_ns": 640462765000000,
+    "duration_ms": 47.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:36.470392+00:00",
+    "label": "observe-head",
+    "method": "GET",
+    "path": "/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/branches/main",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "main",
+      "commit": {
+        "id": "f3c6f187881e86af5c26bbe8032b46d1f78fdd1d",
+        "message": "Stage 6 upstream step 3\n",
+        "url": "http://127.0.0.1:3477/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/commit/f3c6f187881e86af5c26bbe8032b46d1f78fdd1d",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "verification": {
+          "verified": false,
+          "reason": "gpg.error.not_signed_commit",
+          "signature": "",
+          "signer": null,
+          "payload": ""
+        },
+        "timestamp": "2026-09-23T14:39:35Z",
+        "added": null,
+        "removed": null,
+        "modified": null
+      },
+      "protected": false,
+      "required_approvals": 0,
+      "enable_status_check": false,
+      "status_check_contexts": [],
+      "user_can_push": true,
+      "user_can_merge": true,
+      "effective_branch_protection_name": ""
+    },
+    "start_ns": 640462765000000,
+    "end_ns": 640462812000000,
+    "duration_ms": 47.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:36.531859+00:00",
+    "label": "concurrent-merge",
+    "method": "POST",
+    "path": "/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/merge-upstream",
+    "request": {
+      "branch": "main",
+      "ff_only": true
+    },
+    "status": 400,
+    "response": {
+      "message": "fast-forward merge not possible: branch has diverged",
+      "url": "http://127.0.0.1:3477/api/swagger"
+    },
+    "start_ns": 640462828000000,
+    "end_ns": 640463203000000,
+    "duration_ms": 375.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:36.532412+00:00",
+    "label": "concurrent-merge",
+    "method": "POST",
+    "path": "/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/merge-upstream",
+    "request": {
+      "branch": "main",
+      "ff_only": true
+    },
+    "status": 200,
+    "response": {
+      "merge_type": "fast-forward"
+    },
+    "start_ns": 640462828000000,
+    "end_ns": 640463296000000,
+    "duration_ms": 468.0
+  },
+  {
+    "at_utc": "2026-09-23T14:39:37.012260+00:00",
+    "label": "observe-head",
+    "method": "GET",
+    "path": "/repos/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/branches/main",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "main",
+      "commit": {
+        "id": "e610fec957df7e12b3ea4f3746dabd3d66673374",
+        "message": "Stage 6 upstream step 4\n",
+        "url": "http://127.0.0.1:3477/s6-org-d2e8f3be40/s6-fork-d2e8f3be40/commit/e610fec957df7e12b3ea4f3746dabd3d66673374",
+        "author": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "committer": {
+          "name": "sbt-gitea-20260923_142458_008",
+          "email": "sbt-gitea-20260923_142458_008@example.invalid",
+          "username": "sbt-gitea-20260923_142458_008"
+        },
+        "verification": {
+          "verified": false,
+          "reason": "gpg.error.not_signed_commit",
+          "signature": "",
+          "signer": null,
+          "payload": ""
+        },
+        "timestamp": "2026-09-23T14:39:36Z",
+        "added": null,
+        "removed": null,
+        "modified": null
+      },
+      "protected": false,
+      "required_approvals": 0,
+      "enable_status_check": false,
+      "status_check_contexts": [],
+      "user_can_push": true,
+      "user_can_merge": true,
+      "effective_branch_protection_name": ""
+    },
+    "start_ns": 640463296000000,
+    "end_ns": 640463390000000,
+    "duration_ms": 94.0
+  }
+]

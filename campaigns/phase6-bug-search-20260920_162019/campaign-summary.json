@@ -1,0 +1,69 @@
+{
+  "bug_candidates": [],
+  "campaign": "Vikunja OpenAPI-derived SBT/BP interleaving bug search",
+  "classification_counts": {
+    "pass": 1
+  },
+  "interpretation": "A non-pass is not automatically a product bug. Only a reproducible semantic oracle violation, after excluding harness and contract causes, is a bug candidate.",
+  "run_count": 1,
+  "runs": [
+    {
+      "anomalies": [],
+      "classification": "pass",
+      "evaluation": {
+        "anomalies": [],
+        "checks": {
+          "all_deletions_externally_observable": true,
+          "all_relation_unlinks_executed": true,
+          "all_relation_unlinks_observed": true,
+          "all_task_updates_executed": true,
+          "all_task_updates_persisted": true,
+          "all_tasks_created": true,
+          "all_tasks_deleted": true,
+          "alternating_relations_recreated": true,
+          "initial_relation_chain_created": true,
+          "initial_relations_bidirectionally_observed": true,
+          "no_semantic_anomalies": true,
+          "project_created": true,
+          "project_deleted": true
+        },
+        "counts": {
+          "initial_relation_creates": 11,
+          "relation_deletes": 11,
+          "relation_recreates": 6,
+          "task_creates": 12,
+          "task_deletes": 12,
+          "updates": 12
+        },
+        "evaluation_basis": "external redacted HTTP trace",
+        "event_count": 138,
+        "expected_tasks": 12,
+        "observed_ids": {
+          "project_id": 28,
+          "task_ids": [
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125
+          ]
+        },
+        "passed_count": 13,
+        "phase5_bp_passed": true,
+        "profile": "interleaved-relational-lifecycle",
+        "required_count": 13
+      },
+      "expected_tasks": 12,
+      "run_directory": "phase6-bug-search-20260920_162019-tasks-12-seed-20261401-20260920_162019_814",
+      "seed": 20261401
+    }
+  ],
+  "triage_required": []
+}

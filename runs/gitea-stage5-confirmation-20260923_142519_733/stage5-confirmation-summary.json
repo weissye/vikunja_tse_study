@@ -1,0 +1,208 @@
+{
+  "candidates": [
+    {
+      "category": "SERVER_FAILURE",
+      "confirmation": "NOT_YET_REPRODUCED",
+      "independent_run_count": 1,
+      "observation_count": 1,
+      "observations": [
+        {
+          "method": "POST",
+          "model_path": "/repos/sbt-gitea-20260923_142458_008/1_21432/diffpatch",
+          "request": {
+            "content": "1_76534",
+            "force_push": false
+          },
+          "response": {
+            "message": "",
+            "url": "http://127.0.0.1:3477/api/swagger"
+          },
+          "run_number": 4,
+          "seed": 20260963,
+          "trigger_event": 78
+        }
+      ],
+      "operation_id": "repoApplyDiffPatch",
+      "schema_validity_basis": "evaluator-VIOLATED-not-invalid-test-input",
+      "status": 500
+    },
+    {
+      "category": "UNDOCUMENTED_SUCCESS",
+      "confirmation": "NOT_YET_REPRODUCED",
+      "independent_run_count": 2,
+      "observation_count": 2,
+      "observations": [
+        {
+          "method": "POST",
+          "model_path": "/repos/sbt-gitea-20260923_142458_008/1_43069/tags",
+          "request": {
+            "message": "1_66794",
+            "tag_name": "1_68050"
+          },
+          "response": {
+            "commit": {
+              "created": "2026-09-23T11:27:37Z",
+              "sha": "b2f40375bd28b76edf1919eb9f85df109ec845cd",
+              "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/1_43069/git/commits/d5b960ff2421b75190587264d6402574f25cab20"
+            },
+            "id": "d5b960ff2421b75190587264d6402574f25cab20",
+            "message": "1_66794\n",
+            "name": "1_68050",
+            "tarball_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/1_43069/archive/1_68050.tar.gz",
+            "zipball_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/1_43069/archive/1_68050.zip"
+          },
+          "run_number": 2,
+          "seed": 20260961,
+          "trigger_event": 95
+        },
+        {
+          "method": "POST",
+          "model_path": "/repos/sbt-gitea-20260923_142458_008/1_21432/tags",
+          "request": {
+            "message": "1_8932",
+            "tag_name": "1_9747"
+          },
+          "response": {
+            "commit": {
+              "created": "2026-09-23T11:30:35Z",
+              "sha": "a302c75dd9361bed867a90040c5b1e104c88bd24",
+              "url": "http://127.0.0.1:3477/api/v1/repos/sbt-gitea-20260923_142458_008/1_21432/git/commits/730388ff9f4f7a2a3ce39c8cc2eb5f75c7f0e2ec"
+            },
+            "id": "730388ff9f4f7a2a3ce39c8cc2eb5f75c7f0e2ec",
+            "message": "1_8932\n",
+            "name": "1_9747",
+            "tarball_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/1_21432/archive/1_9747.tar.gz",
+            "zipball_url": "http://127.0.0.1:3477/sbt-gitea-20260923_142458_008/1_21432/archive/1_9747.zip"
+          },
+          "run_number": 4,
+          "seed": 20260963,
+          "trigger_event": 66
+        }
+      ],
+      "operation_id": "repoCreateTag",
+      "schema_validity_basis": "evaluator-VIOLATED-not-invalid-test-input",
+      "status": 201
+    },
+    {
+      "category": "SERVER_FAILURE",
+      "confirmation": "REPRODUCIBLE_SERVER_FAILURE_CANDIDATE",
+      "independent_run_count": 5,
+      "observation_count": 5,
+      "observations": [
+        {
+          "method": "POST",
+          "model_path": "/repos/sbt-gitea-20260923_142458_008/1_64039/merge-upstream",
+          "request": {
+            "ff_only": true
+          },
+          "response": "Internal Server Error",
+          "run_number": 1,
+          "seed": 20260960,
+          "trigger_event": 103
+        },
+        {
+          "method": "POST",
+          "model_path": "/repos/sbt-gitea-20260923_142458_008/1_43069/merge-upstream",
+          "request": {
+            "ff_only": true
+          },
+          "response": "Internal Server Error",
+          "run_number": 2,
+          "seed": 20260961,
+          "trigger_event": 131
+        },
+        {
+          "method": "POST",
+          "model_path": "/repos/sbt-gitea-20260923_142458_008/1_50481/merge-upstream",
+          "request": {
+            "ff_only": false
+          },
+          "response": "Internal Server Error",
+          "run_number": 3,
+          "seed": 20260962,
+          "trigger_event": 63
+        },
+        {
+          "method": "POST",
+          "model_path": "/repos/sbt-gitea-20260923_142458_008/1_21432/merge-upstream",
+          "request": {
+            "ff_only": true
+          },
+          "response": "Internal Server Error",
+          "run_number": 4,
+          "seed": 20260963,
+          "trigger_event": 76
+        },
+        {
+          "method": "POST",
+          "model_path": "/repos/sbt-gitea-20260923_142458_008/1_98546/merge-upstream",
+          "request": {
+            "ff_only": true
+          },
+          "response": "Internal Server Error",
+          "run_number": 5,
+          "seed": 20260964,
+          "trigger_event": 115
+        }
+      ],
+      "operation_id": "repoMergeUpstream",
+      "schema_validity_basis": "evaluator-VIOLATED-not-invalid-test-input",
+      "status": 500
+    }
+  ],
+  "policy": {
+    "claim_boundary": "5xx is a reproducible candidate, not a confirmed product bug, until semantic preconditions are established",
+    "included_status_classes": [
+      "undocumented-2xx",
+      "undocumented-5xx"
+    ],
+    "manual_application_assumptions": 0,
+    "minimum_independent_runs": 3
+  },
+  "runs": [
+    {
+      "directory": "C:\\work\\temp\\vikunja_tse_study\\runs\\gitea-stage3-live-acceptance-20260923_142522_402",
+      "high_signal_observations": 1,
+      "run_number": 1,
+      "run_status": "CONTRACT_DEVIATION",
+      "seed": 20260960
+    },
+    {
+      "directory": "C:\\work\\temp\\vikunja_tse_study\\runs\\gitea-stage3-live-acceptance-20260923_142703_821",
+      "high_signal_observations": 2,
+      "run_number": 2,
+      "run_status": "CONTRACT_DEVIATION",
+      "seed": 20260961
+    },
+    {
+      "directory": "C:\\work\\temp\\vikunja_tse_study\\runs\\gitea-stage3-live-acceptance-20260923_142832_674",
+      "high_signal_observations": 1,
+      "run_number": 3,
+      "run_status": "CONTRACT_DEVIATION",
+      "seed": 20260962
+    },
+    {
+      "directory": "C:\\work\\temp\\vikunja_tse_study\\runs\\gitea-stage3-live-acceptance-20260923_143005_467",
+      "high_signal_observations": 3,
+      "run_number": 4,
+      "run_status": "CONTRACT_DEVIATION",
+      "seed": 20260963
+    },
+    {
+      "directory": "C:\\work\\temp\\vikunja_tse_study\\runs\\gitea-stage3-live-acceptance-20260923_143205_942",
+      "high_signal_observations": 1,
+      "run_number": 5,
+      "run_status": "CONTRACT_DEVIATION",
+      "seed": 20260964
+    }
+  ],
+  "schema_version": 1,
+  "stage": "generic-independent-prefix-confirmation",
+  "status": "REPRODUCIBLE_SERVER_FAILURE_CANDIDATES",
+  "totals": {
+    "candidate_groups": 3,
+    "confirmed_contract_deviations": 0,
+    "reproducible_server_failure_candidates": 1,
+    "runs": 5
+  }
+}

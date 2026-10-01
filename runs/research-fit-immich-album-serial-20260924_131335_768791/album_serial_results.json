@@ -1,0 +1,413 @@
+{
+  "status": "COMPLETE",
+  "candidate": "immich",
+  "version": "v3.2.0",
+  "openapi_sha256": "51719f0b6573ca75eb51834b01a7fdb9e963c9d60fcce813f10c1463a987b866",
+  "prefix_rounds": 4,
+  "results": [
+    {
+      "trial": 1,
+      "verdict": "PASS",
+      "reason": "both-fields-persisted",
+      "steps": [
+        {
+          "method": "POST",
+          "path": "/albums",
+          "status": 201,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1",
+            "description": ""
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1",
+            "description": ""
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-0",
+            "description": ""
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-0",
+            "description": ""
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-0",
+            "description": "fse-immich-131335_768791-1-description-0"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-0",
+            "description": "fse-immich-131335_768791-1-description-0"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-1",
+            "description": "fse-immich-131335_768791-1-description-0"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-1",
+            "description": "fse-immich-131335_768791-1-description-0"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-1",
+            "description": "fse-immich-131335_768791-1-description-1"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-1",
+            "description": "fse-immich-131335_768791-1-description-1"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-2",
+            "description": "fse-immich-131335_768791-1-description-1"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-2",
+            "description": "fse-immich-131335_768791-1-description-1"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-2",
+            "description": "fse-immich-131335_768791-1-description-2"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-2",
+            "description": "fse-immich-131335_768791-1-description-2"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-3",
+            "description": "fse-immich-131335_768791-1-description-2"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-3",
+            "description": "fse-immich-131335_768791-1-description-2"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-3",
+            "description": "fse-immich-131335_768791-1-description-3"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-3",
+            "description": "fse-immich-131335_768791-1-description-3"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "080ddac7-bf3b-4f67-a3b2-8e142219fda4",
+            "albumName": "fse-immich-131335_768791-1-name-3",
+            "description": "fse-immich-131335_768791-1-description-3"
+          }
+        },
+        {
+          "method": "DELETE",
+          "path": "/albums/{id}",
+          "status": 204
+        }
+      ]
+    },
+    {
+      "trial": 2,
+      "verdict": "PASS",
+      "reason": "both-fields-persisted",
+      "steps": [
+        {
+          "method": "POST",
+          "path": "/albums",
+          "status": 201,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2",
+            "description": ""
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2",
+            "description": ""
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-0",
+            "description": ""
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-0",
+            "description": ""
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-0",
+            "description": "fse-immich-131335_768791-2-description-0"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-0",
+            "description": "fse-immich-131335_768791-2-description-0"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-1",
+            "description": "fse-immich-131335_768791-2-description-0"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-1",
+            "description": "fse-immich-131335_768791-2-description-0"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-1",
+            "description": "fse-immich-131335_768791-2-description-1"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-1",
+            "description": "fse-immich-131335_768791-2-description-1"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-2",
+            "description": "fse-immich-131335_768791-2-description-1"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-2",
+            "description": "fse-immich-131335_768791-2-description-1"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-2",
+            "description": "fse-immich-131335_768791-2-description-2"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-2",
+            "description": "fse-immich-131335_768791-2-description-2"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-3",
+            "description": "fse-immich-131335_768791-2-description-2"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-3",
+            "description": "fse-immich-131335_768791-2-description-2"
+          }
+        },
+        {
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-3",
+            "description": "fse-immich-131335_768791-2-description-3"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-3",
+            "description": "fse-immich-131335_768791-2-description-3"
+          }
+        },
+        {
+          "method": "GET",
+          "path": "/albums/{id}",
+          "status": 200,
+          "observed": {
+            "id": "ee972277-a5b8-4bee-b311-22b922b2db9b",
+            "albumName": "fse-immich-131335_768791-2-name-3",
+            "description": "fse-immich-131335_768791-2-description-3"
+          }
+        },
+        {
+          "method": "DELETE",
+          "path": "/albums/{id}",
+          "status": 204
+        }
+      ]
+    }
+  ]
+}

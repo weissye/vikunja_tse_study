@@ -1,0 +1,34 @@
+{
+  "creation_order": [
+    "api/circuits/circuits",
+    "api/dcim/sites",
+    "api/dcim/devices"
+  ],
+  "cycle_edges_removed": [],
+  "deletion_order": [
+    "api/dcim/devices",
+    "api/dcim/sites",
+    "api/circuits/circuits"
+  ],
+  "edges": [
+    {
+      "confidence": 0.97,
+      "field_name": "site",
+      "provenance": [
+        {
+          "detail": "Create request body property 'site' is a component-referenced key object for entity 'api/dcim/sites'",
+          "pointer": "#/paths/~1api~1dcim~1devices~1/post/requestBody/content/application~1json/properties/site",
+          "rule": "D4:reference_object_alias_key_match"
+        }
+      ],
+      "source": "api/dcim/devices",
+      "target": "api/dcim/sites"
+    }
+  ],
+  "had_cycle": false,
+  "nodes": [
+    "api/dcim/sites",
+    "api/dcim/devices",
+    "api/circuits/circuits"
+  ]
+}

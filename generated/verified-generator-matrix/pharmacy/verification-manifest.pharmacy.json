@@ -1,0 +1,1863 @@
+{
+  "concurrency_oracles": [
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/drugs/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/drugs/{id}",
+      "oracle_id": "concurrency::same-field-domain::put:/drugs/{id}",
+      "path_template": "/drugs/{id}",
+      "runtime": {
+        "create_operation_id": "post:/drugs",
+        "entity_key": "drugs",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1drugs~1{id}/put",
+        "#/paths/~1drugs~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/drugs/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/drugs/{id}",
+      "oracle_id": "concurrency::same-field::put:/drugs/{id}::id",
+      "path_template": "/drugs/{id}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/drugs",
+        "entity_key": "drugs",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1drugs~1{id}/put",
+        "#/paths/~1drugs~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/drugs/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/drugs/{id}",
+      "oracle_id": "concurrency::same-field::put:/drugs/{id}::name",
+      "path_template": "/drugs/{id}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/drugs",
+        "entity_key": "drugs",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1drugs~1{id}/put",
+        "#/paths/~1drugs~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/patients/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/patients/{id}",
+      "oracle_id": "concurrency::same-field-domain::put:/patients/{id}",
+      "path_template": "/patients/{id}",
+      "runtime": {
+        "create_operation_id": "post:/patients",
+        "entity_key": "patients",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1patients~1{id}/put",
+        "#/paths/~1patients~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/patients/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/patients/{id}",
+      "oracle_id": "concurrency::same-field::put:/patients/{id}::id",
+      "path_template": "/patients/{id}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/patients",
+        "entity_key": "patients",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1patients~1{id}/put",
+        "#/paths/~1patients~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/patients/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/patients/{id}",
+      "oracle_id": "concurrency::same-field::put:/patients/{id}::name",
+      "path_template": "/patients/{id}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/patients",
+        "entity_key": "patients",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1patients~1{id}/put",
+        "#/paths/~1patients~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/orders/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/orders/{id}",
+      "oracle_id": "concurrency::same-field-domain::put:/orders/{id}",
+      "path_template": "/orders/{id}",
+      "runtime": {
+        "create_operation_id": "post:/orders",
+        "entity_key": "orders",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1orders~1{id}/put",
+        "#/paths/~1orders~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/orders/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/orders/{id}",
+      "oracle_id": "concurrency::same-field::put:/orders/{id}::id",
+      "path_template": "/orders/{id}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/orders",
+        "entity_key": "orders",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1orders~1{id}/put",
+        "#/paths/~1orders~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/prescriptions/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/prescriptions/{id}",
+      "oracle_id": "concurrency::same-field-domain::put:/prescriptions/{id}",
+      "path_template": "/prescriptions/{id}",
+      "runtime": {
+        "create_operation_id": "post:/prescriptions",
+        "entity_key": "prescriptions",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1prescriptions~1{id}/put",
+        "#/paths/~1prescriptions~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/prescriptions/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/prescriptions/{id}",
+      "oracle_id": "concurrency::same-field::put:/prescriptions/{id}::id",
+      "path_template": "/prescriptions/{id}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/prescriptions",
+        "entity_key": "prescriptions",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1prescriptions~1{id}/put",
+        "#/paths/~1prescriptions~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ndc",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/inventory/{ndc}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/inventory/{ndc}",
+      "oracle_id": "concurrency::same-field-domain::put:/inventory/{ndc}",
+      "path_template": "/inventory/{ndc}",
+      "runtime": {
+        "create_operation_id": "post:/inventory",
+        "entity_key": "inventory",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "ndc": "ndc"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1inventory~1{ndc}/put",
+        "#/paths/~1inventory~1{ndc}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ndc",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/inventory/{ndc}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/inventory/{ndc}",
+      "oracle_id": "concurrency::same-field::put:/inventory/{ndc}::ndc",
+      "path_template": "/inventory/{ndc}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ndc",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/inventory",
+        "entity_key": "inventory",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "ndc": "ndc"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1inventory~1{ndc}/put",
+        "#/paths/~1inventory~1{ndc}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    }
+  ],
+  "contract_oracles": [
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "get:/drugs",
+      "oracle_id": "contract::get:/drugs",
+      "path_template": "/drugs",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1drugs/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        400,
+        409
+      ],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "post:/drugs",
+      "oracle_id": "contract::post:/drugs",
+      "path_template": "/drugs",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "id"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1drugs/post",
+      "success_statuses": [
+        201
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "get:/drugs/{id}",
+      "oracle_id": "contract::get:/drugs/{id}",
+      "path_template": "/drugs/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1drugs~1{id}/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "PUT",
+      "operation_id": "put:/drugs/{id}",
+      "oracle_id": "contract::put:/drugs/{id}",
+      "path_template": "/drugs/{id}",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "id"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1drugs~1{id}/put",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "delete:/drugs/{id}",
+      "oracle_id": "contract::delete:/drugs/{id}",
+      "path_template": "/drugs/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1drugs~1{id}/delete",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "get:/patients",
+      "oracle_id": "contract::get:/patients",
+      "path_template": "/patients",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1patients/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        400,
+        409
+      ],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "post:/patients",
+      "oracle_id": "contract::post:/patients",
+      "path_template": "/patients",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "id"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1patients/post",
+      "success_statuses": [
+        201
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "get:/patients/{id}",
+      "oracle_id": "contract::get:/patients/{id}",
+      "path_template": "/patients/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1patients~1{id}/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "PUT",
+      "operation_id": "put:/patients/{id}",
+      "oracle_id": "contract::put:/patients/{id}",
+      "path_template": "/patients/{id}",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "id"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1patients~1{id}/put",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "delete:/patients/{id}",
+      "oracle_id": "contract::delete:/patients/{id}",
+      "path_template": "/patients/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1patients~1{id}/delete",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "get:/orders",
+      "oracle_id": "contract::get:/orders",
+      "path_template": "/orders",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1orders/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        400,
+        409
+      ],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "post:/orders",
+      "oracle_id": "contract::post:/orders",
+      "path_template": "/orders",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "id"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1orders/post",
+      "success_statuses": [
+        201
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "get:/orders/{id}",
+      "oracle_id": "contract::get:/orders/{id}",
+      "path_template": "/orders/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1orders~1{id}/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "PUT",
+      "operation_id": "put:/orders/{id}",
+      "oracle_id": "contract::put:/orders/{id}",
+      "path_template": "/orders/{id}",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "id"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1orders~1{id}/put",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "delete:/orders/{id}",
+      "oracle_id": "contract::delete:/orders/{id}",
+      "path_template": "/orders/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1orders~1{id}/delete",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "get:/prescriptions",
+      "oracle_id": "contract::get:/prescriptions",
+      "path_template": "/prescriptions",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1prescriptions/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        400,
+        409
+      ],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "post:/prescriptions",
+      "oracle_id": "contract::post:/prescriptions",
+      "path_template": "/prescriptions",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "id"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1prescriptions/post",
+      "success_statuses": [
+        201
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "get:/prescriptions/{id}",
+      "oracle_id": "contract::get:/prescriptions/{id}",
+      "path_template": "/prescriptions/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1prescriptions~1{id}/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "PUT",
+      "operation_id": "put:/prescriptions/{id}",
+      "oracle_id": "contract::put:/prescriptions/{id}",
+      "path_template": "/prescriptions/{id}",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "id"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1prescriptions~1{id}/put",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "delete:/prescriptions/{id}",
+      "oracle_id": "contract::delete:/prescriptions/{id}",
+      "path_template": "/prescriptions/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1prescriptions~1{id}/delete",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "get:/inventory",
+      "oracle_id": "contract::get:/inventory",
+      "path_template": "/inventory",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1inventory/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        400,
+        409
+      ],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "post:/inventory",
+      "oracle_id": "contract::post:/inventory",
+      "path_template": "/inventory",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "ndc"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1inventory/post",
+      "success_statuses": [
+        201
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "get:/inventory/{ndc}",
+      "oracle_id": "contract::get:/inventory/{ndc}",
+      "path_template": "/inventory/{ndc}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1inventory~1{ndc}/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "PUT",
+      "operation_id": "put:/inventory/{ndc}",
+      "oracle_id": "contract::put:/inventory/{ndc}",
+      "path_template": "/inventory/{ndc}",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "ndc"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1inventory~1{ndc}/put",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "delete:/inventory/{ndc}",
+      "oracle_id": "contract::delete:/inventory/{ndc}",
+      "path_template": "/inventory/{ndc}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1inventory~1{ndc}/delete",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        400
+      ],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "post:/stores",
+      "oracle_id": "contract::post:/stores",
+      "path_template": "/stores",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "phone",
+          "storeId"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1stores/post",
+      "success_statuses": [
+        201
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        404
+      ],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "get:/stores/{id}",
+      "oracle_id": "contract::get:/stores/{id}",
+      "path_template": "/stores/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1stores~1{id}/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        404,
+        409,
+        500
+      ],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "post:/dispense",
+      "oracle_id": "contract::post:/dispense",
+      "path_template": "/dispense",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "rxId"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1dispense/post",
+      "success_statuses": [
+        201
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        404,
+        409,
+        500
+      ],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "post:/process-rx",
+      "oracle_id": "contract::post:/process-rx",
+      "path_template": "/process-rx",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "rxId",
+          "storeId"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1process-rx/post",
+      "success_statuses": [
+        201
+      ]
+    }
+  ],
+  "counts": {
+    "concurrency_oracles": 12,
+    "contract_only_mutations": 8,
+    "contract_verifiers": 29,
+    "mutations": 18,
+    "operations": 29,
+    "state_verified_mutations": 10
+  },
+  "coverage_complete": true,
+  "manual_assumptions": [],
+  "mutation_coverage": [
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/drugs",
+      "path_template": "/drugs",
+      "source_pointer": "#/paths/~1drugs/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/drugs/{id}",
+      "path_template": "/drugs/{id}",
+      "source_pointer": "#/paths/~1drugs~1{id}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/drugs/{id}",
+      "path_template": "/drugs/{id}",
+      "source_pointer": "#/paths/~1drugs~1{id}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/patients",
+      "path_template": "/patients",
+      "source_pointer": "#/paths/~1patients/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/patients/{id}",
+      "path_template": "/patients/{id}",
+      "source_pointer": "#/paths/~1patients~1{id}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/patients/{id}",
+      "path_template": "/patients/{id}",
+      "source_pointer": "#/paths/~1patients~1{id}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/orders",
+      "path_template": "/orders",
+      "source_pointer": "#/paths/~1orders/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/orders/{id}",
+      "path_template": "/orders/{id}",
+      "source_pointer": "#/paths/~1orders~1{id}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/orders/{id}",
+      "path_template": "/orders/{id}",
+      "source_pointer": "#/paths/~1orders~1{id}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/prescriptions",
+      "path_template": "/prescriptions",
+      "source_pointer": "#/paths/~1prescriptions/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/prescriptions/{id}",
+      "path_template": "/prescriptions/{id}",
+      "source_pointer": "#/paths/~1prescriptions~1{id}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/prescriptions/{id}",
+      "path_template": "/prescriptions/{id}",
+      "source_pointer": "#/paths/~1prescriptions~1{id}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/inventory",
+      "path_template": "/inventory",
+      "source_pointer": "#/paths/~1inventory/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "put:/inventory/{ndc}",
+      "path_template": "/inventory/{ndc}",
+      "source_pointer": "#/paths/~1inventory~1{ndc}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "delete:/inventory/{ndc}",
+      "path_template": "/inventory/{ndc}",
+      "source_pointer": "#/paths/~1inventory~1{ndc}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/stores",
+      "path_template": "/stores",
+      "source_pointer": "#/paths/~1stores/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/dispense",
+      "path_template": "/dispense",
+      "source_pointer": "#/paths/~1dispense/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "post:/process-rx",
+      "path_template": "/process-rx",
+      "source_pointer": "#/paths/~1process-rx/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    }
+  ],
+  "policy": {
+    "all_operations_receive_contract_verifier": true,
+    "concurrency_executor_role": "transport-and-barrier-only",
+    "decision_owner": "generated-provengo-model-and-oracle-manifest",
+    "external_application_knowledge_allowed": false,
+    "state_claims_require_openapi-derived-observation": true,
+    "unobservable_mutations_are_reported_contract_only": true
+  },
+  "profile": "openapi-only-verification-and-concurrency",
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.3",
+    "sha256": "778e135d44190b98a07b1d84c315cb6f0ef9b8e9ad78340c3d17a8cbe53dc5ba",
+    "title": "Pharmacy API (Option 3: Idempotent DELETE + Conflict on Duplicates)",
+    "version": "1.2.0"
+  },
+  "state_oracles": [
+    {
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "create-visibility",
+      "method": "POST",
+      "observation": {
+        "method": "GET",
+        "path_binding_from_request_path": {},
+        "path_binding_from_response": {
+          "id": "id"
+        },
+        "path_template": "/drugs/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "post:/drugs",
+      "oracle_id": "state::post:/drugs",
+      "path_template": "/drugs",
+      "source_pointers": [
+        "#/paths/~1drugs/post",
+        "#/paths/~1drugs~1{id}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        201
+      ]
+    },
+    {
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "written-fields-persist",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/drugs/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/drugs/{id}",
+      "oracle_id": "state::put:/drugs/{id}",
+      "path_template": "/drugs/{id}",
+      "source_pointers": [
+        "#/paths/~1drugs~1{id}/put",
+        "#/paths/~1drugs~1{id}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        200
+      ]
+    },
+    {
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "create-visibility",
+      "method": "POST",
+      "observation": {
+        "method": "GET",
+        "path_binding_from_request_path": {},
+        "path_binding_from_response": {
+          "id": "id"
+        },
+        "path_template": "/patients/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "post:/patients",
+      "oracle_id": "state::post:/patients",
+      "path_template": "/patients",
+      "source_pointers": [
+        "#/paths/~1patients/post",
+        "#/paths/~1patients~1{id}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        201
+      ]
+    },
+    {
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "written-fields-persist",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/patients/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/patients/{id}",
+      "oracle_id": "state::put:/patients/{id}",
+      "path_template": "/patients/{id}",
+      "source_pointers": [
+        "#/paths/~1patients~1{id}/put",
+        "#/paths/~1patients~1{id}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        200
+      ]
+    },
+    {
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "create-visibility",
+      "method": "POST",
+      "observation": {
+        "method": "GET",
+        "path_binding_from_request_path": {},
+        "path_binding_from_response": {
+          "id": "id"
+        },
+        "path_template": "/orders/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "post:/orders",
+      "oracle_id": "state::post:/orders",
+      "path_template": "/orders",
+      "source_pointers": [
+        "#/paths/~1orders/post",
+        "#/paths/~1orders~1{id}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        201
+      ]
+    },
+    {
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "written-fields-persist",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/orders/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/orders/{id}",
+      "oracle_id": "state::put:/orders/{id}",
+      "path_template": "/orders/{id}",
+      "source_pointers": [
+        "#/paths/~1orders~1{id}/put",
+        "#/paths/~1orders~1{id}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        200
+      ]
+    },
+    {
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "create-visibility",
+      "method": "POST",
+      "observation": {
+        "method": "GET",
+        "path_binding_from_request_path": {},
+        "path_binding_from_response": {
+          "id": "id"
+        },
+        "path_template": "/prescriptions/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "post:/prescriptions",
+      "oracle_id": "state::post:/prescriptions",
+      "path_template": "/prescriptions",
+      "source_pointers": [
+        "#/paths/~1prescriptions/post",
+        "#/paths/~1prescriptions~1{id}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        201
+      ]
+    },
+    {
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "written-fields-persist",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/prescriptions/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/prescriptions/{id}",
+      "oracle_id": "state::put:/prescriptions/{id}",
+      "path_template": "/prescriptions/{id}",
+      "source_pointers": [
+        "#/paths/~1prescriptions~1{id}/put",
+        "#/paths/~1prescriptions~1{id}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        200
+      ]
+    },
+    {
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ndc",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "create-visibility",
+      "method": "POST",
+      "observation": {
+        "method": "GET",
+        "path_binding_from_request_path": {},
+        "path_binding_from_response": {
+          "ndc": "ndc"
+        },
+        "path_template": "/inventory/{ndc}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "post:/inventory",
+      "oracle_id": "state::post:/inventory",
+      "path_template": "/inventory",
+      "source_pointers": [
+        "#/paths/~1inventory/post",
+        "#/paths/~1inventory~1{ndc}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        201
+      ]
+    },
+    {
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ndc",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "written-fields-persist",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/inventory/{ndc}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/inventory/{ndc}",
+      "oracle_id": "state::put:/inventory/{ndc}",
+      "path_template": "/inventory/{ndc}",
+      "source_pointers": [
+        "#/paths/~1inventory~1{ndc}/put",
+        "#/paths/~1inventory~1{ndc}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        200
+      ]
+    }
+  ],
+  "unsupported_refs": []
+}

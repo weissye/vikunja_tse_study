@@ -1,0 +1,895 @@
+{
+  "coverage": {
+    "covered_operations": 29,
+    "total_operations": 29,
+    "uncovered_operations": []
+  },
+  "entities": [
+    {
+      "collection_path": "/drugs",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Drug",
+      "item_path": "/drugs/{id}",
+      "key": "drugs",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/Drug/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/drugs/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listDrugs",
+          "kind": "list",
+          "method": "GET",
+          "path": "/drugs",
+          "source_pointer": "#/paths/~1drugs/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            409
+          ],
+          "has_default_response": false,
+          "js_function": "createDrug",
+          "kind": "create",
+          "method": "POST",
+          "path": "/drugs",
+          "source_pointer": "#/paths/~1drugs/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteDrug",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/drugs/{id}",
+          "source_pointer": "#/paths/~1drugs~1{id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getDrug",
+          "kind": "get",
+          "method": "GET",
+          "path": "/drugs/{id}",
+          "source_pointer": "#/paths/~1drugs~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateDrug",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/drugs/{id}",
+          "source_pointer": "#/paths/~1drugs~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Drugs",
+      "provenance": [
+        {
+          "detail": "List operation GET /drugs response 200 references Drug",
+          "pointer": "#/paths/~1drugs/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Drug"
+    },
+    {
+      "collection_path": "/patients",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Patient",
+      "item_path": "/patients/{id}",
+      "key": "patients",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/Patient/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/patients/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listPatients",
+          "kind": "list",
+          "method": "GET",
+          "path": "/patients",
+          "source_pointer": "#/paths/~1patients/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            409
+          ],
+          "has_default_response": false,
+          "js_function": "createPatient",
+          "kind": "create",
+          "method": "POST",
+          "path": "/patients",
+          "source_pointer": "#/paths/~1patients/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deletePatient",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/patients/{id}",
+          "source_pointer": "#/paths/~1patients~1{id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getPatient",
+          "kind": "get",
+          "method": "GET",
+          "path": "/patients/{id}",
+          "source_pointer": "#/paths/~1patients~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updatePatient",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/patients/{id}",
+          "source_pointer": "#/paths/~1patients~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Patients",
+      "provenance": [
+        {
+          "detail": "List operation GET /patients response 200 references Patient",
+          "pointer": "#/paths/~1patients/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Patient"
+    },
+    {
+      "collection_path": "/orders",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Order",
+      "item_path": "/orders/{id}",
+      "key": "orders",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/Order/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/orders/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listOrders",
+          "kind": "list",
+          "method": "GET",
+          "path": "/orders",
+          "source_pointer": "#/paths/~1orders/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            409
+          ],
+          "has_default_response": false,
+          "js_function": "createOrder",
+          "kind": "create",
+          "method": "POST",
+          "path": "/orders",
+          "source_pointer": "#/paths/~1orders/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteOrder",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/orders/{id}",
+          "source_pointer": "#/paths/~1orders~1{id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getOrder",
+          "kind": "get",
+          "method": "GET",
+          "path": "/orders/{id}",
+          "source_pointer": "#/paths/~1orders~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateOrder",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/orders/{id}",
+          "source_pointer": "#/paths/~1orders~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Orders",
+      "provenance": [
+        {
+          "detail": "List operation GET /orders response 200 references Order",
+          "pointer": "#/paths/~1orders/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Order"
+    },
+    {
+      "collection_path": "/prescriptions",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Prescription",
+      "item_path": "/prescriptions/{id}",
+      "key": "prescriptions",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/Prescription/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/prescriptions/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listPrescriptions",
+          "kind": "list",
+          "method": "GET",
+          "path": "/prescriptions",
+          "source_pointer": "#/paths/~1prescriptions/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            409
+          ],
+          "has_default_response": false,
+          "js_function": "createPrescription",
+          "kind": "create",
+          "method": "POST",
+          "path": "/prescriptions",
+          "source_pointer": "#/paths/~1prescriptions/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deletePrescription",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/prescriptions/{id}",
+          "source_pointer": "#/paths/~1prescriptions~1{id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getPrescription",
+          "kind": "get",
+          "method": "GET",
+          "path": "/prescriptions/{id}",
+          "source_pointer": "#/paths/~1prescriptions~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updatePrescription",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/prescriptions/{id}",
+          "source_pointer": "#/paths/~1prescriptions~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Prescriptions",
+      "provenance": [
+        {
+          "detail": "List operation GET /prescriptions response 200 references Prescription",
+          "pointer": "#/paths/~1prescriptions/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Prescription"
+    },
+    {
+      "collection_path": "/inventory",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Inventory",
+      "item_path": "/inventory/{ndc}",
+      "key": "inventory",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "ndc"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'ndc' matches required schema property",
+          "pointer": "#/components/schemas/Inventory/properties/ndc",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['ndc']",
+          "pointer": "/inventory/{ndc}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listInventories",
+          "kind": "list",
+          "method": "GET",
+          "path": "/inventory",
+          "source_pointer": "#/paths/~1inventory/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            409
+          ],
+          "has_default_response": false,
+          "js_function": "createInventory",
+          "kind": "create",
+          "method": "POST",
+          "path": "/inventory",
+          "source_pointer": "#/paths/~1inventory/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteInventory",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/inventory/{ndc}",
+          "source_pointer": "#/paths/~1inventory~1{ndc}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getInventory",
+          "kind": "get",
+          "method": "GET",
+          "path": "/inventory/{ndc}",
+          "source_pointer": "#/paths/~1inventory~1{ndc}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateInventory",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/inventory/{ndc}",
+          "source_pointer": "#/paths/~1inventory~1{ndc}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Inventories",
+      "provenance": [
+        {
+          "detail": "List operation GET /inventory response 200 references Inventory",
+          "pointer": "#/paths/~1inventory/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Inventory"
+    },
+    {
+      "collection_path": "/stores",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Store",
+      "item_path": "/stores/{id}",
+      "key": "stores",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/stores/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/stores/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            400
+          ],
+          "has_default_response": false,
+          "js_function": "createStore",
+          "kind": "create",
+          "method": "POST",
+          "path": "/stores",
+          "source_pointer": "#/paths/~1stores/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "getStore",
+          "kind": "get",
+          "method": "GET",
+          "path": "/stores/{id}",
+          "source_pointer": "#/paths/~1stores~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Stores",
+      "provenance": [
+        {
+          "detail": "Item GET /stores/{id} response 200 references Store",
+          "pointer": "#/paths/~1stores~1{id}/get/responses/200",
+          "rule": "E3c:item_response_schema"
+        }
+      ],
+      "schema_name": "Store"
+    }
+  ],
+  "isolation_audit": {
+    "denied_file_count": 0,
+    "policy": "allow-listed OpenAPI/config inputs only; environment-specific paths excluded from deterministic report"
+  },
+  "meta": {
+    "cli_args": {
+      "base_url": "http://127.0.0.1:5000",
+      "command": "generate",
+      "generator_version": "0.25.5",
+      "instances_per_action": 1,
+      "instances_per_entity": 2,
+      "name": "pharmacy",
+      "seed": 1,
+      "source_openapi_sha256": "778e135d44190b98a07b1d84c315cb6f0ef9b8e9ad78340c3d17a8cbe53dc5ba",
+      "story_profile": "full"
+    },
+    "openapi_version": "3.0.3",
+    "title": "Pharmacy API (Option 3: Idempotent DELETE + Conflict on Duplicates)"
+  },
+  "reproducibility": {
+    "artifact_sha256": {
+      "dependency_graph_json": "c655f0171bf54f9730da4e72ed5efd1414fc63eb191651bfc3feed2d9dc500fa",
+      "interfaces_js": "edc0ca237bf34ed8fe7dce47365affd26849ad80e5e2ac29e63f9967f80deb45",
+      "stories_js": "73b00c59bccaad360d99f5e8c08e8ccfe2b0249b5f35db227c9f416fb36a73ce"
+    },
+    "base_url": "http://127.0.0.1:5000",
+    "content_fingerprint_sha256": "cc9efe1b6cc73aabb65acfbe7cdeb20905a6c3872a63923a2ec8d6b9460ba1fb",
+    "generator_version": "0.25.5",
+    "instances_per_action": 1,
+    "instances_per_entity": 2,
+    "scope": "semantic inputs and generated artifacts; filesystem paths and run-time ports are excluded",
+    "seed": 1,
+    "source_openapi_sha256": "778e135d44190b98a07b1d84c315cb6f0ef9b8e9ad78340c3d17a8cbe53dc5ba"
+  },
+  "response_code_coverage": [
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/drugs"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400",
+        "409"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/drugs"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/drugs/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/drugs/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/drugs/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/patients"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400",
+        "409"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/patients"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/patients/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/patients/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/patients/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/orders"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400",
+        "409"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/orders"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/orders/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/orders/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/orders/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/prescriptions"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400",
+        "409"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/prescriptions"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/prescriptions/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/prescriptions/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/prescriptions/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/inventory"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400",
+        "409"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/inventory"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/inventory/{ndc}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/inventory/{ndc}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/inventory/{ndc}"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/stores"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/stores/{id}"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "404",
+        "409",
+        "500"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/dispense"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "404",
+        "409",
+        "500"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/process-rx"
+    }
+  ],
+  "security_schemes": {},
+  "standalone_operations": [
+    {
+      "error_codes": [
+        404,
+        409,
+        500
+      ],
+      "has_default_response": false,
+      "js_function": "dispense",
+      "method": "POST",
+      "path": "/dispense",
+      "source_pointer": "#/paths/~1dispense/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [
+        404,
+        409,
+        500
+      ],
+      "has_default_response": false,
+      "js_function": "processRx",
+      "method": "POST",
+      "path": "/process-rx",
+      "source_pointer": "#/paths/~1process-rx/post",
+      "success_codes": [
+        201
+      ]
+    }
+  ],
+  "unsupported_constructs": {
+    "ambiguities": [
+      "Key inference for entity 'stores' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema."
+    ],
+    "document_level": [],
+    "remote_refs": []
+  },
+  "warnings": []
+}

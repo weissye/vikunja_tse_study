@@ -1,0 +1,60 @@
+﻿{
+    "schema_version":  1,
+    "stage":  "gitea-stage6.5d-serial-dependency-control",
+    "source_spec_sha256":  "a0baa9a766c22492bd8c45744157c611d3e95cfc0dc73d6f5d14f294cdddce38",
+    "environment":  {
+                        "base_url":  "http://127.0.0.1:3477/api/v1",
+                        "trials":  2,
+                        "authenticated_user":  "sbt-gitea-20260924_122158_450",
+                        "container":  "gitea-stage1-server"
+                    },
+    "claim_rule":  "A readable 201 producer is eligible for a later story fix; a rejected producer remains unavailable.",
+    "results":  [
+                    {
+                        "trial":  1,
+                        "family":  "user-hook",
+                        "verdict":  "DEPENDENCY_AVAILABLE",
+                        "reason":  "documented-config-url-creates-readable-hook",
+                        "statuses":  {
+                                         "empty_config":  422,
+                                         "local_url":  201,
+                                         "read":  200
+                                     }
+                    },
+                    {
+                        "trial":  1,
+                        "family":  "oauth2-application",
+                        "verdict":  "DEPENDENCY_AVAILABLE",
+                        "reason":  "name-and-redirect-create-readable-application",
+                        "statuses":  {
+                                         "empty":  422,
+                                         "name":  422,
+                                         "name_and_redirect":  201,
+                                         "redirect_read":  200
+                                     }
+                    },
+                    {
+                        "trial":  2,
+                        "family":  "user-hook",
+                        "verdict":  "DEPENDENCY_AVAILABLE",
+                        "reason":  "documented-config-url-creates-readable-hook",
+                        "statuses":  {
+                                         "empty_config":  422,
+                                         "local_url":  201,
+                                         "read":  200
+                                     }
+                    },
+                    {
+                        "trial":  2,
+                        "family":  "oauth2-application",
+                        "verdict":  "DEPENDENCY_AVAILABLE",
+                        "reason":  "name-and-redirect-create-readable-application",
+                        "statuses":  {
+                                         "empty":  422,
+                                         "name":  422,
+                                         "name_and_redirect":  201,
+                                         "redirect_read":  200
+                                     }
+                    }
+                ]
+}

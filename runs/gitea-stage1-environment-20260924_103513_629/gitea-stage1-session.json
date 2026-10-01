@@ -1,0 +1,60 @@
+﻿{
+    "schema_version":  1,
+    "experiment":  "gitea-stage1-frozen-environment",
+    "prepared_utc":  "2026-09-24T07:35:16.7568867Z",
+    "status":  "READY",
+    "system":  "Gitea",
+    "expected_version":  "1.27.3",
+    "reported_version":  "1.27.3",
+    "root_url":  "http://127.0.0.1:3477",
+    "api_base_url":  "http://127.0.0.1:3477/api/v1",
+    "swagger_url":  "http://127.0.0.1:3477/swagger.v1.json",
+    "openapi_file":  "model/gitea/gitea-1.27.3-swagger.json",
+    "openapi_sha256":  "a0baa9a766c22492bd8c45744157c611d3e95cfc0dc73d6f5d14f294cdddce38",
+    "compose_file":  "deployment/gitea_stage1/docker-compose.yml",
+    "compose_sha256":  "81fc1060b7f347a97e3c7a624b44ee949a3399f29ccf6d4b9c09c4ac82d05775",
+    "compose_project":  "gitea_stage1",
+    "containers":  {
+                       "gitea":  "gitea-stage1-server",
+                       "postgres":  "gitea-stage1-db"
+                   },
+    "images":  {
+                   "gitea":  {
+                                 "configured_image":  "docker.gitea.com/gitea:1.27.3",
+                                 "image_id":  "sha256:79814cfc668dec4406178316613c1a918e0f29cd123cee895faf1ca58bab95b3",
+                                 "repo_digests":  [
+                                                      "docker.gitea.com/gitea@sha256:87a67ee09d3ae0d1df5fda5dcda3e2a1f9236a45b0a59025d6e00e46adc43bef"
+                                                  ]
+                             },
+                   "postgres":  {
+                                    "configured_image":  "postgres:16-alpine",
+                                    "image_id":  "sha256:81bd698b4594e751a3269e4dcd3e03a4a0ec0daf7b72e7aa1abd43cce9887542",
+                                    "repo_digests":  [
+                                                         "postgres@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea"
+                                                     ]
+                                }
+               },
+    "runtime_versions":  {
+                             "docker_server":  "24.0.7",
+                             "docker_compose":  "2.23.3-desktop.2",
+                             "gitea_cli":  "gitea version 1.27.3 built with go1.26.7-X:jsonv2 : bindata, timetzdata,",
+                             "postgres_cli":  "psql (PostgreSQL) 16.15"
+                         },
+    "research_identity":  {
+                              "username":  "sbt-gitea-20260924_103513_629",
+                              "authenticated_user_id":  2,
+                              "administrator":  false,
+                              "password_recorded":  false,
+                              "token_recorded":  false,
+                              "token_exported_to_current_process":  true,
+                              "token_environment_variable":  "GITEA_API_TOKEN"
+                          },
+    "bootstrap_identity":  {
+                               "username":  "sbt-bootstrap-20260924_103513_629",
+                               "administrator":  true,
+                               "password_recorded":  false,
+                               "token_created":  false
+                           },
+    "reset_state":  true,
+    "methodology_boundary":  "Environment, identity, instance OpenAPI capture, and provenance only; no generated test was executed."
+}

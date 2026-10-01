@@ -1,0 +1,660 @@
+{
+  "schema_version": 1,
+  "stage": "Gitea Stage 6.12 isolated directed diagnostic",
+  "source_spec_sha256": "a0baa9a766c22492bd8c45744157c611d3e95cfc0dc73d6f5d14f294cdddce38",
+  "created_utc": "2026-09-24T11:25:08.973984+00:00",
+  "scope": "disclosed selected operations; independent of the OpenAPI-only generated campaign",
+  "parameters": {
+    "trials": 5,
+    "prefix_rounds": 4,
+    "quiescence_ms": 150,
+    "seed": 20261005
+  },
+  "counts": {
+    "PASS": 20,
+    "SEMANTIC_CANDIDATE": 0,
+    "INCONCLUSIVE": 0
+  },
+  "results": [
+    {
+      "trial": 1,
+      "case": "org.full_name",
+      "path": "/orgs/s612-20260924_112442_509-1-org",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-1-org-full_name",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": "s612-20260924_112442_509-1-org-full_name-a",
+      "legal_values": [
+        "s612-20260924_112442_509-1-org-full_name-a",
+        "s612-20260924_112442_509-1-org-full_name-b"
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 399100
+    },
+    {
+      "trial": 1,
+      "case": "oauth.name",
+      "path": "/user/applications/oauth2/11",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-1-oauth-name",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": "s612-20260924_112442_509-1-oauth-name-a",
+      "legal_values": [
+        "s612-20260924_112442_509-1-oauth-name-a",
+        "s612-20260924_112442_509-1-oauth-name-b"
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 485100
+    },
+    {
+      "trial": 1,
+      "case": "oauth.confidential_client",
+      "path": "/user/applications/oauth2/12",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-1-oauth-confidential_client",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": true,
+      "legal_values": [
+        true,
+        false
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 79600
+    },
+    {
+      "trial": 1,
+      "case": "oauth.skip_secondary_authorization",
+      "path": "/user/applications/oauth2/13",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-1-oauth-skip_secondary_authorization",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": true,
+      "legal_values": [
+        true,
+        false
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 524600
+    },
+    {
+      "trial": 2,
+      "case": "org.full_name",
+      "path": "/orgs/s612-20260924_112442_509-2-org",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-2-org-full_name",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": "s612-20260924_112442_509-2-org-full_name-b",
+      "legal_values": [
+        "s612-20260924_112442_509-2-org-full_name-a",
+        "s612-20260924_112442_509-2-org-full_name-b"
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 554300
+    },
+    {
+      "trial": 2,
+      "case": "oauth.name",
+      "path": "/user/applications/oauth2/14",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-2-oauth-name",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": "s612-20260924_112442_509-2-oauth-name-b",
+      "legal_values": [
+        "s612-20260924_112442_509-2-oauth-name-a",
+        "s612-20260924_112442_509-2-oauth-name-b"
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 144800
+    },
+    {
+      "trial": 2,
+      "case": "oauth.confidential_client",
+      "path": "/user/applications/oauth2/15",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-2-oauth-confidential_client",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": true,
+      "legal_values": [
+        true,
+        false
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 421400
+    },
+    {
+      "trial": 2,
+      "case": "oauth.skip_secondary_authorization",
+      "path": "/user/applications/oauth2/16",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-2-oauth-skip_secondary_authorization",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": true,
+      "legal_values": [
+        true,
+        false
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 109300
+    },
+    {
+      "trial": 3,
+      "case": "org.full_name",
+      "path": "/orgs/s612-20260924_112442_509-3-org",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-3-org-full_name",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": "s612-20260924_112442_509-3-org-full_name-b",
+      "legal_values": [
+        "s612-20260924_112442_509-3-org-full_name-a",
+        "s612-20260924_112442_509-3-org-full_name-b"
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 81600
+    },
+    {
+      "trial": 3,
+      "case": "oauth.name",
+      "path": "/user/applications/oauth2/17",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-3-oauth-name",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": "s612-20260924_112442_509-3-oauth-name-b",
+      "legal_values": [
+        "s612-20260924_112442_509-3-oauth-name-a",
+        "s612-20260924_112442_509-3-oauth-name-b"
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 317800
+    },
+    {
+      "trial": 3,
+      "case": "oauth.confidential_client",
+      "path": "/user/applications/oauth2/18",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-3-oauth-confidential_client",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": false,
+      "legal_values": [
+        true,
+        false
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 119500
+    },
+    {
+      "trial": 3,
+      "case": "oauth.skip_secondary_authorization",
+      "path": "/user/applications/oauth2/19",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-3-oauth-skip_secondary_authorization",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": false,
+      "legal_values": [
+        true,
+        false
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 141500
+    },
+    {
+      "trial": 4,
+      "case": "org.full_name",
+      "path": "/orgs/s612-20260924_112442_509-4-org",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-4-org-full_name",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": "s612-20260924_112442_509-4-org-full_name-b",
+      "legal_values": [
+        "s612-20260924_112442_509-4-org-full_name-a",
+        "s612-20260924_112442_509-4-org-full_name-b"
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 371700
+    },
+    {
+      "trial": 4,
+      "case": "oauth.name",
+      "path": "/user/applications/oauth2/20",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-4-oauth-name",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": "s612-20260924_112442_509-4-oauth-name-a",
+      "legal_values": [
+        "s612-20260924_112442_509-4-oauth-name-a",
+        "s612-20260924_112442_509-4-oauth-name-b"
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 153200
+    },
+    {
+      "trial": 4,
+      "case": "oauth.confidential_client",
+      "path": "/user/applications/oauth2/21",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-4-oauth-confidential_client",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": false,
+      "legal_values": [
+        true,
+        false
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 482300
+    },
+    {
+      "trial": 4,
+      "case": "oauth.skip_secondary_authorization",
+      "path": "/user/applications/oauth2/22",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-4-oauth-skip_secondary_authorization",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": true,
+      "legal_values": [
+        true,
+        false
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 394700
+    },
+    {
+      "trial": 5,
+      "case": "org.full_name",
+      "path": "/orgs/s612-20260924_112442_509-5-org",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-5-org-full_name",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": "s612-20260924_112442_509-5-org-full_name-a",
+      "legal_values": [
+        "s612-20260924_112442_509-5-org-full_name-a",
+        "s612-20260924_112442_509-5-org-full_name-b"
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 105600
+    },
+    {
+      "trial": 5,
+      "case": "oauth.name",
+      "path": "/user/applications/oauth2/23",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-5-oauth-name",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": "s612-20260924_112442_509-5-oauth-name-a",
+      "legal_values": [
+        "s612-20260924_112442_509-5-oauth-name-a",
+        "s612-20260924_112442_509-5-oauth-name-b"
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 141900
+    },
+    {
+      "trial": 5,
+      "case": "oauth.confidential_client",
+      "path": "/user/applications/oauth2/24",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-5-oauth-confidential_client",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": true,
+      "legal_values": [
+        true,
+        false
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 388600
+    },
+    {
+      "trial": 5,
+      "case": "oauth.skip_secondary_authorization",
+      "path": "/user/applications/oauth2/25",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-5-oauth-skip_secondary_authorization",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": true,
+      "legal_values": [
+        true,
+        false
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 141400
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "excluded_operations": [
+    "updateAlbumInfo",
+    "updateNotification"
+  ],
+  "missing_operations": [],
+  "new_target_overlap": true,
+  "observed_operations": [
+    "updateSharedLink"
+  ],
+  "overlap_count": 4,
+  "overlapping_oracle_ids": [
+    "concurrency::disjoint3::updateSharedLink::allowDownload::allowUpload::showMetadata",
+    "concurrency::disjoint::updateSharedLink::allowDownload::allowUpload",
+    "concurrency::same-field::updateSharedLink::allowDownload",
+    "concurrency::same-field::updateSharedLink::allowUpload"
+  ],
+  "overlaps_by_operation": {
+    "updateSharedLink": 4
+  },
+  "ready_operations": [
+    "updateSharedLink"
+  ]
+}

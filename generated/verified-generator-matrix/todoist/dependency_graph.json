@@ -1,0 +1,92 @@
+{
+  "creation_order": [
+    "labels",
+    "projects",
+    "sections",
+    "tasks",
+    "comments"
+  ],
+  "cycle_edges_removed": [],
+  "deletion_order": [
+    "comments",
+    "tasks",
+    "sections",
+    "projects",
+    "labels"
+  ],
+  "edges": [
+    {
+      "confidence": 0.85,
+      "field_name": "project_id",
+      "provenance": [
+        {
+          "detail": "Create operation query parameter 'project_id' matches entity 'projects'",
+          "pointer": "#/paths/~1sections/post/parameters",
+          "rule": "D2q:D_key_field_exact_match"
+        }
+      ],
+      "source": "sections",
+      "target": "projects"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "project_id",
+      "provenance": [
+        {
+          "detail": "Create request body property 'project_id' matches entity 'projects'",
+          "pointer": "#/paths/~1tasks/post/requestBody/content/application~1json/properties/project_id",
+          "rule": "D2:D_key_field_exact_match"
+        }
+      ],
+      "source": "tasks",
+      "target": "projects"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "section_id",
+      "provenance": [
+        {
+          "detail": "Create request body property 'section_id' matches entity 'sections'",
+          "pointer": "#/paths/~1tasks/post/requestBody/content/application~1json/properties/section_id",
+          "rule": "D2:D_key_field_exact_match"
+        }
+      ],
+      "source": "tasks",
+      "target": "sections"
+    },
+    {
+      "confidence": 0.85,
+      "field_name": "task_id",
+      "provenance": [
+        {
+          "detail": "Create operation query parameter 'task_id' matches entity 'tasks'",
+          "pointer": "#/paths/~1comments/post/parameters",
+          "rule": "D2q:D_key_field_exact_match"
+        }
+      ],
+      "source": "comments",
+      "target": "tasks"
+    },
+    {
+      "confidence": 0.85,
+      "field_name": "project_id",
+      "provenance": [
+        {
+          "detail": "Create operation query parameter 'project_id' matches entity 'projects'",
+          "pointer": "#/paths/~1comments/post/parameters",
+          "rule": "D2q:D_key_field_exact_match"
+        }
+      ],
+      "source": "comments",
+      "target": "projects"
+    }
+  ],
+  "had_cycle": false,
+  "nodes": [
+    "projects",
+    "sections",
+    "tasks",
+    "comments",
+    "labels"
+  ]
+}

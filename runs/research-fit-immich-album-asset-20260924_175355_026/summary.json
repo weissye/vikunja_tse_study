@@ -1,0 +1,44 @@
+{
+  "candidate": "immich",
+  "counts": {
+    "INCONCLUSIVE": 0,
+    "PASS": 1,
+    "SEMANTIC_CANDIDATE": 0
+  },
+  "parameters": {
+    "prefix_rounds": 4,
+    "seed": 20261420,
+    "trials": 1
+  },
+  "results": [
+    {
+      "asset_ids": {
+        "a": "92c7a69e-7bb7-4418-a867-77e7fbf79d22",
+        "b": "ca374a0b-6b8e-4f5c-ad91-e009e9ec8853"
+      },
+      "cleanup_album_status": 204,
+      "cleanup_assets_status": 204,
+      "epoch_id": "immich-membership-d2f35657fb17",
+      "final_count": 1,
+      "final_members": [
+        "ca374a0b-6b8e-4f5c-ad91-e009e9ec8853"
+      ],
+      "http_witness": true,
+      "overlap": true,
+      "prefix_rounds_verified": 4,
+      "real_thumbnail_verified": true,
+      "reason": "both-disjoint-membership-updates-persisted",
+      "repeat_count": 1,
+      "repeat_members": [
+        "ca374a0b-6b8e-4f5c-ad91-e009e9ec8853"
+      ],
+      "trial": 1,
+      "two_serial_orders_verified": true,
+      "verdict": "PASS"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "directed diagnostic; separate from generated campaign",
+  "source_spec_sha256": "51719f0b6573ca75eb51834b01a7fdb9e963c9d60fcce813f10c1463a987b866",
+  "version": "v3.2.0"
+}

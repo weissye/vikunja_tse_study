@@ -1,0 +1,330 @@
+{
+  "oracles": [
+    {
+      "assertions": [
+        {
+          "type": "same_resource_id"
+        },
+        {
+          "fields": [
+            "title"
+          ],
+          "type": "written_fields_persist"
+        }
+      ],
+      "binding": {
+        "project": "$trigger.response.id"
+      },
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "projects-read",
+        "path_template": "/projects/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "project-create-visibility",
+      "phase": "create-visibility",
+      "resource": "project",
+      "trigger": {
+        "method": "POST",
+        "operation_id": "projects-create",
+        "path_template": "/projects",
+        "success_statuses": [
+          201
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "fields": [
+            "title"
+          ],
+          "type": "written_fields_persist"
+        }
+      ],
+      "binding": {
+        "project": "$trigger.path.project"
+      },
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "projects-read",
+        "path_template": "/projects/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "project-update-persistence",
+      "phase": "update-persistence",
+      "resource": "project",
+      "trigger": {
+        "method": "PUT",
+        "operation_id": "projects-update",
+        "path_template": "/projects/{id}",
+        "success_statuses": [
+          200
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "type": "resource_absent"
+        }
+      ],
+      "binding": {
+        "project": "$trigger.path.project"
+      },
+      "confidence": "high",
+      "observation": {
+        "absence_statuses": [
+          404
+        ],
+        "method": "GET",
+        "operation_id": "projects-read",
+        "path_template": "/projects/{id}"
+      },
+      "oracle_id": "project-delete-absence",
+      "phase": "delete-absence",
+      "resource": "project",
+      "trigger": {
+        "method": "DELETE",
+        "operation_id": "projects-delete",
+        "path_template": "/projects/{id}",
+        "success_statuses": [
+          204
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "type": "same_resource_id"
+        },
+        {
+          "fields": [
+            "title"
+          ],
+          "type": "written_fields_persist"
+        }
+      ],
+      "binding": {
+        "task": "$trigger.response.id"
+      },
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "tasks-read",
+        "path_template": "/tasks/{task}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "task-create-visibility",
+      "phase": "create-visibility",
+      "resource": "task",
+      "trigger": {
+        "method": "POST",
+        "operation_id": "tasks-create",
+        "path_template": "/projects/{project}/tasks",
+        "success_statuses": [
+          201
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "fields": [
+            "title",
+            "done"
+          ],
+          "type": "written_fields_persist"
+        }
+      ],
+      "binding": {
+        "task": "$trigger.path.task"
+      },
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "tasks-read",
+        "path_template": "/tasks/{task}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "task-update-persistence",
+      "phase": "update-persistence",
+      "resource": "task",
+      "trigger": {
+        "method": "PUT",
+        "operation_id": "tasks-update",
+        "path_template": "/tasks/{task}",
+        "success_statuses": [
+          200
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "type": "resource_absent"
+        }
+      ],
+      "binding": {
+        "task": "$trigger.path.task"
+      },
+      "confidence": "high",
+      "observation": {
+        "absence_statuses": [
+          404
+        ],
+        "method": "GET",
+        "operation_id": "tasks-read",
+        "path_template": "/tasks/{task}"
+      },
+      "oracle_id": "task-delete-absence",
+      "phase": "delete-absence",
+      "resource": "task",
+      "trigger": {
+        "method": "DELETE",
+        "operation_id": "tasks-delete",
+        "path_template": "/tasks/{task}",
+        "success_statuses": [
+          204
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "type": "same_resource_id"
+        },
+        {
+          "fields": [
+            "title"
+          ],
+          "type": "written_fields_persist"
+        }
+      ],
+      "binding": {
+        "label": "$trigger.response.id"
+      },
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "labels-read",
+        "path_template": "/labels/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "label-create-visibility",
+      "phase": "create-visibility",
+      "resource": "label",
+      "trigger": {
+        "method": "POST",
+        "operation_id": "labels-create",
+        "path_template": "/labels",
+        "success_statuses": [
+          201
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "fields": [
+            "title"
+          ],
+          "type": "written_fields_persist"
+        }
+      ],
+      "binding": {
+        "label": "$trigger.path.label"
+      },
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "labels-read",
+        "path_template": "/labels/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "label-update-persistence",
+      "phase": "update-persistence",
+      "resource": "label",
+      "trigger": {
+        "method": "PUT",
+        "operation_id": "labels-update",
+        "path_template": "/labels/{id}",
+        "success_statuses": [
+          200
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "type": "resource_absent"
+        }
+      ],
+      "binding": {
+        "label": "$trigger.path.label"
+      },
+      "confidence": "high",
+      "observation": {
+        "absence_statuses": [
+          403,
+          404
+        ],
+        "method": "GET",
+        "operation_id": "labels-read",
+        "path_template": "/labels/{id}"
+      },
+      "oracle_id": "label-delete-absence",
+      "phase": "delete-absence",
+      "resource": "label",
+      "trigger": {
+        "method": "DELETE",
+        "operation_id": "labels-delete",
+        "path_template": "/labels/{id}",
+        "success_statuses": [
+          204
+        ]
+      }
+    }
+  ],
+  "policy": {
+    "evidence_basis": "external HTTP trace only",
+    "label_403_requires_predelete_visibility": true,
+    "label_delete_absence_statuses": [
+      403,
+      404
+    ],
+    "stable_update_fields": {
+      "label": [
+        "title"
+      ],
+      "project": [
+        "title"
+      ],
+      "task": [
+        "title",
+        "done"
+      ]
+    },
+    "violation_is": "semantic anomaly candidate, not a confirmed product bug"
+  },
+  "profile": "verified-resource-lifecycles",
+  "schema_version": 2,
+  "source": {
+    "kind": "openapi-inferred",
+    "openapi_sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941"
+  }
+}

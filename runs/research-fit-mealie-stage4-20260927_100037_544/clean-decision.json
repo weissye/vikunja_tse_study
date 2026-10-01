@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "source": "research-fit-mealie-stage4-20260927_100037_544",
+  "seeds": [
+    {
+      "seed": 20261818,
+      "actual_overlap_epochs": 7,
+      "max_verified_prefix_rounds": 8,
+      "coverage_state": "VERIFIED_PREFIX_AND_ORACLE_COVERAGE",
+      "mealplan_put_statuses": {
+        "200": 32,
+        "409": 4,
+        "422": 2
+      },
+      "concurrency_verdicts": {
+        "PASS": 6,
+        "INCONCLUSIVE": 1
+      },
+      "witnesses": [
+        {
+          "oracle_id": "concurrency::same-field::update_one_api_households_mealplans_rules__item_id__put::day",
+          "epoch_id": "generated-epoch-0",
+          "verdict": "PASS",
+          "reason": null,
+          "trigger_statuses": [
+            200,
+            200
+          ],
+          "intervening_same_resource_writes": [],
+          "observation_event": 344
+        },
+        {
+          "oracle_id": "concurrency::same-field::update_one_api_households_mealplans_rules__item_id__put::entryType",
+          "epoch_id": "generated-epoch-1",
+          "verdict": "PASS",
+          "reason": null,
+          "trigger_statuses": [
+            200,
+            200
+          ],
+          "intervening_same_resource_writes": [],
+          "observation_event": 309
+        },
+        {
+          "oracle_id": "concurrency::same-field::update_one_api_recipes_timeline_events__item_id__put::subject",
+          "epoch_id": "generated-epoch-10",
+          "verdict": "PASS",
+          "reason": null,
+          "trigger_statuses": [
+            200,
+            200
+          ],
+          "intervening_same_resource_writes": [],
+          "observation_event": 352
+        },
+        {
+          "oracle_id": "concurrency::same-field::update_one_api_households_mealplans_rules__item_id__put::queryFilterString",
+          "epoch_id": "generated-epoch-2",
+          "verdict": "PASS",
+          "reason": null,
+          "trigger_statuses": [
+            200,
+            200
+          ],
+          "intervening_same_resource_writes": [],
+          "observation_event": 328
+        },
+        {
+          "oracle_id": "concurrency::same-field::update_one_api_households_mealplans__item_id__put::date",
+          "epoch_id": "generated-epoch-3",
+          "verdict": "PASS",
+          "reason": null,
+          "trigger_statuses": [
+            200,
+            200
+          ],
+          "intervening_same_resource_writes": [],
+          "observation_event": 336
+        },
+        {
+          "oracle_id": "concurrency::same-field::update_one_api_households_mealplans__item_id__put::entryType",
+          "epoch_id": "generated-epoch-4",
+          "verdict": "PASS",
+          "reason": null,
+          "trigger_statuses": [
+            200,
+            200
+          ],
+          "intervening_same_resource_writes": [],
+          "observation_event": 319
+        },
+        {
+          "oracle_id": "concurrency::same-field::update_one_api_households_mealplans__item_id__put::groupId",
+          "epoch_id": "generated-epoch-5",
+          "verdict": "INCONCLUSIVE",
+          "reason": "sequential-control-failed",
+          "trigger_statuses": [
+            409,
+            409
+          ],
+          "intervening_same_resource_writes": [],
+          "observation_event": 300
+        }
+      ],
+      "assessment": "No semantic defect established by inconclusive witnesses"
+    }
+  ]
+}

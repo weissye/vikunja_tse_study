@@ -1,0 +1,6315 @@
+{
+  "coverage": {
+    "covered_operations": 265,
+    "total_operations": 265,
+    "uncovered_operations": []
+  },
+  "entities": [
+    {
+      "collection_path": "/activities",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "albumId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'albumId' matches entity 'albums'",
+              "pointer": "#/paths/~1activities/post/requestBody/content/application~1json/properties/albumId",
+              "rule": "D2:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "albums"
+        },
+        {
+          "confidence": 0.9,
+          "field_name": "assetId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'assetId' matches entity 'assets'",
+              "pointer": "#/paths/~1activities/post/requestBody/content/application~1json/properties/assetId",
+              "rule": "D2:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "assets"
+        }
+      ],
+      "display_name": "ActivityResponseDto",
+      "item_path": "/activities/{id}",
+      "key": "activities",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/ActivityResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/activities/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getActivities",
+          "kind": "list",
+          "method": "GET",
+          "path": "/activities",
+          "source_pointer": "#/paths/~1activities/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createActivity",
+          "kind": "create",
+          "method": "POST",
+          "path": "/activities",
+          "source_pointer": "#/paths/~1activities/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteActivity",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/activities/{id}",
+          "source_pointer": "#/paths/~1activities~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        }
+      ],
+      "plural_display_name": "ActivityResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /activities response 200 references ActivityResponseDto",
+          "pointer": "#/paths/~1activities/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "ActivityResponseDto"
+    },
+    {
+      "collection_path": "/admin/database-backups",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "DatabaseBackupListResponseDto",
+      "item_path": "/admin/database-backups/{filename}",
+      "key": "admin/database-backups",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "filename"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'filename' has no matching schema property; using path evidence only",
+          "pointer": "/admin/database-backups/{filename}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['filename']",
+          "pointer": "/admin/database-backups/{filename}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteDatabaseBackup",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/admin/database-backups",
+          "source_pointer": "#/paths/~1admin~1database-backups/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listDatabaseBackups",
+          "kind": "list",
+          "method": "GET",
+          "path": "/admin/database-backups",
+          "source_pointer": "#/paths/~1admin~1database-backups/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "downloadDatabaseBackup",
+          "kind": "get",
+          "method": "GET",
+          "path": "/admin/database-backups/{filename}",
+          "source_pointer": "#/paths/~1admin~1database-backups~1{filename}/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "DatabaseBackupListResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /admin/database-backups response 200 references DatabaseBackupListResponseDto",
+          "pointer": "#/paths/~1admin~1database-backups/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "DatabaseBackupListResponseDto"
+    },
+    {
+      "collection_path": "/admin/integrity/report",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "IntegrityReportResponseDto",
+      "item_path": "/admin/integrity/report/{id}",
+      "key": "admin/integrity/report",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/admin/integrity/report/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/admin/integrity/report/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getIntegrityReport",
+          "kind": "list",
+          "method": "GET",
+          "path": "/admin/integrity/report",
+          "source_pointer": "#/paths/~1admin~1integrity~1report/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteIntegrityReport",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/admin/integrity/report/{id}",
+          "source_pointer": "#/paths/~1admin~1integrity~1report~1{id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getIntegrityReportFile",
+          "kind": "action",
+          "method": "GET",
+          "path": "/admin/integrity/report/{id}/file",
+          "source_pointer": "#/paths/~1admin~1integrity~1report~1{id}~1file/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getIntegrityReportCsv",
+          "kind": "action",
+          "method": "GET",
+          "path": "/admin/integrity/report/{type}/csv",
+          "source_pointer": "#/paths/~1admin~1integrity~1report~1{type}~1csv/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "IntegrityReportResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /admin/integrity/report response 200 references IntegrityReportResponseDto",
+          "pointer": "#/paths/~1admin~1integrity~1report/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "IntegrityReportResponseDto"
+    },
+    {
+      "collection_path": null,
+      "composite_key": false,
+      "confidence": 0.5,
+      "dependencies": [],
+      "display_name": "Template",
+      "item_path": "/admin/notifications/templates/{name}",
+      "key": "admin/notifications/templates",
+      "key_confidence": 0.6,
+      "key_fields": [
+        "name"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Key field(s) derived from item path parameters: ['name']",
+          "pointer": "/admin/notifications/templates/{name}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getNotificationTemplateAdmin",
+          "kind": "action",
+          "method": "POST",
+          "path": "/admin/notifications/templates/{name}",
+          "source_pointer": "#/paths/~1admin~1notifications~1templates~1{name}/post",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Templates",
+      "provenance": [
+        {
+          "detail": "No component schema reference found; entity name derived from path segment 'templates'",
+          "pointer": "/admin/notifications/templates/{name}",
+          "rule": "E4:derived_from_path_segment"
+        }
+      ],
+      "schema_name": null
+    },
+    {
+      "collection_path": "/admin/users",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "UserAdminResponseDto",
+      "item_path": "/admin/users/{id}",
+      "key": "admin/users",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/UserAdminResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/admin/users/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "searchUsersAdmin",
+          "kind": "list",
+          "method": "GET",
+          "path": "/admin/users",
+          "source_pointer": "#/paths/~1admin~1users/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createUserAdmin",
+          "kind": "create",
+          "method": "POST",
+          "path": "/admin/users",
+          "source_pointer": "#/paths/~1admin~1users/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteUserAdmin",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/admin/users/{id}",
+          "source_pointer": "#/paths/~1admin~1users~1{id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getUserAdmin",
+          "kind": "get",
+          "method": "GET",
+          "path": "/admin/users/{id}",
+          "source_pointer": "#/paths/~1admin~1users~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateUserAdmin",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/admin/users/{id}",
+          "source_pointer": "#/paths/~1admin~1users~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getUserCalendarHeatmapAdmin",
+          "kind": "action",
+          "method": "GET",
+          "path": "/admin/users/{id}/calendar-heatmap",
+          "source_pointer": "#/paths/~1admin~1users~1{id}~1calendar-heatmap/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getUserPreferencesAdmin",
+          "kind": "action",
+          "method": "GET",
+          "path": "/admin/users/{id}/preferences",
+          "source_pointer": "#/paths/~1admin~1users~1{id}~1preferences/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateUserPreferencesAdmin",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/admin/users/{id}/preferences",
+          "source_pointer": "#/paths/~1admin~1users~1{id}~1preferences/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "restoreUserAdmin",
+          "kind": "action",
+          "method": "POST",
+          "path": "/admin/users/{id}/restore",
+          "source_pointer": "#/paths/~1admin~1users~1{id}~1restore/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getUserSessionsAdmin",
+          "kind": "action",
+          "method": "GET",
+          "path": "/admin/users/{id}/sessions",
+          "source_pointer": "#/paths/~1admin~1users~1{id}~1sessions/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getUserStatisticsAdmin",
+          "kind": "action",
+          "method": "GET",
+          "path": "/admin/users/{id}/statistics",
+          "source_pointer": "#/paths/~1admin~1users~1{id}~1statistics/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "UserAdminResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /admin/users response 200 references UserAdminResponseDto",
+          "pointer": "#/paths/~1admin~1users/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "UserAdminResponseDto"
+    },
+    {
+      "collection_path": "/albums",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "assetIds",
+          "provenance": [
+            {
+              "detail": "Create request body property 'assetIds' matches entity 'assets'",
+              "pointer": "#/paths/~1albums/post/requestBody/content/application~1json/properties/assetIds",
+              "rule": "D2:D_array_of_named_ids:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "assets"
+        }
+      ],
+      "display_name": "AlbumResponseDto",
+      "item_path": "/albums/{id}",
+      "key": "albums",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/AlbumResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/albums/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAllAlbums",
+          "kind": "list",
+          "method": "GET",
+          "path": "/albums",
+          "source_pointer": "#/paths/~1albums/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createAlbum",
+          "kind": "create",
+          "method": "POST",
+          "path": "/albums",
+          "source_pointer": "#/paths/~1albums/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteAlbum",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/albums/{id}",
+          "source_pointer": "#/paths/~1albums~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAlbumInfo",
+          "kind": "get",
+          "method": "GET",
+          "path": "/albums/{id}",
+          "source_pointer": "#/paths/~1albums~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateAlbumInfo",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/albums/{id}",
+          "source_pointer": "#/paths/~1albums~1{id}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "removeAssetFromAlbum",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/albums/{id}/assets",
+          "source_pointer": "#/paths/~1albums~1{id}~1assets/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "addAssetsToAlbum",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/albums/{id}/assets",
+          "source_pointer": "#/paths/~1albums~1{id}~1assets/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAlbumMapMarkers",
+          "kind": "action",
+          "method": "GET",
+          "path": "/albums/{id}/map-markers",
+          "source_pointer": "#/paths/~1albums~1{id}~1map-markers/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "removeUserFromAlbum",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/albums/{id}/user/{userId}",
+          "source_pointer": "#/paths/~1albums~1{id}~1user~1{userId}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateAlbumUser",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/albums/{id}/user/{userId}",
+          "source_pointer": "#/paths/~1albums~1{id}~1user~1{userId}/put",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "addUsersToAlbum",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/albums/{id}/users",
+          "source_pointer": "#/paths/~1albums~1{id}~1users/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "AlbumResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /albums response 200 references AlbumResponseDto",
+          "pointer": "#/paths/~1albums/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "AlbumResponseDto"
+    },
+    {
+      "collection_path": "/api-keys",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "ApiKeyResponseDto",
+      "item_path": "/api-keys/{id}",
+      "key": "api-keys",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/ApiKeyResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/api-keys/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getApiKeys",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api-keys",
+          "source_pointer": "#/paths/~1api-keys/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createApiKey",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api-keys",
+          "source_pointer": "#/paths/~1api-keys/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteApiKey",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/api-keys/{id}",
+          "source_pointer": "#/paths/~1api-keys~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getApiKey",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api-keys/{id}",
+          "source_pointer": "#/paths/~1api-keys~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateApiKey",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/api-keys/{id}",
+          "source_pointer": "#/paths/~1api-keys~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "rotateApiKey",
+          "kind": "action",
+          "method": "POST",
+          "path": "/api-keys/{id}/rotate",
+          "source_pointer": "#/paths/~1api-keys~1{id}~1rotate/post",
+          "success_codes": [
+            201
+          ]
+        }
+      ],
+      "plural_display_name": "ApiKeyResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /api-keys response 200 references ApiKeyResponseDto",
+          "pointer": "#/paths/~1api-keys/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "ApiKeyResponseDto"
+    },
+    {
+      "collection_path": "/asset-files",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "AssetFileResponseDto",
+      "item_path": "/asset-files/{id}",
+      "key": "asset-files",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/AssetFileResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/asset-files/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "searchAssetFiles",
+          "kind": "list",
+          "method": "GET",
+          "path": "/asset-files",
+          "source_pointer": "#/paths/~1asset-files/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteAssetFile",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/asset-files/{id}",
+          "source_pointer": "#/paths/~1asset-files~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAssetFile",
+          "kind": "get",
+          "method": "GET",
+          "path": "/asset-files/{id}",
+          "source_pointer": "#/paths/~1asset-files~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "downloadAssetFile",
+          "kind": "action",
+          "method": "GET",
+          "path": "/asset-files/{id}/download",
+          "source_pointer": "#/paths/~1asset-files~1{id}~1download/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "AssetFileResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /asset-files response 200 references AssetFileResponseDto",
+          "pointer": "#/paths/~1asset-files/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "AssetFileResponseDto"
+    },
+    {
+      "collection_path": "/assets",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "AssetResponseDto",
+      "item_path": "/assets/{id}",
+      "key": "assets",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/AssetResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/assets/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteAssets",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/assets",
+          "source_pointer": "#/paths/~1assets/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "uploadAsset",
+          "kind": "create",
+          "method": "POST",
+          "path": "/assets",
+          "source_pointer": "#/paths/~1assets/post",
+          "success_codes": [
+            200,
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateAssets",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/assets",
+          "source_pointer": "#/paths/~1assets/put",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAssetInfo",
+          "kind": "get",
+          "method": "GET",
+          "path": "/assets/{id}",
+          "source_pointer": "#/paths/~1assets~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateAsset",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/assets/{id}",
+          "source_pointer": "#/paths/~1assets~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "removeAssetEdits",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/assets/{id}/edits",
+          "source_pointer": "#/paths/~1assets~1{id}~1edits/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAssetEdits",
+          "kind": "action",
+          "method": "GET",
+          "path": "/assets/{id}/edits",
+          "source_pointer": "#/paths/~1assets~1{id}~1edits/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "editAsset",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/assets/{id}/edits",
+          "source_pointer": "#/paths/~1assets~1{id}~1edits/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAssetMetadata",
+          "kind": "action",
+          "method": "GET",
+          "path": "/assets/{id}/metadata",
+          "source_pointer": "#/paths/~1assets~1{id}~1metadata/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateAssetMetadata",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/assets/{id}/metadata",
+          "source_pointer": "#/paths/~1assets~1{id}~1metadata/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteAssetMetadata",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/assets/{id}/metadata/{key}",
+          "source_pointer": "#/paths/~1assets~1{id}~1metadata~1{key}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAssetMetadataByKey",
+          "kind": "action",
+          "method": "GET",
+          "path": "/assets/{id}/metadata/{key}",
+          "source_pointer": "#/paths/~1assets~1{id}~1metadata~1{key}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAssetOcr",
+          "kind": "action",
+          "method": "GET",
+          "path": "/assets/{id}/ocr",
+          "source_pointer": "#/paths/~1assets~1{id}~1ocr/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "downloadAsset",
+          "kind": "action",
+          "method": "GET",
+          "path": "/assets/{id}/original",
+          "source_pointer": "#/paths/~1assets~1{id}~1original/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "viewAsset",
+          "kind": "action",
+          "method": "GET",
+          "path": "/assets/{id}/thumbnail",
+          "source_pointer": "#/paths/~1assets~1{id}~1thumbnail/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "playAssetVideo",
+          "kind": "action",
+          "method": "GET",
+          "path": "/assets/{id}/video/playback",
+          "source_pointer": "#/paths/~1assets~1{id}~1video~1playback/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getMainPlaylist",
+          "kind": "action",
+          "method": "GET",
+          "path": "/assets/{id}/video/stream/main.m3u8",
+          "source_pointer": "#/paths/~1assets~1{id}~1video~1stream~1main.m3u8/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "endSession",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/assets/{id}/video/stream/{sessionId}",
+          "source_pointer": "#/paths/~1assets~1{id}~1video~1stream~1{sessionId}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getMediaPlaylist",
+          "kind": "action",
+          "method": "GET",
+          "path": "/assets/{id}/video/stream/{sessionId}/{variantIndex}/playlist.m3u8",
+          "source_pointer": "#/paths/~1assets~1{id}~1video~1stream~1{sessionId}~1{variantIndex}~1playlist.m3u8/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getSegment",
+          "kind": "action",
+          "method": "GET",
+          "path": "/assets/{id}/video/stream/{sessionId}/{variantIndex}/{filename}",
+          "source_pointer": "#/paths/~1assets~1{id}~1video~1stream~1{sessionId}~1{variantIndex}~1{filename}/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "AssetResponseDtos",
+      "provenance": [
+        {
+          "detail": "Item GET /assets/{id} response 200 references AssetResponseDto",
+          "pointer": "#/paths/~1assets~1{id}/get/responses/200",
+          "rule": "E3c:item_response_schema"
+        }
+      ],
+      "schema_name": "AssetResponseDto"
+    },
+    {
+      "collection_path": "/cluster-groups/requests",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "ClusterGroupRequestResponseDto",
+      "item_path": "/cluster-groups/requests/{id}",
+      "key": "cluster-groups/requests",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/ClusterGroupRequestResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/cluster-groups/requests/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getClusterGroupRequests",
+          "kind": "list",
+          "method": "GET",
+          "path": "/cluster-groups/requests",
+          "source_pointer": "#/paths/~1cluster-groups~1requests/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteClusterGroupRequest",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/cluster-groups/requests/{id}",
+          "source_pointer": "#/paths/~1cluster-groups~1requests~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "acceptClusterGroupRequest",
+          "kind": "action",
+          "method": "POST",
+          "path": "/cluster-groups/requests/{id}/accept",
+          "source_pointer": "#/paths/~1cluster-groups~1requests~1{id}~1accept/post",
+          "success_codes": [
+            204
+          ]
+        }
+      ],
+      "plural_display_name": "ClusterGroupRequestResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /cluster-groups/requests response 200 references ClusterGroupRequestResponseDto",
+          "pointer": "#/paths/~1cluster-groups~1requests/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "ClusterGroupRequestResponseDto"
+    },
+    {
+      "collection_path": "/duplicates",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "DuplicateResponseDto",
+      "item_path": "/duplicates/{id}",
+      "key": "duplicates",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/duplicates/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/duplicates/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteDuplicates",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/duplicates",
+          "source_pointer": "#/paths/~1duplicates/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAssetDuplicates",
+          "kind": "list",
+          "method": "GET",
+          "path": "/duplicates",
+          "source_pointer": "#/paths/~1duplicates/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteDuplicate",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/duplicates/{id}",
+          "source_pointer": "#/paths/~1duplicates~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        }
+      ],
+      "plural_display_name": "DuplicateResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /duplicates response 200 references DuplicateResponseDto",
+          "pointer": "#/paths/~1duplicates/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "DuplicateResponseDto"
+    },
+    {
+      "collection_path": "/faces",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "assetId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'assetId' matches entity 'assets'",
+              "pointer": "#/paths/~1faces/post/requestBody/content/application~1json/properties/assetId",
+              "rule": "D2:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "assets"
+        }
+      ],
+      "display_name": "AssetFaceResponseDto",
+      "item_path": "/faces/{id}",
+      "key": "faces",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/AssetFaceResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/faces/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getFaces",
+          "kind": "list",
+          "method": "GET",
+          "path": "/faces",
+          "source_pointer": "#/paths/~1faces/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createFace",
+          "kind": "create",
+          "method": "POST",
+          "path": "/faces",
+          "source_pointer": "#/paths/~1faces/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteFace",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/faces/{id}",
+          "source_pointer": "#/paths/~1faces~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "reassignFacesById",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/faces/{id}",
+          "source_pointer": "#/paths/~1faces~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "AssetFaceResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /faces response 200 references AssetFaceResponseDto",
+          "pointer": "#/paths/~1faces/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "AssetFaceResponseDto"
+    },
+    {
+      "collection_path": "/jobs",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "QueuesResponseLegacyDto",
+      "item_path": "/jobs/{name}",
+      "key": "jobs",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "name"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'name' has no matching schema property; using path evidence only",
+          "pointer": "/jobs/{name}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['name']",
+          "pointer": "/jobs/{name}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getQueuesLegacy",
+          "kind": "list",
+          "method": "GET",
+          "path": "/jobs",
+          "source_pointer": "#/paths/~1jobs/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createJob",
+          "kind": "create",
+          "method": "POST",
+          "path": "/jobs",
+          "source_pointer": "#/paths/~1jobs/post",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "runQueueCommandLegacy",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/jobs/{name}",
+          "source_pointer": "#/paths/~1jobs~1{name}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "QueuesResponseLegacyDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /jobs response 200 references QueuesResponseLegacyDto",
+          "pointer": "#/paths/~1jobs/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "QueuesResponseLegacyDto"
+    },
+    {
+      "collection_path": "/libraries",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "LibraryResponseDto",
+      "item_path": "/libraries/{id}",
+      "key": "libraries",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/LibraryResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/libraries/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAllLibraries",
+          "kind": "list",
+          "method": "GET",
+          "path": "/libraries",
+          "source_pointer": "#/paths/~1libraries/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createLibrary",
+          "kind": "create",
+          "method": "POST",
+          "path": "/libraries",
+          "source_pointer": "#/paths/~1libraries/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteLibrary",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/libraries/{id}",
+          "source_pointer": "#/paths/~1libraries~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getLibrary",
+          "kind": "get",
+          "method": "GET",
+          "path": "/libraries/{id}",
+          "source_pointer": "#/paths/~1libraries~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateLibrary",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/libraries/{id}",
+          "source_pointer": "#/paths/~1libraries~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "scanLibrary",
+          "kind": "action",
+          "method": "POST",
+          "path": "/libraries/{id}/scan",
+          "source_pointer": "#/paths/~1libraries~1{id}~1scan/post",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getLibraryStatistics",
+          "kind": "action",
+          "method": "GET",
+          "path": "/libraries/{id}/statistics",
+          "source_pointer": "#/paths/~1libraries~1{id}~1statistics/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "validate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/libraries/{id}/validate",
+          "source_pointer": "#/paths/~1libraries~1{id}~1validate/post",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "LibraryResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /libraries response 200 references LibraryResponseDto",
+          "pointer": "#/paths/~1libraries/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "LibraryResponseDto"
+    },
+    {
+      "collection_path": "/memories",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "assetIds",
+          "provenance": [
+            {
+              "detail": "Create request body property 'assetIds' matches entity 'assets'",
+              "pointer": "#/paths/~1memories/post/requestBody/content/application~1json/properties/assetIds",
+              "rule": "D2:D_array_of_named_ids:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "assets"
+        }
+      ],
+      "display_name": "MemoryResponseDto",
+      "item_path": "/memories/{id}",
+      "key": "memories",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/MemoryResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/memories/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "searchMemories",
+          "kind": "list",
+          "method": "GET",
+          "path": "/memories",
+          "source_pointer": "#/paths/~1memories/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createMemory",
+          "kind": "create",
+          "method": "POST",
+          "path": "/memories",
+          "source_pointer": "#/paths/~1memories/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteMemory",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/memories/{id}",
+          "source_pointer": "#/paths/~1memories~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getMemory",
+          "kind": "get",
+          "method": "GET",
+          "path": "/memories/{id}",
+          "source_pointer": "#/paths/~1memories~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateMemory",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/memories/{id}",
+          "source_pointer": "#/paths/~1memories~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "removeMemoryAssets",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/memories/{id}/assets",
+          "source_pointer": "#/paths/~1memories~1{id}~1assets/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "addMemoryAssets",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/memories/{id}/assets",
+          "source_pointer": "#/paths/~1memories~1{id}~1assets/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "MemoryResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /memories response 200 references MemoryResponseDto",
+          "pointer": "#/paths/~1memories/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "MemoryResponseDto"
+    },
+    {
+      "collection_path": "/notifications",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "NotificationDto",
+      "item_path": "/notifications/{id}",
+      "key": "notifications",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/NotificationDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/notifications/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteNotifications",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/notifications",
+          "source_pointer": "#/paths/~1notifications/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getNotifications",
+          "kind": "list",
+          "method": "GET",
+          "path": "/notifications",
+          "source_pointer": "#/paths/~1notifications/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateNotifications",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/notifications",
+          "source_pointer": "#/paths/~1notifications/put",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteNotification",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/notifications/{id}",
+          "source_pointer": "#/paths/~1notifications~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getNotification",
+          "kind": "get",
+          "method": "GET",
+          "path": "/notifications/{id}",
+          "source_pointer": "#/paths/~1notifications~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateNotification",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/notifications/{id}",
+          "source_pointer": "#/paths/~1notifications~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "NotificationDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /notifications response 200 references NotificationDto",
+          "pointer": "#/paths/~1notifications/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "NotificationDto"
+    },
+    {
+      "collection_path": "/partners",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PartnerResponseDto",
+      "item_path": "/partners/{id}",
+      "key": "partners",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/PartnerResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/partners/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getPartners",
+          "kind": "list",
+          "method": "GET",
+          "path": "/partners",
+          "source_pointer": "#/paths/~1partners/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createPartner",
+          "kind": "create",
+          "method": "POST",
+          "path": "/partners",
+          "source_pointer": "#/paths/~1partners/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "removePartner",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/partners/{id}",
+          "source_pointer": "#/paths/~1partners~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createPartnerDeprecated",
+          "kind": "action",
+          "method": "POST",
+          "path": "/partners/{id}",
+          "source_pointer": "#/paths/~1partners~1{id}/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updatePartner",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/partners/{id}",
+          "source_pointer": "#/paths/~1partners~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PartnerResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /partners response 200 references PartnerResponseDto",
+          "pointer": "#/paths/~1partners/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PartnerResponseDto"
+    },
+    {
+      "collection_path": "/people",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PeopleResponseDto",
+      "item_path": "/people/{id}",
+      "key": "people",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/people/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/people/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deletePeople",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/people",
+          "source_pointer": "#/paths/~1people/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAllPeople",
+          "kind": "list",
+          "method": "GET",
+          "path": "/people",
+          "source_pointer": "#/paths/~1people/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createPerson",
+          "kind": "create",
+          "method": "POST",
+          "path": "/people",
+          "source_pointer": "#/paths/~1people/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updatePeople",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/people",
+          "source_pointer": "#/paths/~1people/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deletePerson",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/people/{id}",
+          "source_pointer": "#/paths/~1people~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getPerson",
+          "kind": "get",
+          "method": "GET",
+          "path": "/people/{id}",
+          "source_pointer": "#/paths/~1people~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updatePerson",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/people/{id}",
+          "source_pointer": "#/paths/~1people~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "mergePerson",
+          "kind": "action",
+          "method": "POST",
+          "path": "/people/{id}/merge",
+          "source_pointer": "#/paths/~1people~1{id}~1merge/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "reassignFaces",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/people/{id}/reassign",
+          "source_pointer": "#/paths/~1people~1{id}~1reassign/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getPersonStatistics",
+          "kind": "action",
+          "method": "GET",
+          "path": "/people/{id}/statistics",
+          "source_pointer": "#/paths/~1people~1{id}~1statistics/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getPersonThumbnail",
+          "kind": "action",
+          "method": "GET",
+          "path": "/people/{id}/thumbnail",
+          "source_pointer": "#/paths/~1people~1{id}~1thumbnail/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PeopleResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /people response 200 references PeopleResponseDto",
+          "pointer": "#/paths/~1people/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PeopleResponseDto"
+    },
+    {
+      "collection_path": "/plugins",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PluginResponseDto",
+      "item_path": "/plugins/{id}",
+      "key": "plugins",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/PluginResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/plugins/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "searchPlugins",
+          "kind": "list",
+          "method": "GET",
+          "path": "/plugins",
+          "source_pointer": "#/paths/~1plugins/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getPlugin",
+          "kind": "get",
+          "method": "GET",
+          "path": "/plugins/{id}",
+          "source_pointer": "#/paths/~1plugins~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PluginResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /plugins response 200 references PluginResponseDto",
+          "pointer": "#/paths/~1plugins/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PluginResponseDto"
+    },
+    {
+      "collection_path": "/queues",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "QueueResponseDto",
+      "item_path": "/queues/{name}",
+      "key": "queues",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "name"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'name' matches required schema property",
+          "pointer": "#/components/schemas/QueueResponseDto/properties/name",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['name']",
+          "pointer": "/queues/{name}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getQueues",
+          "kind": "list",
+          "method": "GET",
+          "path": "/queues",
+          "source_pointer": "#/paths/~1queues/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getQueue",
+          "kind": "get",
+          "method": "GET",
+          "path": "/queues/{name}",
+          "source_pointer": "#/paths/~1queues~1{name}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateQueue",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/queues/{name}",
+          "source_pointer": "#/paths/~1queues~1{name}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "emptyQueue",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/queues/{name}/jobs",
+          "source_pointer": "#/paths/~1queues~1{name}~1jobs/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getQueueJobs",
+          "kind": "action",
+          "method": "GET",
+          "path": "/queues/{name}/jobs",
+          "source_pointer": "#/paths/~1queues~1{name}~1jobs/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "QueueResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /queues response 200 references QueueResponseDto",
+          "pointer": "#/paths/~1queues/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "QueueResponseDto"
+    },
+    {
+      "collection_path": "/sessions",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "SessionResponseDto",
+      "item_path": "/sessions/{id}",
+      "key": "sessions",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/SessionResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/sessions/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getSessions",
+          "kind": "list",
+          "method": "GET",
+          "path": "/sessions",
+          "source_pointer": "#/paths/~1sessions/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createSession",
+          "kind": "create",
+          "method": "POST",
+          "path": "/sessions",
+          "source_pointer": "#/paths/~1sessions/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateSession",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/sessions/{id}",
+          "source_pointer": "#/paths/~1sessions~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "SessionResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /sessions response 200 references SessionResponseDto",
+          "pointer": "#/paths/~1sessions/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "SessionResponseDto"
+    },
+    {
+      "collection_path": "/shared-links",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "albumId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'albumId' matches entity 'albums'",
+              "pointer": "#/paths/~1shared-links/post/requestBody/content/application~1json/properties/albumId",
+              "rule": "D2:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "albums"
+        },
+        {
+          "confidence": 0.9,
+          "field_name": "assetIds",
+          "provenance": [
+            {
+              "detail": "Create request body property 'assetIds' matches entity 'assets'",
+              "pointer": "#/paths/~1shared-links/post/requestBody/content/application~1json/properties/assetIds",
+              "rule": "D2:D_array_of_named_ids:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "assets"
+        }
+      ],
+      "display_name": "SharedLinkResponseDto",
+      "item_path": "/shared-links/{id}",
+      "key": "shared-links",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/SharedLinkResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/shared-links/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAllSharedLinks",
+          "kind": "list",
+          "method": "GET",
+          "path": "/shared-links",
+          "source_pointer": "#/paths/~1shared-links/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createSharedLink",
+          "kind": "create",
+          "method": "POST",
+          "path": "/shared-links",
+          "source_pointer": "#/paths/~1shared-links/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "removeSharedLink",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/shared-links/{id}",
+          "source_pointer": "#/paths/~1shared-links~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getSharedLinkById",
+          "kind": "get",
+          "method": "GET",
+          "path": "/shared-links/{id}",
+          "source_pointer": "#/paths/~1shared-links~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateSharedLink",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/shared-links/{id}",
+          "source_pointer": "#/paths/~1shared-links~1{id}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "removeSharedLinkAssets",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/shared-links/{id}/assets",
+          "source_pointer": "#/paths/~1shared-links~1{id}~1assets/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "addSharedLinkAssets",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/shared-links/{id}/assets",
+          "source_pointer": "#/paths/~1shared-links~1{id}~1assets/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "SharedLinkResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /shared-links response 200 references SharedLinkResponseDto",
+          "pointer": "#/paths/~1shared-links/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "SharedLinkResponseDto"
+    },
+    {
+      "collection_path": "/stacks",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "assetIds",
+          "provenance": [
+            {
+              "detail": "Create request body property 'assetIds' matches entity 'assets'",
+              "pointer": "#/paths/~1stacks/post/requestBody/content/application~1json/properties/assetIds",
+              "rule": "D2:D_array_of_named_ids:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "assets"
+        }
+      ],
+      "display_name": "StackResponseDto",
+      "item_path": "/stacks/{id}",
+      "key": "stacks",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/StackResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/stacks/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteStacks",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/stacks",
+          "source_pointer": "#/paths/~1stacks/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "searchStacks",
+          "kind": "list",
+          "method": "GET",
+          "path": "/stacks",
+          "source_pointer": "#/paths/~1stacks/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createStack",
+          "kind": "create",
+          "method": "POST",
+          "path": "/stacks",
+          "source_pointer": "#/paths/~1stacks/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteStack",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/stacks/{id}",
+          "source_pointer": "#/paths/~1stacks~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getStack",
+          "kind": "get",
+          "method": "GET",
+          "path": "/stacks/{id}",
+          "source_pointer": "#/paths/~1stacks~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateStack",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/stacks/{id}",
+          "source_pointer": "#/paths/~1stacks~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "removeAssetFromStack",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/stacks/{id}/assets/{assetId}",
+          "source_pointer": "#/paths/~1stacks~1{id}~1assets~1{assetId}/delete",
+          "success_codes": [
+            204
+          ]
+        }
+      ],
+      "plural_display_name": "StackResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /stacks response 200 references StackResponseDto",
+          "pointer": "#/paths/~1stacks/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "StackResponseDto"
+    },
+    {
+      "collection_path": "/tags",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "TagResponseDto",
+      "item_path": "/tags/{id}",
+      "key": "tags",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/TagResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/tags/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getAllTags",
+          "kind": "list",
+          "method": "GET",
+          "path": "/tags",
+          "source_pointer": "#/paths/~1tags/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createTag",
+          "kind": "create",
+          "method": "POST",
+          "path": "/tags",
+          "source_pointer": "#/paths/~1tags/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "upsertTags",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/tags",
+          "source_pointer": "#/paths/~1tags/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteTag",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/tags/{id}",
+          "source_pointer": "#/paths/~1tags~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getTagById",
+          "kind": "get",
+          "method": "GET",
+          "path": "/tags/{id}",
+          "source_pointer": "#/paths/~1tags~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateTag",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/tags/{id}",
+          "source_pointer": "#/paths/~1tags~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "untagAssets",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/tags/{id}/assets",
+          "source_pointer": "#/paths/~1tags~1{id}~1assets/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "tagAssets",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/tags/{id}/assets",
+          "source_pointer": "#/paths/~1tags~1{id}~1assets/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "TagResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /tags response 200 references TagResponseDto",
+          "pointer": "#/paths/~1tags/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "TagResponseDto"
+    },
+    {
+      "collection_path": "/users",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "UserResponseDto",
+      "item_path": "/users/{id}",
+      "key": "users",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/UserResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/users/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "searchUsers",
+          "kind": "list",
+          "method": "GET",
+          "path": "/users",
+          "source_pointer": "#/paths/~1users/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getUser",
+          "kind": "get",
+          "method": "GET",
+          "path": "/users/{id}",
+          "source_pointer": "#/paths/~1users~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getProfileImage",
+          "kind": "action",
+          "method": "GET",
+          "path": "/users/{id}/profile-image",
+          "source_pointer": "#/paths/~1users~1{id}~1profile-image/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "UserResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /users response 200 references UserResponseDto",
+          "pointer": "#/paths/~1users/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "UserResponseDto"
+    },
+    {
+      "collection_path": "/workflows",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "WorkflowResponseDto",
+      "item_path": "/workflows/{id}",
+      "key": "workflows",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/WorkflowResponseDto/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/workflows/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "searchWorkflows",
+          "kind": "list",
+          "method": "GET",
+          "path": "/workflows",
+          "source_pointer": "#/paths/~1workflows/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createWorkflow",
+          "kind": "create",
+          "method": "POST",
+          "path": "/workflows",
+          "source_pointer": "#/paths/~1workflows/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteWorkflow",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/workflows/{id}",
+          "source_pointer": "#/paths/~1workflows~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getWorkflow",
+          "kind": "get",
+          "method": "GET",
+          "path": "/workflows/{id}",
+          "source_pointer": "#/paths/~1workflows~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "updateWorkflow",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/workflows/{id}",
+          "source_pointer": "#/paths/~1workflows~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getWorkflowLogs",
+          "kind": "action",
+          "method": "GET",
+          "path": "/workflows/{id}/logs",
+          "source_pointer": "#/paths/~1workflows~1{id}~1logs/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "getWorkflowForShare",
+          "kind": "action",
+          "method": "GET",
+          "path": "/workflows/{id}/share",
+          "source_pointer": "#/paths/~1workflows~1{id}~1share/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "WorkflowResponseDtos",
+      "provenance": [
+        {
+          "detail": "List operation GET /workflows response 200 references WorkflowResponseDto",
+          "pointer": "#/paths/~1workflows/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "WorkflowResponseDto"
+    }
+  ],
+  "isolation_audit": {
+    "denied_file_count": 0,
+    "policy": "allow-listed OpenAPI/config inputs only; environment-specific paths excluded from deterministic report"
+  },
+  "meta": {
+    "cli_args": {
+      "base_url": "http://127.0.0.1:9926/api",
+      "command": "generate",
+      "emit_prefix_witnesses": true,
+      "generator_version": "0.26.3",
+      "instances_per_action": 1,
+      "instances_per_entity": 2,
+      "json_delete_bodies": true,
+      "long_story_rounds": [
+        7,
+        10
+      ],
+      "name": "immich",
+      "seed": 20261421,
+      "source_openapi_sha256": "007f2882f09610dd59ca8723e298207da1c68ceb33cca904c58b59bf95d87b9f",
+      "story_profile": "long-interleaving"
+    },
+    "openapi_version": "3.0.0",
+    "title": "Immich"
+  },
+  "reproducibility": {
+    "artifact_sha256": {
+      "dependency_graph_json": "aa10b7e9cc99fb3291e7680cf826c644d4b0f1d10113f7c1b928f38230d300cd",
+      "interfaces_js": "bf5717200bcab81b9cdde6b968631264e55ba8c35ef083d374eab4bb180e4bc5",
+      "stories_js": "1cefa2411190f320cda8af030beefe9a574a1e0b7371ae921cbdfc3f4d881432"
+    },
+    "base_url": "http://127.0.0.1:9926/api",
+    "content_fingerprint_sha256": "ebd003e910f39ccd2e8511a7ab866dc13f211244e8cfd2dcd43ff23b68c4f65b",
+    "generator_version": "0.26.3",
+    "instances_per_action": 1,
+    "instances_per_entity": 2,
+    "scope": "semantic inputs and generated artifacts; filesystem paths and run-time ports are excluded",
+    "seed": 20261421,
+    "source_openapi_sha256": "007f2882f09610dd59ca8723e298207da1c68ceb33cca904c58b59bf95d87b9f"
+  },
+  "response_code_coverage": [
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/activities"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/activities"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/activities/statistics"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/activities/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/admin/auth/unlink-all"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/config"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/admin/config"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/config/defaults"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/database-backups"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/admin/database-backups"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/admin/database-backups/upload"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/database-backups/{filename}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/integrity/report"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/admin/integrity/report/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/integrity/report/{id}/file"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/integrity/report/{type}/csv"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/integrity/summary"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/maintenance/detect-install"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/admin/maintenance/login"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/maintenance/status"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/admin/notifications"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/admin/notifications/templates/{name}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/admin/notifications/test-email"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/users"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/admin/users"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/users/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/admin/users/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/admin/users/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/users/{id}/calendar-heatmap"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/users/{id}/preferences"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/admin/users/{id}/preferences"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/admin/users/{id}/restore"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/users/{id}/sessions"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/admin/users/{id}/statistics"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/albums"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/albums"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/albums/assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/albums/statistics"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/albums/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/albums/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PATCH",
+      "path": "/albums/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/albums/{id}/assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/albums/{id}/assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/albums/{id}/map-markers"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/albums/{id}/user/{userId}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/albums/{id}/user/{userId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/albums/{id}/users"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api-keys"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api-keys"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api-keys/me"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api-keys/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api-keys/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api-keys/{id}"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api-keys/{id}/rotate"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/asset-files"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/asset-files/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/asset-files/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/asset-files/{id}/download"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/assets"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/assets"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/assets/bulk-upload-check"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/assets/copy"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/assets/jobs"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/assets/metadata"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/assets/metadata"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/assets/statistics"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/assets/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/assets/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/assets/{id}/edits"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/assets/{id}/edits"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/assets/{id}/edits"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/assets/{id}/metadata"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/assets/{id}/metadata"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/assets/{id}/metadata/{key}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/assets/{id}/metadata/{key}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/assets/{id}/ocr"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/assets/{id}/original"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/assets/{id}/thumbnail"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/assets/{id}/video/playback"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/assets/{id}/video/stream/main.m3u8"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/assets/{id}/video/stream/{sessionId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/assets/{id}/video/stream/{sessionId}/{variantIndex}/playlist.m3u8"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/assets/{id}/video/stream/{sessionId}/{variantIndex}/{filename}"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/auth/admin-sign-up"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/auth/login"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/auth/pin-code"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/auth/pin-code"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/auth/pin-code"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/auth/status"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/auth/validateToken"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/cluster-groups/requests"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/cluster-groups/requests/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/cluster-groups/requests/{id}/accept"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/cluster-groups/{id}/leave"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/cluster-groups/{id}/regenerate-people"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/cluster-groups/{id}/requests"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/cluster-groups/{id}/requests"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/cluster-groups/{id}/users"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/config"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/config/defaults"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/download/archive"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/download/info"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/duplicates"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/duplicates"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/duplicates/resolve"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/duplicates/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/faces"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/faces"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/faces/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/faces/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/jobs"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/jobs"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/jobs/{name}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/libraries"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/libraries"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/libraries/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/libraries/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/libraries/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/libraries/{id}/scan"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/libraries/{id}/statistics"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/libraries/{id}/validate"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/map/markers"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/map/reverse-geocode"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/memories"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/memories"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/memories/statistics"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/memories/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/memories/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/memories/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/memories/{id}/assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/memories/{id}/assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/notifications"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/notifications"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/notifications"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/notifications/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/notifications/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/notifications/{id}"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/oauth/authorize"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/oauth/backchannel-logout"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/oauth/callback"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/oauth/link"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/oauth/mobile-redirect"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/oauth/unlink"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/partners"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/partners"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/partners/{id}"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/partners/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/partners/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/people"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/people"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/people"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/people"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/people/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/people/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/people/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/people/{id}/merge"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/people/{id}/reassign"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/people/{id}/statistics"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/people/{id}/thumbnail"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/plugins"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/plugins/methods"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/plugins/templates"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/plugins/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/public/config"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/public/config/defaults"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/queues"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/queues/{name}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/queues/{name}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/queues/{name}/jobs"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/queues/{name}/jobs"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/search/cities"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/search/explore"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/search/large-assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/search/metadata"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/search/person"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/search/places"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/search/random"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/search/smart"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/search/statistics"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/search/suggestions"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/server/about"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/server/apk-links"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/server/config"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/server/features"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/server/license"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/server/license"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/server/license"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/server/media-types"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/server/ping"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/server/statistics"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/server/storage"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/server/version"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/server/version-check"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/server/version-history"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/sessions"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/sessions"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/sessions/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/shared-links"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/shared-links"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/shared-links/login"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/shared-links/me"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/shared-links/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/shared-links/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PATCH",
+      "path": "/shared-links/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/shared-links/{id}/assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/shared-links/{id}/assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/stacks"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/stacks"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/stacks"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/stacks/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/stacks/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/stacks/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/stacks/{id}/assets/{assetId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/sync/ack"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/sync/ack"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/sync/ack"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/sync/stream"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/system-config"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/system-config"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/system-config/defaults"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/system-config/storage-template-options"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/system-metadata/admin-onboarding"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/system-metadata/admin-onboarding"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/system-metadata/reverse-geocoding-state"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/system-metadata/version-check-state"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/tags"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/tags"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/tags"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/tags/assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/tags/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/tags/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/tags/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/tags/{id}/assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/tags/{id}/assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/timeline/bucket"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/timeline/buckets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/trash/empty"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/trash/restore"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/trash/restore/assets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/users"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/users/me"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/users/me/calendar-heatmap"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/users/me/license"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/users/me/license"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/users/me/license"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/users/me/onboarding"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/users/me/onboarding"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/users/me/onboarding"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/users/me/preferences"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/users/me/preferences"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/users/profile-image"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/users/profile-image"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/users/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/users/{id}/profile-image"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/view/folder"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/view/folder/unique-paths"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/workflows"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/workflows"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/workflows/triggers"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/workflows/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/workflows/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/workflows/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/workflows/{id}/logs"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/workflows/{id}/share"
+    }
+  ],
+  "security_schemes": {
+    "api_key": {
+      "location": "header",
+      "param_name": "x-api-key",
+      "scheme": "",
+      "type": "apiKey"
+    },
+    "bearer": {
+      "location": "header",
+      "param_name": "",
+      "scheme": "Bearer",
+      "type": "http"
+    },
+    "cookie": {
+      "location": "cookie",
+      "param_name": "immich_access_token",
+      "scheme": "",
+      "type": "apiKey"
+    }
+  },
+  "standalone_operations": [
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getActivityStatistics",
+      "method": "GET",
+      "path": "/activities/statistics",
+      "source_pointer": "#/paths/~1activities~1statistics/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "unlinkAllOAuthAccountsAdmin",
+      "method": "POST",
+      "path": "/admin/auth/unlink-all",
+      "source_pointer": "#/paths/~1admin~1auth~1unlink-all/post",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getAdminConfig",
+      "method": "GET",
+      "path": "/admin/config",
+      "source_pointer": "#/paths/~1admin~1config/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "updateAdminConfig",
+      "method": "PUT",
+      "path": "/admin/config",
+      "source_pointer": "#/paths/~1admin~1config/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getAdminConfigDefaults",
+      "method": "GET",
+      "path": "/admin/config/defaults",
+      "source_pointer": "#/paths/~1admin~1config~1defaults/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "uploadDatabaseBackup",
+      "method": "POST",
+      "path": "/admin/database-backups/upload",
+      "source_pointer": "#/paths/~1admin~1database-backups~1upload/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getIntegrityReportSummary",
+      "method": "GET",
+      "path": "/admin/integrity/summary",
+      "source_pointer": "#/paths/~1admin~1integrity~1summary/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "detectPriorInstall",
+      "method": "GET",
+      "path": "/admin/maintenance/detect-install",
+      "source_pointer": "#/paths/~1admin~1maintenance~1detect-install/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "maintenanceLogin",
+      "method": "POST",
+      "path": "/admin/maintenance/login",
+      "source_pointer": "#/paths/~1admin~1maintenance~1login/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getMaintenanceStatus",
+      "method": "GET",
+      "path": "/admin/maintenance/status",
+      "source_pointer": "#/paths/~1admin~1maintenance~1status/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "createNotification",
+      "method": "POST",
+      "path": "/admin/notifications",
+      "source_pointer": "#/paths/~1admin~1notifications/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "sendTestEmailAdmin",
+      "method": "POST",
+      "path": "/admin/notifications/test-email",
+      "source_pointer": "#/paths/~1admin~1notifications~1test-email/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "addAssetsToAlbums",
+      "method": "PUT",
+      "path": "/albums/assets",
+      "source_pointer": "#/paths/~1albums~1assets/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getAlbumStatistics",
+      "method": "GET",
+      "path": "/albums/statistics",
+      "source_pointer": "#/paths/~1albums~1statistics/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getMyApiKey",
+      "method": "GET",
+      "path": "/api-keys/me",
+      "source_pointer": "#/paths/~1api-keys~1me/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "checkBulkUpload",
+      "method": "POST",
+      "path": "/assets/bulk-upload-check",
+      "source_pointer": "#/paths/~1assets~1bulk-upload-check/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "copyAsset",
+      "method": "PUT",
+      "path": "/assets/copy",
+      "source_pointer": "#/paths/~1assets~1copy/put",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "runAssetJobs",
+      "method": "POST",
+      "path": "/assets/jobs",
+      "source_pointer": "#/paths/~1assets~1jobs/post",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "updateBulkAssetMetadata",
+      "method": "PUT",
+      "path": "/assets/metadata",
+      "source_pointer": "#/paths/~1assets~1metadata/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "deleteBulkAssetMetadata",
+      "method": "DELETE",
+      "path": "/assets/metadata",
+      "source_pointer": "#/paths/~1assets~1metadata/delete",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getAssetStatistics",
+      "method": "GET",
+      "path": "/assets/statistics",
+      "source_pointer": "#/paths/~1assets~1statistics/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "signUpAdmin",
+      "method": "POST",
+      "path": "/auth/admin-sign-up",
+      "source_pointer": "#/paths/~1auth~1admin-sign-up/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "login",
+      "method": "POST",
+      "path": "/auth/login",
+      "source_pointer": "#/paths/~1auth~1login/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "changePinCode",
+      "method": "PUT",
+      "path": "/auth/pin-code",
+      "source_pointer": "#/paths/~1auth~1pin-code/put",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "setupPinCode",
+      "method": "POST",
+      "path": "/auth/pin-code",
+      "source_pointer": "#/paths/~1auth~1pin-code/post",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "resetPinCode",
+      "method": "DELETE",
+      "path": "/auth/pin-code",
+      "source_pointer": "#/paths/~1auth~1pin-code/delete",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getAuthStatus",
+      "method": "GET",
+      "path": "/auth/status",
+      "source_pointer": "#/paths/~1auth~1status/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "validateAccessToken",
+      "method": "POST",
+      "path": "/auth/validateToken",
+      "source_pointer": "#/paths/~1auth~1validateToken/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "leaveClusterGroup",
+      "method": "POST",
+      "path": "/cluster-groups/{id}/leave",
+      "source_pointer": "#/paths/~1cluster-groups~1{id}~1leave/post",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "clusterGroupRegeneratePeople",
+      "method": "POST",
+      "path": "/cluster-groups/{id}/regenerate-people",
+      "source_pointer": "#/paths/~1cluster-groups~1{id}~1regenerate-people/post",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getClusterGroupRequestsForGroup",
+      "method": "GET",
+      "path": "/cluster-groups/{id}/requests",
+      "source_pointer": "#/paths/~1cluster-groups~1{id}~1requests/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "createClusterGroupRequest",
+      "method": "PUT",
+      "path": "/cluster-groups/{id}/requests",
+      "source_pointer": "#/paths/~1cluster-groups~1{id}~1requests/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getClusterGroupUsers",
+      "method": "GET",
+      "path": "/cluster-groups/{id}/users",
+      "source_pointer": "#/paths/~1cluster-groups~1{id}~1users/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getUserConfig",
+      "method": "GET",
+      "path": "/config",
+      "source_pointer": "#/paths/~1config/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getUserConfigDefaults",
+      "method": "GET",
+      "path": "/config/defaults",
+      "source_pointer": "#/paths/~1config~1defaults/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "downloadArchive",
+      "method": "POST",
+      "path": "/download/archive",
+      "source_pointer": "#/paths/~1download~1archive/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getDownloadInfo",
+      "method": "POST",
+      "path": "/download/info",
+      "source_pointer": "#/paths/~1download~1info/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "resolveDuplicates",
+      "method": "POST",
+      "path": "/duplicates/resolve",
+      "source_pointer": "#/paths/~1duplicates~1resolve/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getMapMarkers",
+      "method": "GET",
+      "path": "/map/markers",
+      "source_pointer": "#/paths/~1map~1markers/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "reverseGeocode",
+      "method": "GET",
+      "path": "/map/reverse-geocode",
+      "source_pointer": "#/paths/~1map~1reverse-geocode/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "memoriesStatistics",
+      "method": "GET",
+      "path": "/memories/statistics",
+      "source_pointer": "#/paths/~1memories~1statistics/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "startOAuth",
+      "method": "POST",
+      "path": "/oauth/authorize",
+      "source_pointer": "#/paths/~1oauth~1authorize/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "logoutOAuth",
+      "method": "POST",
+      "path": "/oauth/backchannel-logout",
+      "source_pointer": "#/paths/~1oauth~1backchannel-logout/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "finishOAuth",
+      "method": "POST",
+      "path": "/oauth/callback",
+      "source_pointer": "#/paths/~1oauth~1callback/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "linkOAuthAccount",
+      "method": "POST",
+      "path": "/oauth/link",
+      "source_pointer": "#/paths/~1oauth~1link/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "redirectOAuthToMobile",
+      "method": "GET",
+      "path": "/oauth/mobile-redirect",
+      "source_pointer": "#/paths/~1oauth~1mobile-redirect/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "unlinkOAuthAccount",
+      "method": "POST",
+      "path": "/oauth/unlink",
+      "source_pointer": "#/paths/~1oauth~1unlink/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "searchPluginMethods",
+      "method": "GET",
+      "path": "/plugins/methods",
+      "source_pointer": "#/paths/~1plugins~1methods/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "searchPluginTemplates",
+      "method": "GET",
+      "path": "/plugins/templates",
+      "source_pointer": "#/paths/~1plugins~1templates/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getPublicConfig",
+      "method": "GET",
+      "path": "/public/config",
+      "source_pointer": "#/paths/~1public~1config/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getPublicConfigDefaults",
+      "method": "GET",
+      "path": "/public/config/defaults",
+      "source_pointer": "#/paths/~1public~1config~1defaults/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getAssetsByCity",
+      "method": "GET",
+      "path": "/search/cities",
+      "source_pointer": "#/paths/~1search~1cities/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getExploreData",
+      "method": "GET",
+      "path": "/search/explore",
+      "source_pointer": "#/paths/~1search~1explore/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "searchLargeAssets",
+      "method": "POST",
+      "path": "/search/large-assets",
+      "source_pointer": "#/paths/~1search~1large-assets/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "searchAssets",
+      "method": "POST",
+      "path": "/search/metadata",
+      "source_pointer": "#/paths/~1search~1metadata/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "searchPerson",
+      "method": "GET",
+      "path": "/search/person",
+      "source_pointer": "#/paths/~1search~1person/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "searchPlaces",
+      "method": "GET",
+      "path": "/search/places",
+      "source_pointer": "#/paths/~1search~1places/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "searchRandom",
+      "method": "POST",
+      "path": "/search/random",
+      "source_pointer": "#/paths/~1search~1random/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "searchSmart",
+      "method": "POST",
+      "path": "/search/smart",
+      "source_pointer": "#/paths/~1search~1smart/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "searchAssetStatistics",
+      "method": "POST",
+      "path": "/search/statistics",
+      "source_pointer": "#/paths/~1search~1statistics/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getSearchSuggestions",
+      "method": "GET",
+      "path": "/search/suggestions",
+      "source_pointer": "#/paths/~1search~1suggestions/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getAboutInfo",
+      "method": "GET",
+      "path": "/server/about",
+      "source_pointer": "#/paths/~1server~1about/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getApkLinks",
+      "method": "GET",
+      "path": "/server/apk-links",
+      "source_pointer": "#/paths/~1server~1apk-links/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getServerConfig",
+      "method": "GET",
+      "path": "/server/config",
+      "source_pointer": "#/paths/~1server~1config/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getServerFeatures",
+      "method": "GET",
+      "path": "/server/features",
+      "source_pointer": "#/paths/~1server~1features/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [
+        404
+      ],
+      "has_default_response": false,
+      "js_function": "getServerLicense",
+      "method": "GET",
+      "path": "/server/license",
+      "source_pointer": "#/paths/~1server~1license/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "setServerLicense",
+      "method": "PUT",
+      "path": "/server/license",
+      "source_pointer": "#/paths/~1server~1license/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "deleteServerLicense",
+      "method": "DELETE",
+      "path": "/server/license",
+      "source_pointer": "#/paths/~1server~1license/delete",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getSupportedMediaTypes",
+      "method": "GET",
+      "path": "/server/media-types",
+      "source_pointer": "#/paths/~1server~1media-types/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "pingServer",
+      "method": "GET",
+      "path": "/server/ping",
+      "source_pointer": "#/paths/~1server~1ping/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getServerStatistics",
+      "method": "GET",
+      "path": "/server/statistics",
+      "source_pointer": "#/paths/~1server~1statistics/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getStorage",
+      "method": "GET",
+      "path": "/server/storage",
+      "source_pointer": "#/paths/~1server~1storage/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getServerVersion",
+      "method": "GET",
+      "path": "/server/version",
+      "source_pointer": "#/paths/~1server~1version/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getVersionCheck",
+      "method": "GET",
+      "path": "/server/version-check",
+      "source_pointer": "#/paths/~1server~1version-check/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getVersionHistory",
+      "method": "GET",
+      "path": "/server/version-history",
+      "source_pointer": "#/paths/~1server~1version-history/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "sharedLinkLogin",
+      "method": "POST",
+      "path": "/shared-links/login",
+      "source_pointer": "#/paths/~1shared-links~1login/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getMySharedLink",
+      "method": "GET",
+      "path": "/shared-links/me",
+      "source_pointer": "#/paths/~1shared-links~1me/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getSyncAck",
+      "method": "GET",
+      "path": "/sync/ack",
+      "source_pointer": "#/paths/~1sync~1ack/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "sendSyncAck",
+      "method": "POST",
+      "path": "/sync/ack",
+      "source_pointer": "#/paths/~1sync~1ack/post",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "deleteSyncAck",
+      "method": "DELETE",
+      "path": "/sync/ack",
+      "source_pointer": "#/paths/~1sync~1ack/delete",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getSyncStream",
+      "method": "POST",
+      "path": "/sync/stream",
+      "source_pointer": "#/paths/~1sync~1stream/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getConfig",
+      "method": "GET",
+      "path": "/system-config",
+      "source_pointer": "#/paths/~1system-config/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "updateConfig",
+      "method": "PUT",
+      "path": "/system-config",
+      "source_pointer": "#/paths/~1system-config/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getConfigDefaults",
+      "method": "GET",
+      "path": "/system-config/defaults",
+      "source_pointer": "#/paths/~1system-config~1defaults/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getStorageTemplateOptions",
+      "method": "GET",
+      "path": "/system-config/storage-template-options",
+      "source_pointer": "#/paths/~1system-config~1storage-template-options/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getAdminOnboarding",
+      "method": "GET",
+      "path": "/system-metadata/admin-onboarding",
+      "source_pointer": "#/paths/~1system-metadata~1admin-onboarding/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "updateAdminOnboarding",
+      "method": "POST",
+      "path": "/system-metadata/admin-onboarding",
+      "source_pointer": "#/paths/~1system-metadata~1admin-onboarding/post",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getReverseGeocodingState",
+      "method": "GET",
+      "path": "/system-metadata/reverse-geocoding-state",
+      "source_pointer": "#/paths/~1system-metadata~1reverse-geocoding-state/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getVersionCheckState",
+      "method": "GET",
+      "path": "/system-metadata/version-check-state",
+      "source_pointer": "#/paths/~1system-metadata~1version-check-state/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "bulkTagAssets",
+      "method": "PUT",
+      "path": "/tags/assets",
+      "source_pointer": "#/paths/~1tags~1assets/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getTimeBucket",
+      "method": "GET",
+      "path": "/timeline/bucket",
+      "source_pointer": "#/paths/~1timeline~1bucket/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getTimeBuckets",
+      "method": "GET",
+      "path": "/timeline/buckets",
+      "source_pointer": "#/paths/~1timeline~1buckets/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "emptyTrash",
+      "method": "POST",
+      "path": "/trash/empty",
+      "source_pointer": "#/paths/~1trash~1empty/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "restoreTrash",
+      "method": "POST",
+      "path": "/trash/restore",
+      "source_pointer": "#/paths/~1trash~1restore/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "restoreAssets",
+      "method": "POST",
+      "path": "/trash/restore/assets",
+      "source_pointer": "#/paths/~1trash~1restore~1assets/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getMyUser",
+      "method": "GET",
+      "path": "/users/me",
+      "source_pointer": "#/paths/~1users~1me/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getMyCalendarHeatmap",
+      "method": "GET",
+      "path": "/users/me/calendar-heatmap",
+      "source_pointer": "#/paths/~1users~1me~1calendar-heatmap/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getUserLicense",
+      "method": "GET",
+      "path": "/users/me/license",
+      "source_pointer": "#/paths/~1users~1me~1license/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "setUserLicense",
+      "method": "PUT",
+      "path": "/users/me/license",
+      "source_pointer": "#/paths/~1users~1me~1license/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "deleteUserLicense",
+      "method": "DELETE",
+      "path": "/users/me/license",
+      "source_pointer": "#/paths/~1users~1me~1license/delete",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getUserOnboarding",
+      "method": "GET",
+      "path": "/users/me/onboarding",
+      "source_pointer": "#/paths/~1users~1me~1onboarding/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "setUserOnboarding",
+      "method": "PUT",
+      "path": "/users/me/onboarding",
+      "source_pointer": "#/paths/~1users~1me~1onboarding/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "deleteUserOnboarding",
+      "method": "DELETE",
+      "path": "/users/me/onboarding",
+      "source_pointer": "#/paths/~1users~1me~1onboarding/delete",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getMyPreferences",
+      "method": "GET",
+      "path": "/users/me/preferences",
+      "source_pointer": "#/paths/~1users~1me~1preferences/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "updateMyPreferences",
+      "method": "PUT",
+      "path": "/users/me/preferences",
+      "source_pointer": "#/paths/~1users~1me~1preferences/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "createProfileImage",
+      "method": "POST",
+      "path": "/users/profile-image",
+      "source_pointer": "#/paths/~1users~1profile-image/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "deleteProfileImage",
+      "method": "DELETE",
+      "path": "/users/profile-image",
+      "source_pointer": "#/paths/~1users~1profile-image/delete",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getAssetsByOriginalPath",
+      "method": "GET",
+      "path": "/view/folder",
+      "source_pointer": "#/paths/~1view~1folder/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getUniqueOriginalPaths",
+      "method": "GET",
+      "path": "/view/folder/unique-paths",
+      "source_pointer": "#/paths/~1view~1folder~1unique-paths/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": false,
+      "js_function": "getWorkflowTriggers",
+      "method": "GET",
+      "path": "/workflows/triggers",
+      "source_pointer": "#/paths/~1workflows~1triggers/get",
+      "success_codes": [
+        200
+      ]
+    }
+  ],
+  "unsupported_constructs": {
+    "ambiguities": [
+      "Entity 'admin/notifications/templates' has no component-schema evidence; name derived from path segment (confidence=0.5).",
+      "Key inference for entity 'admin/database-backups' has reduced confidence (0.7); path parameter(s) ['filename'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'admin/integrity/report' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'admin/notifications/templates' has reduced confidence (0.6); path parameter(s) ['name'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'duplicates' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'jobs' has reduced confidence (0.7); path parameter(s) ['name'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'people' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema."
+    ],
+    "document_level": [],
+    "remote_refs": []
+  },
+  "warnings": []
+}

@@ -1,0 +1,113 @@
+{
+  "overlap": {
+    "final": {
+      "allowDownload": true,
+      "id": "bf449d8f-fc1f-48f7-8fbf-5f4fb72ee502",
+      "slug": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129-slug",
+      "status": 200
+    },
+    "responses": {
+      "A": {
+        "allowDownload": true,
+        "id": "bf449d8f-fc1f-48f7-8fbf-5f4fb72ee502",
+        "slug": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129-slug",
+        "status": 200
+      },
+      "B": {
+        "allowDownload": true,
+        "id": "bf449d8f-fc1f-48f7-8fbf-5f4fb72ee502",
+        "slug": null,
+        "status": 200
+      }
+    },
+    "slug_sent": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129-slug"
+  },
+  "real_upstream_overlap": true,
+  "reason": "slug-reset-without-overlap",
+  "serial_ab": {
+    "final": {
+      "allowDownload": true,
+      "id": "ac6f048c-b896-4906-9437-a131fcee038c",
+      "slug": null,
+      "status": 200
+    },
+    "observed": [
+      {
+        "operation": "A",
+        "read": {
+          "allowDownload": false,
+          "id": "ac6f048c-b896-4906-9437-a131fcee038c",
+          "slug": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129-slug",
+          "status": 200
+        },
+        "update": {
+          "allowDownload": false,
+          "id": "ac6f048c-b896-4906-9437-a131fcee038c",
+          "slug": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129-slug",
+          "status": 200
+        }
+      },
+      {
+        "operation": "B",
+        "read": {
+          "allowDownload": true,
+          "id": "ac6f048c-b896-4906-9437-a131fcee038c",
+          "slug": null,
+          "status": 200
+        },
+        "update": {
+          "allowDownload": true,
+          "id": "ac6f048c-b896-4906-9437-a131fcee038c",
+          "slug": null,
+          "status": 200
+        }
+      }
+    ],
+    "order": "AB",
+    "slug_sent": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129-slug"
+  },
+  "serial_ba": {
+    "final": {
+      "allowDownload": true,
+      "id": "06293d90-7872-4fbd-848b-b750d0f9be37",
+      "slug": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129-slug",
+      "status": 200
+    },
+    "observed": [
+      {
+        "operation": "B",
+        "read": {
+          "allowDownload": true,
+          "id": "06293d90-7872-4fbd-848b-b750d0f9be37",
+          "slug": null,
+          "status": 200
+        },
+        "update": {
+          "allowDownload": true,
+          "id": "06293d90-7872-4fbd-848b-b750d0f9be37",
+          "slug": null,
+          "status": 200
+        }
+      },
+      {
+        "operation": "A",
+        "read": {
+          "allowDownload": true,
+          "id": "06293d90-7872-4fbd-848b-b750d0f9be37",
+          "slug": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129-slug",
+          "status": 200
+        },
+        "update": {
+          "allowDownload": true,
+          "id": "06293d90-7872-4fbd-848b-b750d0f9be37",
+          "slug": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129-slug",
+          "status": 200
+        }
+      }
+    ],
+    "order": "BA",
+    "slug_sent": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129-slug"
+  },
+  "spec_sha256": "51719f0b6573ca75eb51834b01a7fdb9e963c9d60fcce813f10c1463a987b866",
+  "verdict": "SERIAL_SLUG_RESET_OBSERVED"
+}

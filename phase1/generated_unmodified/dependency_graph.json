@@ -1,0 +1,141 @@
+{
+  "creation_order": [
+    "admin/invite-links",
+    "avatar",
+    "backgrounds/unsplash/images",
+    "filters",
+    "labels",
+    "notifications",
+    "projects",
+    "subscriptions",
+    "tasks",
+    "teams",
+    "tokens",
+    "user/sessions",
+    "user/settings/token/caldav",
+    "admin/users",
+    "user/bots",
+    "user/settings/webhooks",
+    "time-entries"
+  ],
+  "cycle_edges_removed": [],
+  "deletion_order": [
+    "time-entries",
+    "user/settings/webhooks",
+    "user/bots",
+    "admin/users",
+    "user/settings/token/caldav",
+    "user/sessions",
+    "tokens",
+    "teams",
+    "tasks",
+    "subscriptions",
+    "projects",
+    "notifications",
+    "labels",
+    "filters",
+    "backgrounds/unsplash/images",
+    "avatar",
+    "admin/invite-links"
+  ],
+  "edges": [
+    {
+      "confidence": 0.9,
+      "field_name": "username",
+      "provenance": [
+        {
+          "detail": "Create request body property 'username' matches entity 'avatar'",
+          "pointer": "#/paths/~1admin~1users/post/requestBody/content/application~1json/properties/username",
+          "rule": "D2:D_key_field_exact_match"
+        }
+      ],
+      "source": "admin/users",
+      "target": "avatar"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "project_id",
+      "provenance": [
+        {
+          "detail": "Create request body property 'project_id' matches entity 'projects'",
+          "pointer": "#/paths/~1time-entries/post/requestBody/content/application~1json/properties/project_id",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "time-entries",
+      "target": "projects"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "task_id",
+      "provenance": [
+        {
+          "detail": "Create request body property 'task_id' matches entity 'tasks'",
+          "pointer": "#/paths/~1time-entries/post/requestBody/content/application~1json/properties/task_id",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "time-entries",
+      "target": "tasks"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "user_id",
+      "provenance": [
+        {
+          "detail": "Create request body property 'user_id' matches entity 'admin/users'",
+          "pointer": "#/paths/~1time-entries/post/requestBody/content/application~1json/properties/user_id",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "time-entries",
+      "target": "admin/users"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "username",
+      "provenance": [
+        {
+          "detail": "Create request body property 'username' matches entity 'avatar'",
+          "pointer": "#/paths/~1user~1bots/post/requestBody/content/application~1json/properties/username",
+          "rule": "D2:D_key_field_exact_match"
+        }
+      ],
+      "source": "user/bots",
+      "target": "avatar"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "project_id",
+      "provenance": [
+        {
+          "detail": "Create request body property 'project_id' matches entity 'projects'",
+          "pointer": "#/paths/~1user~1settings~1webhooks/post/requestBody/content/application~1json/properties/project_id",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "user/settings/webhooks",
+      "target": "projects"
+    }
+  ],
+  "had_cycle": false,
+  "nodes": [
+    "admin/invite-links",
+    "admin/users",
+    "avatar",
+    "backgrounds/unsplash/images",
+    "filters",
+    "labels",
+    "notifications",
+    "projects",
+    "subscriptions",
+    "tasks",
+    "teams",
+    "time-entries",
+    "tokens",
+    "user/bots",
+    "user/sessions",
+    "user/settings/token/caldav",
+    "user/settings/webhooks"
+  ]
+}

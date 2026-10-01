@@ -1,0 +1,92 @@
+{
+  "active_operations": 243,
+  "adapter_overlap_epochs": 44,
+  "coverage_gate": {
+    "missing_operations": [
+      "updateNotification"
+    ],
+    "new_target_overlap": true,
+    "observed_operations": [
+      "updateAlbumInfo",
+      "updateSharedLink"
+    ]
+  },
+  "deprecated_operations": 22,
+  "distinct_paths_observed": 28,
+  "epochs": 44,
+  "evaluator_exit": 2,
+  "generated_operations": 265,
+  "http_events": 567,
+  "invalid_token_events": 0,
+  "long_story_selected": 0,
+  "methods": {
+    "GET": 179,
+    "PATCH": 364,
+    "POST": 24
+  },
+  "observed_path_counts": {
+    "/activities": 2,
+    "/admin/users": 2,
+    "/admin/users/68fd6203-8877-4647-8cec-75c89830f019": 1,
+    "/admin/users/ae46d5cf-2c25-408d-9f95-bb8e57fc8cce": 1,
+    "/albums": 2,
+    "/albums/227eebcf-fd2b-4938-9e7b-bc967a8a13d2": 1,
+    "/albums/56a1db02-811f-4098-9054-84f1e74e7863": 257,
+    "/api-keys": 2,
+    "/api-keys/2ad07987-d795-4fd9-b30b-4fb7d48e1bb9": 1,
+    "/api-keys/7b782a12-b7f4-4541-a2cc-c2c4ddfb65df": 1,
+    "/jobs": 2,
+    "/libraries": 2,
+    "/memories": 2,
+    "/memories/29f661d4-a6f5-4155-8fed-dad3243bca1e": 1,
+    "/memories/b030d529-45be-473f-b3e5-2c8c2f7fc1de": 1,
+    "/partners": 2,
+    "/people": 1,
+    "/people/612b25de-314f-496c-bd95-703354560e76": 1,
+    "/sessions": 1,
+    "/shared-links": 2,
+    "/shared-links/5c353f17-230a-4cae-b913-be4eadb3e756": 1,
+    "/shared-links/dbcd69a4-4758-4c66-a708-af2a978783ab": 273,
+    "/tags": 2,
+    "/tags/9db3d360-3549-4f24-bd1b-2a5a6fde05e5": 1,
+    "/tags/a8f5bd3b-ef2e-4c5f-a6bd-1e2e2a8b4180": 1,
+    "/workflows": 2,
+    "/workflows/859943b6-357f-48d7-85e0-a049e2acebbb": 1,
+    "/workflows/978c7e7d-ab07-4ff9-9cdf-49134e457538": 1
+  },
+  "oracle_layers": {
+    "concurrency": {
+      "INCONCLUSIVE": 15,
+      "PASS": 28,
+      "VIOLATED": 1
+    },
+    "contract": {
+      "INCONCLUSIVE": 17,
+      "PASS": 110,
+      "VIOLATED": 0
+    },
+    "state": {
+      "INCONCLUSIVE": 2,
+      "PASS": 14,
+      "VIOLATED": 0
+    }
+  },
+  "oracle_status": "SEMANTIC_ANOMALY",
+  "provengo_exit": 0,
+  "proxy_overlap_epochs": 44,
+  "real_overlap_epochs": 44,
+  "selected_events": 772,
+  "source_operations": 265,
+  "status": "SEMANTIC_ANOMALY",
+  "statuses": {
+    "200": 492,
+    "201": 16,
+    "204": 2,
+    "400": 55,
+    "500": 2
+  },
+  "transport_error_events": 0,
+  "unverified_active_operations": 0,
+  "verifier_coverage_complete": true,
+  "verifier_operations": 243
+}

@@ -1,0 +1,109 @@
+{
+  "generator_version": "0.26.16",
+  "parameters": {
+    "base_seed": 20261831,
+    "combined_campaign": true,
+    "freeze_evidence": true,
+    "instances_per_action": 1,
+    "instances_per_entity": 3,
+    "max_concurrency_width": 3,
+    "max_field_pairs": 6,
+    "max_length": 35000,
+    "prefix_before_concurrency": 8,
+    "prefix_rounds": 10,
+    "preflight_only": false,
+    "root": "C:\\work\\temp\\vikunja_tse_study",
+    "runs": 2,
+    "stage4_branch": "baseline",
+    "story_profile": "long-interleaving"
+  },
+  "results": [
+    {
+      "concurrency_evaluated": 2,
+      "coverage_state": "VERIFIED_PREFIX_AND_ORACLE_COVERAGE",
+      "epoch_count": 4,
+      "evaluator_exit": 2,
+      "http_events": 394,
+      "http_statuses": {
+        "200": 346,
+        "201": 28,
+        "400": 4,
+        "404": 2,
+        "422": 13,
+        "500": 1
+      },
+      "max_prefix_rounds": 8,
+      "oracle_counts": {
+        "INCONCLUSIVE": 49,
+        "PASS": 416,
+        "VIOLATED": 1
+      },
+      "oracle_status": "SEMANTIC_ANOMALY",
+      "prefix_verified_epochs": 4,
+      "provengo_exit": 0,
+      "real_overlap_epochs": 4,
+      "runtime_ready_oracles": 22,
+      "seed": 20261831,
+      "stage4_branch": "baseline",
+      "story_event_counts": {
+        "ConcurrencyReady": 5,
+        "InstanceUnavailable": 3,
+        "LongStoryStep": 87,
+        "PrefixVerified": 87,
+        "StorySkipped": 16
+      },
+      "story_skip_reasons": {
+        "create-failed": 3,
+        "dependency-unavailable": 4,
+        "identity-change-requires-rebinding": 3,
+        "operation-failed": 6
+      },
+      "transport_errors": 0
+    },
+    {
+      "concurrency_evaluated": 6,
+      "coverage_state": "VERIFIED_PREFIX_AND_ORACLE_COVERAGE",
+      "epoch_count": 6,
+      "evaluator_exit": 3,
+      "http_events": 408,
+      "http_statuses": {
+        "200": 358,
+        "201": 28,
+        "400": 4,
+        "404": 2,
+        "409": 2,
+        "422": 13,
+        "500": 1
+      },
+      "max_prefix_rounds": 8,
+      "oracle_counts": {
+        "INCONCLUSIVE": 51,
+        "PASS": 424,
+        "VIOLATED": 0
+      },
+      "oracle_status": "INCONCLUSIVE",
+      "prefix_verified_epochs": 6,
+      "provengo_exit": 0,
+      "real_overlap_epochs": 6,
+      "runtime_ready_oracles": 22,
+      "seed": 20261832,
+      "stage4_branch": "baseline",
+      "story_event_counts": {
+        "ConcurrencyReady": 8,
+        "ConcurrencySkipped": 1,
+        "InstanceUnavailable": 3,
+        "LongStoryStep": 88,
+        "PrefixVerified": 88,
+        "StorySkipped": 16
+      },
+      "story_skip_reasons": {
+        "create-failed": 3,
+        "dependency-unavailable": 4,
+        "identity-change-requires-rebinding": 3,
+        "operation-failed": 6
+      },
+      "transport_errors": 0
+    }
+  ],
+  "state": "COMPLETE"
+}

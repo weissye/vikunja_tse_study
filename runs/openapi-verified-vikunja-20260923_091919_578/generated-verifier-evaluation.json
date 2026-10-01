@@ -1,0 +1,3333 @@
+{
+  "concurrency_epochs_evaluated": 58,
+  "concurrency_oracle_families_exercised": 9,
+  "concurrency_oracles_exercised": 58,
+  "concurrency_oracles_generated_ready": 60,
+  "concurrency_oracles_ready": 60,
+  "contract_oracles_exercised": 17,
+  "contract_oracles_generated": 29,
+  "counts": {
+    "INCONCLUSIVE": 72,
+    "PASS": 121,
+    "VIOLATED": 42
+  },
+  "layer_counts": {
+    "concurrency": {
+      "INCONCLUSIVE": 46,
+      "PASS": 10,
+      "VIOLATED": 2
+    },
+    "contract": {
+      "INCONCLUSIVE": 0,
+      "PASS": 104,
+      "VIOLATED": 40
+    },
+    "state": {
+      "INCONCLUSIVE": 26,
+      "PASS": 7,
+      "VIOLATED": 0
+    }
+  },
+  "note": "Not-exercised operations are coverage facts, not automatically semantic failures.",
+  "profile": "openapi-only-generated-verifiers",
+  "run_status": "SEMANTIC_ANOMALY",
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.3",
+    "sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941",
+    "title": "Vikunja API",
+    "version": "v2.6.0-469-g94e6f165"
+  },
+  "witnesses": [
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::projects-create",
+      "result": "PASS",
+      "trigger_event": 2
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::projects-create",
+      "result": "PASS",
+      "trigger_event": 3
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::labels-create",
+      "result": "PASS",
+      "trigger_event": 4
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 5
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 6
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 7
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::tasks-create",
+      "result": "PASS",
+      "trigger_event": 8
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 9
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::tasks-create",
+      "result": "PASS",
+      "trigger_event": 10
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::labels-create",
+      "result": "PASS",
+      "trigger_event": 11
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::projects-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 12
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 13
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "result": "PASS",
+      "trigger_event": 14
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 15
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 17
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 412
+      },
+      "oracle_id": "contract::tasks-relations-create",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 18
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 19
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "contract::task-labels-create",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 20
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 412
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 21
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 412
+      },
+      "oracle_id": "contract::task-comments-create",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 23
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::task-comments-list",
+      "result": "PASS",
+      "trigger_event": 24
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::task-labels-list",
+      "result": "PASS",
+      "trigger_event": 25
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 26
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 412
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 28
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 29
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-update",
+      "result": "PASS",
+      "trigger_event": 30
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-update",
+      "result": "PASS",
+      "trigger_event": 31
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 32
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 33
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 37
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 38
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-update",
+      "result": "PASS",
+      "trigger_event": 42
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 46
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "result": "PASS",
+      "trigger_event": 50
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 54
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 59
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 64
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-update",
+      "result": "PASS",
+      "trigger_event": 68
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 72
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 76
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 80
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 84
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 88
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 412
+      },
+      "oracle_id": "contract::tasks-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 92
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 96
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 101
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 106
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-update",
+      "result": "PASS",
+      "trigger_event": 110
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 114
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 118
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 122
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 127
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 132
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::labels-update",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 136
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 140
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 144
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 148
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "result": "PASS",
+      "trigger_event": 152
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 156
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-update",
+      "result": "PASS",
+      "trigger_event": 160
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 164
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-update",
+      "result": "PASS",
+      "trigger_event": 168
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 172
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 176
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 180
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 184
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 188
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 192
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 196
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-update",
+      "result": "PASS",
+      "trigger_event": 200
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 204
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 208
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 212
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 216
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 220
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 224
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 228
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-update",
+      "result": "PASS",
+      "trigger_event": 232
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 236
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-update",
+      "result": "PASS",
+      "trigger_event": 240
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 244
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 249
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 254
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 258
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 262
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "result": "PASS",
+      "trigger_event": 266
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 270
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "result": "PASS",
+      "trigger_event": 274
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 278
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "result": "PASS",
+      "trigger_event": 282
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 286
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-update",
+      "result": "PASS",
+      "trigger_event": 290
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 294
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 298
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 302
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "result": "PASS",
+      "trigger_event": 306
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 310
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 315
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 320
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 324
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 328
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 332
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 336
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 340
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 344
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 349
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 354
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 358
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 362
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "result": "PASS",
+      "trigger_event": 366
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 370
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 375
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 380
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-update",
+      "result": "PASS",
+      "trigger_event": 384
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 388
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 393
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 398
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "result": "PASS",
+      "trigger_event": 403
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 408
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 412
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 416
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-update",
+      "result": "PASS",
+      "trigger_event": 420
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 424
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "result": "PASS",
+      "trigger_event": 429
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 434
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "result": "PASS",
+      "trigger_event": 438
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 442
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 446
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 450
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 454
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-read",
+      "result": "PASS",
+      "trigger_event": 458
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::projects-update",
+      "result": "PASS",
+      "trigger_event": 462
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 466
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 471
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 476
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "result": "PASS",
+      "trigger_event": 481
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 486
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 491
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 496
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 500
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::tasks-read",
+      "result": "PASS",
+      "trigger_event": 504
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 304
+      },
+      "oracle_id": "contract::patch-tasks-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 508
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::labels-read",
+      "result": "PASS",
+      "trigger_event": 512
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 200
+      },
+      "oracle_id": "contract::patch-labels-read",
+      "result": "PASS",
+      "trigger_event": 516
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 5,
+      "oracle_id": "state::projects-create",
+      "resource_path": "/projects/36",
+      "result": "PASS",
+      "trigger_event": 2
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 6,
+      "oracle_id": "state::projects-create",
+      "resource_path": "/projects/37",
+      "result": "PASS",
+      "trigger_event": 3
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 19,
+      "oracle_id": "state::labels-create",
+      "resource_path": "/labels/14",
+      "result": "PASS",
+      "trigger_event": 4
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 26,
+      "oracle_id": "state::tasks-create",
+      "resource_path": "/tasks/41",
+      "result": "PASS",
+      "trigger_event": 8
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 13,
+      "oracle_id": "state::tasks-create",
+      "resource_path": "/tasks/42",
+      "result": "PASS",
+      "trigger_event": 10
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": 15,
+      "oracle_id": "state::labels-create",
+      "resource_path": "/labels/15",
+      "result": "PASS",
+      "trigger_event": 11
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": 37,
+      "oracle_id": "state::patch-projects-read",
+      "resource_path": "/projects/37",
+      "result": "PASS",
+      "trigger_event": 14
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::labels-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/labels/15",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 30
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::projects-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/projects/36",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 31
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::projects-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/projects/36",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 42
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::patch-projects-read",
+      "reason": "superseded-before-observation",
+      "resource_path": "/projects/36",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 50
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::projects-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/projects/36",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 68
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::projects-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/projects/36",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 110
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::patch-projects-read",
+      "reason": "superseded-before-observation",
+      "resource_path": "/projects/36",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 152
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::tasks-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/tasks/41",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 160
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::tasks-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/tasks/41",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 168
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::tasks-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/tasks/41",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 200
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::labels-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/labels/15",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 232
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::tasks-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/tasks/41",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 240
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::patch-projects-read",
+      "reason": "superseded-before-observation",
+      "resource_path": "/projects/36",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 266
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::patch-projects-read",
+      "reason": "superseded-before-observation",
+      "resource_path": "/projects/36",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 274
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::patch-labels-read",
+      "reason": "superseded-before-observation",
+      "resource_path": "/labels/15",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 282
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::projects-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/projects/36",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 290
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::patch-labels-read",
+      "reason": "superseded-before-observation",
+      "resource_path": "/labels/15",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 306
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::patch-tasks-read",
+      "reason": "superseded-before-observation",
+      "resource_path": "/tasks/41",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 366
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::labels-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/labels/15",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 384
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::patch-labels-read",
+      "reason": "superseded-before-observation",
+      "resource_path": "/labels/15",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 403
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::tasks-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/tasks/41",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 420
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::patch-projects-read",
+      "reason": "superseded-before-observation",
+      "resource_path": "/projects/36",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 429
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::patch-labels-read",
+      "reason": "superseded-before-observation",
+      "resource_path": "/labels/15",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 438
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::projects-update",
+      "reason": "superseded-before-observation",
+      "resource_path": "/projects/36",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 462
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::patch-tasks-read",
+      "reason": "superseded-before-observation",
+      "resource_path": "/tasks/41",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 481
+    },
+    {
+      "kind": "written-fields-persist",
+      "observation_event": null,
+      "oracle_id": "state::patch-labels-read",
+      "reason": "superseded-before-observation",
+      "resource_path": "/labels/15",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 516
+    },
+    {
+      "epoch_id": "generated-epoch-0",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 387,
+      "oracle_id": "concurrency::same-field-domain::labels-update",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        385,
+        386
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-1",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 235,
+      "oracle_id": "concurrency::same-field-domain::labels-update",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        422
+      ],
+      "trigger_events": [
+        233,
+        234
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-10",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 71,
+      "oracle_id": "concurrency::same-field-domain::projects-update",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        69,
+        70
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-11",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 465,
+      "oracle_id": "concurrency::same-field-domain::projects-update",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        422
+      ],
+      "trigger_events": [
+        463,
+        464
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-12",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 293,
+      "oracle_id": "concurrency::same-field-domain::projects-update",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        422
+      ],
+      "trigger_events": [
+        291,
+        292
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-13",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 113,
+      "oracle_id": "concurrency::same-field-domain::projects-update",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        412,
+        200
+      ],
+      "trigger_events": [
+        111,
+        112
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-14",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 36,
+      "oracle_id": "concurrency::same-field-domain::projects-update",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        34,
+        35
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-15",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 45,
+      "oracle_id": "concurrency::same-field-domain::projects-update",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        404,
+        403
+      ],
+      "trigger_events": [
+        43,
+        44
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-16",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 415,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        422
+      ],
+      "trigger_events": [
+        413,
+        414
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-17",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 53,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        422
+      ],
+      "trigger_events": [
+        51,
+        52
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-18",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 335,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        304
+      ],
+      "trigger_events": [
+        333,
+        334
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-19",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 147,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        304
+      ],
+      "trigger_events": [
+        145,
+        146
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-2",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 139,
+      "oracle_id": "concurrency::same-field-domain::labels-update",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        137,
+        138
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-20",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 277,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        404,
+        200
+      ],
+      "trigger_events": [
+        275,
+        276
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-21",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 155,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        200
+      ],
+      "trigger_events": [
+        153,
+        154
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-22",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 105,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        422,
+        304
+      ],
+      "trigger_events": [
+        102,
+        103,
+        104
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-23",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 131,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        422,
+        304
+      ],
+      "trigger_events": [
+        128,
+        129,
+        130
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-24",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 353,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        304,
+        422
+      ],
+      "trigger_events": [
+        350,
+        351,
+        352
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-25",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 319,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        404,
+        304
+      ],
+      "trigger_events": [
+        316,
+        317,
+        318
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-26",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 379,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        422,
+        304
+      ],
+      "trigger_events": [
+        376,
+        377,
+        378
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-27",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 433,
+      "oracle_id": "concurrency::disjoint-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        422,
+        200
+      ],
+      "trigger_events": [
+        430,
+        431,
+        432
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-28",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 269,
+      "oracle_id": "concurrency::same-field-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        200
+      ],
+      "trigger_events": [
+        267,
+        268
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-29",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 121,
+      "oracle_id": "concurrency::same-field-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        422
+      ],
+      "trigger_events": [
+        119,
+        120
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-3",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 519,
+      "oracle_id": "concurrency::disjoint-domain::patch-labels-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        200,
+        422
+      ],
+      "trigger_events": [
+        517,
+        518
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-30",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 179,
+      "oracle_id": "concurrency::same-field-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        422
+      ],
+      "trigger_events": [
+        177,
+        178
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-31",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 87,
+      "oracle_id": "concurrency::same-field-domain::patch-projects-read",
+      "result": "PASS",
+      "statuses": [
+        304,
+        200
+      ],
+      "trigger_events": [
+        85,
+        86
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-32",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 449,
+      "oracle_id": "concurrency::same-field-domain::patch-projects-read",
+      "result": "PASS",
+      "statuses": [
+        304,
+        200
+      ],
+      "trigger_events": [
+        447,
+        448
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-33",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 195,
+      "oracle_id": "concurrency::same-field-domain::patch-projects-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        404,
+        403
+      ],
+      "trigger_events": [
+        193,
+        194
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-34",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 243,
+      "oracle_id": "concurrency::same-field-domain::tasks-update",
+      "reason": "same-field-final-value-not-linearizable",
+      "result": "VIOLATED",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        241,
+        242
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-35",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 171,
+      "oracle_id": "concurrency::same-field-domain::tasks-update",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        400,
+        400
+      ],
+      "trigger_events": [
+        169,
+        170
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-36",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 95,
+      "oracle_id": "concurrency::same-field-domain::tasks-update",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        412,
+        412
+      ],
+      "trigger_events": [
+        93,
+        94
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-37",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 203,
+      "oracle_id": "concurrency::same-field-domain::tasks-update",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        201,
+        202
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-38",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 423,
+      "oracle_id": "concurrency::same-field-domain::tasks-update",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        422
+      ],
+      "trigger_events": [
+        421,
+        422
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-39",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 163,
+      "oracle_id": "concurrency::same-field-domain::tasks-update",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        422
+      ],
+      "trigger_events": [
+        161,
+        162
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-4",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 309,
+      "oracle_id": "concurrency::disjoint-domain::patch-labels-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        200
+      ],
+      "trigger_events": [
+        307,
+        308
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-40",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 511,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        400,
+        200
+      ],
+      "trigger_events": [
+        509,
+        510
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-41",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 457,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        200
+      ],
+      "trigger_events": [
+        455,
+        456
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-42",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 227,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        200
+      ],
+      "trigger_events": [
+        225,
+        226
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-43",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 301,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        200
+      ],
+      "trigger_events": [
+        299,
+        300
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-44",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 361,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        200
+      ],
+      "trigger_events": [
+        359,
+        360
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-45",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 79,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        200
+      ],
+      "trigger_events": [
+        77,
+        78
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-46",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 485,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        400,
+        200,
+        200
+      ],
+      "trigger_events": [
+        482,
+        483,
+        484
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-47",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 63,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        200,
+        400
+      ],
+      "trigger_events": [
+        60,
+        61,
+        62
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-48",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 495,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        400,
+        200
+      ],
+      "trigger_events": [
+        492,
+        493,
+        494
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-49",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 397,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        200,
+        400,
+        422
+      ],
+      "trigger_events": [
+        394,
+        395,
+        396
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-5",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 441,
+      "oracle_id": "concurrency::disjoint-domain::patch-labels-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        200
+      ],
+      "trigger_events": [
+        439,
+        440
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-50",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 253,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        200,
+        400
+      ],
+      "trigger_events": [
+        250,
+        251,
+        252
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-51",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 475,
+      "oracle_id": "concurrency::disjoint-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        200,
+        400
+      ],
+      "trigger_events": [
+        472,
+        473,
+        474
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-52",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 219,
+      "oracle_id": "concurrency::same-field-domain::patch-tasks-read",
+      "reason": "same-field-final-value-not-linearizable",
+      "result": "VIOLATED",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        217,
+        218
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-53",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 211,
+      "oracle_id": "concurrency::same-field-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        400,
+        400
+      ],
+      "trigger_events": [
+        209,
+        210
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-54",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 369,
+      "oracle_id": "concurrency::same-field-domain::patch-tasks-read",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        367,
+        368
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-55",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 187,
+      "oracle_id": "concurrency::same-field-domain::patch-tasks-read",
+      "result": "PASS",
+      "statuses": [
+        304,
+        200
+      ],
+      "trigger_events": [
+        185,
+        186
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-56",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 327,
+      "oracle_id": "concurrency::same-field-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        422
+      ],
+      "trigger_events": [
+        325,
+        326
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-57",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 343,
+      "oracle_id": "concurrency::same-field-domain::patch-tasks-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        422
+      ],
+      "trigger_events": [
+        341,
+        342
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-6",
+      "kind": "disjoint-writes-commute-domain",
+      "observation_event": 407,
+      "oracle_id": "concurrency::disjoint-domain::patch-labels-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        200,
+        200
+      ],
+      "trigger_events": [
+        404,
+        405,
+        406
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-7",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 503,
+      "oracle_id": "concurrency::same-field-domain::patch-labels-read",
+      "result": "PASS",
+      "statuses": [
+        200,
+        200
+      ],
+      "trigger_events": [
+        501,
+        502
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-8",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 261,
+      "oracle_id": "concurrency::same-field-domain::patch-labels-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        422,
+        422
+      ],
+      "trigger_events": [
+        259,
+        260
+      ]
+    },
+    {
+      "epoch_id": "generated-epoch-9",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "observation_event": 285,
+      "oracle_id": "concurrency::same-field-domain::patch-labels-read",
+      "reason": "sequential-control-failed",
+      "result": "INCONCLUSIVE",
+      "statuses": [
+        304,
+        200
+      ],
+      "trigger_events": [
+        283,
+        284
+      ]
+    }
+  ]
+}

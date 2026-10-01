@@ -1,0 +1,65 @@
+﻿{
+    "schema_version":  1,
+    "stage":  "gitea-stage6.5-serial-precondition-confirmation",
+    "spec":  "model/gitea/gitea-1.27.3-swagger.json",
+    "spec_sha256":  "a0baa9a766c22492bd8c45744157c611d3e95cfc0dc73d6f5d14f294cdddce38",
+    "claim_rule":  "A 500 after verified creation/read is a candidate. Server logs and reproduction are required before product-bug attribution.",
+    "environment":  {
+                        "base_url":  "http://127.0.0.1:3477/api/v1",
+                        "trials":  2,
+                        "authenticated_user":  "sbt-gitea-20260924_112024_858",
+                        "container":  "gitea-stage1-server",
+                        "team_only":  true
+                    },
+    "counts":  {
+                   "team, UNDOCUMENTED_UNITS_PRECONDITION":  2
+               },
+    "results":  [
+                    {
+                        "trial":  1,
+                        "family":  "team",
+                        "resource":  "s65-org-121606823-1",
+                        "verdict":  "UNDOCUMENTED_UNITS_PRECONDITION",
+                        "reason":  "requests-without-unit-permission-500-but-documented-unit-control-persists",
+                        "statuses":  {
+                                         "org_create":  201,
+                                         "org_read":  200,
+                                         "minimal":  500,
+                                         "documented_optionals":  500,
+                                         "units_example":  201,
+                                         "units_map":  201,
+                                         "units_read":  200,
+                                         "units_map_read":  200
+                                     },
+                        "observations":  {
+                                             "documented_readable":  false,
+                                             "units_map_readable":  true,
+                                             "minimal_readable":  false,
+                                             "units_readable":  true
+                                         }
+                    },
+                    {
+                        "trial":  2,
+                        "family":  "team",
+                        "resource":  "s65-org-121607075-2",
+                        "verdict":  "UNDOCUMENTED_UNITS_PRECONDITION",
+                        "reason":  "requests-without-unit-permission-500-but-documented-unit-control-persists",
+                        "statuses":  {
+                                         "org_create":  201,
+                                         "org_read":  200,
+                                         "minimal":  500,
+                                         "documented_optionals":  500,
+                                         "units_example":  201,
+                                         "units_map":  201,
+                                         "units_read":  200,
+                                         "units_map_read":  200
+                                     },
+                        "observations":  {
+                                             "documented_readable":  false,
+                                             "units_map_readable":  true,
+                                             "minimal_readable":  false,
+                                             "units_readable":  true
+                                         }
+                    }
+                ]
+}

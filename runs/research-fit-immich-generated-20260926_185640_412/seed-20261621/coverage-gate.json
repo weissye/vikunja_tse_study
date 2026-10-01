@@ -1,0 +1,21 @@
+{
+  "excluded_operations": [],
+  "missing_operations": [
+    "updateAlbumInfo"
+  ],
+  "new_target_overlap": true,
+  "observed_operations": [
+    "updateSharedLink"
+  ],
+  "overlap_count": 1,
+  "overlapping_oracle_ids": [
+    "cross-method::update-delete::updateSharedLink::removeSharedLink"
+  ],
+  "overlaps_by_operation": {
+    "updateSharedLink": 1
+  },
+  "ready_operations": [
+    "updateAlbumInfo",
+    "updateSharedLink"
+  ]
+}

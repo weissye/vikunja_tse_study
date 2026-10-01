@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "seeds": {
+    "seed-20261833": {
+      "coverage": {
+        "cross_entity": {
+          "candidates": 2,
+          "evaluated": 0,
+          "missing_ready": 2,
+          "overlapped": 0,
+          "prefix_and_evaluated": 0,
+          "ready": 2,
+          "state": "NOT_OVERLAPPED",
+          "structural_pairs_without_oracle": 10,
+          "verdicts": {},
+          "verified_long_prefix": 0
+        },
+        "noop": {
+          "candidates": 4,
+          "evaluated": 1,
+          "missing_ready": 3,
+          "overlapped": 1,
+          "prefix_and_evaluated": 1,
+          "readable_update_subjects_without_oracle": 5,
+          "ready": 4,
+          "state": "PREFIX_AND_ORACLE_VERIFIED",
+          "verdicts": {
+            "PASS": 1
+          },
+          "verified_long_prefix": 1
+        },
+        "same_record_disjoint_fields": {
+          "candidates": 2,
+          "evaluated": 0,
+          "missing_ready": 2,
+          "overlapped": 0,
+          "prefix_and_evaluated": 0,
+          "ready": 2,
+          "state": "NOT_OVERLAPPED",
+          "verdicts": {},
+          "verified_long_prefix": 0
+        },
+        "same_record_same_field": {
+          "candidates": 43,
+          "evaluated": 0,
+          "missing_ready": 14,
+          "overlapped": 0,
+          "prefix_and_evaluated": 0,
+          "ready": 14,
+          "state": "NOT_OVERLAPPED",
+          "verdicts": {},
+          "verified_long_prefix": 0
+        },
+        "same_record_update_delete": {
+          "candidates": 10,
+          "evaluated": 0,
+          "missing_ready": 0,
+          "overlapped": 0,
+          "prefix_and_evaluated": 0,
+          "ready": 0,
+          "state": "NO_EXECUTABLE_ORACLE",
+          "verdicts": {},
+          "verified_long_prefix": 0
+        }
+      },
+      "original_counts": {
+        "INCONCLUSIVE": 46,
+        "PASS": 383,
+        "VIOLATED": 0
+      },
+      "original_status": "INCONCLUSIVE",
+      "reevaluated_counts": {
+        "INCONCLUSIVE": 46,
+        "PASS": 383,
+        "VIOLATED": 0
+      },
+      "reevaluated_status": "INCONCLUSIVE",
+      "target_histories": [],
+      "trace_sha256": "0b81157bc035e2ee1daf435bd7bc42d7dd417d8033a121a1cd268fb8b7ef34fa"
+    },
+    "seed-20261834": {
+      "coverage": {
+        "cross_entity": {
+          "candidates": 2,
+          "evaluated": 0,
+          "missing_ready": 2,
+          "overlapped": 0,
+          "prefix_and_evaluated": 0,
+          "ready": 2,
+          "state": "NOT_OVERLAPPED",
+          "structural_pairs_without_oracle": 10,
+          "verdicts": {},
+          "verified_long_prefix": 0
+        },
+        "noop": {
+          "candidates": 4,
+          "evaluated": 1,
+          "missing_ready": 2,
+          "overlapped": 2,
+          "prefix_and_evaluated": 1,
+          "readable_update_subjects_without_oracle": 5,
+          "ready": 4,
+          "state": "PREFIX_AND_ORACLE_VERIFIED",
+          "verdicts": {
+            "INCONCLUSIVE": 1,
+            "PASS": 1
+          },
+          "verified_long_prefix": 2
+        },
+        "same_record_disjoint_fields": {
+          "candidates": 2,
+          "evaluated": 1,
+          "missing_ready": 1,
+          "overlapped": 1,
+          "prefix_and_evaluated": 1,
+          "ready": 2,
+          "state": "PREFIX_AND_ORACLE_VERIFIED",
+          "verdicts": {
+            "VIOLATED": 1
+          },
+          "verified_long_prefix": 1
+        },
+        "same_record_same_field": {
+          "candidates": 43,
+          "evaluated": 0,
+          "missing_ready": 14,
+          "overlapped": 0,
+          "prefix_and_evaluated": 0,
+          "ready": 14,
+          "state": "NOT_OVERLAPPED",
+          "verdicts": {},
+          "verified_long_prefix": 0
+        },
+        "same_record_update_delete": {
+          "candidates": 10,
+          "evaluated": 0,
+          "missing_ready": 0,
+          "overlapped": 0,
+          "prefix_and_evaluated": 0,
+          "ready": 0,
+          "state": "NO_EXECUTABLE_ORACLE",
+          "verdicts": {},
+          "verified_long_prefix": 0
+        }
+      },
+      "original_counts": {
+        "INCONCLUSIVE": 48,
+        "PASS": 423,
+        "VIOLATED": 1
+      },
+      "original_status": "SEMANTIC_ANOMALY",
+      "reevaluated_counts": {
+        "INCONCLUSIVE": 48,
+        "PASS": 423,
+        "VIOLATED": 1
+      },
+      "reevaluated_status": "SEMANTIC_ANOMALY",
+      "target_histories": [
+        {
+          "epoch_id": "generated-epoch-17",
+          "fields": [
+            "day",
+            "entryType"
+          ],
+          "has_field_values": true,
+          "kind": "disjoint-put-serial-outcomes",
+          "oracle_id": "concurrency::disjoint-put::update_one_api_households_mealplans_rules__item_id__put",
+          "original_result": "VIOLATED",
+          "reevaluated_reason": "final-put-state-not-in-either-serial-outcome",
+          "reevaluated_result": "VIOLATED",
+          "timeline": [
+            {
+              "epoch_id": "generated-control-17",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-control-17-op-0",
+              "request": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "response": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:44.636937+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:44.598622+00:00"
+            },
+            {
+              "epoch_id": "generated-control-17",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-control-17-op-1",
+              "request": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "response": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:44.814561+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:44.776552+00:00"
+            },
+            {
+              "epoch_id": "generated-control-17",
+              "method": "GET",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-control-17-observe",
+              "response": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:45.174128+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:45.132512+00:00"
+            },
+            {
+              "epoch_id": "generated-reset-17",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-reset-17-op-0",
+              "request": {
+                "day": "unset",
+                "entryType": "unset"
+              },
+              "response": {
+                "day": "unset",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:45.766953+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:45.743395+00:00"
+            },
+            {
+              "epoch_id": "generated-reset-17",
+              "method": "GET",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-reset-17-observe",
+              "response": {
+                "day": "unset",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:45.947094+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:45.917490+00:00"
+            },
+            {
+              "epoch_id": "generated-reverse-control-17",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-reverse-control-17-op-1",
+              "request": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "response": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:46.120822+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:46.090531+00:00"
+            },
+            {
+              "epoch_id": "generated-reverse-control-17",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-reverse-control-17-op-0",
+              "request": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "response": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:46.274884+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:46.258121+00:00"
+            },
+            {
+              "epoch_id": "generated-reverse-control-17",
+              "method": "GET",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-reverse-control-17-observe",
+              "response": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:46.408831+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:46.397941+00:00"
+            },
+            {
+              "epoch_id": "generated-reset-reverse-17",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-reset-reverse-17-op-0",
+              "request": {
+                "day": "unset",
+                "entryType": "unset"
+              },
+              "response": {
+                "day": "unset",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:46.535577+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:46.510412+00:00"
+            },
+            {
+              "epoch_id": "generated-reset-reverse-17",
+              "method": "GET",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-reset-reverse-17-observe",
+              "response": {
+                "day": "unset",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:46.673131+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:46.647281+00:00"
+            },
+            {
+              "epoch_id": "generated-epoch-17",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-epoch-17-op-1",
+              "request": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "response": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:46.856348+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:46.821812+00:00"
+            },
+            {
+              "epoch_id": "generated-epoch-17",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-epoch-17-op-0",
+              "request": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "response": {
+                "day": "monday",
+                "entryType": "lunch"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:46.863027+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:46.821812+00:00"
+            },
+            {
+              "epoch_id": "generated-epoch-17",
+              "method": "GET",
+              "model_path": "/api/households/mealplans/rules/094b6144-3666-4fde-8bfe-12bef9d798b7",
+              "operation_id": "generated-epoch-17-observe",
+              "response": {
+                "day": "monday",
+                "entryType": "lunch"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:47.039461+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:47.015511+00:00"
+            }
+          ]
+        },
+        {
+          "epoch_id": "generated-epoch-19",
+          "fields": [
+            "subject"
+          ],
+          "has_field_values": true,
+          "kind": "noop-versus-change",
+          "oracle_id": "concurrency::noop::concurrency::same-field::update_one_api_recipes_timeline_events__item_id__put::subject",
+          "original_result": "INCONCLUSIVE",
+          "reevaluated_reason": "pre-epoch-reset-state-not-verified",
+          "reevaluated_result": "INCONCLUSIVE",
+          "timeline": [
+            {
+              "epoch_id": "generated-control-19",
+              "method": "PUT",
+              "model_path": "/api/recipes/timeline/events/1c6f1dfd-017a-442f-a826-e138f961dd91",
+              "operation_id": "generated-control-19-op-0",
+              "request": {
+                "subject": "1_88786_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt"
+              },
+              "response": {
+                "subject": "1_88786_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:35.071960+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:35.003349+00:00"
+            },
+            {
+              "epoch_id": "generated-control-19",
+              "method": "GET",
+              "model_path": "/api/recipes/timeline/events/1c6f1dfd-017a-442f-a826-e138f961dd91",
+              "operation_id": "generated-control-19-noop-observe",
+              "response": {
+                "subject": "1_88786_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:36.756626+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:36.722728+00:00"
+            },
+            {
+              "epoch_id": "generated-control-19",
+              "method": "PUT",
+              "model_path": "/api/recipes/timeline/events/1c6f1dfd-017a-442f-a826-e138f961dd91",
+              "operation_id": "generated-control-19-op-1",
+              "request": {
+                "subject": "sbt_generated_b_subject"
+              },
+              "response": {
+                "subject": "sbt_generated_b_subject"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:38.841346+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:38.779736+00:00"
+            },
+            {
+              "epoch_id": "generated-control-19",
+              "method": "GET",
+              "model_path": "/api/recipes/timeline/events/1c6f1dfd-017a-442f-a826-e138f961dd91",
+              "operation_id": "generated-control-19-observe",
+              "response": {
+                "subject": "sbt_generated_b_subject"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:39.008230+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:38.962206+00:00"
+            },
+            {
+              "epoch_id": "generated-reset-19",
+              "method": "PUT",
+              "model_path": "/api/recipes/timeline/events/1c6f1dfd-017a-442f-a826-e138f961dd91",
+              "operation_id": "generated-reset-19-op-0",
+              "request": {
+                "subject": "1_88786_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt"
+              },
+              "response": {
+                "subject": "1_88786_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:39.772138+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:39.714222+00:00"
+            },
+            {
+              "epoch_id": "generated-reset-19",
+              "method": "GET",
+              "model_path": "/api/recipes/timeline/events/1c6f1dfd-017a-442f-a826-e138f961dd91",
+              "operation_id": "generated-reset-19-observe",
+              "response": {
+                "subject": "1_88786_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:39.896607+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:39.870967+00:00"
+            },
+            {
+              "epoch_id": null,
+              "method": "PUT",
+              "model_path": "/api/recipes/timeline/events/1c6f1dfd-017a-442f-a826-e138f961dd91",
+              "operation_id": null,
+              "request": {
+                "subject": "1_88786_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt"
+              },
+              "response": {
+                "subject": "1_88786_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:40.573074+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:40.513948+00:00"
+            },
+            {
+              "epoch_id": "generated-epoch-19",
+              "method": "PUT",
+              "model_path": "/api/recipes/timeline/events/1c6f1dfd-017a-442f-a826-e138f961dd91",
+              "operation_id": "generated-epoch-19-op-1",
+              "request": {
+                "subject": "sbt_generated_b_subject"
+              },
+              "response": {
+                "subject": "sbt_generated_b_subject"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:40.787026+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:40.726196+00:00"
+            },
+            {
+              "epoch_id": "generated-epoch-19",
+              "method": "PUT",
+              "model_path": "/api/recipes/timeline/events/1c6f1dfd-017a-442f-a826-e138f961dd91",
+              "operation_id": "generated-epoch-19-op-0",
+              "request": {
+                "subject": "1_88786_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt"
+              },
+              "response": {
+                "subject": "1_88786_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:40.795826+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:40.726196+00:00"
+            },
+            {
+              "epoch_id": "generated-epoch-19",
+              "method": "GET",
+              "model_path": "/api/recipes/timeline/events/1c6f1dfd-017a-442f-a826-e138f961dd91",
+              "operation_id": "generated-epoch-19-observe",
+              "response": {
+                "subject": "1_88786_sbt_sbt_sbt_sbt_sbt_sbt_sbt_sbt"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:09:40.961306+00:00",
+              "upstream_started_utc": "2026-09-27T12:09:40.948290+00:00"
+            }
+          ]
+        }
+      ],
+      "trace_sha256": "1be286e375ba7157c5a4cb24f1ca8badae72ba315c6b7a14d3deae2b13edbc6f"
+    }
+  },
+  "source_run": "C:\\work\\temp\\vikunja_tse_study\\runs\\research-fit-mealie-stage4-20260927_120638_558"
+}

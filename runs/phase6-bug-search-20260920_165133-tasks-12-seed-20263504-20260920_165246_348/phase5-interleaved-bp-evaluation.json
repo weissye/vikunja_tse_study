@@ -1,0 +1,50 @@
+{
+  "anomalies": [],
+  "checks": {
+    "all_deletions_externally_observable": true,
+    "all_relation_unlinks_executed": true,
+    "all_relation_unlinks_observed": true,
+    "all_task_updates_executed": true,
+    "all_task_updates_persisted": true,
+    "all_tasks_created": true,
+    "all_tasks_deleted": true,
+    "alternating_relations_recreated": true,
+    "initial_relation_chain_created": true,
+    "initial_relations_bidirectionally_observed": true,
+    "no_semantic_anomalies": true,
+    "project_created": true,
+    "project_deleted": true
+  },
+  "counts": {
+    "initial_relation_creates": 11,
+    "relation_deletes": 11,
+    "relation_recreates": 6,
+    "task_creates": 12,
+    "task_deletes": 12,
+    "updates": 12
+  },
+  "evaluation_basis": "external redacted HTTP trace",
+  "event_count": 136,
+  "expected_tasks": 12,
+  "observed_ids": {
+    "project_id": 32,
+    "task_ids": [
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173
+    ]
+  },
+  "passed_count": 13,
+  "phase5_bp_passed": true,
+  "profile": "interleaved-relational-exploration",
+  "required_count": 13
+}

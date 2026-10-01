@@ -1,0 +1,209 @@
+﻿[
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.1518542Z",
+        "label":  "research-user",
+        "method":  "GET",
+        "path":  "/user",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  2
+                     }
+    },
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.1833238Z",
+        "label":  "trial-1-create",
+        "method":  "POST",
+        "path":  "/user/applications/oauth2",
+        "request":  {
+                        "name":  "s68-20260924_130926_141-1",
+                        "redirect_uris":  [
+                                              "https://example.test/s68-20260924_130926_141-1"
+                                          ]
+                    },
+        "status":  201,
+        "response":  {
+                         "id":  11,
+                         "name":  "s68-20260924_130926_141-1",
+                         "redirect_uris":  [
+                                               "https://example.test/s68-20260924_130926_141-1"
+                                           ]
+                     }
+    },
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.2751730Z",
+        "label":  "trial-1-before",
+        "method":  "GET",
+        "path":  "/user/applications/oauth2/11",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  11,
+                         "name":  "s68-20260924_130926_141-1",
+                         "redirect_uris":  [
+                                               "https://example.test/s68-20260924_130926_141-1"
+                                           ]
+                     }
+    },
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.3004951Z",
+        "label":  "trial-1-partial",
+        "method":  "PATCH",
+        "path":  "/user/applications/oauth2/11",
+        "request":  {
+                        "name":  "s68-20260924_130926_141-1-new"
+                    },
+        "status":  422,
+        "response":  {
+
+                     }
+    },
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.3135954Z",
+        "label":  "trial-1-after-partial",
+        "method":  "GET",
+        "path":  "/user/applications/oauth2/11",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  11,
+                         "name":  "s68-20260924_130926_141-1",
+                         "redirect_uris":  [
+                                               "https://example.test/s68-20260924_130926_141-1"
+                                           ]
+                     }
+    },
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.3366294Z",
+        "label":  "trial-1-full",
+        "method":  "PATCH",
+        "path":  "/user/applications/oauth2/11",
+        "request":  {
+                        "name":  "s68-20260924_130926_141-1-new",
+                        "redirect_uris":  [
+                                              "https://example.test/s68-20260924_130926_141-1"
+                                          ]
+                    },
+        "status":  200,
+        "response":  {
+                         "id":  11,
+                         "name":  "s68-20260924_130926_141-1-new",
+                         "redirect_uris":  [
+                                               "https://example.test/s68-20260924_130926_141-1"
+                                           ]
+                     }
+    },
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.4167085Z",
+        "label":  "trial-1-after-full",
+        "method":  "GET",
+        "path":  "/user/applications/oauth2/11",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  11,
+                         "name":  "s68-20260924_130926_141-1-new",
+                         "redirect_uris":  [
+                                               "https://example.test/s68-20260924_130926_141-1"
+                                           ]
+                     }
+    },
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.4439695Z",
+        "label":  "trial-2-create",
+        "method":  "POST",
+        "path":  "/user/applications/oauth2",
+        "request":  {
+                        "name":  "s68-20260924_130926_141-2",
+                        "redirect_uris":  [
+                                              "https://example.test/s68-20260924_130926_141-2"
+                                          ]
+                    },
+        "status":  201,
+        "response":  {
+                         "id":  12,
+                         "name":  "s68-20260924_130926_141-2",
+                         "redirect_uris":  [
+                                               "https://example.test/s68-20260924_130926_141-2"
+                                           ]
+                     }
+    },
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.5224752Z",
+        "label":  "trial-2-before",
+        "method":  "GET",
+        "path":  "/user/applications/oauth2/12",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  12,
+                         "name":  "s68-20260924_130926_141-2",
+                         "redirect_uris":  [
+                                               "https://example.test/s68-20260924_130926_141-2"
+                                           ]
+                     }
+    },
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.5430328Z",
+        "label":  "trial-2-partial",
+        "method":  "PATCH",
+        "path":  "/user/applications/oauth2/12",
+        "request":  {
+                        "name":  "s68-20260924_130926_141-2-new"
+                    },
+        "status":  422,
+        "response":  {
+
+                     }
+    },
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.5534887Z",
+        "label":  "trial-2-after-partial",
+        "method":  "GET",
+        "path":  "/user/applications/oauth2/12",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  12,
+                         "name":  "s68-20260924_130926_141-2",
+                         "redirect_uris":  [
+                                               "https://example.test/s68-20260924_130926_141-2"
+                                           ]
+                     }
+    },
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.5753061Z",
+        "label":  "trial-2-full",
+        "method":  "PATCH",
+        "path":  "/user/applications/oauth2/12",
+        "request":  {
+                        "name":  "s68-20260924_130926_141-2-new",
+                        "redirect_uris":  [
+                                              "https://example.test/s68-20260924_130926_141-2"
+                                          ]
+                    },
+        "status":  200,
+        "response":  {
+                         "id":  12,
+                         "name":  "s68-20260924_130926_141-2-new",
+                         "redirect_uris":  [
+                                               "https://example.test/s68-20260924_130926_141-2"
+                                           ]
+                     }
+    },
+    {
+        "timestamp_utc":  "2026-09-24T10:09:26.6566844Z",
+        "label":  "trial-2-after-full",
+        "method":  "GET",
+        "path":  "/user/applications/oauth2/12",
+        "request":  null,
+        "status":  200,
+        "response":  {
+                         "id":  12,
+                         "name":  "s68-20260924_130926_141-2-new",
+                         "redirect_uris":  [
+                                               "https://example.test/s68-20260924_130926_141-2"
+                                           ]
+                     }
+    }
+]

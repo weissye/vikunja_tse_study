@@ -1,0 +1,56 @@
+services:
+  vikunja-files-init:
+    image: postgres:16-alpine
+    container_name: vikunja-increment8-2-files-init
+    user: "0:0"
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - "mkdir -p /files && chown -R 1000:0 /files && chmod 0770 /files"
+    volumes:
+      - increment8_2_vikunja_files:/files
+    restart: "no"
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: vikunja-increment8-2-db
+    environment:
+      POSTGRES_DB: vikunja
+      POSTGRES_USER: vikunja
+      POSTGRES_PASSWORD: ${INC82_POSTGRES_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vikunja -d vikunja"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    volumes:
+      - increment8_2_postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  vikunja:
+    image: vikunja/vikunja@sha256:417ada6f94e81f0267aa2f007d0a811fc82d38dd2aa58351e3ea520ca01c2ea5
+    container_name: vikunja-increment8-2-postgres
+    depends_on:
+      vikunja-files-init:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_healthy
+    environment:
+      VIKUNJA_DATABASE_TYPE: postgres
+      VIKUNJA_DATABASE_HOST: postgres
+      VIKUNJA_DATABASE_USER: vikunja
+      VIKUNJA_DATABASE_PASSWORD: ${INC82_POSTGRES_PASSWORD}
+      VIKUNJA_DATABASE_DATABASE: vikunja
+      VIKUNJA_DATABASE_SSLMODE: disable
+      VIKUNJA_SERVICE_PUBLICURL: http://localhost:3466/
+      VIKUNJA_SERVICE_ENABLEREGISTRATION: "false"
+      VIKUNJA_SERVICE_SECRET: ${INC82_SERVICE_SECRET}
+      VIKUNJA_CORS_ENABLE: "false"
+    ports:
+      - "127.0.0.1:3466:3456"
+    volumes:
+      - increment8_2_vikunja_files:/app/vikunja/files
+    restart: unless-stopped
+
+volumes:
+  increment8_2_postgres_data:
+  increment8_2_vikunja_files:

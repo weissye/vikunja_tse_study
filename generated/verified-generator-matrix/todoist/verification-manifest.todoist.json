@@ -1,0 +1,893 @@
+{
+  "concurrency_oracles": [],
+  "contract_oracles": [
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "getAllProjects",
+      "oracle_id": "contract::getAllProjects",
+      "path_template": "/projects",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1projects/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "createProject",
+      "oracle_id": "contract::createProject",
+      "path_template": "/projects",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1projects/post",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "getProject",
+      "oracle_id": "contract::getProject",
+      "path_template": "/projects/{projectId}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1projects~1{projectId}/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "updateProject",
+      "oracle_id": "contract::updateProject",
+      "path_template": "/projects/{projectId}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1projects~1{projectId}/post",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "deleteProject",
+      "oracle_id": "contract::deleteProject",
+      "path_template": "/projects/{projectId}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1projects~1{projectId}/delete",
+      "success_statuses": [
+        204
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "getAllCollaborators",
+      "oracle_id": "contract::getAllCollaborators",
+      "path_template": "/projects/{projectId}/collaborators",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1projects~1{projectId}~1collaborators/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "getAllSections",
+      "oracle_id": "contract::getAllSections",
+      "path_template": "/sections",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1sections/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "createSection",
+      "oracle_id": "contract::createSection",
+      "path_template": "/sections",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1sections/post",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "getSingleSection",
+      "oracle_id": "contract::getSingleSection",
+      "path_template": "/sections/{sectionId}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1sections~1{sectionId}/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "updateSection",
+      "oracle_id": "contract::updateSection",
+      "path_template": "/sections/{sectionId}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1sections~1{sectionId}/post",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "deleteSection",
+      "oracle_id": "contract::deleteSection",
+      "path_template": "/sections/{sectionId}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1sections~1{sectionId}/delete",
+      "success_statuses": [
+        204
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "getActiveTasks",
+      "oracle_id": "contract::getActiveTasks",
+      "path_template": "/tasks",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1tasks/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "createTask",
+      "oracle_id": "contract::createTask",
+      "path_template": "/tasks",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1tasks/post",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "getActiveTask",
+      "oracle_id": "contract::getActiveTask",
+      "path_template": "/tasks/{taskId}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1tasks~1{taskId}/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "updateTask",
+      "oracle_id": "contract::updateTask",
+      "path_template": "/tasks/{taskId}",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1tasks~1{taskId}/post",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "deleteTask",
+      "oracle_id": "contract::deleteTask",
+      "path_template": "/tasks/{taskId}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1tasks~1{taskId}/delete",
+      "success_statuses": [
+        204
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "closeTask",
+      "oracle_id": "contract::closeTask",
+      "path_template": "/tasks/{taskId}/close",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1tasks~1{taskId}~1close/post",
+      "success_statuses": [
+        204
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "reopenTask",
+      "oracle_id": "contract::reopenTask",
+      "path_template": "/tasks/{taskId}/reopen",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1tasks~1{taskId}~1reopen/post",
+      "success_statuses": [
+        204
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "getAllComments",
+      "oracle_id": "contract::getAllComments",
+      "path_template": "/comments",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1comments/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "createComment",
+      "oracle_id": "contract::createComment",
+      "path_template": "/comments",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1comments/post",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "getComment",
+      "oracle_id": "contract::getComment",
+      "path_template": "/comments/{comment_id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1comments~1{comment_id}/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "updateComment",
+      "oracle_id": "contract::updateComment",
+      "path_template": "/comments/{comment_id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1comments~1{comment_id}/post",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "deleteComment",
+      "oracle_id": "contract::deleteComment",
+      "path_template": "/comments/{comment_id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1comments~1{comment_id}/delete",
+      "success_statuses": [
+        204
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "getAllPersonalLabels",
+      "oracle_id": "contract::getAllPersonalLabels",
+      "path_template": "/labels",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1labels/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "createPersonalLabel",
+      "oracle_id": "contract::createPersonalLabel",
+      "path_template": "/labels",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1labels/post",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "getPersonalLabel",
+      "oracle_id": "contract::getPersonalLabel",
+      "path_template": "/labels/{label_id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1labels~1{label_id}/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "updatePersonalLabel",
+      "oracle_id": "contract::updatePersonalLabel",
+      "path_template": "/labels/{label_id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1labels~1{label_id}/post",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "deletePersonalLabel",
+      "oracle_id": "contract::deletePersonalLabel",
+      "path_template": "/labels/{label_id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1labels~1{label_id}/delete",
+      "success_statuses": [
+        204
+      ]
+    }
+  ],
+  "counts": {
+    "concurrency_oracles": 0,
+    "contract_only_mutations": 12,
+    "contract_verifiers": 28,
+    "mutations": 17,
+    "operations": 28,
+    "state_verified_mutations": 5
+  },
+  "coverage_complete": true,
+  "manual_assumptions": [],
+  "mutation_coverage": [
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createProject",
+      "path_template": "/projects",
+      "source_pointer": "#/paths/~1projects/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "updateProject",
+      "path_template": "/projects/{projectId}",
+      "source_pointer": "#/paths/~1projects~1{projectId}/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deleteProject",
+      "path_template": "/projects/{projectId}",
+      "source_pointer": "#/paths/~1projects~1{projectId}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createSection",
+      "path_template": "/sections",
+      "source_pointer": "#/paths/~1sections/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "updateSection",
+      "path_template": "/sections/{sectionId}",
+      "source_pointer": "#/paths/~1sections~1{sectionId}/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deleteSection",
+      "path_template": "/sections/{sectionId}",
+      "source_pointer": "#/paths/~1sections~1{sectionId}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createTask",
+      "path_template": "/tasks",
+      "source_pointer": "#/paths/~1tasks/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "updateTask",
+      "path_template": "/tasks/{taskId}",
+      "source_pointer": "#/paths/~1tasks~1{taskId}/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deleteTask",
+      "path_template": "/tasks/{taskId}",
+      "source_pointer": "#/paths/~1tasks~1{taskId}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "closeTask",
+      "path_template": "/tasks/{taskId}/close",
+      "source_pointer": "#/paths/~1tasks~1{taskId}~1close/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "reopenTask",
+      "path_template": "/tasks/{taskId}/reopen",
+      "source_pointer": "#/paths/~1tasks~1{taskId}~1reopen/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createComment",
+      "path_template": "/comments",
+      "source_pointer": "#/paths/~1comments/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "updateComment",
+      "path_template": "/comments/{comment_id}",
+      "source_pointer": "#/paths/~1comments~1{comment_id}/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deleteComment",
+      "path_template": "/comments/{comment_id}",
+      "source_pointer": "#/paths/~1comments~1{comment_id}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createPersonalLabel",
+      "path_template": "/labels",
+      "source_pointer": "#/paths/~1labels/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "updatePersonalLabel",
+      "path_template": "/labels/{label_id}",
+      "source_pointer": "#/paths/~1labels~1{label_id}/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deletePersonalLabel",
+      "path_template": "/labels/{label_id}",
+      "source_pointer": "#/paths/~1labels~1{label_id}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    }
+  ],
+  "policy": {
+    "all_operations_receive_contract_verifier": true,
+    "concurrency_executor_role": "transport-and-barrier-only",
+    "decision_owner": "generated-provengo-model-and-oracle-manifest",
+    "external_application_knowledge_allowed": false,
+    "state_claims_require_openapi-derived-observation": true,
+    "unobservable_mutations_are_reported_contract_only": true
+  },
+  "profile": "openapi-only-verification-and-concurrency",
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.1.0",
+    "sha256": "eac57779838a6327e497334d940be1da6130466afce9d4a7fbf773dc3197a709",
+    "title": "Todoist_REST_V2",
+    "version": "1.1.0"
+  },
+  "state_oracles": [
+    {
+      "fields": [],
+      "kind": "create-visibility",
+      "method": "POST",
+      "observation": {
+        "method": "GET",
+        "path_binding_from_request_path": {},
+        "path_binding_from_response": {
+          "projectId": "id"
+        },
+        "path_template": "/projects/{projectId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "createProject",
+      "oracle_id": "state::createProject",
+      "path_template": "/projects",
+      "source_pointers": [
+        "#/paths/~1projects/post",
+        "#/paths/~1projects~1{projectId}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        200
+      ]
+    },
+    {
+      "fields": [],
+      "kind": "create-visibility",
+      "method": "POST",
+      "observation": {
+        "method": "GET",
+        "path_binding_from_request_path": {},
+        "path_binding_from_response": {
+          "sectionId": "id"
+        },
+        "path_template": "/sections/{sectionId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "createSection",
+      "oracle_id": "state::createSection",
+      "path_template": "/sections",
+      "source_pointers": [
+        "#/paths/~1sections/post",
+        "#/paths/~1sections~1{sectionId}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        200
+      ]
+    },
+    {
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "assignee_id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "content",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "due_date",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "due_datetime",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "due_lang",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "due_string",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "duration",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "duration_unit",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "order",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "parent_id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "priority",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "project_id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "section_id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "create-visibility",
+      "method": "POST",
+      "observation": {
+        "method": "GET",
+        "path_binding_from_request_path": {},
+        "path_binding_from_response": {
+          "taskId": "id"
+        },
+        "path_template": "/tasks/{taskId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "createTask",
+      "oracle_id": "state::createTask",
+      "path_template": "/tasks",
+      "source_pointers": [
+        "#/paths/~1tasks/post",
+        "#/paths/~1tasks~1{taskId}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        200
+      ]
+    },
+    {
+      "fields": [],
+      "kind": "create-visibility",
+      "method": "POST",
+      "observation": {
+        "method": "GET",
+        "path_binding_from_request_path": {},
+        "path_binding_from_response": {
+          "comment_id": "id"
+        },
+        "path_template": "/comments/{comment_id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "createComment",
+      "oracle_id": "state::createComment",
+      "path_template": "/comments",
+      "source_pointers": [
+        "#/paths/~1comments/post",
+        "#/paths/~1comments~1{comment_id}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        200
+      ]
+    },
+    {
+      "fields": [],
+      "kind": "create-visibility",
+      "method": "POST",
+      "observation": {
+        "method": "GET",
+        "path_binding_from_request_path": {},
+        "path_binding_from_response": {
+          "label_id": "id"
+        },
+        "path_template": "/labels/{label_id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "createPersonalLabel",
+      "oracle_id": "state::createPersonalLabel",
+      "path_template": "/labels",
+      "source_pointers": [
+        "#/paths/~1labels/post",
+        "#/paths/~1labels~1{label_id}/get"
+      ],
+      "superseding_methods": [
+        "PUT",
+        "PATCH",
+        "DELETE"
+      ],
+      "trigger_success_statuses": [
+        200
+      ]
+    }
+  ],
+  "unsupported_refs": []
+}

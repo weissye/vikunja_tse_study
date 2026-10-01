@@ -1,0 +1,296 @@
+[
+  {
+    "method": "POST",
+    "name": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129:album-create",
+    "path": "/albums",
+    "request": {},
+    "response": {
+      "allowDownload": null,
+      "id": "87216445-3e9c-4f6f-979e-c85305706ee6",
+      "slug": null,
+      "status": 201
+    }
+  },
+  {
+    "method": "GET",
+    "name": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129:album-read",
+    "path": "/albums/87216445-3e9c-4f6f-979e-c85305706ee6",
+    "request": {},
+    "response": {
+      "allowDownload": null,
+      "id": "87216445-3e9c-4f6f-979e-c85305706ee6",
+      "slug": null,
+      "status": 200
+    }
+  },
+  {
+    "method": "POST",
+    "name": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129:link-create",
+    "path": "/shared-links",
+    "request": {
+      "allowDownload": false
+    },
+    "response": {
+      "allowDownload": false,
+      "id": "ac6f048c-b896-4906-9437-a131fcee038c",
+      "slug": null,
+      "status": 201
+    }
+  },
+  {
+    "method": "GET",
+    "name": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129:link-read",
+    "path": "/shared-links/{id}",
+    "request": {},
+    "response": {
+      "allowDownload": false,
+      "id": "ac6f048c-b896-4906-9437-a131fcee038c",
+      "slug": null,
+      "status": 200
+    }
+  },
+  {
+    "method": "PATCH",
+    "name": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129:A",
+    "path": "/shared-links/{id}",
+    "request": {
+      "slug": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129-slug"
+    },
+    "response": {
+      "allowDownload": false,
+      "id": "ac6f048c-b896-4906-9437-a131fcee038c",
+      "slug": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129-slug",
+      "status": 200
+    }
+  },
+  {
+    "method": "GET",
+    "name": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129:A:read",
+    "path": "/shared-links/{id}",
+    "request": {},
+    "response": {
+      "allowDownload": false,
+      "id": "ac6f048c-b896-4906-9437-a131fcee038c",
+      "slug": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129-slug",
+      "status": 200
+    }
+  },
+  {
+    "method": "PATCH",
+    "name": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129:B",
+    "path": "/shared-links/{id}",
+    "request": {
+      "allowDownload": true
+    },
+    "response": {
+      "allowDownload": true,
+      "id": "ac6f048c-b896-4906-9437-a131fcee038c",
+      "slug": null,
+      "status": 200
+    }
+  },
+  {
+    "method": "GET",
+    "name": "sbt-ab-4af0b013b4a84f4a8003b3c05db93129:B:read",
+    "path": "/shared-links/{id}",
+    "request": {},
+    "response": {
+      "allowDownload": true,
+      "id": "ac6f048c-b896-4906-9437-a131fcee038c",
+      "slug": null,
+      "status": 200
+    }
+  },
+  {
+    "method": "POST",
+    "name": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129:album-create",
+    "path": "/albums",
+    "request": {},
+    "response": {
+      "allowDownload": null,
+      "id": "f7dca115-86c0-4303-9fd4-1da702b94227",
+      "slug": null,
+      "status": 201
+    }
+  },
+  {
+    "method": "GET",
+    "name": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129:album-read",
+    "path": "/albums/f7dca115-86c0-4303-9fd4-1da702b94227",
+    "request": {},
+    "response": {
+      "allowDownload": null,
+      "id": "f7dca115-86c0-4303-9fd4-1da702b94227",
+      "slug": null,
+      "status": 200
+    }
+  },
+  {
+    "method": "POST",
+    "name": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129:link-create",
+    "path": "/shared-links",
+    "request": {
+      "allowDownload": false
+    },
+    "response": {
+      "allowDownload": false,
+      "id": "06293d90-7872-4fbd-848b-b750d0f9be37",
+      "slug": null,
+      "status": 201
+    }
+  },
+  {
+    "method": "GET",
+    "name": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129:link-read",
+    "path": "/shared-links/{id}",
+    "request": {},
+    "response": {
+      "allowDownload": false,
+      "id": "06293d90-7872-4fbd-848b-b750d0f9be37",
+      "slug": null,
+      "status": 200
+    }
+  },
+  {
+    "method": "PATCH",
+    "name": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129:B",
+    "path": "/shared-links/{id}",
+    "request": {
+      "allowDownload": true
+    },
+    "response": {
+      "allowDownload": true,
+      "id": "06293d90-7872-4fbd-848b-b750d0f9be37",
+      "slug": null,
+      "status": 200
+    }
+  },
+  {
+    "method": "GET",
+    "name": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129:B:read",
+    "path": "/shared-links/{id}",
+    "request": {},
+    "response": {
+      "allowDownload": true,
+      "id": "06293d90-7872-4fbd-848b-b750d0f9be37",
+      "slug": null,
+      "status": 200
+    }
+  },
+  {
+    "method": "PATCH",
+    "name": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129:A",
+    "path": "/shared-links/{id}",
+    "request": {
+      "slug": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129-slug"
+    },
+    "response": {
+      "allowDownload": true,
+      "id": "06293d90-7872-4fbd-848b-b750d0f9be37",
+      "slug": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129-slug",
+      "status": 200
+    }
+  },
+  {
+    "method": "GET",
+    "name": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129:A:read",
+    "path": "/shared-links/{id}",
+    "request": {},
+    "response": {
+      "allowDownload": true,
+      "id": "06293d90-7872-4fbd-848b-b750d0f9be37",
+      "slug": "sbt-ba-4af0b013b4a84f4a8003b3c05db93129-slug",
+      "status": 200
+    }
+  },
+  {
+    "method": "POST",
+    "name": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129:album-create",
+    "path": "/albums",
+    "request": {},
+    "response": {
+      "allowDownload": null,
+      "id": "f2d80fe0-bb93-4bdc-8cf2-ea77a5371cda",
+      "slug": null,
+      "status": 201
+    }
+  },
+  {
+    "method": "GET",
+    "name": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129:album-read",
+    "path": "/albums/f2d80fe0-bb93-4bdc-8cf2-ea77a5371cda",
+    "request": {},
+    "response": {
+      "allowDownload": null,
+      "id": "f2d80fe0-bb93-4bdc-8cf2-ea77a5371cda",
+      "slug": null,
+      "status": 200
+    }
+  },
+  {
+    "method": "POST",
+    "name": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129:link-create",
+    "path": "/shared-links",
+    "request": {
+      "allowDownload": false
+    },
+    "response": {
+      "allowDownload": false,
+      "id": "bf449d8f-fc1f-48f7-8fbf-5f4fb72ee502",
+      "slug": null,
+      "status": 201
+    }
+  },
+  {
+    "method": "GET",
+    "name": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129:link-read",
+    "path": "/shared-links/{id}",
+    "request": {},
+    "response": {
+      "allowDownload": false,
+      "id": "bf449d8f-fc1f-48f7-8fbf-5f4fb72ee502",
+      "slug": null,
+      "status": 200
+    }
+  },
+  {
+    "method": "PATCH",
+    "name": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129:A",
+    "path": "/shared-links/{id}",
+    "request": {
+      "slug": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129-slug"
+    },
+    "response": {
+      "allowDownload": true,
+      "id": "bf449d8f-fc1f-48f7-8fbf-5f4fb72ee502",
+      "slug": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129-slug",
+      "status": 200
+    }
+  },
+  {
+    "method": "PATCH",
+    "name": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129:B",
+    "path": "/shared-links/{id}",
+    "request": {
+      "allowDownload": true
+    },
+    "response": {
+      "allowDownload": true,
+      "id": "bf449d8f-fc1f-48f7-8fbf-5f4fb72ee502",
+      "slug": null,
+      "status": 200
+    }
+  },
+  {
+    "method": "GET",
+    "name": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129:final-read",
+    "path": "/shared-links/{id}",
+    "request": {},
+    "response": {
+      "allowDownload": true,
+      "id": "bf449d8f-fc1f-48f7-8fbf-5f4fb72ee502",
+      "slug": "sbt-overlap-4af0b013b4a84f4a8003b3c05db93129-slug",
+      "status": 200
+    }
+  }
+]

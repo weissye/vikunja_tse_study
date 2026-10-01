@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "basis": "generated OpenAPI plan plus observed fixture evidence",
+  "provengo_executed": false,
+  "runtime": "AUTH_ONLY_VERIFIED",
+  "oracles": {
+    "same-field-one-successful-value-visible": "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName",
+    "noop-versus-change": "concurrency::noop::concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName",
+    "disjoint-put-serial-outcomes": "concurrency::disjoint-put::put:/admin/realms/{realm}/users/{user-id}"
+  },
+  "cases": [],
+  "auth": {
+    "status": "ADMIN_API_VERIFIED",
+    "mode": "password-grant"
+  }
+}

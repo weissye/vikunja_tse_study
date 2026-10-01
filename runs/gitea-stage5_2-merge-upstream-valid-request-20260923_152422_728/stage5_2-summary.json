@@ -1,0 +1,148 @@
+﻿{
+    "schema_version":  1,
+    "stage":  "gitea-stage5.2-valid-request-semantic-confirmation",
+    "status":  "NOT_REPRODUCED_UNDER_VALID_PRECONDITIONS",
+    "claim_rule":  "Only HTTP 500 after fork identity and upstream divergence are independently verified is a confirmed valid-operation defect. Non-fork 500 is retained only as a robustness control.",
+    "environment":  {
+                        "base_url":  "http://127.0.0.1:3477/api/v1",
+                        "container":  "gitea-stage1-server",
+                        "authenticated_user":  "sbt-gitea-20260923_142458_008",
+                        "trials_requested":  10
+                    },
+    "counts":  {
+                   "PASS":  10
+               },
+    "valid_precondition_trials":  10,
+    "results":  [
+                    {
+                        "trial":  1,
+                        "upstream":  "sbt-gitea-20260923_142458_008/s51-upstream-152422754-1",
+                        "fork":  "s51-org-152422754-1/s51-fork-152422754-1",
+                        "preconditions_verified":  true,
+                        "non_fork_control_status":  500,
+                        "valid_fork_status":  200,
+                        "upstream_sha":  "46e7c5d2d2fbfc5d2a004b7429d0ef650e79b228",
+                        "fork_before_sha":  "4432301b8cfc7d66682100e5bcc03b7028de4691",
+                        "fork_after_sha":  "46e7c5d2d2fbfc5d2a004b7429d0ef650e79b228",
+                        "verdict":  "PASS",
+                        "reason":  "verified-fork-fast-forwarded-to-upstream"
+                    },
+                    {
+                        "trial":  2,
+                        "upstream":  "sbt-gitea-20260923_142458_008/s51-upstream-152423954-2",
+                        "fork":  "s51-org-152423954-2/s51-fork-152423954-2",
+                        "preconditions_verified":  true,
+                        "non_fork_control_status":  500,
+                        "valid_fork_status":  200,
+                        "upstream_sha":  "a4a3d75e6c5b40ac6fdf07c1e869720e88701eff",
+                        "fork_before_sha":  "3a5dd35f2ec21906e8951bbb7078fb9c45802867",
+                        "fork_after_sha":  "a4a3d75e6c5b40ac6fdf07c1e869720e88701eff",
+                        "verdict":  "PASS",
+                        "reason":  "verified-fork-fast-forwarded-to-upstream"
+                    },
+                    {
+                        "trial":  3,
+                        "upstream":  "sbt-gitea-20260923_142458_008/s51-upstream-152425145-3",
+                        "fork":  "s51-org-152425145-3/s51-fork-152425145-3",
+                        "preconditions_verified":  true,
+                        "non_fork_control_status":  500,
+                        "valid_fork_status":  200,
+                        "upstream_sha":  "16a7e669ee1006c48f210fd0603b15e4f72d544d",
+                        "fork_before_sha":  "ffed4f3a859af727a568ba1d4621dec7c17f8538",
+                        "fork_after_sha":  "16a7e669ee1006c48f210fd0603b15e4f72d544d",
+                        "verdict":  "PASS",
+                        "reason":  "verified-fork-fast-forwarded-to-upstream"
+                    },
+                    {
+                        "trial":  4,
+                        "upstream":  "sbt-gitea-20260923_142458_008/s51-upstream-152426305-4",
+                        "fork":  "s51-org-152426305-4/s51-fork-152426305-4",
+                        "preconditions_verified":  true,
+                        "non_fork_control_status":  500,
+                        "valid_fork_status":  200,
+                        "upstream_sha":  "e7e90da5b5fdd6ec0b2eb58ff61dee4b0ae5f8a0",
+                        "fork_before_sha":  "a8e7f72189abd9d7a6b20dda46c7d0c5efca5d89",
+                        "fork_after_sha":  "e7e90da5b5fdd6ec0b2eb58ff61dee4b0ae5f8a0",
+                        "verdict":  "PASS",
+                        "reason":  "verified-fork-fast-forwarded-to-upstream"
+                    },
+                    {
+                        "trial":  5,
+                        "upstream":  "sbt-gitea-20260923_142458_008/s51-upstream-152427440-5",
+                        "fork":  "s51-org-152427440-5/s51-fork-152427440-5",
+                        "preconditions_verified":  true,
+                        "non_fork_control_status":  500,
+                        "valid_fork_status":  200,
+                        "upstream_sha":  "a75266f57bfcd1cc540c4c5f52b6b916a10fd237",
+                        "fork_before_sha":  "b20fa40fcbf4ca97cd4b772e87403f0b5e539bb3",
+                        "fork_after_sha":  "a75266f57bfcd1cc540c4c5f52b6b916a10fd237",
+                        "verdict":  "PASS",
+                        "reason":  "verified-fork-fast-forwarded-to-upstream"
+                    },
+                    {
+                        "trial":  6,
+                        "upstream":  "sbt-gitea-20260923_142458_008/s51-upstream-152429336-6",
+                        "fork":  "s51-org-152429336-6/s51-fork-152429336-6",
+                        "preconditions_verified":  true,
+                        "non_fork_control_status":  500,
+                        "valid_fork_status":  200,
+                        "upstream_sha":  "9613831f039717d9546a73aa5c97ad8f32adb1aa",
+                        "fork_before_sha":  "0164bdaa55d2c3fba75cf23b7cdf60e87ffc3bb7",
+                        "fork_after_sha":  "9613831f039717d9546a73aa5c97ad8f32adb1aa",
+                        "verdict":  "PASS",
+                        "reason":  "verified-fork-fast-forwarded-to-upstream"
+                    },
+                    {
+                        "trial":  7,
+                        "upstream":  "sbt-gitea-20260923_142458_008/s51-upstream-152431238-7",
+                        "fork":  "s51-org-152431238-7/s51-fork-152431238-7",
+                        "preconditions_verified":  true,
+                        "non_fork_control_status":  500,
+                        "valid_fork_status":  200,
+                        "upstream_sha":  "bd3d0e9b6aff3cae47ae123860ee61424941c0fe",
+                        "fork_before_sha":  "d1025d3d8e96aa365a77f622d57b8aaff9ba4c80",
+                        "fork_after_sha":  "bd3d0e9b6aff3cae47ae123860ee61424941c0fe",
+                        "verdict":  "PASS",
+                        "reason":  "verified-fork-fast-forwarded-to-upstream"
+                    },
+                    {
+                        "trial":  8,
+                        "upstream":  "sbt-gitea-20260923_142458_008/s51-upstream-152433076-8",
+                        "fork":  "s51-org-152433076-8/s51-fork-152433076-8",
+                        "preconditions_verified":  true,
+                        "non_fork_control_status":  500,
+                        "valid_fork_status":  200,
+                        "upstream_sha":  "53c8d1b841d954b87e785ef5d2930a7086dde274",
+                        "fork_before_sha":  "1966de5bd4aeaa110d89211804253e4da41d33bb",
+                        "fork_after_sha":  "53c8d1b841d954b87e785ef5d2930a7086dde274",
+                        "verdict":  "PASS",
+                        "reason":  "verified-fork-fast-forwarded-to-upstream"
+                    },
+                    {
+                        "trial":  9,
+                        "upstream":  "sbt-gitea-20260923_142458_008/s51-upstream-152434996-9",
+                        "fork":  "s51-org-152434996-9/s51-fork-152434996-9",
+                        "preconditions_verified":  true,
+                        "non_fork_control_status":  500,
+                        "valid_fork_status":  200,
+                        "upstream_sha":  "23c457cbc8fffa19966588d2680c491fdc3c1695",
+                        "fork_before_sha":  "d76df91688737a474de79fb326536a09d6c89029",
+                        "fork_after_sha":  "23c457cbc8fffa19966588d2680c491fdc3c1695",
+                        "verdict":  "PASS",
+                        "reason":  "verified-fork-fast-forwarded-to-upstream"
+                    },
+                    {
+                        "trial":  10,
+                        "upstream":  "sbt-gitea-20260923_142458_008/s51-upstream-152436900-10",
+                        "fork":  "s51-org-152436900-10/s51-fork-152436900-10",
+                        "preconditions_verified":  true,
+                        "non_fork_control_status":  500,
+                        "valid_fork_status":  200,
+                        "upstream_sha":  "e536dcb766ba024717526b3589ac9e677eb95386",
+                        "fork_before_sha":  "8603b2851ea444dcd083323b14697ca27bf7999b",
+                        "fork_after_sha":  "e536dcb766ba024717526b3589ac9e677eb95386",
+                        "verdict":  "PASS",
+                        "reason":  "verified-fork-fast-forwarded-to-upstream"
+                    }
+                ]
+}

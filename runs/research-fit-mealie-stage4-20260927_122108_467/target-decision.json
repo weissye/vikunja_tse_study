@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "seeds": {
+    "seed-20261841": {
+      "classification": "INCONCLUSIVE",
+      "fields": [
+        "day",
+        "entryType"
+      ],
+      "histories": [
+        {
+          "classification": "INCONCLUSIVE",
+          "created_and_read": {
+            "create_http": 201,
+            "created_before_controls": true,
+            "created_id": "e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+            "read_http": 200
+          },
+          "epoch_id": "generated-epoch-0",
+          "fields": [
+            "day",
+            "entryType"
+          ],
+          "has_field_values": true,
+          "kind": "disjoint-put-serial-outcomes",
+          "oracle_id": "concurrency::disjoint-put::update_one_api_households_mealplans_rules__item_id__put",
+          "original_result": "INCONCLUSIVE",
+          "prefix_rounds": 8,
+          "real_overlap": true,
+          "timeline": [
+            {
+              "epoch_id": "generated-control-0",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-control-0-op-0",
+              "request": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "response": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:13.224866+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:13.179478+00:00"
+            },
+            {
+              "epoch_id": "generated-control-0",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-control-0-op-1",
+              "request": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "response": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:13.501266+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:13.471767+00:00"
+            },
+            {
+              "epoch_id": null,
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": null,
+              "request": {
+                "entryType": "breakfast"
+              },
+              "response": {
+                "day": "unset",
+                "entryType": "breakfast"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:13.887275+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:13.846934+00:00"
+            },
+            {
+              "epoch_id": "generated-control-0",
+              "method": "GET",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-control-0-observe",
+              "response": {
+                "day": "unset",
+                "entryType": "breakfast"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:14.000950+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:13.977147+00:00"
+            },
+            {
+              "epoch_id": "generated-reset-0",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-reset-0-op-0",
+              "request": {
+                "day": "unset",
+                "entryType": "unset"
+              },
+              "response": {
+                "day": "unset",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:15.587418+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:15.568157+00:00"
+            },
+            {
+              "epoch_id": "generated-reset-0",
+              "method": "GET",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-reset-0-observe",
+              "response": {
+                "day": "unset",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:15.856431+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:15.833289+00:00"
+            },
+            {
+              "epoch_id": "generated-reverse-control-0",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-reverse-control-0-op-1",
+              "request": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "response": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:16.468123+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:16.437949+00:00"
+            },
+            {
+              "epoch_id": null,
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": null,
+              "request": {
+                "day": "monday"
+              },
+              "response": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:17.246719+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:17.212819+00:00"
+            },
+            {
+              "epoch_id": "generated-reverse-control-0",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-reverse-control-0-op-0",
+              "request": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "response": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:17.401206+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:17.372238+00:00"
+            },
+            {
+              "epoch_id": "generated-reverse-control-0",
+              "method": "GET",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-reverse-control-0-observe",
+              "response": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:17.931328+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:17.906335+00:00"
+            },
+            {
+              "epoch_id": "generated-reset-reverse-0",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-reset-reverse-0-op-0",
+              "request": {
+                "day": "unset",
+                "entryType": "unset"
+              },
+              "response": {
+                "day": "unset",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:19.278564+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:19.245076+00:00"
+            },
+            {
+              "epoch_id": "generated-reset-reverse-0",
+              "method": "GET",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-reset-reverse-0-observe",
+              "response": {
+                "day": "unset",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:20.889621+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:20.852143+00:00"
+            },
+            {
+              "epoch_id": null,
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": null,
+              "request": {
+                "entryType": "breakfast"
+              },
+              "response": {
+                "day": "unset",
+                "entryType": "breakfast"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:21.057064+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:21.013148+00:00"
+            },
+            {
+              "epoch_id": "generated-epoch-0",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-epoch-0-op-1",
+              "request": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "response": {
+                "day": "unset",
+                "entryType": "lunch"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:21.335657+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:21.302880+00:00"
+            },
+            {
+              "epoch_id": "generated-epoch-0",
+              "method": "PUT",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-epoch-0-op-0",
+              "request": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "response": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:21.339727+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:21.304669+00:00"
+            },
+            {
+              "epoch_id": "generated-epoch-0",
+              "method": "GET",
+              "model_path": "/api/households/mealplans/rules/e1138b3a-fc5e-4641-af78-44d4aa1d276d",
+              "operation_id": "generated-epoch-0-observe",
+              "response": {
+                "day": "monday",
+                "entryType": "unset"
+              },
+              "status": 200,
+              "upstream_completed_utc": "2026-09-27T12:22:21.542248+00:00",
+              "upstream_started_utc": "2026-09-27T12:22:21.507616+00:00"
+            }
+          ],
+          "witness_result": "INCONCLUSIVE"
+        }
+      ],
+      "observed_epochs": 1,
+      "oracle_id": "concurrency::disjoint-put::update_one_api_households_mealplans_rules__item_id__put",
+      "schema_version": 1,
+      "seed": "seed-20261841",
+      "trace_sha256": "349499a103060e15f54157c819b4047e9fdb36d013bbb5d907dce7ac370208b6",
+      "witness_result": "INCONCLUSIVE"
+    }
+  },
+  "target_oracle_id": "concurrency::disjoint-put::update_one_api_households_mealplans_rules__item_id__put"
+}

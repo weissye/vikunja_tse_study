@@ -1,0 +1,93 @@
+{
+  "active_operations": 243,
+  "adapter_overlap_epochs": 1,
+  "coverage_gate": {
+    "missing_operations": [],
+    "new_target_overlap": true,
+    "observed_operations": [
+      "updateAlbumInfo"
+    ]
+  },
+  "deprecated_operations": 22,
+  "distinct_paths_observed": 31,
+  "epochs": 1,
+  "evaluator_exit": 3,
+  "generated_operations": 265,
+  "http_events": 65,
+  "invalid_token_events": 0,
+  "long_story_selected": 0,
+  "methods": {
+    "DELETE": 3,
+    "GET": 26,
+    "PATCH": 3,
+    "POST": 33
+  },
+  "observed_path_counts": {
+    "/activities": 3,
+    "/admin/users": 3,
+    "/admin/users/6d4f1537-0296-4df7-9609-39c2c63b3482": 1,
+    "/admin/users/92c917aa-11a0-4fe7-ad5d-69f5c6dbfcf4": 1,
+    "/admin/users/b0a6b307-0bf9-4595-98d6-c18f7f333343": 1,
+    "/albums": 3,
+    "/albums/3924f59b-c53a-472f-9d07-006465a1890a": 5,
+    "/albums/adc690f0-ec95-4eae-89a7-5218ea6a7d12": 6,
+    "/albums/ee2e8213-75b4-43bd-b4f6-63474749aeb9": 6,
+    "/api-keys": 3,
+    "/api-keys/09dd95de-5f18-46d3-9e86-f0247d7cd89a": 1,
+    "/api-keys/91a81de2-1349-4fff-95b6-2b5ea4e5a97c": 1,
+    "/api-keys/d83042ec-d405-4281-97d5-96660573b928": 1,
+    "/jobs": 3,
+    "/libraries": 3,
+    "/memories": 3,
+    "/memories/28771a44-8f4c-4e42-b7de-f518ffb6fc22": 1,
+    "/memories/9dac5f5c-8e28-4e07-a932-6e06a51836c0": 1,
+    "/memories/a36c2ea3-c5c5-4ef1-a5b8-7bf596797f16": 1,
+    "/partners": 3,
+    "/people": 1,
+    "/people/e8b5c3ac-6e36-480b-8cb5-fd8c267cfcae": 1,
+    "/sessions": 1,
+    "/shared-links": 2,
+    "/tags": 3,
+    "/tags/225949df-e5e9-4497-861f-b5ab1b7e1cfe": 1,
+    "/tags/22fcffde-92d8-4d37-9d6f-8a65edd4b275": 1,
+    "/tags/955f34f5-2568-4556-b95b-44010a9036a6": 1,
+    "/workflows": 2,
+    "/workflows/9eeac8ce-5c09-4207-b978-74b93cdb2dc0": 1,
+    "/workflows/d4d61d45-aa1e-4176-877b-a96ee3386384": 1
+  },
+  "oracle_layers": {
+    "concurrency": {
+      "INCONCLUSIVE": 0,
+      "PASS": 1,
+      "VIOLATED": 0
+    },
+    "contract": {
+      "INCONCLUSIVE": 9,
+      "PASS": 42,
+      "VIOLATED": 0
+    },
+    "state": {
+      "INCONCLUSIVE": 1,
+      "PASS": 18,
+      "VIOLATED": 0
+    }
+  },
+  "oracle_status": "INCONCLUSIVE",
+  "provengo_exit": 0,
+  "proxy_overlap_epochs": 1,
+  "real_overlap_epochs": 1,
+  "selected_events": 257,
+  "source_operations": 265,
+  "status": "ORACLE_INCONCLUSIVE",
+  "statuses": {
+    "200": 23,
+    "201": 21,
+    "204": 6,
+    "400": 12,
+    "500": 3
+  },
+  "transport_error_events": 0,
+  "unverified_active_operations": 0,
+  "verifier_coverage_complete": true,
+  "verifier_operations": 243
+}

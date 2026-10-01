@@ -1,0 +1,741 @@
+{
+  "schema_version": 1,
+  "candidate": "immich",
+  "version": "v3.2.0",
+  "source_spec_sha256": "51719f0b6573ca75eb51834b01a7fdb9e963c9d60fcce813f10c1463a987b866",
+  "created_utc": "2026-09-24T13:20:41.201819+00:00",
+  "scope": "directed diagnostic; separate from OpenAPI-only generated campaign",
+  "parameters": {
+    "trials": 8,
+    "prefix_rounds": 4,
+    "quiescence_ms": 150,
+    "seed": 20261006
+  },
+  "counts": {
+    "PASS": 8,
+    "SEMANTIC_CANDIDATE": 0,
+    "INCONCLUSIVE": 0
+  },
+  "results": [
+    {
+      "trial": 1,
+      "verdict": "PASS",
+      "reason": "both-concurrent-updates-persisted",
+      "epoch_id": "immich-album-20260924_132030_516-1",
+      "controls": [
+        {
+          "field": "albumName",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        },
+        {
+          "field": "description",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        }
+      ],
+      "prefix": [
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "description",
+          "status": 200
+        }
+      ],
+      "overlap": true,
+      "proxy_overlap": true,
+      "release_skew_ns": 498500,
+      "statuses": [
+        200,
+        200
+      ],
+      "trace_patch_count": 2,
+      "trace_read_count": 1,
+      "final_status": 200,
+      "final_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-1-A",
+        "description": "immich-overlap-20260924_132030_516-1-B"
+      },
+      "expected_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-1-A",
+        "description": "immich-overlap-20260924_132030_516-1-B"
+      }
+    },
+    {
+      "trial": 2,
+      "verdict": "PASS",
+      "reason": "both-concurrent-updates-persisted",
+      "epoch_id": "immich-album-20260924_132030_516-2",
+      "controls": [
+        {
+          "field": "albumName",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        },
+        {
+          "field": "description",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        }
+      ],
+      "prefix": [
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "description",
+          "status": 200
+        }
+      ],
+      "overlap": true,
+      "proxy_overlap": true,
+      "release_skew_ns": 195400,
+      "statuses": [
+        200,
+        200
+      ],
+      "trace_patch_count": 2,
+      "trace_read_count": 1,
+      "final_status": 200,
+      "final_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-2-A",
+        "description": "immich-overlap-20260924_132030_516-2-B"
+      },
+      "expected_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-2-A",
+        "description": "immich-overlap-20260924_132030_516-2-B"
+      }
+    },
+    {
+      "trial": 3,
+      "verdict": "PASS",
+      "reason": "both-concurrent-updates-persisted",
+      "epoch_id": "immich-album-20260924_132030_516-3",
+      "controls": [
+        {
+          "field": "albumName",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        },
+        {
+          "field": "description",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        }
+      ],
+      "prefix": [
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "description",
+          "status": 200
+        }
+      ],
+      "overlap": true,
+      "proxy_overlap": true,
+      "release_skew_ns": 236100,
+      "statuses": [
+        200,
+        200
+      ],
+      "trace_patch_count": 2,
+      "trace_read_count": 1,
+      "final_status": 200,
+      "final_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-3-A",
+        "description": "immich-overlap-20260924_132030_516-3-B"
+      },
+      "expected_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-3-A",
+        "description": "immich-overlap-20260924_132030_516-3-B"
+      }
+    },
+    {
+      "trial": 4,
+      "verdict": "PASS",
+      "reason": "both-concurrent-updates-persisted",
+      "epoch_id": "immich-album-20260924_132030_516-4",
+      "controls": [
+        {
+          "field": "albumName",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        },
+        {
+          "field": "description",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        }
+      ],
+      "prefix": [
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "description",
+          "status": 200
+        }
+      ],
+      "overlap": true,
+      "proxy_overlap": true,
+      "release_skew_ns": 542900,
+      "statuses": [
+        200,
+        200
+      ],
+      "trace_patch_count": 2,
+      "trace_read_count": 1,
+      "final_status": 200,
+      "final_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-4-A",
+        "description": "immich-overlap-20260924_132030_516-4-B"
+      },
+      "expected_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-4-A",
+        "description": "immich-overlap-20260924_132030_516-4-B"
+      }
+    },
+    {
+      "trial": 5,
+      "verdict": "PASS",
+      "reason": "both-concurrent-updates-persisted",
+      "epoch_id": "immich-album-20260924_132030_516-5",
+      "controls": [
+        {
+          "field": "albumName",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        },
+        {
+          "field": "description",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        }
+      ],
+      "prefix": [
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "description",
+          "status": 200
+        }
+      ],
+      "overlap": true,
+      "proxy_overlap": true,
+      "release_skew_ns": 113600,
+      "statuses": [
+        200,
+        200
+      ],
+      "trace_patch_count": 2,
+      "trace_read_count": 1,
+      "final_status": 200,
+      "final_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-5-A",
+        "description": "immich-overlap-20260924_132030_516-5-B"
+      },
+      "expected_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-5-A",
+        "description": "immich-overlap-20260924_132030_516-5-B"
+      }
+    },
+    {
+      "trial": 6,
+      "verdict": "PASS",
+      "reason": "both-concurrent-updates-persisted",
+      "epoch_id": "immich-album-20260924_132030_516-6",
+      "controls": [
+        {
+          "field": "albumName",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        },
+        {
+          "field": "description",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        }
+      ],
+      "prefix": [
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "description",
+          "status": 200
+        }
+      ],
+      "overlap": true,
+      "proxy_overlap": true,
+      "release_skew_ns": 175600,
+      "statuses": [
+        200,
+        200
+      ],
+      "trace_patch_count": 2,
+      "trace_read_count": 1,
+      "final_status": 200,
+      "final_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-6-A",
+        "description": "immich-overlap-20260924_132030_516-6-B"
+      },
+      "expected_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-6-A",
+        "description": "immich-overlap-20260924_132030_516-6-B"
+      }
+    },
+    {
+      "trial": 7,
+      "verdict": "PASS",
+      "reason": "both-concurrent-updates-persisted",
+      "epoch_id": "immich-album-20260924_132030_516-7",
+      "controls": [
+        {
+          "field": "albumName",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        },
+        {
+          "field": "description",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        }
+      ],
+      "prefix": [
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "description",
+          "status": 200
+        }
+      ],
+      "overlap": true,
+      "proxy_overlap": true,
+      "release_skew_ns": 455600,
+      "statuses": [
+        200,
+        200
+      ],
+      "trace_patch_count": 2,
+      "trace_read_count": 1,
+      "final_status": 200,
+      "final_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-7-A",
+        "description": "immich-overlap-20260924_132030_516-7-B"
+      },
+      "expected_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-7-A",
+        "description": "immich-overlap-20260924_132030_516-7-B"
+      }
+    },
+    {
+      "trial": 8,
+      "verdict": "PASS",
+      "reason": "both-concurrent-updates-persisted",
+      "epoch_id": "immich-album-20260924_132030_516-8",
+      "controls": [
+        {
+          "field": "albumName",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        },
+        {
+          "field": "description",
+          "patch_status": 200,
+          "observed": true,
+          "restore_status": 200,
+          "restored": true
+        }
+      ],
+      "prefix": [
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 0,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 1,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 2,
+          "field": "description",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "albumName",
+          "status": 200
+        },
+        {
+          "phase": "prefix",
+          "round": 3,
+          "field": "description",
+          "status": 200
+        }
+      ],
+      "overlap": true,
+      "proxy_overlap": true,
+      "release_skew_ns": 309000,
+      "statuses": [
+        200,
+        200
+      ],
+      "trace_patch_count": 2,
+      "trace_read_count": 1,
+      "final_status": 200,
+      "final_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-8-A",
+        "description": "immich-overlap-20260924_132030_516-8-B"
+      },
+      "expected_fields": {
+        "albumName": "immich-overlap-20260924_132030_516-8-A",
+        "description": "immich-overlap-20260924_132030_516-8-B"
+      }
+    }
+  ]
+}

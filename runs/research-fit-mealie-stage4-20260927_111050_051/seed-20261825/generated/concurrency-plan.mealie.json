@@ -1,0 +1,97 @@
+{
+  "oracles": [
+    {
+      "delete_success_statuses": [
+        200
+      ],
+      "execution": "three-distinct-created-resources-two-serial-controls-one-barrier-epoch",
+      "fields": [
+        {
+          "comparison_basis": "same-property-request-and-later-get",
+          "comparison_confidence": "high",
+          "enum": null,
+          "example": null,
+          "format": "date",
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "date",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "empirical-update-delete",
+      "media_type": "application/json",
+      "method": "PUT",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation": {
+        "method": "GET",
+        "path_template": "/api/households/mealplans/{item_id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "update_one_api_households_mealplans__item_id__put",
+      "oracle_id": "cross-method::update-delete::update_one_api_households_mealplans__item_id__put::delete_one_api_households_mealplans__item_id__delete",
+      "path_template": "/api/households/mealplans/{item_id}",
+      "request_fields": [
+        "date",
+        "entryType",
+        "groupId",
+        "id",
+        "recipeId",
+        "text",
+        "title",
+        "userId"
+      ],
+      "runtime": {
+        "create_operation_id": "create_one_api_households_mealplans_post",
+        "create_source_pointer": "#/paths/~1api~1households~1mealplans/post",
+        "entity_key": "/api/households/mealplans",
+        "instance_ready_label": "PlanEntryPaginations",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "item_id": "id"
+        },
+        "ready": true,
+        "required_isolated_created_resources": 3
+      },
+      "source_pointers": [
+        "#/paths/~1api~1households~1mealplans~1{item_id}/put",
+        "#/paths/~1api~1households~1mealplans~1{item_id}/delete",
+        "#/paths/~1api~1households~1mealplans~1{item_id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    }
+  ],
+  "policy": {
+    "all_operations_receive_contract_verifier": true,
+    "concurrency_executor_role": "transport-and-barrier-only",
+    "decision_owner": "generated-provengo-model-and-oracle-manifest",
+    "empirical_update_delete": true,
+    "empirical_update_delete_put": "update_one_api_households_mealplans__item_id__put",
+    "external_application_knowledge_allowed": false,
+    "max_concurrency_width": 2,
+    "post_join_observation": "adapter-held-resource-http-lease",
+    "require_serial_controls": true,
+    "state_claims_require_openapi-derived-observation": true,
+    "unobservable_mutations_are_reported_contract_only": true
+  },
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.1.0",
+    "sha256": "e398a26d25a5c038a50709d7c03a5d427b08c90e94d9b5248eb6dd39d4e28d52",
+    "title": "Mealie",
+    "version": "v3.27.0"
+  }
+}

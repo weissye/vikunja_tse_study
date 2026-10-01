@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "stage": "Gitea Stage 6 generated exploration",
+  "status": "COMPLETE",
+  "input_basis": "frozen Gitea OpenAPI and opt-in long-interleaving generator profile",
+  "run_count": 1,
+  "total_http_events": 364,
+  "long_story_steps_selected": 4,
+  "distinct_long_stories_selected": 1,
+  "longest_observed_story_rounds": 4,
+  "total_epochs": 27,
+  "observed_overlapping_epochs": 27,
+  "overlapping_epochs_after_prior_http_threshold": 27,
+  "minimum_prior_http_events": 12,
+  "unique_generated_scenarios": [
+    "concurrency::same-field::issueEditIssue::assignee",
+    "concurrency::same-field::issueEditIssue::body",
+    "concurrency::same-field::issueEditIssue::content_version",
+    "concurrency::same-field::issueEditIssue::due_date",
+    "concurrency::same-field::issueEditIssue::milestone",
+    "concurrency::same-field::issueEditIssue::ref",
+    "concurrency::same-field::issueEditLabel::color",
+    "concurrency::same-field::issueEditLabel::description",
+    "concurrency::same-field::issueEditLabel::exclusive",
+    "concurrency::same-field::issueEditLabel::is_archived",
+    "concurrency::same-field::issueEditLabel::name",
+    "concurrency::same-field::issueEditMilestone::description",
+    "concurrency::same-field::issueEditMilestone::due_on",
+    "concurrency::same-field::issueEditMilestone::state",
+    "concurrency::same-field::issueEditMilestone::title",
+    "concurrency::same-field::repoEdit::allow_fast_forward_only_merge",
+    "concurrency::same-field::repoEdit::allow_manual_merge",
+    "concurrency::same-field::repoEdit::allow_merge_commits",
+    "concurrency::same-field::repoEdit::allow_merge_update",
+    "concurrency::same-field::repoEdit::allow_rebase",
+    "concurrency::same-field::repoEdit::allow_rebase_explicit",
+    "concurrency::same-field::repoEditRelease::body",
+    "concurrency::same-field::repoEditRelease::draft",
+    "concurrency::same-field::repoEditRelease::name",
+    "concurrency::same-field::repoEditRelease::prerelease",
+    "concurrency::same-field::repoEditRelease::tag_name",
+    "concurrency::same-field::repoEditRelease::target_commitish"
+  ],
+  "evaluator_status_counts": {
+    "CONTRACT_DEVIATION": 1
+  },
+  "runs": [
+    {
+      "seed": 20260990,
+      "run_directory": "C:\\work\\temp\\vikunja_tse_study\\runs\\gitea-stage3-live-acceptance-20260923_202156_124",
+      "generated_directory": "C:\\work\\temp\\vikunja_tse_study\\generated\\gitea-stage6-20260923_202149_653-seed-20260990",
+      "stage3_exit": 0,
+      "phase": "RECORDED",
+      "evidence_status": "PRESERVED",
+      "http_events": 364,
+      "concurrency_epochs": 27,
+      "overlapping_epochs": 27,
+      "observed_max_prior_http_events": 361,
+      "long_story_steps_selected": 4,
+      "distinct_long_stories_selected": 1,
+      "longest_observed_story_rounds": 4,
+      "evaluator_run_status": "CONTRACT_DEVIATION",
+      "verifier_layer_counts": {
+        "concurrency": {
+          "INCONCLUSIVE": 8,
+          "PASS": 19,
+          "VIOLATED": 0
+        },
+        "contract": {
+          "INCONCLUSIVE": 1,
+          "PASS": 175,
+          "VIOLATED": 24
+        },
+        "state": {
+          "INCONCLUSIVE": 1,
+          "PASS": 7,
+          "VIOLATED": 0
+        }
+      },
+      "provengo_exit_code": 0,
+      "evaluator_exit_code": 2,
+      "evidence_zip": "C:\\work\\temp\\vikunja_tse_study\\evidence\\gitea-stage3-live-acceptance-20260923_202156_124-review.zip",
+      "evidence_sha256": "28b900a639b1d0612bf9dfa1aa71400845be24ee24729a76c069c0450582d968"
+    }
+  ],
+  "interpretation": "Selected long story steps establish within-story execution order; they do not establish that a later concurrency epoch used the same resource. Prior HTTP events measure sequence position, not causal dependency. An overlap is only a transport fact. Generated verifier results and independent semantic confirmation determine product claims. The earlier direct-HTTP pilot is separate evidence, not a generated finding."
+}

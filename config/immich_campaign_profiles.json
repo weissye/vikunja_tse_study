@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "baseline": {
+      "runs": 2,
+      "base_seed": 20261013,
+      "max_length": 20000,
+      "instances_per_entity": 2,
+      "instances_per_action": 1,
+      "max_field_pairs": 4,
+      "json_disjoint": false,
+      "long_story_min_rounds": 3,
+      "long_story_max_rounds": 6
+    },
+    "coverage": {
+      "runs": 3,
+      "base_seed": 20261101,
+      "max_length": 30000,
+      "instances_per_entity": 3,
+      "instances_per_action": 2,
+      "max_field_pairs": 8,
+      "json_disjoint": false,
+      "long_story_min_rounds": 3,
+      "long_story_max_rounds": 6
+    },
+    "depth": {
+      "runs": 3,
+      "base_seed": 20261201,
+      "max_length": 45000,
+      "instances_per_entity": 2,
+      "instances_per_action": 1,
+      "max_field_pairs": 4,
+      "json_disjoint": false,
+      "long_story_min_rounds": 7,
+      "long_story_max_rounds": 10
+    },
+    "parallel": {
+      "runs": 2,
+      "base_seed": 20261301,
+      "max_length": 30000,
+      "instances_per_entity": 2,
+      "instances_per_action": 1,
+      "max_field_pairs": 4,
+      "json_disjoint": true,
+      "long_story_min_rounds": 3,
+      "long_story_max_rounds": 6,
+      "prefix_before_concurrency": 0
+    },
+    "combined": {
+      "runs": 2,
+      "base_seed": 20261401,
+      "max_length": 50000,
+      "instances_per_entity": 2,
+      "instances_per_action": 1,
+      "max_field_pairs": 4,
+      "json_disjoint": true,
+      "json_delete_bodies": true,
+      "long_story_min_rounds": 7,
+      "long_story_max_rounds": 10,
+      "prefix_before_concurrency": 7
+    },
+    "discovery": {
+      "runs": 1,
+      "base_seed": 20261421,
+      "max_length": 30000,
+      "instances_per_entity": 2,
+      "instances_per_action": 1,
+      "max_field_pairs": 4,
+      "json_disjoint": true,
+      "json_delete_bodies": true,
+      "long_story_min_rounds": 7,
+      "long_story_max_rounds": 10,
+      "prefix_before_concurrency": 7,
+      "exclude_concurrency_operations": [
+        "updateAlbumInfo"
+      ],
+      "require_new_overlap": true
+    },
+    "shared_link_branch": {
+      "runs": 1,
+      "base_seed": 20261431,
+      "max_length": 30000,
+      "instances_per_entity": 2,
+      "instances_per_action": 1,
+      "max_field_pairs": 4,
+      "json_disjoint": true,
+      "json_delete_bodies": true,
+      "optional_enum_dependency_branch": true,
+      "long_story_min_rounds": 7,
+      "long_story_max_rounds": 10,
+      "prefix_before_concurrency": 7,
+      "exclude_concurrency_operations": [
+        "updateAlbumInfo",
+        "updateNotification"
+      ],
+      "require_new_overlap": true
+    },
+    "album_asset_branch": {
+      "runs": 1,
+      "base_seed": 20261501,
+      "max_length": 45000,
+      "instances_per_entity": 2,
+      "instances_per_action": 2,
+      "max_field_pairs": 4,
+      "json_disjoint": true,
+      "json_delete_bodies": true,
+      "verified_album_asset_fixture": true,
+      "long_story_min_rounds": 7,
+      "long_story_max_rounds": 10,
+      "prefix_before_concurrency": 7,
+      "require_new_overlap": false
+    },
+    "concurrency_breadth": {
+      "runs": 1,
+      "base_seed": 20261601,
+      "max_length": 45000,
+      "instances_per_entity": 2,
+      "instances_per_action": 1,
+      "max_field_pairs": 8,
+      "json_disjoint": true,
+      "json_delete_bodies": true,
+      "optional_enum_dependency_branch": true,
+      "story_profile": "concurrency-breadth",
+      "long_story_min_rounds": 3,
+      "long_story_max_rounds": 6,
+      "prefix_before_concurrency": 0,
+      "require_new_overlap": false
+    },
+    "cross_method": {
+      "runs": 1,
+      "base_seed": 20261621,
+      "max_length": 45000,
+      "instances_per_entity": 3,
+      "instances_per_action": 1,
+      "max_field_pairs": 4,
+      "json_disjoint": false,
+      "json_delete_bodies": false,
+      "optional_enum_dependency_branch": true,
+      "empirical_update_delete": true,
+      "story_profile": "concurrency-breadth",
+      "long_story_min_rounds": 3,
+      "long_story_max_rounds": 6,
+      "prefix_before_concurrency": 0,
+      "require_new_overlap": false
+    }
+  }
+}

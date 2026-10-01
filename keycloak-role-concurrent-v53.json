@@ -1,0 +1,496 @@
+{
+  "realm": "sbt_role_concurrent_62590cf60024",
+  "trials": [
+    {
+      "trial": 0,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 16878100,
+      "observed": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": false,
+      "matches_B": true
+    },
+    {
+      "trial": 1,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 10567000,
+      "observed": {
+        "description": "sbt-race-A-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": false,
+      "matches_B": false
+    },
+    {
+      "trial": 2,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 10321200,
+      "observed": {
+        "description": "sbt-race-A-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": false,
+      "matches_B": false
+    },
+    {
+      "trial": 3,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 10303800,
+      "observed": {
+        "description": "sbt-race-A-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": false,
+      "matches_B": false
+    },
+    {
+      "trial": 4,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 11106600,
+      "observed": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": false,
+      "matches_B": true
+    },
+    {
+      "trial": 5,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 10482700,
+      "observed": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": true,
+      "matches_B": false
+    },
+    {
+      "trial": 6,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 13382300,
+      "observed": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": false,
+      "matches_B": true
+    },
+    {
+      "trial": 7,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 13522000,
+      "observed": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": true,
+      "matches_B": false
+    },
+    {
+      "trial": 8,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 31235900,
+      "observed": {
+        "description": "sbt-race-A-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": false,
+      "matches_B": false
+    },
+    {
+      "trial": 9,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 12609300,
+      "observed": {
+        "description": "sbt-race-A-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": false,
+      "matches_B": false
+    },
+    {
+      "trial": 10,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 14077300,
+      "observed": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": true,
+      "matches_B": false
+    },
+    {
+      "trial": 11,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 9056900,
+      "observed": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": false,
+      "matches_B": true
+    },
+    {
+      "trial": 12,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 15920400,
+      "observed": {
+        "description": "sbt-race-A-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": false,
+      "matches_B": false
+    },
+    {
+      "trial": 13,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 13728100,
+      "observed": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": false,
+      "matches_B": true
+    },
+    {
+      "trial": 14,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 8972700,
+      "observed": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": true,
+      "matches_B": false
+    },
+    {
+      "trial": 15,
+      "create": 201,
+      "serial_put": 204,
+      "A": 204,
+      "B": 204,
+      "read": 200,
+      "client_interval_overlap_ns": 21915200,
+      "observed": {
+        "description": "sbt-race-A-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "expected_A": {
+        "description": "sbt-race-A-v53",
+        "attributes": {}
+      },
+      "expected_B": {
+        "description": "sbt-serial-v53",
+        "attributes": {
+          "sbt_race": [
+            "sbtrace_v53"
+          ]
+        }
+      },
+      "matches_A": false,
+      "matches_B": false
+    }
+  ],
+  "create_realm": 201,
+  "unexpected_trials": [
+    1,
+    2,
+    3,
+    8,
+    9,
+    12,
+    15
+  ],
+  "cleanup": 204
+}

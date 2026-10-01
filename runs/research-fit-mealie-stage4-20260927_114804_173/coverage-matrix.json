@@ -1,0 +1,141 @@
+{
+  "all_requested_families_proven": false,
+  "requested_families": [
+    "same_record_same_field",
+    "same_record_disjoint_fields",
+    "cross_entity",
+    "noop"
+  ],
+  "schema_version": 1,
+  "seeds": {
+    "seed-20261831": {
+      "cross_entity": {
+        "candidates": 2,
+        "evaluated": 0,
+        "missing_ready": 2,
+        "overlapped": 0,
+        "prefix_and_evaluated": 0,
+        "ready": 2,
+        "state": "NOT_OVERLAPPED",
+        "structural_pairs_without_oracle": 10,
+        "verdicts": {},
+        "verified_long_prefix": 0
+      },
+      "noop": {
+        "candidates": 4,
+        "evaluated": 0,
+        "missing_ready": 3,
+        "overlapped": 1,
+        "prefix_and_evaluated": 0,
+        "readable_update_subjects_without_oracle": 5,
+        "ready": 4,
+        "state": "OVERLAPPED_WITHOUT_VERDICT",
+        "verdicts": {
+          "INCONCLUSIVE": 1
+        },
+        "verified_long_prefix": 1
+      },
+      "same_record_disjoint_fields": {
+        "candidates": 2,
+        "evaluated": 1,
+        "missing_ready": 0,
+        "overlapped": 2,
+        "prefix_and_evaluated": 1,
+        "ready": 2,
+        "state": "PREFIX_AND_ORACLE_VERIFIED",
+        "verdicts": {
+          "INCONCLUSIVE": 1,
+          "VIOLATED": 1
+        },
+        "verified_long_prefix": 2
+      },
+      "same_record_same_field": {
+        "candidates": 43,
+        "evaluated": 1,
+        "missing_ready": 13,
+        "overlapped": 1,
+        "prefix_and_evaluated": 1,
+        "ready": 14,
+        "state": "PREFIX_AND_ORACLE_VERIFIED",
+        "verdicts": {
+          "PASS": 1
+        },
+        "verified_long_prefix": 1
+      },
+      "same_record_update_delete": {
+        "candidates": 10,
+        "evaluated": 0,
+        "missing_ready": 0,
+        "overlapped": 0,
+        "prefix_and_evaluated": 0,
+        "ready": 0,
+        "state": "NO_EXECUTABLE_ORACLE",
+        "verdicts": {},
+        "verified_long_prefix": 0
+      }
+    },
+    "seed-20261832": {
+      "cross_entity": {
+        "candidates": 2,
+        "evaluated": 0,
+        "missing_ready": 2,
+        "overlapped": 0,
+        "prefix_and_evaluated": 0,
+        "ready": 2,
+        "state": "NOT_OVERLAPPED",
+        "structural_pairs_without_oracle": 10,
+        "verdicts": {},
+        "verified_long_prefix": 0
+      },
+      "noop": {
+        "candidates": 4,
+        "evaluated": 2,
+        "missing_ready": 2,
+        "overlapped": 2,
+        "prefix_and_evaluated": 2,
+        "readable_update_subjects_without_oracle": 5,
+        "ready": 4,
+        "state": "PREFIX_AND_ORACLE_VERIFIED",
+        "verdicts": {
+          "PASS": 2
+        },
+        "verified_long_prefix": 2
+      },
+      "same_record_disjoint_fields": {
+        "candidates": 2,
+        "evaluated": 0,
+        "missing_ready": 2,
+        "overlapped": 0,
+        "prefix_and_evaluated": 0,
+        "ready": 2,
+        "state": "NOT_OVERLAPPED",
+        "verdicts": {},
+        "verified_long_prefix": 0
+      },
+      "same_record_same_field": {
+        "candidates": 43,
+        "evaluated": 4,
+        "missing_ready": 10,
+        "overlapped": 4,
+        "prefix_and_evaluated": 4,
+        "ready": 14,
+        "state": "PREFIX_AND_ORACLE_VERIFIED",
+        "verdicts": {
+          "PASS": 4
+        },
+        "verified_long_prefix": 4
+      },
+      "same_record_update_delete": {
+        "candidates": 10,
+        "evaluated": 0,
+        "missing_ready": 0,
+        "overlapped": 0,
+        "prefix_and_evaluated": 0,
+        "ready": 0,
+        "state": "NO_EXECUTABLE_ORACLE",
+        "verdicts": {},
+        "verified_long_prefix": 0
+      }
+    }
+  }
+}

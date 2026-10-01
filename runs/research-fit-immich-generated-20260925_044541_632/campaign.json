@@ -1,0 +1,170 @@
+{
+  "excluded_operations": [
+    {
+      "method": "POST",
+      "operation_id": "startDatabaseRestoreFlow",
+      "path": "/admin/database-backups/start-restore"
+    },
+    {
+      "method": "POST",
+      "operation_id": "setMaintenanceMode",
+      "path": "/admin/maintenance"
+    },
+    {
+      "method": "POST",
+      "operation_id": "changePassword",
+      "path": "/auth/change-password"
+    },
+    {
+      "method": "POST",
+      "operation_id": "logout",
+      "path": "/auth/logout"
+    },
+    {
+      "method": "POST",
+      "operation_id": "lockAuthSession",
+      "path": "/auth/session/lock"
+    },
+    {
+      "method": "POST",
+      "operation_id": "unlockAuthSession",
+      "path": "/auth/session/unlock"
+    },
+    {
+      "method": "DELETE",
+      "operation_id": "deleteAllSessions",
+      "path": "/sessions"
+    },
+    {
+      "method": "DELETE",
+      "operation_id": "deleteSession",
+      "path": "/sessions/{id}"
+    },
+    {
+      "method": "POST",
+      "operation_id": "lockSession",
+      "path": "/sessions/{id}/lock"
+    },
+    {
+      "method": "PUT",
+      "operation_id": "updateMyUser",
+      "path": "/users/me"
+    }
+  ],
+  "generator_version": "0.26.3",
+  "parameters": {
+    "base_seed": 20261621,
+    "empirical_update_delete": true,
+    "excluded_concurrency_operations": [],
+    "instances_per_action": 1,
+    "instances_per_entity": 3,
+    "json_disjoint": false,
+    "long_story_max_rounds": 6,
+    "long_story_min_rounds": 3,
+    "max_field_pairs": 4,
+    "max_length": 45000,
+    "optional_enum_dependency_branch": true,
+    "prefix_before_concurrency": 0,
+    "require_new_overlap": false,
+    "runs": 1,
+    "story_profile": "concurrency-breadth",
+    "verified_album_asset_fixture": false
+  },
+  "preflight_only": false,
+  "projected_spec_sha256": "007f2882f09610dd59ca8723e298207da1c68ceb33cca904c58b59bf95d87b9f",
+  "runs": [
+    {
+      "active_operations": 243,
+      "adapter_overlap_epochs": 0,
+      "coverage_gate": {
+        "missing_operations": [
+          "updateAlbumInfo",
+          "updateSharedLink"
+        ],
+        "new_target_overlap": false,
+        "observed_operations": []
+      },
+      "deprecated_operations": 22,
+      "distinct_paths_observed": 27,
+      "epochs": 0,
+      "evaluator_exit": 3,
+      "generated_operations": 265,
+      "http_events": 52,
+      "invalid_token_events": 0,
+      "long_story_selected": 0,
+      "methods": {
+        "GET": 18,
+        "PATCH": 1,
+        "POST": 33
+      },
+      "observed_path_counts": {
+        "/activities": 3,
+        "/admin/users": 3,
+        "/albums": 3,
+        "/albums/0a44c8bd-5ada-45e6-8c50-99b25099a493": 4,
+        "/albums/83fb7fe0-2be5-4ed0-a060-86a3b8457bef": 2,
+        "/albums/961930fe-def1-4b16-a27a-bcd1df30febc": 2,
+        "/api-keys": 3,
+        "/api-keys/332a5f38-1960-4b81-8d9a-b486576bf030": 1,
+        "/api-keys/3bddf948-9dfa-4cb8-8c82-68fa949e1e71": 1,
+        "/api-keys/df5c1b85-b94c-4d38-8b9a-0cc6f081bfb8": 1,
+        "/jobs": 3,
+        "/libraries": 3,
+        "/memories": 3,
+        "/memories/5ee01ec5-0256-4538-9324-065a01673d2d": 1,
+        "/memories/9dd24ff9-72c1-4242-abea-e254f1801127": 1,
+        "/memories/d957d1f0-c93f-4d38-a9db-cfdfed25538b": 1,
+        "/partners": 3,
+        "/people": 1,
+        "/people/6aa83161-0c19-4499-9f34-033ab36ce69d": 1,
+        "/sessions": 1,
+        "/shared-links": 3,
+        "/shared-links/2641b5fd-b4b2-4e10-a73a-5faea8488034": 1,
+        "/shared-links/51a3b26f-c0ed-4a00-a941-498e24e604dc": 1,
+        "/shared-links/a4d30a8c-7190-44d8-b39f-c37e79fd3c9d": 1,
+        "/tags": 3,
+        "/workflows": 1,
+        "/workflows/d0a6924b-2f45-4cf4-a6ee-9b50cad96819": 1
+      },
+      "oracle_layers": {
+        "concurrency": {
+          "INCONCLUSIVE": 0,
+          "PASS": 0,
+          "VIOLATED": 0
+        },
+        "contract": {
+          "INCONCLUSIVE": 13,
+          "PASS": 34,
+          "VIOLATED": 0
+        },
+        "state": {
+          "INCONCLUSIVE": 1,
+          "PASS": 14,
+          "VIOLATED": 0
+        }
+      },
+      "oracle_status": "INCONCLUSIVE",
+      "provengo_exit": 0,
+      "proxy_overlap_epochs": 0,
+      "real_overlap_epochs": 0,
+      "seed": 20261621,
+      "selected_events": 248,
+      "source_operations": 265,
+      "status": "NO_REAL_OVERLAP",
+      "statuses": {
+        "200": 19,
+        "201": 17,
+        "204": 3,
+        "400": 10,
+        "500": 3
+      },
+      "transport_error_events": 0,
+      "unverified_active_operations": 0,
+      "verifier_coverage_complete": true,
+      "verifier_operations": 243
+    }
+  ],
+  "selection": "Explicit Immich OpenAPI projection excludes ten session/identity and maintenance/restore operations; generated concurrency-breadth; no analyst-authored stories",
+  "source_sha256": "51719f0b6573ca75eb51834b01a7fdb9e963c9d60fcce813f10c1463a987b866",
+  "state": "PARTIAL_READY_ORACLE_COVERAGE"
+}

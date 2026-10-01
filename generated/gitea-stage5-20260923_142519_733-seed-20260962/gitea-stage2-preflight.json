@@ -1,0 +1,101 @@
+{
+  "checks": {
+    "all_active_operations_have_contract_verifiers": true,
+    "generation_warnings_zero": true,
+    "generator_version_matches": true,
+    "manual_assumptions_zero": true,
+    "raw_equals_active_plus_deprecated": true,
+    "remote_refs_zero": true,
+    "runtime_ready_concurrency_exists": true,
+    "source_sha256_matches_stage1": true,
+    "swagger_request_bodies_preserved": true,
+    "swagger_response_schemas_preserved": true,
+    "verifier_coverage_complete": true
+  },
+  "generator": {
+    "ambiguities": 50,
+    "dependency_cycle": false,
+    "dependency_edges": 7,
+    "dependency_nodes": 25,
+    "entities": 25,
+    "standalone_operations": 48,
+    "unresolved_remote_refs": 0,
+    "version": "0.26.2",
+    "warnings": 0
+  },
+  "methodology": {
+    "external_application_knowledge": false,
+    "input_basis": "instance-served Swagger/OpenAPI only",
+    "manual_assumptions": 0,
+    "sut_execution": "none"
+  },
+  "network_requests_to_sut": 0,
+  "normalization": {
+    "normalized_active_request_body_operations": 122,
+    "normalized_active_response_schema_operations": 334,
+    "raw_active_request_body_operations": 122,
+    "raw_active_response_schema_operations": 334
+  },
+  "preflight_status": "PASS",
+  "schema_version": 1,
+  "source": {
+    "active_operations": 478,
+    "deprecated_operations": [
+      {
+        "method": "POST",
+        "operation_id": "createOrgRepoDeprecated",
+        "path": "/org/{org}/repos"
+      },
+      {
+        "method": "DELETE",
+        "operation_id": "issueDeleteCommentDeprecated",
+        "path": "/repos/{owner}/{repo}/issues/{index}/comments/{id}"
+      },
+      {
+        "method": "PATCH",
+        "operation_id": "issueEditCommentDeprecated",
+        "path": "/repos/{owner}/{repo}/issues/{index}/comments/{id}"
+      },
+      {
+        "method": "GET",
+        "operation_id": "userTrackedTimes",
+        "path": "/repos/{owner}/{repo}/times/{user}"
+      }
+    ],
+    "openapi": null,
+    "paths": 308,
+    "raw_operations": 482,
+    "sha256": "a0baa9a766c22492bd8c45744157c611d3e95cfc0dc73d6f5d14f294cdddce38",
+    "swagger": "2.0",
+    "title": "Gitea API",
+    "version": "1.27.3"
+  },
+  "stage": "gitea-stage2-openapi-generation-preflight",
+  "verification": {
+    "concurrency_oracle_kinds": {
+      "same-field-one-successful-value-visible": 108,
+      "same-field-one-successful-value-visible-domain": 33,
+      "update-delete-linearizable": 40
+    },
+    "concurrency_oracles": 181,
+    "concurrency_runtime_not_ready": 107,
+    "concurrency_runtime_ready": 74,
+    "contract_only_mutations": 118,
+    "contract_verifiers": 478,
+    "coverage_complete": true,
+    "manual_assumptions": 0,
+    "mutations": 236,
+    "operations": 478,
+    "runtime_limitations": {
+      "domain-oracle-is-instantiated-by-concrete-generated-schedules": 33,
+      "requires-a-documented-create-response-to-item-path-binding": 34,
+      "update-delete-needs-a-dedicated-created-resource": 40
+    },
+    "state_oracle_kinds": {
+      "create-visibility": 26,
+      "delete-absence": 59,
+      "written-fields-persist": 33
+    },
+    "state_verified_mutations": 118
+  }
+}

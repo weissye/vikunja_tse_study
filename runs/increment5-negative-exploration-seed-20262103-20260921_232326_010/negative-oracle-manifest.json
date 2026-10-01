@@ -1,0 +1,115 @@
+{
+  "accepted_failure_class": "HTTP 4xx only",
+  "closed_events": [
+    "NegativeClosed:UnknownProject",
+    "NegativeClosed:UnknownTask",
+    "NegativeClosed:UnknownLabel",
+    "NegativeClosed:UnknownComment",
+    "NegativeClosed:DeletedProject",
+    "NegativeClosed:DeletedTask:0",
+    "NegativeClosed:DeletedTask:1",
+    "NegativeClosed:DeletedTask:2",
+    "NegativeClosed:DeletedTask:3",
+    "NegativeClosed:DeletedTask:4",
+    "NegativeClosed:DeletedTask:5",
+    "NegativeClosed:DeletedLabel:0",
+    "NegativeClosed:DeletedLabel:1",
+    "NegativeClosed:DeletedLabel:2",
+    "NegativeClosed:DeletedComment:0",
+    "NegativeClosed:DeletedComment:1",
+    "NegativeClosed:DeletedComment:2",
+    "NegativeClosed:DeletedComment:3",
+    "NegativeClosed:DeletedRelation:0",
+    "NegativeClosed:DeletedRelation:1",
+    "NegativeClosed:DeletedRelation:2",
+    "NegativeClosed:DeletedRelation:3",
+    "NegativeClosed:DeletedRelation:4"
+  ],
+  "expected": {
+    "comments": 4,
+    "labels": 3,
+    "negative_groups": 23,
+    "negative_http_witnesses": 56,
+    "relations": 5,
+    "tasks": 6
+  },
+  "oracles": [
+    {
+      "expected_witness_count": 1,
+      "oracle_id": "unknown-project-rejected"
+    },
+    {
+      "expected_witness_count": 1,
+      "oracle_id": "unknown-task-rejected"
+    },
+    {
+      "expected_witness_count": 1,
+      "oracle_id": "unknown-label-rejected"
+    },
+    {
+      "expected_witness_count": 1,
+      "oracle_id": "unknown-comment-rejected"
+    },
+    {
+      "expected_witness_count": 1,
+      "oracle_id": "deleted-project-read-rejected"
+    },
+    {
+      "expected_witness_count": 1,
+      "oracle_id": "deleted-project-update-rejected"
+    },
+    {
+      "expected_witness_count": 1,
+      "oracle_id": "deleted-project-delete-rejected"
+    },
+    {
+      "expected_witness_count": 6,
+      "oracle_id": "deleted-task-read-rejected"
+    },
+    {
+      "expected_witness_count": 6,
+      "oracle_id": "deleted-task-update-rejected"
+    },
+    {
+      "expected_witness_count": 6,
+      "oracle_id": "deleted-task-delete-rejected"
+    },
+    {
+      "expected_witness_count": 3,
+      "oracle_id": "deleted-label-read-rejected"
+    },
+    {
+      "expected_witness_count": 3,
+      "oracle_id": "deleted-label-update-rejected"
+    },
+    {
+      "expected_witness_count": 3,
+      "oracle_id": "deleted-label-delete-rejected"
+    },
+    {
+      "expected_witness_count": 4,
+      "oracle_id": "deleted-comment-read-rejected"
+    },
+    {
+      "expected_witness_count": 4,
+      "oracle_id": "deleted-comment-update-rejected"
+    },
+    {
+      "expected_witness_count": 4,
+      "oracle_id": "deleted-comment-delete-rejected"
+    },
+    {
+      "expected_witness_count": 5,
+      "oracle_id": "deleted-relation-delete-rejected-and-absent"
+    }
+  ],
+  "profile": "negative-and-conflict-exploration",
+  "rejected_outcomes": [
+    "HTTP 2xx",
+    "HTTP 3xx",
+    "HTTP 5xx",
+    "missing observation"
+  ],
+  "schema_version": 1,
+  "source_openapi_sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941"
+}

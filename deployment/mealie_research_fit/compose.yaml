@@ -1,0 +1,12 @@
+services:
+  mealie:
+    image: ghcr.io/mealie-recipes/mealie:v3.27.0
+    ports:
+      - "127.0.0.1:9925:9000"
+    environment:
+      ALLOW_SIGNUP: "false"
+      BASE_URL: "http://127.0.0.1:9925"
+    volumes:
+      - mealie-research-fit-data:/app/data/
+volumes:
+  mealie-research-fit-data:

@@ -1,0 +1,66 @@
+{
+  "generator_version": "0.26.16",
+  "parameters": {
+    "base_seed": 20261843,
+    "combined_campaign": true,
+    "freeze_evidence": true,
+    "instances_per_action": 1,
+    "instances_per_entity": 2,
+    "max_concurrency_width": 2,
+    "max_field_pairs": 3,
+    "max_length": 35000,
+    "prefix_before_concurrency": 8,
+    "prefix_rounds": 10,
+    "preflight_only": false,
+    "root": "C:\\work\\temp\\vikunja_tse_study",
+    "runs": 1,
+    "stage4_branch": "baseline",
+    "story_profile": "long-interleaving",
+    "target_oracle_id": "concurrency::disjoint-put::update_one_api_households_mealplans_rules__item_id__put"
+  },
+  "results": [
+    {
+      "concurrency_evaluated": 1,
+      "coverage_state": "VERIFIED_PREFIX_AND_ORACLE_COVERAGE",
+      "epoch_count": 1,
+      "evaluator_exit": 2,
+      "http_events": 360,
+      "http_statuses": {
+        "200": 318,
+        "201": 19,
+        "400": 4,
+        "404": 3,
+        "422": 15,
+        "500": 1
+      },
+      "max_prefix_rounds": 8,
+      "oracle_counts": {
+        "INCONCLUSIVE": 59,
+        "PASS": 395,
+        "VIOLATED": 1
+      },
+      "oracle_status": "SEMANTIC_ANOMALY",
+      "prefix_verified_epochs": 1,
+      "provengo_exit": 0,
+      "real_overlap_epochs": 1,
+      "runtime_ready_oracles": 1,
+      "seed": 20261843,
+      "stage4_branch": "baseline",
+      "story_event_counts": {
+        "ConcurrencyReady": 1,
+        "InstanceUnavailable": 2,
+        "LongStoryStep": 83,
+        "PrefixVerified": 83,
+        "StorySkipped": 18
+      },
+      "story_skip_reasons": {
+        "create-failed": 2,
+        "dependency-unavailable": 4,
+        "identity-change-requires-rebinding": 3,
+        "operation-failed": 9
+      },
+      "transport_errors": 0
+    }
+  ],
+  "state": "COMPLETE"
+}

@@ -1,0 +1,4808 @@
+{
+  "coverage": {
+    "covered_operations": 205,
+    "total_operations": 205,
+    "uncovered_operations": []
+  },
+  "entities": [
+    {
+      "collection_path": "/admin/invite-links",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PaginatedUserInviteLink",
+      "item_path": "/admin/invite-links/{id}",
+      "key": "admin/invite-links",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/admin/invite-links/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/admin/invite-links/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "adminInviteLinksList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/admin/invite-links",
+          "source_pointer": "#/paths/~1admin~1invite-links/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "adminInviteLinksCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/admin/invite-links",
+          "source_pointer": "#/paths/~1admin~1invite-links/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "adminInviteLinksDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/admin/invite-links/{id}",
+          "source_pointer": "#/paths/~1admin~1invite-links~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedUserInviteLinks",
+      "provenance": [
+        {
+          "detail": "List operation GET /admin/invite-links response 200 references PaginatedUserInviteLink",
+          "pointer": "#/paths/~1admin~1invite-links/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedUserInviteLink"
+    },
+    {
+      "collection_path": "/admin/users",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "username",
+          "provenance": [
+            {
+              "detail": "Create request body property 'username' matches entity 'avatar'",
+              "pointer": "#/paths/~1admin~1users/post/requestBody/content/application~1json/properties/username",
+              "rule": "D2:D_key_field_exact_match"
+            }
+          ],
+          "target": "avatar"
+        }
+      ],
+      "display_name": "PaginatedAdminUser",
+      "item_path": "/admin/users/{id}",
+      "key": "admin/users",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/admin/users/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/admin/users/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "adminUsersList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/admin/users",
+          "source_pointer": "#/paths/~1admin~1users/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "adminUsersCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/admin/users",
+          "source_pointer": "#/paths/~1admin~1users/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "adminUsersDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/admin/users/{id}",
+          "source_pointer": "#/paths/~1admin~1users~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "adminUsersPatchAdmin",
+          "kind": "action",
+          "method": "PATCH",
+          "path": "/admin/users/{id}/admin",
+          "source_pointer": "#/paths/~1admin~1users~1{id}~1admin/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "adminUsersSetPassword",
+          "kind": "action",
+          "method": "PATCH",
+          "path": "/admin/users/{id}/password",
+          "source_pointer": "#/paths/~1admin~1users~1{id}~1password/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "adminUsersPasswordResetEmail",
+          "kind": "action",
+          "method": "POST",
+          "path": "/admin/users/{id}/password-reset-email",
+          "source_pointer": "#/paths/~1admin~1users~1{id}~1password-reset-email/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "adminUsersPatchStatus",
+          "kind": "action",
+          "method": "PATCH",
+          "path": "/admin/users/{id}/status",
+          "source_pointer": "#/paths/~1admin~1users~1{id}~1status/patch",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedAdminUsers",
+      "provenance": [
+        {
+          "detail": "List operation GET /admin/users response 200 references PaginatedAdminUser",
+          "pointer": "#/paths/~1admin~1users/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedAdminUser"
+    },
+    {
+      "collection_path": null,
+      "composite_key": false,
+      "confidence": 0.5,
+      "dependencies": [],
+      "display_name": "Avatar",
+      "item_path": "/avatar/{username}",
+      "key": "avatar",
+      "key_confidence": 0.6,
+      "key_fields": [
+        "username"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Key field(s) derived from item path parameters: ['username']",
+          "pointer": "/avatar/{username}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "avatarGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/avatar/{username}",
+          "source_pointer": "#/paths/~1avatar~1{username}/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Avatars",
+      "provenance": [
+        {
+          "detail": "No component schema reference found; entity name derived from path segment 'avatar'",
+          "pointer": "/avatar/{username}",
+          "rule": "E4:derived_from_path_segment"
+        }
+      ],
+      "schema_name": null
+    },
+    {
+      "collection_path": null,
+      "composite_key": false,
+      "confidence": 0.5,
+      "dependencies": [],
+      "display_name": "Image",
+      "item_path": "/backgrounds/unsplash/images/{image}",
+      "key": "backgrounds/unsplash/images",
+      "key_confidence": 0.6,
+      "key_fields": [
+        "image"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Key field(s) derived from item path parameters: ['image']",
+          "pointer": "/backgrounds/unsplash/images/{image}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "backgroundsUnsplashImage",
+          "kind": "get",
+          "method": "GET",
+          "path": "/backgrounds/unsplash/images/{image}",
+          "source_pointer": "#/paths/~1backgrounds~1unsplash~1images~1{image}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "backgroundsUnsplashThumb",
+          "kind": "action",
+          "method": "GET",
+          "path": "/backgrounds/unsplash/images/{image}/thumb",
+          "source_pointer": "#/paths/~1backgrounds~1unsplash~1images~1{image}~1thumb/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Images",
+      "provenance": [
+        {
+          "detail": "No component schema reference found; entity name derived from path segment 'images'",
+          "pointer": "/backgrounds/unsplash/images/{image}",
+          "rule": "E4:derived_from_path_segment"
+        }
+      ],
+      "schema_name": null
+    },
+    {
+      "collection_path": "/filters",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "SavedFilterReadBody",
+      "item_path": "/filters/{filter}",
+      "key": "filters",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "filter"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'filter' has no matching schema property; using path evidence only",
+          "pointer": "/filters/{filter}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['filter']",
+          "pointer": "/filters/{filter}",
+          "rule": "K1/K2:item_path_parameters"
+        },
+        {
+          "detail": "Path parameter 'filter' has no same-named schema property, but the schema has a generic 'id' property; treating that as the response-body identifier field for server-assigned-key handling.",
+          "pointer": "#/components/schemas/SavedFilterReadBody",
+          "rule": "K5:response_field_generic_id_fallback"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "filtersCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/filters",
+          "source_pointer": "#/paths/~1filters/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "filtersDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/filters/{filter}",
+          "source_pointer": "#/paths/~1filters~1{filter}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "filtersRead",
+          "kind": "get",
+          "method": "GET",
+          "path": "/filters/{filter}",
+          "source_pointer": "#/paths/~1filters~1{filter}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchFiltersRead",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/filters/{filter}",
+          "source_pointer": "#/paths/~1filters~1{filter}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "filtersUpdate",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/filters/{filter}",
+          "source_pointer": "#/paths/~1filters~1{filter}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "SavedFilterReadBodies",
+      "provenance": [
+        {
+          "detail": "Item GET /filters/{filter} response 200 references SavedFilterReadBody",
+          "pointer": "#/paths/~1filters~1{filter}/get/responses/200",
+          "rule": "E3c:item_response_schema"
+        }
+      ],
+      "schema_name": "SavedFilterReadBody"
+    },
+    {
+      "collection_path": "/labels",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PaginatedLabelWithTaskID",
+      "item_path": "/labels/{id}",
+      "key": "labels",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/labels/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/labels/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "labelsList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/labels",
+          "source_pointer": "#/paths/~1labels/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "labelsCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/labels",
+          "source_pointer": "#/paths/~1labels/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "labelsDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/labels/{id}",
+          "source_pointer": "#/paths/~1labels~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "labelsRead",
+          "kind": "get",
+          "method": "GET",
+          "path": "/labels/{id}",
+          "source_pointer": "#/paths/~1labels~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchLabelsRead",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/labels/{id}",
+          "source_pointer": "#/paths/~1labels~1{id}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "labelsUpdate",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/labels/{id}",
+          "source_pointer": "#/paths/~1labels~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedLabelWithTaskIDs",
+      "provenance": [
+        {
+          "detail": "List operation GET /labels response 200 references PaginatedLabelWithTaskID",
+          "pointer": "#/paths/~1labels/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedLabelWithTaskID"
+    },
+    {
+      "collection_path": "/notifications",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PaginatedDatabaseNotification",
+      "item_path": "/notifications/{notificationid}",
+      "key": "notifications",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "notificationid"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'notificationid' has no matching schema property; using path evidence only",
+          "pointer": "/notifications/{notificationid}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['notificationid']",
+          "pointer": "/notifications/{notificationid}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "notificationsDeleteAll",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/notifications",
+          "source_pointer": "#/paths/~1notifications/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "notificationsList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/notifications",
+          "source_pointer": "#/paths/~1notifications/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "notificationsMarkAllRead",
+          "kind": "create",
+          "method": "POST",
+          "path": "/notifications",
+          "source_pointer": "#/paths/~1notifications/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "notificationsMarkRead",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/notifications/{notificationid}",
+          "source_pointer": "#/paths/~1notifications~1{notificationid}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedDatabaseNotifications",
+      "provenance": [
+        {
+          "detail": "List operation GET /notifications response 200 references PaginatedDatabaseNotification",
+          "pointer": "#/paths/~1notifications/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedDatabaseNotification"
+    },
+    {
+      "collection_path": "/projects",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PaginatedProject",
+      "item_path": "/projects/{id}",
+      "key": "projects",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/projects/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/projects/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/projects",
+          "source_pointer": "#/paths/~1projects/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/projects",
+          "source_pointer": "#/paths/~1projects/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/projects/{id}",
+          "source_pointer": "#/paths/~1projects~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsRead",
+          "kind": "get",
+          "method": "GET",
+          "path": "/projects/{id}",
+          "source_pointer": "#/paths/~1projects~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchProjectsRead",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/projects/{id}",
+          "source_pointer": "#/paths/~1projects~1{id}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsUpdate",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/projects/{id}",
+          "source_pointer": "#/paths/~1projects~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectTimeEntriesList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project_id}/time-entries",
+          "source_pointer": "#/paths/~1projects~1{project_id}~1time-entries/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsDuplicate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/projects/{projectid}/duplicate",
+          "source_pointer": "#/paths/~1projects~1{projectid}~1duplicate/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsBackgroundDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/projects/{project}/background",
+          "source_pointer": "#/paths/~1projects~1{project}~1background/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsBackgroundGet",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/background",
+          "source_pointer": "#/paths/~1projects~1{project}~1background/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsBackgroundUnsplashSet",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/projects/{project}/backgrounds/unsplash",
+          "source_pointer": "#/paths/~1projects~1{project}~1backgrounds~1unsplash/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsBackgroundUpload",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/projects/{project}/backgrounds/upload",
+          "source_pointer": "#/paths/~1projects~1{project}~1backgrounds~1upload/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "sharesList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/shares",
+          "source_pointer": "#/paths/~1projects~1{project}~1shares/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "sharesCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/projects/{project}/shares",
+          "source_pointer": "#/paths/~1projects~1{project}~1shares/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "sharesDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/projects/{project}/shares/{share}",
+          "source_pointer": "#/paths/~1projects~1{project}~1shares~1{share}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "sharesRead",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/shares/{share}",
+          "source_pointer": "#/paths/~1projects~1{project}~1shares~1{share}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectTasksList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/tasks",
+          "source_pointer": "#/paths/~1projects~1{project}~1tasks/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/projects/{project}/tasks",
+          "source_pointer": "#/paths/~1projects~1{project}~1tasks/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksBulkCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/projects/{project}/tasks/bulk",
+          "source_pointer": "#/paths/~1projects~1{project}~1tasks~1bulk/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            307
+          ],
+          "has_default_response": true,
+          "js_function": "tasksReadByIndex",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/tasks/by-index/{index}",
+          "source_pointer": "#/paths/~1projects~1{project}~1tasks~1by-index~1{index}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectTeamsList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/teams",
+          "source_pointer": "#/paths/~1projects~1{project}~1teams/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectTeamsCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/projects/{project}/teams",
+          "source_pointer": "#/paths/~1projects~1{project}~1teams/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectTeamsDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/projects/{project}/teams/{team}",
+          "source_pointer": "#/paths/~1projects~1{project}~1teams~1{team}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectTeamsUpdate",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/projects/{project}/teams/{team}",
+          "source_pointer": "#/paths/~1projects~1{project}~1teams~1{team}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectUsersList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/users",
+          "source_pointer": "#/paths/~1projects~1{project}~1users/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectUsersCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/projects/{project}/users",
+          "source_pointer": "#/paths/~1projects~1{project}~1users/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsUsersSearch",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/users/search",
+          "source_pointer": "#/paths/~1projects~1{project}~1users~1search/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectUsersDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/projects/{project}/users/{user}",
+          "source_pointer": "#/paths/~1projects~1{project}~1users~1{user}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectUsersUpdate",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/projects/{project}/users/{user}",
+          "source_pointer": "#/paths/~1projects~1{project}~1users~1{user}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectViewsList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/views",
+          "source_pointer": "#/paths/~1projects~1{project}~1views/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectViewsCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/projects/{project}/views",
+          "source_pointer": "#/paths/~1projects~1{project}~1views/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectViewsDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/projects/{project}/views/{view}",
+          "source_pointer": "#/paths/~1projects~1{project}~1views~1{view}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectViewsRead",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/views/{view}",
+          "source_pointer": "#/paths/~1projects~1{project}~1views~1{view}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchProjectViewsRead",
+          "kind": "action",
+          "method": "PATCH",
+          "path": "/projects/{project}/views/{view}",
+          "source_pointer": "#/paths/~1projects~1{project}~1views~1{view}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectViewsUpdate",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/projects/{project}/views/{view}",
+          "source_pointer": "#/paths/~1projects~1{project}~1views~1{view}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "bucketsList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/views/{view}/buckets",
+          "source_pointer": "#/paths/~1projects~1{project}~1views~1{view}~1buckets/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "bucketsCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/projects/{project}/views/{view}/buckets",
+          "source_pointer": "#/paths/~1projects~1{project}~1views~1{view}~1buckets/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectViewBucketsTasksList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/views/{view}/buckets/tasks",
+          "source_pointer": "#/paths/~1projects~1{project}~1views~1{view}~1buckets~1tasks/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "bucketsDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/projects/{project}/views/{view}/buckets/{bucket}",
+          "source_pointer": "#/paths/~1projects~1{project}~1views~1{view}~1buckets~1{bucket}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "bucketsUpdate",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/projects/{project}/views/{view}/buckets/{bucket}",
+          "source_pointer": "#/paths/~1projects~1{project}~1views~1{view}~1buckets~1{bucket}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskBucketUpdate",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/projects/{project}/views/{view}/buckets/{bucket}/tasks",
+          "source_pointer": "#/paths/~1projects~1{project}~1views~1{view}~1buckets~1{bucket}~1tasks/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectViewTasksList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/views/{view}/tasks",
+          "source_pointer": "#/paths/~1projects~1{project}~1views~1{view}~1tasks/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "webhooksList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/projects/{project}/webhooks",
+          "source_pointer": "#/paths/~1projects~1{project}~1webhooks/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "webhooksCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/projects/{project}/webhooks",
+          "source_pointer": "#/paths/~1projects~1{project}~1webhooks/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "webhooksDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/projects/{project}/webhooks/{webhook}",
+          "source_pointer": "#/paths/~1projects~1{project}~1webhooks~1{webhook}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "webhooksUpdate",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/projects/{project}/webhooks/{webhook}",
+          "source_pointer": "#/paths/~1projects~1{project}~1webhooks~1{webhook}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedProjects",
+      "provenance": [
+        {
+          "detail": "List operation GET /projects response 200 references PaginatedProject",
+          "pointer": "#/paths/~1projects/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedProject"
+    },
+    {
+      "collection_path": null,
+      "composite_key": true,
+      "confidence": 0.5,
+      "dependencies": [],
+      "display_name": "Subscription",
+      "item_path": "/subscriptions/{entity}/{entityID}",
+      "key": "subscriptions",
+      "key_confidence": 0.6,
+      "key_fields": [
+        "entity",
+        "entityID"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Key field(s) derived from item path parameters: ['entity', 'entityID']",
+          "pointer": "/subscriptions/{entity}/{entityID}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "subscriptionsDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/subscriptions/{entity}/{entityID}",
+          "source_pointer": "#/paths/~1subscriptions~1{entity}~1{entityID}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "subscriptionsCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/subscriptions/{entity}/{entityID}",
+          "source_pointer": "#/paths/~1subscriptions~1{entity}~1{entityID}/post",
+          "success_codes": [
+            201
+          ]
+        }
+      ],
+      "plural_display_name": "Subscriptions",
+      "provenance": [
+        {
+          "detail": "No component schema reference found; entity name derived from path segment 'subscriptions'",
+          "pointer": "/subscriptions/{entity}/{entityID}",
+          "rule": "E4:derived_from_path_segment"
+        }
+      ],
+      "schema_name": null
+    },
+    {
+      "collection_path": "/tasks",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PaginatedTask",
+      "item_path": "/tasks/{task}",
+      "key": "tasks",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "task"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'task' has no matching schema property; using path evidence only",
+          "pointer": "/tasks/{task}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['task']",
+          "pointer": "/tasks/{task}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/tasks",
+          "source_pointer": "#/paths/~1tasks/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/tasks/{task}",
+          "source_pointer": "#/paths/~1tasks~1{task}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksRead",
+          "kind": "get",
+          "method": "GET",
+          "path": "/tasks/{task}",
+          "source_pointer": "#/paths/~1tasks~1{task}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchTasksRead",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/tasks/{task}",
+          "source_pointer": "#/paths/~1tasks~1{task}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksUpdate",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/tasks/{task}",
+          "source_pointer": "#/paths/~1tasks~1{task}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskTimeEntriesList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/tasks/{task_id}/time-entries",
+          "source_pointer": "#/paths/~1tasks~1{task_id}~1time-entries/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskAssigneesList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/tasks/{task}/assignees",
+          "source_pointer": "#/paths/~1tasks~1{task}~1assignees/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskAssigneesCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/tasks/{task}/assignees",
+          "source_pointer": "#/paths/~1tasks~1{task}~1assignees/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskAssigneesBulk",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/tasks/{task}/assignees/bulk",
+          "source_pointer": "#/paths/~1tasks~1{task}~1assignees~1bulk/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskAssigneesDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/tasks/{task}/assignees/{user}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1assignees~1{user}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskAttachmentsList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/tasks/{task}/attachments",
+          "source_pointer": "#/paths/~1tasks~1{task}~1attachments/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskAttachmentsUpload",
+          "kind": "action",
+          "method": "POST",
+          "path": "/tasks/{task}/attachments",
+          "source_pointer": "#/paths/~1tasks~1{task}~1attachments/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskAttachmentsDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/tasks/{task}/attachments/{attachment}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1attachments~1{attachment}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskAttachmentsDownload",
+          "kind": "action",
+          "method": "GET",
+          "path": "/tasks/{task}/attachments/{attachment}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1attachments~1{attachment}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskCommentsList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/tasks/{task}/comments",
+          "source_pointer": "#/paths/~1tasks~1{task}~1comments/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskCommentsCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/tasks/{task}/comments",
+          "source_pointer": "#/paths/~1tasks~1{task}~1comments/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskCommentsDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/tasks/{task}/comments/{commentid}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1comments~1{commentid}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskCommentsRead",
+          "kind": "action",
+          "method": "GET",
+          "path": "/tasks/{task}/comments/{commentid}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1comments~1{commentid}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchTaskCommentsRead",
+          "kind": "action",
+          "method": "PATCH",
+          "path": "/tasks/{task}/comments/{commentid}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1comments~1{commentid}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskCommentsUpdate",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/tasks/{task}/comments/{commentid}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1comments~1{commentid}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksDuplicate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/tasks/{task}/duplicate",
+          "source_pointer": "#/paths/~1tasks~1{task}~1duplicate/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskLabelsList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/tasks/{task}/labels",
+          "source_pointer": "#/paths/~1tasks~1{task}~1labels/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskLabelsCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/tasks/{task}/labels",
+          "source_pointer": "#/paths/~1tasks~1{task}~1labels/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskLabelsBulkReplace",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/tasks/{task}/labels/bulk",
+          "source_pointer": "#/paths/~1tasks~1{task}~1labels~1bulk/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskLabelsDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/tasks/{task}/labels/{label}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1labels~1{label}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksPositionUpdate",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/tasks/{task}/position",
+          "source_pointer": "#/paths/~1tasks~1{task}~1position/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksMarkRead",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/tasks/{task}/read",
+          "source_pointer": "#/paths/~1tasks~1{task}~1read/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksRelationsCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/tasks/{task}/relations",
+          "source_pointer": "#/paths/~1tasks~1{task}~1relations/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksRelationsDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/tasks/{task}/relations/{relationKind}/{otherTask}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1relations~1{relationKind}~1{otherTask}/delete",
+          "success_codes": [
+            204
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedTasks",
+      "provenance": [
+        {
+          "detail": "List operation GET /tasks response 200 references PaginatedTask",
+          "pointer": "#/paths/~1tasks/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedTask"
+    },
+    {
+      "collection_path": "/teams",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PaginatedTeam",
+      "item_path": "/teams/{id}",
+      "key": "teams",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/teams/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/teams/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "teamsList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/teams",
+          "source_pointer": "#/paths/~1teams/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "teamsCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/teams",
+          "source_pointer": "#/paths/~1teams/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "teamsDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/teams/{id}",
+          "source_pointer": "#/paths/~1teams~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "teamsRead",
+          "kind": "get",
+          "method": "GET",
+          "path": "/teams/{id}",
+          "source_pointer": "#/paths/~1teams~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchTeamsRead",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/teams/{id}",
+          "source_pointer": "#/paths/~1teams~1{id}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "teamsUpdate",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/teams/{id}",
+          "source_pointer": "#/paths/~1teams~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "teamsMembersAdd",
+          "kind": "action",
+          "method": "POST",
+          "path": "/teams/{team}/members",
+          "source_pointer": "#/paths/~1teams~1{team}~1members/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "teamsMembersRemove",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/teams/{team}/members/{user}",
+          "source_pointer": "#/paths/~1teams~1{team}~1members~1{user}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "teamsMembersToggleAdmin",
+          "kind": "action",
+          "method": "POST",
+          "path": "/teams/{team}/members/{user}/admin",
+          "source_pointer": "#/paths/~1teams~1{team}~1members~1{user}~1admin/post",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedTeams",
+      "provenance": [
+        {
+          "detail": "List operation GET /teams response 200 references PaginatedTeam",
+          "pointer": "#/paths/~1teams/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedTeam"
+    },
+    {
+      "collection_path": "/time-entries",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "project_id",
+          "provenance": [
+            {
+              "detail": "Create request body property 'project_id' matches entity 'projects'",
+              "pointer": "#/paths/~1time-entries/post/requestBody/content/application~1json/properties/project_id",
+              "rule": "D2:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "projects"
+        },
+        {
+          "confidence": 0.9,
+          "field_name": "task_id",
+          "provenance": [
+            {
+              "detail": "Create request body property 'task_id' matches entity 'tasks'",
+              "pointer": "#/paths/~1time-entries/post/requestBody/content/application~1json/properties/task_id",
+              "rule": "D2:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "tasks"
+        },
+        {
+          "confidence": 0.9,
+          "field_name": "user_id",
+          "provenance": [
+            {
+              "detail": "Create request body property 'user_id' matches entity 'admin/users'",
+              "pointer": "#/paths/~1time-entries/post/requestBody/content/application~1json/properties/user_id",
+              "rule": "D2:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "admin/users"
+        }
+      ],
+      "display_name": "PaginatedTimeEntry",
+      "item_path": "/time-entries/{id}",
+      "key": "time-entries",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/time-entries/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/time-entries/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "timeEntriesList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/time-entries",
+          "source_pointer": "#/paths/~1time-entries/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "timeEntriesCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/time-entries",
+          "source_pointer": "#/paths/~1time-entries/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "timeEntriesDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/time-entries/{id}",
+          "source_pointer": "#/paths/~1time-entries~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "timeEntriesRead",
+          "kind": "get",
+          "method": "GET",
+          "path": "/time-entries/{id}",
+          "source_pointer": "#/paths/~1time-entries~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchTimeEntriesRead",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/time-entries/{id}",
+          "source_pointer": "#/paths/~1time-entries~1{id}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "timeEntriesUpdate",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/time-entries/{id}",
+          "source_pointer": "#/paths/~1time-entries~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedTimeEntries",
+      "provenance": [
+        {
+          "detail": "List operation GET /time-entries response 200 references PaginatedTimeEntry",
+          "pointer": "#/paths/~1time-entries/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedTimeEntry"
+    },
+    {
+      "collection_path": "/tokens",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PaginatedAPIToken",
+      "item_path": "/tokens/{id}",
+      "key": "tokens",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/tokens/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/tokens/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tokensList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/tokens",
+          "source_pointer": "#/paths/~1tokens/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tokensCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/tokens",
+          "source_pointer": "#/paths/~1tokens/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tokensDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/tokens/{id}",
+          "source_pointer": "#/paths/~1tokens~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedAPITokens",
+      "provenance": [
+        {
+          "detail": "List operation GET /tokens response 200 references PaginatedAPIToken",
+          "pointer": "#/paths/~1tokens/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedAPIToken"
+    },
+    {
+      "collection_path": "/user/bots",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "username",
+          "provenance": [
+            {
+              "detail": "Create request body property 'username' matches entity 'avatar'",
+              "pointer": "#/paths/~1user~1bots/post/requestBody/content/application~1json/properties/username",
+              "rule": "D2:D_key_field_exact_match"
+            }
+          ],
+          "target": "avatar"
+        }
+      ],
+      "display_name": "PaginatedBotUser",
+      "item_path": "/user/bots/{bot}",
+      "key": "user/bots",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "bot"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'bot' has no matching schema property; using path evidence only",
+          "pointer": "/user/bots/{bot}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['bot']",
+          "pointer": "/user/bots/{bot}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "botsList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/user/bots",
+          "source_pointer": "#/paths/~1user~1bots/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "botsCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/user/bots",
+          "source_pointer": "#/paths/~1user~1bots/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "botsDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/user/bots/{bot}",
+          "source_pointer": "#/paths/~1user~1bots~1{bot}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "botsRead",
+          "kind": "get",
+          "method": "GET",
+          "path": "/user/bots/{bot}",
+          "source_pointer": "#/paths/~1user~1bots~1{bot}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchBotsRead",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/user/bots/{bot}",
+          "source_pointer": "#/paths/~1user~1bots~1{bot}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "botsUpdate",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/user/bots/{bot}",
+          "source_pointer": "#/paths/~1user~1bots~1{bot}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedBotUsers",
+      "provenance": [
+        {
+          "detail": "List operation GET /user/bots response 200 references PaginatedBotUser",
+          "pointer": "#/paths/~1user~1bots/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedBotUser"
+    },
+    {
+      "collection_path": "/user/sessions",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PaginatedSession",
+      "item_path": "/user/sessions/{session}",
+      "key": "user/sessions",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "session"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'session' has no matching schema property; using path evidence only",
+          "pointer": "/user/sessions/{session}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['session']",
+          "pointer": "/user/sessions/{session}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "sessionsList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/user/sessions",
+          "source_pointer": "#/paths/~1user~1sessions/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "sessionsDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/user/sessions/{session}",
+          "source_pointer": "#/paths/~1user~1sessions~1{session}/delete",
+          "success_codes": [
+            204
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedSessions",
+      "provenance": [
+        {
+          "detail": "List operation GET /user/sessions response 200 references PaginatedSession",
+          "pointer": "#/paths/~1user~1sessions/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedSession"
+    },
+    {
+      "collection_path": "/user/settings/token/caldav",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PaginatedToken",
+      "item_path": "/user/settings/token/caldav/{id}",
+      "key": "user/settings/token/caldav",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/user/settings/token/caldav/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/user/settings/token/caldav/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "caldavTokensList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/user/settings/token/caldav",
+          "source_pointer": "#/paths/~1user~1settings~1token~1caldav/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "caldavTokensCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/user/settings/token/caldav",
+          "source_pointer": "#/paths/~1user~1settings~1token~1caldav/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "caldavTokensDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/user/settings/token/caldav/{id}",
+          "source_pointer": "#/paths/~1user~1settings~1token~1caldav~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedTokens",
+      "provenance": [
+        {
+          "detail": "List operation GET /user/settings/token/caldav response 200 references PaginatedToken",
+          "pointer": "#/paths/~1user~1settings~1token~1caldav/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedToken"
+    },
+    {
+      "collection_path": "/user/settings/webhooks",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "project_id",
+          "provenance": [
+            {
+              "detail": "Create request body property 'project_id' matches entity 'projects'",
+              "pointer": "#/paths/~1user~1settings~1webhooks/post/requestBody/content/application~1json/properties/project_id",
+              "rule": "D2:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "projects"
+        }
+      ],
+      "display_name": "PaginatedWebhook",
+      "item_path": "/user/settings/webhooks/{webhook}",
+      "key": "user/settings/webhooks",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "webhook"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'webhook' has no matching schema property; using path evidence only",
+          "pointer": "/user/settings/webhooks/{webhook}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['webhook']",
+          "pointer": "/user/settings/webhooks/{webhook}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "userWebhooksList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/user/settings/webhooks",
+          "source_pointer": "#/paths/~1user~1settings~1webhooks/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "userWebhooksCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/user/settings/webhooks",
+          "source_pointer": "#/paths/~1user~1settings~1webhooks/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "userWebhooksDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/user/settings/webhooks/{webhook}",
+          "source_pointer": "#/paths/~1user~1settings~1webhooks~1{webhook}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "userWebhooksUpdate",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/user/settings/webhooks/{webhook}",
+          "source_pointer": "#/paths/~1user~1settings~1webhooks~1{webhook}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedWebhooks",
+      "provenance": [
+        {
+          "detail": "List operation GET /user/settings/webhooks response 200 references PaginatedWebhook",
+          "pointer": "#/paths/~1user~1settings~1webhooks/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedWebhook"
+    }
+  ],
+  "isolation_audit": {
+    "denied_file_count": 0,
+    "policy": "allow-listed OpenAPI/config inputs only; environment-specific paths excluded from deterministic report"
+  },
+  "meta": {
+    "cli_args": {
+      "base_url": "http://127.0.0.1:3456/api/v2",
+      "command": "generate",
+      "generator_version": "0.22.0",
+      "instances_per_action": 1,
+      "instances_per_entity": 1,
+      "name": "vikunja",
+      "seed": 1,
+      "source_openapi_sha256": "207ec830ffe3f73be3324dda465a33e1d6ae4afca5b2e4d35e66d2e371e0510d"
+    },
+    "openapi_version": "3.0.3",
+    "title": "Vikunja API"
+  },
+  "reproducibility": {
+    "artifact_sha256": {
+      "dependency_graph_json": "eed4be71bb9148005c0e5558fb5bd228a447dde8d6fa882df03cd44b45607979",
+      "interfaces_js": "4b536782a2aa3ef99ad271b99fb604e1a51e6d6f738f79ca6f25f9c19760f3b0",
+      "stories_js": "f02c7dc25ca8dc3381d962fd510b9e66b35978d67475d941747fa8a951876fc3"
+    },
+    "base_url": "http://127.0.0.1:3456/api/v2",
+    "content_fingerprint_sha256": "c9c8f5ba6e31d11a6e8869c1e41ad866ebe9258d89d8aebf4f1d95b959a73342",
+    "generator_version": "0.22.0",
+    "instances_per_action": 1,
+    "instances_per_entity": 1,
+    "scope": "semantic inputs and generated artifacts; filesystem paths and run-time ports are excluded",
+    "seed": 1,
+    "source_openapi_sha256": "207ec830ffe3f73be3324dda465a33e1d6ae4afca5b2e4d35e66d2e371e0510d"
+  },
+  "response_code_coverage": [
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/admin/invite-links"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/admin/invite-links"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/admin/invite-links/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/admin/overview"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/admin/projects"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/admin/projects/{id}/owner"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/admin/teams"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/admin/users"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/admin/users"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/admin/users/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/admin/users/{id}/admin"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/admin/users/{id}/password"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/admin/users/{id}/password-reset-email"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/admin/users/{id}/status"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/avatar/{username}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/backgrounds/unsplash/images/{image}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/backgrounds/unsplash/images/{image}/thumb"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/backgrounds/unsplash/search"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/filters"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/filters/{filter}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/filters/{filter}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/filters/{filter}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/filters/{filter}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/health"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/info"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/invite-links/check"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/labels"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/labels"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/labels/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/labels/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/labels/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/labels/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/login"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/logout"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/mcp/info"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/migration/csv/detect"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/migration/csv/migrate"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/migration/csv/preview"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/migration/csv/status"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/migration/planka/migrate"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/migration/planka/status"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/migration/ticktick/migrate"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/migration/ticktick/status"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/migration/todoist/auth"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/migration/todoist/migrate"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/migration/todoist/status"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/migration/trello/auth"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/migration/trello/migrate"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/migration/trello/status"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/migration/vikunja-file/migrate"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/migration/vikunja-file/status"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/migration/wekan/migrate"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/migration/wekan/status"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/notifications"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/notifications"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/notifications"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/notifications.atom"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/notifications/{notificationid}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/oauth/authorize"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/oauth/token"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/projects/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/projects/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/projects/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project_id}/time-entries"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects/{projectid}/duplicate"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/background"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/projects/{project}/background"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/projects/{project}/backgrounds/unsplash"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/projects/{project}/backgrounds/upload"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/shares"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects/{project}/shares"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/shares/{share}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/projects/{project}/shares/{share}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/tasks"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects/{project}/tasks"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects/{project}/tasks/bulk"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "307"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/tasks/by-index/{index}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/teams"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects/{project}/teams"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/projects/{project}/teams/{team}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/projects/{project}/teams/{team}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/users"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects/{project}/users"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/users/search"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/projects/{project}/users/{user}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/projects/{project}/users/{user}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/views"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects/{project}/views"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/views/{view}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/projects/{project}/views/{view}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/projects/{project}/views/{view}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/projects/{project}/views/{view}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/views/{view}/buckets"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects/{project}/views/{view}/buckets"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/views/{view}/buckets/tasks"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/projects/{project}/views/{view}/buckets/{bucket}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/projects/{project}/views/{view}/buckets/{bucket}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/projects/{project}/views/{view}/buckets/{bucket}/tasks"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/views/{view}/tasks"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/webhooks"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects/{project}/webhooks"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/projects/{project}/webhooks/{webhook}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/projects/{project}/webhooks/{webhook}"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/register"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/routes"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/shares/{share}/auth"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/subscriptions/{entity}/{entityID}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/subscriptions/{entity}/{entityID}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/tasks/bulk"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{task_id}/time-entries"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{task}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/tasks/{task}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/tasks/{task}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/tasks/{task}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{task}/assignees"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks/{task}/assignees"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/tasks/{task}/assignees/bulk"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/tasks/{task}/assignees/{user}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{task}/attachments"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks/{task}/attachments"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{task}/attachments/{attachment}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/tasks/{task}/attachments/{attachment}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{task}/comments"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks/{task}/comments"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{task}/comments/{commentid}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/tasks/{task}/comments/{commentid}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/tasks/{task}/comments/{commentid}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/tasks/{task}/comments/{commentid}"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks/{task}/duplicate"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{task}/labels"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks/{task}/labels"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/tasks/{task}/labels/bulk"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/tasks/{task}/labels/{label}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/tasks/{task}/position"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/tasks/{task}/read"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks/{task}/relations"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/tasks/{task}/relations/{relationKind}/{otherTask}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/teams"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/teams"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/teams/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/teams/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/teams/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/teams/{id}"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/teams/{team}/members"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/teams/{team}/members/{user}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/teams/{team}/members/{user}/admin"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/time-entries"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/time-entries"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/time-entries/timer/stop"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/time-entries/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/time-entries/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/time-entries/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/time-entries/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/token/test"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/token/test"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tokens"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tokens"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/tokens/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/user"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/user/bots"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/bots"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/user/bots/{bot}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/user/bots/{bot}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/user/bots/{bot}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/user/bots/{bot}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/confirm"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/deletion/cancel"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/deletion/confirm"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/deletion/request"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/user/export"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/export/download"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/export/request"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/password"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/password/reset"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/password/token"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/user/sessions"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/user/sessions/{session}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/user/settings/avatar"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/user/settings/avatar/provider"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/user/settings/avatar/provider"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/user/settings/avatar/provider"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/user/settings/email"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/user/settings/email"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/settings/email/resend"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/user/settings/general"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/user/settings/token/caldav"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/settings/token/caldav"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/user/settings/token/caldav/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/user/settings/webhooks"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/settings/webhooks"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/user/settings/webhooks/events"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/user/settings/webhooks/{webhook}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/user/settings/webhooks/{webhook}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/user/timezones"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/token"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/user/token/refresh"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/users"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/webhooks/events"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/{entitykind}/{entityid}/reactions"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/{entitykind}/{entityid}/reactions"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/{entitykind}/{entityid}/reactions/delete"
+    }
+  ],
+  "security_schemes": {
+    "APITokenAuth": {
+      "location": "",
+      "param_name": "",
+      "scheme": "bearer",
+      "type": "http"
+    },
+    "BasicAuth": {
+      "location": "",
+      "param_name": "",
+      "scheme": "basic",
+      "type": "http"
+    },
+    "JWTKeyAuth": {
+      "location": "",
+      "param_name": "",
+      "scheme": "bearer",
+      "type": "http"
+    }
+  },
+  "standalone_operations": [
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "adminOverview",
+      "method": "GET",
+      "path": "/admin/overview",
+      "source_pointer": "#/paths/~1admin~1overview/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "adminProjectsList",
+      "method": "GET",
+      "path": "/admin/projects",
+      "source_pointer": "#/paths/~1admin~1projects/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "adminProjectsPatchOwner",
+      "method": "PATCH",
+      "path": "/admin/projects/{id}/owner",
+      "source_pointer": "#/paths/~1admin~1projects~1{id}~1owner/patch",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "adminTeamsList",
+      "method": "GET",
+      "path": "/admin/teams",
+      "source_pointer": "#/paths/~1admin~1teams/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "backgroundsUnsplashSearch",
+      "method": "GET",
+      "path": "/backgrounds/unsplash/search",
+      "source_pointer": "#/paths/~1backgrounds~1unsplash~1search/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "health",
+      "method": "GET",
+      "path": "/health",
+      "source_pointer": "#/paths/~1health/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "info",
+      "method": "GET",
+      "path": "/info",
+      "source_pointer": "#/paths/~1info/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "inviteLinksCheck",
+      "method": "POST",
+      "path": "/invite-links/check",
+      "source_pointer": "#/paths/~1invite-links~1check/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "authLogin",
+      "method": "POST",
+      "path": "/login",
+      "source_pointer": "#/paths/~1login/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "authLogout",
+      "method": "POST",
+      "path": "/logout",
+      "source_pointer": "#/paths/~1logout/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "mcpInfo",
+      "method": "GET",
+      "path": "/mcp/info",
+      "source_pointer": "#/paths/~1mcp~1info/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationCsvDetect",
+      "method": "POST",
+      "path": "/migration/csv/detect",
+      "source_pointer": "#/paths/~1migration~1csv~1detect/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationCsvMigrate",
+      "method": "POST",
+      "path": "/migration/csv/migrate",
+      "source_pointer": "#/paths/~1migration~1csv~1migrate/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationCsvPreview",
+      "method": "POST",
+      "path": "/migration/csv/preview",
+      "source_pointer": "#/paths/~1migration~1csv~1preview/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationCsvStatus",
+      "method": "GET",
+      "path": "/migration/csv/status",
+      "source_pointer": "#/paths/~1migration~1csv~1status/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationPlankaMigrate",
+      "method": "POST",
+      "path": "/migration/planka/migrate",
+      "source_pointer": "#/paths/~1migration~1planka~1migrate/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationPlankaStatus",
+      "method": "GET",
+      "path": "/migration/planka/status",
+      "source_pointer": "#/paths/~1migration~1planka~1status/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationTicktickMigrate",
+      "method": "POST",
+      "path": "/migration/ticktick/migrate",
+      "source_pointer": "#/paths/~1migration~1ticktick~1migrate/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationTicktickStatus",
+      "method": "GET",
+      "path": "/migration/ticktick/status",
+      "source_pointer": "#/paths/~1migration~1ticktick~1status/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationTodoistAuth",
+      "method": "GET",
+      "path": "/migration/todoist/auth",
+      "source_pointer": "#/paths/~1migration~1todoist~1auth/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationTodoistMigrate",
+      "method": "POST",
+      "path": "/migration/todoist/migrate",
+      "source_pointer": "#/paths/~1migration~1todoist~1migrate/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationTodoistStatus",
+      "method": "GET",
+      "path": "/migration/todoist/status",
+      "source_pointer": "#/paths/~1migration~1todoist~1status/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationTrelloAuth",
+      "method": "GET",
+      "path": "/migration/trello/auth",
+      "source_pointer": "#/paths/~1migration~1trello~1auth/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationTrelloMigrate",
+      "method": "POST",
+      "path": "/migration/trello/migrate",
+      "source_pointer": "#/paths/~1migration~1trello~1migrate/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationTrelloStatus",
+      "method": "GET",
+      "path": "/migration/trello/status",
+      "source_pointer": "#/paths/~1migration~1trello~1status/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationVikunjaFileMigrate",
+      "method": "POST",
+      "path": "/migration/vikunja-file/migrate",
+      "source_pointer": "#/paths/~1migration~1vikunja-file~1migrate/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationVikunjaFileStatus",
+      "method": "GET",
+      "path": "/migration/vikunja-file/status",
+      "source_pointer": "#/paths/~1migration~1vikunja-file~1status/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationWekanMigrate",
+      "method": "POST",
+      "path": "/migration/wekan/migrate",
+      "source_pointer": "#/paths/~1migration~1wekan~1migrate/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "migrationWekanStatus",
+      "method": "GET",
+      "path": "/migration/wekan/status",
+      "source_pointer": "#/paths/~1migration~1wekan~1status/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "notificationsAtomFeed",
+      "method": "GET",
+      "path": "/notifications.atom",
+      "source_pointer": "#/paths/~1notifications.atom/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "oauthAuthorize",
+      "method": "POST",
+      "path": "/oauth/authorize",
+      "source_pointer": "#/paths/~1oauth~1authorize/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "oauthToken",
+      "method": "POST",
+      "path": "/oauth/token",
+      "source_pointer": "#/paths/~1oauth~1token/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "authRegister",
+      "method": "POST",
+      "path": "/register",
+      "source_pointer": "#/paths/~1register/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "tokenRoutes",
+      "method": "GET",
+      "path": "/routes",
+      "source_pointer": "#/paths/~1routes/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "authLinkShare",
+      "method": "POST",
+      "path": "/shares/{share}/auth",
+      "source_pointer": "#/paths/~1shares~1{share}~1auth/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "tasksBulkUpdate",
+      "method": "PUT",
+      "path": "/tasks/bulk",
+      "source_pointer": "#/paths/~1tasks~1bulk/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "timeEntriesTimerStop",
+      "method": "POST",
+      "path": "/time-entries/timer/stop",
+      "source_pointer": "#/paths/~1time-entries~1timer~1stop/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "tokenTest",
+      "method": "GET",
+      "path": "/token/test",
+      "source_pointer": "#/paths/~1token~1test/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "tokenCheck",
+      "method": "POST",
+      "path": "/token/test",
+      "source_pointer": "#/paths/~1token~1test/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userShow",
+      "method": "GET",
+      "path": "/user",
+      "source_pointer": "#/paths/~1user/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "authConfirmEmail",
+      "method": "POST",
+      "path": "/user/confirm",
+      "source_pointer": "#/paths/~1user~1confirm/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userDeletionCancel",
+      "method": "POST",
+      "path": "/user/deletion/cancel",
+      "source_pointer": "#/paths/~1user~1deletion~1cancel/post",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userDeletionConfirm",
+      "method": "POST",
+      "path": "/user/deletion/confirm",
+      "source_pointer": "#/paths/~1user~1deletion~1confirm/post",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userDeletionRequest",
+      "method": "POST",
+      "path": "/user/deletion/request",
+      "source_pointer": "#/paths/~1user~1deletion~1request/post",
+      "success_codes": [
+        204
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userExportStatus",
+      "method": "GET",
+      "path": "/user/export",
+      "source_pointer": "#/paths/~1user~1export/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userExportDownload",
+      "method": "POST",
+      "path": "/user/export/download",
+      "source_pointer": "#/paths/~1user~1export~1download/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userExportRequest",
+      "method": "POST",
+      "path": "/user/export/request",
+      "source_pointer": "#/paths/~1user~1export~1request/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userChangePassword",
+      "method": "POST",
+      "path": "/user/password",
+      "source_pointer": "#/paths/~1user~1password/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "authPasswordReset",
+      "method": "POST",
+      "path": "/user/password/reset",
+      "source_pointer": "#/paths/~1user~1password~1reset/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "authPasswordToken",
+      "method": "POST",
+      "path": "/user/password/token",
+      "source_pointer": "#/paths/~1user~1password~1token/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userAvatarUpload",
+      "method": "PUT",
+      "path": "/user/settings/avatar",
+      "source_pointer": "#/paths/~1user~1settings~1avatar/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userGetAvatarProvider",
+      "method": "GET",
+      "path": "/user/settings/avatar/provider",
+      "source_pointer": "#/paths/~1user~1settings~1avatar~1provider/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userSetAvatarProvider",
+      "method": "PUT",
+      "path": "/user/settings/avatar/provider",
+      "source_pointer": "#/paths/~1user~1settings~1avatar~1provider/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "patchUserGetAvatarProvider",
+      "method": "PATCH",
+      "path": "/user/settings/avatar/provider",
+      "source_pointer": "#/paths/~1user~1settings~1avatar~1provider/patch",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userUpdateEmail",
+      "method": "PUT",
+      "path": "/user/settings/email",
+      "source_pointer": "#/paths/~1user~1settings~1email/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userCancelEmailUpdate",
+      "method": "DELETE",
+      "path": "/user/settings/email",
+      "source_pointer": "#/paths/~1user~1settings~1email/delete",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userResendEmailConfirmation",
+      "method": "POST",
+      "path": "/user/settings/email/resend",
+      "source_pointer": "#/paths/~1user~1settings~1email~1resend/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userUpdateSettings",
+      "method": "PUT",
+      "path": "/user/settings/general",
+      "source_pointer": "#/paths/~1user~1settings~1general/put",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userWebhooksEvents",
+      "method": "GET",
+      "path": "/user/settings/webhooks/events",
+      "source_pointer": "#/paths/~1user~1settings~1webhooks~1events/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "userTimezones",
+      "method": "GET",
+      "path": "/user/timezones",
+      "source_pointer": "#/paths/~1user~1timezones/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "tokenRenew",
+      "method": "POST",
+      "path": "/user/token",
+      "source_pointer": "#/paths/~1user~1token/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "authRefreshToken",
+      "method": "POST",
+      "path": "/user/token/refresh",
+      "source_pointer": "#/paths/~1user~1token~1refresh/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "usersSearch",
+      "method": "GET",
+      "path": "/users",
+      "source_pointer": "#/paths/~1users/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "webhooksEventsList",
+      "method": "GET",
+      "path": "/webhooks/events",
+      "source_pointer": "#/paths/~1webhooks~1events/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "reactionsList",
+      "method": "GET",
+      "path": "/{entitykind}/{entityid}/reactions",
+      "source_pointer": "#/paths/~1{entitykind}~1{entityid}~1reactions/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "reactionsCreate",
+      "method": "POST",
+      "path": "/{entitykind}/{entityid}/reactions",
+      "source_pointer": "#/paths/~1{entitykind}~1{entityid}~1reactions/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [],
+      "has_default_response": true,
+      "js_function": "reactionsDelete",
+      "method": "POST",
+      "path": "/{entitykind}/{entityid}/reactions/delete",
+      "source_pointer": "#/paths/~1{entitykind}~1{entityid}~1reactions~1delete/post",
+      "success_codes": [
+        200
+      ]
+    }
+  ],
+  "unsupported_constructs": {
+    "ambiguities": [
+      "Entity 'avatar' has no component-schema evidence; name derived from path segment (confidence=0.5).",
+      "Entity 'backgrounds/unsplash/images' has no component-schema evidence; name derived from path segment (confidence=0.5).",
+      "Entity 'subscriptions' has no component-schema evidence; name derived from path segment (confidence=0.5).",
+      "Key inference for entity 'admin/invite-links' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'admin/users' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'avatar' has reduced confidence (0.6); path parameter(s) ['username'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'backgrounds/unsplash/images' has reduced confidence (0.6); path parameter(s) ['image'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'filters' has reduced confidence (0.7); path parameter(s) ['filter'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'labels' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'notifications' has reduced confidence (0.7); path parameter(s) ['notificationid'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'projects' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'subscriptions' has reduced confidence (0.6); path parameter(s) ['entity', 'entityID'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'tasks' has reduced confidence (0.7); path parameter(s) ['task'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'teams' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'time-entries' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'tokens' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'user/bots' has reduced confidence (0.7); path parameter(s) ['bot'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'user/sessions' has reduced confidence (0.7); path parameter(s) ['session'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'user/settings/token/caldav' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'user/settings/webhooks' has reduced confidence (0.7); path parameter(s) ['webhook'] could not be fully cross-validated against the schema."
+    ],
+    "document_level": [],
+    "remote_refs": []
+  },
+  "warnings": []
+}

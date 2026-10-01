@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "basis": "symbolic plan intents; no SUT execution",
+  "scenarios": 50,
+  "oracle_ids": {
+    "concurrency::disjoint-put::put:/admin/realms/{realm}/users/{user-id}": 4,
+    "concurrency::noop::concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName": 1,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::createdTimestamp": 3,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::email": 3,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::emailVerified": 5,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::enabled": 2,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::federationLink": 3,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName": 3,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::id": 2,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::lastName": 3,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::notBefore": 2,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::origin": 3,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::self": 5,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::serviceAccountClientId": 2,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::totp": 4,
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::username": 5
+  },
+  "kinds": {
+    "disjoint-put-serial-outcomes": 4,
+    "noop-versus-change": 1,
+    "same-field-one-successful-value-visible": 45
+  },
+  "prefix_lengths": {
+    "1": 50,
+    "10": 14,
+    "2": 50,
+    "3": 50,
+    "4": 50,
+    "5": 50,
+    "6": 50,
+    "7": 50,
+    "8": 50,
+    "9": 32
+  },
+  "instance_numbers": {
+    "1": 18,
+    "2": 13,
+    "3": 19
+  },
+  "control_orders": {
+    "AB": 28,
+    "BA": 22
+  },
+  "complete_intent_scenarios": 50,
+  "actual_overlap": "NOT_MEASURED",
+  "oracle_verdicts": "NOT_EVALUATED"
+}

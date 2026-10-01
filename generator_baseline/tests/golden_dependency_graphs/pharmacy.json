@@ -1,0 +1,30 @@
+{
+  "edges": [],
+  "nodes": [
+    "drugs",
+    "inventory",
+    "orders",
+    "patients",
+    "prescriptions",
+    "stores"
+  ],
+  "operation_dependencies": {
+    "/dispense": [
+      {
+        "field": "rxId",
+        "target": "prescriptions"
+      }
+    ],
+    "/process-rx": [
+      {
+        "field": "rxId",
+        "target": "prescriptions"
+      },
+      {
+        "field": "storeId",
+        "target": "stores"
+      }
+    ]
+  },
+  "system": "pharmacy"
+}

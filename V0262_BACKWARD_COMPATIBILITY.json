@@ -1,0 +1,25 @@
+{
+  "generator_version": "0.26.2",
+  "result": "PASS",
+  "comparison": "exact coverage-count equality with v0.25.5 baseline",
+  "unit_tests": {"run": 132, "passed": 129, "skipped": 3, "failures": 0},
+  "systems": {
+    "library": {"operations": 13, "contract_verifiers": 13, "mutations": 8, "state_verified_mutations": 1, "contract_only_mutations": 7, "concurrency_oracles": 0},
+    "garage": {"operations": 32, "contract_verifiers": 32, "mutations": 20, "state_verified_mutations": 18, "contract_only_mutations": 2, "concurrency_oracles": 46},
+    "pharmacy": {"operations": 29, "contract_verifiers": 29, "mutations": 18, "state_verified_mutations": 10, "contract_only_mutations": 8, "concurrency_oracles": 12},
+    "netbox": {"operations": 1156, "contract_verifiers": 1156, "mutations": 872, "state_verified_mutations": 364, "contract_only_mutations": 508, "concurrency_oracles": 1396},
+    "todoist": {"operations": 28, "contract_verifiers": 28, "mutations": 17, "state_verified_mutations": 5, "contract_only_mutations": 12, "concurrency_oracles": 0},
+    "vikunja": {"operations": 29, "contract_verifiers": 29, "mutations": 20, "state_verified_mutations": 12, "contract_only_mutations": 8, "concurrency_oracles": 71}
+  },
+  "gitea_static_validation": {
+    "operations": 478,
+    "contract_verifiers": 478,
+    "mutations": 236,
+    "state_verified_mutations": 118,
+    "contract_only_mutations": 118,
+    "concurrency_oracles": 181,
+    "repo_binding": "repo <- response.name",
+    "issue_binding": "index <- response.number",
+    "manual_assumptions": 0
+  }
+}

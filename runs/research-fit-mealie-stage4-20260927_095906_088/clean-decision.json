@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "source": "research-fit-mealie-stage4-20260927_095906_088",
+  "seeds": [
+    {
+      "seed": 20261817,
+      "actual_overlap_epochs": 4,
+      "max_verified_prefix_rounds": 8,
+      "coverage_state": "VERIFIED_PREFIX_AND_ORACLE_COVERAGE",
+      "mealplan_put_statuses": {
+        "200": 21,
+        "422": 2
+      },
+      "concurrency_verdicts": {
+        "INCONCLUSIVE": 1,
+        "PASS": 3
+      },
+      "witnesses": [
+        {
+          "oracle_id": "concurrency::same-field::update_one_api_households_mealplans_rules__item_id__put::day",
+          "epoch_id": "generated-epoch-0",
+          "verdict": "INCONCLUSIVE",
+          "reason": "intervening-write-before-observation",
+          "trigger_statuses": [
+            200,
+            200
+          ],
+          "intervening_same_resource_writes": [
+            {
+              "trace_sequence": 257,
+              "method": "PUT",
+              "status": 200,
+              "model_path": "/api/households/mealplans/rules/4087d8fb-19fe-4a62-9763-03ef0fa19210"
+            }
+          ],
+          "observation_event": 262
+        },
+        {
+          "oracle_id": "concurrency::same-field::update_one_api_households_mealplans_rules__item_id__put::entryType",
+          "epoch_id": "generated-epoch-1",
+          "verdict": "PASS",
+          "reason": null,
+          "trigger_statuses": [
+            200,
+            200
+          ],
+          "intervening_same_resource_writes": [],
+          "observation_event": 310
+        },
+        {
+          "oracle_id": "concurrency::same-field::update_one_api_recipes_timeline_events__item_id__put::subject",
+          "epoch_id": "generated-epoch-10",
+          "verdict": "PASS",
+          "reason": null,
+          "trigger_statuses": [
+            200,
+            200
+          ],
+          "intervening_same_resource_writes": [],
+          "observation_event": 319
+        },
+        {
+          "oracle_id": "concurrency::same-field::update_one_api_households_mealplans_rules__item_id__put::queryFilterString",
+          "epoch_id": "generated-epoch-2",
+          "verdict": "PASS",
+          "reason": null,
+          "trigger_statuses": [
+            200,
+            200
+          ],
+          "intervening_same_resource_writes": [],
+          "observation_event": 294
+        }
+      ],
+      "assessment": "No semantic defect established by inconclusive witnesses"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "source_plan_sha256": "d0f42817b7b07dea8ec750c20dab624c50e4e9f7bf0bf8adfacf98264a28cb3d",
+  "purpose": "SCHEDULING_PROJECTION_ONLY",
+  "ready_concrete_oracles": {
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::createdTimestamp": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::email": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::emailVerified": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::enabled": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::federationLink": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::id": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::lastName": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::notBefore": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::origin": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::self": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::serviceAccountClientId": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::totp": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::username": {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::noop::concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName": {
+      "kind": "noop-versus-change",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    },
+    "concurrency::disjoint-put::put:/admin/realms/{realm}/users/{user-id}": {
+      "kind": "disjoint-put-serial-outcomes",
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}"
+    }
+  },
+  "instances_per_entity": 3,
+  "limitations": [
+    "not generated executable test sources",
+    "runtime bindings use @{name} placeholders",
+    "no HTTP requests, server status, real overlap or oracle verdicts"
+  ]
+}

@@ -1,0 +1,27 @@
+﻿{
+    "evidence_type":  "Vikunja Phase 5 OpenAPI-to-SBT interleaved BP stabilization",
+    "profile":  "interleaved-relational-lifecycle",
+    "created_utc":  "2026-09-20T13:18:50.2433319Z",
+    "seeds":  [
+                  20261301,
+                  20261302,
+                  20261303,
+                  20261304
+              ],
+    "run_count":  4,
+    "required_checks_per_run":  13,
+    "all_runs_passed":  true,
+    "distinct_intent_schedules":  1,
+    "schedule_variation_observed":  false,
+    "selected_run_directories":  [
+                                     "phase5-interleaved-bp-seed-20261301-20260920_155456_990",
+                                     "phase5-interleaved-bp-seed-20261302-20260920_155951_466",
+                                     "phase5-interleaved-bp-seed-20261303-20260920_160017_307",
+                                     "phase5-interleaved-bp-seed-20261304-20260920_160041_922"
+                                 ],
+    "excluded_run_directories":  [
+
+                                 ],
+    "model_hash_triple":  "033cdd4ded8565aea6c9a724b89eed7f84bf1152b8102621858841027a8ac8df|db759926b95b633393175e0472a59bef6da85184ab4f6cce510c59a26ee0e803|68e18faf9a574f631f21a8fdd59682bb8cfc61a3cf108871c1c0a242f681ee2c",
+    "interpretation":  "Stabilization evidence: all four runs passed, but their semantic Intent schedules were identical. These runs establish repeatability, not interleaving diversity; no real bug is claimed."
+}

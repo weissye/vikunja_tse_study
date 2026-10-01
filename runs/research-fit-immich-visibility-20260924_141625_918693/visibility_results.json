@@ -1,0 +1,423 @@
+{
+  "status": "COMPLETE",
+  "openapi_sha256": "51719f0b6573ca75eb51834b01a7fdb9e963c9d60fcce813f10c1463a987b866",
+  "trials": 3,
+  "prefix_rounds": 4,
+  "identity_scope": "authenticated-current-user",
+  "results": [
+    {
+      "case": "tag",
+      "trial": 1,
+      "verdict": "PASS",
+      "reason": "value-visible-before-and-after-prefix",
+      "steps": [
+        {
+          "phase": "identity-before",
+          "status": 200,
+          "observed": {
+            "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+            "name": "FSE Album Pilot"
+          }
+        },
+        {
+          "phase": "create",
+          "status": 201,
+          "observed": {
+            "id": "af86519b-2a94-47d6-af85-f1f4f2850bfe",
+            "name": "fse-visibility-tag-1-f95c1d525b76"
+          },
+          "entity": "tag"
+        },
+        {
+          "phase": "read-immediate",
+          "status": 200,
+          "observed": {
+            "id": "af86519b-2a94-47d6-af85-f1f4f2850bfe",
+            "name": "fse-visibility-tag-1-f95c1d525b76"
+          },
+          "entity": "tag"
+        },
+        {
+          "phase": "unchanging-prefix-1",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-2",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-3",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-4",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "identity-after",
+          "status": 200,
+          "observed": {
+            "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+            "name": "FSE Album Pilot"
+          }
+        },
+        {
+          "phase": "read-after-prefix",
+          "status": 200,
+          "observed": {
+            "id": "af86519b-2a94-47d6-af85-f1f4f2850bfe",
+            "name": "fse-visibility-tag-1-f95c1d525b76"
+          },
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "case": "notification",
+      "trial": 1,
+      "verdict": "INCONCLUSIVE",
+      "reason": "creation-acknowledged-but-immediate-read-unresolved",
+      "steps": [
+        {
+          "phase": "identity-before",
+          "status": 200,
+          "observed": {
+            "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+            "name": "FSE Album Pilot"
+          }
+        },
+        {
+          "phase": "create",
+          "status": 201,
+          "observed": {
+            "id": "edf00a07-d42b-44db-a17a-496de6ea3f96",
+            "title": "fse-visibility-notification-1-2269b0382a82"
+          },
+          "entity": "notification"
+        },
+        {
+          "phase": "read-immediate",
+          "status": 400,
+          "observed": {},
+          "message_class": "other-error",
+          "entity": "notification"
+        },
+        {
+          "phase": "unchanging-prefix-1",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-2",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-3",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-4",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "identity-after",
+          "status": 200,
+          "observed": {
+            "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+            "name": "FSE Album Pilot"
+          }
+        },
+        {
+          "phase": "read-after-prefix",
+          "status": 400,
+          "observed": {},
+          "message_class": "other-error",
+          "entity": "notification"
+        }
+      ]
+    },
+    {
+      "case": "tag",
+      "trial": 2,
+      "verdict": "PASS",
+      "reason": "value-visible-before-and-after-prefix",
+      "steps": [
+        {
+          "phase": "identity-before",
+          "status": 200,
+          "observed": {
+            "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+            "name": "FSE Album Pilot"
+          }
+        },
+        {
+          "phase": "create",
+          "status": 201,
+          "observed": {
+            "id": "4c5e643c-1e77-4262-961f-de4ba9156587",
+            "name": "fse-visibility-tag-2-ebdad44f3659"
+          },
+          "entity": "tag"
+        },
+        {
+          "phase": "read-immediate",
+          "status": 200,
+          "observed": {
+            "id": "4c5e643c-1e77-4262-961f-de4ba9156587",
+            "name": "fse-visibility-tag-2-ebdad44f3659"
+          },
+          "entity": "tag"
+        },
+        {
+          "phase": "unchanging-prefix-1",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-2",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-3",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-4",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "identity-after",
+          "status": 200,
+          "observed": {
+            "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+            "name": "FSE Album Pilot"
+          }
+        },
+        {
+          "phase": "read-after-prefix",
+          "status": 200,
+          "observed": {
+            "id": "4c5e643c-1e77-4262-961f-de4ba9156587",
+            "name": "fse-visibility-tag-2-ebdad44f3659"
+          },
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "case": "notification",
+      "trial": 2,
+      "verdict": "INCONCLUSIVE",
+      "reason": "creation-acknowledged-but-immediate-read-unresolved",
+      "steps": [
+        {
+          "phase": "identity-before",
+          "status": 200,
+          "observed": {
+            "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+            "name": "FSE Album Pilot"
+          }
+        },
+        {
+          "phase": "create",
+          "status": 201,
+          "observed": {
+            "id": "184ec120-2928-47d4-88c6-cd545392f112",
+            "title": "fse-visibility-notification-2-114468ae8ee8"
+          },
+          "entity": "notification"
+        },
+        {
+          "phase": "read-immediate",
+          "status": 400,
+          "observed": {},
+          "message_class": "other-error",
+          "entity": "notification"
+        },
+        {
+          "phase": "unchanging-prefix-1",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-2",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-3",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-4",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "identity-after",
+          "status": 200,
+          "observed": {
+            "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+            "name": "FSE Album Pilot"
+          }
+        },
+        {
+          "phase": "read-after-prefix",
+          "status": 400,
+          "observed": {},
+          "message_class": "other-error",
+          "entity": "notification"
+        }
+      ]
+    },
+    {
+      "case": "tag",
+      "trial": 3,
+      "verdict": "PASS",
+      "reason": "value-visible-before-and-after-prefix",
+      "steps": [
+        {
+          "phase": "identity-before",
+          "status": 200,
+          "observed": {
+            "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+            "name": "FSE Album Pilot"
+          }
+        },
+        {
+          "phase": "create",
+          "status": 201,
+          "observed": {
+            "id": "9f2d62b4-9ba7-4ec5-86b0-08a0e40a069b",
+            "name": "fse-visibility-tag-3-042202b5c1d7"
+          },
+          "entity": "tag"
+        },
+        {
+          "phase": "read-immediate",
+          "status": 200,
+          "observed": {
+            "id": "9f2d62b4-9ba7-4ec5-86b0-08a0e40a069b",
+            "name": "fse-visibility-tag-3-042202b5c1d7"
+          },
+          "entity": "tag"
+        },
+        {
+          "phase": "unchanging-prefix-1",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-2",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-3",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-4",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "identity-after",
+          "status": 200,
+          "observed": {
+            "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+            "name": "FSE Album Pilot"
+          }
+        },
+        {
+          "phase": "read-after-prefix",
+          "status": 200,
+          "observed": {
+            "id": "9f2d62b4-9ba7-4ec5-86b0-08a0e40a069b",
+            "name": "fse-visibility-tag-3-042202b5c1d7"
+          },
+          "entity": "tag"
+        }
+      ]
+    },
+    {
+      "case": "notification",
+      "trial": 3,
+      "verdict": "INCONCLUSIVE",
+      "reason": "creation-acknowledged-but-immediate-read-unresolved",
+      "steps": [
+        {
+          "phase": "identity-before",
+          "status": 200,
+          "observed": {
+            "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+            "name": "FSE Album Pilot"
+          }
+        },
+        {
+          "phase": "create",
+          "status": 201,
+          "observed": {
+            "id": "f4723e18-f6e0-4db4-b3b1-6309e5192294",
+            "title": "fse-visibility-notification-3-f04347da8214"
+          },
+          "entity": "notification"
+        },
+        {
+          "phase": "read-immediate",
+          "status": 400,
+          "observed": {},
+          "message_class": "other-error",
+          "entity": "notification"
+        },
+        {
+          "phase": "unchanging-prefix-1",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-2",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-3",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "unchanging-prefix-4",
+          "status": 200,
+          "observed": {}
+        },
+        {
+          "phase": "identity-after",
+          "status": 200,
+          "observed": {
+            "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+            "name": "FSE Album Pilot"
+          }
+        },
+        {
+          "phase": "read-after-prefix",
+          "status": 400,
+          "observed": {},
+          "message_class": "other-error",
+          "entity": "notification"
+        }
+      ]
+    }
+  ]
+}

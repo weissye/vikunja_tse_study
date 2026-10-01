@@ -1,0 +1,77 @@
+{
+  "creation_order": [
+    "api/households/mealplans",
+    "api/households/mealplans/rules",
+    "api/households/shopping/lists",
+    "api/organizers/categories",
+    "api/organizers/categories/slug",
+    "api/organizers/tags",
+    "api/organizers/tags/slug",
+    "api/organizers/tools",
+    "api/organizers/tools/slug",
+    "api/recipes",
+    "api/recipes/shared",
+    "api/households/shopping/items",
+    "api/recipes/timeline/events"
+  ],
+  "cycle_edges_removed": [],
+  "deletion_order": [
+    "api/recipes/timeline/events",
+    "api/households/shopping/items",
+    "api/recipes/shared",
+    "api/recipes",
+    "api/organizers/tools/slug",
+    "api/organizers/tools",
+    "api/organizers/tags/slug",
+    "api/organizers/tags",
+    "api/organizers/categories/slug",
+    "api/organizers/categories",
+    "api/households/shopping/lists",
+    "api/households/mealplans/rules",
+    "api/households/mealplans"
+  ],
+  "edges": [
+    {
+      "confidence": 0.9,
+      "field_name": "shoppingListId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'shoppingListId' matches entity 'api/households/shopping/lists'",
+          "pointer": "#/paths/~1api~1households~1shopping~1items/post/requestBody/content/application~1json/properties/shoppingListId",
+          "rule": "D2:structural_verified_id"
+        }
+      ],
+      "source": "api/households/shopping/items",
+      "target": "api/households/shopping/lists"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "recipeId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'recipeId' matches entity 'api/recipes'",
+          "pointer": "#/paths/~1api~1recipes~1timeline~1events/post/requestBody/content/application~1json/properties/recipeId",
+          "rule": "D2:structural_verified_id"
+        }
+      ],
+      "source": "api/recipes/timeline/events",
+      "target": "api/recipes"
+    }
+  ],
+  "had_cycle": false,
+  "nodes": [
+    "api/households/mealplans",
+    "api/households/mealplans/rules",
+    "api/households/shopping/items",
+    "api/households/shopping/lists",
+    "api/organizers/categories",
+    "api/organizers/categories/slug",
+    "api/organizers/tags",
+    "api/organizers/tags/slug",
+    "api/organizers/tools",
+    "api/organizers/tools/slug",
+    "api/recipes",
+    "api/recipes/shared",
+    "api/recipes/timeline/events"
+  ]
+}

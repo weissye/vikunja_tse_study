@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "stage": "Gitea Stage 6 generated exploration",
+  "status": "COMPLETE",
+  "exploration_status": "PARTIAL_WITNESS_COVERAGE",
+  "input_basis": "frozen Gitea OpenAPI and opt-in long-interleaving generator profile",
+  "run_count": 1,
+  "total_http_events": 59,
+  "long_story_steps_selected": 0,
+  "generated_long_stories": 30,
+  "completed_long_stories": 30,
+  "successful_long_stories": 0,
+  "skipped_long_stories": 30,
+  "unfinished_long_stories": 0,
+  "distinct_long_stories_selected": 0,
+  "longest_observed_story_rounds": 0,
+  "total_epochs": 0,
+  "observed_overlapping_epochs": 0,
+  "overlapping_epochs_after_prior_http_threshold": 0,
+  "minimum_prior_http_events": 12,
+  "unique_generated_scenarios": [],
+  "evaluator_status_counts": {
+    "INCONCLUSIVE": 1
+  },
+  "runs": [
+    {
+      "seed": 20261004,
+      "run_directory": "C:\\work\\temp\\vikunja_tse_study\\runs\\gitea-stage3-live-acceptance-20260924_103153_610",
+      "generated_directory": "C:\\work\\temp\\vikunja_tse_study\\generated\\gitea-stage6-20260924_103147_238-seed-20261004",
+      "stage3_exit": 3,
+      "phase": "RECORDED",
+      "evidence_status": "PRESERVED",
+      "http_events": 59,
+      "concurrency_epochs": 0,
+      "overlapping_epochs": 0,
+      "observed_max_prior_http_events": null,
+      "long_story_steps_selected": 0,
+      "distinct_long_stories_selected": 0,
+      "generated_long_stories": 30,
+      "completed_long_stories": 30,
+      "successful_long_stories": 0,
+      "skipped_long_stories": {
+        "update:adminEditHook:1:field:active": "dependency-unavailable",
+        "update:adminEditHook:1:field:authorizationHeader": "dependency-unavailable",
+        "update:adminEditHook:1:field:branchFilter": "dependency-unavailable",
+        "update:adminEditHook:1:field:name": "dependency-unavailable",
+        "update:orgEdit:1:field:description": "dependency-unavailable",
+        "update:orgEdit:1:field:email": "dependency-unavailable",
+        "update:orgEdit:1:field:fullName": "dependency-unavailable",
+        "update:orgEdit:1:field:location": "dependency-unavailable",
+        "update:orgEdit:1:field:repoAdminChangeTeamAccess": "dependency-unavailable",
+        "update:orgEdit:1:field:visibility": "dependency-unavailable",
+        "update:orgEditTeam:1:field:canCreateOrgRepo": "dependency-unavailable",
+        "update:orgEditTeam:1:field:description": "dependency-unavailable",
+        "update:orgEditTeam:1:field:includesAllRepositories": "dependency-unavailable",
+        "update:orgEditTeam:1:field:name": "dependency-unavailable",
+        "update:orgEditTeam:1:field:permission": "dependency-unavailable",
+        "update:orgEditTeam:1:field:visibility": "dependency-unavailable",
+        "update:repoEdit:1:field:allowRebaseExplicit": "dependency-unavailable",
+        "update:repoEdit:1:field:allowRebaseUpdate": "dependency-unavailable",
+        "update:repoEdit:1:field:allowSquashMerge": "dependency-unavailable",
+        "update:repoEdit:1:field:archived": "dependency-unavailable",
+        "update:repoEdit:1:field:mirrorInterval": "dependency-unavailable",
+        "update:repoEdit:1:field:name": "dependency-unavailable",
+        "update:updateUserRunner:1": "dependency-unavailable",
+        "update:userEditHook:1:field:active": "dependency-unavailable",
+        "update:userEditHook:1:field:authorizationHeader": "dependency-unavailable",
+        "update:userEditHook:1:field:branchFilter": "dependency-unavailable",
+        "update:userEditHook:1:field:name": "dependency-unavailable",
+        "update:userUpdateOAuth2Application:1:field:confidentialClient": "dependency-unavailable",
+        "update:userUpdateOAuth2Application:1:field:name": "dependency-unavailable",
+        "update:userUpdateOAuth2Application:1:field:skipSecondaryAuthorization": "dependency-unavailable"
+      },
+      "unfinished_long_stories": [],
+      "longest_observed_story_rounds": 0,
+      "evaluator_run_status": "INCONCLUSIVE",
+      "verifier_layer_counts": {
+        "concurrency": {
+          "INCONCLUSIVE": 0,
+          "PASS": 0,
+          "VIOLATED": 0
+        },
+        "contract": {
+          "INCONCLUSIVE": 12,
+          "PASS": 46,
+          "VIOLATED": 0
+        },
+        "state": {
+          "INCONCLUSIVE": 0,
+          "PASS": 0,
+          "VIOLATED": 0
+        }
+      },
+      "provengo_exit_code": 0,
+      "evaluator_exit_code": 3,
+      "evidence_zip": "C:\\work\\temp\\vikunja_tse_study\\evidence\\gitea-stage3-live-acceptance-20260924_103153_610-review.zip",
+      "evidence_sha256": "8236517115d629e446731f082bc853d37822149680e8762fafc5646abc4d0a6b"
+    }
+  ],
+  "interpretation": "Selected long story steps establish within-story execution order; they do not establish that a later concurrency epoch used the same resource. Prior HTTP events measure sequence position, not causal dependency. An overlap is only a transport fact. Generated verifier results and independent semantic confirmation determine product claims. The earlier direct-HTTP pilot is separate evidence, not a generated finding."
+}

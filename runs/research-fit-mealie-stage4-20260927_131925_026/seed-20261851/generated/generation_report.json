@@ -1,0 +1,2349 @@
+{
+  "coverage": {
+    "covered_operations": 77,
+    "total_operations": 77,
+    "uncovered_operations": []
+  },
+  "entities": [
+    {
+      "collection_path": "/api/households/mealplans",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PlanEntryPagination",
+      "item_path": "/api/households/mealplans/{item_id}",
+      "key": "api/households/mealplans",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "item_id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'item_id' has no matching schema property; using path evidence only",
+          "pointer": "/api/households/mealplans/{item_id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['item_id']",
+          "pointer": "/api/households/mealplans/{item_id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getAllApiHouseholdsMealplansGet",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api/households/mealplans",
+          "source_pointer": "#/paths/~1api~1households~1mealplans/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "createOneApiHouseholdsMealplansPost",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api/households/mealplans",
+          "source_pointer": "#/paths/~1api~1households~1mealplans/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "deleteOneApiHouseholdsMealplansItemIdDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/api/households/mealplans/{item_id}",
+          "source_pointer": "#/paths/~1api~1households~1mealplans~1{item_id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getOneApiHouseholdsMealplansItemIdGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/households/mealplans/{item_id}",
+          "source_pointer": "#/paths/~1api~1households~1mealplans~1{item_id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateOneApiHouseholdsMealplansItemIdPut",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/api/households/mealplans/{item_id}",
+          "source_pointer": "#/paths/~1api~1households~1mealplans~1{item_id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PlanEntryPaginations",
+      "provenance": [
+        {
+          "detail": "List operation GET /api/households/mealplans response 200 references PlanEntryPagination",
+          "pointer": "#/paths/~1api~1households~1mealplans/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PlanEntryPagination"
+    },
+    {
+      "collection_path": "/api/households/mealplans/rules",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PlanRulesPagination",
+      "item_path": "/api/households/mealplans/rules/{item_id}",
+      "key": "api/households/mealplans/rules",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "item_id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'item_id' has no matching schema property; using path evidence only",
+          "pointer": "/api/households/mealplans/rules/{item_id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['item_id']",
+          "pointer": "/api/households/mealplans/rules/{item_id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getAllApiHouseholdsMealplansRulesGet",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api/households/mealplans/rules",
+          "source_pointer": "#/paths/~1api~1households~1mealplans~1rules/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "createOneApiHouseholdsMealplansRulesPost",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api/households/mealplans/rules",
+          "source_pointer": "#/paths/~1api~1households~1mealplans~1rules/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "deleteOneApiHouseholdsMealplansRulesItemIdDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/api/households/mealplans/rules/{item_id}",
+          "source_pointer": "#/paths/~1api~1households~1mealplans~1rules~1{item_id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getOneApiHouseholdsMealplansRulesItemIdGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/households/mealplans/rules/{item_id}",
+          "source_pointer": "#/paths/~1api~1households~1mealplans~1rules~1{item_id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateOneApiHouseholdsMealplansRulesItemIdPut",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/api/households/mealplans/rules/{item_id}",
+          "source_pointer": "#/paths/~1api~1households~1mealplans~1rules~1{item_id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PlanRulesPaginations",
+      "provenance": [
+        {
+          "detail": "List operation GET /api/households/mealplans/rules response 200 references PlanRulesPagination",
+          "pointer": "#/paths/~1api~1households~1mealplans~1rules/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PlanRulesPagination"
+    },
+    {
+      "collection_path": "/api/households/shopping/items",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "shoppingListId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'shoppingListId' matches entity 'api/households/shopping/lists'",
+              "pointer": "#/paths/~1api~1households~1shopping~1items/post/requestBody/content/application~1json/properties/shoppingListId",
+              "rule": "D2:structural_verified_id"
+            }
+          ],
+          "target": "api/households/shopping/lists"
+        }
+      ],
+      "display_name": "ShoppingListItemPagination",
+      "item_path": "/api/households/shopping/items/{item_id}",
+      "key": "api/households/shopping/items",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "item_id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'item_id' has no matching schema property; using path evidence only",
+          "pointer": "/api/households/shopping/items/{item_id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['item_id']",
+          "pointer": "/api/households/shopping/items/{item_id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "deleteManyApiHouseholdsShoppingItemsDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/api/households/shopping/items",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1items/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getAllApiHouseholdsShoppingItemsGet",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api/households/shopping/items",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1items/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "createOneApiHouseholdsShoppingItemsPost",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api/households/shopping/items",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1items/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateManyApiHouseholdsShoppingItemsPut",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/api/households/shopping/items",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1items/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "deleteOneApiHouseholdsShoppingItemsItemIdDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/api/households/shopping/items/{item_id}",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1items~1{item_id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getOneApiHouseholdsShoppingItemsItemIdGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/households/shopping/items/{item_id}",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1items~1{item_id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateOneApiHouseholdsShoppingItemsItemIdPut",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/api/households/shopping/items/{item_id}",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1items~1{item_id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "ShoppingListItemPaginations",
+      "provenance": [
+        {
+          "detail": "List operation GET /api/households/shopping/items response 200 references ShoppingListItemPagination",
+          "pointer": "#/paths/~1api~1households~1shopping~1items/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "ShoppingListItemPagination"
+    },
+    {
+      "collection_path": "/api/households/shopping/lists",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "ShoppingListPagination",
+      "item_path": "/api/households/shopping/lists/{item_id}",
+      "key": "api/households/shopping/lists",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "item_id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'item_id' has no matching schema property; using path evidence only",
+          "pointer": "/api/households/shopping/lists/{item_id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['item_id']",
+          "pointer": "/api/households/shopping/lists/{item_id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getAllApiHouseholdsShoppingListsGet",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api/households/shopping/lists",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1lists/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "createOneApiHouseholdsShoppingListsPost",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api/households/shopping/lists",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1lists/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "deleteOneApiHouseholdsShoppingListsItemIdDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/api/households/shopping/lists/{item_id}",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1lists~1{item_id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getOneApiHouseholdsShoppingListsItemIdGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/households/shopping/lists/{item_id}",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1lists~1{item_id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateOneApiHouseholdsShoppingListsItemIdPut",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/api/households/shopping/lists/{item_id}",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1lists~1{item_id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateLabelSettingsApiHouseholdsShoppingListsItemIdLabelSettingsPut",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/api/households/shopping/lists/{item_id}/label-settings",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1lists~1{item_id}~1label-settings/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "addRecipeIngredientsToListApiHouseholdsShoppingListsItemIdRecipePost",
+          "kind": "action",
+          "method": "POST",
+          "path": "/api/households/shopping/lists/{item_id}/recipe",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1lists~1{item_id}~1recipe/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "addSingleRecipeIngredientsToListApiHouseholdsShoppingListsItemIdRecipeRecipeIdPost",
+          "kind": "action",
+          "method": "POST",
+          "path": "/api/households/shopping/lists/{item_id}/recipe/{recipe_id}",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1lists~1{item_id}~1recipe~1{recipe_id}/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "removeRecipeIngredientsFromListApiHouseholdsShoppingListsItemIdRecipeRecipeIdDeletePost",
+          "kind": "action",
+          "method": "POST",
+          "path": "/api/households/shopping/lists/{item_id}/recipe/{recipe_id}/delete",
+          "source_pointer": "#/paths/~1api~1households~1shopping~1lists~1{item_id}~1recipe~1{recipe_id}~1delete/post",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "ShoppingListPaginations",
+      "provenance": [
+        {
+          "detail": "List operation GET /api/households/shopping/lists response 200 references ShoppingListPagination",
+          "pointer": "#/paths/~1api~1households~1shopping~1lists/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "ShoppingListPagination"
+    },
+    {
+      "collection_path": "/api/organizers/categories",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "RecipeCategoryPagination",
+      "item_path": "/api/organizers/categories/{item_id}",
+      "key": "api/organizers/categories",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "item_id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'item_id' has no matching schema property; using path evidence only",
+          "pointer": "/api/organizers/categories/{item_id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['item_id']",
+          "pointer": "/api/organizers/categories/{item_id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getAllApiOrganizersCategoriesGet",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api/organizers/categories",
+          "source_pointer": "#/paths/~1api~1organizers~1categories/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "createOneApiOrganizersCategoriesPost",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api/organizers/categories",
+          "source_pointer": "#/paths/~1api~1organizers~1categories/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "deleteOneApiOrganizersCategoriesItemIdDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/api/organizers/categories/{item_id}",
+          "source_pointer": "#/paths/~1api~1organizers~1categories~1{item_id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getOneApiOrganizersCategoriesItemIdGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/organizers/categories/{item_id}",
+          "source_pointer": "#/paths/~1api~1organizers~1categories~1{item_id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateOneApiOrganizersCategoriesItemIdPut",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/api/organizers/categories/{item_id}",
+          "source_pointer": "#/paths/~1api~1organizers~1categories~1{item_id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "RecipeCategoryPaginations",
+      "provenance": [
+        {
+          "detail": "List operation GET /api/organizers/categories response 200 references RecipeCategoryPagination",
+          "pointer": "#/paths/~1api~1organizers~1categories/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "RecipeCategoryPagination"
+    },
+    {
+      "collection_path": null,
+      "composite_key": false,
+      "confidence": 0.5,
+      "dependencies": [],
+      "display_name": "Slug",
+      "item_path": "/api/organizers/categories/slug/{category_slug}",
+      "key": "api/organizers/categories/slug",
+      "key_confidence": 0.6,
+      "key_fields": [
+        "category_slug"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Key field(s) derived from item path parameters: ['category_slug']",
+          "pointer": "/api/organizers/categories/slug/{category_slug}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getOneBySlugApiOrganizersCategoriesSlugCategorySlugGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/organizers/categories/slug/{category_slug}",
+          "source_pointer": "#/paths/~1api~1organizers~1categories~1slug~1{category_slug}/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Slugs",
+      "provenance": [
+        {
+          "detail": "No component schema reference found; entity name derived from path segment 'slug'",
+          "pointer": "/api/organizers/categories/slug/{category_slug}",
+          "rule": "E4:derived_from_path_segment"
+        }
+      ],
+      "schema_name": null
+    },
+    {
+      "collection_path": "/api/organizers/tags",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "RecipeTagPagination",
+      "item_path": "/api/organizers/tags/{item_id}",
+      "key": "api/organizers/tags",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "item_id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'item_id' has no matching schema property; using path evidence only",
+          "pointer": "/api/organizers/tags/{item_id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['item_id']",
+          "pointer": "/api/organizers/tags/{item_id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getAllApiOrganizersTagsGet",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api/organizers/tags",
+          "source_pointer": "#/paths/~1api~1organizers~1tags/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "createOneApiOrganizersTagsPost",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api/organizers/tags",
+          "source_pointer": "#/paths/~1api~1organizers~1tags/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "deleteRecipeTagApiOrganizersTagsItemIdDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/api/organizers/tags/{item_id}",
+          "source_pointer": "#/paths/~1api~1organizers~1tags~1{item_id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getOneApiOrganizersTagsItemIdGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/organizers/tags/{item_id}",
+          "source_pointer": "#/paths/~1api~1organizers~1tags~1{item_id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateOneApiOrganizersTagsItemIdPut",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/api/organizers/tags/{item_id}",
+          "source_pointer": "#/paths/~1api~1organizers~1tags~1{item_id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "RecipeTagPaginations",
+      "provenance": [
+        {
+          "detail": "List operation GET /api/organizers/tags response 200 references RecipeTagPagination",
+          "pointer": "#/paths/~1api~1organizers~1tags/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "RecipeTagPagination"
+    },
+    {
+      "collection_path": null,
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "RecipeTagResponse",
+      "item_path": "/api/organizers/tags/slug/{tag_slug}",
+      "key": "api/organizers/tags/slug",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "tag_slug"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'tag_slug' has no matching schema property; using path evidence only",
+          "pointer": "/api/organizers/tags/slug/{tag_slug}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['tag_slug']",
+          "pointer": "/api/organizers/tags/slug/{tag_slug}",
+          "rule": "K1/K2:item_path_parameters"
+        },
+        {
+          "detail": "Path parameter 'tag_slug' has no same-named schema property, but the schema has a generic 'id' property; treating that as the response-body identifier field for server-assigned-key handling.",
+          "pointer": "#/components/schemas/RecipeTagResponse",
+          "rule": "K5:response_field_generic_id_fallback"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getOneBySlugApiOrganizersTagsSlugTagSlugGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/organizers/tags/slug/{tag_slug}",
+          "source_pointer": "#/paths/~1api~1organizers~1tags~1slug~1{tag_slug}/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "RecipeTagResponses",
+      "provenance": [
+        {
+          "detail": "Item GET /api/organizers/tags/slug/{tag_slug} response 200 references RecipeTagResponse",
+          "pointer": "#/paths/~1api~1organizers~1tags~1slug~1{tag_slug}/get/responses/200",
+          "rule": "E3c:item_response_schema"
+        }
+      ],
+      "schema_name": "RecipeTagResponse"
+    },
+    {
+      "collection_path": "/api/organizers/tools",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "RecipeToolPagination",
+      "item_path": "/api/organizers/tools/{item_id}",
+      "key": "api/organizers/tools",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "item_id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'item_id' has no matching schema property; using path evidence only",
+          "pointer": "/api/organizers/tools/{item_id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['item_id']",
+          "pointer": "/api/organizers/tools/{item_id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getAllApiOrganizersToolsGet",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api/organizers/tools",
+          "source_pointer": "#/paths/~1api~1organizers~1tools/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "createOneApiOrganizersToolsPost",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api/organizers/tools",
+          "source_pointer": "#/paths/~1api~1organizers~1tools/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "deleteOneApiOrganizersToolsItemIdDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/api/organizers/tools/{item_id}",
+          "source_pointer": "#/paths/~1api~1organizers~1tools~1{item_id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getOneApiOrganizersToolsItemIdGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/organizers/tools/{item_id}",
+          "source_pointer": "#/paths/~1api~1organizers~1tools~1{item_id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateOneApiOrganizersToolsItemIdPut",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/api/organizers/tools/{item_id}",
+          "source_pointer": "#/paths/~1api~1organizers~1tools~1{item_id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "RecipeToolPaginations",
+      "provenance": [
+        {
+          "detail": "List operation GET /api/organizers/tools response 200 references RecipeToolPagination",
+          "pointer": "#/paths/~1api~1organizers~1tools/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "RecipeToolPagination"
+    },
+    {
+      "collection_path": null,
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "RecipeToolResponse",
+      "item_path": "/api/organizers/tools/slug/{tool_slug}",
+      "key": "api/organizers/tools/slug",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "tool_slug"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'tool_slug' has no matching schema property; using path evidence only",
+          "pointer": "/api/organizers/tools/slug/{tool_slug}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['tool_slug']",
+          "pointer": "/api/organizers/tools/slug/{tool_slug}",
+          "rule": "K1/K2:item_path_parameters"
+        },
+        {
+          "detail": "Path parameter 'tool_slug' has no same-named schema property, but the schema has a generic 'id' property; treating that as the response-body identifier field for server-assigned-key handling.",
+          "pointer": "#/components/schemas/RecipeToolResponse",
+          "rule": "K5:response_field_generic_id_fallback"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getOneBySlugApiOrganizersToolsSlugToolSlugGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/organizers/tools/slug/{tool_slug}",
+          "source_pointer": "#/paths/~1api~1organizers~1tools~1slug~1{tool_slug}/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "RecipeToolResponses",
+      "provenance": [
+        {
+          "detail": "Item GET /api/organizers/tools/slug/{tool_slug} response 200 references RecipeToolResponse",
+          "pointer": "#/paths/~1api~1organizers~1tools~1slug~1{tool_slug}/get/responses/200",
+          "rule": "E3c:item_response_schema"
+        }
+      ],
+      "schema_name": "RecipeToolResponse"
+    },
+    {
+      "collection_path": "/api/recipes",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PaginationBase_RecipeSummary_",
+      "item_path": "/api/recipes/{slug}",
+      "key": "api/recipes",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "slug"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'slug' has no matching schema property; using path evidence only",
+          "pointer": "/api/recipes/{slug}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['slug']",
+          "pointer": "/api/recipes/{slug}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getAllApiRecipesGet",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api/recipes",
+          "source_pointer": "#/paths/~1api~1recipes/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "patchManyApiRecipesPatch",
+          "kind": "action",
+          "method": "PATCH",
+          "path": "/api/recipes",
+          "source_pointer": "#/paths/~1api~1recipes/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "createOneApiRecipesPost",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api/recipes",
+          "source_pointer": "#/paths/~1api~1recipes/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateManyApiRecipesPut",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/api/recipes",
+          "source_pointer": "#/paths/~1api~1recipes/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "deleteOneApiRecipesSlugDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/api/recipes/{slug}",
+          "source_pointer": "#/paths/~1api~1recipes~1{slug}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getOneApiRecipesSlugGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/recipes/{slug}",
+          "source_pointer": "#/paths/~1api~1recipes~1{slug}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "patchOneApiRecipesSlugPatch",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/api/recipes/{slug}",
+          "source_pointer": "#/paths/~1api~1recipes~1{slug}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateOneApiRecipesSlugPut",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/api/recipes/{slug}",
+          "source_pointer": "#/paths/~1api~1recipes~1{slug}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getRecipeCommentsApiRecipesSlugCommentsGet",
+          "kind": "action",
+          "method": "GET",
+          "path": "/api/recipes/{slug}/comments",
+          "source_pointer": "#/paths/~1api~1recipes~1{slug}~1comments/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "duplicateOneApiRecipesSlugDuplicatePost",
+          "kind": "action",
+          "method": "POST",
+          "path": "/api/recipes/{slug}/duplicate",
+          "source_pointer": "#/paths/~1api~1recipes~1{slug}~1duplicate/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "deleteRecipeImageApiRecipesSlugImageDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/api/recipes/{slug}/image",
+          "source_pointer": "#/paths/~1api~1recipes~1{slug}~1image/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "scrapeImageUrlApiRecipesSlugImagePost",
+          "kind": "action",
+          "method": "POST",
+          "path": "/api/recipes/{slug}/image",
+          "source_pointer": "#/paths/~1api~1recipes~1{slug}~1image/post",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateRecipeImageApiRecipesSlugImagePut",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/api/recipes/{slug}/image",
+          "source_pointer": "#/paths/~1api~1recipes~1{slug}~1image/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateLastMadeApiRecipesSlugLastMadePatch",
+          "kind": "action",
+          "method": "PATCH",
+          "path": "/api/recipes/{slug}/last-made",
+          "source_pointer": "#/paths/~1api~1recipes~1{slug}~1last-made/patch",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PaginationBase_RecipeSummary_s",
+      "provenance": [
+        {
+          "detail": "List operation GET /api/recipes response 200 references PaginationBase_RecipeSummary_",
+          "pointer": "#/paths/~1api~1recipes/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginationBase_RecipeSummary_"
+    },
+    {
+      "collection_path": null,
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Recipe-Output",
+      "item_path": "/api/recipes/shared/{token_id}",
+      "key": "api/recipes/shared",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "token_id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'token_id' has no matching schema property; using path evidence only",
+          "pointer": "/api/recipes/shared/{token_id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['token_id']",
+          "pointer": "/api/recipes/shared/{token_id}",
+          "rule": "K1/K2:item_path_parameters"
+        },
+        {
+          "detail": "Path parameter 'token_id' has no same-named schema property, but the schema has a generic 'id' property; treating that as the response-body identifier field for server-assigned-key handling.",
+          "pointer": "#/components/schemas/Recipe-Output",
+          "rule": "K5:response_field_generic_id_fallback"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getSharedRecipeApiRecipesSharedTokenIdGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/recipes/shared/{token_id}",
+          "source_pointer": "#/paths/~1api~1recipes~1shared~1{token_id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getSharedRecipeAsZipApiRecipesSharedTokenIdZipGet",
+          "kind": "action",
+          "method": "GET",
+          "path": "/api/recipes/shared/{token_id}/zip",
+          "source_pointer": "#/paths/~1api~1recipes~1shared~1{token_id}~1zip/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Recipe-Outputs",
+      "provenance": [
+        {
+          "detail": "Item GET /api/recipes/shared/{token_id} response 200 references Recipe-Output",
+          "pointer": "#/paths/~1api~1recipes~1shared~1{token_id}/get/responses/200",
+          "rule": "E3c:item_response_schema"
+        }
+      ],
+      "schema_name": "Recipe-Output"
+    },
+    {
+      "collection_path": "/api/recipes/timeline/events",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "recipeId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'recipeId' matches entity 'api/recipes'",
+              "pointer": "#/paths/~1api~1recipes~1timeline~1events/post/requestBody/content/application~1json/properties/recipeId",
+              "rule": "D2:structural_verified_id"
+            }
+          ],
+          "target": "api/recipes"
+        }
+      ],
+      "display_name": "RecipeTimelineEventPagination",
+      "item_path": "/api/recipes/timeline/events/{item_id}",
+      "key": "api/recipes/timeline/events",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "item_id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'item_id' has no matching schema property; using path evidence only",
+          "pointer": "/api/recipes/timeline/events/{item_id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['item_id']",
+          "pointer": "/api/recipes/timeline/events/{item_id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getAllApiRecipesTimelineEventsGet",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api/recipes/timeline/events",
+          "source_pointer": "#/paths/~1api~1recipes~1timeline~1events/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "createOneApiRecipesTimelineEventsPost",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api/recipes/timeline/events",
+          "source_pointer": "#/paths/~1api~1recipes~1timeline~1events/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "deleteOneApiRecipesTimelineEventsItemIdDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/api/recipes/timeline/events/{item_id}",
+          "source_pointer": "#/paths/~1api~1recipes~1timeline~1events~1{item_id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "getOneApiRecipesTimelineEventsItemIdGet",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/recipes/timeline/events/{item_id}",
+          "source_pointer": "#/paths/~1api~1recipes~1timeline~1events~1{item_id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateOneApiRecipesTimelineEventsItemIdPut",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/api/recipes/timeline/events/{item_id}",
+          "source_pointer": "#/paths/~1api~1recipes~1timeline~1events~1{item_id}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            422
+          ],
+          "has_default_response": false,
+          "js_function": "updateEventImageApiRecipesTimelineEventsItemIdImagePut",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/api/recipes/timeline/events/{item_id}/image",
+          "source_pointer": "#/paths/~1api~1recipes~1timeline~1events~1{item_id}~1image/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "RecipeTimelineEventPaginations",
+      "provenance": [
+        {
+          "detail": "List operation GET /api/recipes/timeline/events response 200 references RecipeTimelineEventPagination",
+          "pointer": "#/paths/~1api~1recipes~1timeline~1events/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "RecipeTimelineEventPagination"
+    }
+  ],
+  "isolation_audit": {
+    "denied_file_count": 0,
+    "policy": "allow-listed OpenAPI/config inputs only; environment-specific paths excluded from deterministic report"
+  },
+  "meta": {
+    "cli_args": {
+      "base_url": "http://127.0.0.1:9927",
+      "command": "generate",
+      "emit_prefix_witnesses": true,
+      "generator_version": "0.26.16",
+      "instances_per_action": 1,
+      "instances_per_entity": 2,
+      "long_story_rounds": [
+        10,
+        12
+      ],
+      "name": "mealie",
+      "seed": 20261851,
+      "source_openapi_sha256": "e398a26d25a5c038a50709d7c03a5d427b08c90e94d9b5248eb6dd39d4e28d52",
+      "story_profile": "long-interleaving",
+      "verified_update_carry": [
+        "update_one_api_households_mealplans__item_id__put"
+      ],
+      "verified_values_sha256": "f2006c4afc2b819ea48ae1e40d126876bd7c2c0e083eac95b2f8e957feaf3dda"
+    },
+    "openapi_version": "3.1.0",
+    "title": "Mealie"
+  },
+  "reproducibility": {
+    "artifact_sha256": {
+      "dependency_graph_json": "53f036d7ad55543ee8fc5f661bb18b65db402ecc5580889b4ca23e65f51bfa56",
+      "interfaces_js": "46a10f24ca1742f35bef4ab83f24b2619e851133b797fb9b303a58915087e475",
+      "stories_js": "de940470e8a2a961a547e8410c96bce1ca230f058bb34916ce7e9489c5b8a16e"
+    },
+    "base_url": "http://127.0.0.1:9927",
+    "content_fingerprint_sha256": "b378acc582ce9035617a5400320a4762a28034b657706bc5f1c131d87bee6666",
+    "generator_version": "0.26.16",
+    "instances_per_action": 1,
+    "instances_per_entity": 2,
+    "scope": "semantic inputs and generated artifacts; filesystem paths and run-time ports are excluded",
+    "seed": 20261851,
+    "source_openapi_sha256": "e398a26d25a5c038a50709d7c03a5d427b08c90e94d9b5248eb6dd39d4e28d52"
+  },
+  "response_code_coverage": [
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/households/mealplans"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/households/mealplans"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/households/mealplans/random"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/households/mealplans/rules"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/households/mealplans/rules"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/households/mealplans/rules/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/households/mealplans/rules/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api/households/mealplans/rules/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/households/mealplans/today"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/households/mealplans/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/households/mealplans/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api/households/mealplans/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/households/shopping/items"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/households/shopping/items"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/households/shopping/items"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api/households/shopping/items"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/households/shopping/items/create-bulk"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/households/shopping/items/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/households/shopping/items/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api/households/shopping/items/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/households/shopping/lists"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/households/shopping/lists"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/households/shopping/lists/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/households/shopping/lists/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api/households/shopping/lists/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/households/shopping/lists/{item_id}/label-settings"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/households/shopping/lists/{item_id}/recipe"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/households/shopping/lists/{item_id}/recipe/{recipe_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/households/shopping/lists/{item_id}/recipe/{recipe_id}/delete"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/organizers/categories"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/organizers/categories"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/organizers/categories/empty"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/organizers/categories/merge"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/organizers/categories/slug/{category_slug}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/organizers/categories/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/organizers/categories/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api/organizers/categories/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/organizers/tags"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/organizers/tags"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/organizers/tags/empty"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/organizers/tags/merge"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/organizers/tags/slug/{tag_slug}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/organizers/tags/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/organizers/tags/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api/organizers/tags/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/organizers/tools"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/organizers/tools"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/organizers/tools/slug/{tool_slug}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/organizers/tools/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/organizers/tools/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api/organizers/tools/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/recipes"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/recipes"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/recipes"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PATCH",
+      "path": "/api/recipes"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/recipes/create/html-or-json"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/recipes/create/html-or-json/stream"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/recipes/shared/{token_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/recipes/shared/{token_id}/zip"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/recipes/suggestions"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/recipes/test-scrape-url"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/recipes/timeline/events"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/recipes/timeline/events"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/recipes/timeline/events/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/recipes/timeline/events/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api/recipes/timeline/events/{item_id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/recipes/timeline/events/{item_id}/image"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/recipes/{slug}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/recipes/{slug}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api/recipes/{slug}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PATCH",
+      "path": "/api/recipes/{slug}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/recipes/{slug}/comments"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/recipes/{slug}/duplicate"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PUT",
+      "path": "/api/recipes/{slug}/image"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/recipes/{slug}/image"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api/recipes/{slug}/image"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "422"
+      ],
+      "has_default": false,
+      "method": "PATCH",
+      "path": "/api/recipes/{slug}/last-made"
+    }
+  ],
+  "security_schemes": {
+    "OAuth2PasswordBearer": {
+      "location": "",
+      "param_name": "",
+      "scheme": "",
+      "type": "oauth2"
+    }
+  },
+  "standalone_operations": [
+    {
+      "error_codes": [
+        422
+      ],
+      "has_default_response": false,
+      "js_function": "createRandomMealApiHouseholdsMealplansRandomPost",
+      "method": "POST",
+      "path": "/api/households/mealplans/random",
+      "source_pointer": "#/paths/~1api~1households~1mealplans~1random/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [
+        422
+      ],
+      "has_default_response": false,
+      "js_function": "getTodaysMealsApiHouseholdsMealplansTodayGet",
+      "method": "GET",
+      "path": "/api/households/mealplans/today",
+      "source_pointer": "#/paths/~1api~1households~1mealplans~1today/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [
+        422
+      ],
+      "has_default_response": false,
+      "js_function": "createManyApiHouseholdsShoppingItemsCreateBulkPost",
+      "method": "POST",
+      "path": "/api/households/shopping/items/create-bulk",
+      "source_pointer": "#/paths/~1api~1households~1shopping~1items~1create-bulk/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [
+        422
+      ],
+      "has_default_response": false,
+      "js_function": "getAllEmptyApiOrganizersCategoriesEmptyGet",
+      "method": "GET",
+      "path": "/api/organizers/categories/empty",
+      "source_pointer": "#/paths/~1api~1organizers~1categories~1empty/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [
+        422
+      ],
+      "has_default_response": false,
+      "js_function": "mergeCategoriesApiOrganizersCategoriesMergePost",
+      "method": "POST",
+      "path": "/api/organizers/categories/merge",
+      "source_pointer": "#/paths/~1api~1organizers~1categories~1merge/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [
+        422
+      ],
+      "has_default_response": false,
+      "js_function": "getEmptyTagsApiOrganizersTagsEmptyGet",
+      "method": "GET",
+      "path": "/api/organizers/tags/empty",
+      "source_pointer": "#/paths/~1api~1organizers~1tags~1empty/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [
+        422
+      ],
+      "has_default_response": false,
+      "js_function": "mergeTagsApiOrganizersTagsMergePost",
+      "method": "POST",
+      "path": "/api/organizers/tags/merge",
+      "source_pointer": "#/paths/~1api~1organizers~1tags~1merge/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [
+        422
+      ],
+      "has_default_response": false,
+      "js_function": "createRecipeFromHtmlOrJsonApiRecipesCreateHtmlOrJsonPost",
+      "method": "POST",
+      "path": "/api/recipes/create/html-or-json",
+      "source_pointer": "#/paths/~1api~1recipes~1create~1html-or-json/post",
+      "success_codes": [
+        201
+      ]
+    },
+    {
+      "error_codes": [
+        422
+      ],
+      "has_default_response": false,
+      "js_function": "createRecipeFromHtmlOrJsonStreamApiRecipesCreateHtmlOrJsonStreamPost",
+      "method": "POST",
+      "path": "/api/recipes/create/html-or-json/stream",
+      "source_pointer": "#/paths/~1api~1recipes~1create~1html-or-json~1stream/post",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [
+        422
+      ],
+      "has_default_response": false,
+      "js_function": "suggestRecipesApiRecipesSuggestionsGet",
+      "method": "GET",
+      "path": "/api/recipes/suggestions",
+      "source_pointer": "#/paths/~1api~1recipes~1suggestions/get",
+      "success_codes": [
+        200
+      ]
+    },
+    {
+      "error_codes": [
+        422
+      ],
+      "has_default_response": false,
+      "js_function": "testParseRecipeUrlApiRecipesTestScrapeUrlPost",
+      "method": "POST",
+      "path": "/api/recipes/test-scrape-url",
+      "source_pointer": "#/paths/~1api~1recipes~1test-scrape-url/post",
+      "success_codes": [
+        200
+      ]
+    }
+  ],
+  "unsupported_constructs": {
+    "ambiguities": [
+      "Entity 'api/organizers/categories/slug' has no component-schema evidence; name derived from path segment (confidence=0.5).",
+      "Key inference for entity 'api/households/mealplans' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'api/households/mealplans/rules' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'api/households/shopping/items' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'api/households/shopping/lists' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'api/organizers/categories' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'api/organizers/categories/slug' has reduced confidence (0.6); path parameter(s) ['category_slug'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'api/organizers/tags' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'api/organizers/tags/slug' has reduced confidence (0.7); path parameter(s) ['tag_slug'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'api/organizers/tools' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'api/organizers/tools/slug' has reduced confidence (0.7); path parameter(s) ['tool_slug'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'api/recipes' has reduced confidence (0.7); path parameter(s) ['slug'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'api/recipes/shared' has reduced confidence (0.7); path parameter(s) ['token_id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'api/recipes/timeline/events' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema."
+    ],
+    "document_level": [],
+    "remote_refs": []
+  },
+  "warnings": []
+}

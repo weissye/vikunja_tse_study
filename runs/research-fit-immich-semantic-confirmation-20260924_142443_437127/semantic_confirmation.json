@@ -1,0 +1,600 @@
+{
+  "status": "COMPLETE",
+  "openapi_sha256": "51719f0b6573ca75eb51834b01a7fdb9e963c9d60fcce813f10c1463a987b866",
+  "trials": 3,
+  "prefix_rounds": 4,
+  "serial_only": true,
+  "results": [
+    {
+      "family": "tag-upsert",
+      "trial": 1,
+      "verdict": "INCONCLUSIVE",
+      "reason": "identity-or-prerequisite-not-established",
+      "steps": [
+        {
+          "stage": "identity-before",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        },
+        {
+          "stage": "create-a",
+          "operation": "POST /tags",
+          "status": 201,
+          "value": "fse-confirm-tag-789a063cdf41-a",
+          "id": "842ef902-dc82-4b53-bdd4-7760b9b19d7c"
+        },
+        {
+          "stage": "create-b",
+          "operation": "POST /tags",
+          "status": 201,
+          "value": "fse-confirm-tag-789a063cdf41-b",
+          "id": "6bbd9091-df35-4b13-a765-9604c2c50d2a"
+        },
+        {
+          "stage": "read-before-upsert-0",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "read-before-upsert-1",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "read-only-prefix-0",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-1",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-2",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-3",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-after-read-only-prefix-0",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "read-after-read-only-prefix-1",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "upsert-third-tag",
+          "operation": "PUT /tags",
+          "status": 200
+        },
+        {
+          "stage": "read-after-upsert-0",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "read-after-upsert-1",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "list-after-upsert",
+          "operation": "GET /tags",
+          "status": 200,
+          "tracked_ids_present": {
+            "842ef902-dc82-4b53-bdd4-7760b9b19d7c": true,
+            "6bbd9091-df35-4b13-a765-9604c2c50d2a": true
+          }
+        },
+        {
+          "stage": "identity-after",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        }
+      ]
+    },
+    {
+      "family": "notification",
+      "trial": 1,
+      "verdict": "INCONCLUSIVE",
+      "reason": "identity-or-filtered-list-not-verified",
+      "steps": [
+        {
+          "stage": "identity-before",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        },
+        {
+          "stage": "create-self",
+          "operation": "POST /admin/notifications",
+          "status": 201,
+          "value": "fse-confirm-notification-acb70f1b18c2",
+          "id": "1f4fadf5-23df-4458-99c9-7ebbacb1b197"
+        },
+        {
+          "stage": "immediate-by-id",
+          "operation": "GET /notifications/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "immediate-filtered-list",
+          "operation": "GET /notifications?id={id}",
+          "status": 400,
+          "error_message": "[sensitive error message redacted]",
+          "matches_created_id": null
+        },
+        {
+          "stage": "read-only-prefix-0",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-1",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-2",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-3",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "after-prefix-by-id",
+          "operation": "GET /notifications/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "after-prefix-filtered-list",
+          "operation": "GET /notifications?id={id}",
+          "status": 400,
+          "error_message": "[sensitive error message redacted]",
+          "matches_created_id": null
+        },
+        {
+          "stage": "identity-after",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        }
+      ]
+    },
+    {
+      "family": "tag-upsert",
+      "trial": 2,
+      "verdict": "INCONCLUSIVE",
+      "reason": "identity-or-prerequisite-not-established",
+      "steps": [
+        {
+          "stage": "identity-before",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        },
+        {
+          "stage": "create-a",
+          "operation": "POST /tags",
+          "status": 201,
+          "value": "fse-confirm-tag-e667f78ee8a4-a",
+          "id": "c3773cce-5e22-4287-bb9e-a265251dd80a"
+        },
+        {
+          "stage": "create-b",
+          "operation": "POST /tags",
+          "status": 201,
+          "value": "fse-confirm-tag-e667f78ee8a4-b",
+          "id": "a2d526a6-6932-4bf5-b06c-efc54dea93ff"
+        },
+        {
+          "stage": "read-before-upsert-0",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "read-before-upsert-1",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "read-only-prefix-0",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-1",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-2",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-3",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-after-read-only-prefix-0",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "read-after-read-only-prefix-1",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "upsert-third-tag",
+          "operation": "PUT /tags",
+          "status": 200
+        },
+        {
+          "stage": "read-after-upsert-0",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "read-after-upsert-1",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "list-after-upsert",
+          "operation": "GET /tags",
+          "status": 200,
+          "tracked_ids_present": {
+            "c3773cce-5e22-4287-bb9e-a265251dd80a": true,
+            "a2d526a6-6932-4bf5-b06c-efc54dea93ff": true
+          }
+        },
+        {
+          "stage": "identity-after",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        }
+      ]
+    },
+    {
+      "family": "notification",
+      "trial": 2,
+      "verdict": "INCONCLUSIVE",
+      "reason": "identity-or-filtered-list-not-verified",
+      "steps": [
+        {
+          "stage": "identity-before",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        },
+        {
+          "stage": "create-self",
+          "operation": "POST /admin/notifications",
+          "status": 201,
+          "value": "fse-confirm-notification-21f566cca2e2",
+          "id": "8ad56530-3812-4434-8627-40ae4d45fd71"
+        },
+        {
+          "stage": "immediate-by-id",
+          "operation": "GET /notifications/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "immediate-filtered-list",
+          "operation": "GET /notifications?id={id}",
+          "status": 400,
+          "error_message": "[sensitive error message redacted]",
+          "matches_created_id": null
+        },
+        {
+          "stage": "read-only-prefix-0",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-1",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-2",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-3",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "after-prefix-by-id",
+          "operation": "GET /notifications/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "after-prefix-filtered-list",
+          "operation": "GET /notifications?id={id}",
+          "status": 400,
+          "error_message": "[sensitive error message redacted]",
+          "matches_created_id": null
+        },
+        {
+          "stage": "identity-after",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        }
+      ]
+    },
+    {
+      "family": "tag-upsert",
+      "trial": 3,
+      "verdict": "INCONCLUSIVE",
+      "reason": "identity-or-prerequisite-not-established",
+      "steps": [
+        {
+          "stage": "identity-before",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        },
+        {
+          "stage": "create-a",
+          "operation": "POST /tags",
+          "status": 201,
+          "value": "fse-confirm-tag-eb382d142391-a",
+          "id": "8972a58f-5ae0-404a-b0df-1fba17656fdd"
+        },
+        {
+          "stage": "create-b",
+          "operation": "POST /tags",
+          "status": 201,
+          "value": "fse-confirm-tag-eb382d142391-b",
+          "id": "9a2092a0-716a-417a-ba7e-c1e55ca9f315"
+        },
+        {
+          "stage": "read-before-upsert-0",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "read-before-upsert-1",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "read-only-prefix-0",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-1",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-2",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-3",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-after-read-only-prefix-0",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "read-after-read-only-prefix-1",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "upsert-third-tag",
+          "operation": "PUT /tags",
+          "status": 200
+        },
+        {
+          "stage": "read-after-upsert-0",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "read-after-upsert-1",
+          "operation": "GET /tags/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "list-after-upsert",
+          "operation": "GET /tags",
+          "status": 200,
+          "tracked_ids_present": {
+            "8972a58f-5ae0-404a-b0df-1fba17656fdd": true,
+            "9a2092a0-716a-417a-ba7e-c1e55ca9f315": true
+          }
+        },
+        {
+          "stage": "identity-after",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        }
+      ]
+    },
+    {
+      "family": "notification",
+      "trial": 3,
+      "verdict": "INCONCLUSIVE",
+      "reason": "identity-or-filtered-list-not-verified",
+      "steps": [
+        {
+          "stage": "identity-before",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        },
+        {
+          "stage": "create-self",
+          "operation": "POST /admin/notifications",
+          "status": 201,
+          "value": "fse-confirm-notification-57eb25ef27f4",
+          "id": "472b4d76-c116-4f09-92de-86ba3cbbaaf4"
+        },
+        {
+          "stage": "immediate-by-id",
+          "operation": "GET /notifications/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "immediate-filtered-list",
+          "operation": "GET /notifications?id={id}",
+          "status": 400,
+          "error_message": "[sensitive error message redacted]",
+          "matches_created_id": null
+        },
+        {
+          "stage": "read-only-prefix-0",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-1",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-2",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "read-only-prefix-3",
+          "operation": "GET /server/version",
+          "status": 200
+        },
+        {
+          "stage": "after-prefix-by-id",
+          "operation": "GET /notifications/{id}",
+          "status": 400,
+          "value": null,
+          "id": null,
+          "error_message": "[sensitive error message redacted]"
+        },
+        {
+          "stage": "after-prefix-filtered-list",
+          "operation": "GET /notifications?id={id}",
+          "status": 400,
+          "error_message": "[sensitive error message redacted]",
+          "matches_created_id": null
+        },
+        {
+          "stage": "identity-after",
+          "operation": "GET /users/me",
+          "status": 200,
+          "value": "29d7e767-cf64-4437-9262-fe7fe43f80cd",
+          "id": "29d7e767-cf64-4437-9262-fe7fe43f80cd"
+        }
+      ]
+    }
+  ]
+}

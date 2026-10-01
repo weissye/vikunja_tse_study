@@ -1,0 +1,194 @@
+{
+  "creation_order": [
+    "admin/database-backups",
+    "admin/integrity/report",
+    "admin/notifications/templates",
+    "admin/users",
+    "api-keys",
+    "asset-files",
+    "assets",
+    "cluster-groups/requests",
+    "duplicates",
+    "jobs",
+    "libraries",
+    "notifications",
+    "partners",
+    "people",
+    "plugins",
+    "queues",
+    "sessions",
+    "tags",
+    "users",
+    "workflows",
+    "albums",
+    "faces",
+    "memories",
+    "stacks",
+    "activities",
+    "shared-links"
+  ],
+  "cycle_edges_removed": [],
+  "deletion_order": [
+    "shared-links",
+    "activities",
+    "stacks",
+    "memories",
+    "faces",
+    "albums",
+    "workflows",
+    "users",
+    "tags",
+    "sessions",
+    "queues",
+    "plugins",
+    "people",
+    "partners",
+    "notifications",
+    "libraries",
+    "jobs",
+    "duplicates",
+    "cluster-groups/requests",
+    "assets",
+    "asset-files",
+    "api-keys",
+    "admin/users",
+    "admin/notifications/templates",
+    "admin/integrity/report",
+    "admin/database-backups"
+  ],
+  "edges": [
+    {
+      "confidence": 0.9,
+      "field_name": "albumId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'albumId' matches entity 'albums'",
+          "pointer": "#/paths/~1activities/post/requestBody/content/application~1json/properties/albumId",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "activities",
+      "target": "albums"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "assetId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'assetId' matches entity 'assets'",
+          "pointer": "#/paths/~1activities/post/requestBody/content/application~1json/properties/assetId",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "activities",
+      "target": "assets"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "assetIds",
+      "provenance": [
+        {
+          "detail": "Create request body property 'assetIds' matches entity 'assets'",
+          "pointer": "#/paths/~1albums/post/requestBody/content/application~1json/properties/assetIds",
+          "rule": "D2:D_array_of_named_ids:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "albums",
+      "target": "assets"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "assetId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'assetId' matches entity 'assets'",
+          "pointer": "#/paths/~1faces/post/requestBody/content/application~1json/properties/assetId",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "faces",
+      "target": "assets"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "assetIds",
+      "provenance": [
+        {
+          "detail": "Create request body property 'assetIds' matches entity 'assets'",
+          "pointer": "#/paths/~1memories/post/requestBody/content/application~1json/properties/assetIds",
+          "rule": "D2:D_array_of_named_ids:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "memories",
+      "target": "assets"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "albumId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'albumId' matches entity 'albums'",
+          "pointer": "#/paths/~1shared-links/post/requestBody/content/application~1json/properties/albumId",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "shared-links",
+      "target": "albums"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "assetIds",
+      "provenance": [
+        {
+          "detail": "Create request body property 'assetIds' matches entity 'assets'",
+          "pointer": "#/paths/~1shared-links/post/requestBody/content/application~1json/properties/assetIds",
+          "rule": "D2:D_array_of_named_ids:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "shared-links",
+      "target": "assets"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "assetIds",
+      "provenance": [
+        {
+          "detail": "Create request body property 'assetIds' matches entity 'assets'",
+          "pointer": "#/paths/~1stacks/post/requestBody/content/application~1json/properties/assetIds",
+          "rule": "D2:D_array_of_named_ids:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "stacks",
+      "target": "assets"
+    }
+  ],
+  "had_cycle": false,
+  "nodes": [
+    "activities",
+    "admin/database-backups",
+    "admin/integrity/report",
+    "admin/notifications/templates",
+    "admin/users",
+    "albums",
+    "api-keys",
+    "asset-files",
+    "assets",
+    "cluster-groups/requests",
+    "duplicates",
+    "faces",
+    "jobs",
+    "libraries",
+    "memories",
+    "notifications",
+    "partners",
+    "people",
+    "plugins",
+    "queues",
+    "sessions",
+    "shared-links",
+    "stacks",
+    "tags",
+    "users",
+    "workflows"
+  ]
+}

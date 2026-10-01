@@ -1,0 +1,131 @@
+{
+  "ordinal": 1,
+  "candidate": 95,
+  "result": "CREATE_PREFLIGHT_INCOMPLETE",
+  "provengo_exit": 2,
+  "first_http_failure": null,
+  "http_requests": 622,
+  "create_paths_seen": [
+    "/admin/realms",
+    "/admin/realms/realm_92828/authentication/config",
+    "/admin/realms/realm_92828/authentication/executions",
+    "/admin/realms/realm_92828/authentication/flows",
+    "/admin/realms/realm_92828/client-scopes",
+    "/admin/realms/realm_92828/clients",
+    "/admin/realms/realm_92828/components",
+    "/admin/realms/realm_92828/groups",
+    "/admin/realms/realm_92828/identity-provider/instances",
+    "/admin/realms/realm_92828/organizations",
+    "/admin/realms/realm_92828/roles",
+    "/admin/realms/realm_92828/users",
+    "/admin/realms/realm_92828/workflows",
+    "/admin/realms/realm_96574/authentication/config",
+    "/admin/realms/realm_96574/authentication/flows",
+    "/admin/realms/realm_96574/client-scopes",
+    "/admin/realms/realm_96574/client-templates",
+    "/admin/realms/realm_96574/clients",
+    "/admin/realms/realm_96574/clients/be121e29-20ab-4d0d-aca4-ecdb9bb3a8af/authz/resource-server/resource",
+    "/admin/realms/realm_96574/clients/be121e29-20ab-4d0d-aca4-ecdb9bb3a8af/authz/resource-server/scope",
+    "/admin/realms/realm_96574/clients/be121e29-20ab-4d0d-aca4-ecdb9bb3a8af/protocol-mappers/models",
+    "/admin/realms/realm_96574/clients/be121e29-20ab-4d0d-aca4-ecdb9bb3a8af/roles",
+    "/admin/realms/realm_96574/components",
+    "/admin/realms/realm_96574/groups",
+    "/admin/realms/realm_96574/identity-provider/instances",
+    "/admin/realms/realm_96574/organizations",
+    "/admin/realms/realm_96574/organizations/2c11d441-2b48-4bb0-845c-db3f533e17b2/groups",
+    "/admin/realms/realm_96574/roles",
+    "/admin/realms/realm_96574/users",
+    "/admin/realms/realm_96574/workflows"
+  ],
+  "race_pairs": 0,
+  "create_families_validated": [
+    "admin/realms",
+    "admin/realms/{realm}/authentication/config",
+    "admin/realms/{realm}/authentication/executions",
+    "admin/realms/{realm}/authentication/flows",
+    "admin/realms/{realm}/client-scopes",
+    "admin/realms/{realm}/client-templates",
+    "admin/realms/{realm}/clients",
+    "admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/resource",
+    "admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/scope",
+    "admin/realms/{realm}/clients/{client-uuid}/protocol-mappers/models",
+    "admin/realms/{realm}/clients/{client-uuid}/roles",
+    "admin/realms/{realm}/components",
+    "admin/realms/{realm}/groups",
+    "admin/realms/{realm}/identity-provider/instances",
+    "admin/realms/{realm}/organizations",
+    "admin/realms/{realm}/organizations/{org-id}/groups",
+    "admin/realms/{realm}/roles",
+    "admin/realms/{realm}/users",
+    "admin/realms/{realm}/workflows"
+  ],
+  "create_families_missing": [
+    "admin/realms/{realm}/authentication/executions/{executionId}/config",
+    "admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/models",
+    "admin/realms/{realm}/client-templates/{client-scope-id}/protocol-mappers/models",
+    "admin/realms/{realm}/identity-provider/instances/{alias}/mappers",
+    "admin/realms/{realm}/organizations/{org-id}/identity-providers",
+    "admin/realms/{realm}/organizations/{org-id}/members"
+  ],
+  "last_mutation_events_redacted": [
+    {
+      "method": "PUT",
+      "path": "/admin/realms/realm_96574/groups/fad670b1-93cc-45c8-a30b-1c0bdadef302",
+      "expected": "0:204.0"
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/realm_96574/client-templates",
+      "expected": "0:201.0"
+    },
+    {
+      "method": "POST",
+      "path": "/admin/realms/realm_92828/authentication/executions",
+      "expected": "0:201.0"
+    },
+    {
+      "method": "PUT",
+      "path": "/admin/realms/realm_92828/authentication/config/ac37ee22-7165-4b29-9809-061fbc0e35f9",
+      "expected": "0:204.0"
+    }
+  ],
+  "safe_errors": [
+    "01:02:34.407 INFO [RUN] Test Result: ERROR"
+  ],
+  "generated_realms_found": [
+    "realm_11452",
+    "realm_12310",
+    "realm_135",
+    "realm_14403",
+    "realm_25306",
+    "realm_31231",
+    "realm_47112",
+    "realm_51786",
+    "realm_52787",
+    "realm_60457",
+    "realm_63418",
+    "realm_64559",
+    "realm_84295",
+    "realm_89587",
+    "realm_92828",
+    "realm_96574"
+  ],
+  "cleanup": {
+    "realm_11452": 204,
+    "realm_12310": 204,
+    "realm_135": 204,
+    "realm_14403": 204,
+    "realm_25306": 204,
+    "realm_31231": 204,
+    "realm_47112": 204,
+    "realm_51786": 204,
+    "realm_52787": 204,
+    "realm_60457": 204,
+    "realm_63418": 204,
+    "realm_64559": 204,
+    "realm_84295": 204,
+    "realm_89587": 204,
+    "realm_92828": 204,
+    "realm_96574": 204
+  }
+}

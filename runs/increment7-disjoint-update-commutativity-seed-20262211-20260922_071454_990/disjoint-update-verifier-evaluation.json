@@ -1,0 +1,154 @@
+{
+  "bug_candidate": true,
+  "confirmation_policy": "Reproduce twice, minimize the BP schedule, and exclude harness, API-contract, and omitted-field semantics before confirmation.",
+  "confirmed_product_bug": false,
+  "evaluation_basis": "external HTTP trace ordered state-machine oracle",
+  "oracle_summary": {
+    "task-disjoint-updates-both-visible": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 2,
+        "VIOLATED": 4
+      },
+      "expected_witness_count": 6,
+      "missing_witness_count": 0,
+      "status": "SEMANTIC_ANOMALY",
+      "witness_count": 6
+    }
+  },
+  "profile": "disjoint-field-update-commutativity",
+  "run_status": "SEMANTIC_ANOMALY",
+  "witness_count": 6,
+  "witnesses": [
+    {
+      "expected": {
+        "description": "increment7_task_5_description",
+        "title": "increment7_task_5_title"
+      },
+      "observation_event": 125,
+      "observed": {
+        "description": "",
+        "description_status": 200,
+        "read_status": 200,
+        "title": "increment7_task_5_title",
+        "title_status": 200
+      },
+      "oracle_id": "task-disjoint-updates-both-visible",
+      "reason": "successful-disjoint-update-lost",
+      "resource_path": "/tasks/360",
+      "result": "VIOLATED",
+      "trigger_events": {
+        "description": 112,
+        "title": 122
+      }
+    },
+    {
+      "expected": {
+        "description": "increment7_task_1_description",
+        "title": "increment7_task_1_title"
+      },
+      "observation_event": 120,
+      "observed": {
+        "description": "",
+        "description_status": 200,
+        "read_status": 200,
+        "title": "increment7_task_1_title",
+        "title_status": 200
+      },
+      "oracle_id": "task-disjoint-updates-both-visible",
+      "reason": "successful-disjoint-update-lost",
+      "resource_path": "/tasks/361",
+      "result": "VIOLATED",
+      "trigger_events": {
+        "description": 115,
+        "title": 116
+      }
+    },
+    {
+      "expected": {
+        "description": "increment7_task_0_description",
+        "title": "increment7_task_0_title"
+      },
+      "observation_event": 117,
+      "observed": {
+        "description": "",
+        "description_status": 200,
+        "read_status": 200,
+        "title": "increment7_task_0_title",
+        "title_status": 200
+      },
+      "oracle_id": "task-disjoint-updates-both-visible",
+      "reason": "successful-disjoint-update-lost",
+      "resource_path": "/tasks/362",
+      "result": "VIOLATED",
+      "trigger_events": {
+        "description": 111,
+        "title": 114
+      }
+    },
+    {
+      "expected": {
+        "description": "increment7_task_2_description",
+        "title": "increment7_task_2_title"
+      },
+      "observation_event": 119,
+      "observed": {
+        "description": "increment7_task_2_description",
+        "description_status": 200,
+        "read_status": 200,
+        "title": "increment7_task_2_title",
+        "title_status": 200
+      },
+      "oracle_id": "task-disjoint-updates-both-visible",
+      "resource_path": "/tasks/363",
+      "result": "PASS",
+      "trigger_events": {
+        "description": 118,
+        "title": 113
+      }
+    },
+    {
+      "expected": {
+        "description": "increment7_task_3_description",
+        "title": "increment7_task_3_title"
+      },
+      "observation_event": 128,
+      "observed": {
+        "description": "",
+        "description_status": 200,
+        "read_status": 200,
+        "title": "increment7_task_3_title",
+        "title_status": 200
+      },
+      "oracle_id": "task-disjoint-updates-both-visible",
+      "reason": "successful-disjoint-update-lost",
+      "resource_path": "/tasks/364",
+      "result": "VIOLATED",
+      "trigger_events": {
+        "description": 124,
+        "title": 127
+      }
+    },
+    {
+      "expected": {
+        "description": "increment7_task_4_description",
+        "title": "increment7_task_4_title"
+      },
+      "observation_event": 126,
+      "observed": {
+        "description": "increment7_task_4_description",
+        "description_status": 200,
+        "read_status": 200,
+        "title": "increment7_task_4_title",
+        "title_status": 200
+      },
+      "oracle_id": "task-disjoint-updates-both-visible",
+      "resource_path": "/tasks/365",
+      "result": "PASS",
+      "trigger_events": {
+        "description": 123,
+        "title": 121
+      }
+    }
+  ]
+}

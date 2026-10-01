@@ -1,0 +1,183 @@
+{
+  "bug_candidates": [],
+  "campaign": "Vikunja OpenAPI-derived SBT/BP interleaving bug search",
+  "classification_counts": {
+    "pass": 3
+  },
+  "interpretation": "A non-pass is not automatically a product bug. Only a reproducible semantic oracle violation, after excluding harness and contract causes, is a bug candidate.",
+  "run_count": 3,
+  "runs": [
+    {
+      "anomalies": [],
+      "classification": "pass",
+      "evaluation": {
+        "anomalies": [],
+        "checks": {
+          "all_deletions_externally_observable": true,
+          "all_relation_unlinks_executed": true,
+          "all_relation_unlinks_observed": true,
+          "all_task_updates_executed": true,
+          "all_task_updates_persisted": true,
+          "all_tasks_created": true,
+          "all_tasks_deleted": true,
+          "alternating_relations_recreated": true,
+          "initial_relation_chain_created": true,
+          "initial_relations_bidirectionally_observed": true,
+          "no_semantic_anomalies": true,
+          "project_created": true,
+          "project_deleted": true
+        },
+        "counts": {
+          "initial_relation_creates": 11,
+          "relation_deletes": 11,
+          "relation_recreates": 6,
+          "task_creates": 12,
+          "task_deletes": 12,
+          "updates": 12
+        },
+        "evaluation_basis": "external redacted HTTP trace",
+        "event_count": 137,
+        "expected_tasks": 12,
+        "observed_ids": {
+          "project_id": 30,
+          "task_ids": [
+            138,
+            139,
+            140,
+            141,
+            142,
+            143,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149
+          ]
+        },
+        "passed_count": 13,
+        "phase5_bp_passed": true,
+        "profile": "interleaved-relational-exploration",
+        "required_count": 13
+      },
+      "expected_tasks": 12,
+      "run_directory": "phase6-bug-search-20260920_165133-tasks-12-seed-20261502-20260920_165134_201",
+      "seed": 20261502
+    },
+    {
+      "anomalies": [],
+      "classification": "pass",
+      "evaluation": {
+        "anomalies": [],
+        "checks": {
+          "all_deletions_externally_observable": true,
+          "all_relation_unlinks_executed": true,
+          "all_relation_unlinks_observed": true,
+          "all_task_updates_executed": true,
+          "all_task_updates_persisted": true,
+          "all_tasks_created": true,
+          "all_tasks_deleted": true,
+          "alternating_relations_recreated": true,
+          "initial_relation_chain_created": true,
+          "initial_relations_bidirectionally_observed": true,
+          "no_semantic_anomalies": true,
+          "project_created": true,
+          "project_deleted": true
+        },
+        "counts": {
+          "initial_relation_creates": 11,
+          "relation_deletes": 11,
+          "relation_recreates": 6,
+          "task_creates": 12,
+          "task_deletes": 12,
+          "updates": 12
+        },
+        "evaluation_basis": "external redacted HTTP trace",
+        "event_count": 135,
+        "expected_tasks": 12,
+        "observed_ids": {
+          "project_id": 31,
+          "task_ids": [
+            150,
+            151,
+            152,
+            153,
+            154,
+            155,
+            156,
+            157,
+            158,
+            159,
+            160,
+            161
+          ]
+        },
+        "passed_count": 13,
+        "phase5_bp_passed": true,
+        "profile": "interleaved-relational-exploration",
+        "required_count": 13
+      },
+      "expected_tasks": 12,
+      "run_directory": "phase6-bug-search-20260920_165133-tasks-12-seed-20262503-20260920_165211_407",
+      "seed": 20262503
+    },
+    {
+      "anomalies": [],
+      "classification": "pass",
+      "evaluation": {
+        "anomalies": [],
+        "checks": {
+          "all_deletions_externally_observable": true,
+          "all_relation_unlinks_executed": true,
+          "all_relation_unlinks_observed": true,
+          "all_task_updates_executed": true,
+          "all_task_updates_persisted": true,
+          "all_tasks_created": true,
+          "all_tasks_deleted": true,
+          "alternating_relations_recreated": true,
+          "initial_relation_chain_created": true,
+          "initial_relations_bidirectionally_observed": true,
+          "no_semantic_anomalies": true,
+          "project_created": true,
+          "project_deleted": true
+        },
+        "counts": {
+          "initial_relation_creates": 11,
+          "relation_deletes": 11,
+          "relation_recreates": 6,
+          "task_creates": 12,
+          "task_deletes": 12,
+          "updates": 12
+        },
+        "evaluation_basis": "external redacted HTTP trace",
+        "event_count": 136,
+        "expected_tasks": 12,
+        "observed_ids": {
+          "project_id": 32,
+          "task_ids": [
+            162,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173
+          ]
+        },
+        "passed_count": 13,
+        "phase5_bp_passed": true,
+        "profile": "interleaved-relational-exploration",
+        "required_count": 13
+      },
+      "expected_tasks": 12,
+      "run_directory": "phase6-bug-search-20260920_165133-tasks-12-seed-20263504-20260920_165246_348",
+      "seed": 20263504
+    }
+  ],
+  "triage_required": []
+}

@@ -1,0 +1,492 @@
+"""Generic trace evaluator driven only by a generated verification manifest."""
+from __future__ import annotations
+import argparse
+import json
+import re
+from collections import Counter
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+
+
+def load_jsonl(path: Path) -> List[Dict[str, Any]]:
+    rows: List[Dict[str, Any]] = []
+    decoder = json.JSONDecoder()
+    for line_no, line in enumerate(path.read_text(encoding="utf-8-sig").replace("\x00", "").splitlines(), 1):
+        rest = line.strip().lstrip("\ufeff")
+        while rest:
+            value, end = decoder.raw_decode(rest)
+            if not isinstance(value, dict):
+                raise ValueError(f"trace line {line_no} is not an object")
+            value.setdefault("_index", len(rows))
+            rows.append(value)
+            rest = rest[end:].strip()
+    return rows
+
+
+def _pattern(template: str) -> re.Pattern[str]:
+    parts, pos = [], 0
+    for match in re.finditer(r"\{([^{}]+)\}", template):
+        parts.append(re.escape(template[pos:match.start()]))
+        parts.append(f"(?P<{re.sub(r'[^A-Za-z0-9_]', '_', match.group(1))}>[^/]+)")
+        pos = match.end()
+    parts.append(re.escape(template[pos:]))
+    return re.compile("^" + "".join(parts) + "$")
+
+
+def _body(event: Dict[str, Any], key: str) -> Dict[str, Any]:
+    value = event.get(key)
+    return value if isinstance(value, dict) else {}
+
+
+def _request(event: Dict[str, Any]) -> Dict[str, Any]:
+    return _body(event, "request") or _body(event, "request_body")
+
+
+def _response(event: Dict[str, Any]) -> Dict[str, Any]:
+    return _body(event, "response")
+
+
+def _request_precondition(event: Dict[str, Any], oracle: Dict[str, Any]) -> Optional[str]:
+    """Reject malformed generated inputs before judging the SUT response.
+
+    A response-code mismatch is evidence against the SUT only when the
+    request satisfies the request shape selected from the same OpenAPI
+    operation.  Older traces without a recorded content type remain usable;
+    body presence/shape can still be checked.
+    """
+    contract = oracle.get("request_contract")
+    if not isinstance(contract, dict):
+        return None
+    request = event.get("request")
+    if contract.get("required") and request is None:
+        return "required-request-body-missing"
+    if request is None:
+        return None
+    schema_type = contract.get("schema_type")
+    if schema_type == "object" and not isinstance(request, dict):
+        return "request-body-type-mismatch"
+    if schema_type == "array" and not isinstance(request, list):
+        return "request-body-type-mismatch"
+    if isinstance(request, dict):
+        missing = [name for name in contract.get("required_fields", [])
+                   if name not in request]
+        if missing:
+            return "required-request-fields-missing:" + ",".join(sorted(missing))
+    expected_media = str(contract.get("media_type") or "").lower()
+    observed_media = str(event.get("request_content_type") or "").split(";", 1)[0].strip().lower()
+    if expected_media and observed_media and expected_media != observed_media:
+        return "request-content-type-mismatch"
+    return None
+
+
+def _find_next(events: List[Dict[str, Any]], start: int, method: str, concrete_path: str,
+               stop_methods: Tuple[str, ...] = ()) -> Tuple[Optional[Dict[str, Any]], Optional[str]]:
+    for event in events[start + 1:]:
+        if str(event.get("model_path", "")) != concrete_path:
+            continue
+        current = str(event.get("method", "")).upper()
+        if current in stop_methods:
+            return None, "superseded-before-observation"
+        if current == method:
+            return event, None
+    return None, "observation-not-found"
+
+
+def _contract_witnesses(events: List[Dict[str, Any]], manifest: Dict[str, Any]) -> List[Dict[str, Any]]:
+    out = []
+    for event in events:
+        # Generated concurrency controls and epochs are judged once by the
+        # concurrency layer. Counting their individual HTTP responses again
+        # would inflate one invalid epoch into several contract violations.
+        epoch_id = event.get("epoch_id")
+        if isinstance(epoch_id, str) and epoch_id.startswith(("generated-control-", "generated-epoch-")):
+            continue
+        method, path = str(event.get("method", "")).upper(), str(event.get("model_path", ""))
+        candidates = [o for o in manifest["contract_oracles"] if o["method"] == method and _pattern(o["path_template"]).match(path)]
+        if not candidates:
+            continue
+        oracle = candidates[0]
+        precondition_error = _request_precondition(event, oracle)
+        documented = set(oracle["success_statuses"]) | set(oracle["documented_error_statuses"])
+        status = event.get("status")
+        # A documented status match is observationally valid. An undocumented
+        # rejection cannot establish a product contract fault: OpenAPI request
+        # shape alone cannot prove authorization, resource existence, or
+        # semantic validity of generated values. Keep the mismatch visible.
+        # An undocumented successful response is independently observable.
+        result = ("INCONCLUSIVE" if precondition_error else
+                  "PASS" if status in documented else
+                  "VIOLATED" if isinstance(status, int) and 200 <= status < 400 else
+                  "INCONCLUSIVE")
+        out.append({"oracle_id": oracle["oracle_id"], "kind": oracle["kind"],
+                    "trigger_event": event["_index"], "result": result,
+                    "expected": {"status_in": sorted(documented)}, "observed": {"status": status},
+                    **({} if result == "PASS" else {"reason":
+                        ("invalid-test-input:" + precondition_error)
+                        if precondition_error else
+                        "undocumented-response-status" if result == "VIOLATED" else
+                        "undocumented-error-preconditions-unproven"})})
+    return out
+
+
+def _state_witnesses(events: List[Dict[str, Any]], manifest: Dict[str, Any]) -> List[Dict[str, Any]]:
+    out = []
+    by_operation = {o["operation_id"]: o for o in manifest["state_oracles"]}
+    contract = {o["operation_id"]: o for o in manifest["contract_oracles"]}
+    for event in events:
+        # An epoch-labelled mutation must be judged together with its peers
+        # and the independent post-join read. Its response contract is still
+        # checked above for every individual request.
+        if isinstance(event.get("epoch_id"), str):
+            continue
+        method, path = str(event.get("method", "")).upper(), str(event.get("model_path", ""))
+        matching = [c for c in contract.values() if c["method"] == method and _pattern(c["path_template"]).match(path)]
+        if not matching:
+            continue
+        oracle = by_operation.get(matching[0]["operation_id"])
+        if not oracle or event.get("status") not in oracle["trigger_success_statuses"]:
+            continue
+        kind, observation, reason = oracle["kind"], None, None
+        concrete_observation_path = path
+        if kind == "create-visibility":
+            concrete_observation_path = oracle["observation"]["path_template"]
+            response = _response(event)
+            for parameter, field in oracle["observation"]["path_binding_from_response"].items():
+                value: Any = response
+                for part in str(field).split("."):
+                    if not isinstance(value, dict) or part not in value:
+                        value = None
+                        break
+                    value = value[part]
+                if value is None:
+                    reason = "created-identity-missing-from-response"
+                    break
+                concrete_observation_path = concrete_observation_path.replace("{" + parameter + "}", str(value))
+            create_match = _pattern(oracle["path_template"]).match(path)
+            create_params = create_match.groupdict() if create_match else {}
+            for parameter, source_parameter in oracle["observation"].get("path_binding_from_request_path", {}).items():
+                source_key = re.sub(r"[^A-Za-z0-9_]", "_", source_parameter)
+                if source_key not in create_params:
+                    reason = "created-parent-identity-missing-from-request-path"
+                    break
+                concrete_observation_path = concrete_observation_path.replace(
+                    "{" + parameter + "}", str(create_params[source_key]))
+        if reason is None:
+            observation, reason = _find_next(events, event["_index"], "GET", concrete_observation_path,
+                                             tuple(oracle.get("superseding_methods", ())))
+        observed_body = _response(observation) if observation else {}
+        request = _request(event)
+        if observation is None:
+            result = "INCONCLUSIVE"
+        elif kind == "delete-absence":
+            result = "PASS" if observation.get("status") in oracle["observation"]["absence_statuses"] else "VIOLATED"
+            if result == "VIOLATED": reason = "deleted-resource-still-observable"
+        else:
+            allowed = oracle["observation"]["success_statuses"]
+            fields = {f["name"] for f in oracle.get("fields", [])}
+            acknowledged_body = _response(event)
+            acknowledged = {k: acknowledged_body[k] for k in fields
+                            if k in acknowledged_body}
+            comparable_request = {k: v for k, v in request.items() if k in fields}
+            if observation.get("status") not in allowed:
+                result, reason = "VIOLATED", "state-observation-failed"
+            elif not acknowledged:
+                result, reason = "INCONCLUSIVE", "acknowledged-state-unobservable"
+            elif any(k not in observed_body or not _same_value(observed_body[k], value)
+                     for k, value in acknowledged.items()):
+                result, reason = "VIOLATED", "acknowledged-field-not-persistent"
+            elif any(k in acknowledged and not _same_value(acknowledged[k], value)
+                     for k, value in comparable_request.items()):
+                result, reason = "INCONCLUSIVE", "server-canonicalized-request-value"
+            else:
+                result = "PASS"
+        out.append({"oracle_id": oracle["oracle_id"], "kind": kind,
+                    "trigger_event": event["_index"],
+                    "observation_event": observation.get("_index") if observation else None,
+                    "resource_path": concrete_observation_path, "result": result,
+                    **({"persistence_result": "PASS"}
+                       if reason == "server-canonicalized-request-value" else {}),
+                    **({} if not reason else {"reason": reason})})
+    return out
+
+
+def _time(value: Any) -> datetime:
+    return datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+
+
+def _overlap(events: List[Dict[str, Any]]) -> bool:
+    try:
+        return max(_time(e["upstream_started_utc"]) for e in events) < min(
+            _time(e["upstream_completed_utc"]) for e in events)
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
+def _varying_keys(bodies: List[Dict[str, Any]]) -> set[str]:
+    """Return fields whose values differ across operation bodies.
+
+    PUT requests contain baseline fields copied from the independent read.
+    Those stable fields are transport requirements, not concurrent intents.
+    """
+    missing = object()
+    keys = set().union(*(set(body) for body in bodies)) if bodies else set()
+    return {key for key in keys
+            if len({json.dumps(body.get(key, missing), sort_keys=True, default=str)
+                    for body in bodies}) > 1}
+
+
+def _same_value(left: Any, right: Any) -> bool:
+    """Compare JSON-compatible values without requiring hashability."""
+    return json.dumps(left, sort_keys=True, default=str) == json.dumps(
+        right, sort_keys=True, default=str)
+
+
+def _sequential_control_state(
+        oracle: Dict[str, Any], operations: List[Dict[str, Any]],
+        observation: Dict[str, Any], intent_fields: set[str]) -> tuple[bool, str]:
+    """Validate that a successful sequential control persisted its intent.
+
+    HTTP success alone is not a valid control: an API may accept a field but
+    normalize, ignore, or reject it semantically.  Such a control cannot prove
+    that a different concurrent outcome is a concurrency defect.
+    """
+    observed = _response(observation)
+    if not isinstance(observed, dict):
+        return False, "sequential-control-state-unobservable"
+
+    kind = oracle.get("kind", "")
+    bodies = [_request(event) for event in operations]
+    successful = [body for body, event in zip(bodies, operations)
+                  if event.get("status") in oracle.get("success_statuses", [])]
+
+    if kind in {"same-field-one-successful-value-visible",
+                "same-field-one-successful-value-visible-domain"}:
+        if len(intent_fields) != 1:
+            return False, "sequential-control-state-unresolved"
+        field = next(iter(intent_fields))
+        legal_values = [body[field] for body in successful if field in body]
+        if not legal_values or field not in observed:
+            return False, "sequential-control-state-unobservable"
+        if not any(_same_value(observed[field], value) for value in legal_values):
+            return False, "sequential-control-state-mismatch"
+        return True, ""
+
+    if kind in {"disjoint-writes-commute", "disjoint-writes-commute-domain"}:
+        for field in intent_fields:
+            values = []
+            for body in successful:
+                if field in body and not any(_same_value(body[field], old) for old in values):
+                    values.append(body[field])
+            # A unique value is required. Multiple values usually mean PUT
+            # baseline reconstruction, where the intended value is ambiguous.
+            if len(values) != 1:
+                return False, "sequential-control-state-unresolved"
+            if field not in observed:
+                return False, "sequential-control-state-unobservable"
+            if not _same_value(observed[field], values[0]):
+                return False, "sequential-control-state-mismatch"
+        return True, ""
+
+    # Update/delete histories already have a dedicated absence oracle.  No
+    # additional field-persistence claim is made here.
+    return True, ""
+
+
+def _concurrency_witnesses(events: List[Dict[str, Any]], manifest: Dict[str, Any]) -> List[Dict[str, Any]]:
+    groups: Dict[str, List[Dict[str, Any]]] = {}
+    for event in events:
+        epoch = event.get("epoch_id")
+        if isinstance(epoch, str):
+            groups.setdefault(epoch, []).append(event)
+    out = []
+    for epoch_id, group in sorted(groups.items()):
+        operations = [e for e in group if str(e.get("method", "")).upper() in {"PUT", "PATCH", "DELETE"}
+                      and not str(e.get("operation_id", "")).endswith("-observe")]
+        observations = [e for e in group if str(e.get("method", "")).upper() == "GET"
+                        and str(e.get("operation_id", "")).endswith("-observe")]
+        if len(operations) < 2:
+            continue
+        if not _overlap(operations):
+            # Sequential controls are evidence for the campaign model but are
+            # not concurrent histories. Their HTTP contract witnesses remain
+            # evaluated by the contract layer.
+            continue
+        path = str(operations[0].get("model_path", ""))
+        if any(str(e.get("model_path", "")) != path for e in operations):
+            continue
+        methods = [str(e.get("method", "")).upper() for e in operations]
+        bodies = [_request(e) for e in operations]
+        keys = [set(body) for body in bodies]
+        varying = _varying_keys(bodies)
+        candidates = []
+        for oracle in manifest.get("concurrency_oracles", []):
+            if not _pattern(oracle["path_template"]).match(path):
+                continue
+            if "width" in oracle and oracle["width"] != len(operations):
+                continue
+            if "width_range" in oracle and not (oracle["width_range"][0] <= len(operations) <= oracle["width_range"][1]):
+                continue
+            if oracle["kind"] == "update-delete-linearizable":
+                if sorted(methods) == sorted(oracle["methods"]): candidates.append(oracle)
+            elif any(method != oracle["method"] for method in methods):
+                continue
+            elif oracle["kind"] == "disjoint-writes-commute-domain":
+                eligible = {f["name"] for f in oracle["eligible_fields"]}
+                actual = varying
+                if (oracle["width_range"][0] <= len(operations) <= oracle["width_range"][1]
+                        and len(actual) == len(operations)
+                        and actual <= eligible):
+                    candidates.append(oracle)
+            elif oracle["kind"] == "disjoint-writes-commute":
+                wanted = {f["name"] for f in oracle["fields"]}
+                if varying == wanted:
+                    candidates.append(oracle)
+            elif oracle["kind"] == "same-field-one-successful-value-visible-domain":
+                eligible = {f["name"] for f in oracle["eligible_fields"]}
+                actual = varying
+                if len(actual) == 1 and actual <= eligible:
+                    candidates.append(oracle)
+            elif oracle["kind"] == "same-field-one-successful-value-visible":
+                wanted = oracle["fields"][0]["name"]
+                if varying == {wanted}: candidates.append(oracle)
+        if not candidates:
+            continue
+        oracle = candidates[0]
+        observation = observations[-1] if observations else None
+        reason = None
+        statuses = [e.get("status") for e in operations]
+        observed = _response(observation) if observation else {}
+        control_id = epoch_id.replace("generated-epoch-", "generated-control-", 1)
+        control_group = groups.get(control_id, [])
+        control_operations = [e for e in control_group
+                              if str(e.get("method", "")).upper() in {"PUT", "PATCH", "DELETE"}
+                              and not str(e.get("operation_id", "")).endswith("-observe")]
+        control_observations = [e for e in control_group
+                                if str(e.get("method", "")).upper() == "GET"
+                                and str(e.get("operation_id", "")).endswith("-observe")]
+        if observation is None:
+            result, reason = "INCONCLUSIVE", "post-join-observation-missing"
+        elif (len(control_operations) < 2
+              or any(e.get("status") not in oracle.get("success_statuses", [])
+                     for e in control_operations)
+              or not control_observations
+              or control_observations[-1].get("status") not in oracle["observation"]["success_statuses"]):
+            result, reason = "INCONCLUSIVE", "sequential-control-failed"
+        else:
+            control_state_valid, control_state_reason = _sequential_control_state(
+                oracle, control_operations, control_observations[-1], varying)
+            if not control_state_valid:
+                result, reason = "INCONCLUSIVE", control_state_reason
+            elif oracle["kind"] in {"disjoint-writes-commute", "disjoint-writes-commute-domain"}:
+                expected = {k: v for body in bodies for k, v in body.items()}
+                if any(s not in oracle["success_statuses"] for s in statuses):
+                    result, reason = "VIOLATED", "legal-concurrent-write-failed"
+                elif observation.get("status") not in oracle["observation"]["success_statuses"]:
+                    result, reason = "VIOLATED", "post-join-read-failed"
+                elif any(observed.get(k) != v for k, v in expected.items()):
+                    result, reason = "VIOLATED", "successful-disjoint-update-lost"
+                else:
+                    result = "PASS"
+            elif oracle["kind"] in {"same-field-one-successful-value-visible", "same-field-one-successful-value-visible-domain"}:
+                field = (oracle.get("fields") or oracle.get("eligible_fields"))[0]["name"]
+                if oracle["kind"].endswith("-domain"):
+                    field = next(iter(varying))
+                legal_values = [body[field] for body, status in zip(bodies, statuses)
+                                if status in oracle["success_statuses"] and field in body]
+                if not legal_values or observation.get("status") not in oracle["observation"]["success_statuses"]:
+                    result, reason = "VIOLATED", "same-field-operation-or-observation-failed"
+                elif not any(_same_value(observed.get(field), value) for value in legal_values):
+                    result, reason = "VIOLATED", "same-field-final-value-not-linearizable"
+                else:
+                    result = "PASS"
+            else:
+                delete_status = next((e.get("status") for e in operations if e.get("method") == "DELETE"), None)
+                if delete_status not in oracle["delete_success_statuses"] or observation.get("status") not in oracle["observation"]["absence_statuses"]:
+                    result, reason = "VIOLATED", "update-delete-outcome-not-linearizable"
+                else:
+                    result = "PASS"
+        out.append({"oracle_id": oracle["oracle_id"], "kind": oracle["kind"],
+                    "epoch_id": epoch_id, "trigger_events": [e["_index"] for e in operations],
+                    "observation_event": observation.get("_index") if observation else None,
+                    "statuses": statuses, "result": result,
+                    **({} if reason is None else {"reason": reason})})
+    return out
+
+
+def evaluate(events: List[Dict[str, Any]], manifest: Dict[str, Any]) -> Dict[str, Any]:
+    for index, event in enumerate(events): event.setdefault("_index", index)
+    contract_witnesses = _contract_witnesses(events, manifest)
+    state_witnesses = _state_witnesses(events, manifest)
+    concurrency_witnesses = _concurrency_witnesses(events, manifest)
+    witnesses = contract_witnesses + state_witnesses + concurrency_witnesses
+    if not events:
+        witnesses.append({"oracle_id": "run::trace", "kind": "run-evidence",
+                          "result": "INCONCLUSIVE", "reason": "empty-trace"})
+    elif not witnesses:
+        witnesses.append({"oracle_id": "run::coverage", "kind": "run-evidence",
+                          "result": "INCONCLUSIVE", "reason": "no-generated-oracle-was-exercised"})
+    ready_concurrency = [o for o in manifest.get("concurrency_oracles", [])
+                         if o.get("runtime", {}).get("ready")]
+    if events and ready_concurrency and not concurrency_witnesses:
+        witnesses.append({"oracle_id": "run::concurrency-coverage",
+                          "kind": "run-evidence", "result": "INCONCLUSIVE",
+                          "reason": "no-concurrent-epoch-was-exercised"})
+    counts = Counter(item["result"] for item in witnesses)
+    exercised = {item["oracle_id"] for item in witnesses}
+    required_contract = {o["oracle_id"] for o in manifest["contract_oracles"]}
+    semantic_violation = any(
+        item["result"] == "VIOLATED"
+        for item in state_witnesses + concurrency_witnesses
+    )
+    contract_violation = any(item["result"] == "VIOLATED" for item in contract_witnesses)
+    if counts["INCONCLUSIVE"] and not (contract_witnesses or state_witnesses or concurrency_witnesses):
+        status = "INCONCLUSIVE"
+    elif semantic_violation:
+        status = "SEMANTIC_ANOMALY"
+    elif contract_violation:
+        status = "CONTRACT_DEVIATION"
+    elif counts["INCONCLUSIVE"]:
+        status = "INCONCLUSIVE"
+    else:
+        status = "PASS"
+    def result_counts(items: List[Dict[str, Any]]) -> Dict[str, int]:
+        layer = Counter(item["result"] for item in items)
+        return {key: layer[key] for key in ("PASS", "VIOLATED", "INCONCLUSIVE")}
+
+    return {"schema_version": 1, "profile": "openapi-only-generated-verifiers",
+            "source": manifest["source"], "run_status": status,
+            "counts": {k: counts[k] for k in ("PASS", "VIOLATED", "INCONCLUSIVE")},
+            "layer_counts": {
+                "contract": result_counts(contract_witnesses),
+                "state": result_counts(state_witnesses),
+                "concurrency": result_counts(concurrency_witnesses),
+            },
+            "contract_oracles_exercised": len(exercised & required_contract),
+            "contract_oracles_generated": len(required_contract),
+            "concurrency_oracles_ready": len(ready_concurrency),
+            "concurrency_oracles_generated_ready": len(ready_concurrency),
+            "concurrency_oracles_exercised": len(concurrency_witnesses),
+            "concurrency_epochs_evaluated": len(concurrency_witnesses),
+            "concurrency_oracle_families_exercised": len({w["oracle_id"] for w in concurrency_witnesses}),
+            "witnesses": witnesses,
+            "note": "Not-exercised operations are coverage facts, not automatically semantic failures."}
+
+
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--trace", required=True)
+    parser.add_argument("--manifest", required=True)
+    parser.add_argument("--output", required=True)
+    args = parser.parse_args(argv)
+    manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8-sig"))
+    result = evaluate(load_jsonl(Path(args.trace)), manifest)
+    Path(args.output).write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps({"run_status": result["run_status"], "counts": result["counts"]}, sort_keys=True))
+    print("GENERATED_VERIFIERS_" + result["run_status"])
+    return 0 if result["run_status"] == "PASS" else (
+        2 if result["run_status"] in {"SEMANTIC_ANOMALY", "CONTRACT_DEVIATION"} else 3)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

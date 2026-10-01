@@ -1,0 +1,46 @@
+{
+  "claim_scope": "Vikunja v2.6.0 in the two locally captured single-instance Docker configurations",
+  "comparison_status": "SQLITE_LOCK_FAILURE_NOT_REPRODUCED_BUT_LOST_UPDATE_IS_CROSS_BACKEND",
+  "controlled_variable": "database backend",
+  "experiment": "vikunja-increment8.2-postgresql-differential",
+  "held_constant": [
+    "Vikunja image digest",
+    "direct confirmation harness",
+    "two disjoint PATCH operations",
+    "two pre-connected independent HTTP connections",
+    "barrier release",
+    "100 ms quiescence",
+    "independent post-join GET",
+    "20 fresh-task trials"
+  ],
+  "postgres": {
+    "counts": {
+      "CONTRACT_REJECTION": 0,
+      "INCONCLUSIVE": 0,
+      "LOST_UPDATE": 20,
+      "PASS": 0,
+      "SERVER_FAILURE": 0
+    },
+    "evaluation_sha256": "77c71148c56591a83327b73af9a1ea5339281bc9bc3d2b5d84a661463e1f2f49",
+    "trial_count": 20
+  },
+  "rate_difference_postgres_minus_sqlite": {
+    "CONTRACT_REJECTION": 0.0,
+    "INCONCLUSIVE": 0.0,
+    "LOST_UPDATE": 0.8,
+    "PASS": 0.0,
+    "SERVER_FAILURE": -0.8
+  },
+  "schema_version": 1,
+  "sqlite": {
+    "counts": {
+      "CONTRACT_REJECTION": 0,
+      "INCONCLUSIVE": 0,
+      "LOST_UPDATE": 4,
+      "PASS": 0,
+      "SERVER_FAILURE": 16
+    },
+    "evaluation_sha256": "625ffe34068c45c3564c67cc32e14ba8ecec66c72e83fc46b888a0a7810db082",
+    "trial_count": 20
+  }
+}

@@ -1,0 +1,2192 @@
+{
+  "candidate": "mealie",
+  "spec_path": "C:\\work\\temp\\vikunja_tse_study\\model\\mealie\\openapi.json",
+  "sha256": "0528428e023cd10431e2971dc1851c0d5d6e260fac263ba29ae7edab65890bf5",
+  "openapi_version": "3.1.0",
+  "operation_count": 266,
+  "families": {
+    "primary": {
+      "count": 54,
+      "operations": [
+        {
+          "method": "GET",
+          "path": "/api/households/self/recipes/{recipe_slug}",
+          "operation_id": "get_household_recipe_api_households_self_recipes__recipe_slug__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/recipes/exports",
+          "operation_id": "get_recipe_formats_and_templates_api_recipes_exports_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/recipes/{slug}/exports",
+          "operation_id": "get_recipe_as_format_api_recipes__slug__exports_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/test-scrape-url",
+          "operation_id": "test_parse_recipe_url_api_recipes_test_scrape_url_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/create/html-or-json",
+          "operation_id": "create_recipe_from_html_or_json_api_recipes_create_html_or_json_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/create/html-or-json/stream",
+          "operation_id": "create_recipe_from_html_or_json_stream_api_recipes_create_html_or_json_stream_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/create/url",
+          "operation_id": "parse_recipe_url_api_recipes_create_url_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/create/url/stream",
+          "operation_id": "parse_recipe_url_stream_api_recipes_create_url_stream_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/create/ai",
+          "operation_id": "create_recipe_with_ai_api_recipes_create_ai_post",
+          "has_2xx": true,
+          "request_media": [
+            "multipart/form-data"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/create/ai/stream",
+          "operation_id": "create_recipe_with_ai_stream_api_recipes_create_ai_stream_post",
+          "has_2xx": true,
+          "request_media": [
+            "multipart/form-data"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/create/url/bulk",
+          "operation_id": "parse_recipe_url_bulk_api_recipes_create_url_bulk_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "202",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/create/zip",
+          "operation_id": "create_recipe_from_zip_api_recipes_create_zip_post",
+          "has_2xx": true,
+          "request_media": [
+            "multipart/form-data"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/recipes",
+          "operation_id": "get_all_api_recipes_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes",
+          "operation_id": "create_one_api_recipes_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/recipes",
+          "operation_id": "patch_many_api_recipes_patch",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/recipes",
+          "operation_id": "update_many_api_recipes_put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/recipes/suggestions",
+          "operation_id": "suggest_recipes_api_recipes_suggestions_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/recipes/{slug}",
+          "operation_id": "get_one_api_recipes__slug__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/recipes/{slug}",
+          "operation_id": "patch_one_api_recipes__slug__patch",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/recipes/{slug}",
+          "operation_id": "update_one_api_recipes__slug__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/recipes/{slug}",
+          "operation_id": "delete_one_api_recipes__slug__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/{slug}/duplicate",
+          "operation_id": "duplicate_one_api_recipes__slug__duplicate_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/recipes/{slug}/last-made",
+          "operation_id": "update_last_made_api_recipes__slug__last_made_patch",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/{slug}/image",
+          "operation_id": "scrape_image_url_api_recipes__slug__image_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/recipes/{slug}/image",
+          "operation_id": "update_recipe_image_api_recipes__slug__image_put",
+          "has_2xx": true,
+          "request_media": [
+            "multipart/form-data"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/recipes/{slug}/image",
+          "operation_id": "delete_recipe_image_api_recipes__slug__image_delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/{slug}/assets",
+          "operation_id": "upload_recipe_asset_api_recipes__slug__assets_post",
+          "has_2xx": true,
+          "request_media": [
+            "multipart/form-data"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/recipes/{slug}/comments",
+          "operation_id": "get_recipe_comments_api_recipes__slug__comments_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/bulk-actions/tag",
+          "operation_id": "bulk_tag_recipes_api_recipes_bulk_actions_tag_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/bulk-actions/settings",
+          "operation_id": "bulk_settings_recipes_api_recipes_bulk_actions_settings_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/bulk-actions/categorize",
+          "operation_id": "bulk_categorize_recipes_api_recipes_bulk_actions_categorize_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/bulk-actions/delete",
+          "operation_id": "bulk_delete_recipes_api_recipes_bulk_actions_delete_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/recipes/bulk-actions/export",
+          "operation_id": "get_exported_data_api_recipes_bulk_actions_export_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/bulk-actions/export",
+          "operation_id": "bulk_export_recipes_api_recipes_bulk_actions_export_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "202",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/recipes/bulk-actions/export/{export_id}/download",
+          "operation_id": "get_exported_data_token_api_recipes_bulk_actions_export__export_id__download_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/recipes/bulk-actions/export/purge",
+          "operation_id": "purge_export_data_api_recipes_bulk_actions_export_purge_delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/recipes/shared/{token_id}",
+          "operation_id": "get_shared_recipe_api_recipes_shared__token_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/recipes/shared/{token_id}/zip",
+          "operation_id": "get_shared_recipe_as_zip_api_recipes_shared__token_id__zip_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/recipes/timeline/events",
+          "operation_id": "get_all_api_recipes_timeline_events_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/recipes/timeline/events",
+          "operation_id": "create_one_api_recipes_timeline_events_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/recipes/timeline/events/{item_id}",
+          "operation_id": "get_one_api_recipes_timeline_events__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/recipes/timeline/events/{item_id}",
+          "operation_id": "update_one_api_recipes_timeline_events__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/recipes/timeline/events/{item_id}",
+          "operation_id": "delete_one_api_recipes_timeline_events__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/recipes/timeline/events/{item_id}/image",
+          "operation_id": "update_event_image_api_recipes_timeline_events__item_id__image_put",
+          "has_2xx": true,
+          "request_media": [
+            "multipart/form-data"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/shared/recipes",
+          "operation_id": "get_all_api_shared_recipes_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/shared/recipes",
+          "operation_id": "create_one_api_shared_recipes_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/shared/recipes/{item_id}",
+          "operation_id": "get_one_api_shared_recipes__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/shared/recipes/{item_id}",
+          "operation_id": "delete_one_api_shared_recipes__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/explore/groups/{group_slug}/recipes",
+          "operation_id": "get_all_api_explore_groups__group_slug__recipes_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/explore/groups/{group_slug}/recipes/suggestions",
+          "operation_id": "suggest_recipes_api_explore_groups__group_slug__recipes_suggestions_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/explore/groups/{group_slug}/recipes/{recipe_slug}",
+          "operation_id": "get_recipe_api_explore_groups__group_slug__recipes__recipe_slug__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/media/recipes/{recipe_id}/images/{file_name}",
+          "operation_id": "get_recipe_img_api_media_recipes__recipe_id__images__file_name__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/media/recipes/{recipe_id}/images/timeline/{timeline_event_id}/{file_name}",
+          "operation_id": "get_recipe_timeline_event_img_api_media_recipes__recipe_id__images_timeline__timeline_event_id___file_name__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/media/recipes/{recipe_id}/assets/{file_name}",
+          "operation_id": "get_recipe_asset_api_media_recipes__recipe_id__assets__file_name__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        }
+      ]
+    },
+    "links": {
+      "count": 45,
+      "operations": [
+        {
+          "method": "GET",
+          "path": "/api/households/shopping/lists",
+          "operation_id": "get_all_api_households_shopping_lists_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/shopping/lists",
+          "operation_id": "create_one_api_households_shopping_lists_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/shopping/lists/{item_id}",
+          "operation_id": "get_one_api_households_shopping_lists__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/shopping/lists/{item_id}",
+          "operation_id": "update_one_api_households_shopping_lists__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/households/shopping/lists/{item_id}",
+          "operation_id": "delete_one_api_households_shopping_lists__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/shopping/lists/{item_id}/label-settings",
+          "operation_id": "update_label_settings_api_households_shopping_lists__item_id__label_settings_put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/shopping/lists/{item_id}/recipe",
+          "operation_id": "add_recipe_ingredients_to_list_api_households_shopping_lists__item_id__recipe_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/shopping/lists/{item_id}/recipe/{recipe_id}",
+          "operation_id": "add_single_recipe_ingredients_to_list_api_households_shopping_lists__item_id__recipe__recipe_id__post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/shopping/lists/{item_id}/recipe/{recipe_id}/delete",
+          "operation_id": "remove_recipe_ingredients_from_list_api_households_shopping_lists__item_id__recipe__recipe_id__delete_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/shopping/items",
+          "operation_id": "get_all_api_households_shopping_items_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/shopping/items",
+          "operation_id": "create_one_api_households_shopping_items_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/shopping/items",
+          "operation_id": "update_many_api_households_shopping_items_put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/households/shopping/items",
+          "operation_id": "delete_many_api_households_shopping_items_delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/shopping/items/create-bulk",
+          "operation_id": "create_many_api_households_shopping_items_create_bulk_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/shopping/items/{item_id}",
+          "operation_id": "get_one_api_households_shopping_items__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/shopping/items/{item_id}",
+          "operation_id": "update_one_api_households_shopping_items__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/households/shopping/items/{item_id}",
+          "operation_id": "delete_one_api_households_shopping_items__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/organizers/categories",
+          "operation_id": "get_all_api_organizers_categories_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/organizers/categories",
+          "operation_id": "create_one_api_organizers_categories_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/organizers/categories/empty",
+          "operation_id": "get_all_empty_api_organizers_categories_empty_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/organizers/categories/merge",
+          "operation_id": "merge_categories_api_organizers_categories_merge_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/organizers/categories/{item_id}",
+          "operation_id": "get_one_api_organizers_categories__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/organizers/categories/{item_id}",
+          "operation_id": "update_one_api_organizers_categories__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/organizers/categories/{item_id}",
+          "operation_id": "delete_one_api_organizers_categories__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/organizers/categories/slug/{category_slug}",
+          "operation_id": "get_one_by_slug_api_organizers_categories_slug__category_slug__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/organizers/tags",
+          "operation_id": "get_all_api_organizers_tags_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/organizers/tags",
+          "operation_id": "create_one_api_organizers_tags_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/organizers/tags/empty",
+          "operation_id": "get_empty_tags_api_organizers_tags_empty_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/organizers/tags/merge",
+          "operation_id": "merge_tags_api_organizers_tags_merge_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/organizers/tags/{item_id}",
+          "operation_id": "get_one_api_organizers_tags__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/organizers/tags/{item_id}",
+          "operation_id": "update_one_api_organizers_tags__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/organizers/tags/{item_id}",
+          "operation_id": "delete_recipe_tag_api_organizers_tags__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/organizers/tags/slug/{tag_slug}",
+          "operation_id": "get_one_by_slug_api_organizers_tags_slug__tag_slug__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/organizers/tools",
+          "operation_id": "get_all_api_organizers_tools_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/organizers/tools",
+          "operation_id": "create_one_api_organizers_tools_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/organizers/tools/{item_id}",
+          "operation_id": "get_one_api_organizers_tools__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/organizers/tools/{item_id}",
+          "operation_id": "update_one_api_organizers_tools__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/organizers/tools/{item_id}",
+          "operation_id": "delete_one_api_organizers_tools__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/organizers/tools/slug/{tool_slug}",
+          "operation_id": "get_one_by_slug_api_organizers_tools_slug__tool_slug__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/explore/groups/{group_slug}/organizers/categories",
+          "operation_id": "get_all_api_explore_groups__group_slug__organizers_categories_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/explore/groups/{group_slug}/organizers/categories/{item_id}",
+          "operation_id": "get_one_api_explore_groups__group_slug__organizers_categories__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/explore/groups/{group_slug}/organizers/tags",
+          "operation_id": "get_all_api_explore_groups__group_slug__organizers_tags_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/explore/groups/{group_slug}/organizers/tags/{item_id}",
+          "operation_id": "get_one_api_explore_groups__group_slug__organizers_tags__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/explore/groups/{group_slug}/organizers/tools",
+          "operation_id": "get_all_api_explore_groups__group_slug__organizers_tools_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/explore/groups/{group_slug}/organizers/tools/{item_id}",
+          "operation_id": "get_one_api_explore_groups__group_slug__organizers_tools__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        }
+      ]
+    },
+    "secondary": {
+      "count": 73,
+      "operations": [
+        {
+          "method": "GET",
+          "path": "/api/households/cookbooks",
+          "operation_id": "get_all_api_households_cookbooks_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/cookbooks",
+          "operation_id": "create_one_api_households_cookbooks_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/cookbooks",
+          "operation_id": "update_many_api_households_cookbooks_put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/cookbooks/{item_id}",
+          "operation_id": "get_one_api_households_cookbooks__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/cookbooks/{item_id}",
+          "operation_id": "update_one_api_households_cookbooks__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/households/cookbooks/{item_id}",
+          "operation_id": "delete_one_api_households_cookbooks__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/events/notifications",
+          "operation_id": "get_all_api_households_events_notifications_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/events/notifications",
+          "operation_id": "create_one_api_households_events_notifications_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/events/notifications/{item_id}",
+          "operation_id": "get_one_api_households_events_notifications__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/events/notifications/{item_id}",
+          "operation_id": "update_one_api_households_events_notifications__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/households/events/notifications/{item_id}",
+          "operation_id": "delete_one_api_households_events_notifications__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/events/notifications/{item_id}/test",
+          "operation_id": "test_notification_api_households_events_notifications__item_id__test_post",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "204",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/recipe-actions",
+          "operation_id": "get_all_api_households_recipe_actions_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/recipe-actions",
+          "operation_id": "create_one_api_households_recipe_actions_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/recipe-actions/{item_id}",
+          "operation_id": "get_one_api_households_recipe_actions__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/recipe-actions/{item_id}",
+          "operation_id": "update_one_api_households_recipe_actions__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/households/recipe-actions/{item_id}",
+          "operation_id": "delete_one_api_households_recipe_actions__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/recipe-actions/{item_id}/trigger/{recipe_slug}",
+          "operation_id": "trigger_action_api_households_recipe_actions__item_id__trigger__recipe_slug__post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "202",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/self",
+          "operation_id": "get_logged_in_user_household_api_households_self_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/self/recipes/{recipe_slug}",
+          "operation_id": "get_household_recipe_api_households_self_recipes__recipe_slug__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/members",
+          "operation_id": "get_household_members_api_households_members_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/preferences",
+          "operation_id": "get_household_preferences_api_households_preferences_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/preferences",
+          "operation_id": "update_household_preferences_api_households_preferences_put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/permissions",
+          "operation_id": "set_member_permissions_api_households_permissions_put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/statistics",
+          "operation_id": "get_statistics_api_households_statistics_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/invitations",
+          "operation_id": "get_invite_tokens_api_households_invitations_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/invitations",
+          "operation_id": "create_invite_token_api_households_invitations_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/invitations/email",
+          "operation_id": "email_invitation_api_households_invitations_email_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/shopping/lists",
+          "operation_id": "get_all_api_households_shopping_lists_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/shopping/lists",
+          "operation_id": "create_one_api_households_shopping_lists_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/shopping/lists/{item_id}",
+          "operation_id": "get_one_api_households_shopping_lists__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/shopping/lists/{item_id}",
+          "operation_id": "update_one_api_households_shopping_lists__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/households/shopping/lists/{item_id}",
+          "operation_id": "delete_one_api_households_shopping_lists__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/shopping/lists/{item_id}/label-settings",
+          "operation_id": "update_label_settings_api_households_shopping_lists__item_id__label_settings_put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/shopping/lists/{item_id}/recipe",
+          "operation_id": "add_recipe_ingredients_to_list_api_households_shopping_lists__item_id__recipe_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/shopping/lists/{item_id}/recipe/{recipe_id}",
+          "operation_id": "add_single_recipe_ingredients_to_list_api_households_shopping_lists__item_id__recipe__recipe_id__post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/shopping/lists/{item_id}/recipe/{recipe_id}/delete",
+          "operation_id": "remove_recipe_ingredients_from_list_api_households_shopping_lists__item_id__recipe__recipe_id__delete_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/shopping/items",
+          "operation_id": "get_all_api_households_shopping_items_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/shopping/items",
+          "operation_id": "create_one_api_households_shopping_items_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/shopping/items",
+          "operation_id": "update_many_api_households_shopping_items_put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/households/shopping/items",
+          "operation_id": "delete_many_api_households_shopping_items_delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/shopping/items/create-bulk",
+          "operation_id": "create_many_api_households_shopping_items_create_bulk_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/shopping/items/{item_id}",
+          "operation_id": "get_one_api_households_shopping_items__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/shopping/items/{item_id}",
+          "operation_id": "update_one_api_households_shopping_items__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/households/shopping/items/{item_id}",
+          "operation_id": "delete_one_api_households_shopping_items__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/webhooks",
+          "operation_id": "get_all_api_households_webhooks_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/webhooks",
+          "operation_id": "create_one_api_households_webhooks_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/webhooks/rerun",
+          "operation_id": "rerun_webhooks_api_households_webhooks_rerun_post",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/webhooks/{item_id}",
+          "operation_id": "get_one_api_households_webhooks__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/webhooks/{item_id}",
+          "operation_id": "update_one_api_households_webhooks__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/households/webhooks/{item_id}",
+          "operation_id": "delete_one_api_households_webhooks__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/webhooks/{item_id}/test",
+          "operation_id": "test_one_api_households_webhooks__item_id__test_post",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/mealplans/rules",
+          "operation_id": "get_all_api_households_mealplans_rules_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/mealplans/rules",
+          "operation_id": "create_one_api_households_mealplans_rules_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/mealplans/rules/{item_id}",
+          "operation_id": "get_one_api_households_mealplans_rules__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/mealplans/rules/{item_id}",
+          "operation_id": "update_one_api_households_mealplans_rules__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/households/mealplans/rules/{item_id}",
+          "operation_id": "delete_one_api_households_mealplans_rules__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/mealplans",
+          "operation_id": "get_all_api_households_mealplans_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/mealplans",
+          "operation_id": "create_one_api_households_mealplans_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/mealplans/today",
+          "operation_id": "get_todays_meals_api_households_mealplans_today_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/households/mealplans/random",
+          "operation_id": "create_random_meal_api_households_mealplans_random_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/households/mealplans/{item_id}",
+          "operation_id": "get_one_api_households_mealplans__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/households/mealplans/{item_id}",
+          "operation_id": "update_one_api_households_mealplans__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/households/mealplans/{item_id}",
+          "operation_id": "delete_one_api_households_mealplans__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/groups/households",
+          "operation_id": "get_all_households_api_groups_households_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/groups/households/{household_slug}",
+          "operation_id": "get_one_household_api_groups_households__household_slug__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/households",
+          "operation_id": "get_all_api_admin_households_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/api/admin/households",
+          "operation_id": "create_one_api_admin_households_post",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "201",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/households/{item_id}",
+          "operation_id": "get_one_api_admin_households__item_id__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "PUT",
+          "path": "/api/admin/households/{item_id}",
+          "operation_id": "update_one_api_admin_households__item_id__put",
+          "has_2xx": true,
+          "request_media": [
+            "application/json"
+          ],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/admin/households/{item_id}",
+          "operation_id": "delete_one_api_admin_households__item_id__delete",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/explore/groups/{group_slug}/households",
+          "operation_id": "get_all_api_explore_groups__group_slug__households_get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/api/explore/groups/{group_slug}/households/{household_slug}",
+          "operation_id": "get_household_api_explore_groups__group_slug__households__household_slug__get",
+          "has_2xx": true,
+          "request_media": [],
+          "response_codes": [
+            "200",
+            "422"
+          ]
+        }
+      ]
+    }
+  },
+  "generator": {
+    "exit_code": 0,
+    "timed_out": false,
+    "report_generated": true,
+    "coverage": {
+      "covered_operations": 266,
+      "total_operations": 266,
+      "uncovered_operations": []
+    },
+    "unsupported_constructs": {
+      "ambiguities": [
+        "Entity 'api/users' has no component-schema evidence; name derived from path segment (confidence=0.5).",
+        "Entity 'api/organizers/categories/slug' has no component-schema evidence; name derived from path segment (confidence=0.5).",
+        "Entity 'api/admin/debug/openai' has no component-schema evidence; name derived from path segment (confidence=0.5).",
+        "Entity 'api/media/users' has no component-schema evidence; name derived from path segment (confidence=0.5).",
+        "Key inference for entity 'api/users/self/ratings' has reduced confidence (0.7); path parameter(s) ['recipe_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/users' has reduced confidence (0.6); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/users/api-tokens' has reduced confidence (0.7); path parameter(s) ['token_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/households/cookbooks' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/households/events/notifications' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/households/recipe-actions' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/households/self/recipes' has reduced confidence (0.7); path parameter(s) ['recipe_slug'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/households/shopping/lists' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/households/shopping/items' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/households/webhooks' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/households/mealplans/rules' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/households/mealplans' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/groups/ai-providers/providers' has reduced confidence (0.7); path parameter(s) ['provider_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/groups/households' has reduced confidence (0.7); path parameter(s) ['household_slug'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/groups/members' has reduced confidence (0.7); path parameter(s) ['username_or_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/groups/reports' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/groups/labels' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/recipes' has reduced confidence (0.7); path parameter(s) ['slug'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/recipes/shared' has reduced confidence (0.7); path parameter(s) ['token_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/recipes/timeline/events' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/organizers/categories' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/organizers/categories/slug' has reduced confidence (0.6); path parameter(s) ['category_slug'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/organizers/tags' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/organizers/tags/slug' has reduced confidence (0.7); path parameter(s) ['tag_slug'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/organizers/tools' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/organizers/tools/slug' has reduced confidence (0.7); path parameter(s) ['tool_slug'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/shared/recipes' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/comments' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/foods' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/units' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/admin/users' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/admin/households' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/admin/groups' has reduced confidence (0.7); path parameter(s) ['item_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/admin/backups' has reduced confidence (0.7); path parameter(s) ['file_name'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/admin/debug/openai' has reduced confidence (0.6); path parameter(s) ['provider_id'] could not be fully cross-validated against the schema.",
+        "Key inference for entity 'api/media/users' has reduced confidence (0.6); path parameter(s) ['user_id', 'file_name'] could not be fully cross-validated against the schema."
+      ],
+      "document_level": [],
+      "remote_refs": []
+    },
+    "warnings": [],
+    "dependency_nodes": 36,
+    "dependency_edges": 6,
+    "relevant_edges": [
+      {
+        "confidence": 0.9,
+        "field_name": "recipeId",
+        "provenance": [
+          {
+            "detail": "Create request body property 'recipeId' matches entity 'api/users/self/ratings'",
+            "pointer": "#/paths/~1api~1households~1mealplans/post/requestBody/content/application~1json/properties/recipeId",
+            "rule": "D2:D_key_field_exact_match"
+          }
+        ],
+        "source": "api/households/mealplans",
+        "target": "api/users/self/ratings"
+      },
+      {
+        "confidence": 0.9,
+        "field_name": "recipeId",
+        "provenance": [
+          {
+            "detail": "Create request body property 'recipeId' matches entity 'api/users/self/ratings'",
+            "pointer": "#/paths/~1api~1recipes~1timeline~1events/post/requestBody/content/application~1json/properties/recipeId",
+            "rule": "D2:D_key_field_exact_match"
+          }
+        ],
+        "source": "api/recipes/timeline/events",
+        "target": "api/users/self/ratings"
+      },
+      {
+        "confidence": 0.9,
+        "field_name": "recipeId",
+        "provenance": [
+          {
+            "detail": "Create request body property 'recipeId' matches entity 'api/users/self/ratings'",
+            "pointer": "#/paths/~1api~1shared~1recipes/post/requestBody/content/application~1json/properties/recipeId",
+            "rule": "D2:D_key_field_exact_match"
+          }
+        ],
+        "source": "api/shared/recipes",
+        "target": "api/users/self/ratings"
+      },
+      {
+        "confidence": 0.9,
+        "field_name": "groupId",
+        "provenance": [
+          {
+            "detail": "Create request body property 'groupId' matches entity 'api/admin/groups'",
+            "pointer": "#/paths/~1api~1admin~1households/post/requestBody/content/application~1json/properties/groupId",
+            "rule": "D2:D2:id_suffix_name_match"
+          }
+        ],
+        "source": "api/admin/households",
+        "target": "api/admin/groups"
+      }
+    ]
+  },
+  "static_path_gates": {
+    "primary_create": true,
+    "primary_read": true,
+    "primary_update": true,
+    "link_mutation": true,
+    "link_read": true
+  },
+  "outcome": "STATIC_PILOT_ONLY",
+  "interpretation": "STATIC_PILOT_ONLY proves only operations were described and JS was emitted; it does not prove execution, dependency availability, correct request bodies, real overlap, or that an oracle is derivable from OpenAPI."
+}

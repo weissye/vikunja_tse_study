@@ -1,0 +1,31 @@
+{
+  "edges": [
+    {
+      "field_name": "bookId",
+      "source": "holds",
+      "target": "books"
+    },
+    {
+      "field_name": "userId",
+      "source": "holds",
+      "target": "users"
+    },
+    {
+      "field_name": "bookId",
+      "source": "loans",
+      "target": "books"
+    },
+    {
+      "field_name": "userId",
+      "source": "loans",
+      "target": "users"
+    }
+  ],
+  "nodes": [
+    "books",
+    "holds",
+    "loans",
+    "users"
+  ],
+  "system": "library"
+}

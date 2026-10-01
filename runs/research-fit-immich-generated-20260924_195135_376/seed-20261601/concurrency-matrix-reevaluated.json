@@ -1,0 +1,652 @@
+{
+  "counts": {
+    "INCONCLUSIVE": 17,
+    "NOT_OBSERVED": 1,
+    "NOT_RUNTIME_READY": 9,
+    "PASS": 27
+  },
+  "evidence_policy": "proxy-confirmed overlap and independent evaluator verdict; no implied coverage from HTTP volume",
+  "families_observed": [
+    "updateAlbumInfo",
+    "updateSharedLink"
+  ],
+  "families_ready": [
+    "updateAlbumInfo",
+    "updateNotification",
+    "updateSharedLink"
+  ],
+  "generated_oracles": 54,
+  "observed_overlap_oracles": 44,
+  "oracles": [
+    {
+      "kind": "disjoint-writes-commute-domain",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint-domain::updateAlbumInfo",
+      "overlap_observed": false,
+      "runtime_limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+      "runtime_ready": false,
+      "state": "NOT_RUNTIME_READY",
+      "verdicts": []
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint::updateAlbumInfo::albumName::albumThumbnailAssetId",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint::updateAlbumInfo::albumName::description",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint::updateAlbumInfo::albumName::isActivityEnabled",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint::updateAlbumInfo::albumName::order",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint::updateAlbumInfo::albumThumbnailAssetId::description",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint::updateAlbumInfo::albumThumbnailAssetId::isActivityEnabled",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint::updateAlbumInfo::albumThumbnailAssetId::order",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint::updateAlbumInfo::description::isActivityEnabled",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint3::updateAlbumInfo::albumName::albumThumbnailAssetId::description",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint3::updateAlbumInfo::albumName::albumThumbnailAssetId::isActivityEnabled",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint3::updateAlbumInfo::albumName::albumThumbnailAssetId::order",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint3::updateAlbumInfo::albumName::description::isActivityEnabled",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint3::updateAlbumInfo::albumName::description::order",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint3::updateAlbumInfo::albumName::isActivityEnabled::order",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint3::updateAlbumInfo::albumThumbnailAssetId::description::isActivityEnabled",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::disjoint3::updateAlbumInfo::albumThumbnailAssetId::description::order",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible-domain",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::same-field-domain::updateAlbumInfo",
+      "overlap_observed": false,
+      "runtime_limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+      "runtime_ready": false,
+      "state": "NOT_RUNTIME_READY",
+      "verdicts": []
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::same-field::updateAlbumInfo::albumName",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::same-field::updateAlbumInfo::albumThumbnailAssetId",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::same-field::updateAlbumInfo::description",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::same-field::updateAlbumInfo::isActivityEnabled",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "concurrency::same-field::updateAlbumInfo::order",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible-domain",
+      "operation_id": "createClusterGroupRequest",
+      "oracle_id": "concurrency::same-field-domain::createClusterGroupRequest",
+      "overlap_observed": false,
+      "runtime_limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+      "runtime_ready": false,
+      "state": "NOT_RUNTIME_READY",
+      "verdicts": []
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "createClusterGroupRequest",
+      "oracle_id": "concurrency::same-field::createClusterGroupRequest::userId",
+      "overlap_observed": false,
+      "runtime_limitation": "requires-a-documented-create-response-to-item-path-binding",
+      "runtime_ready": false,
+      "state": "NOT_RUNTIME_READY",
+      "verdicts": []
+    },
+    {
+      "kind": "same-field-one-successful-value-visible-domain",
+      "operation_id": "updateNotification",
+      "oracle_id": "concurrency::same-field-domain::updateNotification",
+      "overlap_observed": false,
+      "runtime_limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+      "runtime_ready": false,
+      "state": "NOT_RUNTIME_READY",
+      "verdicts": []
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateNotification",
+      "oracle_id": "concurrency::same-field::updateNotification::readAt",
+      "overlap_observed": false,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "NOT_OBSERVED",
+      "verdicts": []
+    },
+    {
+      "kind": "same-field-one-successful-value-visible-domain",
+      "operation_id": "updateQueue",
+      "oracle_id": "concurrency::same-field-domain::updateQueue",
+      "overlap_observed": false,
+      "runtime_limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+      "runtime_ready": false,
+      "state": "NOT_RUNTIME_READY",
+      "verdicts": []
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateQueue",
+      "oracle_id": "concurrency::same-field::updateQueue::isPaused",
+      "overlap_observed": false,
+      "runtime_limitation": "requires-a-documented-create-response-to-item-path-binding",
+      "runtime_ready": false,
+      "state": "NOT_RUNTIME_READY",
+      "verdicts": []
+    },
+    {
+      "kind": "disjoint-writes-commute-domain",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint-domain::updateSharedLink",
+      "overlap_observed": false,
+      "runtime_limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+      "runtime_ready": false,
+      "state": "NOT_RUNTIME_READY",
+      "verdicts": []
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint::updateSharedLink::allowDownload::allowUpload",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint::updateSharedLink::allowDownload::description",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint::updateSharedLink::allowDownload::expiresAt",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint::updateSharedLink::allowDownload::password",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint::updateSharedLink::allowDownload::showMetadata",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint::updateSharedLink::allowDownload::slug",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint::updateSharedLink::allowUpload::description",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint::updateSharedLink::allowUpload::expiresAt",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint3::updateSharedLink::allowDownload::allowUpload::description",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint3::updateSharedLink::allowDownload::allowUpload::expiresAt",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint3::updateSharedLink::allowDownload::allowUpload::password",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint3::updateSharedLink::allowDownload::allowUpload::showMetadata",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint3::updateSharedLink::allowDownload::allowUpload::slug",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint3::updateSharedLink::allowDownload::description::expiresAt",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint3::updateSharedLink::allowDownload::description::password",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "disjoint-writes-commute",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::disjoint3::updateSharedLink::allowDownload::description::showMetadata",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible-domain",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::same-field-domain::updateSharedLink",
+      "overlap_observed": false,
+      "runtime_limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+      "runtime_ready": false,
+      "state": "NOT_RUNTIME_READY",
+      "verdicts": []
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::same-field::updateSharedLink::allowDownload",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::same-field::updateSharedLink::allowUpload",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::same-field::updateSharedLink::description",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::same-field::updateSharedLink::expiresAt",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "INCONCLUSIVE",
+      "verdicts": [
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::same-field::updateSharedLink::password",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::same-field::updateSharedLink::showMetadata",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    },
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "operation_id": "updateSharedLink",
+      "oracle_id": "concurrency::same-field::updateSharedLink::slug",
+      "overlap_observed": true,
+      "runtime_limitation": null,
+      "runtime_ready": true,
+      "state": "PASS",
+      "verdicts": [
+        "PASS"
+      ]
+    }
+  ],
+  "runtime_ready_oracles": 45,
+  "schema_version": 1
+}

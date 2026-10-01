@@ -1,0 +1,78 @@
+{
+  "artifact_version": "v36",
+  "determinism": {
+    "canonical_generation_base_url": "http://127.0.0.1:5000",
+    "content_fingerprint": true,
+    "path_independent_generation_report": true,
+    "replay": "exact generated_model snapshot + fixed Provengo seed; runtime ports recorded as non-semantic metadata"
+  },
+  "generator_version": "0.24.1",
+  "multi_instance": {
+    "execution_isolation": [
+      "per-run OS-assigned SUT port",
+      "per-run OS-assigned trace-proxy port",
+      "unique per-run result directory; no shared output file"
+    ],
+    "experiment_defaults": {
+      "instances_per_action": 7,
+      "instances_per_entity": 5
+    },
+    "generator_defaults": {
+      "instances_per_action": 1,
+      "instances_per_entity": 1
+    },
+    "regression_guards": [
+      "server-assigned identifier propagation",
+      "opt-in multi-instance defaults",
+      "reverse-deletion phase-label consistency"
+    ]
+  },
+  "netbox_buggy": {
+    "a2a_api_projection_operations": 12,
+    "a2a_evaluator": "experiments/netbox_a2a/evaluate_netbox_a2a_trace.py",
+    "a2a_projection_policy": "same V29 12-op structural projection; byte-preserved OpenAPI; no value-level enrichment",
+    "a2a_protocol": "experiments/netbox_a2a/A2A_PROTOCOL.md",
+    "campaign_global_evaluation": "diagnostic_only",
+    "evaluator": "scripts/evaluate_netbox_trace.py",
+    "fault_count": 5,
+    "fault_ids": [
+      "A_LOGIC",
+      "B_LIFECYCLE",
+      "C_UNIQUENESS",
+      "D_INTEGRITY",
+      "E_REFERENTIAL_INTEGRITY"
+    ],
+    "hidden_ground_truth": {
+      "purpose": "oracle validation and triggered-vs-observed diagnostics",
+      "source": "server-side NETBOX_V35_GROUND_TRUTH_LOG JSONL markers",
+      "used_for_official_score": false,
+      "visible_to_tools": false
+    },
+    "measurement_oracle": "official: sequence-local external HTTP evidence; hidden SUT activation and campaign-global flat trace diagnostic only",
+    "minimum_http_steps": {
+      "A_LOGIC": 5,
+      "B_LIFECYCLE": 5,
+      "C_UNIQUENESS": 2,
+      "D_INTEGRITY": 4,
+      "E_REFERENTIAL_INTEGRITY": 4
+    },
+    "official_semantic_scoring": "sequence_local_no_cross_test_stitching",
+    "semantic_fault_class_count": 5,
+    "semantic_fault_classes": [
+      "A_LOGIC",
+      "B_LIFECYCLE",
+      "C_UNIQUENESS",
+      "D_INTEGRITY",
+      "E_REFERENTIAL_INTEGRITY"
+    ],
+    "source": "resources/development_kit/validation_only/suts/netbox/netbox_sut_buggy.py",
+    "source_fault_mechanism_count": 5
+  },
+  "schema_version": 4,
+  "systems": [
+    "library",
+    "garage",
+    "pharmacy",
+    "netbox"
+  ]
+}

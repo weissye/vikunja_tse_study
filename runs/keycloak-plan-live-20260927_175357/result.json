@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "basis": "generated OpenAPI plan plus observed fixture evidence",
+  "provengo_executed": false,
+  "runtime": "INCOMPLETE",
+  "oracles": {
+    "same-field-one-successful-value-visible": "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName",
+    "noop-versus-change": "concurrency::noop::concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName",
+    "disjoint-put-serial-outcomes": "concurrency::disjoint-put::put:/admin/realms/{realm}/users/{user-id}"
+  },
+  "cases": [],
+  "error_type": "GateFailure",
+  "error_message": "admin token: HTTP 400; expected [200]"
+}

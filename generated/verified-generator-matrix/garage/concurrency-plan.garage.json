@@ -1,0 +1,4821 @@
+{
+  "oracles": [
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "supportEmail",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/chains/{chainId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/chains/{chainId}",
+      "oracle_id": "concurrency::same-field-domain::put:/chains/{chainId}",
+      "path_template": "/chains/{chainId}",
+      "runtime": {
+        "create_operation_id": "post:/chains",
+        "entity_key": "chains",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "chainId": "chainId"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1chains~1{chainId}/put",
+        "#/paths/~1chains~1{chainId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/chains/{chainId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/chains/{chainId}",
+      "oracle_id": "concurrency::same-field::put:/chains/{chainId}::active",
+      "path_template": "/chains/{chainId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "supportEmail",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/chains",
+        "entity_key": "chains",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "chainId": "chainId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1chains~1{chainId}/put",
+        "#/paths/~1chains~1{chainId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/chains/{chainId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/chains/{chainId}",
+      "oracle_id": "concurrency::same-field::put:/chains/{chainId}::description",
+      "path_template": "/chains/{chainId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "supportEmail",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/chains",
+        "entity_key": "chains",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "chainId": "chainId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1chains~1{chainId}/put",
+        "#/paths/~1chains~1{chainId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/chains/{chainId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/chains/{chainId}",
+      "oracle_id": "concurrency::same-field::put:/chains/{chainId}::name",
+      "path_template": "/chains/{chainId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "supportEmail",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/chains",
+        "entity_key": "chains",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "chainId": "chainId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1chains~1{chainId}/put",
+        "#/paths/~1chains~1{chainId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "supportEmail",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/chains/{chainId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/chains/{chainId}",
+      "oracle_id": "concurrency::same-field::put:/chains/{chainId}::supportEmail",
+      "path_template": "/chains/{chainId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "supportEmail",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/chains",
+        "entity_key": "chains",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "chainId": "chainId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1chains~1{chainId}/put",
+        "#/paths/~1chains~1{chainId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "delete_success_statuses": [
+        204
+      ],
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "kind": "update-delete-linearizable",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation": {
+        "absence_statuses": [
+          404
+        ],
+        "method": "GET",
+        "path_template": "/chains/{chainId}"
+      },
+      "operation_id": "put:/chains/{chainId}",
+      "oracle_id": "concurrency::update-delete::put:/chains/{chainId}",
+      "path_template": "/chains/{chainId}",
+      "runtime": {
+        "create_operation_id": "post:/chains",
+        "entity_key": "chains",
+        "limitation": "update-delete-needs-a-dedicated-created-resource",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "chainId": "chainId"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1chains~1{chainId}/put",
+        "#/paths/~1chains~1{chainId}/delete",
+        "#/paths/~1chains~1{chainId}/get"
+      ],
+      "update_success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "bayCount",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "capacity",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "chainId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/garages/{garageId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/garages/{garageId}",
+      "oracle_id": "concurrency::same-field-domain::put:/garages/{garageId}",
+      "path_template": "/garages/{garageId}",
+      "runtime": {
+        "create_operation_id": "post:/garages",
+        "entity_key": "garages",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "garageId": "garageId"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1garages~1{garageId}/put",
+        "#/paths/~1garages~1{garageId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/garages/{garageId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/garages/{garageId}",
+      "oracle_id": "concurrency::same-field::put:/garages/{garageId}::active",
+      "path_template": "/garages/{garageId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "bayCount",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "capacity",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "chainId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/garages",
+        "entity_key": "garages",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "garageId": "garageId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1garages~1{garageId}/put",
+        "#/paths/~1garages~1{garageId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "bayCount",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/garages/{garageId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/garages/{garageId}",
+      "oracle_id": "concurrency::same-field::put:/garages/{garageId}::bayCount",
+      "path_template": "/garages/{garageId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "bayCount",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "capacity",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "chainId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/garages",
+        "entity_key": "garages",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "garageId": "garageId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1garages~1{garageId}/put",
+        "#/paths/~1garages~1{garageId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "capacity",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/garages/{garageId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/garages/{garageId}",
+      "oracle_id": "concurrency::same-field::put:/garages/{garageId}::capacity",
+      "path_template": "/garages/{garageId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "bayCount",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "capacity",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "chainId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/garages",
+        "entity_key": "garages",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "garageId": "garageId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1garages~1{garageId}/put",
+        "#/paths/~1garages~1{garageId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "chainId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/garages/{garageId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/garages/{garageId}",
+      "oracle_id": "concurrency::same-field::put:/garages/{garageId}::chainId",
+      "path_template": "/garages/{garageId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "bayCount",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "capacity",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "chainId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/garages",
+        "entity_key": "garages",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "garageId": "garageId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1garages~1{garageId}/put",
+        "#/paths/~1garages~1{garageId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/garages/{garageId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/garages/{garageId}",
+      "oracle_id": "concurrency::same-field::put:/garages/{garageId}::description",
+      "path_template": "/garages/{garageId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "bayCount",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "capacity",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "chainId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/garages",
+        "entity_key": "garages",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "garageId": "garageId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1garages~1{garageId}/put",
+        "#/paths/~1garages~1{garageId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/garages/{garageId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/garages/{garageId}",
+      "oracle_id": "concurrency::same-field::put:/garages/{garageId}::name",
+      "path_template": "/garages/{garageId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "active",
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "bayCount",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "capacity",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "chainId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/garages",
+        "entity_key": "garages",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "garageId": "garageId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1garages~1{garageId}/put",
+        "#/paths/~1garages~1{garageId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "delete_success_statuses": [
+        204
+      ],
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "kind": "update-delete-linearizable",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation": {
+        "absence_statuses": [
+          404
+        ],
+        "method": "GET",
+        "path_template": "/garages/{garageId}"
+      },
+      "operation_id": "put:/garages/{garageId}",
+      "oracle_id": "concurrency::update-delete::put:/garages/{garageId}",
+      "path_template": "/garages/{garageId}",
+      "runtime": {
+        "create_operation_id": "post:/garages",
+        "entity_key": "garages",
+        "limitation": "update-delete-needs-a-dedicated-created-resource",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "garageId": "garageId"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1garages~1{garageId}/put",
+        "#/paths/~1garages~1{garageId}/delete",
+        "#/paths/~1garages~1{garageId}/get"
+      ],
+      "update_success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "email",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "fullName",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "preferredGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "type",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/customers/{customerId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/customers/{customerId}",
+      "oracle_id": "concurrency::same-field-domain::put:/customers/{customerId}",
+      "path_template": "/customers/{customerId}",
+      "runtime": {
+        "create_operation_id": "post:/customers",
+        "entity_key": "customers",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "customerId": "customerId"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1customers~1{customerId}/put",
+        "#/paths/~1customers~1{customerId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/customers/{customerId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/customers/{customerId}",
+      "oracle_id": "concurrency::same-field::put:/customers/{customerId}::description",
+      "path_template": "/customers/{customerId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "email",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "fullName",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "preferredGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "type",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/customers",
+        "entity_key": "customers",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "customerId": "customerId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1customers~1{customerId}/put",
+        "#/paths/~1customers~1{customerId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "email",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/customers/{customerId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/customers/{customerId}",
+      "oracle_id": "concurrency::same-field::put:/customers/{customerId}::email",
+      "path_template": "/customers/{customerId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "email",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "fullName",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "preferredGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "type",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/customers",
+        "entity_key": "customers",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "customerId": "customerId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1customers~1{customerId}/put",
+        "#/paths/~1customers~1{customerId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "fullName",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/customers/{customerId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/customers/{customerId}",
+      "oracle_id": "concurrency::same-field::put:/customers/{customerId}::fullName",
+      "path_template": "/customers/{customerId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "email",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "fullName",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "preferredGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "type",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/customers",
+        "entity_key": "customers",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "customerId": "customerId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1customers~1{customerId}/put",
+        "#/paths/~1customers~1{customerId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/customers/{customerId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/customers/{customerId}",
+      "oracle_id": "concurrency::same-field::put:/customers/{customerId}::name",
+      "path_template": "/customers/{customerId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "email",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "fullName",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "preferredGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "type",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/customers",
+        "entity_key": "customers",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "customerId": "customerId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1customers~1{customerId}/put",
+        "#/paths/~1customers~1{customerId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/customers/{customerId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/customers/{customerId}",
+      "oracle_id": "concurrency::same-field::put:/customers/{customerId}::phone",
+      "path_template": "/customers/{customerId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "email",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "fullName",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "preferredGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "type",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/customers",
+        "entity_key": "customers",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "customerId": "customerId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1customers~1{customerId}/put",
+        "#/paths/~1customers~1{customerId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "preferredGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/customers/{customerId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/customers/{customerId}",
+      "oracle_id": "concurrency::same-field::put:/customers/{customerId}::preferredGarageId",
+      "path_template": "/customers/{customerId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "email",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "fullName",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "phone",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "preferredGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "type",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/customers",
+        "entity_key": "customers",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "customerId": "customerId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1customers~1{customerId}/put",
+        "#/paths/~1customers~1{customerId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "delete_success_statuses": [
+        204
+      ],
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "kind": "update-delete-linearizable",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation": {
+        "absence_statuses": [
+          404
+        ],
+        "method": "GET",
+        "path_template": "/customers/{customerId}"
+      },
+      "operation_id": "put:/customers/{customerId}",
+      "oracle_id": "concurrency::update-delete::put:/customers/{customerId}",
+      "path_template": "/customers/{customerId}",
+      "runtime": {
+        "create_operation_id": "post:/customers",
+        "entity_key": "customers",
+        "limitation": "update-delete-needs-a-dedicated-created-resource",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "customerId": "customerId"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1customers~1{customerId}/put",
+        "#/paths/~1customers~1{customerId}/delete",
+        "#/paths/~1customers~1{customerId}/get"
+      ],
+      "update_success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "color",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "homeGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "licensePlate",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "make",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "mileage",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "model",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ownerCustomerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "year",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/cars/{vin}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/cars/{vin}",
+      "oracle_id": "concurrency::same-field-domain::put:/cars/{vin}",
+      "path_template": "/cars/{vin}",
+      "runtime": {
+        "create_operation_id": "post:/cars",
+        "entity_key": "cars",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "vin": "vin"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1cars~1{vin}/put",
+        "#/paths/~1cars~1{vin}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "color",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/cars/{vin}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/cars/{vin}",
+      "oracle_id": "concurrency::same-field::put:/cars/{vin}::color",
+      "path_template": "/cars/{vin}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "color",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "homeGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "licensePlate",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "make",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "mileage",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "model",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ownerCustomerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "year",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/cars",
+        "entity_key": "cars",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "vin": "vin"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1cars~1{vin}/put",
+        "#/paths/~1cars~1{vin}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/cars/{vin}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/cars/{vin}",
+      "oracle_id": "concurrency::same-field::put:/cars/{vin}::description",
+      "path_template": "/cars/{vin}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "color",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "homeGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "licensePlate",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "make",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "mileage",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "model",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ownerCustomerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "year",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/cars",
+        "entity_key": "cars",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "vin": "vin"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1cars~1{vin}/put",
+        "#/paths/~1cars~1{vin}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "homeGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/cars/{vin}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/cars/{vin}",
+      "oracle_id": "concurrency::same-field::put:/cars/{vin}::homeGarageId",
+      "path_template": "/cars/{vin}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "color",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "homeGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "licensePlate",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "make",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "mileage",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "model",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ownerCustomerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "year",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/cars",
+        "entity_key": "cars",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "vin": "vin"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1cars~1{vin}/put",
+        "#/paths/~1cars~1{vin}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "licensePlate",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/cars/{vin}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/cars/{vin}",
+      "oracle_id": "concurrency::same-field::put:/cars/{vin}::licensePlate",
+      "path_template": "/cars/{vin}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "color",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "homeGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "licensePlate",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "make",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "mileage",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "model",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ownerCustomerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "year",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/cars",
+        "entity_key": "cars",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "vin": "vin"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1cars~1{vin}/put",
+        "#/paths/~1cars~1{vin}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "make",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/cars/{vin}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/cars/{vin}",
+      "oracle_id": "concurrency::same-field::put:/cars/{vin}::make",
+      "path_template": "/cars/{vin}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "color",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "homeGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "licensePlate",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "make",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "mileage",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "model",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ownerCustomerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "year",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/cars",
+        "entity_key": "cars",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "vin": "vin"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1cars~1{vin}/put",
+        "#/paths/~1cars~1{vin}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "mileage",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/cars/{vin}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/cars/{vin}",
+      "oracle_id": "concurrency::same-field::put:/cars/{vin}::mileage",
+      "path_template": "/cars/{vin}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "color",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "homeGarageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "licensePlate",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "make",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "mileage",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "model",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ownerCustomerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "year",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/cars",
+        "entity_key": "cars",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "vin": "vin"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1cars~1{vin}/put",
+        "#/paths/~1cars~1{vin}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "delete_success_statuses": [
+        204
+      ],
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "kind": "update-delete-linearizable",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation": {
+        "absence_statuses": [
+          404
+        ],
+        "method": "GET",
+        "path_template": "/cars/{vin}"
+      },
+      "operation_id": "put:/cars/{vin}",
+      "oracle_id": "concurrency::update-delete::put:/cars/{vin}",
+      "path_template": "/cars/{vin}",
+      "runtime": {
+        "create_operation_id": "post:/cars",
+        "entity_key": "cars",
+        "limitation": "update-delete-needs-a-dedicated-created-resource",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "vin": "vin"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1cars~1{vin}/put",
+        "#/paths/~1cars~1{vin}/delete",
+        "#/paths/~1cars~1{vin}/get"
+      ],
+      "update_success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalKm",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalMonths",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "planType",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/periodic-maintenance/{pmId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/periodic-maintenance/{pmId}",
+      "oracle_id": "concurrency::same-field-domain::put:/periodic-maintenance/{pmId}",
+      "path_template": "/periodic-maintenance/{pmId}",
+      "runtime": {
+        "create_operation_id": "post:/periodic-maintenance",
+        "entity_key": "periodic-maintenance",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "pmId": "pmId"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1periodic-maintenance~1{pmId}/put",
+        "#/paths/~1periodic-maintenance~1{pmId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/periodic-maintenance/{pmId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/periodic-maintenance/{pmId}",
+      "oracle_id": "concurrency::same-field::put:/periodic-maintenance/{pmId}::carVin",
+      "path_template": "/periodic-maintenance/{pmId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalKm",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalMonths",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "planType",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/periodic-maintenance",
+        "entity_key": "periodic-maintenance",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "pmId": "pmId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1periodic-maintenance~1{pmId}/put",
+        "#/paths/~1periodic-maintenance~1{pmId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/periodic-maintenance/{pmId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/periodic-maintenance/{pmId}",
+      "oracle_id": "concurrency::same-field::put:/periodic-maintenance/{pmId}::description",
+      "path_template": "/periodic-maintenance/{pmId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalKm",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalMonths",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "planType",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/periodic-maintenance",
+        "entity_key": "periodic-maintenance",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "pmId": "pmId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1periodic-maintenance~1{pmId}/put",
+        "#/paths/~1periodic-maintenance~1{pmId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/periodic-maintenance/{pmId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/periodic-maintenance/{pmId}",
+      "oracle_id": "concurrency::same-field::put:/periodic-maintenance/{pmId}::garageId",
+      "path_template": "/periodic-maintenance/{pmId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalKm",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalMonths",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "planType",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/periodic-maintenance",
+        "entity_key": "periodic-maintenance",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "pmId": "pmId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1periodic-maintenance~1{pmId}/put",
+        "#/paths/~1periodic-maintenance~1{pmId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalKm",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/periodic-maintenance/{pmId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/periodic-maintenance/{pmId}",
+      "oracle_id": "concurrency::same-field::put:/periodic-maintenance/{pmId}::intervalKm",
+      "path_template": "/periodic-maintenance/{pmId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalKm",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalMonths",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "planType",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/periodic-maintenance",
+        "entity_key": "periodic-maintenance",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "pmId": "pmId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1periodic-maintenance~1{pmId}/put",
+        "#/paths/~1periodic-maintenance~1{pmId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalMonths",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/periodic-maintenance/{pmId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/periodic-maintenance/{pmId}",
+      "oracle_id": "concurrency::same-field::put:/periodic-maintenance/{pmId}::intervalMonths",
+      "path_template": "/periodic-maintenance/{pmId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalKm",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalMonths",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "planType",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/periodic-maintenance",
+        "entity_key": "periodic-maintenance",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "pmId": "pmId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1periodic-maintenance~1{pmId}/put",
+        "#/paths/~1periodic-maintenance~1{pmId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "planType",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/periodic-maintenance/{pmId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/periodic-maintenance/{pmId}",
+      "oracle_id": "concurrency::same-field::put:/periodic-maintenance/{pmId}::planType",
+      "path_template": "/periodic-maintenance/{pmId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalKm",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "intervalMonths",
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "planType",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/periodic-maintenance",
+        "entity_key": "periodic-maintenance",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "pmId": "pmId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1periodic-maintenance~1{pmId}/put",
+        "#/paths/~1periodic-maintenance~1{pmId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "delete_success_statuses": [
+        204
+      ],
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "kind": "update-delete-linearizable",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation": {
+        "absence_statuses": [
+          404
+        ],
+        "method": "GET",
+        "path_template": "/periodic-maintenance/{pmId}"
+      },
+      "operation_id": "put:/periodic-maintenance/{pmId}",
+      "oracle_id": "concurrency::update-delete::put:/periodic-maintenance/{pmId}",
+      "path_template": "/periodic-maintenance/{pmId}",
+      "runtime": {
+        "create_operation_id": "post:/periodic-maintenance",
+        "entity_key": "periodic-maintenance",
+        "limitation": "update-delete-needs-a-dedicated-created-resource",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "pmId": "pmId"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1periodic-maintenance~1{pmId}/put",
+        "#/paths/~1periodic-maintenance~1{pmId}/delete",
+        "#/paths/~1periodic-maintenance~1{pmId}/get"
+      ],
+      "update_success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "complaint",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "customerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/repair-orders/{roId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/repair-orders/{roId}",
+      "oracle_id": "concurrency::same-field-domain::put:/repair-orders/{roId}",
+      "path_template": "/repair-orders/{roId}",
+      "runtime": {
+        "create_operation_id": "post:/repair-orders",
+        "entity_key": "repair-orders",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "roId": "roId"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1repair-orders~1{roId}/put",
+        "#/paths/~1repair-orders~1{roId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/repair-orders/{roId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/repair-orders/{roId}",
+      "oracle_id": "concurrency::same-field::put:/repair-orders/{roId}::carVin",
+      "path_template": "/repair-orders/{roId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "complaint",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "customerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/repair-orders",
+        "entity_key": "repair-orders",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "roId": "roId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1repair-orders~1{roId}/put",
+        "#/paths/~1repair-orders~1{roId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "complaint",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/repair-orders/{roId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/repair-orders/{roId}",
+      "oracle_id": "concurrency::same-field::put:/repair-orders/{roId}::complaint",
+      "path_template": "/repair-orders/{roId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "complaint",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "customerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/repair-orders",
+        "entity_key": "repair-orders",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "roId": "roId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1repair-orders~1{roId}/put",
+        "#/paths/~1repair-orders~1{roId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "customerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/repair-orders/{roId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/repair-orders/{roId}",
+      "oracle_id": "concurrency::same-field::put:/repair-orders/{roId}::customerId",
+      "path_template": "/repair-orders/{roId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "complaint",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "customerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/repair-orders",
+        "entity_key": "repair-orders",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "roId": "roId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1repair-orders~1{roId}/put",
+        "#/paths/~1repair-orders~1{roId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/repair-orders/{roId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/repair-orders/{roId}",
+      "oracle_id": "concurrency::same-field::put:/repair-orders/{roId}::description",
+      "path_template": "/repair-orders/{roId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "complaint",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "customerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/repair-orders",
+        "entity_key": "repair-orders",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "roId": "roId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1repair-orders~1{roId}/put",
+        "#/paths/~1repair-orders~1{roId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/repair-orders/{roId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/repair-orders/{roId}",
+      "oracle_id": "concurrency::same-field::put:/repair-orders/{roId}::garageId",
+      "path_template": "/repair-orders/{roId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "complaint",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "customerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/repair-orders",
+        "entity_key": "repair-orders",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "roId": "roId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1repair-orders~1{roId}/put",
+        "#/paths/~1repair-orders~1{roId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/repair-orders/{roId}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/repair-orders/{roId}",
+      "oracle_id": "concurrency::same-field::put:/repair-orders/{roId}::status",
+      "path_template": "/repair-orders/{roId}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "carVin",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "complaint",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "customerId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "description",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "garageId",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "status",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/repair-orders",
+        "entity_key": "repair-orders",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "roId": "roId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1repair-orders~1{roId}/put",
+        "#/paths/~1repair-orders~1{roId}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "delete_success_statuses": [
+        204
+      ],
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "kind": "update-delete-linearizable",
+      "methods": [
+        "PUT",
+        "DELETE"
+      ],
+      "observation": {
+        "absence_statuses": [
+          404
+        ],
+        "method": "GET",
+        "path_template": "/repair-orders/{roId}"
+      },
+      "operation_id": "put:/repair-orders/{roId}",
+      "oracle_id": "concurrency::update-delete::put:/repair-orders/{roId}",
+      "path_template": "/repair-orders/{roId}",
+      "runtime": {
+        "create_operation_id": "post:/repair-orders",
+        "entity_key": "repair-orders",
+        "limitation": "update-delete-needs-a-dedicated-created-resource",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "roId": "roId"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1repair-orders~1{roId}/put",
+        "#/paths/~1repair-orders~1{roId}/delete",
+        "#/paths/~1repair-orders~1{roId}/get"
+      ],
+      "update_success_statuses": [
+        200
+      ],
+      "width": 2
+    }
+  ],
+  "policy": {
+    "all_operations_receive_contract_verifier": true,
+    "concurrency_executor_role": "transport-and-barrier-only",
+    "decision_owner": "generated-provengo-model-and-oracle-manifest",
+    "external_application_knowledge_allowed": false,
+    "state_claims_require_openapi-derived-observation": true,
+    "unobservable_mutations_are_reported_contract_only": true
+  },
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.3",
+    "sha256": "464b760928b607da4d6cef46a6beff7fbcba6063e5de54617c8e49e2df7574a5",
+    "title": "Garage Chain SUT API (Demo)",
+    "version": "1.0.0"
+  }
+}

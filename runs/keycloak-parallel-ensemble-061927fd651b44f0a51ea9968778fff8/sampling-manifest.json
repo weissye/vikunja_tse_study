@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "plan_sha256": "d0f42817b7b07dea8ec750c20dab624c50e4e9f7bf0bf8adfacf98264a28cb3d",
+  "controls_sha256": "6e46030212c7c67ce79a0fc67a55e1b763dc2ee0e76e91d1f2b5fc15cf399126",
+  "batch_archives": [
+    {
+      "file": "batch-1-samples-50.zip",
+      "sha256": "f0629a2c25485872695422b54442abbbd02a7f6d12c87999c855b82b988d162b",
+      "uncompressed_sha256": "a975774f40596fcd78dc51cfdbb39da2e2d793d2b1f740c933508843a12b46e4",
+      "audit": {
+        "scenarios": 50,
+        "complete_rest_schedules": 50,
+        "distinct_exact_scenarios": 50,
+        "families": {
+          "disjoint-put-serial-outcomes": 15,
+          "same-field-one-successful-value-visible": 14,
+          "noop-versus-change": 21
+        },
+        "instances": {
+          "1": 14,
+          "2": 22,
+          "3": 14
+        },
+        "paired_dispatch_required": true,
+        "http_executed": false,
+        "oracle_verdicts": "NOT_EVALUATED"
+      }
+    },
+    {
+      "file": "batch-2-samples-50.zip",
+      "sha256": "b06b7c99308cdb995fd4c7ea68c0407be8d7c175c935e272a5a9701d1aab455c",
+      "uncompressed_sha256": "ed6dfedbee6a7e762bb460809101e3955fd9e452bdd153ca7cae1bf09724c8b5",
+      "audit": {
+        "scenarios": 50,
+        "complete_rest_schedules": 50,
+        "distinct_exact_scenarios": 50,
+        "families": {
+          "same-field-one-successful-value-visible": 15,
+          "noop-versus-change": 22,
+          "disjoint-put-serial-outcomes": 13
+        },
+        "instances": {
+          "3": 21,
+          "1": 18,
+          "2": 11
+        },
+        "paired_dispatch_required": true,
+        "http_executed": false,
+        "oracle_verdicts": "NOT_EVALUATED"
+      }
+    },
+    {
+      "file": "batch-3-samples-50.zip",
+      "sha256": "7333a3c993d4542a4509e4caf0286e1ef7081f6efa71609a4460791a775285bf",
+      "uncompressed_sha256": "ee2635a1cc9e19eea925a383d6a4f16d478b733502c2ec167bffa64c5abfc022",
+      "audit": {
+        "scenarios": 50,
+        "complete_rest_schedules": 50,
+        "distinct_exact_scenarios": 50,
+        "families": {
+          "same-field-one-successful-value-visible": 14,
+          "noop-versus-change": 17,
+          "disjoint-put-serial-outcomes": 19
+        },
+        "instances": {
+          "2": 13,
+          "3": 21,
+          "1": 16
+        },
+        "paired_dispatch_required": true,
+        "http_executed": false,
+        "oracle_verdicts": "NOT_EVALUATED"
+      }
+    },
+    {
+      "file": "batch-4-samples-50.zip",
+      "sha256": "14fc6e483f5ab58405d061a74a870c9d6857227d1d261e56ad14827a5c54c203",
+      "uncompressed_sha256": "7e84791210ec826dfa99c5ffba0c25e8b3184cac394ff9661975192b07f057db",
+      "audit": {
+        "scenarios": 50,
+        "complete_rest_schedules": 50,
+        "distinct_exact_scenarios": 50,
+        "families": {
+          "disjoint-put-serial-outcomes": 14,
+          "same-field-one-successful-value-visible": 18,
+          "noop-versus-change": 18
+        },
+        "instances": {
+          "3": 16,
+          "1": 16,
+          "2": 18
+        },
+        "paired_dispatch_required": true,
+        "http_executed": false,
+        "oracle_verdicts": "NOT_EVALUATED"
+      }
+    },
+    {
+      "file": "batch-5-samples-50.zip",
+      "sha256": "43469cc641181da4c40dc2093e218f3767de604cfd87f981f63bfe034ee6a920",
+      "uncompressed_sha256": "76266e58e8ecc4e0e12e482e062317a7897cb37e30c0baed93c9804dabbb07e0",
+      "audit": {
+        "scenarios": 50,
+        "complete_rest_schedules": 50,
+        "distinct_exact_scenarios": 50,
+        "families": {
+          "disjoint-put-serial-outcomes": 19,
+          "noop-versus-change": 16,
+          "same-field-one-successful-value-visible": 15
+        },
+        "instances": {
+          "1": 18,
+          "2": 15,
+          "3": 17
+        },
+        "paired_dispatch_required": true,
+        "http_executed": false,
+        "oracle_verdicts": "NOT_EVALUATED"
+      }
+    },
+    {
+      "file": "batch-6-samples-50.zip",
+      "sha256": "619d508aebf9dffe4082f1b225ddd8a828d2738cc0acdcd836e5aaa34d2d6792",
+      "uncompressed_sha256": "d582af8f570635b8cc9898ff47caf343d832469d6a15b0b520fa092d6fe94271",
+      "audit": {
+        "scenarios": 50,
+        "complete_rest_schedules": 50,
+        "distinct_exact_scenarios": 50,
+        "families": {
+          "same-field-one-successful-value-visible": 15,
+          "noop-versus-change": 15,
+          "disjoint-put-serial-outcomes": 20
+        },
+        "instances": {
+          "2": 15,
+          "1": 16,
+          "3": 19
+        },
+        "paired_dispatch_required": true,
+        "http_executed": false,
+        "oracle_verdicts": "NOT_EVALUATED"
+      }
+    }
+  ],
+  "result": "INCOMPLETE",
+  "model_sha256": "1b5a3cc6e6bc72b672242dc46fd90761a8d5d511cc084a8ac71a06bb96ee3bd2"
+}

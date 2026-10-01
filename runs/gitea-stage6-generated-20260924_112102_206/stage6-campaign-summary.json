@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "stage": "Gitea Stage 6 generated exploration",
+  "status": "INCOMPLETE",
+  "exploration_status": "INCOMPLETE",
+  "input_basis": "frozen Gitea OpenAPI and opt-in long-interleaving generator profile",
+  "run_count": 1,
+  "total_http_events": 0,
+  "long_story_steps_selected": 0,
+  "generated_long_stories": 0,
+  "completed_long_stories": 0,
+  "successful_long_stories": 0,
+  "skipped_long_stories": 0,
+  "unfinished_long_stories": 0,
+  "distinct_long_stories_selected": 0,
+  "longest_observed_story_rounds": 0,
+  "total_epochs": 0,
+  "observed_overlapping_epochs": 0,
+  "overlapping_epochs_after_prior_http_threshold": 0,
+  "minimum_prior_http_events": 12,
+  "unique_generated_scenarios": [],
+  "evaluator_status_counts": {
+    "None": 1
+  },
+  "runs": [
+    {
+      "seed": 20261004,
+      "evidence_status": "INCOMPLETE",
+      "phase": "FAILED",
+      "reason": "Verifier generation failed with exit code 1."
+    }
+  ],
+  "interpretation": "Selected long story steps establish within-story execution order; they do not establish that a later concurrency epoch used the same resource. Prior HTTP events measure sequence position, not causal dependency. An overlap is only a transport fact. Generated verifier results and independent semantic confirmation determine product claims. The earlier direct-HTTP pilot is separate evidence, not a generated finding."
+}

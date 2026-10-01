@@ -1,0 +1,76 @@
+{
+  "creation_order": [
+    "books",
+    "users",
+    "holds",
+    "loans"
+  ],
+  "cycle_edges_removed": [],
+  "deletion_order": [
+    "loans",
+    "holds",
+    "users",
+    "books"
+  ],
+  "edges": [
+    {
+      "confidence": 0.95,
+      "field_name": "userId",
+      "provenance": [
+        {
+          "detail": "Composite key parameter 'userId' in /loans/{userId}/{bookId} matches entity 'users'",
+          "pointer": "/loans/{userId}/{bookId}",
+          "rule": "D1:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "loans",
+      "target": "users"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "bookId",
+      "provenance": [
+        {
+          "detail": "Composite key parameter 'bookId' in /loans/{userId}/{bookId} matches entity 'books'",
+          "pointer": "/loans/{userId}/{bookId}",
+          "rule": "D1:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "loans",
+      "target": "books"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "userId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'userId' matches entity 'users'",
+          "pointer": "#/paths/~1holds/post/requestBody/content/application~1json/properties/userId",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "holds",
+      "target": "users"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "bookId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'bookId' matches entity 'books'",
+          "pointer": "#/paths/~1holds/post/requestBody/content/application~1json/properties/bookId",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "holds",
+      "target": "books"
+    }
+  ],
+  "had_cycle": false,
+  "nodes": [
+    "users",
+    "books",
+    "loans",
+    "holds"
+  ]
+}

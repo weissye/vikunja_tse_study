@@ -1,0 +1,137 @@
+{
+  "creation_order": [
+    "admin/notifications/templates",
+    "admin/users",
+    "albums",
+    "api-keys",
+    "assets/device",
+    "duplicates",
+    "jobs",
+    "libraries",
+    "memories",
+    "notifications",
+    "partners",
+    "people",
+    "sessions",
+    "stacks",
+    "tags",
+    "users",
+    "assets",
+    "shared-links",
+    "activities",
+    "faces"
+  ],
+  "cycle_edges_removed": [],
+  "deletion_order": [
+    "faces",
+    "activities",
+    "shared-links",
+    "assets",
+    "users",
+    "tags",
+    "stacks",
+    "sessions",
+    "people",
+    "partners",
+    "notifications",
+    "memories",
+    "libraries",
+    "jobs",
+    "duplicates",
+    "assets/device",
+    "api-keys",
+    "albums",
+    "admin/users",
+    "admin/notifications/templates"
+  ],
+  "edges": [
+    {
+      "confidence": 0.9,
+      "field_name": "albumId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'albumId' matches entity 'albums'",
+          "pointer": "#/paths/~1activities/post/requestBody/content/application~1json/properties/albumId",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "activities",
+      "target": "albums"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "assetId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'assetId' matches entity 'assets'",
+          "pointer": "#/paths/~1activities/post/requestBody/content/application~1json/properties/assetId",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "activities",
+      "target": "assets"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "deviceId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'deviceId' matches entity 'assets/device'",
+          "pointer": "#/paths/~1assets/post/requestBody/content/multipart~1form-data/properties/deviceId",
+          "rule": "D2:D_key_field_exact_match"
+        }
+      ],
+      "source": "assets",
+      "target": "assets/device"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "assetId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'assetId' matches entity 'assets'",
+          "pointer": "#/paths/~1faces/post/requestBody/content/application~1json/properties/assetId",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "faces",
+      "target": "assets"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "albumId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'albumId' matches entity 'albums'",
+          "pointer": "#/paths/~1shared-links/post/requestBody/content/application~1json/properties/albumId",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "shared-links",
+      "target": "albums"
+    }
+  ],
+  "had_cycle": false,
+  "nodes": [
+    "activities",
+    "admin/notifications/templates",
+    "admin/users",
+    "albums",
+    "api-keys",
+    "assets",
+    "assets/device",
+    "duplicates",
+    "faces",
+    "jobs",
+    "libraries",
+    "memories",
+    "notifications",
+    "partners",
+    "people",
+    "sessions",
+    "shared-links",
+    "stacks",
+    "tags",
+    "users"
+  ]
+}

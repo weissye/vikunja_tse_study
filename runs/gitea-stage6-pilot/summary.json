@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "scheduler": "provengo",
+  "spec_sha256": "c962e3c8cbdc1183693f2b2f0b2471c414ba283bff86407c453031640af788bd",
+  "seeds": [
+    301,
+    302,
+    303
+  ],
+  "completed": 1,
+  "candidate_count": 0,
+  "repeated": [],
+  "outcome_variation": [
+    {
+      "family": "/repos/{owner}/{repo}/milestones",
+      "operation_id": "issueGetMilestone",
+      "outcomes": {
+        "200": [
+          303
+        ],
+        "404": [
+          303
+        ]
+      },
+      "classification": "STATUS_VARIATION_REQUIRES_EQUIVALENT_PRECONDITIONS"
+    },
+    {
+      "family": "/repos/{owner}/{repo}/milestones",
+      "operation_id": "issueDeleteMilestone",
+      "outcomes": {
+        "204": [
+          303
+        ],
+        "404": [
+          303
+        ]
+      },
+      "classification": "STATUS_VARIATION_REQUIRES_EQUIVALENT_PRECONDITIONS"
+    }
+  ],
+  "confirmed_bugs": 0,
+  "note": "No automatic promotion to confirmed bug without valid preconditions, independent before/after oracle and replay review."
+}

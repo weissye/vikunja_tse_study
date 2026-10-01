@@ -1,0 +1,147 @@
+{
+  "oracles": [
+    {
+      "delete_success_statuses": [
+        204
+      ],
+      "execution": "three-distinct-created-resources-two-serial-controls-one-barrier-epoch",
+      "fields": [
+        {
+          "comparison_basis": "same-property-request-and-later-get",
+          "comparison_confidence": "high",
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "albumName",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "empirical-update-delete",
+      "media_type": "application/json",
+      "method": "PATCH",
+      "methods": [
+        "PATCH",
+        "DELETE"
+      ],
+      "observation": {
+        "method": "GET",
+        "path_template": "/albums/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "cross-method::update-delete::updateAlbumInfo::deleteAlbum",
+      "path_template": "/albums/{id}",
+      "runtime": {
+        "create_operation_id": "createAlbum",
+        "entity_key": "/albums",
+        "instance_ready_label": "AlbumResponseDtos",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true,
+        "required_isolated_created_resources": 3,
+        "wait_for_closed_oracles": [
+          1
+        ]
+      },
+      "source_pointers": [
+        "#/paths/~1albums~1{id}/patch",
+        "#/paths/~1albums~1{id}/delete",
+        "#/paths/~1albums~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "delete_success_statuses": [
+        204
+      ],
+      "execution": "three-distinct-created-resources-two-serial-controls-one-barrier-epoch",
+      "fields": [
+        {
+          "comparison_basis": "same-property-request-and-later-get",
+          "comparison_confidence": "high",
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "allowDownload",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        }
+      ],
+      "kind": "empirical-update-delete",
+      "media_type": "application/json",
+      "method": "PATCH",
+      "methods": [
+        "PATCH",
+        "DELETE"
+      ],
+      "observation": {
+        "method": "GET",
+        "path_template": "/shared-links/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "updateSharedLink",
+      "oracle_id": "cross-method::update-delete::updateSharedLink::removeSharedLink",
+      "path_template": "/shared-links/{id}",
+      "runtime": {
+        "create_operation_id": "createSharedLink",
+        "entity_key": "/shared-links",
+        "instance_ready_label": "SharedLinkResponseDtos",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true,
+        "required_isolated_created_resources": 3
+      },
+      "source_pointers": [
+        "#/paths/~1shared-links~1{id}/patch",
+        "#/paths/~1shared-links~1{id}/delete",
+        "#/paths/~1shared-links~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    }
+  ],
+  "policy": {
+    "all_operations_receive_contract_verifier": true,
+    "concurrency_executor_role": "transport-and-barrier-only",
+    "decision_owner": "generated-provengo-model-and-oracle-manifest",
+    "empirical_update_delete": true,
+    "external_application_knowledge_allowed": false,
+    "state_claims_require_openapi-derived-observation": true,
+    "unobservable_mutations_are_reported_contract_only": true
+  },
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.0",
+    "sha256": "007f2882f09610dd59ca8723e298207da1c68ceb33cca904c58b59bf95d87b9f",
+    "title": "Immich",
+    "version": "3.2.0"
+  }
+}

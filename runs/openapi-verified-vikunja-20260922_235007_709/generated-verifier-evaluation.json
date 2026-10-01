@@ -1,0 +1,145 @@
+{
+  "contract_oracles_exercised": 3,
+  "contract_oracles_generated": 29,
+  "counts": {
+    "INCONCLUSIVE": 4,
+    "PASS": 4,
+    "VIOLATED": 1
+  },
+  "layer_counts": {
+    "concurrency": {
+      "INCONCLUSIVE": 0,
+      "PASS": 0,
+      "VIOLATED": 0
+    },
+    "contract": {
+      "INCONCLUSIVE": 0,
+      "PASS": 4,
+      "VIOLATED": 1
+    },
+    "state": {
+      "INCONCLUSIVE": 4,
+      "PASS": 0,
+      "VIOLATED": 0
+    }
+  },
+  "note": "Not-exercised operations are coverage facts, not automatically semantic failures.",
+  "profile": "openapi-only-generated-verifiers",
+  "run_status": "SEMANTIC_ANOMALY",
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.3",
+    "sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941",
+    "title": "Vikunja API",
+    "version": "v2.6.0-469-g94e6f165"
+  },
+  "witnesses": [
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::projects-create",
+      "result": "PASS",
+      "trigger_event": 2
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::projects-create",
+      "result": "PASS",
+      "trigger_event": 3
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::labels-create",
+      "result": "PASS",
+      "trigger_event": 4
+    },
+    {
+      "expected": {
+        "status_in": [
+          201
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 201
+      },
+      "oracle_id": "contract::labels-create",
+      "result": "PASS",
+      "trigger_event": 5
+    },
+    {
+      "expected": {
+        "status_in": [
+          200
+        ]
+      },
+      "kind": "response-contract",
+      "observed": {
+        "status": 422
+      },
+      "oracle_id": "contract::patch-projects-read",
+      "reason": "undocumented-response-status",
+      "result": "VIOLATED",
+      "trigger_event": 6
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": null,
+      "oracle_id": "state::projects-create",
+      "reason": "superseded-before-observation",
+      "resource_path": "/projects/7",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 2
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": null,
+      "oracle_id": "state::projects-create",
+      "reason": "observation-not-found",
+      "resource_path": "/projects/8",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 3
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": null,
+      "oracle_id": "state::labels-create",
+      "reason": "observation-not-found",
+      "resource_path": "/labels/2",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 4
+    },
+    {
+      "kind": "create-visibility",
+      "observation_event": null,
+      "oracle_id": "state::labels-create",
+      "reason": "observation-not-found",
+      "resource_path": "/labels/3",
+      "result": "INCONCLUSIVE",
+      "trigger_event": 5
+    }
+  ]
+}

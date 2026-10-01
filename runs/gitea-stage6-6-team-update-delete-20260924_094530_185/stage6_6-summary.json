@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "stage": "Gitea Stage 6.6 directed diagnostic",
+  "source_spec_sha256": "a0baa9a766c22492bd8c45744157c611d3e95cfc0dc73d6f5d14f294cdddce38",
+  "created_utc": "2026-09-24T09:45:41.872151+00:00",
+  "policy": "Targeted update/delete histories, separate from OpenAPI-only generated campaign.",
+  "parameters": {
+    "trials": 8,
+    "prefix_rounds": 4,
+    "quiescence_ms": 150,
+    "seed": 20261004
+  },
+  "counts": {
+    "PASS": 8,
+    "SEMANTIC_CANDIDATE": 0,
+    "INCONCLUSIVE": 0
+  },
+  "results": [
+    {
+      "trial": 1,
+      "verdict": "PASS",
+      "reason": "successful-delete-remained-absent-after-quiescence",
+      "controls": {
+        "update": 200,
+        "read_after_update": 200,
+        "delete": 204,
+        "read_after_delete": 404,
+        "update_value_observed": true
+      },
+      "before_description": "s66-20260924_094530_185-1-epoch-prefix-3",
+      "epoch_id": "sbt-stage6-6-epoch-1",
+      "overlap": true,
+      "patch_status": 200,
+      "delete_status": 204,
+      "final_get_status": 404,
+      "expected_statuses": {
+        "team_create": [
+          201,
+          404,
+          422
+        ],
+        "team_get": [
+          200,
+          404
+        ],
+        "team_patch": [
+          200,
+          404
+        ],
+        "team_delete": [
+          204,
+          404
+        ]
+      }
+    },
+    {
+      "trial": 2,
+      "verdict": "PASS",
+      "reason": "successful-delete-remained-absent-after-quiescence",
+      "controls": {
+        "update": 200,
+        "read_after_update": 200,
+        "delete": 204,
+        "read_after_delete": 404,
+        "update_value_observed": true
+      },
+      "before_description": "s66-20260924_094530_185-2-epoch-prefix-3",
+      "epoch_id": "sbt-stage6-6-epoch-2",
+      "overlap": true,
+      "patch_status": 200,
+      "delete_status": 204,
+      "final_get_status": 404,
+      "expected_statuses": {
+        "team_create": [
+          201,
+          404,
+          422
+        ],
+        "team_get": [
+          200,
+          404
+        ],
+        "team_patch": [
+          200,
+          404
+        ],
+        "team_delete": [
+          204,
+          404
+        ]
+      }
+    },
+    {
+      "trial": 3,
+      "verdict": "PASS",
+      "reason": "successful-delete-remained-absent-after-quiescence",
+      "controls": {
+        "update": 200,
+        "read_after_update": 200,
+        "delete": 204,
+        "read_after_delete": 404,
+        "update_value_observed": true
+      },
+      "before_description": "s66-20260924_094530_185-3-epoch-prefix-3",
+      "epoch_id": "sbt-stage6-6-epoch-3",
+      "overlap": true,
+      "patch_status": 404,
+      "delete_status": 204,
+      "final_get_status": 404,
+      "expected_statuses": {
+        "team_create": [
+          201,
+          404,
+          422
+        ],
+        "team_get": [
+          200,
+          404
+        ],
+        "team_patch": [
+          200,
+          404
+        ],
+        "team_delete": [
+          204,
+          404
+        ]
+      }
+    },
+    {
+      "trial": 4,
+      "verdict": "PASS",
+      "reason": "successful-delete-remained-absent-after-quiescence",
+      "controls": {
+        "update": 200,
+        "read_after_update": 200,
+        "delete": 204,
+        "read_after_delete": 404,
+        "update_value_observed": true
+      },
+      "before_description": "s66-20260924_094530_185-4-epoch-prefix-3",
+      "epoch_id": "sbt-stage6-6-epoch-4",
+      "overlap": true,
+      "patch_status": 200,
+      "delete_status": 204,
+      "final_get_status": 404,
+      "expected_statuses": {
+        "team_create": [
+          201,
+          404,
+          422
+        ],
+        "team_get": [
+          200,
+          404
+        ],
+        "team_patch": [
+          200,
+          404
+        ],
+        "team_delete": [
+          204,
+          404
+        ]
+      }
+    },
+    {
+      "trial": 5,
+      "verdict": "PASS",
+      "reason": "successful-delete-remained-absent-after-quiescence",
+      "controls": {
+        "update": 200,
+        "read_after_update": 200,
+        "delete": 204,
+        "read_after_delete": 404,
+        "update_value_observed": true
+      },
+      "before_description": "s66-20260924_094530_185-5-epoch-prefix-3",
+      "epoch_id": "sbt-stage6-6-epoch-5",
+      "overlap": true,
+      "patch_status": 200,
+      "delete_status": 204,
+      "final_get_status": 404,
+      "expected_statuses": {
+        "team_create": [
+          201,
+          404,
+          422
+        ],
+        "team_get": [
+          200,
+          404
+        ],
+        "team_patch": [
+          200,
+          404
+        ],
+        "team_delete": [
+          204,
+          404
+        ]
+      }
+    },
+    {
+      "trial": 6,
+      "verdict": "PASS",
+      "reason": "successful-delete-remained-absent-after-quiescence",
+      "controls": {
+        "update": 200,
+        "read_after_update": 200,
+        "delete": 204,
+        "read_after_delete": 404,
+        "update_value_observed": true
+      },
+      "before_description": "s66-20260924_094530_185-6-epoch-prefix-3",
+      "epoch_id": "sbt-stage6-6-epoch-6",
+      "overlap": true,
+      "patch_status": 200,
+      "delete_status": 204,
+      "final_get_status": 404,
+      "expected_statuses": {
+        "team_create": [
+          201,
+          404,
+          422
+        ],
+        "team_get": [
+          200,
+          404
+        ],
+        "team_patch": [
+          200,
+          404
+        ],
+        "team_delete": [
+          204,
+          404
+        ]
+      }
+    },
+    {
+      "trial": 7,
+      "verdict": "PASS",
+      "reason": "successful-delete-remained-absent-after-quiescence",
+      "controls": {
+        "update": 200,
+        "read_after_update": 200,
+        "delete": 204,
+        "read_after_delete": 404,
+        "update_value_observed": true
+      },
+      "before_description": "s66-20260924_094530_185-7-epoch-prefix-3",
+      "epoch_id": "sbt-stage6-6-epoch-7",
+      "overlap": true,
+      "patch_status": 200,
+      "delete_status": 204,
+      "final_get_status": 404,
+      "expected_statuses": {
+        "team_create": [
+          201,
+          404,
+          422
+        ],
+        "team_get": [
+          200,
+          404
+        ],
+        "team_patch": [
+          200,
+          404
+        ],
+        "team_delete": [
+          204,
+          404
+        ]
+      }
+    },
+    {
+      "trial": 8,
+      "verdict": "PASS",
+      "reason": "successful-delete-remained-absent-after-quiescence",
+      "controls": {
+        "update": 200,
+        "read_after_update": 200,
+        "delete": 204,
+        "read_after_delete": 404,
+        "update_value_observed": true
+      },
+      "before_description": "s66-20260924_094530_185-8-epoch-prefix-3",
+      "epoch_id": "sbt-stage6-6-epoch-8",
+      "overlap": true,
+      "patch_status": 200,
+      "delete_status": 204,
+      "final_get_status": 404,
+      "expected_statuses": {
+        "team_create": [
+          201,
+          404,
+          422
+        ],
+        "team_get": [
+          200,
+          404
+        ],
+        "team_patch": [
+          200,
+          404
+        ],
+        "team_delete": [
+          204,
+          404
+        ]
+      }
+    }
+  ]
+}

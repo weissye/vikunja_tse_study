@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "stage": "gitea-stage4-reachability-aware-multiseed-campaign",
+  "status": "PASS",
+  "method": "OpenAPI-derived resource bridge plus cumulative multi-seed coverage",
+  "manual_application_assumptions": 0,
+  "acceptance": {
+    "minimum_unique_oracles": 7,
+    "minimum_producer_families": 2
+  },
+  "runs": [
+    {
+      "run": 1,
+      "seed": 20260940,
+      "directory": "C:\\work\\temp\\vikunja_tse_study\\runs\\gitea-stage3-live-acceptance-20260923_133353_020",
+      "epochs": 21,
+      "new_unique_oracles": 21,
+      "cumulative_unique_oracles": 21,
+      "run_status": "CONTRACT_DEVIATION"
+    },
+    {
+      "run": 2,
+      "seed": 20260941,
+      "directory": "C:\\work\\temp\\vikunja_tse_study\\runs\\gitea-stage3-live-acceptance-20260923_133525_580",
+      "epochs": 27,
+      "new_unique_oracles": 6,
+      "cumulative_unique_oracles": 27,
+      "run_status": "CONTRACT_DEVIATION"
+    },
+    {
+      "run": 3,
+      "seed": 20260942,
+      "directory": "C:\\work\\temp\\vikunja_tse_study\\runs\\gitea-stage3-live-acceptance-20260923_133709_084",
+      "epochs": 27,
+      "new_unique_oracles": 0,
+      "cumulative_unique_oracles": 27,
+      "run_status": "CONTRACT_DEVIATION"
+    },
+    {
+      "run": 4,
+      "seed": 20260943,
+      "directory": "C:\\work\\temp\\vikunja_tse_study\\runs\\gitea-stage3-live-acceptance-20260923_133854_339",
+      "epochs": 27,
+      "new_unique_oracles": 0,
+      "cumulative_unique_oracles": 27,
+      "run_status": "CONTRACT_DEVIATION"
+    }
+  ],
+  "totals": {
+    "runs": 4,
+    "epochs": 102,
+    "unique_oracles": 27,
+    "producer_families": 5,
+    "outcomes": {
+      "CONTRACT_DEVIATION": 4
+    }
+  },
+  "unique_oracle_ids": [
+    "concurrency::same-field::issueEditIssue::assignee",
+    "concurrency::same-field::issueEditIssue::body",
+    "concurrency::same-field::issueEditIssue::content_version",
+    "concurrency::same-field::issueEditIssue::due_date",
+    "concurrency::same-field::issueEditIssue::milestone",
+    "concurrency::same-field::issueEditIssue::ref",
+    "concurrency::same-field::issueEditLabel::color",
+    "concurrency::same-field::issueEditLabel::description",
+    "concurrency::same-field::issueEditLabel::exclusive",
+    "concurrency::same-field::issueEditLabel::is_archived",
+    "concurrency::same-field::issueEditLabel::name",
+    "concurrency::same-field::issueEditMilestone::description",
+    "concurrency::same-field::issueEditMilestone::due_on",
+    "concurrency::same-field::issueEditMilestone::state",
+    "concurrency::same-field::issueEditMilestone::title",
+    "concurrency::same-field::repoEdit::allow_fast_forward_only_merge",
+    "concurrency::same-field::repoEdit::allow_manual_merge",
+    "concurrency::same-field::repoEdit::allow_merge_commits",
+    "concurrency::same-field::repoEdit::allow_merge_update",
+    "concurrency::same-field::repoEdit::allow_rebase",
+    "concurrency::same-field::repoEdit::allow_rebase_explicit",
+    "concurrency::same-field::repoEditRelease::body",
+    "concurrency::same-field::repoEditRelease::draft",
+    "concurrency::same-field::repoEditRelease::name",
+    "concurrency::same-field::repoEditRelease::prerelease",
+    "concurrency::same-field::repoEditRelease::tag_name",
+    "concurrency::same-field::repoEditRelease::target_commitish"
+  ],
+  "producer_operation_ids": [
+    "createCurrentUserRepo",
+    "issueCreateIssue",
+    "issueCreateLabel",
+    "issueCreateMilestone",
+    "repoCreateRelease"
+  ]
+}

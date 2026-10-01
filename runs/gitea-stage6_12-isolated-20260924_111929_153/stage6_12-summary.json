@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "stage": "Gitea Stage 6.12 isolated directed diagnostic",
+  "source_spec_sha256": "a0baa9a766c22492bd8c45744157c611d3e95cfc0dc73d6f5d14f294cdddce38",
+  "created_utc": "2026-09-24T11:19:34.108028+00:00",
+  "scope": "disclosed selected operations; independent of the OpenAPI-only generated campaign",
+  "parameters": {
+    "trials": 1,
+    "prefix_rounds": 4,
+    "quiescence_ms": 150,
+    "seed": 20261005
+  },
+  "counts": {
+    "PASS": 3,
+    "SEMANTIC_CANDIDATE": 0,
+    "INCONCLUSIVE": 1
+  },
+  "results": [
+    {
+      "trial": 1,
+      "case": "org.full_name",
+      "verdict": "INCONCLUSIVE",
+      "reason": "ValueError: Creation failed: HTTP 422"
+    },
+    {
+      "trial": 1,
+      "case": "oauth.name",
+      "path": "/user/applications/oauth2/5",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-1-oauth-name",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": "s612-20260924_111929_153-1-oauth-name-b",
+      "legal_values": [
+        "s612-20260924_111929_153-1-oauth-name-a",
+        "s612-20260924_111929_153-1-oauth-name-b"
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 395800
+    },
+    {
+      "trial": 1,
+      "case": "oauth.confidential_client",
+      "path": "/user/applications/oauth2/6",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-1-oauth-confidential_client",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": true,
+      "legal_values": [
+        true,
+        false
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 476300
+    },
+    {
+      "trial": 1,
+      "case": "oauth.skip_secondary_authorization",
+      "path": "/user/applications/oauth2/7",
+      "verdict": "PASS",
+      "reason": "one-successful-value-visible",
+      "epoch_id": "stage6-12-1-oauth-skip_secondary_authorization",
+      "controls": [
+        {
+          "status": 200,
+          "persisted": true
+        },
+        {
+          "status": 200,
+          "persisted": true
+        }
+      ],
+      "reset_status": 200,
+      "overlap": true,
+      "statuses": [
+        200,
+        200
+      ],
+      "final_status": 200,
+      "final_value": false,
+      "legal_values": [
+        true,
+        false
+      ],
+      "intervening_events": [],
+      "release_skew_ns": 69100
+    }
+  ]
+}

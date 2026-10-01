@@ -1,0 +1,133 @@
+{
+  "all_families_proven": false,
+  "all_requested_families_proven": false,
+  "schema_version": 1,
+  "seeds": {
+    "seed-20261833": {
+      "cross_entity": {
+        "candidates": 2,
+        "evaluated": 0,
+        "missing_ready": 2,
+        "overlapped": 0,
+        "prefix_and_evaluated": 0,
+        "ready": 2,
+        "state": "NOT_OVERLAPPED",
+        "structural_pairs_without_oracle": 10,
+        "verdicts": {},
+        "verified_long_prefix": 0
+      },
+      "noop": {
+        "candidates": 4,
+        "evaluated": 1,
+        "missing_ready": 3,
+        "overlapped": 1,
+        "prefix_and_evaluated": 1,
+        "readable_update_subjects_without_oracle": 5,
+        "ready": 4,
+        "state": "PREFIX_AND_ORACLE_VERIFIED",
+        "verdicts": {
+          "PASS": 1
+        },
+        "verified_long_prefix": 1
+      },
+      "same_record_disjoint_fields": {
+        "candidates": 2,
+        "evaluated": 0,
+        "missing_ready": 2,
+        "overlapped": 0,
+        "prefix_and_evaluated": 0,
+        "ready": 2,
+        "state": "NOT_OVERLAPPED",
+        "verdicts": {},
+        "verified_long_prefix": 0
+      },
+      "same_record_same_field": {
+        "candidates": 43,
+        "evaluated": 0,
+        "missing_ready": 14,
+        "overlapped": 0,
+        "prefix_and_evaluated": 0,
+        "ready": 14,
+        "state": "NOT_OVERLAPPED",
+        "verdicts": {},
+        "verified_long_prefix": 0
+      },
+      "same_record_update_delete": {
+        "candidates": 10,
+        "evaluated": 0,
+        "missing_ready": 0,
+        "overlapped": 0,
+        "prefix_and_evaluated": 0,
+        "ready": 0,
+        "state": "NO_EXECUTABLE_ORACLE",
+        "verdicts": {},
+        "verified_long_prefix": 0
+      }
+    },
+    "seed-20261834": {
+      "cross_entity": {
+        "candidates": 2,
+        "evaluated": 0,
+        "missing_ready": 2,
+        "overlapped": 0,
+        "prefix_and_evaluated": 0,
+        "ready": 2,
+        "state": "NOT_OVERLAPPED",
+        "structural_pairs_without_oracle": 10,
+        "verdicts": {},
+        "verified_long_prefix": 0
+      },
+      "noop": {
+        "candidates": 4,
+        "evaluated": 1,
+        "missing_ready": 2,
+        "overlapped": 2,
+        "prefix_and_evaluated": 1,
+        "readable_update_subjects_without_oracle": 5,
+        "ready": 4,
+        "state": "PREFIX_AND_ORACLE_VERIFIED",
+        "verdicts": {
+          "INCONCLUSIVE": 1,
+          "PASS": 1
+        },
+        "verified_long_prefix": 2
+      },
+      "same_record_disjoint_fields": {
+        "candidates": 2,
+        "evaluated": 1,
+        "missing_ready": 1,
+        "overlapped": 1,
+        "prefix_and_evaluated": 1,
+        "ready": 2,
+        "state": "PREFIX_AND_ORACLE_VERIFIED",
+        "verdicts": {
+          "VIOLATED": 1
+        },
+        "verified_long_prefix": 1
+      },
+      "same_record_same_field": {
+        "candidates": 43,
+        "evaluated": 0,
+        "missing_ready": 14,
+        "overlapped": 0,
+        "prefix_and_evaluated": 0,
+        "ready": 14,
+        "state": "NOT_OVERLAPPED",
+        "verdicts": {},
+        "verified_long_prefix": 0
+      },
+      "same_record_update_delete": {
+        "candidates": 10,
+        "evaluated": 0,
+        "missing_ready": 0,
+        "overlapped": 0,
+        "prefix_and_evaluated": 0,
+        "ready": 0,
+        "state": "NO_EXECUTABLE_ORACLE",
+        "verdicts": {},
+        "verified_long_prefix": 0
+      }
+    }
+  },
+  "source": "C:\\work\\temp\\vikunja_tse_study\\runs\\research-fit-mealie-stage4-20260927_120638_558"
+}

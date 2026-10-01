@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "basis": "OpenAPI-derived verifier preflight plus separate live prerequisite gate",
+  "generator_version": "0.26.17",
+  "openapi_sha256": "ba68e1c3842c11701ec64c5f3ba23387cf53963f8d16dd7c3d45da103b9421db",
+  "live_gate_status": "LIVE_PREREQUISITES_VERIFIED",
+  "live_gate_verified_edges": 1,
+  "live_gate_prefix_rounds": 8,
+  "generated_oracles": 166,
+  "runtime_ready_oracles": 6,
+  "user_update_candidates": 6,
+  "user_update_ready": 0,
+  "user_limitations": [
+    "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+    "requires-a-documented-create-response-to-item-path-binding",
+    "update-delete-needs-a-dedicated-created-resource"
+  ],
+  "client_interval_overlap": "NOT_RUN",
+  "oracle_verdicts": "NOT_RUN",
+  "note": "Live Location binding must not silently promote an OpenAPI-only candidate to runtime ready"
+}

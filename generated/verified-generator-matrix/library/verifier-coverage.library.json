@@ -1,0 +1,117 @@
+{
+  "counts": {
+    "concurrency_oracles": 0,
+    "contract_only_mutations": 7,
+    "contract_verifiers": 13,
+    "mutations": 8,
+    "operations": 13,
+    "state_verified_mutations": 1
+  },
+  "coverage_complete": true,
+  "manual_assumptions": [],
+  "mutation_coverage": [
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createUser",
+      "path_template": "/users",
+      "source_pointer": "#/paths/~1users/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deleteUser",
+      "path_template": "/users/{id}",
+      "source_pointer": "#/paths/~1users~1{id}/delete",
+      "state_limitation": "item-read-operation-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createBook",
+      "path_template": "/books",
+      "source_pointer": "#/paths/~1books/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deleteBook",
+      "path_template": "/books/{id}",
+      "source_pointer": "#/paths/~1books~1{id}/delete",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "delete-absence"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createLoan",
+      "path_template": "/loans",
+      "source_pointer": "#/paths/~1loans/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deleteLoan",
+      "path_template": "/loans/{userId}/{bookId}",
+      "source_pointer": "#/paths/~1loans~1{userId}~1{bookId}/delete",
+      "state_limitation": "item-read-operation-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createHold",
+      "path_template": "/holds",
+      "source_pointer": "#/paths/~1holds/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deleteHold",
+      "path_template": "/holds/{id}",
+      "source_pointer": "#/paths/~1holds~1{id}/delete",
+      "state_limitation": "item-read-operation-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    }
+  ],
+  "policy": {
+    "all_operations_receive_contract_verifier": true,
+    "concurrency_executor_role": "transport-and-barrier-only",
+    "decision_owner": "generated-provengo-model-and-oracle-manifest",
+    "external_application_knowledge_allowed": false,
+    "state_claims_require_openapi-derived-observation": true,
+    "unobservable_mutations_are_reported_contract_only": true
+  },
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.3",
+    "sha256": "965b2c8aac14485b8fa7bafb139e507c918240e71315246e1b817d8590089448",
+    "title": "Library SUT (Corrected)",
+    "version": "1.0.2"
+  }
+}

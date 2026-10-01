@@ -1,0 +1,27 @@
+{
+  "dependency_edges": 0,
+  "matched_oracles": [
+    "concurrency::same-field::update_one_api_households_mealplans_rules__item_id__put::day",
+    "concurrency::same-field::update_one_api_households_mealplans_rules__item_id__put::entryType",
+    "concurrency::same-field::update_one_api_households_mealplans_rules__item_id__put::queryFilterString",
+    "concurrency::same-field::update_one_api_households_mealplans__item_id__put::date",
+    "concurrency::same-field::update_one_api_households_mealplans__item_id__put::entryType",
+    "concurrency::same-field::update_one_api_households_mealplans__item_id__put::groupId",
+    "concurrency::same-field::update_one_api_recipes_timeline_events__item_id__put::subject"
+  ],
+  "prefix_story_operations": [
+    "patch_one_api_recipes__slug__patch",
+    "update_one_api_households_mealplans__item_id__put",
+    "update_one_api_households_mealplans_rules__item_id__put",
+    "update_one_api_households_shopping_items__item_id__put",
+    "update_one_api_recipes__slug__put",
+    "update_one_api_recipes_timeline_events__item_id__put"
+  ],
+  "ready_oracles": 11,
+  "unmatched_oracles": [
+    "concurrency::same-field::update_one_api_households_shopping_lists__item_id__put::groupId",
+    "concurrency::same-field::update_one_api_households_shopping_lists__item_id__put::id",
+    "concurrency::same-field::update_one_api_households_shopping_lists__item_id__put::userId",
+    "concurrency::same-field::update_one_api_organizers_tools__item_id__put::name"
+  ]
+}

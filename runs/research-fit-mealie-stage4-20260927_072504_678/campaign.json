@@ -1,0 +1,47 @@
+{
+  "generator_version": "0.26.3",
+  "parameters": {
+    "base_seed": 20261811,
+    "freeze_evidence": true,
+    "instances_per_action": 1,
+    "instances_per_entity": 2,
+    "max_concurrency_width": 2,
+    "max_field_pairs": 3,
+    "max_length": 25000,
+    "prefix_before_concurrency": 8,
+    "prefix_rounds": 8,
+    "preflight_only": false,
+    "root": "C:\\work\\temp\\vikunja_tse_study",
+    "runs": 1,
+    "story_profile": "long-interleaving"
+  },
+  "results": [
+    {
+      "concurrency_evaluated": 0,
+      "epoch_count": 0,
+      "evaluator_exit": 3,
+      "http_events": 42,
+      "http_statuses": {
+        "200": 15,
+        "201": 10,
+        "400": 1,
+        "422": 15,
+        "500": 1
+      },
+      "max_prefix_rounds": 0,
+      "oracle_counts": {
+        "INCONCLUSIVE": 10,
+        "PASS": 37,
+        "VIOLATED": 0
+      },
+      "oracle_status": "INCONCLUSIVE",
+      "prefix_verified_epochs": 0,
+      "provengo_exit": 0,
+      "real_overlap_epochs": 0,
+      "runtime_ready_oracles": 11,
+      "seed": 20261811,
+      "transport_errors": 0
+    }
+  ],
+  "state": "COMPLETE"
+}

@@ -1,0 +1,84 @@
+{
+  "algorithm": "SHA-256",
+  "artifact_version": "v38",
+  "canonical_source": "OpenAPI_to_SBT_generator_development_kit_v2/validation_only/suts",
+  "fault_inventory": {
+    "netbox/netbox_sut_buggy.py": {
+      "derivation": "five explicit intermediate-prefix source mechanisms + five externally observable sequence-local HTTP semantic classes + hidden server-side activation markers",
+      "fault_count": 5,
+      "faults": [
+        {
+          "class": "relation reassignment silently lost",
+          "description": "A valid first reassignment to another existing parent is acknowledged but discarded; a later GET exposes the stale relation.",
+          "id": "A_LOGIC"
+        },
+        {
+          "class": "multi-child parent deletion leaves dependents",
+          "description": "Deleting a parent with at least two children succeeds but leaves dependents retrievable with the deleted reference.",
+          "id": "B_LIFECYCLE"
+        },
+        {
+          "class": "required unique string constraint missing",
+          "description": "Two distinct parent resources can be accepted with the same benchmark unique string value.",
+          "id": "C_UNIQUENESS"
+        },
+        {
+          "class": "second verified scalar update silently lost",
+          "description": "After one scalar update is verified, a second distinct update is acknowledged but discarded; the stale successful PATCH response is observable.",
+          "id": "D_INTEGRITY"
+        },
+        {
+          "class": "deleted parent reference reuse accepted",
+          "description": "After valid parent-child history and parent deletion, a new child can reuse the deleted parent id and the successful create response exposes it.",
+          "id": "E_REFERENTIAL_INTEGRITY"
+        }
+      ],
+      "semantic_classes": [
+        {
+          "id": "A_LOGIC",
+          "kind": "intermediate-prefix explicit fault mechanism",
+          "minimum_http_steps": 5,
+          "statement": "A valid reassignment to a second existing parent is not persisted and is exposed by a later GET."
+        },
+        {
+          "id": "B_LIFECYCLE",
+          "kind": "intermediate-prefix explicit fault mechanism",
+          "minimum_http_steps": 5,
+          "statement": "Deleting a parent with multiple children leaves at least one dependent retrievable."
+        },
+        {
+          "id": "C_UNIQUENESS",
+          "kind": "explicit short fault mechanism",
+          "minimum_http_steps": 2,
+          "statement": "Two distinct parents with the same unique required string are accepted."
+        },
+        {
+          "id": "D_INTEGRITY",
+          "kind": "intermediate-prefix explicit fault mechanism",
+          "minimum_http_steps": 4,
+          "statement": "A second distinct scalar update after verification is not persisted and returns stale success content."
+        },
+        {
+          "id": "E_REFERENTIAL_INTEGRITY",
+          "kind": "intermediate-prefix explicit fault mechanism",
+          "minimum_http_steps": 4,
+          "statement": "A deleted parent id can be reused by a new child after valid parent-child history."
+        }
+      ],
+      "semantic_fault_class_count": 5,
+      "source_fault_mechanism_count": 5
+    }
+  },
+  "files": {
+    "garage/garage_sut.py": "30ff806ccee5305b762ae396f1d1f25f3fd6f0cf63abd8ac8cf43b9caa8db330",
+    "garage/garage_sut_buggy.py": "426b8e1b376b19c280617e7ed7e76250840f6ba280a02f1c38565ed6345f9a8b",
+    "library/library_sut_buggy.py": "849aae98751d84f15689caa35d7e80e9774638f90d84ece0f3143fbae1365196",
+    "library/sut.py": "a24b5c5a11cbd113c1129672f70b3dea6450888b0fa29f05a3727de160636d48",
+    "netbox/netbox_benchmark.py": "31895c5ee5ddc07b2e60f4f9f923497fcbdf205be5fa7d7e637b28bbb763d200",
+    "netbox/netbox_mock.py": "34d8bd63bafc9f3c51fe2a77d8c5f933b43d9c5a49bab0b18db10eb559325ff4",
+    "netbox/netbox_sut_buggy.py": "2032cdddd5f52ca929ae669c3826278bbb29af08ef169e1febdc24216b9fae44",
+    "pharmacy/app.py": "c3394b509c5f6baba8676ea0a2f35bc3ca6ad79bd577439c4cf65268c182a4a4",
+    "pharmacy/app_buggy.py": "eb7fcbcac34f792b25b7f8329fd579808523a630b86e814e5345879c65e21282"
+  },
+  "schema_version": 5
+}

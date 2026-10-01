@@ -1,0 +1,101 @@
+﻿{
+    "schema_version":  1,
+    "stage":  "gitea-stage6.5-serial-precondition-confirmation",
+    "spec":  "model/gitea/gitea-1.27.3-swagger.json",
+    "spec_sha256":  "a0baa9a766c22492bd8c45744157c611d3e95cfc0dc73d6f5d14f294cdddce38",
+    "claim_rule":  "A 500 after verified creation/read is a candidate. Server logs and reproduction are required before product-bug attribution.",
+    "environment":  {
+                        "base_url":  "http://127.0.0.1:3477/api/v1",
+                        "trials":  2,
+                        "authenticated_user":  "sbt-gitea-20260924_112024_858",
+                        "container":  "gitea-stage1-server"
+                    },
+    "counts":  {
+                   "release, PASS":  2,
+                   "team, SERVER_ERROR_CANDIDATE":  2
+               },
+    "results":  [
+                    {
+                        "trial":  1,
+                        "family":  "team",
+                        "resource":  "s65-org-120935426-1",
+                        "verdict":  "SERVER_ERROR_CANDIDATE",
+                        "reason":  "verified-org-and-two-schema-valid-team-requests-500",
+                        "statuses":  {
+                                         "org_create":  201,
+                                         "org_read":  200,
+                                         "minimal":  500,
+                                         "documented_optionals":  500
+                                     },
+                        "observations":  {
+                                             "minimal_readable":  false,
+                                             "documented_readable":  false
+                                         }
+                    },
+                    {
+                        "trial":  1,
+                        "family":  "release",
+                        "resource":  "sbt-gitea-20260924_112024_858/s65-repo-120935426-1/s65-v1-120935426-1",
+                        "verdict":  "PASS",
+                        "reason":  "both-patches-persisted",
+                        "statuses":  {
+                                         "repo_create":  201,
+                                         "repo_read":  200,
+                                         "branch_read":  200,
+                                         "release_create":  201,
+                                         "release_read_before":  200,
+                                         "one_field_patch":  200,
+                                         "read_after_one_field":  200,
+                                         "full_patch":  200,
+                                         "read_after_full":  200
+                                     },
+                        "observations":  {
+                                             "branch":  "main",
+                                             "release_id":  7,
+                                             "full_persisted":  true,
+                                             "partial_persisted":  true
+                                         }
+                    },
+                    {
+                        "trial":  2,
+                        "family":  "team",
+                        "resource":  "s65-org-120936214-2",
+                        "verdict":  "SERVER_ERROR_CANDIDATE",
+                        "reason":  "verified-org-and-two-schema-valid-team-requests-500",
+                        "statuses":  {
+                                         "org_create":  201,
+                                         "org_read":  200,
+                                         "minimal":  500,
+                                         "documented_optionals":  500
+                                     },
+                        "observations":  {
+                                             "minimal_readable":  false,
+                                             "documented_readable":  false
+                                         }
+                    },
+                    {
+                        "trial":  2,
+                        "family":  "release",
+                        "resource":  "sbt-gitea-20260924_112024_858/s65-repo-120936214-2/s65-v1-120936214-2",
+                        "verdict":  "PASS",
+                        "reason":  "both-patches-persisted",
+                        "statuses":  {
+                                         "repo_create":  201,
+                                         "repo_read":  200,
+                                         "branch_read":  200,
+                                         "release_create":  201,
+                                         "release_read_before":  200,
+                                         "one_field_patch":  200,
+                                         "read_after_one_field":  200,
+                                         "full_patch":  200,
+                                         "read_after_full":  200
+                                     },
+                        "observations":  {
+                                             "branch":  "main",
+                                             "release_id":  8,
+                                             "full_persisted":  true,
+                                             "partial_persisted":  true
+                                         }
+                    }
+                ]
+}

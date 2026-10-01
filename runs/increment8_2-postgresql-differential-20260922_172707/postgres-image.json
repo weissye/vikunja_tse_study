@@ -1,0 +1,106 @@
+﻿[
+    {
+        "Id": "sha256:81bd698b4594e751a3269e4dcd3e03a4a0ec0daf7b72e7aa1abd43cce9887542",
+        "RepoTags": [
+            "postgres:16-alpine"
+        ],
+        "RepoDigests": [
+            "postgres@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-09-17T21:31:24.32976807Z",
+        "Container": "",
+        "ContainerConfig": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": null,
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.19",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=16",
+                "PG_VERSION=16.15",
+                "PG_SHA256=c1575341fa7bd40f5274ea465b34390f4dc64cdd0770af327005caaeb9f6b7ed",
+                "DOCKER_PG_LLVM_DEPS=llvm21-dev \t\tclang21",
+                "PGDATA=/var/lib/postgresql/data"
+            ],
+            "Cmd": [
+                "postgres"
+            ],
+            "Image": "",
+            "Volumes": {
+                "/var/lib/postgresql/data": {}
+            },
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": null,
+            "StopSignal": "SIGINT"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 294299523,
+        "VirtualSize": 294299523,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/c4256421b38658673fe1e3448affa7a5c4edd89b42b80cd09e2a8a65466827b0/diff:/var/lib/docker/overlay2/0167db6fa18999a6d58c2d013ce841b78de9a18d8e6bdc8bacdb5a954b4eedea/diff:/var/lib/docker/overlay2/ede2a122eda20cb178192a4eb74c34e9425b4cb390277f318ebe5361f379dac9/diff:/var/lib/docker/overlay2/8ebebdfd74c514e5b3751f5eb7354541a6f4414dcd866816fe356efc14697db5/diff:/var/lib/docker/overlay2/a2d2574c6ecab9ea5d1bb5359cd3311d48feab43977c0b17b6b097e27f8758ff/diff:/var/lib/docker/overlay2/3bcc6a7918026db926095d31c23b9ae827606494798b07bf2a10d5a7db38a241/diff:/var/lib/docker/overlay2/21c24384a954e2df9475cadcdb949dbebb7fd53e4280f2c4d3696b6ae4574972/diff:/var/lib/docker/overlay2/a676d600093b531d04c72145af6214424091f0e8281c1017c461c518a43d8f21/diff:/var/lib/docker/overlay2/c4078b80f8e8097b4bda4c4f76466f576fe9660078052d90366f2e91889d6230/diff:/var/lib/docker/overlay2/4c13c3f27f3e8c3ddfdd175e7a1a98adbd95fd8b00346f1ce9f5c01150df83d8/diff",
+                "MergedDir": "/var/lib/docker/overlay2/d5d68c27be0c54c12163e72dd50c6fdda2661807111a1264151934f437b75c5e/merged",
+                "UpperDir": "/var/lib/docker/overlay2/d5d68c27be0c54c12163e72dd50c6fdda2661807111a1264151934f437b75c5e/diff",
+                "WorkDir": "/var/lib/docker/overlay2/d5d68c27be0c54c12163e72dd50c6fdda2661807111a1264151934f437b75c5e/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:74d97c428c51a828f9051a7a40a53ff1fc99e54fc30323ce36760701b0b7f711",
+                "sha256:55469241be312953a965a95ac8affc80a9e6caca7ae6b7c865eeb85bed6c0935",
+                "sha256:7efd3fa04051c098ad166c177d3b5df5db8019f3b230a11650cae3b99e0247d4",
+                "sha256:6abee75ee30a340e7bb44aba0ebc89f77573822aaae42ee12c0cd8ac003d0dca",
+                "sha256:1e6eba70f825671214a5a7f9b042c272b510657980522e2972deee9745685660",
+                "sha256:09bef825aa08dbb0073c2ffd188ea973f42d09ac910a0c88545825f958f70a8f",
+                "sha256:470ae8e9f008967fa132e4f35c6b7d5dd6f74aac23c2eacdb45d82dd2d1f12e4",
+                "sha256:b006494f482847c06687d7f95f7be1683af2e7545b951f81f20041b5e0644ebb",
+                "sha256:ed38a2de685f56abc00e510ad09c7ddf5fe342bc545cfb1f7e64a4b6e2f46b05",
+                "sha256:3a1fd3ebad6c8e69047f4b2c1e4cd78d37425ee3bbbb72642a3ad9ba00731b33",
+                "sha256:38dab51118192bc13c247cd7d9356d34b50c2eb436337b2e251dd14d2e9be5bb"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

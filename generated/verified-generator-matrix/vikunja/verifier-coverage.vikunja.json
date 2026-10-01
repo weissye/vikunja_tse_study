@@ -1,0 +1,249 @@
+{
+  "counts": {
+    "concurrency_oracles": 71,
+    "contract_only_mutations": 8,
+    "contract_verifiers": 29,
+    "mutations": 20,
+    "operations": 29,
+    "state_verified_mutations": 12
+  },
+  "coverage_complete": true,
+  "manual_assumptions": [],
+  "mutation_coverage": [
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "labels-create",
+      "path_template": "/labels",
+      "source_pointer": "#/paths/~1labels/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "labels-update",
+      "path_template": "/labels/{id}",
+      "source_pointer": "#/paths/~1labels~1{id}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "labels-delete",
+      "path_template": "/labels/{id}",
+      "source_pointer": "#/paths/~1labels~1{id}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PATCH",
+      "operation_id": "patch-labels-read",
+      "path_template": "/labels/{id}",
+      "source_pointer": "#/paths/~1labels~1{id}/patch",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "projects-create",
+      "path_template": "/projects",
+      "source_pointer": "#/paths/~1projects/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "projects-update",
+      "path_template": "/projects/{id}",
+      "source_pointer": "#/paths/~1projects~1{id}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "projects-delete",
+      "path_template": "/projects/{id}",
+      "source_pointer": "#/paths/~1projects~1{id}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PATCH",
+      "operation_id": "patch-projects-read",
+      "path_template": "/projects/{id}",
+      "source_pointer": "#/paths/~1projects~1{id}/patch",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "tasks-create",
+      "path_template": "/projects/{project}/tasks",
+      "source_pointer": "#/paths/~1projects~1{project}~1tasks/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "tasks-update",
+      "path_template": "/tasks/{task}",
+      "source_pointer": "#/paths/~1tasks~1{task}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "tasks-delete",
+      "path_template": "/tasks/{task}",
+      "source_pointer": "#/paths/~1tasks~1{task}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PATCH",
+      "operation_id": "patch-tasks-read",
+      "path_template": "/tasks/{task}",
+      "source_pointer": "#/paths/~1tasks~1{task}/patch",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "task-comments-create",
+      "path_template": "/tasks/{task}/comments",
+      "source_pointer": "#/paths/~1tasks~1{task}~1comments/post",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "create-visibility"
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PUT",
+      "operation_id": "task-comments-update",
+      "path_template": "/tasks/{task}/comments/{commentid}",
+      "source_pointer": "#/paths/~1tasks~1{task}~1comments~1{commentid}/put",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "task-comments-delete",
+      "path_template": "/tasks/{task}/comments/{commentid}",
+      "source_pointer": "#/paths/~1tasks~1{task}~1comments~1{commentid}/delete",
+      "state_limitation": "absence-status-not-documented-by-item-read",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "PATCH",
+      "operation_id": "patch-task-comments-read",
+      "path_template": "/tasks/{task}/comments/{commentid}",
+      "source_pointer": "#/paths/~1tasks~1{task}~1comments~1{commentid}/patch",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "written-fields-persist"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "task-labels-create",
+      "path_template": "/tasks/{task}/labels",
+      "source_pointer": "#/paths/~1tasks~1{task}~1labels/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "task-labels-delete",
+      "path_template": "/tasks/{task}/labels/{label}",
+      "source_pointer": "#/paths/~1tasks~1{task}~1labels~1{label}/delete",
+      "state_limitation": "item-read-operation-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "tasks-relations-create",
+      "path_template": "/tasks/{task}/relations",
+      "source_pointer": "#/paths/~1tasks~1{task}~1relations/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "tasks-relations-delete",
+      "path_template": "/tasks/{task}/relations/{relationKind}/{otherTask}",
+      "source_pointer": "#/paths/~1tasks~1{task}~1relations~1{relationKind}~1{otherTask}/delete",
+      "state_limitation": "item-read-operation-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    }
+  ],
+  "policy": {
+    "all_operations_receive_contract_verifier": true,
+    "concurrency_executor_role": "transport-and-barrier-only",
+    "decision_owner": "generated-provengo-model-and-oracle-manifest",
+    "external_application_knowledge_allowed": false,
+    "state_claims_require_openapi-derived-observation": true,
+    "unobservable_mutations_are_reported_contract_only": true
+  },
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.3",
+    "sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941",
+    "title": "Vikunja API",
+    "version": "v2.6.0-469-g94e6f165"
+  }
+}

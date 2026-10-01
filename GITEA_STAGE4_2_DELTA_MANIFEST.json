@@ -1,0 +1,19 @@
+{
+  "version": "0.26.2",
+  "scope": "generic path-identity ranking and acceptance-aware campaign saturation",
+  "application_specific_assumptions": 0,
+  "fixes": [
+    "prefer type-compatible semantic resource identity over coercible numeric id",
+    "do not stop a saturated campaign before all declared coverage thresholds are met"
+  ],
+  "backward_compatibility_systems": [
+    "library",
+    "garage",
+    "pharmacy",
+    "netbox",
+    "todoist",
+    "vikunja"
+  ],
+  "expected_entrypoint": "scripts/Invoke-Gitea-Stage4_2.ps1",
+  "expected_completion_marker": "GITEA_STAGE4_2_COMPLETE"
+}

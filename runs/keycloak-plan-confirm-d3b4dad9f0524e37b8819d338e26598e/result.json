@@ -1,0 +1,1290 @@
+{
+  "schema_version": 1,
+  "basis": "generated OpenAPI plan plus observed fixture evidence",
+  "provengo_executed": false,
+  "runtime": "COMPLETED",
+  "oracles": {
+    "same-field-one-successful-value-visible": "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName",
+    "noop-versus-change": "concurrency::noop::concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName",
+    "disjoint-put-serial-outcomes": "concurrency::disjoint-put::put:/admin/realms/{realm}/users/{user-id}"
+  },
+  "cases": [
+    {
+      "kind": "same-field-one-successful-value-visible",
+      "oracle_id": "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName",
+      "prefix_rounds": 8,
+      "fixtures": [
+        {
+          "label": "ab",
+          "path": "/admin/realms/fse-plan-52e01630f708/users/924efcef-7dd7-48d1-af6b-75f4aeff7ebf",
+          "prefix": [
+            {
+              "round": 1,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-0",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 2,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-1",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 3,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-2",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 4,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-3",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 5,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-4",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 6,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-5",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 7,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-6",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 8,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-7",
+                  "lastName": "Pilot"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "label": "ba",
+          "path": "/admin/realms/fse-plan-52e01630f708/users/e7bae25a-9716-4af5-b3ff-1bdf060712d1",
+          "prefix": [
+            {
+              "round": 1,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-0",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 2,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-1",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 3,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-2",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 4,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-3",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 5,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-4",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 6,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-5",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 7,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-6",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 8,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-7",
+                  "lastName": "Pilot"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "label": "race",
+          "path": "/admin/realms/fse-plan-52e01630f708/users/83508aca-b56f-420e-a800-e948b5d9acbf",
+          "prefix": [
+            {
+              "round": 1,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-0",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 2,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-1",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 3,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-2",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 4,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-3",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 5,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-4",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 6,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-5",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 7,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-6",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 8,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-7",
+                  "lastName": "Pilot"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "classification": "PASS",
+      "controls": {
+        "ab": {
+          "initial": {
+            "firstName": "Prefix-7",
+            "lastName": "Pilot"
+          },
+          "statuses": [
+            204,
+            204
+          ],
+          "read_statuses": [
+            200,
+            200
+          ],
+          "after_each": [
+            {
+              "firstName": "Value-A",
+              "lastName": "Pilot"
+            },
+            {
+              "firstName": "Value-B",
+              "lastName": "Pilot"
+            }
+          ],
+          "final": {
+            "firstName": "Value-B",
+            "lastName": "Pilot"
+          }
+        },
+        "ba": {
+          "initial": {
+            "firstName": "Prefix-7",
+            "lastName": "Pilot"
+          },
+          "statuses": [
+            204,
+            204
+          ],
+          "read_statuses": [
+            200,
+            200
+          ],
+          "after_each": [
+            {
+              "firstName": "Value-B",
+              "lastName": "Pilot"
+            },
+            {
+              "firstName": "Value-A",
+              "lastName": "Pilot"
+            }
+          ],
+          "final": {
+            "firstName": "Value-A",
+            "lastName": "Pilot"
+          }
+        }
+      },
+      "race": {
+        "schema_version": 1,
+        "epoch_id": "generated-epoch-d0bd944582b7",
+        "scenario": "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName",
+        "width": 2,
+        "release_utc": "2026-09-27T18:08:30.873282+00:00",
+        "all_workers_ready_before_release": true,
+        "release_skew_ns": 191400,
+        "overlap_observed": true,
+        "quiescence_ms": 150,
+        "operations": [
+          {
+            "operation_id": "generated-epoch-d0bd944582b7-op-0",
+            "request_id": "c85fcf61-6ab8-4a41-8b6c-5fbac0f335a8",
+            "connection_id": "146b4036-452b-48a8-baf1-54018d2ade3c",
+            "local_endpoint": "127.0.0.1:59412",
+            "peer_endpoint": "127.0.0.1:59262",
+            "connected_utc": "2026-09-27T18:08:30.872689+00:00",
+            "started_utc": "2026-09-27T18:08:30.873282+00:00",
+            "ended_utc": "2026-09-27T18:08:30.890047+00:00",
+            "invocation_offset_ns": 42100,
+            "duration_ns": 16840900,
+            "method": "PUT",
+            "path": "/admin/realms/fse-plan-52e01630f708/users/83508aca-b56f-420e-a800-e948b5d9acbf",
+            "request_body": {
+              "firstName": "Value-A"
+            },
+            "delay_ms": 0.0,
+            "status": 204,
+            "response": null,
+            "error": null
+          },
+          {
+            "operation_id": "generated-epoch-d0bd944582b7-op-1",
+            "request_id": "33862a4d-5666-4c99-b834-934e61eb9c08",
+            "connection_id": "386c14aa-4b12-4ff2-b183-8b30f7f5a219",
+            "local_endpoint": "127.0.0.1:59413",
+            "peer_endpoint": "127.0.0.1:59262",
+            "connected_utc": "2026-09-27T18:08:30.872689+00:00",
+            "started_utc": "2026-09-27T18:08:30.873282+00:00",
+            "ended_utc": "2026-09-27T18:08:30.907331+00:00",
+            "invocation_offset_ns": 233500,
+            "duration_ns": 33815300,
+            "method": "PUT",
+            "path": "/admin/realms/fse-plan-52e01630f708/users/83508aca-b56f-420e-a800-e948b5d9acbf",
+            "request_body": {
+              "firstName": "Value-B"
+            },
+            "delay_ms": 0.0,
+            "status": 204,
+            "response": null,
+            "error": null
+          }
+        ],
+        "initial": {
+          "firstName": "Prefix-7",
+          "lastName": "Pilot"
+        }
+      },
+      "reads": [
+        {
+          "status": 200,
+          "fields": {
+            "firstName": "Value-B",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "status": 200,
+          "fields": {
+            "firstName": "Value-B",
+            "lastName": "Pilot"
+          }
+        }
+      ],
+      "reason": "matches-observed-serial-order"
+    },
+    {
+      "kind": "noop-versus-change",
+      "oracle_id": "concurrency::noop::concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName",
+      "prefix_rounds": 8,
+      "fixtures": [
+        {
+          "label": "ab",
+          "path": "/admin/realms/fse-plan-52e01630f708/users/8e3e7e31-9fa6-483d-9625-7ea0e70e5523",
+          "prefix": [
+            {
+              "round": 1,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-0",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 2,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-1",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 3,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-2",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 4,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-3",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 5,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-4",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 6,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-5",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 7,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-6",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 8,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-7",
+                  "lastName": "Pilot"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "label": "ba",
+          "path": "/admin/realms/fse-plan-52e01630f708/users/1a90a892-39d2-4065-99a0-f175485c263c",
+          "prefix": [
+            {
+              "round": 1,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-0",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 2,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-1",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 3,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-2",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 4,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-3",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 5,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-4",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 6,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-5",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 7,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-6",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 8,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-7",
+                  "lastName": "Pilot"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "label": "race",
+          "path": "/admin/realms/fse-plan-52e01630f708/users/f5123642-1545-4ab6-9902-8cb93086e60f",
+          "prefix": [
+            {
+              "round": 1,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-0",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 2,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-1",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 3,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-2",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 4,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-3",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 5,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-4",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 6,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-5",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 7,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-6",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 8,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-7",
+                  "lastName": "Pilot"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "classification": "PASS",
+      "controls": {
+        "ab": {
+          "initial": {
+            "firstName": "Prefix-7",
+            "lastName": "Pilot"
+          },
+          "statuses": [
+            204,
+            204
+          ],
+          "read_statuses": [
+            200,
+            200
+          ],
+          "after_each": [
+            {
+              "firstName": "Prefix-7",
+              "lastName": "Pilot"
+            },
+            {
+              "firstName": "Changed",
+              "lastName": "Pilot"
+            }
+          ],
+          "final": {
+            "firstName": "Changed",
+            "lastName": "Pilot"
+          }
+        },
+        "ba": {
+          "initial": {
+            "firstName": "Prefix-7",
+            "lastName": "Pilot"
+          },
+          "statuses": [
+            204,
+            204
+          ],
+          "read_statuses": [
+            200,
+            200
+          ],
+          "after_each": [
+            {
+              "firstName": "Changed",
+              "lastName": "Pilot"
+            },
+            {
+              "firstName": "Prefix-7",
+              "lastName": "Pilot"
+            }
+          ],
+          "final": {
+            "firstName": "Prefix-7",
+            "lastName": "Pilot"
+          }
+        }
+      },
+      "race": {
+        "schema_version": 1,
+        "epoch_id": "generated-epoch-cc7b3b8a5daa",
+        "scenario": "concurrency::noop::concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName",
+        "width": 2,
+        "release_utc": "2026-09-27T18:08:33.636907+00:00",
+        "all_workers_ready_before_release": true,
+        "release_skew_ns": 381600,
+        "overlap_observed": true,
+        "quiescence_ms": 150,
+        "operations": [
+          {
+            "operation_id": "generated-epoch-cc7b3b8a5daa-op-0",
+            "request_id": "6e6c397e-ab56-4f30-92f3-9eb7c15d046a",
+            "connection_id": "a99a5ac3-a54b-44de-966d-fa838e993293",
+            "local_endpoint": "127.0.0.1:55872",
+            "peer_endpoint": "127.0.0.1:59262",
+            "connected_utc": "2026-09-27T18:08:33.635721+00:00",
+            "started_utc": "2026-09-27T18:08:33.636907+00:00",
+            "ended_utc": "2026-09-27T18:08:33.678558+00:00",
+            "invocation_offset_ns": 160700,
+            "duration_ns": 41326100,
+            "method": "PUT",
+            "path": "/admin/realms/fse-plan-52e01630f708/users/f5123642-1545-4ab6-9902-8cb93086e60f",
+            "request_body": {
+              "firstName": "Prefix-7"
+            },
+            "delay_ms": 0.0,
+            "status": 204,
+            "response": null,
+            "error": null
+          },
+          {
+            "operation_id": "generated-epoch-cc7b3b8a5daa-op-1",
+            "request_id": "585a693b-bdfa-44c6-976e-358e49a01905",
+            "connection_id": "d15edfd8-947e-413c-a3f7-c4d20725134a",
+            "local_endpoint": "127.0.0.1:55873",
+            "peer_endpoint": "127.0.0.1:59262",
+            "connected_utc": "2026-09-27T18:08:33.636330+00:00",
+            "started_utc": "2026-09-27T18:08:33.637579+00:00",
+            "ended_utc": "2026-09-27T18:08:33.677932+00:00",
+            "invocation_offset_ns": 542300,
+            "duration_ns": 40551200,
+            "method": "PUT",
+            "path": "/admin/realms/fse-plan-52e01630f708/users/f5123642-1545-4ab6-9902-8cb93086e60f",
+            "request_body": {
+              "firstName": "Changed"
+            },
+            "delay_ms": 0.0,
+            "status": 204,
+            "response": null,
+            "error": null
+          }
+        ],
+        "initial": {
+          "firstName": "Prefix-7",
+          "lastName": "Pilot"
+        }
+      },
+      "reads": [
+        {
+          "status": 200,
+          "fields": {
+            "firstName": "Changed",
+            "lastName": "Pilot"
+          }
+        },
+        {
+          "status": 200,
+          "fields": {
+            "firstName": "Changed",
+            "lastName": "Pilot"
+          }
+        }
+      ],
+      "reason": "matches-observed-serial-order"
+    },
+    {
+      "kind": "disjoint-put-serial-outcomes",
+      "oracle_id": "concurrency::disjoint-put::put:/admin/realms/{realm}/users/{user-id}",
+      "prefix_rounds": 8,
+      "fixtures": [
+        {
+          "label": "ab",
+          "path": "/admin/realms/fse-plan-52e01630f708/users/96db45c9-9c1b-4cd8-b51b-b4d71d2e7335",
+          "prefix": [
+            {
+              "round": 1,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-0",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 2,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-1",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 3,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-2",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 4,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-3",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 5,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-4",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 6,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-5",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 7,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-6",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 8,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-7",
+                  "lastName": "Pilot"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "label": "ba",
+          "path": "/admin/realms/fse-plan-52e01630f708/users/3a449bd4-dd3e-468f-a26c-5550254e3b3f",
+          "prefix": [
+            {
+              "round": 1,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-0",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 2,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-1",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 3,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-2",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 4,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-3",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 5,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-4",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 6,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-5",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 7,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-6",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 8,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-7",
+                  "lastName": "Pilot"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "label": "race",
+          "path": "/admin/realms/fse-plan-52e01630f708/users/1fc4a4e5-e9e2-4e98-bcf6-62c0f4215c68",
+          "prefix": [
+            {
+              "round": 1,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-0",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 2,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-1",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 3,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-2",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 4,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-3",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 5,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-4",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 6,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-5",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 7,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-6",
+                  "lastName": "Pilot"
+                }
+              }
+            },
+            {
+              "round": 8,
+              "status": 204,
+              "read": {
+                "status": 200,
+                "fields": {
+                  "firstName": "Prefix-7",
+                  "lastName": "Pilot"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "classification": "SEMANTIC_CANDIDATE",
+      "controls": {
+        "ab": {
+          "initial": {
+            "firstName": "Prefix-7",
+            "lastName": "Pilot"
+          },
+          "statuses": [
+            204,
+            204
+          ],
+          "read_statuses": [
+            200,
+            200
+          ],
+          "after_each": [
+            {
+              "firstName": "ChangedFirst",
+              "lastName": "Pilot"
+            },
+            {
+              "firstName": "ChangedFirst",
+              "lastName": "ChangedLast"
+            }
+          ],
+          "final": {
+            "firstName": "ChangedFirst",
+            "lastName": "ChangedLast"
+          }
+        },
+        "ba": {
+          "initial": {
+            "firstName": "Prefix-7",
+            "lastName": "Pilot"
+          },
+          "statuses": [
+            204,
+            204
+          ],
+          "read_statuses": [
+            200,
+            200
+          ],
+          "after_each": [
+            {
+              "firstName": "Prefix-7",
+              "lastName": "ChangedLast"
+            },
+            {
+              "firstName": "ChangedFirst",
+              "lastName": "ChangedLast"
+            }
+          ],
+          "final": {
+            "firstName": "ChangedFirst",
+            "lastName": "ChangedLast"
+          }
+        }
+      },
+      "race": {
+        "schema_version": 1,
+        "epoch_id": "generated-epoch-2cab7856ebc5",
+        "scenario": "concurrency::disjoint-put::put:/admin/realms/{realm}/users/{user-id}",
+        "width": 2,
+        "release_utc": "2026-09-27T18:08:36.048380+00:00",
+        "all_workers_ready_before_release": true,
+        "release_skew_ns": 336500,
+        "overlap_observed": true,
+        "quiescence_ms": 150,
+        "operations": [
+          {
+            "operation_id": "generated-epoch-2cab7856ebc5-op-0",
+            "request_id": "be87da0a-2fbd-475f-bbe5-31ebcc0c5ae5",
+            "connection_id": "03ddb054-e49d-44d5-9f43-0bd0147a13ac",
+            "local_endpoint": "127.0.0.1:56011",
+            "peer_endpoint": "127.0.0.1:59262",
+            "connected_utc": "2026-09-27T18:08:36.029013+00:00",
+            "started_utc": "2026-09-27T18:08:36.049191+00:00",
+            "ended_utc": "2026-09-27T18:08:36.102590+00:00",
+            "invocation_offset_ns": 498700,
+            "duration_ns": 53608600,
+            "method": "PUT",
+            "path": "/admin/realms/fse-plan-52e01630f708/users/1fc4a4e5-e9e2-4e98-bcf6-62c0f4215c68",
+            "request_body": {
+              "firstName": "ChangedFirst"
+            },
+            "delay_ms": 0.0,
+            "status": 204,
+            "response": null,
+            "error": null
+          },
+          {
+            "operation_id": "generated-epoch-2cab7856ebc5-op-1",
+            "request_id": "56cdc9e5-b695-42c8-9c65-09f8bdab369d",
+            "connection_id": "b29ee602-7d63-44c7-a273-d443ce628b16",
+            "local_endpoint": "127.0.0.1:56012",
+            "peer_endpoint": "127.0.0.1:59262",
+            "connected_utc": "2026-09-27T18:08:36.048380+00:00",
+            "started_utc": "2026-09-27T18:08:36.048380+00:00",
+            "ended_utc": "2026-09-27T18:08:36.109757+00:00",
+            "invocation_offset_ns": 162200,
+            "duration_ns": 61149300,
+            "method": "PUT",
+            "path": "/admin/realms/fse-plan-52e01630f708/users/1fc4a4e5-e9e2-4e98-bcf6-62c0f4215c68",
+            "request_body": {
+              "lastName": "ChangedLast"
+            },
+            "delay_ms": 0.0,
+            "status": 204,
+            "response": null,
+            "error": null
+          }
+        ],
+        "initial": {
+          "firstName": "Prefix-7",
+          "lastName": "Pilot"
+        }
+      },
+      "reads": [
+        {
+          "status": 200,
+          "fields": {
+            "firstName": "Prefix-7",
+            "lastName": "ChangedLast"
+          }
+        },
+        {
+          "status": 200,
+          "fields": {
+            "firstName": "Prefix-7",
+            "lastName": "ChangedLast"
+          }
+        }
+      ],
+      "reason": "stable-state-outside-both-observed-serial-orders"
+    }
+  ],
+  "auth": {
+    "status": "ADMIN_API_VERIFIED",
+    "mode": "password-grant"
+  },
+  "realm_path": "/admin/realms/fse-plan-52e01630f708"
+}

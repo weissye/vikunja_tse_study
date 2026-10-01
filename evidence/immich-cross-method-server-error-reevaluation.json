@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "replays": [
+    {
+      "archive": "research-fit-immich-generated-20260926_191223_743-review.zip",
+      "seeds": [
+        {
+          "seed": "seed-20261621",
+          "witnesses": [
+            {
+              "oracle_id": "cross-method::update-delete::updateAlbumInfo::deleteAlbum",
+              "epoch_id": "generated-epoch-0",
+              "result": "INCONCLUSIVE",
+              "server_error_candidate": {
+                "classification": "SERVER_ERROR_CANDIDATE",
+                "operation_id": "updateAlbumInfo",
+                "status": 500,
+                "event_index": 73,
+                "basis": "both-serial-orders-valid-and-overlapping-update-returned-5xx"
+              }
+            },
+            {
+              "oracle_id": "cross-method::update-delete::updateSharedLink::removeSharedLink",
+              "epoch_id": "generated-epoch-1",
+              "result": "PASS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "archive": "research-fit-immich-generated-20260926_191733_041-review.zip",
+      "seeds": [
+        {
+          "seed": "seed-20261621",
+          "witnesses": [
+            {
+              "oracle_id": "cross-method::update-delete::updateAlbumInfo::deleteAlbum",
+              "epoch_id": "generated-epoch-0",
+              "result": "INCONCLUSIVE",
+              "server_error_candidate": {
+                "classification": "SERVER_ERROR_CANDIDATE",
+                "operation_id": "updateAlbumInfo",
+                "status": 500,
+                "event_index": 73,
+                "basis": "both-serial-orders-valid-and-overlapping-update-returned-5xx"
+              }
+            },
+            {
+              "oracle_id": "cross-method::update-delete::updateSharedLink::removeSharedLink",
+              "epoch_id": "generated-epoch-1",
+              "result": "PASS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "archive": "research-fit-immich-generated-20260926_191755_771-review.zip",
+      "seeds": [
+        {
+          "seed": "seed-20261621",
+          "witnesses": [
+            {
+              "oracle_id": "cross-method::update-delete::updateAlbumInfo::deleteAlbum",
+              "epoch_id": "generated-epoch-0",
+              "result": "INCONCLUSIVE",
+              "server_error_candidate": {
+                "classification": "SERVER_ERROR_CANDIDATE",
+                "operation_id": "updateAlbumInfo",
+                "status": 500,
+                "event_index": 73,
+                "basis": "both-serial-orders-valid-and-overlapping-update-returned-5xx"
+              }
+            },
+            {
+              "oracle_id": "cross-method::update-delete::updateSharedLink::removeSharedLink",
+              "epoch_id": "generated-epoch-1",
+              "result": "INCONCLUSIVE",
+              "server_error_candidate": {
+                "classification": "SERVER_ERROR_CANDIDATE",
+                "operation_id": "updateSharedLink",
+                "status": 500,
+                "event_index": 59,
+                "basis": "both-serial-orders-valid-and-overlapping-update-returned-5xx"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

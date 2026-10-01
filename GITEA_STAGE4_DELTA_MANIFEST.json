@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "deliverable": "gitea-stage4-reachability-aware-campaign",
+  "generator_version": "0.26.0",
+  "apply_to": "C:\\work\\temp\\vikunja_tse_study",
+  "files": [
+    "GITEA_STAGE4_README_HE.md",
+    "generator_baseline/openapi_to_sbt/__init__.py",
+    "generator_baseline/openapi_to_sbt/render/verification_js.py",
+    "scripts/Invoke-Gitea-Stage2-Preflight.ps1",
+    "scripts/Invoke-Gitea-Stage3.ps1",
+    "scripts/Invoke-Gitea-Stage4.ps1",
+    "scripts/analyze_gitea_stage2.py",
+    "scripts/analyze_gitea_stage4_campaign.py",
+    "tests/test_gitea_stage2_preflight.py",
+    "tests/test_gitea_stage4_reachability.py"
+  ],
+  "acceptance": {
+    "generator_regression_tests": 126,
+    "generator_regression_skipped": 3,
+    "stage4_tests": 4,
+    "gitea_preflight": "PASS",
+    "manual_application_assumptions": 0
+  }
+}
