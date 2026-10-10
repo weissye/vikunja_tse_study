@@ -1,0 +1,477 @@
+{
+  "bug_candidate": false,
+  "confirmation_policy": "Reproduce the same oracle violation twice, minimize the BP schedule, and exclude harness/contract causes.",
+  "confirmed_product_bug": false,
+  "evaluation_basis": "external HTTP trace ordered state-machine oracle",
+  "oracle_summary": {
+    "comment-last-successful-write-visible": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 8,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 8,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 8
+    },
+    "label-last-successful-write-visible": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 6,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 6,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 6
+    },
+    "project-last-successful-write-visible": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 2,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 2,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 2
+    },
+    "task-last-successful-write-visible": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 12,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 12,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 12
+    }
+  },
+  "profile": "linearizable-write-conflicts",
+  "run_status": "PASS",
+  "witness_count": 28,
+  "witnesses": [
+    {
+      "expected": {
+        "title": "conflict6_project_0_A"
+      },
+      "observation_event": 11,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_project_0_A",
+        "trigger_status": 200
+      },
+      "oracle_id": "project-last-successful-write-visible",
+      "resource_path": "/projects/64",
+      "result": "PASS",
+      "trigger_event": 3
+    },
+    {
+      "expected": {
+        "title": "conflict6_project_0_A"
+      },
+      "observation_event": 11,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_project_0_A",
+        "trigger_status": 200
+      },
+      "oracle_id": "project-last-successful-write-visible",
+      "resource_path": "/projects/64",
+      "result": "PASS",
+      "trigger_event": 8
+    },
+    {
+      "expected": {
+        "title": "conflict6_task_1_A"
+      },
+      "observation_event": 34,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_task_1_A",
+        "trigger_status": 200
+      },
+      "oracle_id": "task-last-successful-write-visible",
+      "resource_path": "/tasks/361",
+      "result": "PASS",
+      "trigger_event": 22
+    },
+    {
+      "expected": {
+        "title": "conflict6_task_0_A"
+      },
+      "observation_event": 38,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_task_0_A",
+        "trigger_status": 200
+      },
+      "oracle_id": "task-last-successful-write-visible",
+      "resource_path": "/tasks/362",
+      "result": "PASS",
+      "trigger_event": 30
+    },
+    {
+      "expected": {
+        "title": "conflict6_task_0_A"
+      },
+      "observation_event": 38,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_task_0_A",
+        "trigger_status": 200
+      },
+      "oracle_id": "task-last-successful-write-visible",
+      "resource_path": "/tasks/362",
+      "result": "PASS",
+      "trigger_event": 31
+    },
+    {
+      "expected": {
+        "title": "conflict6_task_2_A"
+      },
+      "observation_event": 33,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_task_2_A",
+        "trigger_status": 200
+      },
+      "oracle_id": "task-last-successful-write-visible",
+      "resource_path": "/tasks/363",
+      "result": "PASS",
+      "trigger_event": 32
+    },
+    {
+      "expected": {
+        "title": "conflict6_task_1_B"
+      },
+      "observation_event": 44,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_task_1_B",
+        "trigger_status": 200
+      },
+      "oracle_id": "task-last-successful-write-visible",
+      "resource_path": "/tasks/361",
+      "result": "PASS",
+      "trigger_event": 41
+    },
+    {
+      "expected": {
+        "title": "conflict6_label_1_B"
+      },
+      "observation_event": 55,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_label_1_B",
+        "trigger_status": 200
+      },
+      "oracle_id": "label-last-successful-write-visible",
+      "resource_path": "/labels/104",
+      "result": "PASS",
+      "trigger_event": 45
+    },
+    {
+      "expected": {
+        "title": "conflict6_label_1_B"
+      },
+      "observation_event": 55,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_label_1_B",
+        "trigger_status": 200
+      },
+      "oracle_id": "label-last-successful-write-visible",
+      "resource_path": "/labels/104",
+      "result": "PASS",
+      "trigger_event": 46
+    },
+    {
+      "expected": {
+        "title": "conflict6_label_0_B"
+      },
+      "observation_event": 52,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_label_0_B",
+        "trigger_status": 200
+      },
+      "oracle_id": "label-last-successful-write-visible",
+      "resource_path": "/labels/102",
+      "result": "PASS",
+      "trigger_event": 47
+    },
+    {
+      "expected": {
+        "title": "conflict6_label_0_B"
+      },
+      "observation_event": 52,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_label_0_B",
+        "trigger_status": 200
+      },
+      "oracle_id": "label-last-successful-write-visible",
+      "resource_path": "/labels/102",
+      "result": "PASS",
+      "trigger_event": 49
+    },
+    {
+      "expected": {
+        "title": "conflict6_label_2_A"
+      },
+      "observation_event": 59,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_label_2_A",
+        "trigger_status": 200
+      },
+      "oracle_id": "label-last-successful-write-visible",
+      "resource_path": "/labels/103",
+      "result": "PASS",
+      "trigger_event": 56
+    },
+    {
+      "expected": {
+        "title": "conflict6_task_2_B"
+      },
+      "observation_event": 64,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_task_2_B",
+        "trigger_status": 200
+      },
+      "oracle_id": "task-last-successful-write-visible",
+      "resource_path": "/tasks/363",
+      "result": "PASS",
+      "trigger_event": 61
+    },
+    {
+      "expected": {
+        "title": "conflict6_task_5_A"
+      },
+      "observation_event": 73,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_task_5_A",
+        "trigger_status": 200
+      },
+      "oracle_id": "task-last-successful-write-visible",
+      "resource_path": "/tasks/360",
+      "result": "PASS",
+      "trigger_event": 70
+    },
+    {
+      "expected": {
+        "title": "conflict6_label_2_B"
+      },
+      "observation_event": 74,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_label_2_B",
+        "trigger_status": 200
+      },
+      "oracle_id": "label-last-successful-write-visible",
+      "resource_path": "/labels/103",
+      "result": "PASS",
+      "trigger_event": 71
+    },
+    {
+      "expected": {
+        "title": "conflict6_task_3_A"
+      },
+      "observation_event": 79,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_task_3_A",
+        "trigger_status": 200
+      },
+      "oracle_id": "task-last-successful-write-visible",
+      "resource_path": "/tasks/364",
+      "result": "PASS",
+      "trigger_event": 78
+    },
+    {
+      "expected": {
+        "title": "conflict6_task_5_B"
+      },
+      "observation_event": 83,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_task_5_B",
+        "trigger_status": 200
+      },
+      "oracle_id": "task-last-successful-write-visible",
+      "resource_path": "/tasks/360",
+      "result": "PASS",
+      "trigger_event": 82
+    },
+    {
+      "expected": {
+        "comment": "conflict6_comment_0_B"
+      },
+      "observation_event": 85,
+      "observed": {
+        "comment": "conflict6_comment_0_B",
+        "read_status": 200,
+        "trigger_status": 200
+      },
+      "oracle_id": "comment-last-successful-write-visible",
+      "resource_path": "/tasks/362/comments/131",
+      "result": "PASS",
+      "trigger_event": 84
+    },
+    {
+      "expected": {
+        "comment": "conflict6_comment_0_A"
+      },
+      "observation_event": 91,
+      "observed": {
+        "comment": "conflict6_comment_0_A",
+        "read_status": 200,
+        "trigger_status": 200
+      },
+      "oracle_id": "comment-last-successful-write-visible",
+      "resource_path": "/tasks/362/comments/131",
+      "result": "PASS",
+      "trigger_event": 86
+    },
+    {
+      "expected": {
+        "title": "conflict6_task_4_B"
+      },
+      "observation_event": 96,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_task_4_B",
+        "trigger_status": 200
+      },
+      "oracle_id": "task-last-successful-write-visible",
+      "resource_path": "/tasks/365",
+      "result": "PASS",
+      "trigger_event": 90
+    },
+    {
+      "expected": {
+        "title": "conflict6_task_4_B"
+      },
+      "observation_event": 96,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_task_4_B",
+        "trigger_status": 200
+      },
+      "oracle_id": "task-last-successful-write-visible",
+      "resource_path": "/tasks/365",
+      "result": "PASS",
+      "trigger_event": 93
+    },
+    {
+      "expected": {
+        "title": "conflict6_task_3_B"
+      },
+      "observation_event": 95,
+      "observed": {
+        "read_status": 200,
+        "title": "conflict6_task_3_B",
+        "trigger_status": 200
+      },
+      "oracle_id": "task-last-successful-write-visible",
+      "resource_path": "/tasks/364",
+      "result": "PASS",
+      "trigger_event": 94
+    },
+    {
+      "expected": {
+        "comment": "conflict6_comment_1_A"
+      },
+      "observation_event": 101,
+      "observed": {
+        "comment": "conflict6_comment_1_A",
+        "read_status": 200,
+        "trigger_status": 200
+      },
+      "oracle_id": "comment-last-successful-write-visible",
+      "resource_path": "/tasks/361/comments/130",
+      "result": "PASS",
+      "trigger_event": 98
+    },
+    {
+      "expected": {
+        "comment": "conflict6_comment_1_A"
+      },
+      "observation_event": 101,
+      "observed": {
+        "comment": "conflict6_comment_1_A",
+        "read_status": 200,
+        "trigger_status": 200
+      },
+      "oracle_id": "comment-last-successful-write-visible",
+      "resource_path": "/tasks/361/comments/130",
+      "result": "PASS",
+      "trigger_event": 99
+    },
+    {
+      "expected": {
+        "comment": "conflict6_comment_3_A"
+      },
+      "observation_event": 105,
+      "observed": {
+        "comment": "conflict6_comment_3_A",
+        "read_status": 200,
+        "trigger_status": 200
+      },
+      "oracle_id": "comment-last-successful-write-visible",
+      "resource_path": "/tasks/364/comments/132",
+      "result": "PASS",
+      "trigger_event": 104
+    },
+    {
+      "expected": {
+        "comment": "conflict6_comment_3_B"
+      },
+      "observation_event": 109,
+      "observed": {
+        "comment": "conflict6_comment_3_B",
+        "read_status": 200,
+        "trigger_status": 200
+      },
+      "oracle_id": "comment-last-successful-write-visible",
+      "resource_path": "/tasks/364/comments/132",
+      "result": "PASS",
+      "trigger_event": 106
+    },
+    {
+      "expected": {
+        "comment": "conflict6_comment_2_B"
+      },
+      "observation_event": 110,
+      "observed": {
+        "comment": "conflict6_comment_2_B",
+        "read_status": 200,
+        "trigger_status": 200
+      },
+      "oracle_id": "comment-last-successful-write-visible",
+      "resource_path": "/tasks/363/comments/133",
+      "result": "PASS",
+      "trigger_event": 107
+    },
+    {
+      "expected": {
+        "comment": "conflict6_comment_2_B"
+      },
+      "observation_event": 110,
+      "observed": {
+        "comment": "conflict6_comment_2_B",
+        "read_status": 200,
+        "trigger_status": 200
+      },
+      "oracle_id": "comment-last-successful-write-visible",
+      "resource_path": "/tasks/363/comments/133",
+      "result": "PASS",
+      "trigger_event": 108
+    }
+  ]
+}

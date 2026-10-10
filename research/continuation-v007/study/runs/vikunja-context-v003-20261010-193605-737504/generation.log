@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "d:\ProgramData\Anaconda3\lib\runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "d:\ProgramData\Anaconda3\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\USER\Downloads\vikunja-context-live-v003-20261010-193603-207\source\generator_v56\__main__.py", line 5, in <module>
+    sys.exit(main())
+  File "C:\Users\USER\Downloads\vikunja-context-live-v003-20261010-193603-207\source\generator_v56\cli.py", line 332, in main
+    return args.func(args)
+  File "C:\Users\USER\Downloads\vikunja-context-live-v003-20261010-193603-207\source\generator_v56\cli.py", line 214, in cmd_context_generate
+    generate_context_model(args.openapi, args.output, args.name, args.base_url,
+  File "C:\Users\USER\Downloads\vikunja-context-live-v003-20261010-193603-207\source\generator_v56\render\context_model.py", line 762, in generate_context_model
+    (out/filename).write_text(content,encoding='utf-8',newline='\n')
+TypeError: write_text() got an unexpected keyword argument 'newline'

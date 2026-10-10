@@ -1,0 +1,241 @@
+{
+  "version": "v003",
+  "contract_sha256": "207ec830ffe3f73be3324dda465a33e1d6ae4afca5b2e4d35e66d2e371e0510d",
+  "contract_version": "v2.6.0-469-g94e6f165",
+  "policy": {
+    "version": "v003",
+    "actor_scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+    "field_priority": [
+      "title",
+      "name"
+    ],
+    "eligible_types": [
+      "string"
+    ],
+    "exclude_formatted_fields": true,
+    "semantic_assumptions": [
+      "selected scalar roundtrips without normalization",
+      "a successful update persists its selected scalar",
+      "resource identity remains stable across reads and updates"
+    ],
+    "source": "DECLARED_GENERIC_RESEARCH_POLICY; NOT_INFERRED_FROM_OPENAPI",
+    "request_values": "NOT_GENERATED",
+    "live_enabled": false
+  },
+  "resources": [
+    {
+      "resource": "label",
+      "create": "POST /labels",
+      "read": "GET /labels/{id}",
+      "create_pointer": "#/paths/~1labels/post",
+      "read_pointer": "#/paths/~1labels~1{id}/get",
+      "identity": {
+        "capture_field": "id",
+        "producer_field_pointer": "#/components/schemas/Label/properties/id",
+        "read_field_pointer": "#/components/schemas/LabelReadBody/properties/id",
+        "path_slot": "id",
+        "type": "integer",
+        "binding_basis": "RESPONSE_FIELD_TYPE_AND_PATH_FAMILY_HEURISTIC",
+        "binding_review_required": true
+      },
+      "scalar": {
+        "field": "title",
+        "request_pointer": "#/components/schemas/Label/properties/title",
+        "read_pointer": "#/components/schemas/LabelReadBody/properties/title",
+        "selection_source": "GENERIC_POLICY_FIELD_PRIORITY"
+      },
+      "create_parent_slots": []
+    },
+    {
+      "resource": "project",
+      "create": "POST /projects",
+      "read": "GET /projects/{id}",
+      "create_pointer": "#/paths/~1projects/post",
+      "read_pointer": "#/paths/~1projects~1{id}/get",
+      "identity": {
+        "capture_field": "id",
+        "producer_field_pointer": "#/components/schemas/Project/properties/id",
+        "read_field_pointer": "#/components/schemas/ProjectReadBody/properties/id",
+        "path_slot": "id",
+        "type": "integer",
+        "binding_basis": "RESPONSE_FIELD_TYPE_AND_PATH_FAMILY_HEURISTIC",
+        "binding_review_required": true
+      },
+      "scalar": {
+        "field": "title",
+        "request_pointer": "#/components/schemas/Project/properties/title",
+        "read_pointer": "#/components/schemas/ProjectReadBody/properties/title",
+        "selection_source": "GENERIC_POLICY_FIELD_PRIORITY"
+      },
+      "create_parent_slots": []
+    },
+    {
+      "resource": "task",
+      "create": "POST /projects/{project}/tasks",
+      "read": "GET /tasks/{task}",
+      "create_pointer": "#/paths/~1projects~1{project}~1tasks/post",
+      "read_pointer": "#/paths/~1tasks~1{task}/get",
+      "identity": {
+        "capture_field": "id",
+        "producer_field_pointer": "#/components/schemas/Task/properties/id",
+        "read_field_pointer": "#/components/schemas/TaskReadOneBody/properties/id",
+        "path_slot": "task",
+        "type": "integer",
+        "binding_basis": "RESPONSE_FIELD_TYPE_AND_PATH_FAMILY_HEURISTIC",
+        "binding_review_required": true
+      },
+      "scalar": {
+        "field": "title",
+        "request_pointer": "#/components/schemas/Task/properties/title",
+        "read_pointer": "#/components/schemas/TaskReadOneBody/properties/title",
+        "selection_source": "GENERIC_POLICY_FIELD_PRIORITY"
+      },
+      "create_parent_slots": [
+        "project"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "label_create_read",
+      "kind": "CREATE_READBACK",
+      "resource": "label",
+      "operations": [
+        "POST /labels",
+        "GET /labels/{id}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "title",
+        "expected_from": "SUPPLIED_CREATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    },
+    {
+      "id": "label_update_read",
+      "kind": "UPDATE_READBACK",
+      "resource": "label",
+      "operations": [
+        "GET /labels/{id}",
+        "PATCH /labels/{id}",
+        "GET /labels/{id}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "title",
+        "expected_from": "SUPPLIED_UPDATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "request_mode": "REVIEW_SUPPORTED_MERGE_PATCH_MEDIA_TYPE",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    },
+    {
+      "id": "project_create_read",
+      "kind": "CREATE_READBACK",
+      "resource": "project",
+      "operations": [
+        "POST /projects",
+        "GET /projects/{id}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "title",
+        "expected_from": "SUPPLIED_CREATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    },
+    {
+      "id": "project_update_read",
+      "kind": "UPDATE_READBACK",
+      "resource": "project",
+      "operations": [
+        "GET /projects/{id}",
+        "PATCH /projects/{id}",
+        "GET /projects/{id}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "title",
+        "expected_from": "SUPPLIED_UPDATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "request_mode": "REVIEW_SUPPORTED_MERGE_PATCH_MEDIA_TYPE",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    },
+    {
+      "id": "task_create_read",
+      "kind": "CREATE_READBACK",
+      "resource": "task",
+      "operations": [
+        "POST /projects/{project}/tasks",
+        "GET /tasks/{task}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "title",
+        "expected_from": "SUPPLIED_CREATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    },
+    {
+      "id": "task_update_read",
+      "kind": "UPDATE_READBACK",
+      "resource": "task",
+      "operations": [
+        "GET /tasks/{task}",
+        "PATCH /tasks/{task}",
+        "GET /tasks/{task}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "title",
+        "expected_from": "SUPPLIED_UPDATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "request_mode": "REVIEW_SUPPORTED_MERGE_PATCH_MEDIA_TYPE",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    }
+  ],
+  "relationship_candidates": [
+    {
+      "kind": "CREATE_PARENT_IDENTITY_CANDIDATE",
+      "child": "task",
+      "path_slot": "project",
+      "producer_resources": [
+        "project"
+      ],
+      "source": "PATH_SLOT_NAME_HEURISTIC",
+      "review_required": true
+    },
+    {
+      "kind": "LINK_REMOVAL_READBACK_CANDIDATE",
+      "remove": "DELETE /tasks/{task}/labels/{label}",
+      "collection_reads": [
+        "GET /tasks/{task}/labels"
+      ],
+      "resource_delete": false,
+      "source": "NESTED_PATH_COLLECTION_READ_RULE",
+      "membership_projection": "REVIEW_REQUIRED; PAGINATION_NOT_RESOLVED",
+      "live_enabled": false
+    }
+  ],
+  "unresolved": [
+    {
+      "operation": "POST /tasks/{task}/labels",
+      "reason": "NO_ROOT_ID_FIELD; POSSIBLE_RELATION_OPERATION"
+    }
+  ],
+  "live_execution": false,
+  "js_generated": false,
+  "existing_generator_modified": false,
+  "status": "OFFLINE_RULE_DERIVATION_COMPLETE; BINDING_AND_RUNTIME_REVIEW_PENDING"
+}

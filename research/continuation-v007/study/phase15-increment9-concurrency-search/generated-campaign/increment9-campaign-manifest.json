@@ -1,0 +1,145 @@
+{
+  "adapter_role": "validated barrier release and HTTP transport only",
+  "candidate_policy": "Search findings require independent direct confirmation in Increment 9.1",
+  "decision_owner": "Provengo BP model",
+  "gates": [
+    "sequential-control",
+    "barrier-readiness",
+    "distinct-connections",
+    "adapter-overlap",
+    "proxy-overlap",
+    "post-join-observation"
+  ],
+  "primary_backend": "postgresql",
+  "profile": "provengo-driven-vikunja-concurrency-search",
+  "scenarios": [
+    {
+      "index": 0,
+      "kind": "commutative",
+      "operations": [
+        {
+          "delay_ms": 0,
+          "field": "title",
+          "method": "PATCH",
+          "value": "increment9_title_a"
+        },
+        {
+          "delay_ms": 0,
+          "field": "description",
+          "method": "PATCH",
+          "value": "increment9_description_a"
+        }
+      ],
+      "scenario_id": "disjoint-title-description",
+      "width": 2
+    },
+    {
+      "index": 1,
+      "kind": "commutative",
+      "operations": [
+        {
+          "delay_ms": 0,
+          "field": "title",
+          "method": "PATCH",
+          "value": "increment9_title_b"
+        },
+        {
+          "delay_ms": 5,
+          "field": "priority",
+          "method": "PATCH",
+          "value": 3
+        }
+      ],
+      "scenario_id": "disjoint-title-priority-staggered",
+      "width": 2
+    },
+    {
+      "index": 2,
+      "kind": "same-field",
+      "operations": [
+        {
+          "delay_ms": 0,
+          "field": "title",
+          "method": "PATCH",
+          "value": "increment9_title_first"
+        },
+        {
+          "delay_ms": 5,
+          "field": "title",
+          "method": "PATCH",
+          "value": "increment9_title_second"
+        }
+      ],
+      "scenario_id": "same-field-title",
+      "width": 2
+    },
+    {
+      "index": 3,
+      "kind": "commutative",
+      "operations": [
+        {
+          "delay_ms": 0,
+          "field": "title",
+          "method": "PATCH",
+          "value": "increment9_title_c"
+        },
+        {
+          "delay_ms": 3,
+          "field": "description",
+          "method": "PATCH",
+          "value": "increment9_description_c"
+        },
+        {
+          "delay_ms": 6,
+          "field": "priority",
+          "method": "PATCH",
+          "value": 4
+        }
+      ],
+      "scenario_id": "three-way-disjoint",
+      "width": 3
+    },
+    {
+      "index": 4,
+      "kind": "update-delete",
+      "operations": [
+        {
+          "delay_ms": 0,
+          "field": "title",
+          "method": "PATCH",
+          "value": "increment9_title_before_delete"
+        },
+        {
+          "delay_ms": 5,
+          "field": null,
+          "method": "DELETE",
+          "value": null
+        }
+      ],
+      "scenario_id": "update-delete",
+      "width": 2
+    },
+    {
+      "index": 5,
+      "kind": "commutative",
+      "operations": [
+        {
+          "delay_ms": 5,
+          "field": "description",
+          "method": "PATCH",
+          "value": "increment9_description_d"
+        },
+        {
+          "delay_ms": 0,
+          "field": "priority",
+          "method": "PATCH",
+          "value": 2
+        }
+      ],
+      "scenario_id": "disjoint-description-priority-reversed",
+      "width": 2
+    }
+  ],
+  "schema_version": 1,
+  "source_openapi_sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941"
+}

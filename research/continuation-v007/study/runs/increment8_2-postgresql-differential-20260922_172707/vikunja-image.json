@@ -1,0 +1,100 @@
+﻿[
+    {
+        "Id": "sha256:0838aba019fa387e569ff6a535329bc2536b31ae4a21fdc873a9fdc23ccc7f53",
+        "RepoTags": [
+            "vikunja/vikunja:latest"
+        ],
+        "RepoDigests": [
+            "vikunja/vikunja@sha256:417ada6f94e81f0267aa2f007d0a811fc82d38dd2aa58351e3ea520ca01c2ea5"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-08-31T17:29:49.482863512Z",
+        "Container": "",
+        "ContainerConfig": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": null,
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "1000",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "3456/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "VIKUNJA_SERVICE_ROOTPATH=/app/vikunja/",
+                "VIKUNJA_DATABASE_PATH=/db/vikunja.db"
+            ],
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/app/vikunja",
+            "Entrypoint": [
+                "/app/vikunja/vikunja"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "org.opencontainers.image.authors": "maintainers@vikunja.io",
+                "org.opencontainers.image.created": "2026-08-31T17:28:26.589Z",
+                "org.opencontainers.image.description": "The task manager you actually own.",
+                "org.opencontainers.image.documentation": "https://vikunja.io/docs",
+                "org.opencontainers.image.licenses": "AGPL-3.0",
+                "org.opencontainers.image.revision": "a4218eeb8fb3ada95e14a2331731524c9120d5bd",
+                "org.opencontainers.image.source": "https://github.com/go-vikunja/vikunja",
+                "org.opencontainers.image.title": "vikunja",
+                "org.opencontainers.image.url": "https://github.com/go-vikunja/vikunja",
+                "org.opencontainers.image.version": "2.6.0"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 119373174,
+        "VirtualSize": 119373174,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/83a5dcb101db49c83fb1fb94356afe15f3bf2db0dd60d0afb02fa4b0030ba113/diff:/var/lib/docker/overlay2/a3c74497f17a35dd938214b2357125fe34f2ae2caab22d18e3c8bebb5af1554c/diff:/var/lib/docker/overlay2/37c390a461a53e7ef5579ab5fee1dd41f845af357d6d0efa46e94bc707cfdc65/diff",
+                "MergedDir": "/var/lib/docker/overlay2/961b1c1af782292643243668d699fee59b6d81f2558d518764e13bb54558cd02/merged",
+                "UpperDir": "/var/lib/docker/overlay2/961b1c1af782292643243668d699fee59b6d81f2558d518764e13bb54558cd02/diff",
+                "WorkDir": "/var/lib/docker/overlay2/961b1c1af782292643243668d699fee59b6d81f2558d518764e13bb54558cd02/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:3c889b99e3ccd594794c0c3738db5c8150535d0894b764667dfa041bb51c8dfe",
+                "sha256:901ab3998d33a6e7b3ec25bb9907fdafea19727a9105b2b36ea5d25df9a4eff2",
+                "sha256:18f7cf96ade2c451e57409459289320d2d6880969deb7e7814f662284529ca4a",
+                "sha256:b001e5725f04c110e38ed0f534792c90e4d203127e079b8ac3cd49be03a33e76"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

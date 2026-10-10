@@ -1,0 +1,811 @@
+{
+  "oracles": [
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "firstName",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/admin/realms/{realm}/users/{user-id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "oracle_id": "concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName",
+      "path_template": "/admin/realms/{realm}/users/{user-id}",
+      "prefix_min_rounds": 8,
+      "request_fields": [
+        {
+          "enum": null,
+          "example": null,
+          "format": "int64",
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "createdTimestamp",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "email",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "emailVerified",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "enabled",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "federationLink",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "firstName",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "id",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "lastName",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": "int32",
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "notBefore",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "origin",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "self",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "serviceAccountClientId",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "totp",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "username",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/admin/realms/{realm}/users",
+        "empirical_get_id_field": "id",
+        "entity_key": "users",
+        "field_controls_sha256": "6e46030212c7c67ce79a0fc67a55e1b763dc2ee0e76e91d1f2b5fc15cf399126",
+        "limitation": null,
+        "observed_composition_fields": [
+          "firstName",
+          "lastName"
+        ],
+        "path_binding_evidence": {
+          "user-id": {
+            "confidence": "empirical",
+            "gate_sha256": "05f2aa9eaefd3441cbd7637252e18a992304dd88eb4e4931298acc5b003dc4d2",
+            "source": "empirical-location-verified-get"
+          }
+        },
+        "path_binding_from_create_request_path": {
+          "realm": "realm"
+        },
+        "path_binding_from_create_response": {
+          "user-id": "__sbtObservedLocationId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1admin~1realms~1{realm}~1users~1{user-id}/put",
+        "#/paths/~1admin~1realms~1{realm}~1users~1{user-id}/get"
+      ],
+      "success_statuses": [
+        204
+      ],
+      "width": 2
+    },
+    {
+      "execution": "baseline-read-then-noop-control-then-change-control-then-barrier",
+      "fields": [
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "firstName",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "noop-versus-change",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/admin/realms/{realm}/users/{user-id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "oracle_id": "concurrency::noop::concurrency::same-field::put:/admin/realms/{realm}/users/{user-id}::firstName",
+      "path_template": "/admin/realms/{realm}/users/{user-id}",
+      "prefix_min_rounds": 8,
+      "request_fields": [
+        {
+          "enum": null,
+          "example": null,
+          "format": "int64",
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "createdTimestamp",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "email",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "emailVerified",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "enabled",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "federationLink",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "firstName",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "id",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "lastName",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": "int32",
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "notBefore",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "origin",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "self",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "serviceAccountClientId",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "totp",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "username",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/admin/realms/{realm}/users",
+        "empirical_get_id_field": "id",
+        "entity_key": "users",
+        "field_controls_sha256": "6e46030212c7c67ce79a0fc67a55e1b763dc2ee0e76e91d1f2b5fc15cf399126",
+        "limitation": null,
+        "observed_composition_fields": [
+          "firstName",
+          "lastName"
+        ],
+        "path_binding_evidence": {
+          "user-id": {
+            "confidence": "empirical",
+            "gate_sha256": "05f2aa9eaefd3441cbd7637252e18a992304dd88eb4e4931298acc5b003dc4d2",
+            "source": "empirical-location-verified-get"
+          }
+        },
+        "path_binding_from_create_request_path": {
+          "realm": "realm"
+        },
+        "path_binding_from_create_response": {
+          "user-id": "__sbtObservedLocationId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1admin~1realms~1{realm}~1users~1{user-id}/put",
+        "#/paths/~1admin~1realms~1{realm}~1users~1{user-id}/get"
+      ],
+      "success_statuses": [
+        204
+      ],
+      "width": 2
+    },
+    {
+      "execution": "both-serial-orders-and-barrier-with-read-derived-complete-put-bodies",
+      "fields": [
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "firstName",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "lastName",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "disjoint-put-serial-outcomes",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/admin/realms/{realm}/users/{user-id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/admin/realms/{realm}/users/{user-id}",
+      "oracle_id": "concurrency::disjoint-put::put:/admin/realms/{realm}/users/{user-id}",
+      "path_template": "/admin/realms/{realm}/users/{user-id}",
+      "prefix_min_rounds": 8,
+      "request_fields": [
+        {
+          "enum": null,
+          "example": null,
+          "format": "int64",
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "createdTimestamp",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "email",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "emailVerified",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "enabled",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "federationLink",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "firstName",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "id",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "lastName",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": "int32",
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "notBefore",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "integer"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "origin",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "self",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "serviceAccountClientId",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "totp",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "boolean"
+        },
+        {
+          "enum": null,
+          "example": null,
+          "format": null,
+          "maxLength": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minLength": null,
+          "minimum": null,
+          "name": "username",
+          "pattern": null,
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "reverse_sequential_control": true,
+      "runtime": {
+        "create_operation_id": "post:/admin/realms/{realm}/users",
+        "empirical_get_id_field": "id",
+        "entity_key": "users",
+        "field_controls_sha256": "6e46030212c7c67ce79a0fc67a55e1b763dc2ee0e76e91d1f2b5fc15cf399126",
+        "limitation": null,
+        "observed_composition_fields": [
+          "firstName",
+          "lastName"
+        ],
+        "path_binding_evidence": {
+          "user-id": {
+            "confidence": "empirical",
+            "gate_sha256": "05f2aa9eaefd3441cbd7637252e18a992304dd88eb4e4931298acc5b003dc4d2",
+            "source": "empirical-location-verified-get"
+          }
+        },
+        "path_binding_from_create_request_path": {
+          "realm": "realm"
+        },
+        "path_binding_from_create_response": {
+          "user-id": "__sbtObservedLocationId"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1admin~1realms~1{realm}~1users~1{user-id}/put",
+        "#/paths/~1admin~1realms~1{realm}~1users~1{user-id}/get"
+      ],
+      "success_statuses": [
+        204
+      ],
+      "width": 2
+    }
+  ]
+}

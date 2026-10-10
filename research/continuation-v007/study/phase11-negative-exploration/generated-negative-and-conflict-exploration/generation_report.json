@@ -1,0 +1,799 @@
+{
+  "coverage": {
+    "covered_operations": 29,
+    "total_operations": 29,
+    "uncovered_operations": []
+  },
+  "entities": [
+    {
+      "collection_path": "/labels",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PaginatedLabelWithTaskID",
+      "item_path": "/labels/{id}",
+      "key": "labels",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/labels/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/labels/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "labelsList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/labels",
+          "source_pointer": "#/paths/~1labels/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "labelsCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/labels",
+          "source_pointer": "#/paths/~1labels/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "labelsDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/labels/{id}",
+          "source_pointer": "#/paths/~1labels~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "labelsRead",
+          "kind": "get",
+          "method": "GET",
+          "path": "/labels/{id}",
+          "source_pointer": "#/paths/~1labels~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchLabelsRead",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/labels/{id}",
+          "source_pointer": "#/paths/~1labels~1{id}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "labelsUpdate",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/labels/{id}",
+          "source_pointer": "#/paths/~1labels~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedLabelWithTaskIDs",
+      "provenance": [
+        {
+          "detail": "List operation GET /labels response 200 references PaginatedLabelWithTaskID",
+          "pointer": "#/paths/~1labels/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedLabelWithTaskID"
+    },
+    {
+      "collection_path": "/projects",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "PaginatedProject",
+      "item_path": "/projects/{id}",
+      "key": "projects",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/projects/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/projects/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/projects",
+          "source_pointer": "#/paths/~1projects/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/projects",
+          "source_pointer": "#/paths/~1projects/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/projects/{id}",
+          "source_pointer": "#/paths/~1projects~1{id}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsRead",
+          "kind": "get",
+          "method": "GET",
+          "path": "/projects/{id}",
+          "source_pointer": "#/paths/~1projects~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchProjectsRead",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/projects/{id}",
+          "source_pointer": "#/paths/~1projects~1{id}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectsUpdate",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/projects/{id}",
+          "source_pointer": "#/paths/~1projects~1{id}/put",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "PaginatedProjects",
+      "provenance": [
+        {
+          "detail": "List operation GET /projects response 200 references PaginatedProject",
+          "pointer": "#/paths/~1projects/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "PaginatedProject"
+    },
+    {
+      "collection_path": "/projects/{project}/tasks",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.95,
+          "field_name": "project",
+          "provenance": [
+            {
+              "detail": "Collection path '/projects/{project}/tasks' is nested under '/projects/{id}'",
+              "pointer": "/projects/{project}/tasks",
+              "rule": "D3:nested_resource_path"
+            }
+          ],
+          "target": "projects"
+        },
+        {
+          "confidence": 0.9,
+          "field_name": "project_id",
+          "provenance": [
+            {
+              "detail": "Create request body property 'project_id' matches entity 'projects'",
+              "pointer": "#/paths/~1projects~1{project}~1tasks/post/requestBody/content/application~1json/properties/project_id",
+              "rule": "D2:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "projects"
+        }
+      ],
+      "display_name": "TaskReadOneBody",
+      "item_path": "/tasks/{task}",
+      "key": "tasks",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "task"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'task' has no matching schema property; using path evidence only",
+          "pointer": "/tasks/{task}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['task']",
+          "pointer": "/tasks/{task}",
+          "rule": "K1/K2:item_path_parameters"
+        },
+        {
+          "detail": "Path parameter 'task' has no same-named schema property, but the schema has a generic 'id' property; treating that as the response-body identifier field for server-assigned-key handling.",
+          "pointer": "#/components/schemas/TaskReadOneBody",
+          "rule": "K5:response_field_generic_id_fallback"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "projectTasksList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/projects/{project}/tasks",
+          "source_pointer": "#/paths/~1projects~1{project}~1tasks/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/projects/{project}/tasks",
+          "source_pointer": "#/paths/~1projects~1{project}~1tasks/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksDelete",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/tasks/{task}",
+          "source_pointer": "#/paths/~1tasks~1{task}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksRead",
+          "kind": "get",
+          "method": "GET",
+          "path": "/tasks/{task}",
+          "source_pointer": "#/paths/~1tasks~1{task}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchTasksRead",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/tasks/{task}",
+          "source_pointer": "#/paths/~1tasks~1{task}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksUpdate",
+          "kind": "update",
+          "method": "PUT",
+          "path": "/tasks/{task}",
+          "source_pointer": "#/paths/~1tasks~1{task}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskCommentsList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/tasks/{task}/comments",
+          "source_pointer": "#/paths/~1tasks~1{task}~1comments/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskCommentsCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/tasks/{task}/comments",
+          "source_pointer": "#/paths/~1tasks~1{task}~1comments/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskCommentsDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/tasks/{task}/comments/{commentid}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1comments~1{commentid}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskCommentsRead",
+          "kind": "action",
+          "method": "GET",
+          "path": "/tasks/{task}/comments/{commentid}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1comments~1{commentid}/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "patchTaskCommentsRead",
+          "kind": "action",
+          "method": "PATCH",
+          "path": "/tasks/{task}/comments/{commentid}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1comments~1{commentid}/patch",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskCommentsUpdate",
+          "kind": "action",
+          "method": "PUT",
+          "path": "/tasks/{task}/comments/{commentid}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1comments~1{commentid}/put",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskLabelsList",
+          "kind": "action",
+          "method": "GET",
+          "path": "/tasks/{task}/labels",
+          "source_pointer": "#/paths/~1tasks~1{task}~1labels/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskLabelsCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/tasks/{task}/labels",
+          "source_pointer": "#/paths/~1tasks~1{task}~1labels/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "taskLabelsDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/tasks/{task}/labels/{label}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1labels~1{label}/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksRelationsCreate",
+          "kind": "action",
+          "method": "POST",
+          "path": "/tasks/{task}/relations",
+          "source_pointer": "#/paths/~1tasks~1{task}~1relations/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": true,
+          "js_function": "tasksRelationsDelete",
+          "kind": "action",
+          "method": "DELETE",
+          "path": "/tasks/{task}/relations/{relationKind}/{otherTask}",
+          "source_pointer": "#/paths/~1tasks~1{task}~1relations~1{relationKind}~1{otherTask}/delete",
+          "success_codes": [
+            204
+          ]
+        }
+      ],
+      "plural_display_name": "TaskReadOneBodies",
+      "provenance": [
+        {
+          "detail": "Item GET /tasks/{task} response 200 references TaskReadOneBody",
+          "pointer": "#/paths/~1tasks~1{task}/get/responses/200",
+          "rule": "E3c:item_response_schema"
+        },
+        {
+          "detail": "Path '/projects/{project}/tasks' ends in the unique inferred entity family 'tasks' and is assigned as its nested collection",
+          "pointer": "/projects/{project}/tasks",
+          "rule": "E6:nested_collection_path"
+        }
+      ],
+      "schema_name": "TaskReadOneBody"
+    }
+  ],
+  "isolation_audit": {
+    "denied_file_count": 0,
+    "policy": "allow-listed OpenAPI/config inputs only; environment-specific paths excluded from deterministic report"
+  },
+  "meta": {
+    "cli_args": {
+      "base_url": "http://127.0.0.1:3457",
+      "command": "generate",
+      "generator_version": "0.22.0",
+      "instances_per_action": 1,
+      "instances_per_entity": 6,
+      "name": "vikunja",
+      "seed": 20262100,
+      "source_openapi_sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941",
+      "story_profile": "multi-resource-verified-actions"
+    },
+    "openapi_version": "3.0.3",
+    "title": "Vikunja API"
+  },
+  "reproducibility": {
+    "artifact_sha256": {
+      "dependency_graph_json": "275e217c2a37d3b3640e8c0584be14176edee25e17a678fc207c76bff0f758e5",
+      "interfaces_js": "0de0deb9ec8da858585f4390dda47f2f3d9fe344bd1ac9d549a9b8c4cdf64b4f",
+      "stories_js": "ce8ea2f4f5af69eaa41b090422fe5b1570ac80a5e8c66bdc8be5034dbb3a3e8b"
+    },
+    "base_url": "http://127.0.0.1:3457",
+    "content_fingerprint_sha256": "4fa463cdc0c1954e80d1c4408f6492d8aed9069bdb44cbe078abb0f74a207bb3",
+    "generator_version": "0.22.0",
+    "instances_per_action": 1,
+    "instances_per_entity": 6,
+    "scope": "semantic inputs and generated artifacts; filesystem paths and run-time ports are excluded",
+    "seed": 20262100,
+    "source_openapi_sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941"
+  },
+  "response_code_coverage": [
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/labels"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/labels"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/labels/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/labels/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/labels/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/labels/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/projects/{id}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/projects/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/projects/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/projects/{project}/tasks"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/projects/{project}/tasks"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{task}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/tasks/{task}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/tasks/{task}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/tasks/{task}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{task}/comments"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks/{task}/comments"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{task}/comments/{commentid}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PUT",
+      "path": "/tasks/{task}/comments/{commentid}"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/tasks/{task}/comments/{commentid}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "PATCH",
+      "path": "/tasks/{task}/comments/{commentid}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": true,
+      "method": "GET",
+      "path": "/tasks/{task}/labels"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks/{task}/labels"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/tasks/{task}/labels/{label}"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": true,
+      "method": "POST",
+      "path": "/tasks/{task}/relations"
+    },
+    {
+      "declared_codes": [
+        "204"
+      ],
+      "has_default": true,
+      "method": "DELETE",
+      "path": "/tasks/{task}/relations/{relationKind}/{otherTask}"
+    }
+  ],
+  "security_schemes": {
+    "APITokenAuth": {
+      "location": "",
+      "param_name": "",
+      "scheme": "bearer",
+      "type": "http"
+    },
+    "BasicAuth": {
+      "location": "",
+      "param_name": "",
+      "scheme": "basic",
+      "type": "http"
+    },
+    "JWTKeyAuth": {
+      "location": "",
+      "param_name": "",
+      "scheme": "bearer",
+      "type": "http"
+    }
+  },
+  "standalone_operations": [],
+  "unsupported_constructs": {
+    "ambiguities": [
+      "Key inference for entity 'labels' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'projects' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'tasks' has reduced confidence (0.7); path parameter(s) ['task'] could not be fully cross-validated against the schema."
+    ],
+    "document_level": [],
+    "remote_refs": []
+  },
+  "warnings": []
+}

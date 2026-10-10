@@ -1,0 +1,44 @@
+{
+  "closed_events": [
+    "ConcurrentEpochVerifierClosed:Task:0",
+    "ConcurrentEpochVerifierClosed:Task:1",
+    "ConcurrentEpochVerifierClosed:Task:2",
+    "ConcurrentEpochVerifierClosed:Task:3",
+    "ConcurrentEpochVerifierClosed:Task:4",
+    "ConcurrentEpochVerifierClosed:Task:5"
+  ],
+  "expected": {
+    "epochs": 6,
+    "observations": 6,
+    "patches": 12,
+    "tasks": 6,
+    "width": 2
+  },
+  "oracle": {
+    "expected_witness_count": 6,
+    "fields": [
+      "title",
+      "description"
+    ],
+    "media_type": "application/merge-patch+json",
+    "method": "PATCH",
+    "oracle_id": "concurrent-disjoint-patches-both-visible",
+    "require_adapter_overlap": true,
+    "require_proxy_overlap": true
+  },
+  "prefix": "increment8_",
+  "profile": "provengo-native-true-concurrent-disjoint-patches",
+  "protocol": {
+    "decision_owner": "Provengo BP model",
+    "lifecycle": [
+      "ConcurrentEpochDeclared",
+      "ConcurrentOperationRegistered",
+      "ConcurrentEpochRelease",
+      "ConcurrentEpochJoined",
+      "ConcurrentEpochObserve"
+    ],
+    "transport_role": "barrier release and HTTP only"
+  },
+  "schema_version": 1,
+  "source_openapi_sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941"
+}

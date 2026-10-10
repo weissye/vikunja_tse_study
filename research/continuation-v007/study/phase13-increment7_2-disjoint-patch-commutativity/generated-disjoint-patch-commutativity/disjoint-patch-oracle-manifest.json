@@ -1,0 +1,30 @@
+{
+  "closed_events": [
+    "DisjointPatchVerifierClosed:Task:0",
+    "DisjointPatchVerifierClosed:Task:1",
+    "DisjointPatchVerifierClosed:Task:2",
+    "DisjointPatchVerifierClosed:Task:3",
+    "DisjointPatchVerifierClosed:Task:4",
+    "DisjointPatchVerifierClosed:Task:5"
+  ],
+  "expected": {
+    "disjoint_patches": 12,
+    "tasks": 6,
+    "verifier_reads": 6,
+    "witnesses": 6
+  },
+  "oracle": {
+    "expected_witness_count": 6,
+    "fields": [
+      "title",
+      "description"
+    ],
+    "media_type": "application/merge-patch+json",
+    "method": "PATCH",
+    "oracle_id": "task-disjoint-patches-both-visible"
+  },
+  "prefix": "increment7_2_",
+  "profile": "disjoint-field-patch-commutativity",
+  "schema_version": 1,
+  "source_openapi_sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941"
+}

@@ -1,0 +1,53 @@
+{
+  "version": "v015",
+  "unit_tests_passed": 6,
+  "synthetic_native_tests": {
+    "positive": {
+      "fixture_only": true,
+      "real_vikunja_contacted": false,
+      "runner_exit": 0,
+      "runner_status": "V015_LIVE_SCHEMA_NEGATIVE_ACCEPTED",
+      "negative_control": false,
+      "callbacks": 172,
+      "negative_checks": 22,
+      "parent_checks": 20,
+      "manifest_files_verified": 11,
+      "secret_excluded": true
+    },
+    "accept_invalid_control": {
+      "fixture_only": true,
+      "real_vikunja_contacted": false,
+      "runner_exit": 1,
+      "runner_status": "NOT_ACCEPTED",
+      "negative_control": true,
+      "callbacks": 116,
+      "negative_checks": 0,
+      "parent_checks": 14,
+      "manifest_files_verified": 11,
+      "secret_excluded": true
+    },
+    "write_on_reject_control": {
+      "fixture_only": true,
+      "real_vikunja_contacted": false,
+      "runner_exit": 1,
+      "runner_status": "NOT_ACCEPTED",
+      "negative_control": true,
+      "callbacks": 119,
+      "negative_checks": 0,
+      "parent_checks": 15,
+      "manifest_files_verified": 11,
+      "secret_excluded": true
+    }
+  },
+  "default_instances": 2,
+  "prefix_depth": 6,
+  "seed": 1,
+  "research_requests": 172,
+  "bthreads": 173,
+  "negative_cases": 22,
+  "parent_checks": 20,
+  "real_vikunja_executed": false,
+  "powershell_executed": false,
+  "initial_positive_fixture_failure": "JVM SIGABRT during simultaneous tests; sequential rerun passed",
+  "runtime_jar_sha256": "5a8140409e200fb752a97b7317e1b259e668383d9d42814063b3365f0044981b"
+}

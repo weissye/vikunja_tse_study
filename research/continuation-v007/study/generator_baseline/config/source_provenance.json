@@ -1,0 +1,21 @@
+{
+  "a2a_projection": {
+    "path": "experiments/netbox_a2a/spec/netbox_uc2_runtime_openapi.json",
+    "role": "frozen 12-operation structural projection with no value-level semantic metadata"
+  },
+  "a2a_protocol": {
+    "path": "experiments/netbox_a2a/A2A_PROTOCOL.md",
+    "role": "paper-facing apples-to-apples UC2 protocol"
+  },
+  "artifact_version": "v36",
+  "evaluation_sut": {
+    "path": "resources/development_kit/validation_only/suts/netbox/netbox_sut_buggy.py",
+    "role": "NetBox V35 five-fault intermediate-prefix A2A benchmark SUT with hidden server-side activation markers"
+  },
+  "generator_source": {
+    "path": "openapi_to_sbt/",
+    "role": "artifact generator implementation"
+  },
+  "note": "V36: V29 OpenAPI and V35 benchmark semantics remain frozen; generator/runtime binding is corrected for nested reference objects and per-story completion identity. Official scoring remains sequence-local external HTTP only; hidden activation and campaign-global reachability are diagnostic only.",
+  "schema_version": 2
+}

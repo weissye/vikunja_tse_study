@@ -1,0 +1,30 @@
+{
+  "unit_tests_passed": 6,
+  "live_vikunja_v017": "PENDING",
+  "native_fixture_cases": {
+    "full": {
+      "fixture_only": true,
+      "real_vikunja_contacted": false,
+      "runner_exit": 0,
+      "runner_status": "V017_LIVE_SCHEMA_NEGATIVE_ACCEPTED_WITH_CONTRACT_FINDINGS",
+      "negative_control": false,
+      "callbacks": 220,
+      "negative_checks": 46,
+      "parent_checks": 26,
+      "manifest_files_verified": 11,
+      "secret_excluded": true
+    },
+    "defect": {
+      "fixture_only": true,
+      "real_vikunja_contacted": false,
+      "runner_exit": 1,
+      "runner_status": "NOT_ACCEPTED",
+      "negative_control": true,
+      "callbacks": 120,
+      "negative_checks": 0,
+      "parent_checks": 14,
+      "manifest_files_verified": 11,
+      "secret_excluded": true
+    }
+  }
+}

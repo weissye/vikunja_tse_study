@@ -1,0 +1,109 @@
+{
+  "version": "v004",
+  "status": "NOT_ACCEPTED",
+  "live_execution_started": true,
+  "live_acceptance_passed": false,
+  "seed": 1,
+  "instances": 2,
+  "architecture": "ORIGINAL_CONTEXT_GENERATOR; INTERFACES_DAL_STORIES",
+  "scope": "OWN_CREATED_LABELS_PROJECTS_TEAMS; SINGLE_EXISTING_USER",
+  "authorization_negative_tests": "NOT_IMPLEMENTED",
+  "base_url": "http://127.0.0.1:3456/api/v1",
+  "server_version": "v2.6.0",
+  "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "live_contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "contract_authority": "LIVE_CANONICAL_MATCH_AND_VERSION_MATCH",
+  "label_options_status": 204,
+  "label_allowed_methods": [
+    "OPTIONS",
+    "DELETE",
+    "GET",
+    "POST"
+  ],
+  "method_adapter": {
+    "version": "v004",
+    "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+    "evidence": "Previously observed local OPTIONS allows POST, not PUT. Runner must re-check this evidence before live generation.",
+    "rules": [
+      {
+        "path": "/labels/{id}",
+        "source_method": "put",
+        "effective_method": "post"
+      }
+    ]
+  },
+  "provengo_jar_sha256": "dda4be276ff517faa06b942d587cad2d342c66d83c9959f7eb3c6c77a8b2fc2b",
+  "expected_negative_checks": 190,
+  "expected_http_callbacks": 600,
+  "expected_lifecycles": 6,
+  "actor_id": 1,
+  "provengo_command": [
+    "java",
+    "-jar",
+    "D:\\Yeshayahu\\Temp\\vikunja_tse_study\\Provengo-2026-01-10.uber.jar",
+    "run",
+    "--random-seed",
+    "1",
+    "D:\\Yeshayahu\\Temp\\vikunja_tse_study\\runs\\vikunja-context-v004-20261010-194021-452619\\project"
+  ],
+  "native_exit": 1,
+  "observed_http_callbacks": 172,
+  "observed_negative_checks": 52,
+  "passed_negative_checks": 51,
+  "status_documentation_findings": [
+    {
+      "caseId": "NEG_ModelsProject_1_1",
+      "status": 412,
+      "rejected": true,
+      "status_documented": false,
+      "state_projection_unchanged": true,
+      "pass": true
+    },
+    {
+      "caseId": "NEG_ModelsProject_2_1",
+      "status": 412,
+      "rejected": true,
+      "status_documented": false,
+      "state_projection_unchanged": true,
+      "pass": true
+    },
+    {
+      "caseId": "NEG_ModelsLabel_2_6",
+      "status": 412,
+      "rejected": true,
+      "status_documented": false,
+      "state_projection_unchanged": true,
+      "pass": true
+    },
+    {
+      "caseId": "NEG_ModelsProject_1_8",
+      "status": 412,
+      "rejected": true,
+      "status_documented": false,
+      "state_projection_unchanged": true,
+      "pass": true
+    },
+    {
+      "caseId": "NEG_ModelsLabel_1_6",
+      "status": 412,
+      "rejected": true,
+      "status_documented": false,
+      "state_projection_unchanged": true,
+      "pass": true
+    }
+  ],
+  "negative_findings": [
+    {
+      "caseId": "NEG_ModelsLabel_2_9",
+      "status": 200,
+      "rejected": false,
+      "status_documented": true,
+      "state_projection_unchanged": false,
+      "pass": false
+    }
+  ],
+  "unexecuted_negative_checks": 138,
+  "selected_negative_lifecycle_complete_count": 6,
+  "completion_basis": "NATIVE_SUCCESS_PLUS_ALL_HTTP_CALLBACKS_AND_NEGATIVE_CHECKS; SELECTED_MARKERS_ALONE_ARE_NOT_PROOF",
+  "error": "ValueError: Context campaign incomplete or findings detected; inspect review"
+}

@@ -1,0 +1,15 @@
+Stage 6.2 generic generator contract regression
+Method: frozen 0.26.2 baseline vs patched 0.26.2; identical full interfaces/stories; long profile generated; Node JS syntax.
+Result: PASS, 6 actual OpenAPI contracts + 6 synthetic shapes; live SUT executions: 0.
+Source archives: openapi_to_sbt_provengo_four_systems_v38.zip and openapi-verified-generator-v0.25.6-freeze.zip.
+
+library.json: SHA256 965b2c8aac14485b8fa7bafb139e507c918240e71315246e1b817d8590089448
+garage.json: SHA256 464b760928b607da4d6cef46a6beff7fbcba6063e5de54617c8e49e2df7574a5
+pharmacy.json: SHA256 778e135d44190b98a07b1d84c315cb6f0ef9b8e9ad78340c3d17a8cbe53dc5ba
+netbox.json: SHA256 dae055dc0eac76045389286820719f4a8b1fbd3be7d7897c50ba87cdd01d2060
+todoist.yaml: SHA256 eac57779838a6327e497334d940be1da6130466afce9d4a7fbf773dc3197a709
+vikunja.json: SHA256 69d2658357c2de69946e9e5496025ecbb4daf84052aa6f64ecc0f4fbf6323956
+gitea.json: SHA256 a0baa9a766c22492bd8c45744157c611d3e95cfc0dc73d6f5d14f294cdddce38
+
+Gitea offline: 29 generated long variants; six repoEdit variants; Node syntax PASS.
+Limits: six live SUT runs not executed; original full profile preserved byte for byte on all tested contracts.

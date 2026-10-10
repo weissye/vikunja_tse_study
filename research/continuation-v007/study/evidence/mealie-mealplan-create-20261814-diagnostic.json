@@ -1,0 +1,62 @@
+{
+  "classification": "LOCAL_MEALPLAN_CREATE_DIAGNOSTIC",
+  "events": [
+    {
+      "request_shape": {
+        "body_type": "object",
+        "date_format_ok": true,
+        "keys": [
+          "date"
+        ],
+        "unknown_key_count": 0
+      },
+      "response_shape": {
+        "body_type": "object",
+        "errors": [
+          {
+            "loc": [
+              "body",
+              "recipe_id"
+            ],
+            "message_kind": "other",
+            "type": "value_error"
+          }
+        ],
+        "top_level_keys": [
+          "detail"
+        ]
+      },
+      "status": 422,
+      "trace_sequence": 19
+    },
+    {
+      "request_shape": {
+        "body_type": "object",
+        "date_format_ok": true,
+        "keys": [
+          "date"
+        ],
+        "unknown_key_count": 0
+      },
+      "response_shape": {
+        "body_type": "object",
+        "errors": [
+          {
+            "loc": [
+              "body",
+              "recipe_id"
+            ],
+            "message_kind": "other",
+            "type": "value_error"
+          }
+        ],
+        "top_level_keys": [
+          "detail"
+        ]
+      },
+      "status": 422,
+      "trace_sequence": 20
+    }
+  ],
+  "schema_version": 1
+}

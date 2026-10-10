@@ -1,0 +1,1756 @@
+{
+  "version": "v013",
+  "steps": [
+    {
+      "id": "label/0/create",
+      "source_method": "PUT",
+      "contract_override": null,
+      "method": "PUT",
+      "path": "/labels",
+      "codes": [
+        201
+      ],
+      "phase": "prefix",
+      "deps": [],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_label_0_0"
+      },
+      "media_type": "application/json",
+      "capture_key": "label_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1labels/put",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/create_read",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/create"
+      ],
+      "field": "title",
+      "identity_key": "label_0_create_ID",
+      "expected": "sbt_8ecb896224_label_0_0",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/prefix_update/0",
+      "source_method": "PUT",
+      "contract_override": {
+        "version": "v013",
+        "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+        "contract_version": "v2.6.0",
+        "path": "/labels/{id}",
+        "source_method": "PUT",
+        "effective_method": "POST",
+        "basis": "USER_OBSERVED_OPTIONS_ALLOW_AND_V006_405",
+        "observed_allow": [
+          "OPTIONS",
+          "DELETE",
+          "GET",
+          "POST"
+        ],
+        "status": "POST_PERSISTENCE_PENDING_LIVE_ACCEPTANCE",
+        "source_contract_modified": false
+      },
+      "method": "POST",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/create_read"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_label_0_1"
+      },
+      "media_type": "application/json",
+      "identity_key": "label_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/put",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/prefix_read/0",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/prefix_update/0"
+      ],
+      "field": "title",
+      "identity_key": "label_0_create_ID",
+      "expected": "sbt_8ecb896224_label_0_1",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/prefix_update/1",
+      "source_method": "PUT",
+      "contract_override": {
+        "version": "v013",
+        "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+        "contract_version": "v2.6.0",
+        "path": "/labels/{id}",
+        "source_method": "PUT",
+        "effective_method": "POST",
+        "basis": "USER_OBSERVED_OPTIONS_ALLOW_AND_V006_405",
+        "observed_allow": [
+          "OPTIONS",
+          "DELETE",
+          "GET",
+          "POST"
+        ],
+        "status": "POST_PERSISTENCE_PENDING_LIVE_ACCEPTANCE",
+        "source_contract_modified": false
+      },
+      "method": "POST",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/prefix_read/0"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_label_0_2"
+      },
+      "media_type": "application/json",
+      "identity_key": "label_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/put",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/prefix_read/1",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/prefix_update/1"
+      ],
+      "field": "title",
+      "identity_key": "label_0_create_ID",
+      "expected": "sbt_8ecb896224_label_0_2",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/prefix_update/2",
+      "source_method": "PUT",
+      "contract_override": {
+        "version": "v013",
+        "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+        "contract_version": "v2.6.0",
+        "path": "/labels/{id}",
+        "source_method": "PUT",
+        "effective_method": "POST",
+        "basis": "USER_OBSERVED_OPTIONS_ALLOW_AND_V006_405",
+        "observed_allow": [
+          "OPTIONS",
+          "DELETE",
+          "GET",
+          "POST"
+        ],
+        "status": "POST_PERSISTENCE_PENDING_LIVE_ACCEPTANCE",
+        "source_contract_modified": false
+      },
+      "method": "POST",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/prefix_read/1"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_label_0_3"
+      },
+      "media_type": "application/json",
+      "identity_key": "label_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/put",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/prefix_read/2",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/prefix_update/2"
+      ],
+      "field": "title",
+      "identity_key": "label_0_create_ID",
+      "expected": "sbt_8ecb896224_label_0_3",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/prefix_update/3",
+      "source_method": "PUT",
+      "contract_override": {
+        "version": "v013",
+        "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+        "contract_version": "v2.6.0",
+        "path": "/labels/{id}",
+        "source_method": "PUT",
+        "effective_method": "POST",
+        "basis": "USER_OBSERVED_OPTIONS_ALLOW_AND_V006_405",
+        "observed_allow": [
+          "OPTIONS",
+          "DELETE",
+          "GET",
+          "POST"
+        ],
+        "status": "POST_PERSISTENCE_PENDING_LIVE_ACCEPTANCE",
+        "source_contract_modified": false
+      },
+      "method": "POST",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/prefix_read/2"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_label_0_4"
+      },
+      "media_type": "application/json",
+      "identity_key": "label_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/put",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/prefix_read/3",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/prefix_update/3"
+      ],
+      "field": "title",
+      "identity_key": "label_0_create_ID",
+      "expected": "sbt_8ecb896224_label_0_4",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/prefix_update/4",
+      "source_method": "PUT",
+      "contract_override": {
+        "version": "v013",
+        "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+        "contract_version": "v2.6.0",
+        "path": "/labels/{id}",
+        "source_method": "PUT",
+        "effective_method": "POST",
+        "basis": "USER_OBSERVED_OPTIONS_ALLOW_AND_V006_405",
+        "observed_allow": [
+          "OPTIONS",
+          "DELETE",
+          "GET",
+          "POST"
+        ],
+        "status": "POST_PERSISTENCE_PENDING_LIVE_ACCEPTANCE",
+        "source_contract_modified": false
+      },
+      "method": "POST",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/prefix_read/3"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_label_0_5"
+      },
+      "media_type": "application/json",
+      "identity_key": "label_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/put",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/prefix_read/4",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/prefix_update/4"
+      ],
+      "field": "title",
+      "identity_key": "label_0_create_ID",
+      "expected": "sbt_8ecb896224_label_0_5",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/prefix_update/5",
+      "source_method": "PUT",
+      "contract_override": {
+        "version": "v013",
+        "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+        "contract_version": "v2.6.0",
+        "path": "/labels/{id}",
+        "source_method": "PUT",
+        "effective_method": "POST",
+        "basis": "USER_OBSERVED_OPTIONS_ALLOW_AND_V006_405",
+        "observed_allow": [
+          "OPTIONS",
+          "DELETE",
+          "GET",
+          "POST"
+        ],
+        "status": "POST_PERSISTENCE_PENDING_LIVE_ACCEPTANCE",
+        "source_contract_modified": false
+      },
+      "method": "POST",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/prefix_read/4"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_label_0_6"
+      },
+      "media_type": "application/json",
+      "identity_key": "label_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/put",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/prefix_read/5",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "label/0/prefix_update/5"
+      ],
+      "field": "title",
+      "identity_key": "label_0_create_ID",
+      "expected": "sbt_8ecb896224_label_0_6",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/create",
+      "source_method": "PUT",
+      "contract_override": null,
+      "method": "PUT",
+      "path": "/projects",
+      "codes": [
+        201
+      ],
+      "phase": "prefix",
+      "deps": [],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_project_0_0"
+      },
+      "media_type": "application/json",
+      "capture_key": "project_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1projects/put",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/create_read",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/create"
+      ],
+      "field": "title",
+      "identity_key": "project_0_create_ID",
+      "expected": "sbt_8ecb896224_project_0_0",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/prefix_update/0",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/create_read"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_project_0_1"
+      },
+      "media_type": "application/json",
+      "identity_key": "project_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/prefix_read/0",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/prefix_update/0"
+      ],
+      "field": "title",
+      "identity_key": "project_0_create_ID",
+      "expected": "sbt_8ecb896224_project_0_1",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/prefix_update/1",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/prefix_read/0"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_project_0_2"
+      },
+      "media_type": "application/json",
+      "identity_key": "project_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/prefix_read/1",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/prefix_update/1"
+      ],
+      "field": "title",
+      "identity_key": "project_0_create_ID",
+      "expected": "sbt_8ecb896224_project_0_2",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/prefix_update/2",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/prefix_read/1"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_project_0_3"
+      },
+      "media_type": "application/json",
+      "identity_key": "project_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/prefix_read/2",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/prefix_update/2"
+      ],
+      "field": "title",
+      "identity_key": "project_0_create_ID",
+      "expected": "sbt_8ecb896224_project_0_3",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/prefix_update/3",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/prefix_read/2"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_project_0_4"
+      },
+      "media_type": "application/json",
+      "identity_key": "project_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/prefix_read/3",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/prefix_update/3"
+      ],
+      "field": "title",
+      "identity_key": "project_0_create_ID",
+      "expected": "sbt_8ecb896224_project_0_4",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/prefix_update/4",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/prefix_read/3"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_project_0_5"
+      },
+      "media_type": "application/json",
+      "identity_key": "project_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/prefix_read/4",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/prefix_update/4"
+      ],
+      "field": "title",
+      "identity_key": "project_0_create_ID",
+      "expected": "sbt_8ecb896224_project_0_5",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/prefix_update/5",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/prefix_read/4"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_project_0_6"
+      },
+      "media_type": "application/json",
+      "identity_key": "project_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/prefix_read/5",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/prefix_update/5"
+      ],
+      "field": "title",
+      "identity_key": "project_0_create_ID",
+      "expected": "sbt_8ecb896224_project_0_6",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/create",
+      "source_method": "PUT",
+      "contract_override": null,
+      "method": "PUT",
+      "path": "/projects/@{project_0_create_ID}/tasks",
+      "codes": [
+        201
+      ],
+      "phase": "prefix",
+      "deps": [
+        "project/0/create_read"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_task_0_0"
+      },
+      "media_type": "application/json",
+      "capture_key": "task_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/create_read",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/create"
+      ],
+      "field": "title",
+      "identity_key": "task_0_create_ID",
+      "expected": "sbt_8ecb896224_task_0_0",
+      "parent_checks": [
+        {
+          "field": "project_id",
+          "parent_identity_key": "project_0_create_ID",
+          "source": "PARENT_PATH_BINDING_PLUS_COMPATIBLE_RESPONSE_FIELD",
+          "field_source": "ORIGINAL_RESPONSE_SCHEMA",
+          "binding_source": {
+            "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+            "rule": "GENERIC_OWN_RESOURCE_PREFIX_V013",
+            "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+          }
+        }
+      ],
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/prefix_update/0",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/create_read"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_task_0_1"
+      },
+      "media_type": "application/json",
+      "identity_key": "task_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/prefix_read/0",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/prefix_update/0"
+      ],
+      "field": "title",
+      "identity_key": "task_0_create_ID",
+      "expected": "sbt_8ecb896224_task_0_1",
+      "parent_checks": [
+        {
+          "field": "project_id",
+          "parent_identity_key": "project_0_create_ID",
+          "source": "PARENT_PATH_BINDING_PLUS_COMPATIBLE_RESPONSE_FIELD",
+          "field_source": "ORIGINAL_RESPONSE_SCHEMA",
+          "binding_source": {
+            "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+            "rule": "GENERIC_OWN_RESOURCE_PREFIX_V013",
+            "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+          }
+        }
+      ],
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/prefix_update/1",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/prefix_read/0"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_task_0_2"
+      },
+      "media_type": "application/json",
+      "identity_key": "task_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/prefix_read/1",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/prefix_update/1"
+      ],
+      "field": "title",
+      "identity_key": "task_0_create_ID",
+      "expected": "sbt_8ecb896224_task_0_2",
+      "parent_checks": [
+        {
+          "field": "project_id",
+          "parent_identity_key": "project_0_create_ID",
+          "source": "PARENT_PATH_BINDING_PLUS_COMPATIBLE_RESPONSE_FIELD",
+          "field_source": "ORIGINAL_RESPONSE_SCHEMA",
+          "binding_source": {
+            "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+            "rule": "GENERIC_OWN_RESOURCE_PREFIX_V013",
+            "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+          }
+        }
+      ],
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/prefix_update/2",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/prefix_read/1"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_task_0_3"
+      },
+      "media_type": "application/json",
+      "identity_key": "task_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/prefix_read/2",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/prefix_update/2"
+      ],
+      "field": "title",
+      "identity_key": "task_0_create_ID",
+      "expected": "sbt_8ecb896224_task_0_3",
+      "parent_checks": [
+        {
+          "field": "project_id",
+          "parent_identity_key": "project_0_create_ID",
+          "source": "PARENT_PATH_BINDING_PLUS_COMPATIBLE_RESPONSE_FIELD",
+          "field_source": "ORIGINAL_RESPONSE_SCHEMA",
+          "binding_source": {
+            "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+            "rule": "GENERIC_OWN_RESOURCE_PREFIX_V013",
+            "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+          }
+        }
+      ],
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/prefix_update/3",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/prefix_read/2"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_task_0_4"
+      },
+      "media_type": "application/json",
+      "identity_key": "task_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/prefix_read/3",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/prefix_update/3"
+      ],
+      "field": "title",
+      "identity_key": "task_0_create_ID",
+      "expected": "sbt_8ecb896224_task_0_4",
+      "parent_checks": [
+        {
+          "field": "project_id",
+          "parent_identity_key": "project_0_create_ID",
+          "source": "PARENT_PATH_BINDING_PLUS_COMPATIBLE_RESPONSE_FIELD",
+          "field_source": "ORIGINAL_RESPONSE_SCHEMA",
+          "binding_source": {
+            "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+            "rule": "GENERIC_OWN_RESOURCE_PREFIX_V013",
+            "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+          }
+        }
+      ],
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/prefix_update/4",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/prefix_read/3"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_task_0_5"
+      },
+      "media_type": "application/json",
+      "identity_key": "task_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/prefix_read/4",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/prefix_update/4"
+      ],
+      "field": "title",
+      "identity_key": "task_0_create_ID",
+      "expected": "sbt_8ecb896224_task_0_5",
+      "parent_checks": [
+        {
+          "field": "project_id",
+          "parent_identity_key": "project_0_create_ID",
+          "source": "PARENT_PATH_BINDING_PLUS_COMPATIBLE_RESPONSE_FIELD",
+          "field_source": "ORIGINAL_RESPONSE_SCHEMA",
+          "binding_source": {
+            "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+            "rule": "GENERIC_OWN_RESOURCE_PREFIX_V013",
+            "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+          }
+        }
+      ],
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/prefix_update/5",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/prefix_read/4"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_task_0_6"
+      },
+      "media_type": "application/json",
+      "identity_key": "task_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/prefix_read/5",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "task/0/prefix_update/5"
+      ],
+      "field": "title",
+      "identity_key": "task_0_create_ID",
+      "expected": "sbt_8ecb896224_task_0_6",
+      "parent_checks": [
+        {
+          "field": "project_id",
+          "parent_identity_key": "project_0_create_ID",
+          "source": "PARENT_PATH_BINDING_PLUS_COMPATIBLE_RESPONSE_FIELD",
+          "field_source": "ORIGINAL_RESPONSE_SCHEMA",
+          "binding_source": {
+            "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+            "rule": "GENERIC_OWN_RESOURCE_PREFIX_V013",
+            "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+          }
+        }
+      ],
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/create",
+      "source_method": "PUT",
+      "contract_override": null,
+      "method": "PUT",
+      "path": "/teams",
+      "codes": [
+        201
+      ],
+      "phase": "prefix",
+      "deps": [],
+      "field": "name",
+      "body": {
+        "name": "sbt_8ecb896224_team_0_0"
+      },
+      "media_type": "application/json",
+      "capture_key": "team_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1teams/put",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/create_read",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/create"
+      ],
+      "field": "name",
+      "identity_key": "team_0_create_ID",
+      "expected": "sbt_8ecb896224_team_0_0",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/prefix_update/0",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/create_read"
+      ],
+      "field": "name",
+      "body": {
+        "name": "sbt_8ecb896224_team_0_1"
+      },
+      "media_type": "application/json",
+      "identity_key": "team_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/prefix_read/0",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/prefix_update/0"
+      ],
+      "field": "name",
+      "identity_key": "team_0_create_ID",
+      "expected": "sbt_8ecb896224_team_0_1",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/prefix_update/1",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/prefix_read/0"
+      ],
+      "field": "name",
+      "body": {
+        "name": "sbt_8ecb896224_team_0_2"
+      },
+      "media_type": "application/json",
+      "identity_key": "team_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/prefix_read/1",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/prefix_update/1"
+      ],
+      "field": "name",
+      "identity_key": "team_0_create_ID",
+      "expected": "sbt_8ecb896224_team_0_2",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/prefix_update/2",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/prefix_read/1"
+      ],
+      "field": "name",
+      "body": {
+        "name": "sbt_8ecb896224_team_0_3"
+      },
+      "media_type": "application/json",
+      "identity_key": "team_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/prefix_read/2",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/prefix_update/2"
+      ],
+      "field": "name",
+      "identity_key": "team_0_create_ID",
+      "expected": "sbt_8ecb896224_team_0_3",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/prefix_update/3",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/prefix_read/2"
+      ],
+      "field": "name",
+      "body": {
+        "name": "sbt_8ecb896224_team_0_4"
+      },
+      "media_type": "application/json",
+      "identity_key": "team_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/prefix_read/3",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/prefix_update/3"
+      ],
+      "field": "name",
+      "identity_key": "team_0_create_ID",
+      "expected": "sbt_8ecb896224_team_0_4",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/prefix_update/4",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/prefix_read/3"
+      ],
+      "field": "name",
+      "body": {
+        "name": "sbt_8ecb896224_team_0_5"
+      },
+      "media_type": "application/json",
+      "identity_key": "team_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/prefix_read/4",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/prefix_update/4"
+      ],
+      "field": "name",
+      "identity_key": "team_0_create_ID",
+      "expected": "sbt_8ecb896224_team_0_5",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/prefix_update/5",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/prefix_read/4"
+      ],
+      "field": "name",
+      "body": {
+        "name": "sbt_8ecb896224_team_0_6"
+      },
+      "media_type": "application/json",
+      "identity_key": "team_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/prefix_read/5",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "prefix",
+      "deps": [
+        "team/0/prefix_update/5"
+      ],
+      "field": "name",
+      "identity_key": "team_0_create_ID",
+      "expected": "sbt_8ecb896224_team_0_6",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/suffix_update",
+      "source_method": "PUT",
+      "contract_override": {
+        "version": "v013",
+        "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+        "contract_version": "v2.6.0",
+        "path": "/labels/{id}",
+        "source_method": "PUT",
+        "effective_method": "POST",
+        "basis": "USER_OBSERVED_OPTIONS_ALLOW_AND_V006_405",
+        "observed_allow": [
+          "OPTIONS",
+          "DELETE",
+          "GET",
+          "POST"
+        ],
+        "status": "POST_PERSISTENCE_PENDING_LIVE_ACCEPTANCE",
+        "source_contract_modified": false
+      },
+      "method": "POST",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "suffix",
+      "deps": [
+        "label/0/prefix_read/5",
+        "project/0/prefix_read/5",
+        "task/0/prefix_read/5",
+        "team/0/prefix_read/5"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_label_0_7"
+      },
+      "media_type": "application/json",
+      "identity_key": "label_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/put",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "label/0/suffix_read",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/labels/@{label_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "suffix",
+      "deps": [
+        "label/0/suffix_update"
+      ],
+      "field": "title",
+      "identity_key": "label_0_create_ID",
+      "expected": "sbt_8ecb896224_label_0_7",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/suffix_update",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "suffix",
+      "deps": [
+        "label/0/prefix_read/5",
+        "project/0/prefix_read/5",
+        "task/0/prefix_read/5",
+        "team/0/prefix_read/5"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_project_0_7"
+      },
+      "media_type": "application/json",
+      "identity_key": "project_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "project/0/suffix_read",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/projects/@{project_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "suffix",
+      "deps": [
+        "project/0/suffix_update"
+      ],
+      "field": "title",
+      "identity_key": "project_0_create_ID",
+      "expected": "sbt_8ecb896224_project_0_7",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/suffix_update",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "suffix",
+      "deps": [
+        "label/0/prefix_read/5",
+        "project/0/prefix_read/5",
+        "task/0/prefix_read/5",
+        "team/0/prefix_read/5"
+      ],
+      "field": "title",
+      "body": {
+        "title": "sbt_8ecb896224_task_0_7"
+      },
+      "media_type": "application/json",
+      "identity_key": "task_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "task/0/suffix_read",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/tasks/@{task_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "suffix",
+      "deps": [
+        "task/0/suffix_update"
+      ],
+      "field": "title",
+      "identity_key": "task_0_create_ID",
+      "expected": "sbt_8ecb896224_task_0_7",
+      "parent_checks": [
+        {
+          "field": "project_id",
+          "parent_identity_key": "project_0_create_ID",
+          "source": "PARENT_PATH_BINDING_PLUS_COMPATIBLE_RESPONSE_FIELD",
+          "field_source": "ORIGINAL_RESPONSE_SCHEMA",
+          "binding_source": {
+            "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+            "rule": "GENERIC_OWN_RESOURCE_PREFIX_V013",
+            "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+          }
+        }
+      ],
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/suffix_update",
+      "source_method": "POST",
+      "contract_override": null,
+      "method": "POST",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "suffix",
+      "deps": [
+        "label/0/prefix_read/5",
+        "project/0/prefix_read/5",
+        "task/0/prefix_read/5",
+        "team/0/prefix_read/5"
+      ],
+      "field": "name",
+      "body": {
+        "name": "sbt_8ecb896224_team_0_7"
+      },
+      "media_type": "application/json",
+      "identity_key": "team_0_create_ID",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/post",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    },
+    {
+      "id": "team/0/suffix_read",
+      "source_method": "GET",
+      "contract_override": null,
+      "method": "GET",
+      "path": "/teams/@{team_0_create_ID}",
+      "codes": [
+        200
+      ],
+      "phase": "suffix",
+      "deps": [
+        "team/0/suffix_update"
+      ],
+      "field": "name",
+      "identity_key": "team_0_create_ID",
+      "expected": "sbt_8ecb896224_team_0_7",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GRAPH_TO_REST_V013",
+        "detail": ""
+      }
+    }
+  ],
+  "step_count": 64,
+  "contract_sha256": "f3c4ab4bbb7982458e983d87c7ffd77120d25aefe27479c2e80d285fe11475d3",
+  "schedule_selection": "NATIVE_PROVENGO_DEPENDENCY_CONSTRAINED",
+  "http_execution": "SEQUENTIAL",
+  "live_acceptance": "PENDING",
+  "contract_overrides": [
+    {
+      "version": "v013",
+      "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+      "contract_version": "v2.6.0",
+      "path": "/labels/{id}",
+      "source_method": "PUT",
+      "effective_method": "POST",
+      "basis": "USER_OBSERVED_OPTIONS_ALLOW_AND_V006_405",
+      "observed_allow": [
+        "OPTIONS",
+        "DELETE",
+        "GET",
+        "POST"
+      ],
+      "status": "POST_PERSISTENCE_PENDING_LIVE_ACCEPTANCE",
+      "source_contract_modified": false
+    }
+  ],
+  "parent_readback_obligations": 8
+}

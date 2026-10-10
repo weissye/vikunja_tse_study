@@ -1,0 +1,115 @@
+{
+  "blocked_story_families": [
+    {
+      "count": 4,
+      "direct_dependencies": [
+        "admin/hooks:1"
+      ],
+      "family": "adminEditHook",
+      "reasons": {
+        "dependency-unavailable": 4
+      }
+    },
+    {
+      "count": 6,
+      "direct_dependencies": [
+        "orgs:1"
+      ],
+      "family": "orgEdit",
+      "reasons": {
+        "dependency-unavailable": 6
+      }
+    },
+    {
+      "count": 6,
+      "direct_dependencies": [
+        "teams:1"
+      ],
+      "family": "orgEditTeam",
+      "reasons": {
+        "dependency-unavailable": 6
+      }
+    },
+    {
+      "count": 2,
+      "direct_dependencies": [
+        "repos:1"
+      ],
+      "family": "repoEdit",
+      "reasons": {
+        "operation-failed": 2
+      }
+    },
+    {
+      "count": 1,
+      "direct_dependencies": [
+        "admin/users:1"
+      ],
+      "family": "updateUserRunner",
+      "reasons": {
+        "dependency-unavailable": 1
+      }
+    },
+    {
+      "count": 4,
+      "direct_dependencies": [
+        "user/hooks:1"
+      ],
+      "family": "userEditHook",
+      "reasons": {
+        "dependency-unavailable": 4
+      }
+    },
+    {
+      "count": 3,
+      "direct_dependencies": [
+        "user/applications/oauth2:1"
+      ],
+      "family": "userUpdateOAuth2Application",
+      "reasons": {
+        "dependency-unavailable": 3
+      }
+    }
+  ],
+  "coverage": {
+    "generated_long_stories": 30,
+    "long_story_steps_selected": 19,
+    "observed_overlapping_epochs": 21,
+    "skipped_long_stories": 26,
+    "successful_long_stories": 4
+  },
+  "priority_witnesses": {
+    "contract::repoListTeams": {
+      "documented_statuses": [
+        200,
+        404
+      ],
+      "method": "GET",
+      "path": "/repos/sbt-gitea-20260923_142458_008/1_82644/teams",
+      "request": null,
+      "response": {
+        "message": "repo is not owned by an organization",
+        "url": "http://127.0.0.1:3477/api/swagger"
+      },
+      "status": 405,
+      "trace_sequence": 80
+    },
+    "contract::repoMergeUpstream": {
+      "documented_statuses": [
+        200,
+        400,
+        404
+      ],
+      "method": "POST",
+      "path": "/repos/sbt-gitea-20260923_142458_008/1_82644/merge-upstream",
+      "request": {
+        "ff_only": false
+      },
+      "response": "Internal Server Error",
+      "status": 500,
+      "trace_sequence": 70
+    }
+  },
+  "source_stage3_sha256": "a3d64be550c6ff57f6c68be2e83a1167ee4f438bfc3ed9b1ce82ccbf137b4e88",
+  "source_stage6_sha256": "46d5d619b42ef7c4d43d9100d34389ac53ca78e78af992a32d611322c8badc38"
+}

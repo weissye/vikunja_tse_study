@@ -1,0 +1,28 @@
+{
+  "closed_events": [
+    "DisjointVerifierClosed:Task:0",
+    "DisjointVerifierClosed:Task:1",
+    "DisjointVerifierClosed:Task:2",
+    "DisjointVerifierClosed:Task:3",
+    "DisjointVerifierClosed:Task:4",
+    "DisjointVerifierClosed:Task:5"
+  ],
+  "expected": {
+    "disjoint_writes": 12,
+    "tasks": 6,
+    "verifier_reads": 6,
+    "witnesses": 6
+  },
+  "oracle": {
+    "expected_witness_count": 6,
+    "fields": [
+      "title",
+      "description"
+    ],
+    "oracle_id": "task-disjoint-updates-both-visible"
+  },
+  "prefix": "increment7_",
+  "profile": "disjoint-field-update-commutativity",
+  "schema_version": 1,
+  "source_openapi_sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941"
+}

@@ -1,0 +1,12 @@
+{
+  "structural_model": "PASS",
+  "keycloak_live_readiness": "BLOCKED_BY_OPAQUE_CREATE_BODIES",
+  "http_overlap": "NOT_RUN",
+  "source_openapi_sha256": "ba68e1c3842c11701ec64c5f3ba23387cf53963f8d16dd7c3d45da103b9421db",
+  "opaque_create_paths": [
+    "/admin/realms",
+    "/admin/realms/{realm}/organizations/{org-id}/identity-providers",
+    "/admin/realms/{realm}/organizations/{org-id}/members"
+  ],
+  "note": "The OpenAPI request schemas for these operations are primitive/binary strings; their generated interfaces supply no meaningful request body. The structural sample must not be used as a live all-entity CRUD result."
+}

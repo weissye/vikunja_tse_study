@@ -1,0 +1,431 @@
+{
+  "coverage": {
+    "covered_operations": 12,
+    "total_operations": 12,
+    "uncovered_operations": []
+  },
+  "entities": [
+    {
+      "collection_path": "/api/dcim/sites/",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Site",
+      "item_path": "/api/dcim/sites/{id}/",
+      "key": "api/dcim/sites",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/Site/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/api/dcim/sites/{id}/",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "dcimSitesList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api/dcim/sites/",
+          "source_pointer": "#/paths/~1api~1dcim~1sites~1/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "dcimSitesCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api/dcim/sites/",
+          "source_pointer": "#/paths/~1api~1dcim~1sites~1/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "dcimSitesDestroy",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/api/dcim/sites/{id}/",
+          "source_pointer": "#/paths/~1api~1dcim~1sites~1{id}~1/delete",
+          "success_codes": [
+            204
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "dcimSitesRetrieve",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/dcim/sites/{id}/",
+          "source_pointer": "#/paths/~1api~1dcim~1sites~1{id}~1/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Sites",
+      "provenance": [
+        {
+          "detail": "List operation GET /api/dcim/sites/ response 200 references Site",
+          "pointer": "#/paths/~1api~1dcim~1sites~1/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Site"
+    },
+    {
+      "collection_path": "/api/dcim/devices/",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.97,
+          "field_name": "site",
+          "provenance": [
+            {
+              "detail": "Create request body property 'site' is a component-referenced key object for entity 'api/dcim/sites'",
+              "pointer": "#/paths/~1api~1dcim~1devices~1/post/requestBody/content/application~1json/properties/site",
+              "rule": "D4:reference_object_alias_key_match"
+            }
+          ],
+          "target": "api/dcim/sites"
+        }
+      ],
+      "display_name": "Device",
+      "item_path": "/api/dcim/devices/{id}/",
+      "key": "api/dcim/devices",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/Device/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/api/dcim/devices/{id}/",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "dcimDevicesList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api/dcim/devices/",
+          "source_pointer": "#/paths/~1api~1dcim~1devices~1/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "dcimDevicesCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api/dcim/devices/",
+          "source_pointer": "#/paths/~1api~1dcim~1devices~1/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "dcimDevicesRetrieve",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/dcim/devices/{id}/",
+          "source_pointer": "#/paths/~1api~1dcim~1devices~1{id}~1/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "dcimDevicesPartialUpdate",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/api/dcim/devices/{id}/",
+          "source_pointer": "#/paths/~1api~1dcim~1devices~1{id}~1/patch",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Devices",
+      "provenance": [
+        {
+          "detail": "List operation GET /api/dcim/devices/ response 200 references Device",
+          "pointer": "#/paths/~1api~1dcim~1devices~1/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Device"
+    },
+    {
+      "collection_path": "/api/circuits/circuits/",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Circuit",
+      "item_path": "/api/circuits/circuits/{id}/",
+      "key": "api/circuits/circuits",
+      "key_confidence": 1.0,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' matches required schema property",
+          "pointer": "#/components/schemas/Circuit/properties/id",
+          "rule": "K3:schema_required_property_match"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/api/circuits/circuits/{id}/",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "circuitsCircuitsList",
+          "kind": "list",
+          "method": "GET",
+          "path": "/api/circuits/circuits/",
+          "source_pointer": "#/paths/~1api~1circuits~1circuits~1/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "circuitsCircuitsCreate",
+          "kind": "create",
+          "method": "POST",
+          "path": "/api/circuits/circuits/",
+          "source_pointer": "#/paths/~1api~1circuits~1circuits~1/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "circuitsCircuitsRetrieve",
+          "kind": "get",
+          "method": "GET",
+          "path": "/api/circuits/circuits/{id}/",
+          "source_pointer": "#/paths/~1api~1circuits~1circuits~1{id}~1/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "circuitsCircuitsPartialUpdate",
+          "kind": "update",
+          "method": "PATCH",
+          "path": "/api/circuits/circuits/{id}/",
+          "source_pointer": "#/paths/~1api~1circuits~1circuits~1{id}~1/patch",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Circuits",
+      "provenance": [
+        {
+          "detail": "List operation GET /api/circuits/circuits/ response 200 references Circuit",
+          "pointer": "#/paths/~1api~1circuits~1circuits~1/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Circuit"
+    }
+  ],
+  "isolation_audit": {
+    "denied_file_count": 0,
+    "policy": "allow-listed OpenAPI/config inputs only; environment-specific paths excluded from deterministic report"
+  },
+  "meta": {
+    "cli_args": {
+      "base_url": "http://127.0.0.1:5000",
+      "command": "generate",
+      "generator_version": "0.22.0",
+      "instances_per_action": 7,
+      "instances_per_entity": 5,
+      "name": "netbox_a2a",
+      "seed": 1,
+      "source_openapi_sha256": "dae055dc0eac76045389286820719f4a8b1fbd3be7d7897c50ba87cdd01d2060"
+    },
+    "openapi_version": "3.0.3",
+    "title": "NetBox REST API - A2A structural projection"
+  },
+  "reproducibility": {
+    "artifact_sha256": {
+      "dependency_graph_json": "41514e942b85e58789821818871fe2e6e075dd6a6d4cf706208a1f57f8fb6415",
+      "interfaces_js": "97c0f359049928325d7a01c609b831e2dc847bcd72d7063c2cbeabcd895dc25f",
+      "stories_js": "5ba644fe12d65626f54fb3ac2cd9574bfa3f381735328810fb7671787338032e"
+    },
+    "base_url": "http://127.0.0.1:5000",
+    "content_fingerprint_sha256": "daf42de8414b202adee6442e3d1ea9ed84d1753ff251b67e857f6088aec63f9b",
+    "generator_version": "0.22.0",
+    "instances_per_action": 7,
+    "instances_per_entity": 5,
+    "scope": "semantic inputs and generated artifacts; filesystem paths and run-time ports are excluded",
+    "seed": 1,
+    "source_openapi_sha256": "dae055dc0eac76045389286820719f4a8b1fbd3be7d7897c50ba87cdd01d2060"
+  },
+  "response_code_coverage": [
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/dcim/sites/"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/dcim/sites/"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/dcim/sites/{id}/"
+    },
+    {
+      "declared_codes": [
+        "204",
+        "404"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/api/dcim/sites/{id}/"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/dcim/devices/"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/dcim/devices/"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/dcim/devices/{id}/"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "PATCH",
+      "path": "/api/dcim/devices/{id}/"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/circuits/circuits/"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/api/circuits/circuits/"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/api/circuits/circuits/{id}/"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "PATCH",
+      "path": "/api/circuits/circuits/{id}/"
+    }
+  ],
+  "security_schemes": {},
+  "standalone_operations": [],
+  "unsupported_constructs": {
+    "ambiguities": [],
+    "document_level": [],
+    "remote_refs": []
+  },
+  "warnings": []
+}

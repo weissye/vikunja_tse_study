@@ -1,0 +1,830 @@
+{
+  "version": "v012",
+  "instances_per_resource": 1,
+  "prefix_update_rounds": 3,
+  "nodes": [
+    {
+      "id": "label/0/create",
+      "operation": "PUT /labels",
+      "depends_on": [],
+      "phase": "prefix",
+      "resource": "label",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1labels/put",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "capture": {
+        "slot": "label/0/id",
+        "field": "id"
+      },
+      "bindings": {}
+    },
+    {
+      "id": "label/0/create_read",
+      "operation": "GET /labels/{id}",
+      "depends_on": [
+        "label/0/create"
+      ],
+      "phase": "prefix",
+      "resource": "label",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "label/0/create",
+      "oracle_rule": "label_create_read"
+    },
+    {
+      "id": "label/0/prefix_update/0",
+      "operation": "PUT /labels/{id}",
+      "depends_on": [
+        "label/0/create_read"
+      ],
+      "phase": "prefix",
+      "resource": "label",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/put",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "label/0/create",
+      "scalar_version": 1
+    },
+    {
+      "id": "label/0/prefix_read/0",
+      "operation": "GET /labels/{id}",
+      "depends_on": [
+        "label/0/prefix_update/0"
+      ],
+      "phase": "prefix",
+      "resource": "label",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "label/0/create",
+      "oracle_rule": "label_update_read",
+      "expected_from": "label/0/prefix_update/0"
+    },
+    {
+      "id": "label/0/prefix_update/1",
+      "operation": "PUT /labels/{id}",
+      "depends_on": [
+        "label/0/prefix_read/0"
+      ],
+      "phase": "prefix",
+      "resource": "label",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/put",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "label/0/create",
+      "scalar_version": 2
+    },
+    {
+      "id": "label/0/prefix_read/1",
+      "operation": "GET /labels/{id}",
+      "depends_on": [
+        "label/0/prefix_update/1"
+      ],
+      "phase": "prefix",
+      "resource": "label",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "label/0/create",
+      "oracle_rule": "label_update_read",
+      "expected_from": "label/0/prefix_update/1"
+    },
+    {
+      "id": "label/0/prefix_update/2",
+      "operation": "PUT /labels/{id}",
+      "depends_on": [
+        "label/0/prefix_read/1"
+      ],
+      "phase": "prefix",
+      "resource": "label",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/put",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "label/0/create",
+      "scalar_version": 3
+    },
+    {
+      "id": "label/0/prefix_read/2",
+      "operation": "GET /labels/{id}",
+      "depends_on": [
+        "label/0/prefix_update/2"
+      ],
+      "phase": "prefix",
+      "resource": "label",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "label/0/create",
+      "oracle_rule": "label_update_read",
+      "expected_from": "label/0/prefix_update/2"
+    },
+    {
+      "id": "project/0/create",
+      "operation": "PUT /projects",
+      "depends_on": [],
+      "phase": "prefix",
+      "resource": "project",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1projects/put",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "capture": {
+        "slot": "project/0/id",
+        "field": "id"
+      },
+      "bindings": {}
+    },
+    {
+      "id": "project/0/create_read",
+      "operation": "GET /projects/{id}",
+      "depends_on": [
+        "project/0/create"
+      ],
+      "phase": "prefix",
+      "resource": "project",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "project/0/create",
+      "oracle_rule": "project_create_read"
+    },
+    {
+      "id": "project/0/prefix_update/0",
+      "operation": "POST /projects/{id}",
+      "depends_on": [
+        "project/0/create_read"
+      ],
+      "phase": "prefix",
+      "resource": "project",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/post",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "project/0/create",
+      "scalar_version": 1
+    },
+    {
+      "id": "project/0/prefix_read/0",
+      "operation": "GET /projects/{id}",
+      "depends_on": [
+        "project/0/prefix_update/0"
+      ],
+      "phase": "prefix",
+      "resource": "project",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "project/0/create",
+      "oracle_rule": "project_update_read",
+      "expected_from": "project/0/prefix_update/0"
+    },
+    {
+      "id": "project/0/prefix_update/1",
+      "operation": "POST /projects/{id}",
+      "depends_on": [
+        "project/0/prefix_read/0"
+      ],
+      "phase": "prefix",
+      "resource": "project",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/post",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "project/0/create",
+      "scalar_version": 2
+    },
+    {
+      "id": "project/0/prefix_read/1",
+      "operation": "GET /projects/{id}",
+      "depends_on": [
+        "project/0/prefix_update/1"
+      ],
+      "phase": "prefix",
+      "resource": "project",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "project/0/create",
+      "oracle_rule": "project_update_read",
+      "expected_from": "project/0/prefix_update/1"
+    },
+    {
+      "id": "project/0/prefix_update/2",
+      "operation": "POST /projects/{id}",
+      "depends_on": [
+        "project/0/prefix_read/1"
+      ],
+      "phase": "prefix",
+      "resource": "project",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/post",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "project/0/create",
+      "scalar_version": 3
+    },
+    {
+      "id": "project/0/prefix_read/2",
+      "operation": "GET /projects/{id}",
+      "depends_on": [
+        "project/0/prefix_update/2"
+      ],
+      "phase": "prefix",
+      "resource": "project",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "project/0/create",
+      "oracle_rule": "project_update_read",
+      "expected_from": "project/0/prefix_update/2"
+    },
+    {
+      "id": "task/0/create",
+      "operation": "PUT /projects/{id}/tasks",
+      "depends_on": [
+        "project/0/create_read"
+      ],
+      "phase": "prefix",
+      "resource": "task",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "capture": {
+        "slot": "task/0/id",
+        "field": "id"
+      },
+      "bindings": {
+        "id": {
+          "producer": "project/0/create",
+          "field": "id",
+          "review_required": true
+        }
+      }
+    },
+    {
+      "id": "task/0/create_read",
+      "operation": "GET /tasks/{id}",
+      "depends_on": [
+        "task/0/create"
+      ],
+      "phase": "prefix",
+      "resource": "task",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "task/0/create",
+      "oracle_rule": "task_create_read"
+    },
+    {
+      "id": "task/0/prefix_update/0",
+      "operation": "POST /tasks/{id}",
+      "depends_on": [
+        "task/0/create_read"
+      ],
+      "phase": "prefix",
+      "resource": "task",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/post",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "task/0/create",
+      "scalar_version": 1
+    },
+    {
+      "id": "task/0/prefix_read/0",
+      "operation": "GET /tasks/{id}",
+      "depends_on": [
+        "task/0/prefix_update/0"
+      ],
+      "phase": "prefix",
+      "resource": "task",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "task/0/create",
+      "oracle_rule": "task_update_read",
+      "expected_from": "task/0/prefix_update/0"
+    },
+    {
+      "id": "task/0/prefix_update/1",
+      "operation": "POST /tasks/{id}",
+      "depends_on": [
+        "task/0/prefix_read/0"
+      ],
+      "phase": "prefix",
+      "resource": "task",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/post",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "task/0/create",
+      "scalar_version": 2
+    },
+    {
+      "id": "task/0/prefix_read/1",
+      "operation": "GET /tasks/{id}",
+      "depends_on": [
+        "task/0/prefix_update/1"
+      ],
+      "phase": "prefix",
+      "resource": "task",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "task/0/create",
+      "oracle_rule": "task_update_read",
+      "expected_from": "task/0/prefix_update/1"
+    },
+    {
+      "id": "task/0/prefix_update/2",
+      "operation": "POST /tasks/{id}",
+      "depends_on": [
+        "task/0/prefix_read/1"
+      ],
+      "phase": "prefix",
+      "resource": "task",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/post",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "task/0/create",
+      "scalar_version": 3
+    },
+    {
+      "id": "task/0/prefix_read/2",
+      "operation": "GET /tasks/{id}",
+      "depends_on": [
+        "task/0/prefix_update/2"
+      ],
+      "phase": "prefix",
+      "resource": "task",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "task/0/create",
+      "oracle_rule": "task_update_read",
+      "expected_from": "task/0/prefix_update/2"
+    },
+    {
+      "id": "team/0/create",
+      "operation": "PUT /teams",
+      "depends_on": [],
+      "phase": "prefix",
+      "resource": "team",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1teams/put",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "capture": {
+        "slot": "team/0/id",
+        "field": "id"
+      },
+      "bindings": {}
+    },
+    {
+      "id": "team/0/create_read",
+      "operation": "GET /teams/{id}",
+      "depends_on": [
+        "team/0/create"
+      ],
+      "phase": "prefix",
+      "resource": "team",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "team/0/create",
+      "oracle_rule": "team_create_read"
+    },
+    {
+      "id": "team/0/prefix_update/0",
+      "operation": "POST /teams/{id}",
+      "depends_on": [
+        "team/0/create_read"
+      ],
+      "phase": "prefix",
+      "resource": "team",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/post",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "team/0/create",
+      "scalar_version": 1
+    },
+    {
+      "id": "team/0/prefix_read/0",
+      "operation": "GET /teams/{id}",
+      "depends_on": [
+        "team/0/prefix_update/0"
+      ],
+      "phase": "prefix",
+      "resource": "team",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "team/0/create",
+      "oracle_rule": "team_update_read",
+      "expected_from": "team/0/prefix_update/0"
+    },
+    {
+      "id": "team/0/prefix_update/1",
+      "operation": "POST /teams/{id}",
+      "depends_on": [
+        "team/0/prefix_read/0"
+      ],
+      "phase": "prefix",
+      "resource": "team",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/post",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "team/0/create",
+      "scalar_version": 2
+    },
+    {
+      "id": "team/0/prefix_read/1",
+      "operation": "GET /teams/{id}",
+      "depends_on": [
+        "team/0/prefix_update/1"
+      ],
+      "phase": "prefix",
+      "resource": "team",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "team/0/create",
+      "oracle_rule": "team_update_read",
+      "expected_from": "team/0/prefix_update/1"
+    },
+    {
+      "id": "team/0/prefix_update/2",
+      "operation": "POST /teams/{id}",
+      "depends_on": [
+        "team/0/prefix_read/1"
+      ],
+      "phase": "prefix",
+      "resource": "team",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/post",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "team/0/create",
+      "scalar_version": 3
+    },
+    {
+      "id": "team/0/prefix_read/2",
+      "operation": "GET /teams/{id}",
+      "depends_on": [
+        "team/0/prefix_update/2"
+      ],
+      "phase": "prefix",
+      "resource": "team",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "team/0/create",
+      "oracle_rule": "team_update_read",
+      "expected_from": "team/0/prefix_update/2"
+    },
+    {
+      "id": "label/0/suffix_update",
+      "operation": "PUT /labels/{id}",
+      "depends_on": [
+        "label/0/prefix_read/2",
+        "project/0/prefix_read/2",
+        "task/0/prefix_read/2",
+        "team/0/prefix_read/2"
+      ],
+      "phase": "suffix",
+      "resource": "label",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/put",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "label/0/create",
+      "scalar_version": 4
+    },
+    {
+      "id": "label/0/suffix_read",
+      "operation": "GET /labels/{id}",
+      "depends_on": [
+        "label/0/suffix_update"
+      ],
+      "phase": "suffix",
+      "resource": "label",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1labels~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "label/0/create",
+      "oracle_rule": "label_update_read",
+      "expected_from": "label/0/suffix_update"
+    },
+    {
+      "id": "project/0/suffix_update",
+      "operation": "POST /projects/{id}",
+      "depends_on": [
+        "label/0/prefix_read/2",
+        "project/0/prefix_read/2",
+        "task/0/prefix_read/2",
+        "team/0/prefix_read/2"
+      ],
+      "phase": "suffix",
+      "resource": "project",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/post",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "project/0/create",
+      "scalar_version": 4
+    },
+    {
+      "id": "project/0/suffix_read",
+      "operation": "GET /projects/{id}",
+      "depends_on": [
+        "project/0/suffix_update"
+      ],
+      "phase": "suffix",
+      "resource": "project",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1projects~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "project/0/create",
+      "oracle_rule": "project_update_read",
+      "expected_from": "project/0/suffix_update"
+    },
+    {
+      "id": "task/0/suffix_update",
+      "operation": "POST /tasks/{id}",
+      "depends_on": [
+        "label/0/prefix_read/2",
+        "project/0/prefix_read/2",
+        "task/0/prefix_read/2",
+        "team/0/prefix_read/2"
+      ],
+      "phase": "suffix",
+      "resource": "task",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/post",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "task/0/create",
+      "scalar_version": 4
+    },
+    {
+      "id": "task/0/suffix_read",
+      "operation": "GET /tasks/{id}",
+      "depends_on": [
+        "task/0/suffix_update"
+      ],
+      "phase": "suffix",
+      "resource": "task",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1tasks~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "task/0/create",
+      "oracle_rule": "task_update_read",
+      "expected_from": "task/0/suffix_update"
+    },
+    {
+      "id": "team/0/suffix_update",
+      "operation": "POST /teams/{id}",
+      "depends_on": [
+        "label/0/prefix_read/2",
+        "project/0/prefix_read/2",
+        "task/0/prefix_read/2",
+        "team/0/prefix_read/2"
+      ],
+      "phase": "suffix",
+      "resource": "team",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/post",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "team/0/create",
+      "scalar_version": 4
+    },
+    {
+      "id": "team/0/suffix_read",
+      "operation": "GET /teams/{id}",
+      "depends_on": [
+        "team/0/suffix_update"
+      ],
+      "phase": "suffix",
+      "resource": "team",
+      "instance": 0,
+      "actor": "RESEARCH_OWNER",
+      "provenance": {
+        "pointer": "#/paths/~1teams~1{id}/get",
+        "rule": "GENERIC_OWN_RESOURCE_PREFIX_V012",
+        "detail": "Operation provenance is inherited from Stage 2; bindings remain review candidates."
+      },
+      "identity_from": "team/0/create",
+      "oracle_rule": "team_update_read",
+      "expected_from": "team/0/suffix_update"
+    }
+  ],
+  "schedules": [
+    {
+      "seed": 1,
+      "order": [
+        "label/0/create",
+        "team/0/create",
+        "label/0/create_read",
+        "project/0/create",
+        "label/0/prefix_update/0",
+        "project/0/create_read",
+        "team/0/create_read",
+        "team/0/prefix_update/0",
+        "team/0/prefix_read/0",
+        "project/0/prefix_update/0",
+        "label/0/prefix_read/0",
+        "team/0/prefix_update/1",
+        "label/0/prefix_update/1",
+        "team/0/prefix_read/1",
+        "team/0/prefix_update/2",
+        "label/0/prefix_read/1",
+        "team/0/prefix_read/2",
+        "project/0/prefix_read/0",
+        "task/0/create",
+        "label/0/prefix_update/2",
+        "task/0/create_read",
+        "label/0/prefix_read/2",
+        "task/0/prefix_update/0",
+        "project/0/prefix_update/1",
+        "project/0/prefix_read/1",
+        "project/0/prefix_update/2",
+        "project/0/prefix_read/2",
+        "task/0/prefix_read/0",
+        "task/0/prefix_update/1",
+        "task/0/prefix_read/1",
+        "task/0/prefix_update/2",
+        "task/0/prefix_read/2",
+        "team/0/suffix_update",
+        "team/0/suffix_read",
+        "task/0/suffix_update",
+        "label/0/suffix_update",
+        "project/0/suffix_update",
+        "label/0/suffix_read",
+        "project/0/suffix_read",
+        "task/0/suffix_read"
+      ],
+      "sampler": "PYTHON_TOPOLOGICAL_SAMPLER; NOT_NATIVE_PROVENGO"
+    }
+  ],
+  "node_count": 40,
+  "prefix_nodes": 32,
+  "suffix_nodes": 8,
+  "bindings_runtime_validated": false,
+  "request_values_generated": false,
+  "native_provengo_executed": false,
+  "live_execution": false,
+  "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "selected_candidates": [
+    "RESOURCE:label",
+    "RESOURCE:project",
+    "RESOURCE:task",
+    "RESOURCE:team"
+  ],
+  "composition": "UNION_OF_RESOURCE_CLOSURES; SHARED_ANCESTOR_CREATED_ONCE_PER_INSTANCE"
+}

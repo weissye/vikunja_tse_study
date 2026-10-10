@@ -1,0 +1,104 @@
+{
+  "resources": [
+    {
+      "logicalId": "ModelsLabel_1",
+      "resourceType": "ModelsLabel",
+      "expected": {
+        "title": "sbt-1-ModelsLabel-1-title",
+        "description": "sbt-1-ModelsLabel_1-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/labels/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "resourceType": "ModelsLabel",
+      "expected": {
+        "title": "sbt-1-ModelsLabel-2-title",
+        "description": "sbt-1-ModelsLabel_2-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/labels/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "resourceType": "ModelsProject",
+      "expected": {
+        "title": "sbt-1-ModelsProject-1-title",
+        "description": "sbt-1-ModelsProject_1-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/projects/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "resourceType": "ModelsProject",
+      "expected": {
+        "title": "sbt-1-ModelsProject-2-title",
+        "description": "sbt-1-ModelsProject_2-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/projects/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "resourceType": "ModelsTeam",
+      "expected": {
+        "name": "sbt-1-ModelsTeam-1-name",
+        "description": "sbt-1-ModelsTeam_1-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/teams/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "resourceType": "ModelsTeam",
+      "expected": {
+        "name": "sbt-1-ModelsTeam-2-name",
+        "description": "sbt-1-ModelsTeam_2-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/teams/{id}",
+      "route_parameter": "id"
+    }
+  ],
+  "cursor": {
+    "version": "v008",
+    "mode": "bootstrap",
+    "rule_id": "ModelsLabel/title/MIN_LENGTH",
+    "logical_id": "ModelsLabel_1",
+    "seed": 1,
+    "completed_rule_ids": []
+  },
+  "bindings": {
+    "ID_ModelsLabel_1": 143,
+    "ROUTE_ModelsLabel_1": 143,
+    "SNAPSHOT_ModelsLabel_1": "{\"id\":143,\"title\":\"sbt-1-ModelsLabel-1-title\",\"description\":\"sbt-1-ModelsLabel_1-updated\",\"hex_color\":\"\",\"created_by\":{\"id\":1,\"name\":\"\",\"username\":\"SBT-tester\",\"created\":\"2026-09-20T08:15:00Z\",\"updated\":\"2026-10-09T10:27:29Z\"},\"created\":\"2026-10-10T19:54:52Z\",\"updated\":\"2026-10-10T19:54:54Z\"}\n",
+    "ID_ModelsLabel_2": 144,
+    "ROUTE_ModelsLabel_2": 144,
+    "SNAPSHOT_ModelsLabel_2": "{\"id\":144,\"title\":\"sbt-1-ModelsLabel-2-title\",\"description\":\"sbt-1-ModelsLabel_2-updated\",\"hex_color\":\"\",\"created_by\":{\"id\":1,\"name\":\"\",\"username\":\"SBT-tester\",\"created\":\"2026-09-20T08:15:00Z\",\"updated\":\"2026-10-09T10:27:29Z\"},\"created\":\"2026-10-10T19:54:54Z\",\"updated\":\"2026-10-10T19:54:56Z\"}\n",
+    "ID_ModelsProject_1": 97,
+    "ROUTE_ModelsProject_1": 97,
+    "SNAPSHOT_ModelsProject_1": "{\"id\":97,\"title\":\"sbt-1-ModelsProject-1-title\",\"description\":\"sbt-1-ModelsProject_1-updated\",\"identifier\":\"\",\"hex_color\":\"\",\"parent_project_id\":0,\"owner\":{\"id\":1,\"name\":\"\",\"username\":\"SBT-tester\",\"created\":\"2026-09-20T08:15:00Z\",\"updated\":\"2026-10-09T10:27:29Z\"},\"is_archived\":false,\"background_information\":null,\"background_blur_hash\":\"\",\"is_favorite\":false,\"position\":6356992,\"views\":[{\"id\":389,\"title\":\"List\",\"project_id\":97,\"view_kind\":\"list\",\"filter\":{\"s\":\"\",\"sort_by\":null,\"order_by\":null,\"filter\":\"done = false\",\"filter_include_nulls\":false},\"position\":100,\"bucket_configuration_mode\":\"none\",\"bucket_configuration\":null,\"default_bucket_id\":0,\"done_bucket_id\":0,\"updated\":\"2026-10-10T19:54:53Z\",\"created\":\"2026-10-10T19:54:53Z\"},{\"id\":390,\"title\":\"Gantt\",\"project_id\":97,\"view_kind\":\"gantt\",\"filter\":null,\"position\":200,\"bucket_configuration_mode\":\"none\",\"bucket_configuration\":null,\"default_bucket_id\":0,\"done_bucket_id\":0,\"updated\":\"2026-10-10T19:54:53Z\",\"created\":\"2026-10-10T19:54:53Z\"},{\"id\":391,\"title\":\"Table\",\"project_id\":97,\"view_kind\":\"table\",\"filter\":null,\"position\":300,\"bucket_configuration_mode\":\"none\",\"bucket_configuration\":null,\"default_bucket_id\":0,\"done_bucket_id\":0,\"updated\":\"2026-10-10T19:54:53Z\",\"created\":\"2026-10-10T19:54:53Z\"},{\"id\":392,\"title\":\"Kanban\",\"project_id\":97,\"view_kind\":\"kanban\",\"filter\":null,\"position\":400,\"bucket_configuration_mode\":\"manual\",\"bucket_configuration\":null,\"default_bucket_id\":292,\"done_bucket_id\":294,\"updated\":\"2026-10-10T19:54:53Z\",\"created\":\"2026-10-10T19:54:53Z\"}],\"max_permission\":null,\"created\":\"2026-10-10T19:54:53Z\",\"updated\":\"2026-10-10T19:54:55Z\"}\n",
+    "ID_ModelsProject_2": 96,
+    "ROUTE_ModelsProject_2": 96,
+    "SNAPSHOT_ModelsProject_2": "{\"id\":96,\"title\":\"sbt-1-ModelsProject-2-title\",\"description\":\"sbt-1-ModelsProject_2-updated\",\"identifier\":\"\",\"hex_color\":\"\",\"parent_project_id\":0,\"owner\":{\"id\":1,\"name\":\"\",\"username\":\"SBT-tester\",\"created\":\"2026-09-20T08:15:00Z\",\"updated\":\"2026-10-09T10:27:29Z\"},\"is_archived\":false,\"background_information\":null,\"background_blur_hash\":\"\",\"is_favorite\":false,\"position\":6291456,\"views\":[{\"id\":385,\"title\":\"List\",\"project_id\":96,\"view_kind\":\"list\",\"filter\":{\"s\":\"\",\"sort_by\":null,\"order_by\":null,\"filter\":\"done = false\",\"filter_include_nulls\":false},\"position\":100,\"bucket_configuration_mode\":\"none\",\"bucket_configuration\":null,\"default_bucket_id\":0,\"done_bucket_id\":0,\"updated\":\"2026-10-10T19:54:52Z\",\"created\":\"2026-10-10T19:54:52Z\"},{\"id\":386,\"title\":\"Gantt\",\"project_id\":96,\"view_kind\":\"gantt\",\"filter\":null,\"position\":200,\"bucket_configuration_mode\":\"none\",\"bucket_configuration\":null,\"default_bucket_id\":0,\"done_bucket_id\":0,\"updated\":\"2026-10-10T19:54:52Z\",\"created\":\"2026-10-10T19:54:52Z\"},{\"id\":387,\"title\":\"Table\",\"project_id\":96,\"view_kind\":\"table\",\"filter\":null,\"position\":300,\"bucket_configuration_mode\":\"none\",\"bucket_configuration\":null,\"default_bucket_id\":0,\"done_bucket_id\":0,\"updated\":\"2026-10-10T19:54:52Z\",\"created\":\"2026-10-10T19:54:52Z\"},{\"id\":388,\"title\":\"Kanban\",\"project_id\":96,\"view_kind\":\"kanban\",\"filter\":null,\"position\":400,\"bucket_configuration_mode\":\"manual\",\"bucket_configuration\":null,\"default_bucket_id\":289,\"done_bucket_id\":291,\"updated\":\"2026-10-10T19:54:52Z\",\"created\":\"2026-10-10T19:54:52Z\"}],\"max_permission\":null,\"created\":\"2026-10-10T19:54:52Z\",\"updated\":\"2026-10-10T19:54:56Z\"}\n",
+    "ID_ModelsTeam_1": 18,
+    "ROUTE_ModelsTeam_1": 18,
+    "SNAPSHOT_ModelsTeam_1": "{\"id\":18,\"name\":\"sbt-1-ModelsTeam-1-name\",\"description\":\"sbt-1-ModelsTeam_1-updated\",\"external_id\":\"\",\"created_by\":{\"id\":1,\"name\":\"\",\"username\":\"SBT-tester\",\"created\":\"2026-09-20T08:15:00Z\",\"updated\":\"2026-10-09T10:27:29Z\"},\"members\":[{\"id\":1,\"name\":\"\",\"username\":\"SBT-tester\",\"created\":\"2026-09-20T08:15:00Z\",\"updated\":\"2026-10-09T10:27:29Z\",\"admin\":true}],\"created\":\"2026-10-10T19:54:53Z\",\"updated\":\"2026-10-10T19:54:55Z\",\"is_public\":false}\n",
+    "ID_ModelsTeam_2": 17,
+    "ROUTE_ModelsTeam_2": 17,
+    "SNAPSHOT_ModelsTeam_2": "{\"id\":17,\"name\":\"sbt-1-ModelsTeam-2-name\",\"description\":\"sbt-1-ModelsTeam_2-updated\",\"external_id\":\"\",\"created_by\":{\"id\":1,\"name\":\"\",\"username\":\"SBT-tester\",\"created\":\"2026-09-20T08:15:00Z\",\"updated\":\"2026-10-09T10:27:29Z\"},\"members\":[{\"id\":1,\"name\":\"\",\"username\":\"SBT-tester\",\"created\":\"2026-09-20T08:15:00Z\",\"updated\":\"2026-10-09T10:27:29Z\",\"admin\":true}],\"created\":\"2026-10-10T19:54:52Z\",\"updated\":\"2026-10-10T19:54:56Z\",\"is_public\":false}\n"
+  }
+}

@@ -1,0 +1,35 @@
+﻿{
+    "evidence_type":  "Vikunja Phase 7 multi-resource OpenAPI-to-SBT/BP interleaving",
+    "profile":  "multi-resource-interleaving",
+    "created_utc":  "2026-09-21T16:48:29.0819411Z",
+    "seeds":  [
+                  20261701,
+                  20261702,
+                  20261703,
+                  20261704
+              ],
+    "expected":  {
+                     "comments":  4,
+                     "labels":  3,
+                     "tasks":  6
+                 },
+    "run_count":  4,
+    "checks_per_run":  16,
+    "all_runs_passed":  true,
+    "distinct_intent_schedules":  4,
+    "distinct_permit_schedules":  4,
+    "selected_run_directories":  [
+                                     "phase7-multi-resource-seed-20261701-20260920_180959_857",
+                                     "phase7-multi-resource-seed-20261702-20260920_180632_893",
+                                     "phase7-multi-resource-seed-20261703-20260920_181027_183",
+                                     "phase7-multi-resource-seed-20261704-20260920_181056_096"
+                                 ],
+    "excluded_run_directories":  [
+                                     "phase7-multi-resource-seed-20261701-20260920_174921_133",
+                                     "phase7-multi-resource-seed-20261701-20260920_174207_263",
+                                     "phase7-multi-resource-seed-20261701-20260920_175550_068",
+                                     "phase7-multi-resource-seed-20261702-20260920_175633_580"
+                                 ],
+    "model_hash_triple":  "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941|0de0deb9ec8da858585f4390dda47f2f3d9fe344bd1ac9d549a9b8c4cdf64b4f|a09cedf9654e74433014b47363229ed1afddd0ec5f52bfad567cff595db37213",
+    "interpretation":  "Four passing executions of one generated multi-resource model exercised distinct BP schedules. No semantic anomaly was observed and no Vikunja product bug is claimed."
+}

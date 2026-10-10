@@ -1,0 +1,119 @@
+        / /
+     /\/ /   ____
+  /\/ /\/ / |  _ \ _ __  _____   __ ___  _ __   __ _  ___
+ /  \/\/\/  | |_) | '__|/ _ \ \ / // _ \| '_ \ / _` |/ _ \
+ \  /\/\/\  |  __/| |  | (_) \ V /|  __/| | | | (_| | (_) |
+  \/\ \/\ \ |_|   |_|   \___/ \_/  \___||_| |_|\__, |\___/
+     \/\ \                                     |___/
+        \ \
+
+14:57:47.095 INFO [SETUP] We'd love to hear from you! hello@provengo.tech or http://feedback.provengo.tech/
+14:57:47.095 INFO [SETUP] User provided seed: 1
+14:57:47.095 INFO [SETUP] Project path: D:\Yeshayahu\Temp\vikunja_tse_study\runs\vikunja-transfer-v011-20261009-145739-301275\project
+14:57:47.114 INFO [RUN] Preparing to run
+14:57:47.836 INFO [RUN>random] B-program started
+14:57:47.956 INFO [RUN>random] Selected: [project/0/create {lib:"REST", method:"PUT", url:"http://127.0.0.1:3456/api/v1/projects", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:201.0], model:{step:"project/0/create"}, body:"{"title": "sbt_b1cd99ae79_project_0_0"}", callback:{}}]
+14:57:48.321 INFO [RUN>random] RTV: setting 'project_0_create_ID' to '81'
+14:57:48.325 INFO [RUN>random] V011_CALLBACK {"step":"project/0/create","status":201,"phase":"prefix","id":81,"value":"sbt_b1cd99ae79_project_0_0","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:48.325 INFO [RUN>random] V011_STEP_PASS project/0/create
+14:57:48.667 INFO [RUN>random] Selected: [label/0/create {lib:"REST", method:"PUT", url:"http://127.0.0.1:3456/api/v1/labels", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:201.0], model:{step:"label/0/create"}, body:"{"title": "sbt_b1cd99ae79_label_0_0"}", callback:{}}]
+14:57:48.721 INFO [RUN>random] RTV: setting 'label_0_create_ID' to '128'
+14:57:48.722 INFO [RUN>random] V011_CALLBACK {"step":"label/0/create","status":201,"phase":"prefix","id":128,"value":"sbt_b1cd99ae79_label_0_0","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:48.722 INFO [RUN>random] V011_STEP_PASS label/0/create
+14:57:48.829 INFO [RUN>random] Selected: [team/0/create {lib:"REST", method:"PUT", url:"http://127.0.0.1:3456/api/v1/teams", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:201.0], model:{step:"team/0/create"}, body:"{"name": "sbt_b1cd99ae79_team_0_0"}", callback:{}}]
+14:57:48.886 INFO [RUN>random] RTV: setting 'team_0_create_ID' to '2'
+14:57:48.886 INFO [RUN>random] V011_CALLBACK {"step":"team/0/create","status":201,"phase":"prefix","id":2,"value":"sbt_b1cd99ae79_team_0_0","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:48.887 INFO [RUN>random] V011_STEP_PASS team/0/create
+14:57:48.991 INFO [RUN>random] Selected: [V011_DONE label/0/create]
+14:57:49.034 INFO [RUN>random] Selected: [V011_DONE project/0/create]
+14:57:49.080 INFO [RUN>random] Selected: [V011_DONE team/0/create]
+14:57:49.121 INFO [RUN>random] Selected: [project/0/create_read {lib:"REST", method:"GET", url:"http://127.0.0.1:3456/api/v1/projects/81", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"project/0/create_read"}, callback:{}}]
+14:57:49.157 INFO [RUN>random] V011_CALLBACK {"step":"project/0/create_read","status":200,"phase":"prefix","id":81,"value":"sbt_b1cd99ae79_project_0_0","expected":"sbt_b1cd99ae79_project_0_0","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:49.157 INFO [RUN>random] V011_STEP_PASS project/0/create_read
+14:57:49.257 INFO [RUN>random] Selected: [label/0/create_read {lib:"REST", method:"GET", url:"http://127.0.0.1:3456/api/v1/labels/128", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"label/0/create_read"}, callback:{}}]
+14:57:49.292 INFO [RUN>random] V011_CALLBACK {"step":"label/0/create_read","status":200,"phase":"prefix","id":128,"value":"sbt_b1cd99ae79_label_0_0","expected":"sbt_b1cd99ae79_label_0_0","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:49.292 INFO [RUN>random] V011_STEP_PASS label/0/create_read
+14:57:49.389 INFO [RUN>random] Selected: [V011_DONE project/0/create_read]
+14:57:49.424 INFO [RUN>random] Selected: [project/0/prefix_update/0 {lib:"REST", method:"POST", url:"http://127.0.0.1:3456/api/v1/projects/81", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"project/0/prefix_update/0"}, body:"{"title": "sbt_b1cd99ae79_project_0_1"}", callback:{}}]
+14:57:49.466 INFO [RUN>random] V011_CALLBACK {"step":"project/0/prefix_update/0","status":200,"phase":"prefix","id":81,"value":"sbt_b1cd99ae79_project_0_1","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:49.466 INFO [RUN>random] V011_STEP_PASS project/0/prefix_update/0
+14:57:49.563 INFO [RUN>random] Selected: [V011_DONE label/0/create_read]
+14:57:49.601 INFO [RUN>random] Selected: [team/0/create_read {lib:"REST", method:"GET", url:"http://127.0.0.1:3456/api/v1/teams/2", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"team/0/create_read"}, callback:{}}]
+14:57:49.637 INFO [RUN>random] V011_CALLBACK {"step":"team/0/create_read","status":200,"phase":"prefix","id":2,"value":"sbt_b1cd99ae79_team_0_0","expected":"sbt_b1cd99ae79_team_0_0","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:49.637 INFO [RUN>random] V011_STEP_PASS team/0/create_read
+14:57:49.735 INFO [RUN>random] Selected: [label/0/prefix_update/0 {lib:"REST", method:"POST", url:"http://127.0.0.1:3456/api/v1/labels/128", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"label/0/prefix_update/0"}, body:"{"title": "sbt_b1cd99ae79_label_0_1"}", callback:{}}]
+14:57:49.767 INFO [RUN>random] V011_CALLBACK {"step":"label/0/prefix_update/0","status":200,"phase":"prefix","id":128,"value":"sbt_b1cd99ae79_label_0_1","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:49.767 INFO [RUN>random] V011_STEP_PASS label/0/prefix_update/0
+14:57:49.864 INFO [RUN>random] Selected: [V011_DONE label/0/prefix_update/0]
+14:57:49.906 INFO [RUN>random] Selected: [V011_DONE project/0/prefix_update/0]
+14:57:49.946 INFO [RUN>random] Selected: [V011_DONE team/0/create_read]
+14:57:49.986 INFO [RUN>random] Selected: [label/0/prefix_read/0 {lib:"REST", method:"GET", url:"http://127.0.0.1:3456/api/v1/labels/128", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"label/0/prefix_read/0"}, callback:{}}]
+14:57:50.021 INFO [RUN>random] V011_CALLBACK {"step":"label/0/prefix_read/0","status":200,"phase":"prefix","id":128,"value":"sbt_b1cd99ae79_label_0_1","expected":"sbt_b1cd99ae79_label_0_1","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:50.021 INFO [RUN>random] V011_STEP_PASS label/0/prefix_read/0
+14:57:50.135 INFO [RUN>random] Selected: [project/0/prefix_read/0 {lib:"REST", method:"GET", url:"http://127.0.0.1:3456/api/v1/projects/81", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"project/0/prefix_read/0"}, callback:{}}]
+14:57:50.168 INFO [RUN>random] V011_CALLBACK {"step":"project/0/prefix_read/0","status":200,"phase":"prefix","id":81,"value":"sbt_b1cd99ae79_project_0_1","expected":"sbt_b1cd99ae79_project_0_1","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:50.168 INFO [RUN>random] V011_STEP_PASS project/0/prefix_read/0
+14:57:50.266 INFO [RUN>random] Selected: [team/0/prefix_update/0 {lib:"REST", method:"POST", url:"http://127.0.0.1:3456/api/v1/teams/2", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"team/0/prefix_update/0"}, body:"{"name": "sbt_b1cd99ae79_team_0_1"}", callback:{}}]
+14:57:50.298 INFO [RUN>random] V011_CALLBACK {"step":"team/0/prefix_update/0","status":200,"phase":"prefix","id":2,"value":"sbt_b1cd99ae79_team_0_1","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:50.298 INFO [RUN>random] V011_STEP_PASS team/0/prefix_update/0
+14:57:50.387 INFO [RUN>random] Selected: [V011_DONE team/0/prefix_update/0]
+14:57:50.430 INFO [RUN>random] Selected: [V011_DONE project/0/prefix_read/0]
+14:57:50.511 INFO [RUN>random] Selected: [team/0/prefix_read/0 {lib:"REST", method:"GET", url:"http://127.0.0.1:3456/api/v1/teams/2", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"team/0/prefix_read/0"}, callback:{}}]
+14:57:50.540 INFO [RUN>random] V011_CALLBACK {"step":"team/0/prefix_read/0","status":200,"phase":"prefix","id":2,"value":"sbt_b1cd99ae79_team_0_1","expected":"sbt_b1cd99ae79_team_0_1","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:50.540 INFO [RUN>random] V011_STEP_PASS team/0/prefix_read/0
+14:57:50.616 INFO [RUN>random] Selected: [task/0/create {lib:"REST", method:"PUT", url:"http://127.0.0.1:3456/api/v1/projects/81/tasks", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:201.0], model:{step:"task/0/create"}, body:"{"title": "sbt_b1cd99ae79_task_0_0"}", callback:{}}]
+14:57:50.653 INFO [RUN>random] RTV: setting 'task_0_create_ID' to '420'
+14:57:50.653 INFO [RUN>random] V011_CALLBACK {"step":"task/0/create","status":201,"phase":"prefix","id":420,"value":"sbt_b1cd99ae79_task_0_0","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:50.654 INFO [RUN>random] V011_STEP_PASS task/0/create
+14:57:50.763 INFO [RUN>random] Selected: [V011_DONE task/0/create]
+14:57:50.802 INFO [RUN>random] Selected: [V011_DONE team/0/prefix_read/0]
+14:57:50.846 INFO [RUN>random] Selected: [V011_DONE label/0/prefix_read/0]
+14:57:50.885 INFO [RUN>random] Selected: [task/0/create_read {lib:"REST", method:"GET", url:"http://127.0.0.1:3456/api/v1/tasks/420", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"task/0/create_read"}, callback:{}}]
+14:57:50.927 INFO [RUN>random] V011_CALLBACK {"step":"task/0/create_read","status":200,"phase":"prefix","id":420,"value":"sbt_b1cd99ae79_task_0_0","expected":"sbt_b1cd99ae79_task_0_0","parent_checks":[{"field":"project_id","expected":81,"observed":81,"verdict":"PASS"}],"parent_verdict":"PASS","valid":true}
+14:57:50.928 INFO [RUN>random] V011_STEP_PASS task/0/create_read
+14:57:51.045 INFO [RUN>random] Selected: [V011_DONE task/0/create_read]
+14:57:51.080 INFO [RUN>random] Selected: [task/0/prefix_update/0 {lib:"REST", method:"POST", url:"http://127.0.0.1:3456/api/v1/tasks/420", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"task/0/prefix_update/0"}, body:"{"title": "sbt_b1cd99ae79_task_0_1"}", callback:{}}]
+14:57:51.119 INFO [RUN>random] V011_CALLBACK {"step":"task/0/prefix_update/0","status":200,"phase":"prefix","id":420,"value":"sbt_b1cd99ae79_task_0_1","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:51.119 INFO [RUN>random] V011_STEP_PASS task/0/prefix_update/0
+14:57:51.216 INFO [RUN>random] Selected: [V011_DONE task/0/prefix_update/0]
+14:57:51.257 INFO [RUN>random] Selected: [task/0/prefix_read/0 {lib:"REST", method:"GET", url:"http://127.0.0.1:3456/api/v1/tasks/420", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"task/0/prefix_read/0"}, callback:{}}]
+14:57:51.288 INFO [RUN>random] V011_CALLBACK {"step":"task/0/prefix_read/0","status":200,"phase":"prefix","id":420,"value":"sbt_b1cd99ae79_task_0_1","expected":"sbt_b1cd99ae79_task_0_1","parent_checks":[{"field":"project_id","expected":81,"observed":81,"verdict":"PASS"}],"parent_verdict":"PASS","valid":true}
+14:57:51.288 INFO [RUN>random] V011_STEP_PASS task/0/prefix_read/0
+14:57:51.389 INFO [RUN>random] Selected: [V011_DONE task/0/prefix_read/0]
+14:57:51.432 INFO [RUN>random] Selected: [task/0/suffix_update {lib:"REST", method:"POST", url:"http://127.0.0.1:3456/api/v1/tasks/420", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"task/0/suffix_update"}, body:"{"title": "sbt_b1cd99ae79_task_0_2"}", callback:{}}]
+14:57:51.473 INFO [RUN>random] V011_CALLBACK {"step":"task/0/suffix_update","status":200,"phase":"suffix","id":420,"value":"sbt_b1cd99ae79_task_0_2","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:51.473 INFO [RUN>random] V011_STEP_PASS task/0/suffix_update
+14:57:51.567 INFO [RUN>random] Selected: [team/0/suffix_update {lib:"REST", method:"POST", url:"http://127.0.0.1:3456/api/v1/teams/2", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"team/0/suffix_update"}, body:"{"name": "sbt_b1cd99ae79_team_0_2"}", callback:{}}]
+14:57:51.603 INFO [RUN>random] V011_CALLBACK {"step":"team/0/suffix_update","status":200,"phase":"suffix","id":2,"value":"sbt_b1cd99ae79_team_0_2","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:51.603 INFO [RUN>random] V011_STEP_PASS team/0/suffix_update
+14:57:51.706 INFO [RUN>random] Selected: [V011_DONE task/0/suffix_update]
+14:57:51.743 INFO [RUN>random] Selected: [project/0/suffix_update {lib:"REST", method:"POST", url:"http://127.0.0.1:3456/api/v1/projects/81", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"project/0/suffix_update"}, body:"{"title": "sbt_b1cd99ae79_project_0_2"}", callback:{}}]
+14:57:51.781 INFO [RUN>random] V011_CALLBACK {"step":"project/0/suffix_update","status":200,"phase":"suffix","id":81,"value":"sbt_b1cd99ae79_project_0_2","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:51.781 INFO [RUN>random] V011_STEP_PASS project/0/suffix_update
+14:57:51.888 INFO [RUN>random] Selected: [V011_DONE team/0/suffix_update]
+14:57:51.935 INFO [RUN>random] Selected: [label/0/suffix_update {lib:"REST", method:"POST", url:"http://127.0.0.1:3456/api/v1/labels/128", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"label/0/suffix_update"}, body:"{"title": "sbt_b1cd99ae79_label_0_2"}", callback:{}}]
+14:57:51.969 INFO [RUN>random] V011_CALLBACK {"step":"label/0/suffix_update","status":200,"phase":"suffix","id":128,"value":"sbt_b1cd99ae79_label_0_2","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:51.969 INFO [RUN>random] V011_STEP_PASS label/0/suffix_update
+14:57:52.068 INFO [RUN>random] Selected: [team/0/suffix_read {lib:"REST", method:"GET", url:"http://127.0.0.1:3456/api/v1/teams/2", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"team/0/suffix_read"}, callback:{}}]
+14:57:52.099 INFO [RUN>random] V011_CALLBACK {"step":"team/0/suffix_read","status":200,"phase":"suffix","id":2,"value":"sbt_b1cd99ae79_team_0_2","expected":"sbt_b1cd99ae79_team_0_2","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:52.099 INFO [RUN>random] V011_STEP_PASS team/0/suffix_read
+14:57:52.199 INFO [RUN>random] Selected: [task/0/suffix_read {lib:"REST", method:"GET", url:"http://127.0.0.1:3456/api/v1/tasks/420", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"task/0/suffix_read"}, callback:{}}]
+14:57:52.234 INFO [RUN>random] V011_CALLBACK {"step":"task/0/suffix_read","status":200,"phase":"suffix","id":420,"value":"sbt_b1cd99ae79_task_0_2","expected":"sbt_b1cd99ae79_task_0_2","parent_checks":[{"field":"project_id","expected":81,"observed":81,"verdict":"PASS"}],"parent_verdict":"PASS","valid":true}
+14:57:52.234 INFO [RUN>random] V011_STEP_PASS task/0/suffix_read
+14:57:52.325 INFO [RUN>random] Selected: [V011_DONE label/0/suffix_update]
+14:57:52.368 INFO [RUN>random] Selected: [V011_DONE project/0/suffix_update]
+14:57:52.408 INFO [RUN>random] Selected: [V011_DONE team/0/suffix_read]
+14:57:52.454 INFO [RUN>random] Selected: [V011_DONE task/0/suffix_read]
+14:57:52.491 INFO [RUN>random] Selected: [label/0/suffix_read {lib:"REST", method:"GET", url:"http://127.0.0.1:3456/api/v1/labels/128", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"label/0/suffix_read"}, callback:{}}]
+14:57:52.525 INFO [RUN>random] V011_CALLBACK {"step":"label/0/suffix_read","status":200,"phase":"suffix","id":128,"value":"sbt_b1cd99ae79_label_0_2","expected":"sbt_b1cd99ae79_label_0_2","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:52.525 INFO [RUN>random] V011_STEP_PASS label/0/suffix_read
+14:57:52.624 INFO [RUN>random] Selected: [project/0/suffix_read {lib:"REST", method:"GET", url:"http://127.0.0.1:3456/api/v1/projects/81", headers:{Content-Type:"application/json", Authorization:"Bearer <redacted>"}, parameters:{}, expectedResponseCodes:[0:200.0], model:{step:"project/0/suffix_read"}, callback:{}}]
+14:57:52.660 INFO [RUN>random] V011_CALLBACK {"step":"project/0/suffix_read","status":200,"phase":"suffix","id":81,"value":"sbt_b1cd99ae79_project_0_2","expected":"sbt_b1cd99ae79_project_0_2","parent_checks":[],"parent_verdict":"NOT_APPLICABLE","valid":true}
+14:57:52.661 INFO [RUN>random] V011_STEP_PASS project/0/suffix_read
+14:57:52.758 INFO [RUN>random] Selected: [V011_DONE project/0/suffix_read]
+14:57:52.800 INFO [RUN>random] Selected: [V011_DONE label/0/suffix_read]
+14:57:52.845 INFO [RUN>random] Selected: [V011_COMPLETE]
+14:57:52.883 INFO [RUN>random] Scenario title: 
+14:57:52.908 INFO [RUN>random] Scenario Tags:
+14:57:52.925 INFO [RUN] Test Result: SUCCESS
+

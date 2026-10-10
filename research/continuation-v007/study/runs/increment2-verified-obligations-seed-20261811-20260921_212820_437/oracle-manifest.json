@@ -1,0 +1,112 @@
+{
+  "oracles": [
+    {
+      "assertions": [
+        {
+          "type": "same_resource_id"
+        },
+        {
+          "fields": [
+            "title"
+          ],
+          "type": "written_fields_persist"
+        }
+      ],
+      "binding": {
+        "task": "$trigger.response.id"
+      },
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "tasks-read",
+        "path_template": "/tasks/{task}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "task-create-visibility",
+      "trigger": {
+        "method": "POST",
+        "operation_id": "tasks-create",
+        "path_template": "/projects/{project}/tasks",
+        "success_statuses": [
+          201
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "fields": [
+            "title",
+            "done"
+          ],
+          "type": "written_fields_persist"
+        }
+      ],
+      "binding": {
+        "task": "$trigger.path.task"
+      },
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "tasks-read",
+        "path_template": "/tasks/{task}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "task-update-persistence",
+      "trigger": {
+        "method": "PUT",
+        "operation_id": "tasks-update",
+        "path_template": "/tasks/{task}",
+        "success_statuses": [
+          200
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "type": "resource_absent"
+        }
+      ],
+      "binding": {
+        "task": "$trigger.path.task"
+      },
+      "confidence": "high",
+      "observation": {
+        "absence_statuses": [
+          404
+        ],
+        "method": "GET",
+        "operation_id": "tasks-read",
+        "path_template": "/tasks/{task}"
+      },
+      "oracle_id": "task-delete-absence",
+      "trigger": {
+        "method": "DELETE",
+        "operation_id": "tasks-delete",
+        "path_template": "/tasks/{task}",
+        "success_statuses": [
+          204
+        ]
+      }
+    }
+  ],
+  "policy": {
+    "evidence_basis": "external HTTP trace only",
+    "stable_update_fields": [
+      "title",
+      "done"
+    ],
+    "violation_is": "semantic anomaly candidate, not a confirmed product bug"
+  },
+  "profile": "verified-task-lifecycle",
+  "schema_version": 1,
+  "source": {
+    "kind": "openapi-inferred",
+    "openapi_sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941"
+  }
+}

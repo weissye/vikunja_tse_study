@@ -1,0 +1,11 @@
+{
+  "kind": "COLD_NAMED_VOLUME_SNAPSHOT",
+  "container": "vikunja-research-sut",
+  "image": "sha256:b51a496bfb490aee33082257d2ca102e28b47456abad38e9a74840e932a0873e",
+  "helper_image": "sha256:c703614fcbba1fd19edf73d4bfac311a419a1c91da30f3f167647d2afd2d0879",
+  "destinations": [
+    "/db",
+    "/app/vikunja/files"
+  ],
+  "scope": "SQLite and files persistent volumes only; process clocks, queues and external services excluded"
+}

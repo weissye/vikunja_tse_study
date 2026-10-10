@@ -1,0 +1,365 @@
+{
+  "version": "v015",
+  "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "contract_version": "v2.6.0",
+  "policy": {
+    "version": "v015",
+    "actor_scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+    "field_priority": [
+      "title",
+      "name"
+    ],
+    "eligible_types": [
+      "string"
+    ],
+    "exclude_formatted_fields": true,
+    "semantic_assumptions": [
+      "selected scalar roundtrips without normalization",
+      "a successful update persists its selected scalar",
+      "resource identity remains stable across reads and updates"
+    ],
+    "source": "DECLARED_GENERIC_RESEARCH_POLICY; NOT_INFERRED_FROM_OPENAPI",
+    "request_values": "NOT_GENERATED",
+    "live_enabled": false
+  },
+  "resources": [
+    {
+      "resource": "label",
+      "create": "PUT /labels",
+      "read": "GET /labels/{id}",
+      "create_pointer": "#/paths/~1labels/put",
+      "read_pointer": "#/paths/~1labels~1{id}/get",
+      "identity": {
+        "capture_field": "id",
+        "producer_field_pointer": "#/definitions/models.Label/properties/id",
+        "read_field_pointer": "#/definitions/models.Label/properties/id",
+        "path_slot": "id",
+        "type": "integer",
+        "binding_basis": "RESPONSE_FIELD_TYPE_AND_PATH_FAMILY_HEURISTIC",
+        "binding_review_required": true
+      },
+      "scalar": {
+        "field": "title",
+        "request_pointer": "#/definitions/models.Label/properties/title",
+        "read_pointer": "#/definitions/models.Label/properties/title",
+        "selection_source": "GENERIC_POLICY_FIELD_PRIORITY"
+      },
+      "create_parent_slots": []
+    },
+    {
+      "resource": "project",
+      "create": "PUT /projects",
+      "read": "GET /projects/{id}",
+      "create_pointer": "#/paths/~1projects/put",
+      "read_pointer": "#/paths/~1projects~1{id}/get",
+      "identity": {
+        "capture_field": "id",
+        "producer_field_pointer": "#/definitions/models.Project/properties/id",
+        "read_field_pointer": "#/definitions/models.Project/properties/id",
+        "path_slot": "id",
+        "type": "integer",
+        "binding_basis": "RESPONSE_FIELD_TYPE_AND_PATH_FAMILY_HEURISTIC",
+        "binding_review_required": true
+      },
+      "scalar": {
+        "field": "title",
+        "request_pointer": "#/definitions/models.Project/properties/title",
+        "read_pointer": "#/definitions/models.Project/properties/title",
+        "selection_source": "GENERIC_POLICY_FIELD_PRIORITY"
+      },
+      "create_parent_slots": []
+    },
+    {
+      "resource": "task",
+      "create": "PUT /projects/{id}/tasks",
+      "read": "GET /tasks/{id}",
+      "create_pointer": "#/paths/~1projects~1{id}~1tasks/put",
+      "read_pointer": "#/paths/~1tasks~1{id}/get",
+      "identity": {
+        "capture_field": "id",
+        "producer_field_pointer": "#/definitions/models.Task/properties/id",
+        "read_field_pointer": "#/definitions/models.Task/properties/id",
+        "path_slot": "id",
+        "type": "integer",
+        "binding_basis": "RESPONSE_FIELD_TYPE_AND_PATH_FAMILY_HEURISTIC",
+        "binding_review_required": true
+      },
+      "scalar": {
+        "field": "title",
+        "request_pointer": "#/definitions/models.Task/properties/title",
+        "read_pointer": "#/definitions/models.Task/properties/title",
+        "selection_source": "GENERIC_POLICY_FIELD_PRIORITY"
+      },
+      "create_parent_slots": [
+        "id"
+      ]
+    },
+    {
+      "resource": "team",
+      "create": "PUT /teams",
+      "read": "GET /teams/{id}",
+      "create_pointer": "#/paths/~1teams/put",
+      "read_pointer": "#/paths/~1teams~1{id}/get",
+      "identity": {
+        "capture_field": "id",
+        "producer_field_pointer": "#/definitions/models.Team/properties/id",
+        "read_field_pointer": "#/definitions/models.Team/properties/id",
+        "path_slot": "id",
+        "type": "integer",
+        "binding_basis": "RESPONSE_FIELD_TYPE_AND_PATH_FAMILY_HEURISTIC",
+        "binding_review_required": true
+      },
+      "scalar": {
+        "field": "name",
+        "request_pointer": "#/definitions/models.Team/properties/name",
+        "read_pointer": "#/definitions/models.Team/properties/name",
+        "selection_source": "GENERIC_POLICY_FIELD_PRIORITY"
+      },
+      "create_parent_slots": []
+    }
+  ],
+  "rules": [
+    {
+      "id": "label_create_read",
+      "kind": "CREATE_READBACK",
+      "resource": "label",
+      "operations": [
+        "PUT /labels",
+        "GET /labels/{id}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "title",
+        "expected_from": "SUPPLIED_CREATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    },
+    {
+      "id": "label_update_read",
+      "kind": "UPDATE_READBACK",
+      "resource": "label",
+      "operations": [
+        "GET /labels/{id}",
+        "PUT /labels/{id}",
+        "GET /labels/{id}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "title",
+        "expected_from": "SUPPLIED_UPDATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "request_mode": "CONTRACT_DECLARED_JSON_MUTATION",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    },
+    {
+      "id": "project_create_read",
+      "kind": "CREATE_READBACK",
+      "resource": "project",
+      "operations": [
+        "PUT /projects",
+        "GET /projects/{id}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "title",
+        "expected_from": "SUPPLIED_CREATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    },
+    {
+      "id": "project_update_read",
+      "kind": "UPDATE_READBACK",
+      "resource": "project",
+      "operations": [
+        "GET /projects/{id}",
+        "POST /projects/{id}",
+        "GET /projects/{id}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "title",
+        "expected_from": "SUPPLIED_UPDATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "request_mode": "CONTRACT_DECLARED_JSON_MUTATION",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    },
+    {
+      "id": "task_create_read",
+      "kind": "CREATE_READBACK",
+      "resource": "task",
+      "operations": [
+        "PUT /projects/{id}/tasks",
+        "GET /tasks/{id}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "title",
+        "expected_from": "SUPPLIED_CREATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    },
+    {
+      "id": "task_update_read",
+      "kind": "UPDATE_READBACK",
+      "resource": "task",
+      "operations": [
+        "GET /tasks/{id}",
+        "POST /tasks/{id}",
+        "GET /tasks/{id}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "title",
+        "expected_from": "SUPPLIED_UPDATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "request_mode": "CONTRACT_DECLARED_JSON_MUTATION",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    },
+    {
+      "id": "team_create_read",
+      "kind": "CREATE_READBACK",
+      "resource": "team",
+      "operations": [
+        "PUT /teams",
+        "GET /teams/{id}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "name",
+        "expected_from": "SUPPLIED_CREATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    },
+    {
+      "id": "team_update_read",
+      "kind": "UPDATE_READBACK",
+      "resource": "team",
+      "operations": [
+        "GET /teams/{id}",
+        "POST /teams/{id}",
+        "GET /teams/{id}"
+      ],
+      "oracle": {
+        "kind": "SCALAR_EQUALITY",
+        "field": "name",
+        "expected_from": "SUPPLIED_UPDATE_VALUE"
+      },
+      "identity_stability_check": true,
+      "scope": "SINGLE_RESEARCH_ACTOR_OWN_CREATED_RESOURCES",
+      "request_mode": "CONTRACT_DECLARED_JSON_MUTATION",
+      "acceptance": "DECLARATIVE_RULE_ONLY; RUNTIME_NOT_VALIDATED"
+    }
+  ],
+  "relationship_candidates": [
+    {
+      "kind": "CREATE_PARENT_IDENTITY_CANDIDATE",
+      "child": "task",
+      "path_slot": "id",
+      "producer_resources": [
+        "project"
+      ],
+      "source": "PARENT_PATH_SEGMENT_HEURISTIC",
+      "review_required": true
+    }
+  ],
+  "unresolved": [
+    {
+      "operation": "PUT /filters",
+      "reason": "NO_POLICY_ELIGIBLE_COMMON_SCALAR"
+    },
+    {
+      "operation": "PUT /projects/{id}/teams",
+      "reason": "NO_POLICY_ELIGIBLE_COMMON_SCALAR"
+    },
+    {
+      "operation": "PUT /projects/{id}/users",
+      "reason": "AMBIGUOUS_OR_MISSING_RESOURCE_READER",
+      "candidates": []
+    },
+    {
+      "operation": "PUT /projects/{id}/views/{view}/buckets",
+      "reason": "AMBIGUOUS_OR_MISSING_RESOURCE_READER",
+      "candidates": []
+    },
+    {
+      "operation": "PUT /projects/{id}/webhooks",
+      "reason": "AMBIGUOUS_OR_MISSING_RESOURCE_READER",
+      "candidates": []
+    },
+    {
+      "operation": "PUT /projects/{projectID}/duplicate",
+      "reason": "NO_ROOT_ID_FIELD; POSSIBLE_RELATION_OPERATION"
+    },
+    {
+      "operation": "PUT /projects/{project}/shares",
+      "reason": "AMBIGUOUS_OR_MISSING_RESOURCE_READER",
+      "candidates": []
+    },
+    {
+      "operation": "PUT /projects/{project}/views",
+      "reason": "AMBIGUOUS_OR_MISSING_RESOURCE_READER",
+      "candidates": []
+    },
+    {
+      "operation": "PUT /tasks/{taskID}/assignees",
+      "reason": "NO_ROOT_ID_FIELD; POSSIBLE_RELATION_OPERATION"
+    },
+    {
+      "operation": "POST /tasks/{taskID}/assignees/bulk",
+      "reason": "NO_ROOT_ID_FIELD; POSSIBLE_RELATION_OPERATION"
+    },
+    {
+      "operation": "PUT /tasks/{taskID}/comments",
+      "reason": "AMBIGUOUS_OR_MISSING_RESOURCE_READER",
+      "candidates": []
+    },
+    {
+      "operation": "PUT /tasks/{taskID}/duplicate",
+      "reason": "NO_ROOT_ID_FIELD; POSSIBLE_RELATION_OPERATION"
+    },
+    {
+      "operation": "POST /tasks/{taskID}/labels/bulk",
+      "reason": "NO_ROOT_ID_FIELD; POSSIBLE_RELATION_OPERATION"
+    },
+    {
+      "operation": "PUT /tasks/{taskID}/relations",
+      "reason": "NO_ROOT_ID_FIELD; POSSIBLE_RELATION_OPERATION"
+    },
+    {
+      "operation": "PUT /tasks/{task}/labels",
+      "reason": "NO_ROOT_ID_FIELD; POSSIBLE_RELATION_OPERATION"
+    },
+    {
+      "operation": "PUT /teams/{id}/members",
+      "reason": "AMBIGUOUS_OR_MISSING_RESOURCE_READER",
+      "candidates": []
+    },
+    {
+      "operation": "PUT /tokens",
+      "reason": "AMBIGUOUS_OR_MISSING_RESOURCE_READER",
+      "candidates": []
+    },
+    {
+      "operation": "PUT /{kind}/{id}/reactions",
+      "reason": "NO_ROOT_ID_FIELD; POSSIBLE_RELATION_OPERATION"
+    }
+  ],
+  "live_execution": false,
+  "js_generated": false,
+  "existing_generator_modified": false,
+  "status": "OFFLINE_RULE_DERIVATION_COMPLETE; BINDING_AND_RUNTIME_REVIEW_PENDING"
+}

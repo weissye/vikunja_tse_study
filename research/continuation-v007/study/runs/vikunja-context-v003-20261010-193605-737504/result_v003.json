@@ -1,0 +1,37 @@
+{
+  "version": "v003",
+  "status": "NOT_ACCEPTED",
+  "live_execution_started": false,
+  "live_acceptance_passed": false,
+  "seed": 1,
+  "instances": 2,
+  "architecture": "ORIGINAL_CONTEXT_GENERATOR; INTERFACES_DAL_STORIES",
+  "scope": "OWN_CREATED_LABELS_PROJECTS_TEAMS; SINGLE_EXISTING_USER",
+  "authorization_negative_tests": "NOT_IMPLEMENTED",
+  "base_url": "http://127.0.0.1:3456/api/v1",
+  "server_version": "v2.6.0",
+  "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "live_contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "contract_authority": "LIVE_CANONICAL_MATCH_AND_VERSION_MATCH",
+  "label_options_status": 204,
+  "label_allowed_methods": [
+    "OPTIONS",
+    "DELETE",
+    "GET",
+    "POST"
+  ],
+  "method_adapter": {
+    "version": "v003",
+    "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+    "evidence": "Previously observed local OPTIONS allows POST, not PUT. Runner must re-check this evidence before live generation.",
+    "rules": [
+      {
+        "path": "/labels/{id}",
+        "source_method": "put",
+        "effective_method": "post"
+      }
+    ]
+  },
+  "provengo_jar_sha256": "dda4be276ff517faa06b942d587cad2d342c66d83c9959f7eb3c6c77a8b2fc2b",
+  "error": "ValueError: Original Context generator failed"
+}

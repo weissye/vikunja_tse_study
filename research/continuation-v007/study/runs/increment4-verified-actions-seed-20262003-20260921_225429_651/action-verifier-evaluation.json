@@ -1,0 +1,455 @@
+{
+  "confirmed_product_bug": false,
+  "evaluation_basis": "external HTTP trace plus generated oracle manifest",
+  "oracle_summary": {
+    "comment-create-visible": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 4,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 4,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 4
+    },
+    "comment-delete-absence": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 4,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 4,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 4
+    },
+    "comment-update-persistence": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 4,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 4,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 4
+    },
+    "label-attachment-visible": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 3,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 3,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 3
+    },
+    "label-detachment-absent": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 3,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 3,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 3
+    },
+    "relation-create-visible": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 5,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 5,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 5
+    },
+    "relation-delete-absence": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 5,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 5,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 5
+    }
+  },
+  "profile": "verified-association-actions",
+  "run_status": "PASS",
+  "witnesses": [
+    {
+      "expected": {
+        "comment": "3_65754",
+        "id": 90
+      },
+      "observation_event": 19,
+      "observed": {
+        "comment": "3_65754"
+      },
+      "oracle_id": "comment-create-visible",
+      "result": "PASS",
+      "trigger_event": 10
+    },
+    {
+      "expected": {
+        "bidirectional": true,
+        "kind": "subtask",
+        "source": 301,
+        "target": 303
+      },
+      "observation_event": 23,
+      "observed": {
+        "source_visible": true,
+        "target_visible": true
+      },
+      "oracle_id": "relation-create-visible",
+      "result": "PASS",
+      "trigger_event": 11
+    },
+    {
+      "expected": {
+        "comment": "0_96711",
+        "id": 91
+      },
+      "observation_event": 46,
+      "observed": {
+        "comment": "0_96711"
+      },
+      "oracle_id": "comment-create-visible",
+      "result": "PASS",
+      "trigger_event": 12
+    },
+    {
+      "expected": {
+        "comment": "1_10437",
+        "id": 92
+      },
+      "observation_event": 41,
+      "observed": {
+        "comment": "1_10437"
+      },
+      "oracle_id": "comment-create-visible",
+      "result": "PASS",
+      "trigger_event": 14
+    },
+    {
+      "expected": {
+        "label_id": 73
+      },
+      "observation_event": 51,
+      "observed": {
+        "listed": true
+      },
+      "oracle_id": "label-attachment-visible",
+      "result": "PASS",
+      "trigger_event": 21
+    },
+    {
+      "expected": {
+        "comment": "2_64549",
+        "id": 93
+      },
+      "observation_event": 38,
+      "observed": {
+        "comment": "2_64549"
+      },
+      "oracle_id": "comment-create-visible",
+      "result": "PASS",
+      "trigger_event": 24
+    },
+    {
+      "expected": {
+        "label_id": 72
+      },
+      "observation_event": 35,
+      "observed": {
+        "listed": true
+      },
+      "oracle_id": "label-attachment-visible",
+      "result": "PASS",
+      "trigger_event": 25
+    },
+    {
+      "expected": {
+        "comment": "3_3941"
+      },
+      "observation_event": 48,
+      "observed": {
+        "comment": "3_3941"
+      },
+      "oracle_id": "comment-update-persistence",
+      "result": "PASS",
+      "trigger_event": 26
+    },
+    {
+      "expected": {
+        "bidirectional": true,
+        "kind": "related",
+        "source": 304,
+        "target": 300
+      },
+      "observation_event": 31,
+      "observed": {
+        "source_visible": true,
+        "target_visible": true
+      },
+      "oracle_id": "relation-create-visible",
+      "result": "PASS",
+      "trigger_event": 28
+    },
+    {
+      "expected": {
+        "bidirectional": true,
+        "kind": "parenttask",
+        "source": 303,
+        "target": 304
+      },
+      "observation_event": 39,
+      "observed": {
+        "source_visible": true,
+        "target_visible": true
+      },
+      "oracle_id": "relation-create-visible",
+      "result": "PASS",
+      "trigger_event": 30
+    },
+    {
+      "expected": {
+        "bidirectional": true,
+        "kind": "duplicates",
+        "source": 305,
+        "target": 302
+      },
+      "observation_event": 36,
+      "observed": {
+        "source_visible": true,
+        "target_visible": true
+      },
+      "oracle_id": "relation-create-visible",
+      "result": "PASS",
+      "trigger_event": 32
+    },
+    {
+      "expected": {
+        "bidirectional": true,
+        "kind": "duplicateof",
+        "source": 300,
+        "target": 305
+      },
+      "observation_event": 50,
+      "observed": {
+        "source_visible": true,
+        "target_visible": true
+      },
+      "oracle_id": "relation-create-visible",
+      "result": "PASS",
+      "trigger_event": 33
+    },
+    {
+      "expected": {
+        "label_id": 74
+      },
+      "observation_event": 56,
+      "observed": {
+        "listed": true
+      },
+      "oracle_id": "label-attachment-visible",
+      "result": "PASS",
+      "trigger_event": 42
+    },
+    {
+      "expected": {
+        "comment": "1_12708"
+      },
+      "observation_event": 53,
+      "observed": {
+        "comment": "1_12708"
+      },
+      "oracle_id": "comment-update-persistence",
+      "result": "PASS",
+      "trigger_event": 43
+    },
+    {
+      "expected": {
+        "comment": "2_52136"
+      },
+      "observation_event": 57,
+      "observed": {
+        "comment": "2_52136"
+      },
+      "oracle_id": "comment-update-persistence",
+      "result": "PASS",
+      "trigger_event": 44
+    },
+    {
+      "expected": {
+        "comment": "0_83977"
+      },
+      "observation_event": 58,
+      "observed": {
+        "comment": "0_83977"
+      },
+      "oracle_id": "comment-update-persistence",
+      "result": "PASS",
+      "trigger_event": 54
+    },
+    {
+      "expected": {
+        "status": 404
+      },
+      "observation_event": 69,
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "comment-delete-absence",
+      "result": "PASS",
+      "trigger_event": 59
+    },
+    {
+      "expected": {
+        "status": 404
+      },
+      "observation_event": 80,
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "comment-delete-absence",
+      "result": "PASS",
+      "trigger_event": 60
+    },
+    {
+      "expected": {
+        "status": 404
+      },
+      "observation_event": 86,
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "comment-delete-absence",
+      "result": "PASS",
+      "trigger_event": 61
+    },
+    {
+      "expected": {
+        "present": false,
+        "target": 302
+      },
+      "observation_event": 76,
+      "observed": {
+        "present": false
+      },
+      "oracle_id": "relation-delete-absence",
+      "result": "PASS",
+      "trigger_event": 62
+    },
+    {
+      "expected": {
+        "present": false,
+        "target": 303
+      },
+      "observation_event": 88,
+      "observed": {
+        "present": false
+      },
+      "oracle_id": "relation-delete-absence",
+      "result": "PASS",
+      "trigger_event": 63
+    },
+    {
+      "expected": {
+        "present": false,
+        "target": 305
+      },
+      "observation_event": 73,
+      "observed": {
+        "present": false
+      },
+      "oracle_id": "relation-delete-absence",
+      "result": "PASS",
+      "trigger_event": 65
+    },
+    {
+      "expected": {
+        "present": false,
+        "target": 300
+      },
+      "observation_event": 71,
+      "observed": {
+        "present": false
+      },
+      "oracle_id": "relation-delete-absence",
+      "result": "PASS",
+      "trigger_event": 66
+    },
+    {
+      "expected": {
+        "label_id": 73,
+        "listed": false
+      },
+      "observation_event": 78,
+      "observed": {
+        "listed": false
+      },
+      "oracle_id": "label-detachment-absent",
+      "result": "PASS",
+      "trigger_event": 68
+    },
+    {
+      "expected": {
+        "present": false,
+        "target": 304
+      },
+      "observation_event": 85,
+      "observed": {
+        "present": false
+      },
+      "oracle_id": "relation-delete-absence",
+      "result": "PASS",
+      "trigger_event": 70
+    },
+    {
+      "expected": {
+        "label_id": 74,
+        "listed": false
+      },
+      "observation_event": 77,
+      "observed": {
+        "listed": false
+      },
+      "oracle_id": "label-detachment-absent",
+      "result": "PASS",
+      "trigger_event": 72
+    },
+    {
+      "expected": {
+        "label_id": 72,
+        "listed": false
+      },
+      "observation_event": 83,
+      "observed": {
+        "listed": false
+      },
+      "oracle_id": "label-detachment-absent",
+      "result": "PASS",
+      "trigger_event": 74
+    },
+    {
+      "expected": {
+        "status": 404
+      },
+      "observation_event": 79,
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "comment-delete-absence",
+      "result": "PASS",
+      "trigger_event": 75
+    }
+  ]
+}

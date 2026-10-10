@@ -1,0 +1,53 @@
+{
+  "schema_version": 4,
+  "artifact_version": "v36",
+  "system": "netbox",
+  "experiment": "A2A sequence-local five-class intermediate-prefix benchmark",
+  "source_fault_mechanism_count": 5,
+  "semantic_fault_class_count": 5,
+  "measurement_oracle": "external HTTP evidence; official score is sequence-local",
+  "hidden_ground_truth": "server-side activation markers, never exposed in HTTP and never used for official scoring or search",
+  "campaign_global_evaluation": "diagnostic_only",
+  "classes": [
+    {
+      "id": "A_LOGIC",
+      "kind": "relation reassignment lost",
+      "minimum_activation_steps": 4,
+      "minimum_http_steps": 5,
+      "statement": "A valid reassignment of an existing child from one existing parent to another must persist.",
+      "http_witness": "Create two parents; create a child on the first; successfully request a move to the second; retrieve the child and observe that it still references the first parent."
+    },
+    {
+      "id": "B_LIFECYCLE",
+      "kind": "multi-child lifecycle deletion incomplete",
+      "minimum_activation_steps": 4,
+      "minimum_http_steps": 5,
+      "statement": "Deleting a parent with multiple dependent children must not leave a child retrievable with the deleted reference.",
+      "http_witness": "Create a parent and at least two children referencing it; successfully delete the parent; retrieve one former child and observe that it still references the deleted parent."
+    },
+    {
+      "id": "C_UNIQUENESS",
+      "kind": "uniqueness constraint missing",
+      "minimum_activation_steps": 2,
+      "minimum_http_steps": 2,
+      "statement": "The benchmark's required unique string value must not be accepted for two distinct parent resources.",
+      "http_witness": "Successfully create two distinct parents with the same non-empty required string value."
+    },
+    {
+      "id": "D_INTEGRITY",
+      "kind": "second scalar update lost after verified first update",
+      "minimum_activation_steps": 4,
+      "minimum_http_steps": 4,
+      "statement": "After one scalar transition is externally verified, a second distinct update must persist.",
+      "http_witness": "Create a resource with scalar X; PATCH to Y; GET and verify Y; PATCH to distinct Z and observe a successful response that still reports Y."
+    },
+    {
+      "id": "E_REFERENTIAL_INTEGRITY",
+      "kind": "deleted parent reference accepted",
+      "minimum_activation_steps": 4,
+      "minimum_http_steps": 4,
+      "statement": "A reference to a successfully deleted parent must not be accepted for a new dependent resource after valid relationship history existed.",
+      "http_witness": "Create a parent and a valid child; successfully delete the parent; successfully create a new child reusing the deleted parent id and observe the dangling reference in the successful create response."
+    }
+  ]
+}

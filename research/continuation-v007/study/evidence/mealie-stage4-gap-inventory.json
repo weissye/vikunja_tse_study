@@ -1,0 +1,41 @@
+{
+  "matched_prefix": 7,
+  "policy": "ready is static feasibility only; unobserved means no concurrency finding",
+  "ready_in_generator": 11,
+  "schema_version": 1,
+  "source_sha256": "e398a26d25a5c038a50709d7c03a5d427b08c90e94d9b5248eb6dd39d4e28d52",
+  "unmatched": [
+    {
+      "claim": "UNTESTED",
+      "field": "groupId",
+      "operation_id": "update_one_api_households_shopping_lists__item_id__put",
+      "oracle_id": "concurrency::same-field::update_one_api_households_shopping_lists__item_id__put::groupId",
+      "prefix_observed": false,
+      "status": "REFERENCE_PRODUCER_REQUIRED"
+    },
+    {
+      "claim": "UNTESTED",
+      "field": "id",
+      "operation_id": "update_one_api_households_shopping_lists__item_id__put",
+      "oracle_id": "concurrency::same-field::update_one_api_households_shopping_lists__item_id__put::id",
+      "prefix_observed": false,
+      "status": "IDENTITY_REBINDING_REQUIRED"
+    },
+    {
+      "claim": "UNTESTED",
+      "field": "userId",
+      "operation_id": "update_one_api_households_shopping_lists__item_id__put",
+      "oracle_id": "concurrency::same-field::update_one_api_households_shopping_lists__item_id__put::userId",
+      "prefix_observed": false,
+      "status": "REFERENCE_PRODUCER_REQUIRED"
+    },
+    {
+      "claim": "UNTESTED",
+      "field": "name",
+      "operation_id": "update_one_api_organizers_tools__item_id__put",
+      "oracle_id": "concurrency::same-field::update_one_api_organizers_tools__item_id__put::name",
+      "prefix_observed": false,
+      "status": "TARGETED_SERIAL_AND_OVERLAP_PROBE"
+    }
+  ]
+}

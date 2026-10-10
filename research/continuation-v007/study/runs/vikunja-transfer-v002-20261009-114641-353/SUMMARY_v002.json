@@ -1,0 +1,17 @@
+{
+  "version": "v002",
+  "contract_sha256": "207ec830ffe3f73be3324dda465a33e1d6ae4afca5b2e4d35e66d2e371e0510d",
+  "contract_info": {
+    "description": "## Rich-text fields\n\nDescriptions (task, project, label, team, saved filter) and task comments are stored as HTML. Add `?format=markdown` to read and write them as GFM Markdown instead; on write it is converted to HTML and `@mentions` resolved to existing users. On `PATCH`, send the `X-Vikunja-Format: markdown` header instead (merge-patch drops query parameters). CalDAV always exchanges task descriptions as Markdown.\n\nWriting is lossy: Markdown can't express every HTML construct (e.g. underline), so a field you send as Markdown is stored as its converted HTML \u2014 formatting Markdown can't represent is dropped. Omit a field, or use `format=html`, to leave it untouched (note a full `PUT` and `PATCH` round-trip the whole resource, so send `format=html` unless you actually edited the rich-text fields). Unknown `@mentions` stay as plain text.",
+    "title": "Vikunja API",
+    "version": "v2.6.0-469-g94e6f165"
+  },
+  "specification_version": "3.0.3",
+  "operation_count": 205,
+  "schema_count": 147,
+  "selected_operation_count": 22,
+  "source_authority": "ARCHIVED_OR_USER_SELECTED_CONTRACT; LIVE_MATCH_NOT_VERIFIED",
+  "live_execution": false,
+  "issue_count": 0,
+  "status": "STATIC_ANALYSIS_COMPLETE"
+}

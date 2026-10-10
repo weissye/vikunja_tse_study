@@ -1,0 +1,84 @@
+{
+  "version": "v010",
+  "mode": "resume",
+  "rule_id": "ModelsLabel/title/TYPE_NUMBER",
+  "logical_id": "ModelsLabel_1",
+  "seed": 1,
+  "completed_rule_ids": [
+    "ModelsLabel/title/MIN_LENGTH"
+  ],
+  "resources": [
+    {
+      "logicalId": "ModelsLabel_1",
+      "resourceType": "ModelsLabel",
+      "expected": {
+        "title": "sbt-1-ModelsLabel-1-title",
+        "description": "sbt-1-ModelsLabel_1-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/labels/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "resourceType": "ModelsLabel",
+      "expected": {
+        "title": "sbt-1-ModelsLabel-2-title",
+        "description": "sbt-1-ModelsLabel_2-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/labels/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "resourceType": "ModelsProject",
+      "expected": {
+        "title": "sbt-1-ModelsProject-1-title",
+        "description": "sbt-1-ModelsProject_1-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/projects/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "resourceType": "ModelsProject",
+      "expected": {
+        "title": "sbt-1-ModelsProject-2-title",
+        "description": "sbt-1-ModelsProject_2-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/projects/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "resourceType": "ModelsTeam",
+      "expected": {
+        "name": "sbt-1-ModelsTeam-1-name",
+        "description": "sbt-1-ModelsTeam_1-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/teams/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "resourceType": "ModelsTeam",
+      "expected": {
+        "name": "sbt-1-ModelsTeam-2-name",
+        "description": "sbt-1-ModelsTeam_2-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/teams/{id}",
+      "route_parameter": "id"
+    }
+  ]
+}

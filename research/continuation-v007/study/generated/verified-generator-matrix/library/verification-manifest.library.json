@@ -1,0 +1,359 @@
+{
+  "concurrency_oracles": [],
+  "contract_oracles": [
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "listUsers",
+      "oracle_id": "contract::listUsers",
+      "path_template": "/users",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1users/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "createUser",
+      "oracle_id": "contract::createUser",
+      "path_template": "/users",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "id",
+          "name"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1users/post",
+      "success_statuses": [
+        201
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        400,
+        404
+      ],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "deleteUser",
+      "oracle_id": "contract::deleteUser",
+      "path_template": "/users/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1users~1{id}/delete",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "listBooks",
+      "oracle_id": "contract::listBooks",
+      "path_template": "/books",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1books/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "createBook",
+      "oracle_id": "contract::createBook",
+      "path_template": "/books",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "id",
+          "title"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1books/post",
+      "success_statuses": [
+        201
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        404
+      ],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "getBook",
+      "oracle_id": "contract::getBook",
+      "path_template": "/books/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1books~1{id}/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        400,
+        404
+      ],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "deleteBook",
+      "oracle_id": "contract::deleteBook",
+      "path_template": "/books/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1books~1{id}/delete",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "listLoans",
+      "oracle_id": "contract::listLoans",
+      "path_template": "/loans",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1loans/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        400
+      ],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "createLoan",
+      "oracle_id": "contract::createLoan",
+      "path_template": "/loans",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "bookId",
+          "userId"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1loans/post",
+      "success_statuses": [
+        201
+      ]
+    },
+    {
+      "documented_error_statuses": [
+        404
+      ],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "deleteLoan",
+      "oracle_id": "contract::deleteLoan",
+      "path_template": "/loans/{userId}/{bookId}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1loans~1{userId}~1{bookId}/delete",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "GET",
+      "operation_id": "listHolds",
+      "oracle_id": "contract::listHolds",
+      "path_template": "/holds",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1holds/get",
+      "success_statuses": [
+        200
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "POST",
+      "operation_id": "createHold",
+      "oracle_id": "contract::createHold",
+      "path_template": "/holds",
+      "request_contract": {
+        "media_type": "application/json",
+        "required": true,
+        "required_fields": [
+          "bookId",
+          "id",
+          "userId"
+        ],
+        "schema_type": "object"
+      },
+      "source_pointer": "#/paths/~1holds/post",
+      "success_statuses": [
+        201
+      ]
+    },
+    {
+      "documented_error_statuses": [],
+      "kind": "response-contract",
+      "method": "DELETE",
+      "operation_id": "deleteHold",
+      "oracle_id": "contract::deleteHold",
+      "path_template": "/holds/{id}",
+      "request_contract": null,
+      "source_pointer": "#/paths/~1holds~1{id}/delete",
+      "success_statuses": [
+        200
+      ]
+    }
+  ],
+  "counts": {
+    "concurrency_oracles": 0,
+    "contract_only_mutations": 7,
+    "contract_verifiers": 13,
+    "mutations": 8,
+    "operations": 13,
+    "state_verified_mutations": 1
+  },
+  "coverage_complete": true,
+  "manual_assumptions": [],
+  "mutation_coverage": [
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createUser",
+      "path_template": "/users",
+      "source_pointer": "#/paths/~1users/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deleteUser",
+      "path_template": "/users/{id}",
+      "source_pointer": "#/paths/~1users~1{id}/delete",
+      "state_limitation": "item-read-operation-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createBook",
+      "path_template": "/books",
+      "source_pointer": "#/paths/~1books/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "STATE_VERIFIED",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deleteBook",
+      "path_template": "/books/{id}",
+      "source_pointer": "#/paths/~1books~1{id}/delete",
+      "state_limitation": null,
+      "state_verifier": true,
+      "state_verifier_kind": "delete-absence"
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createLoan",
+      "path_template": "/loans",
+      "source_pointer": "#/paths/~1loans/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deleteLoan",
+      "path_template": "/loans/{userId}/{bookId}",
+      "source_pointer": "#/paths/~1loans~1{userId}~1{bookId}/delete",
+      "state_limitation": "item-read-operation-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "POST",
+      "operation_id": "createHold",
+      "path_template": "/holds",
+      "source_pointer": "#/paths/~1holds/post",
+      "state_limitation": "created-resource-item-read-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    },
+    {
+      "classification": "CONTRACT_ONLY",
+      "contract_verifier": true,
+      "method": "DELETE",
+      "operation_id": "deleteHold",
+      "path_template": "/holds/{id}",
+      "source_pointer": "#/paths/~1holds~1{id}/delete",
+      "state_limitation": "item-read-operation-not-documented",
+      "state_verifier": false,
+      "state_verifier_kind": null
+    }
+  ],
+  "policy": {
+    "all_operations_receive_contract_verifier": true,
+    "concurrency_executor_role": "transport-and-barrier-only",
+    "decision_owner": "generated-provengo-model-and-oracle-manifest",
+    "external_application_knowledge_allowed": false,
+    "state_claims_require_openapi-derived-observation": true,
+    "unobservable_mutations_are_reported_contract_only": true
+  },
+  "profile": "openapi-only-verification-and-concurrency",
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.3",
+    "sha256": "965b2c8aac14485b8fa7bafb139e507c918240e71315246e1b817d8590089448",
+    "title": "Library SUT (Corrected)",
+    "version": "1.0.2"
+  },
+  "state_oracles": [
+    {
+      "kind": "delete-absence",
+      "method": "DELETE",
+      "observation": {
+        "absence_statuses": [
+          404
+        ],
+        "method": "GET",
+        "path_template": "/books/{id}"
+      },
+      "operation_id": "deleteBook",
+      "oracle_id": "state::deleteBook",
+      "path_template": "/books/{id}",
+      "source_pointers": [
+        "#/paths/~1books~1{id}/delete",
+        "#/paths/~1books~1{id}/get"
+      ],
+      "trigger_success_statuses": [
+        200
+      ]
+    }
+  ],
+  "unsupported_refs": []
+}

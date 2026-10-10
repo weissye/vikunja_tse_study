@@ -1,0 +1,584 @@
+{
+  "confirmed_product_bug": false,
+  "evaluation_basis": "external HTTP trace plus generated oracle manifest",
+  "oracle_summary": {
+    "label-create-visibility": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 3,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 3,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 3
+    },
+    "label-delete-absence": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 3,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 3,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 3
+    },
+    "label-update-persistence": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 3,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 3,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 3
+    },
+    "project-create-visibility": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 1,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 1,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 1
+    },
+    "project-delete-absence": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 1,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 1,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 1
+    },
+    "project-update-persistence": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 1,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 1,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 1
+    },
+    "task-create-visibility": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 6,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 6,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 6
+    },
+    "task-delete-absence": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 6,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 6,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 6
+    },
+    "task-update-persistence": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 6,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 6,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 6
+    }
+  },
+  "profile": "verified-resource-lifecycles",
+  "run_status": "PASS",
+  "witnesses": [
+    {
+      "expected": {
+        "id": 61,
+        "title": "title_5610"
+      },
+      "observation_event": 2,
+      "observed": {
+        "id": 61,
+        "title": "title_5610"
+      },
+      "oracle_id": "project-create-visibility",
+      "resource": "project",
+      "resource_id": 61,
+      "result": "PASS",
+      "trigger_event": 1
+    },
+    {
+      "expected": {
+        "id": 93,
+        "title": "title_37216"
+      },
+      "observation_event": 22,
+      "observed": {
+        "id": 93,
+        "title": "title_37216"
+      },
+      "oracle_id": "label-create-visibility",
+      "resource": "label",
+      "resource_id": 93,
+      "result": "PASS",
+      "trigger_event": 4
+    },
+    {
+      "expected": {
+        "id": 94,
+        "title": "title_96424"
+      },
+      "observation_event": 37,
+      "observed": {
+        "id": 94,
+        "title": "title_96424"
+      },
+      "oracle_id": "label-create-visibility",
+      "resource": "label",
+      "resource_id": 94,
+      "result": "PASS",
+      "trigger_event": 5
+    },
+    {
+      "expected": {
+        "id": 342,
+        "title": "title_982"
+      },
+      "observation_event": 13,
+      "observed": {
+        "id": 342,
+        "title": "title_982"
+      },
+      "oracle_id": "task-create-visibility",
+      "resource": "task",
+      "resource_id": 342,
+      "result": "PASS",
+      "trigger_event": 8
+    },
+    {
+      "expected": {
+        "id": 343,
+        "title": "title_42214"
+      },
+      "observation_event": 29,
+      "observed": {
+        "id": 343,
+        "title": "title_42214"
+      },
+      "oracle_id": "task-create-visibility",
+      "resource": "task",
+      "resource_id": 343,
+      "result": "PASS",
+      "trigger_event": 9
+    },
+    {
+      "expected": {
+        "id": 344,
+        "title": "title_79095"
+      },
+      "observation_event": 31,
+      "observed": {
+        "id": 344,
+        "title": "title_79095"
+      },
+      "oracle_id": "task-create-visibility",
+      "resource": "task",
+      "resource_id": 344,
+      "result": "PASS",
+      "trigger_event": 10
+    },
+    {
+      "expected": {
+        "id": 345,
+        "title": "title_55281"
+      },
+      "observation_event": 30,
+      "observed": {
+        "id": 345,
+        "title": "title_55281"
+      },
+      "oracle_id": "task-create-visibility",
+      "resource": "task",
+      "resource_id": 345,
+      "result": "PASS",
+      "trigger_event": 12
+    },
+    {
+      "expected": {
+        "id": 346,
+        "title": "title_69456"
+      },
+      "observation_event": 63,
+      "observed": {
+        "id": 346,
+        "title": "title_69456"
+      },
+      "oracle_id": "task-create-visibility",
+      "resource": "task",
+      "resource_id": 346,
+      "result": "PASS",
+      "trigger_event": 14
+    },
+    {
+      "expected": {
+        "id": 95,
+        "title": "title_88116"
+      },
+      "observation_event": 32,
+      "observed": {
+        "id": 95,
+        "title": "title_88116"
+      },
+      "oracle_id": "label-create-visibility",
+      "resource": "label",
+      "resource_id": 95,
+      "result": "PASS",
+      "trigger_event": 15
+    },
+    {
+      "expected": {
+        "id": 347,
+        "title": "title_66766"
+      },
+      "observation_event": 68,
+      "observed": {
+        "id": 347,
+        "title": "title_66766"
+      },
+      "oracle_id": "task-create-visibility",
+      "resource": "task",
+      "resource_id": 347,
+      "result": "PASS",
+      "trigger_event": 20
+    },
+    {
+      "expected": {
+        "title": "title_36570"
+      },
+      "observation_event": 135,
+      "observed": {
+        "title": "title_36570"
+      },
+      "oracle_id": "project-update-persistence",
+      "resource": "project",
+      "resource_id": 61,
+      "result": "PASS",
+      "trigger_event": 115
+    },
+    {
+      "expected": {
+        "title": "1_53665"
+      },
+      "observation_event": 144,
+      "observed": {
+        "title": "1_53665"
+      },
+      "oracle_id": "label-update-persistence",
+      "resource": "label",
+      "resource_id": 93,
+      "result": "PASS",
+      "trigger_event": 117
+    },
+    {
+      "expected": {
+        "title": "2_26354"
+      },
+      "observation_event": 140,
+      "observed": {
+        "title": "2_26354"
+      },
+      "oracle_id": "label-update-persistence",
+      "resource": "label",
+      "resource_id": 95,
+      "result": "PASS",
+      "trigger_event": 123
+    },
+    {
+      "expected": {
+        "title": "0_86135"
+      },
+      "observation_event": 146,
+      "observed": {
+        "title": "0_86135"
+      },
+      "oracle_id": "label-update-persistence",
+      "resource": "label",
+      "resource_id": 94,
+      "result": "PASS",
+      "trigger_event": 124
+    },
+    {
+      "expected": {
+        "done": true,
+        "title": "title_42214"
+      },
+      "observation_event": 178,
+      "observed": {
+        "done": true,
+        "title": "title_42214"
+      },
+      "oracle_id": "task-update-persistence",
+      "resource": "task",
+      "resource_id": 343,
+      "result": "PASS",
+      "trigger_event": 161
+    },
+    {
+      "expected": {
+        "status_in": [
+          403,
+          404
+        ]
+      },
+      "observation_event": 176,
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "label-delete-absence",
+      "resource": "label",
+      "resource_id": 94,
+      "result": "PASS",
+      "trigger_event": 162
+    },
+    {
+      "expected": {
+        "done": true,
+        "title": "title_79095"
+      },
+      "observation_event": 174,
+      "observed": {
+        "done": true,
+        "title": "title_79095"
+      },
+      "oracle_id": "task-update-persistence",
+      "resource": "task",
+      "resource_id": 344,
+      "result": "PASS",
+      "trigger_event": 163
+    },
+    {
+      "expected": {
+        "status_in": [
+          403,
+          404
+        ]
+      },
+      "observation_event": 177,
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "label-delete-absence",
+      "resource": "label",
+      "resource_id": 95,
+      "result": "PASS",
+      "trigger_event": 165
+    },
+    {
+      "expected": {
+        "done": true,
+        "title": "title_69456"
+      },
+      "observation_event": 173,
+      "observed": {
+        "done": true,
+        "title": "title_69456"
+      },
+      "oracle_id": "task-update-persistence",
+      "resource": "task",
+      "resource_id": 346,
+      "result": "PASS",
+      "trigger_event": 166
+    },
+    {
+      "expected": {
+        "done": true,
+        "title": "title_66766"
+      },
+      "observation_event": 179,
+      "observed": {
+        "done": true,
+        "title": "title_66766"
+      },
+      "oracle_id": "task-update-persistence",
+      "resource": "task",
+      "resource_id": 347,
+      "result": "PASS",
+      "trigger_event": 167
+    },
+    {
+      "expected": {
+        "done": true,
+        "title": "title_982"
+      },
+      "observation_event": 175,
+      "observed": {
+        "done": true,
+        "title": "title_982"
+      },
+      "oracle_id": "task-update-persistence",
+      "resource": "task",
+      "resource_id": 342,
+      "result": "PASS",
+      "trigger_event": 168
+    },
+    {
+      "expected": {
+        "done": true,
+        "title": "title_55281"
+      },
+      "observation_event": 180,
+      "observed": {
+        "done": true,
+        "title": "title_55281"
+      },
+      "oracle_id": "task-update-persistence",
+      "resource": "task",
+      "resource_id": 345,
+      "result": "PASS",
+      "trigger_event": 169
+    },
+    {
+      "expected": {
+        "status_in": [
+          403,
+          404
+        ]
+      },
+      "observation_event": 181,
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "label-delete-absence",
+      "resource": "label",
+      "resource_id": 93,
+      "result": "PASS",
+      "trigger_event": 170
+    },
+    {
+      "expected": {
+        "status_in": [
+          404
+        ]
+      },
+      "observation_event": 198,
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "task-delete-absence",
+      "resource": "task",
+      "resource_id": 343,
+      "result": "PASS",
+      "trigger_event": 190
+    },
+    {
+      "expected": {
+        "status_in": [
+          404
+        ]
+      },
+      "observation_event": 199,
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "task-delete-absence",
+      "resource": "task",
+      "resource_id": 346,
+      "result": "PASS",
+      "trigger_event": 191
+    },
+    {
+      "expected": {
+        "status_in": [
+          404
+        ]
+      },
+      "observation_event": 200,
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "task-delete-absence",
+      "resource": "task",
+      "resource_id": 345,
+      "result": "PASS",
+      "trigger_event": 192
+    },
+    {
+      "expected": {
+        "status_in": [
+          404
+        ]
+      },
+      "observation_event": 214,
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "task-delete-absence",
+      "resource": "task",
+      "resource_id": 342,
+      "result": "PASS",
+      "trigger_event": 193
+    },
+    {
+      "expected": {
+        "status_in": [
+          404
+        ]
+      },
+      "observation_event": 197,
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "task-delete-absence",
+      "resource": "task",
+      "resource_id": 344,
+      "result": "PASS",
+      "trigger_event": 194
+    },
+    {
+      "expected": {
+        "status_in": [
+          404
+        ]
+      },
+      "observation_event": 202,
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "task-delete-absence",
+      "resource": "task",
+      "resource_id": 347,
+      "result": "PASS",
+      "trigger_event": 195
+    },
+    {
+      "expected": {
+        "status_in": [
+          404
+        ]
+      },
+      "observation_event": 222,
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "project-delete-absence",
+      "resource": "project",
+      "resource_id": 61,
+      "result": "PASS",
+      "trigger_event": 217
+    }
+  ]
+}

@@ -1,0 +1,594 @@
+{
+  "creation_order": [
+    "admin/realms",
+    "admin/realms/{realm}/authentication/config",
+    "admin/realms/{realm}/authentication/flows",
+    "admin/realms/{realm}/client-scopes",
+    "admin/realms/{realm}/clients",
+    "admin/realms/{realm}/components",
+    "admin/realms/{realm}/groups",
+    "admin/realms/{realm}/identity-provider/instances",
+    "admin/realms/{realm}/organizations",
+    "admin/realms/{realm}/roles",
+    "admin/realms/{realm}/users",
+    "admin/realms/{realm}/workflows",
+    "admin/realms/{realm}/authentication/executions",
+    "admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/models",
+    "admin/realms/{realm}/client-templates",
+    "admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/resource",
+    "admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/scope",
+    "admin/realms/{realm}/clients/{client-uuid}/protocol-mappers/models",
+    "admin/realms/{realm}/clients/{client-uuid}/roles",
+    "admin/realms/{realm}/identity-provider/instances/{alias}/mappers",
+    "admin/realms/{realm}/organizations/{org-id}/groups",
+    "admin/realms/{realm}/organizations/{org-id}/identity-providers",
+    "admin/realms/{realm}/organizations/{org-id}/members",
+    "admin/realms/{realm}/authentication/executions/{executionId}/config",
+    "admin/realms/{realm}/client-templates/{client-scope-id}/protocol-mappers/models"
+  ],
+  "cycle_edges_removed": [],
+  "deletion_order": [
+    "admin/realms/{realm}/client-templates/{client-scope-id}/protocol-mappers/models",
+    "admin/realms/{realm}/authentication/executions/{executionId}/config",
+    "admin/realms/{realm}/organizations/{org-id}/members",
+    "admin/realms/{realm}/organizations/{org-id}/identity-providers",
+    "admin/realms/{realm}/organizations/{org-id}/groups",
+    "admin/realms/{realm}/identity-provider/instances/{alias}/mappers",
+    "admin/realms/{realm}/clients/{client-uuid}/roles",
+    "admin/realms/{realm}/clients/{client-uuid}/protocol-mappers/models",
+    "admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/scope",
+    "admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/resource",
+    "admin/realms/{realm}/client-templates",
+    "admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/models",
+    "admin/realms/{realm}/authentication/executions",
+    "admin/realms/{realm}/workflows",
+    "admin/realms/{realm}/users",
+    "admin/realms/{realm}/roles",
+    "admin/realms/{realm}/organizations",
+    "admin/realms/{realm}/identity-provider/instances",
+    "admin/realms/{realm}/groups",
+    "admin/realms/{realm}/components",
+    "admin/realms/{realm}/clients",
+    "admin/realms/{realm}/client-scopes",
+    "admin/realms/{realm}/authentication/flows",
+    "admin/realms/{realm}/authentication/config",
+    "admin/realms"
+  ],
+  "edges": [
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/authentication/config' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/authentication/config",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/authentication/config",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.9,
+      "field_name": "flowId",
+      "provenance": [
+        {
+          "detail": "Create request body property 'flowId' matches entity 'admin/realms/{realm}/authentication/flows'",
+          "pointer": "#/paths/~1admin~1realms~1{realm}~1authentication~1executions/post/requestBody/content/application~1json/properties/flowId",
+          "rule": "D2:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "admin/realms/{realm}/authentication/executions",
+      "target": "admin/realms/{realm}/authentication/flows"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/authentication/executions' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/authentication/executions",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/authentication/executions",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/authentication/executions/{executionId}/config' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/authentication/executions/{executionId}/config",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/authentication/executions/{executionId}/config",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "executionId",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/authentication/executions/{executionId}/config' is nested under '/admin/realms/{realm}/authentication/executions/{executionId}'",
+          "pointer": "/admin/realms/{realm}/authentication/executions/{executionId}/config",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/authentication/executions/{executionId}/config",
+      "target": "admin/realms/{realm}/authentication/executions"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/authentication/flows' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/authentication/flows",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/authentication/flows",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/client-scopes' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/client-scopes",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/client-scopes",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/models' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/models",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/models",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "client-scope-id",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/models' is nested under '/admin/realms/{realm}/client-scopes/{client-scope-id}'",
+          "pointer": "/admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/models",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/models",
+      "target": "admin/realms/{realm}/client-scopes"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "client-scope-id",
+      "provenance": [
+        {
+          "detail": "Composite key parameter 'client-scope-id' in /admin/realms/{realm}/client-templates/{client-scope-id} matches entity 'admin/realms/{realm}/client-scopes'",
+          "pointer": "/admin/realms/{realm}/client-templates/{client-scope-id}",
+          "rule": "D1:D2:id_suffix_name_match"
+        }
+      ],
+      "source": "admin/realms/{realm}/client-templates",
+      "target": "admin/realms/{realm}/client-scopes"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/client-templates' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/client-templates",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/client-templates",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/client-templates/{client-scope-id}/protocol-mappers/models' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/client-templates/{client-scope-id}/protocol-mappers/models",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/client-templates/{client-scope-id}/protocol-mappers/models",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "client-scope-id",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/client-templates/{client-scope-id}/protocol-mappers/models' is nested under '/admin/realms/{realm}/client-templates/{client-scope-id}'",
+          "pointer": "/admin/realms/{realm}/client-templates/{client-scope-id}/protocol-mappers/models",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/client-templates/{client-scope-id}/protocol-mappers/models",
+      "target": "admin/realms/{realm}/client-templates"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/clients' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/clients",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/clients",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/resource' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/resource",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/resource",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "client-uuid",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/resource' is nested under '/admin/realms/{realm}/clients/{client-uuid}'",
+          "pointer": "/admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/resource",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/resource",
+      "target": "admin/realms/{realm}/clients"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/scope' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/scope",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/scope",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "client-uuid",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/scope' is nested under '/admin/realms/{realm}/clients/{client-uuid}'",
+          "pointer": "/admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/scope",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/scope",
+      "target": "admin/realms/{realm}/clients"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/clients/{client-uuid}/protocol-mappers/models' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/clients/{client-uuid}/protocol-mappers/models",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/clients/{client-uuid}/protocol-mappers/models",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "client-uuid",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/clients/{client-uuid}/protocol-mappers/models' is nested under '/admin/realms/{realm}/clients/{client-uuid}'",
+          "pointer": "/admin/realms/{realm}/clients/{client-uuid}/protocol-mappers/models",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/clients/{client-uuid}/protocol-mappers/models",
+      "target": "admin/realms/{realm}/clients"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/clients/{client-uuid}/roles' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/clients/{client-uuid}/roles",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/clients/{client-uuid}/roles",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "client-uuid",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/clients/{client-uuid}/roles' is nested under '/admin/realms/{realm}/clients/{client-uuid}'",
+          "pointer": "/admin/realms/{realm}/clients/{client-uuid}/roles",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/clients/{client-uuid}/roles",
+      "target": "admin/realms/{realm}/clients"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/components' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/components",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/components",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/groups' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/groups",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/groups",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/identity-provider/instances' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/identity-provider/instances",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/identity-provider/instances",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/identity-provider/instances/{alias}/mappers' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/identity-provider/instances/{alias}/mappers",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/identity-provider/instances/{alias}/mappers",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "alias",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/identity-provider/instances/{alias}/mappers' is nested under '/admin/realms/{realm}/identity-provider/instances/{alias}'",
+          "pointer": "/admin/realms/{realm}/identity-provider/instances/{alias}/mappers",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/identity-provider/instances/{alias}/mappers",
+      "target": "admin/realms/{realm}/identity-provider/instances"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/organizations' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/organizations",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/organizations",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/organizations/{org-id}/groups' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/organizations/{org-id}/groups",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/organizations/{org-id}/groups",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "org-id",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/organizations/{org-id}/groups' is nested under '/admin/realms/{realm}/organizations/{org-id}'",
+          "pointer": "/admin/realms/{realm}/organizations/{org-id}/groups",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/organizations/{org-id}/groups",
+      "target": "admin/realms/{realm}/organizations"
+    },
+    {
+      "confidence": 0.92,
+      "field_name": "alias",
+      "provenance": [
+        {
+          "detail": "Create body explicitly requests the identifier of existing entity 'admin/realms/{realm}/identity-provider/instances'",
+          "pointer": "#/paths/~1admin~1realms~1{realm}~1organizations~1{org-id}~1identity-providers/post/requestBody/description",
+          "rule": "D5:primitive_association_id_description"
+        }
+      ],
+      "source": "admin/realms/{realm}/organizations/{org-id}/identity-providers",
+      "target": "admin/realms/{realm}/identity-provider/instances"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/organizations/{org-id}/identity-providers' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/organizations/{org-id}/identity-providers",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/organizations/{org-id}/identity-providers",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "org-id",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/organizations/{org-id}/identity-providers' is nested under '/admin/realms/{realm}/organizations/{org-id}'",
+          "pointer": "/admin/realms/{realm}/organizations/{org-id}/identity-providers",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/organizations/{org-id}/identity-providers",
+      "target": "admin/realms/{realm}/organizations"
+    },
+    {
+      "confidence": 0.92,
+      "field_name": "user-id",
+      "provenance": [
+        {
+          "detail": "Create body explicitly requests the identifier of existing entity 'admin/realms/{realm}/users'",
+          "pointer": "#/paths/~1admin~1realms~1{realm}~1organizations~1{org-id}~1members/post/requestBody/description",
+          "rule": "D5:primitive_association_id_description"
+        }
+      ],
+      "source": "admin/realms/{realm}/organizations/{org-id}/members",
+      "target": "admin/realms/{realm}/users"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/organizations/{org-id}/members' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/organizations/{org-id}/members",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/organizations/{org-id}/members",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "org-id",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/organizations/{org-id}/members' is nested under '/admin/realms/{realm}/organizations/{org-id}'",
+          "pointer": "/admin/realms/{realm}/organizations/{org-id}/members",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/organizations/{org-id}/members",
+      "target": "admin/realms/{realm}/organizations"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/roles' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/roles",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/roles",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/users' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/users",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/users",
+      "target": "admin/realms"
+    },
+    {
+      "confidence": 0.95,
+      "field_name": "realm",
+      "provenance": [
+        {
+          "detail": "Collection path '/admin/realms/{realm}/workflows' is nested under '/admin/realms/{realm}'",
+          "pointer": "/admin/realms/{realm}/workflows",
+          "rule": "D3:nested_resource_path"
+        }
+      ],
+      "source": "admin/realms/{realm}/workflows",
+      "target": "admin/realms"
+    }
+  ],
+  "had_cycle": false,
+  "nodes": [
+    "admin/realms",
+    "admin/realms/{realm}/authentication/config",
+    "admin/realms/{realm}/authentication/executions",
+    "admin/realms/{realm}/authentication/executions/{executionId}/config",
+    "admin/realms/{realm}/authentication/flows",
+    "admin/realms/{realm}/client-scopes",
+    "admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/models",
+    "admin/realms/{realm}/client-templates",
+    "admin/realms/{realm}/client-templates/{client-scope-id}/protocol-mappers/models",
+    "admin/realms/{realm}/clients",
+    "admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/resource",
+    "admin/realms/{realm}/clients/{client-uuid}/authz/resource-server/scope",
+    "admin/realms/{realm}/clients/{client-uuid}/protocol-mappers/models",
+    "admin/realms/{realm}/clients/{client-uuid}/roles",
+    "admin/realms/{realm}/components",
+    "admin/realms/{realm}/groups",
+    "admin/realms/{realm}/identity-provider/instances",
+    "admin/realms/{realm}/identity-provider/instances/{alias}/mappers",
+    "admin/realms/{realm}/organizations",
+    "admin/realms/{realm}/organizations/{org-id}/groups",
+    "admin/realms/{realm}/organizations/{org-id}/identity-providers",
+    "admin/realms/{realm}/organizations/{org-id}/members",
+    "admin/realms/{realm}/roles",
+    "admin/realms/{realm}/users",
+    "admin/realms/{realm}/workflows"
+  ]
+}

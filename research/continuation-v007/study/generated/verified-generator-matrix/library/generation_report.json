@@ -1,0 +1,526 @@
+{
+  "coverage": {
+    "covered_operations": 13,
+    "total_operations": 13,
+    "uncovered_operations": []
+  },
+  "entities": [
+    {
+      "collection_path": "/users",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "User",
+      "item_path": "/users/{id}",
+      "key": "users",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/users/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/users/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listUsers",
+          "kind": "list",
+          "method": "GET",
+          "path": "/users",
+          "source_pointer": "#/paths/~1users/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createUser",
+          "kind": "create",
+          "method": "POST",
+          "path": "/users",
+          "source_pointer": "#/paths/~1users/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "deleteUser",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/users/{id}",
+          "source_pointer": "#/paths/~1users~1{id}/delete",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Users",
+      "provenance": [
+        {
+          "detail": "List operation GET /users response 200 references User",
+          "pointer": "#/paths/~1users/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "User"
+    },
+    {
+      "collection_path": "/books",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [],
+      "display_name": "Book",
+      "item_path": "/books/{id}",
+      "key": "books",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/books/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/books/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listBooks",
+          "kind": "list",
+          "method": "GET",
+          "path": "/books",
+          "source_pointer": "#/paths/~1books/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createBook",
+          "kind": "create",
+          "method": "POST",
+          "path": "/books",
+          "source_pointer": "#/paths/~1books/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            400,
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "deleteBook",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/books/{id}",
+          "source_pointer": "#/paths/~1books~1{id}/delete",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "getBook",
+          "kind": "get",
+          "method": "GET",
+          "path": "/books/{id}",
+          "source_pointer": "#/paths/~1books~1{id}/get",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Books",
+      "provenance": [
+        {
+          "detail": "List operation GET /books response 200 references Book",
+          "pointer": "#/paths/~1books/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Book"
+    },
+    {
+      "collection_path": "/loans",
+      "composite_key": true,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.95,
+          "field_name": "bookId",
+          "provenance": [
+            {
+              "detail": "Composite key parameter 'bookId' in /loans/{userId}/{bookId} matches entity 'books'",
+              "pointer": "/loans/{userId}/{bookId}",
+              "rule": "D1:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "books"
+        },
+        {
+          "confidence": 0.95,
+          "field_name": "userId",
+          "provenance": [
+            {
+              "detail": "Composite key parameter 'userId' in /loans/{userId}/{bookId} matches entity 'users'",
+              "pointer": "/loans/{userId}/{bookId}",
+              "rule": "D1:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "users"
+        }
+      ],
+      "display_name": "Loan",
+      "item_path": "/loans/{userId}/{bookId}",
+      "key": "loans",
+      "key_confidence": 0.85,
+      "key_fields": [
+        "userId",
+        "bookId"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Key field(s) derived from item path parameters: ['userId', 'bookId']",
+          "pointer": "/loans/{userId}/{bookId}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listLoans",
+          "kind": "list",
+          "method": "GET",
+          "path": "/loans",
+          "source_pointer": "#/paths/~1loans/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [
+            400
+          ],
+          "has_default_response": false,
+          "js_function": "createLoan",
+          "kind": "create",
+          "method": "POST",
+          "path": "/loans",
+          "source_pointer": "#/paths/~1loans/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [
+            404
+          ],
+          "has_default_response": false,
+          "js_function": "deleteLoan",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/loans/{userId}/{bookId}",
+          "source_pointer": "#/paths/~1loans~1{userId}~1{bookId}/delete",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Loans",
+      "provenance": [
+        {
+          "detail": "List operation GET /loans response 200 references Loan",
+          "pointer": "#/paths/~1loans/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Loan"
+    },
+    {
+      "collection_path": "/holds",
+      "composite_key": false,
+      "confidence": 1.0,
+      "dependencies": [
+        {
+          "confidence": 0.9,
+          "field_name": "bookId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'bookId' matches entity 'books'",
+              "pointer": "#/paths/~1holds/post/requestBody/content/application~1json/properties/bookId",
+              "rule": "D2:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "books"
+        },
+        {
+          "confidence": 0.9,
+          "field_name": "userId",
+          "provenance": [
+            {
+              "detail": "Create request body property 'userId' matches entity 'users'",
+              "pointer": "#/paths/~1holds/post/requestBody/content/application~1json/properties/userId",
+              "rule": "D2:D2:id_suffix_name_match"
+            }
+          ],
+          "target": "users"
+        }
+      ],
+      "display_name": "Hold",
+      "item_path": "/holds/{id}",
+      "key": "holds",
+      "key_confidence": 0.7,
+      "key_fields": [
+        "id"
+      ],
+      "key_provenance": [
+        {
+          "detail": "Path parameter 'id' has no matching schema property; using path evidence only",
+          "pointer": "/holds/{id}",
+          "rule": "K1:path_parameter_only"
+        },
+        {
+          "detail": "Key field(s) derived from item path parameters: ['id']",
+          "pointer": "/holds/{id}",
+          "rule": "K1/K2:item_path_parameters"
+        }
+      ],
+      "operations": [
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "listHolds",
+          "kind": "list",
+          "method": "GET",
+          "path": "/holds",
+          "source_pointer": "#/paths/~1holds/get",
+          "success_codes": [
+            200
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "createHold",
+          "kind": "create",
+          "method": "POST",
+          "path": "/holds",
+          "source_pointer": "#/paths/~1holds/post",
+          "success_codes": [
+            201
+          ]
+        },
+        {
+          "error_codes": [],
+          "has_default_response": false,
+          "js_function": "deleteHold",
+          "kind": "delete",
+          "method": "DELETE",
+          "path": "/holds/{id}",
+          "source_pointer": "#/paths/~1holds~1{id}/delete",
+          "success_codes": [
+            200
+          ]
+        }
+      ],
+      "plural_display_name": "Holds",
+      "provenance": [
+        {
+          "detail": "List operation GET /holds response 200 references Hold",
+          "pointer": "#/paths/~1holds/get/responses/200",
+          "rule": "E3b:list_response_schema"
+        }
+      ],
+      "schema_name": "Hold"
+    }
+  ],
+  "isolation_audit": {
+    "denied_file_count": 0,
+    "policy": "allow-listed OpenAPI/config inputs only; environment-specific paths excluded from deterministic report"
+  },
+  "meta": {
+    "cli_args": {
+      "base_url": "http://127.0.0.1:5000",
+      "command": "generate",
+      "generator_version": "0.25.5",
+      "instances_per_action": 1,
+      "instances_per_entity": 2,
+      "name": "library",
+      "seed": 1,
+      "source_openapi_sha256": "965b2c8aac14485b8fa7bafb139e507c918240e71315246e1b817d8590089448",
+      "story_profile": "full"
+    },
+    "openapi_version": "3.0.3",
+    "title": "Library SUT (Corrected)"
+  },
+  "reproducibility": {
+    "artifact_sha256": {
+      "dependency_graph_json": "3bcbfff645639de92a866dbe6c37e2a5697a75615ed6fb8e45c1c8bcc07f86a9",
+      "interfaces_js": "cc1afbd0eb9fc5a1d5245d39874a3e91dce66fa6bff9199b5c1e3dac8bdbea47",
+      "stories_js": "3850489035a3627e7768c79a372f4f208615ed0c8e09b4947c9bb4502661bd16"
+    },
+    "base_url": "http://127.0.0.1:5000",
+    "content_fingerprint_sha256": "5430e9dde6c602a1d5f8fd30a27f037228ecb7c522000c50cf794c0b79f74106",
+    "generator_version": "0.25.5",
+    "instances_per_action": 1,
+    "instances_per_entity": 2,
+    "scope": "semantic inputs and generated artifacts; filesystem paths and run-time ports are excluded",
+    "seed": 1,
+    "source_openapi_sha256": "965b2c8aac14485b8fa7bafb139e507c918240e71315246e1b817d8590089448"
+  },
+  "response_code_coverage": [
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/users"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/users"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404",
+        "400"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/users/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/books"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/books"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/books/{id}"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404",
+        "400"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/books/{id}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/loans"
+    },
+    {
+      "declared_codes": [
+        "201",
+        "400"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/loans"
+    },
+    {
+      "declared_codes": [
+        "200",
+        "404"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/loans/{userId}/{bookId}"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "GET",
+      "path": "/holds"
+    },
+    {
+      "declared_codes": [
+        "201"
+      ],
+      "has_default": false,
+      "method": "POST",
+      "path": "/holds"
+    },
+    {
+      "declared_codes": [
+        "200"
+      ],
+      "has_default": false,
+      "method": "DELETE",
+      "path": "/holds/{id}"
+    }
+  ],
+  "security_schemes": {},
+  "standalone_operations": [],
+  "unsupported_constructs": {
+    "ambiguities": [
+      "Key inference for entity 'users' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'books' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema.",
+      "Key inference for entity 'holds' has reduced confidence (0.7); path parameter(s) ['id'] could not be fully cross-validated against the schema."
+    ],
+    "document_level": [],
+    "remote_refs": []
+  },
+  "warnings": []
+}

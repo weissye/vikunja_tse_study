@@ -1,0 +1,349 @@
+﻿{
+    "seed":  20261704,
+    "container":  "fse_album_immich_server",
+    "since_utc":  "2026-09-27T04:24:56Z",
+    "until_utc":  "2026-09-27T04:25:28Z",
+    "overlap_scenarios":  [
+                              "cross-method::update-delete::updateSharedLink::removeSharedLink",
+                              "cross-method::update-delete::updateAlbumInfo::deleteAlbum"
+                          ],
+    "witnesses":  [
+                      {
+                          "oracle_id":  "cross-method::update-delete::updateAlbumInfo::deleteAlbum",
+                          "epoch_id":  "generated-epoch-0",
+                          "result":  "INCONCLUSIVE",
+                          "reason":  "empirical-controls-not-proven",
+                          "server_error_candidate":  {
+                                                         "basis":  "both-serial-orders-valid-and-overlapping-update-returned-5xx",
+                                                         "classification":  "SERVER_ERROR_CANDIDATE",
+                                                         "event_index":  81,
+                                                         "operation_id":  "updateAlbumInfo",
+                                                         "status":  500
+                                                     }
+                      },
+                      {
+                          "oracle_id":  "cross-method::update-delete::updateSharedLink::removeSharedLink",
+                          "epoch_id":  "generated-epoch-1",
+                          "result":  "INCONCLUSIVE",
+                          "reason":  "empirical-controls-not-proven",
+                          "server_error_candidate":  {
+                                                         "basis":  "both-serial-orders-valid-and-overlapping-update-returned-5xx",
+                                                         "classification":  "SERVER_ERROR_CANDIDATE",
+                                                         "event_index":  67,
+                                                         "operation_id":  "updateSharedLink",
+                                                         "status":  500
+                                                     }
+                      }
+                  ],
+    "relevant_http_events":  [
+                                 {
+                                     "epoch_id":  "cross-baseline-1-0",
+                                     "method":  "GET",
+                                     "model_path":  "/shared-links/62f68034-c1ce-4576-9e88-b22e23268a73",
+                                     "operation_id":  "cross-baseline-1-0-observe",
+                                     "request_id":  null,
+                                     "status":  200,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:10.079002+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:10.108766+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-baseline-1-1",
+                                     "method":  "GET",
+                                     "model_path":  "/shared-links/9397a9b6-bcc0-4948-b137-9caaf3500ad8",
+                                     "operation_id":  "cross-baseline-1-1-observe",
+                                     "request_id":  null,
+                                     "status":  200,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:10.210640+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:10.249346+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-baseline-1-2",
+                                     "method":  "GET",
+                                     "model_path":  "/shared-links/44d31e58-c67c-4de7-99e0-d05e9cc328fe",
+                                     "operation_id":  "cross-baseline-1-2-observe",
+                                     "request_id":  null,
+                                     "status":  200,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:10.423458+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:10.462093+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-a-1",
+                                     "method":  "PATCH",
+                                     "model_path":  "/shared-links/62f68034-c1ce-4576-9e88-b22e23268a73",
+                                     "operation_id":  "cross-control-a-1-op-0",
+                                     "request_id":  null,
+                                     "status":  200,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:10.565457+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:10.607052+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-a-1",
+                                     "method":  "GET",
+                                     "model_path":  "/shared-links/62f68034-c1ce-4576-9e88-b22e23268a73",
+                                     "operation_id":  "cross-control-a-1-read-0",
+                                     "request_id":  null,
+                                     "status":  200,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:10.709941+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:10.741941+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-a-1",
+                                     "method":  "DELETE",
+                                     "model_path":  "/shared-links/62f68034-c1ce-4576-9e88-b22e23268a73",
+                                     "operation_id":  "cross-control-a-1-op-1",
+                                     "request_id":  null,
+                                     "status":  204,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:10.843018+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:10.871188+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-a-1",
+                                     "method":  "GET",
+                                     "model_path":  "/shared-links/62f68034-c1ce-4576-9e88-b22e23268a73",
+                                     "operation_id":  "cross-control-a-1-read-1",
+                                     "request_id":  null,
+                                     "status":  400,
+                                     "response_message":  "Shared link not found",
+                                     "upstream_started_utc":  "2026-09-27T04:25:10.968641+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:10.999235+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-b-1",
+                                     "method":  "DELETE",
+                                     "model_path":  "/shared-links/9397a9b6-bcc0-4948-b137-9caaf3500ad8",
+                                     "operation_id":  "cross-control-b-1-op-0",
+                                     "request_id":  null,
+                                     "status":  204,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:11.106175+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:11.175460+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-b-1",
+                                     "method":  "GET",
+                                     "model_path":  "/shared-links/9397a9b6-bcc0-4948-b137-9caaf3500ad8",
+                                     "operation_id":  "cross-control-b-1-read-0",
+                                     "request_id":  null,
+                                     "status":  400,
+                                     "response_message":  "Shared link not found",
+                                     "upstream_started_utc":  "2026-09-27T04:25:11.284698+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:11.305882+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-b-1",
+                                     "method":  "PATCH",
+                                     "model_path":  "/shared-links/9397a9b6-bcc0-4948-b137-9caaf3500ad8",
+                                     "operation_id":  "cross-control-b-1-op-1",
+                                     "request_id":  null,
+                                     "status":  400,
+                                     "response_message":  "Shared link not found",
+                                     "upstream_started_utc":  "2026-09-27T04:25:11.404219+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:11.434782+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-b-1",
+                                     "method":  "GET",
+                                     "model_path":  "/shared-links/9397a9b6-bcc0-4948-b137-9caaf3500ad8",
+                                     "operation_id":  "cross-control-b-1-read-1",
+                                     "request_id":  null,
+                                     "status":  400,
+                                     "response_message":  "Shared link not found",
+                                     "upstream_started_utc":  "2026-09-27T04:25:11.540184+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:11.548246+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "generated-epoch-1",
+                                     "method":  "DELETE",
+                                     "model_path":  "/shared-links/44d31e58-c67c-4de7-99e0-d05e9cc328fe",
+                                     "operation_id":  "generated-epoch-1-op-1",
+                                     "request_id":  "eea788a6-34b5-49fe-b611-119dc53b1dfb",
+                                     "status":  204,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:11.702468+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:11.715912+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "generated-epoch-1",
+                                     "method":  "PATCH",
+                                     "model_path":  "/shared-links/44d31e58-c67c-4de7-99e0-d05e9cc328fe",
+                                     "operation_id":  "generated-epoch-1-op-0",
+                                     "request_id":  "c6ed792d-01fa-44ea-a5e7-ee33991e3523",
+                                     "status":  500,
+                                     "response_message":  "Failed to update shared link",
+                                     "upstream_started_utc":  "2026-09-27T04:25:11.702468+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:11.716447+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "generated-epoch-1",
+                                     "method":  "GET",
+                                     "model_path":  "/shared-links/44d31e58-c67c-4de7-99e0-d05e9cc328fe",
+                                     "operation_id":  "generated-epoch-1-observe",
+                                     "request_id":  null,
+                                     "status":  400,
+                                     "response_message":  "Shared link not found",
+                                     "upstream_started_utc":  "2026-09-27T04:25:11.991374+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:12.024792+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-baseline-0-0",
+                                     "method":  "GET",
+                                     "model_path":  "/albums/a30d2d8d-8d1a-43a3-8dd6-40ffcb3fa3b0",
+                                     "operation_id":  "cross-baseline-0-0-observe",
+                                     "request_id":  null,
+                                     "status":  200,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:12.552902+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:12.572180+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-baseline-0-1",
+                                     "method":  "GET",
+                                     "model_path":  "/albums/213bceaa-cb4b-4f70-a38c-c5332d788a4b",
+                                     "operation_id":  "cross-baseline-0-1-observe",
+                                     "request_id":  null,
+                                     "status":  200,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:12.668150+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:12.701656+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-baseline-0-2",
+                                     "method":  "GET",
+                                     "model_path":  "/albums/bbedf5f7-cd4d-47c7-9e26-f418fa377e81",
+                                     "operation_id":  "cross-baseline-0-2-observe",
+                                     "request_id":  null,
+                                     "status":  200,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:12.797541+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:12.817863+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-a-0",
+                                     "method":  "PATCH",
+                                     "model_path":  "/albums/a30d2d8d-8d1a-43a3-8dd6-40ffcb3fa3b0",
+                                     "operation_id":  "cross-control-a-0-op-0",
+                                     "request_id":  null,
+                                     "status":  200,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:12.911570+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:12.954669+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-a-0",
+                                     "method":  "GET",
+                                     "model_path":  "/albums/a30d2d8d-8d1a-43a3-8dd6-40ffcb3fa3b0",
+                                     "operation_id":  "cross-control-a-0-read-0",
+                                     "request_id":  null,
+                                     "status":  200,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:13.054421+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:13.075569+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-a-0",
+                                     "method":  "DELETE",
+                                     "model_path":  "/albums/a30d2d8d-8d1a-43a3-8dd6-40ffcb3fa3b0",
+                                     "operation_id":  "cross-control-a-0-op-1",
+                                     "request_id":  null,
+                                     "status":  204,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:13.178577+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:13.225780+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-a-0",
+                                     "method":  "GET",
+                                     "model_path":  "/albums/a30d2d8d-8d1a-43a3-8dd6-40ffcb3fa3b0",
+                                     "operation_id":  "cross-control-a-0-read-1",
+                                     "request_id":  null,
+                                     "status":  400,
+                                     "response_message":  "Not found or no album.read access",
+                                     "upstream_started_utc":  "2026-09-27T04:25:13.307535+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:13.341880+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-b-0",
+                                     "method":  "DELETE",
+                                     "model_path":  "/albums/213bceaa-cb4b-4f70-a38c-c5332d788a4b",
+                                     "operation_id":  "cross-control-b-0-op-0",
+                                     "request_id":  null,
+                                     "status":  204,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:13.439561+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:13.464730+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-b-0",
+                                     "method":  "GET",
+                                     "model_path":  "/albums/213bceaa-cb4b-4f70-a38c-c5332d788a4b",
+                                     "operation_id":  "cross-control-b-0-read-0",
+                                     "request_id":  null,
+                                     "status":  400,
+                                     "response_message":  "Not found or no album.read access",
+                                     "upstream_started_utc":  "2026-09-27T04:25:13.567013+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:13.573756+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-b-0",
+                                     "method":  "PATCH",
+                                     "model_path":  "/albums/213bceaa-cb4b-4f70-a38c-c5332d788a4b",
+                                     "operation_id":  "cross-control-b-0-op-1",
+                                     "request_id":  null,
+                                     "status":  400,
+                                     "response_message":  "Not found or no album.update access",
+                                     "upstream_started_utc":  "2026-09-27T04:25:13.661840+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:13.682521+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "cross-control-b-0",
+                                     "method":  "GET",
+                                     "model_path":  "/albums/213bceaa-cb4b-4f70-a38c-c5332d788a4b",
+                                     "operation_id":  "cross-control-b-0-read-1",
+                                     "request_id":  null,
+                                     "status":  400,
+                                     "response_message":  "Not found or no album.read access",
+                                     "upstream_started_utc":  "2026-09-27T04:25:13.779280+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:13.808269+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "generated-epoch-0",
+                                     "method":  "DELETE",
+                                     "model_path":  "/albums/bbedf5f7-cd4d-47c7-9e26-f418fa377e81",
+                                     "operation_id":  "generated-epoch-0-op-1",
+                                     "request_id":  "1e7863af-c622-4d9a-9c5a-8918947c6188",
+                                     "status":  204,
+                                     "response_message":  null,
+                                     "upstream_started_utc":  "2026-09-27T04:25:13.944666+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:13.973210+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "generated-epoch-0",
+                                     "method":  "PATCH",
+                                     "model_path":  "/albums/bbedf5f7-cd4d-47c7-9e26-f418fa377e81",
+                                     "operation_id":  "generated-epoch-0-op-0",
+                                     "request_id":  "3bce98dd-ee81-412d-8924-3e63199fa7fe",
+                                     "status":  500,
+                                     "response_message":  "Failed to update album info",
+                                     "upstream_started_utc":  "2026-09-27T04:25:13.944666+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:13.974664+00:00"
+                                 },
+                                 {
+                                     "epoch_id":  "generated-epoch-0",
+                                     "method":  "GET",
+                                     "model_path":  "/albums/bbedf5f7-cd4d-47c7-9e26-f418fa377e81",
+                                     "operation_id":  "generated-epoch-0-observe",
+                                     "request_id":  null,
+                                     "status":  400,
+                                     "response_message":  "Not found or no album.read access",
+                                     "upstream_started_utc":  "2026-09-27T04:25:14.213948+00:00",
+                                     "upstream_completed_utc":  "2026-09-27T04:25:14.236918+00:00"
+                                 }
+                             ],
+    "docker_log_lines":  152
+}

@@ -1,0 +1,30 @@
+{
+  "source": "preserved Immich seed-20261621 trace 191755_771, reevaluated with newly generated OpenAPI-derived manifest",
+  "run_status": "INCONCLUSIVE",
+  "counts": {
+    "INCONCLUSIVE": 16,
+    "PASS": 48,
+    "VIOLATED": 0
+  },
+  "server_error_candidates": [
+    {
+      "basis": "both-serial-orders-valid-and-overlapping-update-returned-5xx",
+      "classification": "SERVER_ERROR_CANDIDATE",
+      "epoch_id": "generated-epoch-0",
+      "event_index": 73,
+      "operation_id": "updateAlbumInfo",
+      "oracle_id": "cross-method::update-delete::updateAlbumInfo::deleteAlbum",
+      "status": 500
+    },
+    {
+      "basis": "both-serial-orders-valid-and-overlapping-update-returned-5xx",
+      "classification": "SERVER_ERROR_CANDIDATE",
+      "epoch_id": "generated-epoch-1",
+      "event_index": 59,
+      "operation_id": "updateSharedLink",
+      "oracle_id": "cross-method::update-delete::updateSharedLink::removeSharedLink",
+      "status": 500
+    }
+  ],
+  "note": "Offline evaluation, no new API traffic. New manifest was generated from pinned full Immich spec; recorded campaign used projected session-stable spec, so this replay validates the applicable cross-method oracle but is not a byte-identical full-campaign reproduction."
+}

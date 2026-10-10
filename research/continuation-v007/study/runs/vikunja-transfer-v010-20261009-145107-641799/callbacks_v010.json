@@ -1,0 +1,184 @@
+[
+  {
+    "step": "team/0/create",
+    "status": 201,
+    "phase": "prefix",
+    "id": 1,
+    "value": "sbt_8b01b7f05c_team_0_0",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "project/0/create",
+    "status": 201,
+    "phase": "prefix",
+    "id": 80,
+    "value": "sbt_8b01b7f05c_project_0_0",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "label/0/create",
+    "status": 201,
+    "phase": "prefix",
+    "id": 127,
+    "value": "sbt_8b01b7f05c_label_0_0",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "team/0/create_read",
+    "status": 200,
+    "phase": "prefix",
+    "id": 1,
+    "value": "sbt_8b01b7f05c_team_0_0",
+    "expected": "sbt_8b01b7f05c_team_0_0",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "label/0/create_read",
+    "status": 200,
+    "phase": "prefix",
+    "id": 127,
+    "value": "sbt_8b01b7f05c_label_0_0",
+    "expected": "sbt_8b01b7f05c_label_0_0",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "project/0/create_read",
+    "status": 200,
+    "phase": "prefix",
+    "id": 80,
+    "value": "sbt_8b01b7f05c_project_0_0",
+    "expected": "sbt_8b01b7f05c_project_0_0",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "task/0/create",
+    "status": 201,
+    "phase": "prefix",
+    "id": 419,
+    "value": "sbt_8b01b7f05c_task_0_0",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "task/0/create_read",
+    "status": 200,
+    "phase": "prefix",
+    "id": 419,
+    "value": "sbt_8b01b7f05c_task_0_0",
+    "expected": "sbt_8b01b7f05c_task_0_0",
+    "parent_checks": [
+      {
+        "field": "project_id",
+        "expected": 80,
+        "observed": 80,
+        "verdict": "PASS"
+      }
+    ],
+    "parent_verdict": "PASS",
+    "valid": true
+  },
+  {
+    "step": "project/0/suffix_update",
+    "status": 200,
+    "phase": "suffix",
+    "id": 80,
+    "value": "sbt_8b01b7f05c_project_0_1",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "task/0/suffix_update",
+    "status": 200,
+    "phase": "suffix",
+    "id": 419,
+    "value": "sbt_8b01b7f05c_task_0_1",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "label/0/suffix_update",
+    "status": 200,
+    "phase": "suffix",
+    "id": 127,
+    "value": "sbt_8b01b7f05c_label_0_1",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "team/0/suffix_update",
+    "status": 200,
+    "phase": "suffix",
+    "id": 1,
+    "value": "sbt_8b01b7f05c_team_0_1",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "task/0/suffix_read",
+    "status": 200,
+    "phase": "suffix",
+    "id": 419,
+    "value": "sbt_8b01b7f05c_task_0_1",
+    "expected": "sbt_8b01b7f05c_task_0_1",
+    "parent_checks": [
+      {
+        "field": "project_id",
+        "expected": 80,
+        "observed": 80,
+        "verdict": "PASS"
+      }
+    ],
+    "parent_verdict": "PASS",
+    "valid": true
+  },
+  {
+    "step": "project/0/suffix_read",
+    "status": 200,
+    "phase": "suffix",
+    "id": 80,
+    "value": "sbt_8b01b7f05c_project_0_1",
+    "expected": "sbt_8b01b7f05c_project_0_1",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "team/0/suffix_read",
+    "status": 200,
+    "phase": "suffix",
+    "id": 1,
+    "value": "sbt_8b01b7f05c_team_0_1",
+    "expected": "sbt_8b01b7f05c_team_0_1",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  },
+  {
+    "step": "label/0/suffix_read",
+    "status": 200,
+    "phase": "suffix",
+    "id": 127,
+    "value": "sbt_8b01b7f05c_label_0_1",
+    "expected": "sbt_8b01b7f05c_label_0_1",
+    "parent_checks": [],
+    "parent_verdict": "NOT_APPLICABLE",
+    "valid": true
+  }
+]

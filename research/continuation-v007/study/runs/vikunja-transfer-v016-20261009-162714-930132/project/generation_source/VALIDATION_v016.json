@@ -1,0 +1,68 @@
+{
+  "version": "v016",
+  "unit_tests_passed": 6,
+  "native_fixture_cases": 5,
+  "live_vikunja_v016": "NOT_YET_RUN",
+  "fixtures": {
+    "500": {
+      "fixture_only": true,
+      "real_vikunja_contacted": false,
+      "runner_exit": 1,
+      "runner_status": "NOT_ACCEPTED",
+      "negative_control": true,
+      "callbacks": 116,
+      "negative_checks": 0,
+      "parent_checks": 14,
+      "manifest_files_verified": 11,
+      "secret_excluded": true
+    },
+    "undocumented": {
+      "fixture_only": true,
+      "real_vikunja_contacted": false,
+      "runner_exit": 0,
+      "runner_status": "V016_LIVE_SCHEMA_NEGATIVE_ACCEPTED_WITH_CONTRACT_FINDINGS",
+      "negative_control": false,
+      "callbacks": 172,
+      "negative_checks": 22,
+      "parent_checks": 20,
+      "manifest_files_verified": 11,
+      "secret_excluded": true
+    },
+    "accept": {
+      "fixture_only": true,
+      "real_vikunja_contacted": false,
+      "runner_exit": 1,
+      "runner_status": "NOT_ACCEPTED",
+      "negative_control": true,
+      "callbacks": 120,
+      "negative_checks": 0,
+      "parent_checks": 15,
+      "manifest_files_verified": 11,
+      "secret_excluded": true
+    },
+    "documented": {
+      "fixture_only": true,
+      "real_vikunja_contacted": false,
+      "runner_exit": 0,
+      "runner_status": "V016_LIVE_SCHEMA_NEGATIVE_ACCEPTED",
+      "negative_control": false,
+      "callbacks": 172,
+      "negative_checks": 22,
+      "parent_checks": 20,
+      "manifest_files_verified": 11,
+      "secret_excluded": true
+    },
+    "write": {
+      "fixture_only": true,
+      "real_vikunja_contacted": false,
+      "runner_exit": 1,
+      "runner_status": "NOT_ACCEPTED",
+      "negative_control": true,
+      "callbacks": 120,
+      "negative_checks": 0,
+      "parent_checks": 14,
+      "manifest_files_verified": 11,
+      "secret_excluded": true
+    }
+  }
+}

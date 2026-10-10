@@ -1,0 +1,710 @@
+{
+  "oracles": [
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/drugs/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/drugs/{id}",
+      "oracle_id": "concurrency::same-field-domain::put:/drugs/{id}",
+      "path_template": "/drugs/{id}",
+      "runtime": {
+        "create_operation_id": "post:/drugs",
+        "entity_key": "drugs",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1drugs~1{id}/put",
+        "#/paths/~1drugs~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/drugs/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/drugs/{id}",
+      "oracle_id": "concurrency::same-field::put:/drugs/{id}::id",
+      "path_template": "/drugs/{id}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/drugs",
+        "entity_key": "drugs",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1drugs~1{id}/put",
+        "#/paths/~1drugs~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/drugs/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/drugs/{id}",
+      "oracle_id": "concurrency::same-field::put:/drugs/{id}::name",
+      "path_template": "/drugs/{id}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/drugs",
+        "entity_key": "drugs",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1drugs~1{id}/put",
+        "#/paths/~1drugs~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/patients/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/patients/{id}",
+      "oracle_id": "concurrency::same-field-domain::put:/patients/{id}",
+      "path_template": "/patients/{id}",
+      "runtime": {
+        "create_operation_id": "post:/patients",
+        "entity_key": "patients",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1patients~1{id}/put",
+        "#/paths/~1patients~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/patients/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/patients/{id}",
+      "oracle_id": "concurrency::same-field::put:/patients/{id}::id",
+      "path_template": "/patients/{id}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/patients",
+        "entity_key": "patients",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1patients~1{id}/put",
+        "#/paths/~1patients~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/patients/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/patients/{id}",
+      "oracle_id": "concurrency::same-field::put:/patients/{id}::name",
+      "path_template": "/patients/{id}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        },
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "name",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/patients",
+        "entity_key": "patients",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1patients~1{id}/put",
+        "#/paths/~1patients~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/orders/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/orders/{id}",
+      "oracle_id": "concurrency::same-field-domain::put:/orders/{id}",
+      "path_template": "/orders/{id}",
+      "runtime": {
+        "create_operation_id": "post:/orders",
+        "entity_key": "orders",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1orders~1{id}/put",
+        "#/paths/~1orders~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/orders/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/orders/{id}",
+      "oracle_id": "concurrency::same-field::put:/orders/{id}::id",
+      "path_template": "/orders/{id}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/orders",
+        "entity_key": "orders",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1orders~1{id}/put",
+        "#/paths/~1orders~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/prescriptions/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/prescriptions/{id}",
+      "oracle_id": "concurrency::same-field-domain::put:/prescriptions/{id}",
+      "path_template": "/prescriptions/{id}",
+      "runtime": {
+        "create_operation_id": "post:/prescriptions",
+        "entity_key": "prescriptions",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1prescriptions~1{id}/put",
+        "#/paths/~1prescriptions~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/prescriptions/{id}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/prescriptions/{id}",
+      "oracle_id": "concurrency::same-field::put:/prescriptions/{id}::id",
+      "path_template": "/prescriptions/{id}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "id",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/prescriptions",
+        "entity_key": "prescriptions",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "id": "id"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1prescriptions~1{id}/put",
+        "#/paths/~1prescriptions~1{id}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "eligible_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ndc",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "execution": "generated-schedules-are-bounded-samples; evaluator-covers-any-eligible-field",
+      "kind": "same-field-one-successful-value-visible-domain",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/inventory/{ndc}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/inventory/{ndc}",
+      "oracle_id": "concurrency::same-field-domain::put:/inventory/{ndc}",
+      "path_template": "/inventory/{ndc}",
+      "runtime": {
+        "create_operation_id": "post:/inventory",
+        "entity_key": "inventory",
+        "limitation": "domain-oracle-is-instantiated-by-concrete-generated-schedules",
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "ndc": "ndc"
+        },
+        "ready": false
+      },
+      "source_pointers": [
+        "#/paths/~1inventory~1{ndc}/put",
+        "#/paths/~1inventory~1{ndc}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    },
+    {
+      "execution": "barrier-release-distinct-connections-then-join-and-quiescence",
+      "fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ndc",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "kind": "same-field-one-successful-value-visible",
+      "media_type": "application/json",
+      "method": "PUT",
+      "observation": {
+        "method": "GET",
+        "path_template": "/inventory/{ndc}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "operation_id": "put:/inventory/{ndc}",
+      "oracle_id": "concurrency::same-field::put:/inventory/{ndc}::ndc",
+      "path_template": "/inventory/{ndc}",
+      "request_fields": [
+        {
+          "enum": null,
+          "format": null,
+          "maximum": null,
+          "media_type": "application/json",
+          "minimum": null,
+          "name": "ndc",
+          "source": "openapi-request-schema",
+          "type": "string"
+        }
+      ],
+      "runtime": {
+        "create_operation_id": "post:/inventory",
+        "entity_key": "inventory",
+        "limitation": null,
+        "path_binding_from_create_request_path": {},
+        "path_binding_from_create_response": {
+          "ndc": "ndc"
+        },
+        "ready": true
+      },
+      "source_pointers": [
+        "#/paths/~1inventory~1{ndc}/put",
+        "#/paths/~1inventory~1{ndc}/get"
+      ],
+      "success_statuses": [
+        200
+      ],
+      "width": 2
+    }
+  ],
+  "policy": {
+    "all_operations_receive_contract_verifier": true,
+    "concurrency_executor_role": "transport-and-barrier-only",
+    "decision_owner": "generated-provengo-model-and-oracle-manifest",
+    "external_application_knowledge_allowed": false,
+    "state_claims_require_openapi-derived-observation": true,
+    "unobservable_mutations_are_reported_contract_only": true
+  },
+  "schema_version": 1,
+  "source": {
+    "openapi_version": "3.0.3",
+    "sha256": "778e135d44190b98a07b1d84c315cb6f0ef9b8e9ad78340c3d17a8cbe53dc5ba",
+    "title": "Pharmacy API (Option 3: Idempotent DELETE + Conflict on Duplicates)",
+    "version": "1.2.0"
+  }
+}

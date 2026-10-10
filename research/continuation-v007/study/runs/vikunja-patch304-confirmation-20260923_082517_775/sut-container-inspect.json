@@ -1,0 +1,269 @@
+[
+    {
+        "Id": "966aad2a45466d8e3eeee9ff228fd6bff1a75b3101ce8bf87f8ab23ce60c0663",
+        "Created": "2026-09-22T14:26:29.975157946Z",
+        "Path": "/app/vikunja/vikunja",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 25702,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-09-22T14:26:33.608157197Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:0838aba019fa387e569ff6a535329bc2536b31ae4a21fdc873a9fdc23ccc7f53",
+        "ResolvConfPath": "/var/lib/docker/containers/966aad2a45466d8e3eeee9ff228fd6bff1a75b3101ce8bf87f8ab23ce60c0663/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/966aad2a45466d8e3eeee9ff228fd6bff1a75b3101ce8bf87f8ab23ce60c0663/hostname",
+        "HostsPath": "/var/lib/docker/containers/966aad2a45466d8e3eeee9ff228fd6bff1a75b3101ce8bf87f8ab23ce60c0663/hosts",
+        "LogPath": "/var/lib/docker/containers/966aad2a45466d8e3eeee9ff228fd6bff1a75b3101ce8bf87f8ab23ce60c0663/966aad2a45466d8e3eeee9ff228fd6bff1a75b3101ce8bf87f8ab23ce60c0663-json.log",
+        "Name": "/vikunja-increment8-2-postgres",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "vikunja_increment8_2_default",
+            "PortBindings": {
+                "3456/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "3466"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "unless-stopped",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "volume",
+                    "Source": "vikunja_increment8_2_increment8_2_vikunja_files",
+                    "Target": "/app/vikunja/files",
+                    "VolumeOptions": {}
+                }
+            ],
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/56addfe70b73e9b12e518708d522333be224494eae9f31d05237afa41691e60c-init/diff:/var/lib/docker/overlay2/961b1c1af782292643243668d699fee59b6d81f2558d518764e13bb54558cd02/diff:/var/lib/docker/overlay2/83a5dcb101db49c83fb1fb94356afe15f3bf2db0dd60d0afb02fa4b0030ba113/diff:/var/lib/docker/overlay2/a3c74497f17a35dd938214b2357125fe34f2ae2caab22d18e3c8bebb5af1554c/diff:/var/lib/docker/overlay2/37c390a461a53e7ef5579ab5fee1dd41f845af357d6d0efa46e94bc707cfdc65/diff",
+                "MergedDir": "/var/lib/docker/overlay2/56addfe70b73e9b12e518708d522333be224494eae9f31d05237afa41691e60c/merged",
+                "UpperDir": "/var/lib/docker/overlay2/56addfe70b73e9b12e518708d522333be224494eae9f31d05237afa41691e60c/diff",
+                "WorkDir": "/var/lib/docker/overlay2/56addfe70b73e9b12e518708d522333be224494eae9f31d05237afa41691e60c/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "vikunja_increment8_2_increment8_2_vikunja_files",
+                "Source": "/var/lib/docker/volumes/vikunja_increment8_2_increment8_2_vikunja_files/_data",
+                "Destination": "/app/vikunja/files",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "966aad2a4546",
+            "Domainname": "",
+            "User": "1000",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "3456/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "VIKUNJA_DATABASE_TYPE=postgres",
+                "VIKUNJA_SERVICE_SECRET=FkBIdZowADqApqcTLFu6EF3BFfZZ41DN2FKOAdp1Oqpr8LOBidRmaaiCTRSWJ0gJ",
+                "VIKUNJA_DATABASE_SSLMODE=disable",
+                "VIKUNJA_DATABASE_DATABASE=vikunja",
+                "VIKUNJA_DATABASE_PASSWORD=Zywd8B1jSMh5mrkB7qAPX1x0m930jhxN9U3lDcETqrRTllF8",
+                "VIKUNJA_SERVICE_PUBLICURL=http://localhost:3466/",
+                "VIKUNJA_DATABASE_USER=vikunja",
+                "VIKUNJA_SERVICE_ENABLEREGISTRATION=false",
+                "VIKUNJA_CORS_ENABLE=false",
+                "VIKUNJA_DATABASE_HOST=postgres",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "VIKUNJA_SERVICE_ROOTPATH=/app/vikunja/",
+                "VIKUNJA_DATABASE_PATH=/db/vikunja.db"
+            ],
+            "Cmd": null,
+            "Image": "vikunja/vikunja@sha256:417ada6f94e81f0267aa2f007d0a811fc82d38dd2aa58351e3ea520ca01c2ea5",
+            "Volumes": null,
+            "WorkingDir": "/app/vikunja",
+            "Entrypoint": [
+                "/app/vikunja/vikunja"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "f334856a39a25494241544af47ed5422c3babae1cc1aadfe53c5e17dec8de4b8",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "vikunja-files-init:service_completed_successfully:false,postgres:service_healthy:false",
+                "com.docker.compose.image": "sha256:0838aba019fa387e569ff6a535329bc2536b31ae4a21fdc873a9fdc23ccc7f53",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "vikunja_increment8_2",
+                "com.docker.compose.project.config_files": "C:\\work\\temp\\vikunja_tse_study\\deployment\\increment8_2\\docker-compose.yml",
+                "com.docker.compose.project.environment_file": "C:\\work\\temp\\vikunja_tse_study\\deployment\\increment8_2\\.env",
+                "com.docker.compose.project.working_dir": "C:\\work\\temp\\vikunja_tse_study\\deployment\\increment8_2",
+                "com.docker.compose.service": "vikunja",
+                "com.docker.compose.version": "2.23.3",
+                "org.opencontainers.image.authors": "maintainers@vikunja.io",
+                "org.opencontainers.image.created": "2026-08-31T17:28:26.589Z",
+                "org.opencontainers.image.description": "The task manager you actually own.",
+                "org.opencontainers.image.documentation": "https://vikunja.io/docs",
+                "org.opencontainers.image.licenses": "AGPL-3.0",
+                "org.opencontainers.image.revision": "a4218eeb8fb3ada95e14a2331731524c9120d5bd",
+                "org.opencontainers.image.source": "https://github.com/go-vikunja/vikunja",
+                "org.opencontainers.image.title": "vikunja",
+                "org.opencontainers.image.url": "https://github.com/go-vikunja/vikunja",
+                "org.opencontainers.image.version": "2.6.0"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "4d268a1e24f88843dc44cf9b8da8a61612efbabec12a24a1294b6ba5bd4b2296",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "3456/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "3466"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/4d268a1e24f8",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "vikunja_increment8_2_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "vikunja-increment8-2-postgres",
+                        "vikunja",
+                        "966aad2a4546"
+                    ],
+                    "MacAddress": "02:42:ac:14:00:02",
+                    "NetworkID": "15900fccd0d863ce1e6899493d673bdbfa1b09c5338a8c2f4262b800ee9b0d0f",
+                    "EndpointID": "3f140187381b58edcd088b4f75ea396c02be59d4802966fc94425d2772ab7548",
+                    "Gateway": "172.20.0.1",
+                    "IPAddress": "172.20.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

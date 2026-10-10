@@ -1,0 +1,2622 @@
+{
+  "analysis_version": "v006",
+  "run_version": "v005",
+  "run_status": "NOT_ACCEPTED",
+  "planned_negative_checks": 190,
+  "completed_negative_checks": 61,
+  "unique_completed_negative_checks": 61,
+  "passed_negative_checks": 60,
+  "failed_negative_checks": 1,
+  "negative_status_counts": {
+    "400": 54,
+    "412": 6,
+    "200": 1
+  },
+  "observed_callback_receipts": 202,
+  "coverage_complete": false,
+  "integrity_errors": [],
+  "findings": [
+    {
+      "classifications": [
+        "UNDOCUMENTED_STATUS"
+      ],
+      "evidence": {
+        "evidence_version": 1,
+        "rule_id": "ModelsProject/identifier/MAX_LENGTH",
+        "source_pointer": "#/definitions/models.Project/properties/identifier/maxLength",
+        "rule": {
+          "id": "ModelsProject/identifier/MAX_LENGTH",
+          "resource": "ModelsProject",
+          "field": "identifier",
+          "kind": "MAX_LENGTH",
+          "mutation": "replace",
+          "invalid_value": "xxxxxxxxxxx",
+          "constraint": "maxLength",
+          "declared_constraint": 10,
+          "source_pointer": "#/definitions/models.Project/properties/identifier/maxLength",
+          "schema_pointer": "#/components/schemas/models.Project/properties/identifier/maxLength",
+          "operation": "POST /projects/{id}",
+          "effective_operation": "POST /projects/{id}",
+          "documented_statuses": [
+            "200",
+            "400",
+            "403",
+            "500"
+          ],
+          "compound_constraints": []
+        },
+        "logicalId": "ModelsProject_2",
+        "resource_id": 94,
+        "expected_revision": 1,
+        "readback_status": 200,
+        "request_body": {
+          "background_blur_hash": "",
+          "background_information": null,
+          "created": "2026-10-10T16:49:33Z",
+          "description": "",
+          "hex_color": "",
+          "id": 94,
+          "identifier": "xxxxxxxxxxx",
+          "is_archived": false,
+          "is_favorite": false,
+          "max_permission": null,
+          "owner": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-09T10:27:29Z"
+          },
+          "parent_project_id": 0,
+          "position": 6160384,
+          "title": "sbt-1-ModelsProject-2-title",
+          "updated": "2026-10-10T16:49:33Z",
+          "views": [
+            {
+              "id": 377,
+              "title": "List",
+              "project_id": 94,
+              "view_kind": "list",
+              "filter": {
+                "s": "",
+                "sort_by": null,
+                "order_by": null,
+                "filter": "done = false",
+                "filter_include_nulls": false
+              },
+              "position": 100,
+              "bucket_configuration_mode": "none",
+              "bucket_configuration": null,
+              "default_bucket_id": 0,
+              "done_bucket_id": 0,
+              "updated": "2026-10-10T16:49:33Z",
+              "created": "2026-10-10T16:49:33Z"
+            },
+            {
+              "id": 378,
+              "title": "Gantt",
+              "project_id": 94,
+              "view_kind": "gantt",
+              "filter": null,
+              "position": 200,
+              "bucket_configuration_mode": "none",
+              "bucket_configuration": null,
+              "default_bucket_id": 0,
+              "done_bucket_id": 0,
+              "updated": "2026-10-10T16:49:33Z",
+              "created": "2026-10-10T16:49:33Z"
+            },
+            {
+              "id": 379,
+              "title": "Table",
+              "project_id": 94,
+              "view_kind": "table",
+              "filter": null,
+              "position": 300,
+              "bucket_configuration_mode": "none",
+              "bucket_configuration": null,
+              "default_bucket_id": 0,
+              "done_bucket_id": 0,
+              "updated": "2026-10-10T16:49:33Z",
+              "created": "2026-10-10T16:49:33Z"
+            },
+            {
+              "id": 380,
+              "title": "Kanban",
+              "project_id": 94,
+              "view_kind": "kanban",
+              "filter": null,
+              "position": 400,
+              "bucket_configuration_mode": "manual",
+              "bucket_configuration": null,
+              "default_bucket_id": 283,
+              "done_bucket_id": 285,
+              "updated": "2026-10-10T16:49:33Z",
+              "created": "2026-10-10T16:49:33Z"
+            }
+          ]
+        },
+        "before_projection": {
+          "background_blur_hash": {
+            "present": true,
+            "value": ""
+          },
+          "background_information": {
+            "present": true,
+            "value": null
+          },
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 94
+          },
+          "identifier": {
+            "present": true,
+            "value": ""
+          },
+          "is_archived": {
+            "present": true,
+            "value": false
+          },
+          "is_favorite": {
+            "present": true,
+            "value": false
+          },
+          "max_permission": {
+            "present": true,
+            "value": null
+          },
+          "owner": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "parent_project_id": {
+            "present": true,
+            "value": 0
+          },
+          "position": {
+            "present": true,
+            "value": 6160384
+          },
+          "subscription": {
+            "present": false
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsProject-2-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          },
+          "views": {
+            "present": true,
+            "value": [
+              {
+                "id": 377,
+                "title": "List",
+                "project_id": 94,
+                "view_kind": "list",
+                "filter": {
+                  "s": "",
+                  "sort_by": null,
+                  "order_by": null,
+                  "filter": "done = false",
+                  "filter_include_nulls": false
+                },
+                "position": 100,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              },
+              {
+                "id": 378,
+                "title": "Gantt",
+                "project_id": 94,
+                "view_kind": "gantt",
+                "filter": null,
+                "position": 200,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              },
+              {
+                "id": 379,
+                "title": "Table",
+                "project_id": 94,
+                "view_kind": "table",
+                "filter": null,
+                "position": 300,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              },
+              {
+                "id": 380,
+                "title": "Kanban",
+                "project_id": 94,
+                "view_kind": "kanban",
+                "filter": null,
+                "position": 400,
+                "bucket_configuration_mode": "manual",
+                "bucket_configuration": null,
+                "default_bucket_id": 283,
+                "done_bucket_id": 285,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              }
+            ]
+          }
+        },
+        "after_projection": {
+          "background_blur_hash": {
+            "present": true,
+            "value": ""
+          },
+          "background_information": {
+            "present": true,
+            "value": null
+          },
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 94
+          },
+          "identifier": {
+            "present": true,
+            "value": ""
+          },
+          "is_archived": {
+            "present": true,
+            "value": false
+          },
+          "is_favorite": {
+            "present": true,
+            "value": false
+          },
+          "max_permission": {
+            "present": true,
+            "value": null
+          },
+          "owner": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "parent_project_id": {
+            "present": true,
+            "value": 0
+          },
+          "position": {
+            "present": true,
+            "value": 6160384
+          },
+          "subscription": {
+            "present": false
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsProject-2-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          },
+          "views": {
+            "present": true,
+            "value": [
+              {
+                "id": 377,
+                "title": "List",
+                "project_id": 94,
+                "view_kind": "list",
+                "filter": {
+                  "s": "",
+                  "sort_by": null,
+                  "order_by": null,
+                  "filter": "done = false",
+                  "filter_include_nulls": false
+                },
+                "position": 100,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              },
+              {
+                "id": 378,
+                "title": "Gantt",
+                "project_id": 94,
+                "view_kind": "gantt",
+                "filter": null,
+                "position": 200,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              },
+              {
+                "id": 379,
+                "title": "Table",
+                "project_id": 94,
+                "view_kind": "table",
+                "filter": null,
+                "position": 300,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              },
+              {
+                "id": 380,
+                "title": "Kanban",
+                "project_id": 94,
+                "view_kind": "kanban",
+                "filter": null,
+                "position": 400,
+                "bucket_configuration_mode": "manual",
+                "bucket_configuration": null,
+                "default_bucket_id": 283,
+                "done_bucket_id": 285,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              }
+            ]
+          }
+        },
+        "changed_fields": [],
+        "checked_field": "identifier",
+        "checked_field_before": {
+          "present": true,
+          "value": ""
+        },
+        "checked_field_after": {
+          "present": true,
+          "value": ""
+        },
+        "caseId": "NEG_ModelsProject_2_1",
+        "status": 412,
+        "rejected": true,
+        "status_documented": false,
+        "state_projection_unchanged": true,
+        "pass": true
+      }
+    },
+    {
+      "classifications": [
+        "UNDOCUMENTED_STATUS"
+      ],
+      "evidence": {
+        "evidence_version": 1,
+        "rule_id": "ModelsProject/identifier/MAX_LENGTH",
+        "source_pointer": "#/definitions/models.Project/properties/identifier/maxLength",
+        "rule": {
+          "id": "ModelsProject/identifier/MAX_LENGTH",
+          "resource": "ModelsProject",
+          "field": "identifier",
+          "kind": "MAX_LENGTH",
+          "mutation": "replace",
+          "invalid_value": "xxxxxxxxxxx",
+          "constraint": "maxLength",
+          "declared_constraint": 10,
+          "source_pointer": "#/definitions/models.Project/properties/identifier/maxLength",
+          "schema_pointer": "#/components/schemas/models.Project/properties/identifier/maxLength",
+          "operation": "POST /projects/{id}",
+          "effective_operation": "POST /projects/{id}",
+          "documented_statuses": [
+            "200",
+            "400",
+            "403",
+            "500"
+          ],
+          "compound_constraints": []
+        },
+        "logicalId": "ModelsProject_1",
+        "resource_id": 95,
+        "expected_revision": 1,
+        "readback_status": 200,
+        "request_body": {
+          "background_blur_hash": "",
+          "background_information": null,
+          "created": "2026-10-10T16:49:34Z",
+          "description": "",
+          "hex_color": "",
+          "id": 95,
+          "identifier": "xxxxxxxxxxx",
+          "is_archived": false,
+          "is_favorite": false,
+          "max_permission": null,
+          "owner": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-09T10:27:29Z"
+          },
+          "parent_project_id": 0,
+          "position": 6225920,
+          "title": "sbt-1-ModelsProject-1-title",
+          "updated": "2026-10-10T16:49:34Z",
+          "views": [
+            {
+              "id": 381,
+              "title": "List",
+              "project_id": 95,
+              "view_kind": "list",
+              "filter": {
+                "s": "",
+                "sort_by": null,
+                "order_by": null,
+                "filter": "done = false",
+                "filter_include_nulls": false
+              },
+              "position": 100,
+              "bucket_configuration_mode": "none",
+              "bucket_configuration": null,
+              "default_bucket_id": 0,
+              "done_bucket_id": 0,
+              "updated": "2026-10-10T16:49:34Z",
+              "created": "2026-10-10T16:49:34Z"
+            },
+            {
+              "id": 382,
+              "title": "Gantt",
+              "project_id": 95,
+              "view_kind": "gantt",
+              "filter": null,
+              "position": 200,
+              "bucket_configuration_mode": "none",
+              "bucket_configuration": null,
+              "default_bucket_id": 0,
+              "done_bucket_id": 0,
+              "updated": "2026-10-10T16:49:34Z",
+              "created": "2026-10-10T16:49:34Z"
+            },
+            {
+              "id": 383,
+              "title": "Table",
+              "project_id": 95,
+              "view_kind": "table",
+              "filter": null,
+              "position": 300,
+              "bucket_configuration_mode": "none",
+              "bucket_configuration": null,
+              "default_bucket_id": 0,
+              "done_bucket_id": 0,
+              "updated": "2026-10-10T16:49:34Z",
+              "created": "2026-10-10T16:49:34Z"
+            },
+            {
+              "id": 384,
+              "title": "Kanban",
+              "project_id": 95,
+              "view_kind": "kanban",
+              "filter": null,
+              "position": 400,
+              "bucket_configuration_mode": "manual",
+              "bucket_configuration": null,
+              "default_bucket_id": 286,
+              "done_bucket_id": 288,
+              "updated": "2026-10-10T16:49:34Z",
+              "created": "2026-10-10T16:49:34Z"
+            }
+          ]
+        },
+        "before_projection": {
+          "background_blur_hash": {
+            "present": true,
+            "value": ""
+          },
+          "background_information": {
+            "present": true,
+            "value": null
+          },
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:34Z"
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 95
+          },
+          "identifier": {
+            "present": true,
+            "value": ""
+          },
+          "is_archived": {
+            "present": true,
+            "value": false
+          },
+          "is_favorite": {
+            "present": true,
+            "value": false
+          },
+          "max_permission": {
+            "present": true,
+            "value": null
+          },
+          "owner": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "parent_project_id": {
+            "present": true,
+            "value": 0
+          },
+          "position": {
+            "present": true,
+            "value": 6225920
+          },
+          "subscription": {
+            "present": false
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsProject-1-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:34Z"
+          },
+          "views": {
+            "present": true,
+            "value": [
+              {
+                "id": 381,
+                "title": "List",
+                "project_id": 95,
+                "view_kind": "list",
+                "filter": {
+                  "s": "",
+                  "sort_by": null,
+                  "order_by": null,
+                  "filter": "done = false",
+                  "filter_include_nulls": false
+                },
+                "position": 100,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              },
+              {
+                "id": 382,
+                "title": "Gantt",
+                "project_id": 95,
+                "view_kind": "gantt",
+                "filter": null,
+                "position": 200,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              },
+              {
+                "id": 383,
+                "title": "Table",
+                "project_id": 95,
+                "view_kind": "table",
+                "filter": null,
+                "position": 300,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              },
+              {
+                "id": 384,
+                "title": "Kanban",
+                "project_id": 95,
+                "view_kind": "kanban",
+                "filter": null,
+                "position": 400,
+                "bucket_configuration_mode": "manual",
+                "bucket_configuration": null,
+                "default_bucket_id": 286,
+                "done_bucket_id": 288,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              }
+            ]
+          }
+        },
+        "after_projection": {
+          "background_blur_hash": {
+            "present": true,
+            "value": ""
+          },
+          "background_information": {
+            "present": true,
+            "value": null
+          },
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:34Z"
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 95
+          },
+          "identifier": {
+            "present": true,
+            "value": ""
+          },
+          "is_archived": {
+            "present": true,
+            "value": false
+          },
+          "is_favorite": {
+            "present": true,
+            "value": false
+          },
+          "max_permission": {
+            "present": true,
+            "value": null
+          },
+          "owner": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "parent_project_id": {
+            "present": true,
+            "value": 0
+          },
+          "position": {
+            "present": true,
+            "value": 6225920
+          },
+          "subscription": {
+            "present": false
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsProject-1-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:34Z"
+          },
+          "views": {
+            "present": true,
+            "value": [
+              {
+                "id": 381,
+                "title": "List",
+                "project_id": 95,
+                "view_kind": "list",
+                "filter": {
+                  "s": "",
+                  "sort_by": null,
+                  "order_by": null,
+                  "filter": "done = false",
+                  "filter_include_nulls": false
+                },
+                "position": 100,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              },
+              {
+                "id": 382,
+                "title": "Gantt",
+                "project_id": 95,
+                "view_kind": "gantt",
+                "filter": null,
+                "position": 200,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              },
+              {
+                "id": 383,
+                "title": "Table",
+                "project_id": 95,
+                "view_kind": "table",
+                "filter": null,
+                "position": 300,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              },
+              {
+                "id": 384,
+                "title": "Kanban",
+                "project_id": 95,
+                "view_kind": "kanban",
+                "filter": null,
+                "position": 400,
+                "bucket_configuration_mode": "manual",
+                "bucket_configuration": null,
+                "default_bucket_id": 286,
+                "done_bucket_id": 288,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              }
+            ]
+          }
+        },
+        "changed_fields": [],
+        "checked_field": "identifier",
+        "checked_field_before": {
+          "present": true,
+          "value": ""
+        },
+        "checked_field_after": {
+          "present": true,
+          "value": ""
+        },
+        "caseId": "NEG_ModelsProject_1_1",
+        "status": 412,
+        "rejected": true,
+        "status_documented": false,
+        "state_projection_unchanged": true,
+        "pass": true
+      }
+    },
+    {
+      "classifications": [
+        "UNDOCUMENTED_STATUS"
+      ],
+      "evidence": {
+        "evidence_version": 1,
+        "rule_id": "ModelsLabel/hex_color/MAX_LENGTH",
+        "source_pointer": "#/definitions/models.Label/properties/hex_color/maxLength",
+        "rule": {
+          "id": "ModelsLabel/hex_color/MAX_LENGTH",
+          "resource": "ModelsLabel",
+          "field": "hex_color",
+          "kind": "MAX_LENGTH",
+          "mutation": "replace",
+          "invalid_value": "xxxxxxxx",
+          "constraint": "maxLength",
+          "declared_constraint": 7,
+          "source_pointer": "#/definitions/models.Label/properties/hex_color/maxLength",
+          "schema_pointer": "#/components/schemas/models.Label/properties/hex_color/maxLength",
+          "operation": "PUT /labels/{id}",
+          "effective_operation": "POST /labels/{id}",
+          "documented_statuses": [
+            "200",
+            "400",
+            "403",
+            "404",
+            "500"
+          ],
+          "compound_constraints": []
+        },
+        "logicalId": "ModelsLabel_2",
+        "resource_id": 141,
+        "expected_revision": 1,
+        "readback_status": 200,
+        "request_body": {
+          "created": "2026-10-10T16:49:33Z",
+          "created_by": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-09T10:27:29Z"
+          },
+          "description": "",
+          "hex_color": "xxxxxxxx",
+          "id": 141,
+          "title": "sbt-1-ModelsLabel-2-title",
+          "updated": "2026-10-10T16:49:33Z"
+        },
+        "before_projection": {
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          },
+          "created_by": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 141
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsLabel-2-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          }
+        },
+        "after_projection": {
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          },
+          "created_by": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 141
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsLabel-2-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          }
+        },
+        "changed_fields": [],
+        "checked_field": "hex_color",
+        "checked_field_before": {
+          "present": true,
+          "value": ""
+        },
+        "checked_field_after": {
+          "present": true,
+          "value": ""
+        },
+        "caseId": "NEG_ModelsLabel_2_6",
+        "status": 412,
+        "rejected": true,
+        "status_documented": false,
+        "state_projection_unchanged": true,
+        "pass": true
+      }
+    },
+    {
+      "classifications": [
+        "UNDOCUMENTED_STATUS"
+      ],
+      "evidence": {
+        "evidence_version": 1,
+        "rule_id": "ModelsLabel/hex_color/MAX_LENGTH",
+        "source_pointer": "#/definitions/models.Label/properties/hex_color/maxLength",
+        "rule": {
+          "id": "ModelsLabel/hex_color/MAX_LENGTH",
+          "resource": "ModelsLabel",
+          "field": "hex_color",
+          "kind": "MAX_LENGTH",
+          "mutation": "replace",
+          "invalid_value": "xxxxxxxx",
+          "constraint": "maxLength",
+          "declared_constraint": 7,
+          "source_pointer": "#/definitions/models.Label/properties/hex_color/maxLength",
+          "schema_pointer": "#/components/schemas/models.Label/properties/hex_color/maxLength",
+          "operation": "PUT /labels/{id}",
+          "effective_operation": "POST /labels/{id}",
+          "documented_statuses": [
+            "200",
+            "400",
+            "403",
+            "404",
+            "500"
+          ],
+          "compound_constraints": []
+        },
+        "logicalId": "ModelsLabel_1",
+        "resource_id": 142,
+        "expected_revision": 1,
+        "readback_status": 200,
+        "request_body": {
+          "created": "2026-10-10T16:49:34Z",
+          "created_by": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-09T10:27:29Z"
+          },
+          "description": "",
+          "hex_color": "xxxxxxxx",
+          "id": 142,
+          "title": "sbt-1-ModelsLabel-1-title",
+          "updated": "2026-10-10T16:49:34Z"
+        },
+        "before_projection": {
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:34Z"
+          },
+          "created_by": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 142
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsLabel-1-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:34Z"
+          }
+        },
+        "after_projection": {
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:34Z"
+          },
+          "created_by": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 142
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsLabel-1-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:34Z"
+          }
+        },
+        "changed_fields": [],
+        "checked_field": "hex_color",
+        "checked_field_before": {
+          "present": true,
+          "value": ""
+        },
+        "checked_field_after": {
+          "present": true,
+          "value": ""
+        },
+        "caseId": "NEG_ModelsLabel_1_6",
+        "status": 412,
+        "rejected": true,
+        "status_documented": false,
+        "state_projection_unchanged": true,
+        "pass": true
+      }
+    },
+    {
+      "classifications": [
+        "UNDOCUMENTED_STATUS"
+      ],
+      "evidence": {
+        "evidence_version": 1,
+        "rule_id": "ModelsProject/hex_color/MAX_LENGTH",
+        "source_pointer": "#/definitions/models.Project/properties/hex_color/maxLength",
+        "rule": {
+          "id": "ModelsProject/hex_color/MAX_LENGTH",
+          "resource": "ModelsProject",
+          "field": "hex_color",
+          "kind": "MAX_LENGTH",
+          "mutation": "replace",
+          "invalid_value": "xxxxxxxx",
+          "constraint": "maxLength",
+          "declared_constraint": 7,
+          "source_pointer": "#/definitions/models.Project/properties/hex_color/maxLength",
+          "schema_pointer": "#/components/schemas/models.Project/properties/hex_color/maxLength",
+          "operation": "POST /projects/{id}",
+          "effective_operation": "POST /projects/{id}",
+          "documented_statuses": [
+            "200",
+            "400",
+            "403",
+            "500"
+          ],
+          "compound_constraints": []
+        },
+        "logicalId": "ModelsProject_2",
+        "resource_id": 94,
+        "expected_revision": 1,
+        "readback_status": 200,
+        "request_body": {
+          "background_blur_hash": "",
+          "background_information": null,
+          "created": "2026-10-10T16:49:33Z",
+          "description": "",
+          "hex_color": "xxxxxxxx",
+          "id": 94,
+          "identifier": "",
+          "is_archived": false,
+          "is_favorite": false,
+          "max_permission": null,
+          "owner": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-09T10:27:29Z"
+          },
+          "parent_project_id": 0,
+          "position": 6160384,
+          "title": "sbt-1-ModelsProject-2-title",
+          "updated": "2026-10-10T16:49:33Z",
+          "views": [
+            {
+              "id": 377,
+              "title": "List",
+              "project_id": 94,
+              "view_kind": "list",
+              "filter": {
+                "s": "",
+                "sort_by": null,
+                "order_by": null,
+                "filter": "done = false",
+                "filter_include_nulls": false
+              },
+              "position": 100,
+              "bucket_configuration_mode": "none",
+              "bucket_configuration": null,
+              "default_bucket_id": 0,
+              "done_bucket_id": 0,
+              "updated": "2026-10-10T16:49:33Z",
+              "created": "2026-10-10T16:49:33Z"
+            },
+            {
+              "id": 378,
+              "title": "Gantt",
+              "project_id": 94,
+              "view_kind": "gantt",
+              "filter": null,
+              "position": 200,
+              "bucket_configuration_mode": "none",
+              "bucket_configuration": null,
+              "default_bucket_id": 0,
+              "done_bucket_id": 0,
+              "updated": "2026-10-10T16:49:33Z",
+              "created": "2026-10-10T16:49:33Z"
+            },
+            {
+              "id": 379,
+              "title": "Table",
+              "project_id": 94,
+              "view_kind": "table",
+              "filter": null,
+              "position": 300,
+              "bucket_configuration_mode": "none",
+              "bucket_configuration": null,
+              "default_bucket_id": 0,
+              "done_bucket_id": 0,
+              "updated": "2026-10-10T16:49:33Z",
+              "created": "2026-10-10T16:49:33Z"
+            },
+            {
+              "id": 380,
+              "title": "Kanban",
+              "project_id": 94,
+              "view_kind": "kanban",
+              "filter": null,
+              "position": 400,
+              "bucket_configuration_mode": "manual",
+              "bucket_configuration": null,
+              "default_bucket_id": 283,
+              "done_bucket_id": 285,
+              "updated": "2026-10-10T16:49:33Z",
+              "created": "2026-10-10T16:49:33Z"
+            }
+          ]
+        },
+        "before_projection": {
+          "background_blur_hash": {
+            "present": true,
+            "value": ""
+          },
+          "background_information": {
+            "present": true,
+            "value": null
+          },
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 94
+          },
+          "identifier": {
+            "present": true,
+            "value": ""
+          },
+          "is_archived": {
+            "present": true,
+            "value": false
+          },
+          "is_favorite": {
+            "present": true,
+            "value": false
+          },
+          "max_permission": {
+            "present": true,
+            "value": null
+          },
+          "owner": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "parent_project_id": {
+            "present": true,
+            "value": 0
+          },
+          "position": {
+            "present": true,
+            "value": 6160384
+          },
+          "subscription": {
+            "present": false
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsProject-2-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          },
+          "views": {
+            "present": true,
+            "value": [
+              {
+                "id": 377,
+                "title": "List",
+                "project_id": 94,
+                "view_kind": "list",
+                "filter": {
+                  "s": "",
+                  "sort_by": null,
+                  "order_by": null,
+                  "filter": "done = false",
+                  "filter_include_nulls": false
+                },
+                "position": 100,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              },
+              {
+                "id": 378,
+                "title": "Gantt",
+                "project_id": 94,
+                "view_kind": "gantt",
+                "filter": null,
+                "position": 200,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              },
+              {
+                "id": 379,
+                "title": "Table",
+                "project_id": 94,
+                "view_kind": "table",
+                "filter": null,
+                "position": 300,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              },
+              {
+                "id": 380,
+                "title": "Kanban",
+                "project_id": 94,
+                "view_kind": "kanban",
+                "filter": null,
+                "position": 400,
+                "bucket_configuration_mode": "manual",
+                "bucket_configuration": null,
+                "default_bucket_id": 283,
+                "done_bucket_id": 285,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              }
+            ]
+          }
+        },
+        "after_projection": {
+          "background_blur_hash": {
+            "present": true,
+            "value": ""
+          },
+          "background_information": {
+            "present": true,
+            "value": null
+          },
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 94
+          },
+          "identifier": {
+            "present": true,
+            "value": ""
+          },
+          "is_archived": {
+            "present": true,
+            "value": false
+          },
+          "is_favorite": {
+            "present": true,
+            "value": false
+          },
+          "max_permission": {
+            "present": true,
+            "value": null
+          },
+          "owner": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "parent_project_id": {
+            "present": true,
+            "value": 0
+          },
+          "position": {
+            "present": true,
+            "value": 6160384
+          },
+          "subscription": {
+            "present": false
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsProject-2-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          },
+          "views": {
+            "present": true,
+            "value": [
+              {
+                "id": 377,
+                "title": "List",
+                "project_id": 94,
+                "view_kind": "list",
+                "filter": {
+                  "s": "",
+                  "sort_by": null,
+                  "order_by": null,
+                  "filter": "done = false",
+                  "filter_include_nulls": false
+                },
+                "position": 100,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              },
+              {
+                "id": 378,
+                "title": "Gantt",
+                "project_id": 94,
+                "view_kind": "gantt",
+                "filter": null,
+                "position": 200,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              },
+              {
+                "id": 379,
+                "title": "Table",
+                "project_id": 94,
+                "view_kind": "table",
+                "filter": null,
+                "position": 300,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              },
+              {
+                "id": 380,
+                "title": "Kanban",
+                "project_id": 94,
+                "view_kind": "kanban",
+                "filter": null,
+                "position": 400,
+                "bucket_configuration_mode": "manual",
+                "bucket_configuration": null,
+                "default_bucket_id": 283,
+                "done_bucket_id": 285,
+                "updated": "2026-10-10T16:49:33Z",
+                "created": "2026-10-10T16:49:33Z"
+              }
+            ]
+          }
+        },
+        "changed_fields": [],
+        "checked_field": "hex_color",
+        "checked_field_before": {
+          "present": true,
+          "value": ""
+        },
+        "checked_field_after": {
+          "present": true,
+          "value": ""
+        },
+        "caseId": "NEG_ModelsProject_2_8",
+        "status": 412,
+        "rejected": true,
+        "status_documented": false,
+        "state_projection_unchanged": true,
+        "pass": true
+      }
+    },
+    {
+      "classifications": [
+        "UNDOCUMENTED_STATUS"
+      ],
+      "evidence": {
+        "evidence_version": 1,
+        "rule_id": "ModelsProject/hex_color/MAX_LENGTH",
+        "source_pointer": "#/definitions/models.Project/properties/hex_color/maxLength",
+        "rule": {
+          "id": "ModelsProject/hex_color/MAX_LENGTH",
+          "resource": "ModelsProject",
+          "field": "hex_color",
+          "kind": "MAX_LENGTH",
+          "mutation": "replace",
+          "invalid_value": "xxxxxxxx",
+          "constraint": "maxLength",
+          "declared_constraint": 7,
+          "source_pointer": "#/definitions/models.Project/properties/hex_color/maxLength",
+          "schema_pointer": "#/components/schemas/models.Project/properties/hex_color/maxLength",
+          "operation": "POST /projects/{id}",
+          "effective_operation": "POST /projects/{id}",
+          "documented_statuses": [
+            "200",
+            "400",
+            "403",
+            "500"
+          ],
+          "compound_constraints": []
+        },
+        "logicalId": "ModelsProject_1",
+        "resource_id": 95,
+        "expected_revision": 1,
+        "readback_status": 200,
+        "request_body": {
+          "background_blur_hash": "",
+          "background_information": null,
+          "created": "2026-10-10T16:49:34Z",
+          "description": "",
+          "hex_color": "xxxxxxxx",
+          "id": 95,
+          "identifier": "",
+          "is_archived": false,
+          "is_favorite": false,
+          "max_permission": null,
+          "owner": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-09T10:27:29Z"
+          },
+          "parent_project_id": 0,
+          "position": 6225920,
+          "title": "sbt-1-ModelsProject-1-title",
+          "updated": "2026-10-10T16:49:34Z",
+          "views": [
+            {
+              "id": 381,
+              "title": "List",
+              "project_id": 95,
+              "view_kind": "list",
+              "filter": {
+                "s": "",
+                "sort_by": null,
+                "order_by": null,
+                "filter": "done = false",
+                "filter_include_nulls": false
+              },
+              "position": 100,
+              "bucket_configuration_mode": "none",
+              "bucket_configuration": null,
+              "default_bucket_id": 0,
+              "done_bucket_id": 0,
+              "updated": "2026-10-10T16:49:34Z",
+              "created": "2026-10-10T16:49:34Z"
+            },
+            {
+              "id": 382,
+              "title": "Gantt",
+              "project_id": 95,
+              "view_kind": "gantt",
+              "filter": null,
+              "position": 200,
+              "bucket_configuration_mode": "none",
+              "bucket_configuration": null,
+              "default_bucket_id": 0,
+              "done_bucket_id": 0,
+              "updated": "2026-10-10T16:49:34Z",
+              "created": "2026-10-10T16:49:34Z"
+            },
+            {
+              "id": 383,
+              "title": "Table",
+              "project_id": 95,
+              "view_kind": "table",
+              "filter": null,
+              "position": 300,
+              "bucket_configuration_mode": "none",
+              "bucket_configuration": null,
+              "default_bucket_id": 0,
+              "done_bucket_id": 0,
+              "updated": "2026-10-10T16:49:34Z",
+              "created": "2026-10-10T16:49:34Z"
+            },
+            {
+              "id": 384,
+              "title": "Kanban",
+              "project_id": 95,
+              "view_kind": "kanban",
+              "filter": null,
+              "position": 400,
+              "bucket_configuration_mode": "manual",
+              "bucket_configuration": null,
+              "default_bucket_id": 286,
+              "done_bucket_id": 288,
+              "updated": "2026-10-10T16:49:34Z",
+              "created": "2026-10-10T16:49:34Z"
+            }
+          ]
+        },
+        "before_projection": {
+          "background_blur_hash": {
+            "present": true,
+            "value": ""
+          },
+          "background_information": {
+            "present": true,
+            "value": null
+          },
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:34Z"
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 95
+          },
+          "identifier": {
+            "present": true,
+            "value": ""
+          },
+          "is_archived": {
+            "present": true,
+            "value": false
+          },
+          "is_favorite": {
+            "present": true,
+            "value": false
+          },
+          "max_permission": {
+            "present": true,
+            "value": null
+          },
+          "owner": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "parent_project_id": {
+            "present": true,
+            "value": 0
+          },
+          "position": {
+            "present": true,
+            "value": 6225920
+          },
+          "subscription": {
+            "present": false
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsProject-1-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:34Z"
+          },
+          "views": {
+            "present": true,
+            "value": [
+              {
+                "id": 381,
+                "title": "List",
+                "project_id": 95,
+                "view_kind": "list",
+                "filter": {
+                  "s": "",
+                  "sort_by": null,
+                  "order_by": null,
+                  "filter": "done = false",
+                  "filter_include_nulls": false
+                },
+                "position": 100,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              },
+              {
+                "id": 382,
+                "title": "Gantt",
+                "project_id": 95,
+                "view_kind": "gantt",
+                "filter": null,
+                "position": 200,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              },
+              {
+                "id": 383,
+                "title": "Table",
+                "project_id": 95,
+                "view_kind": "table",
+                "filter": null,
+                "position": 300,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              },
+              {
+                "id": 384,
+                "title": "Kanban",
+                "project_id": 95,
+                "view_kind": "kanban",
+                "filter": null,
+                "position": 400,
+                "bucket_configuration_mode": "manual",
+                "bucket_configuration": null,
+                "default_bucket_id": 286,
+                "done_bucket_id": 288,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              }
+            ]
+          }
+        },
+        "after_projection": {
+          "background_blur_hash": {
+            "present": true,
+            "value": ""
+          },
+          "background_information": {
+            "present": true,
+            "value": null
+          },
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:34Z"
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 95
+          },
+          "identifier": {
+            "present": true,
+            "value": ""
+          },
+          "is_archived": {
+            "present": true,
+            "value": false
+          },
+          "is_favorite": {
+            "present": true,
+            "value": false
+          },
+          "max_permission": {
+            "present": true,
+            "value": null
+          },
+          "owner": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "parent_project_id": {
+            "present": true,
+            "value": 0
+          },
+          "position": {
+            "present": true,
+            "value": 6225920
+          },
+          "subscription": {
+            "present": false
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsProject-1-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:34Z"
+          },
+          "views": {
+            "present": true,
+            "value": [
+              {
+                "id": 381,
+                "title": "List",
+                "project_id": 95,
+                "view_kind": "list",
+                "filter": {
+                  "s": "",
+                  "sort_by": null,
+                  "order_by": null,
+                  "filter": "done = false",
+                  "filter_include_nulls": false
+                },
+                "position": 100,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              },
+              {
+                "id": 382,
+                "title": "Gantt",
+                "project_id": 95,
+                "view_kind": "gantt",
+                "filter": null,
+                "position": 200,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              },
+              {
+                "id": 383,
+                "title": "Table",
+                "project_id": 95,
+                "view_kind": "table",
+                "filter": null,
+                "position": 300,
+                "bucket_configuration_mode": "none",
+                "bucket_configuration": null,
+                "default_bucket_id": 0,
+                "done_bucket_id": 0,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              },
+              {
+                "id": 384,
+                "title": "Kanban",
+                "project_id": 95,
+                "view_kind": "kanban",
+                "filter": null,
+                "position": 400,
+                "bucket_configuration_mode": "manual",
+                "bucket_configuration": null,
+                "default_bucket_id": 286,
+                "done_bucket_id": 288,
+                "updated": "2026-10-10T16:49:34Z",
+                "created": "2026-10-10T16:49:34Z"
+              }
+            ]
+          }
+        },
+        "changed_fields": [],
+        "checked_field": "hex_color",
+        "checked_field_before": {
+          "present": true,
+          "value": ""
+        },
+        "checked_field_after": {
+          "present": true,
+          "value": ""
+        },
+        "caseId": "NEG_ModelsProject_1_8",
+        "status": 412,
+        "rejected": true,
+        "status_documented": false,
+        "state_projection_unchanged": true,
+        "pass": true
+      }
+    },
+    {
+      "classifications": [
+        "SCHEMA_INVALID_INPUT_ACCEPTED",
+        "STATE_CHANGED_WITH_ACCEPTANCE_OR_OTHER_RESPONSE"
+      ],
+      "evidence": {
+        "evidence_version": 1,
+        "rule_id": "ModelsLabel/title/MIN_LENGTH",
+        "source_pointer": "#/definitions/models.Label/properties/title/minLength",
+        "rule": {
+          "id": "ModelsLabel/title/MIN_LENGTH",
+          "resource": "ModelsLabel",
+          "field": "title",
+          "kind": "MIN_LENGTH",
+          "mutation": "replace",
+          "invalid_value": "",
+          "constraint": "minLength",
+          "declared_constraint": 1,
+          "source_pointer": "#/definitions/models.Label/properties/title/minLength",
+          "schema_pointer": "#/components/schemas/models.Label/properties/title/minLength",
+          "operation": "PUT /labels/{id}",
+          "effective_operation": "POST /labels/{id}",
+          "documented_statuses": [
+            "200",
+            "400",
+            "403",
+            "404",
+            "500"
+          ],
+          "compound_constraints": []
+        },
+        "logicalId": "ModelsLabel_2",
+        "resource_id": 141,
+        "expected_revision": 1,
+        "readback_status": 200,
+        "request_body": {
+          "created": "2026-10-10T16:49:33Z",
+          "created_by": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-09T10:27:29Z"
+          },
+          "description": "",
+          "hex_color": "",
+          "id": 141,
+          "title": "",
+          "updated": "2026-10-10T16:49:33Z"
+        },
+        "before_projection": {
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          },
+          "created_by": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 141
+          },
+          "title": {
+            "present": true,
+            "value": "sbt-1-ModelsLabel-2-title"
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          }
+        },
+        "after_projection": {
+          "created": {
+            "present": true,
+            "value": "2026-10-10T16:49:33Z"
+          },
+          "created_by": {
+            "present": true,
+            "value": {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-09T10:27:29Z"
+            }
+          },
+          "description": {
+            "present": true,
+            "value": ""
+          },
+          "hex_color": {
+            "present": true,
+            "value": ""
+          },
+          "id": {
+            "present": true,
+            "value": 141
+          },
+          "title": {
+            "present": true,
+            "value": ""
+          },
+          "updated": {
+            "present": true,
+            "value": "2026-10-10T16:50:04Z"
+          }
+        },
+        "changed_fields": [
+          "title",
+          "updated"
+        ],
+        "checked_field": "title",
+        "checked_field_before": {
+          "present": true,
+          "value": "sbt-1-ModelsLabel-2-title"
+        },
+        "checked_field_after": {
+          "present": true,
+          "value": ""
+        },
+        "caseId": "NEG_ModelsLabel_2_9",
+        "status": 200,
+        "rejected": false,
+        "status_documented": true,
+        "state_projection_unchanged": false,
+        "pass": false
+      }
+    }
+  ],
+  "pending_checks": [
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/created/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/created/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/created/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/created/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/description/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/description/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/description/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/description/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/hex_color/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/hex_color/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/title/MAX_LENGTH"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/title/MIN_LENGTH"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/updated/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/updated/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/updated/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsLabel_1",
+      "rule_id": "ModelsLabel/updated/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/created/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/created/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/created/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/created/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/description/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/description/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/description/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/description/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/hex_color/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/hex_color/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/title/MAX_LENGTH"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/updated/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/updated/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/updated/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "rule_id": "ModelsLabel/updated/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/background_blur_hash/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/background_blur_hash/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/background_blur_hash/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/background_blur_hash/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/created/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/created/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/created/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/created/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/description/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/description/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/description/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/description/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/hex_color/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/hex_color/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/hex_color/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/is_favorite/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/max_permission/ENUM"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/max_permission/INTEGER_FRACTION"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/max_permission/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/parent_project_id/INTEGER_FRACTION"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/parent_project_id/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/position/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/title/MAX_LENGTH"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/title/MIN_LENGTH"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/title/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/title/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/title/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/title/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/updated/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/updated/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/updated/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/updated/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "rule_id": "ModelsProject/views/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/background_blur_hash/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/background_blur_hash/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/background_blur_hash/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/background_blur_hash/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/created/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/created/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/created/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/created/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/description/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/description/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/description/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/description/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/hex_color/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/hex_color/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/hex_color/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/is_favorite/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/max_permission/ENUM"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/max_permission/INTEGER_FRACTION"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/max_permission/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/parent_project_id/INTEGER_FRACTION"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/parent_project_id/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/position/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/title/MAX_LENGTH"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/title/MIN_LENGTH"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/title/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/title/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/title/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/updated/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/updated/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/updated/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/updated/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "rule_id": "ModelsProject/views/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/created/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/created/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/external_id/MAX_LENGTH"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/id/INTEGER_FRACTION"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/id/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/is_public/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/members/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/name/MAX_LENGTH"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/name/MIN_LENGTH"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/name/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/name/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/name/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/name/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/updated/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/updated/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/updated/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsTeam_1",
+      "rule_id": "ModelsTeam/updated/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/created/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/external_id/MAX_LENGTH"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/id/INTEGER_FRACTION"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/id/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/is_public/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/members/TYPE_STRING"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/name/MAX_LENGTH"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/name/MIN_LENGTH"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/name/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/name/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/name/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/name/TYPE_OBJECT"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/updated/TYPE_ARRAY"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/updated/TYPE_BOOLEAN"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/updated/TYPE_NUMBER"
+    },
+    {
+      "logicalId": "ModelsTeam_2",
+      "rule_id": "ModelsTeam/updated/TYPE_OBJECT"
+    }
+  ],
+  "limits": [
+    "Callback receipts are not a packet capture; a failing verifier may not emit its final callback receipt.",
+    "Pending means no completed independent verifier; an attempt may already have occurred.",
+    "Selected lifecycle completion markers do not establish live completion.",
+    "State evidence covers the declared field projection, not all database state.",
+    "Contract discrepancy is established separately from intended application semantics and root cause."
+  ]
+}

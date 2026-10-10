@@ -1,0 +1,228 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "NetBox REST API - A2A structural projection",
+    "version": "4.4.2-a2a-v29",
+    "license": {"name": "Apache v2 License"},
+    "description": "Task-scoped 12-operation structural projection over Site, Device, and Circuit. The projection preserves only operation topology, primitive field types, required fields, and the Device-to-Site id relation needed to exercise the selected CRUD surface. Semantic annotations such as enum values, examples, defaults, descriptions, regexes, and length constraints are intentionally absent from the A2A input."
+  },
+  "servers": [{"url": "http://127.0.0.1:5000"}],
+  "paths": {
+    "/api/dcim/sites/": {
+      "get": {
+        "operationId": "dcim_sites_list",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/Site"}}}}
+          }
+        }
+      },
+      "post": {
+        "operationId": "dcim_sites_create",
+        "requestBody": {
+          "required": true,
+          "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SiteCreate"}}}
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Site"}}}
+          }
+        }
+      }
+    },
+    "/api/dcim/sites/{id}/": {
+      "get": {
+        "operationId": "dcim_sites_retrieve",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {
+          "200": {"description": "Success", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Site"}}}},
+          "404": {"description": "Not found"}
+        }
+      },
+      "delete": {
+        "operationId": "dcim_sites_destroy",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {
+          "204": {"description": "Deleted"},
+          "404": {"description": "Not found"}
+        }
+      }
+    },
+    "/api/dcim/devices/": {
+      "get": {
+        "operationId": "dcim_devices_list",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/Device"}}}}
+          }
+        }
+      },
+      "post": {
+        "operationId": "dcim_devices_create",
+        "requestBody": {
+          "required": true,
+          "content": {"application/json": {"schema": {"$ref": "#/components/schemas/DeviceCreate"}}}
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Device"}}}
+          }
+        }
+      }
+    },
+    "/api/dcim/devices/{id}/": {
+      "get": {
+        "operationId": "dcim_devices_retrieve",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {
+          "200": {"description": "Success", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Device"}}}},
+          "404": {"description": "Not found"}
+        }
+      },
+      "patch": {
+        "operationId": "dcim_devices_partial_update",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "requestBody": {
+          "required": true,
+          "content": {"application/json": {"schema": {"$ref": "#/components/schemas/DevicePatch"}}}
+        },
+        "responses": {
+          "200": {"description": "Updated", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Device"}}}},
+          "404": {"description": "Not found"}
+        }
+      }
+    },
+    "/api/circuits/circuits/": {
+      "get": {
+        "operationId": "circuits_circuits_list",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/Circuit"}}}}
+          }
+        }
+      },
+      "post": {
+        "operationId": "circuits_circuits_create",
+        "requestBody": {
+          "required": true,
+          "content": {"application/json": {"schema": {"$ref": "#/components/schemas/CircuitCreate"}}}
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Circuit"}}}
+          }
+        }
+      }
+    },
+    "/api/circuits/circuits/{id}/": {
+      "get": {
+        "operationId": "circuits_circuits_retrieve",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {
+          "200": {"description": "Success", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Circuit"}}}},
+          "404": {"description": "Not found"}
+        }
+      },
+      "patch": {
+        "operationId": "circuits_circuits_partial_update",
+        "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "requestBody": {
+          "required": true,
+          "content": {"application/json": {"schema": {"$ref": "#/components/schemas/CircuitPatch"}}}
+        },
+        "responses": {
+          "200": {"description": "Updated", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Circuit"}}}},
+          "404": {"description": "Not found"}
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Site": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "readOnly": true},
+          "name": {"type": "string"},
+          "slug": {"type": "string"},
+          "status": {"type": "string"},
+          "description": {"type": "string"}
+        },
+        "required": ["id", "name", "slug"]
+      },
+      "SiteCreate": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "slug": {"type": "string"},
+          "status": {"type": "string"},
+          "description": {"type": "string"}
+        },
+        "required": ["name", "slug"]
+      },
+      "SiteRef": {
+        "type": "object",
+        "properties": {"id": {"type": "string"}},
+        "required": ["id"]
+      },
+      "Device": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "readOnly": true},
+          "name": {"type": "string"},
+          "site": {"$ref": "#/components/schemas/SiteRef"},
+          "status": {"type": "string"},
+          "description": {"type": "string"}
+        },
+        "required": ["id", "name", "site"]
+      },
+      "DeviceCreate": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "site": {"$ref": "#/components/schemas/SiteRef"},
+          "status": {"type": "string"},
+          "description": {"type": "string"}
+        },
+        "required": ["name", "site"]
+      },
+      "DevicePatch": {
+        "type": "object",
+        "properties": {
+          "site": {"$ref": "#/components/schemas/SiteRef"}
+        }
+      },
+      "Circuit": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string", "readOnly": true},
+          "cid": {"type": "string"},
+          "status": {"type": "string"},
+          "description": {"type": "string"}
+        },
+        "required": ["id", "cid"]
+      },
+      "CircuitCreate": {
+        "type": "object",
+        "properties": {
+          "cid": {"type": "string"},
+          "status": {"type": "string"},
+          "description": {"type": "string"}
+        },
+        "required": ["cid"]
+      },
+      "CircuitPatch": {
+        "type": "object",
+        "properties": {
+          "description": {"type": "string"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "diagnostic_checks": {
+    "created_label_detached_from_created_task": false
+  },
+  "evaluation_basis": "external redacted HTTP trace",
+  "event_count": 5,
+  "observed_ids": {
+    "label_id": 1,
+    "project_id": 2,
+    "task_id": 1
+  },
+  "passed_count": 4,
+  "required_checks": {
+    "created_label_attached_to_created_task": true,
+    "label_created": true,
+    "project_created": true,
+    "task_created_under_created_project": true
+  },
+  "required_count": 4,
+  "smoke_passed": true,
+  "status_histogram": {
+    "200": 1,
+    "201": 4
+  }
+}

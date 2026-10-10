@@ -1,0 +1,30 @@
+﻿{
+    "evidence_type":  "Vikunja Phase 6 OpenAPI-to-SBT BP exploration",
+    "profile":  "interleaved-relational-exploration",
+    "campaign_tag":  "phase6-bug-search-20260920_165133",
+    "created_utc":  "2026-09-20T14:09:25.8387064Z",
+    "seeds":  [
+                  20261502,
+                  20262503,
+                  20263504
+              ],
+    "expected_tasks":  12,
+    "run_count":  3,
+    "all_runs_passed":  true,
+    "checks_per_run":  13,
+    "distinct_intent_schedules":  3,
+    "distinct_permit_schedules":  3,
+    "schedule_variation_observed":  true,
+    "permit_schedule_variation_observed":  true,
+    "selected_run_directories":  [
+                                     "phase6-bug-search-20260920_165133-tasks-12-seed-20261502-20260920_165134_201",
+                                     "phase6-bug-search-20260920_165133-tasks-12-seed-20262503-20260920_165211_407",
+                                     "phase6-bug-search-20260920_165133-tasks-12-seed-20263504-20260920_165246_348"
+                                 ],
+    "excluded_run_directories":  [
+
+                                 ],
+    "model_hash_triple":  "033cdd4ded8565aea6c9a724b89eed7f84bf1152b8102621858841027a8ac8df|77306e5dc8c96dc2f386855976e1ff5875e01cf802934bd729046781376c1e90|bb3e5733e7d50a50a20a1ebe6cde8386f287a5e2c02fbc6b077f78c0c013a750",
+    "packaging":  "Lean evidence package: raw traces/logs/results/model/tools included; rebuildable Provengo working databases excluded.",
+    "interpretation":  "Three passing executions of one generated model exercised three distinct BP Permit and Intent schedules; no semantic anomaly was observed and no real bug is claimed."
+}

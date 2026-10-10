@@ -1,0 +1,33 @@
+{
+  "version": "v007",
+  "status": "V007_LIVE_POSITIVE_ACCEPTED",
+  "live_vikunja": true,
+  "live_execution_started": true,
+  "live_acceptance_passed": true,
+  "seed": 2,
+  "compiler_sha256": "14b999846fdcad6fedd56552eb7eae294c4b9278abca75b23ceba505653e93dd",
+  "templates_sha256": "5ee1a7382b3264de55e9ce52ba01ee0fda957814c59ac32b379cf9fbaa19c2fe",
+  "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "server_version": "v2.6.0",
+  "base_url": "http://127.0.0.1:3456/api/v1",
+  "contract_authority": "LIVE_DOCUMENT_CANONICAL_EQUALITY_AND_SERVER_VERSION_MATCH",
+  "live_contract_raw_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "live_contract_canonical_sha256": "c81a3387e21c8b6e86f02d39d0b8501a2aced8a1da43629370819beeda85d977",
+  "label_options_status": 204,
+  "label_allowed_methods": [
+    "OPTIONS",
+    "DELETE",
+    "GET",
+    "POST"
+  ],
+  "contract_override": "PUT /labels/{id} -> POST /labels/{id}; CONTRACT_UNCHANGED",
+  "provengo_jar_sha256": "dda4be276ff517faa06b942d587cad2d342c66d83c9959f7eb3c6c77a8b2fc2b",
+  "provengo_version": "0.7.5-SNAPSHOT",
+  "generated_steps": 60,
+  "actor_id": 1,
+  "native_exit": 0,
+  "passed_steps": 60,
+  "callbacks": 60,
+  "successful_live_callbacks": 60,
+  "scope": "OWN_CREATED_RESOURCES; NO_CLEAN_DATABASE_RESET"
+}

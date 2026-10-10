@@ -1,0 +1,1816 @@
+[
+  {
+    "index": 0,
+    "method": "PUT",
+    "path": "/api/v1/projects",
+    "status": 201,
+    "request": {
+      "title": "sbt-1-ModelsProject-2-title"
+    },
+    "response": {
+      "id": 96,
+      "title": "sbt-1-ModelsProject-2-title",
+      "description": "",
+      "identifier": "",
+      "hex_color": "",
+      "parent_project_id": 0,
+      "owner": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "0001-01-01T00:00:00Z",
+        "updated": "0001-01-01T00:00:00Z"
+      },
+      "is_archived": false,
+      "background_information": null,
+      "background_blur_hash": "",
+      "is_favorite": false,
+      "position": 6291456,
+      "views": [
+        {
+          "id": 385,
+          "title": "List",
+          "project_id": 96,
+          "view_kind": "list",
+          "filter": {
+            "s": "",
+            "sort_by": null,
+            "order_by": null,
+            "filter": "done = false",
+            "filter_include_nulls": false
+          },
+          "position": 100,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52.013954111Z",
+          "created": "2026-10-10T19:54:52.013476935Z"
+        },
+        {
+          "id": 386,
+          "title": "Gantt",
+          "project_id": 96,
+          "view_kind": "gantt",
+          "filter": null,
+          "position": 200,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52.017668182Z",
+          "created": "2026-10-10T19:54:52.017512945Z"
+        },
+        {
+          "id": 387,
+          "title": "Table",
+          "project_id": 96,
+          "view_kind": "table",
+          "filter": null,
+          "position": 300,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52.019695493Z",
+          "created": "2026-10-10T19:54:52.019629554Z"
+        },
+        {
+          "id": 388,
+          "title": "Kanban",
+          "project_id": 96,
+          "view_kind": "kanban",
+          "filter": null,
+          "position": 400,
+          "bucket_configuration_mode": "manual",
+          "bucket_configuration": null,
+          "default_bucket_id": 289,
+          "done_bucket_id": 291,
+          "updated": "2026-10-10T19:54:52.022237246Z",
+          "created": "2026-10-10T19:54:52.020555692Z"
+        }
+      ],
+      "max_permission": null,
+      "created": "2026-10-10T19:54:52.011160165Z",
+      "updated": "2026-10-10T19:54:52.01186665Z"
+    }
+  },
+  {
+    "index": 1,
+    "method": "PUT",
+    "path": "/api/v1/labels",
+    "status": 201,
+    "request": {
+      "title": "sbt-1-ModelsLabel-1-title"
+    },
+    "response": {
+      "id": 143,
+      "title": "sbt-1-ModelsLabel-1-title",
+      "description": "",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "0001-01-01T00:00:00Z",
+        "updated": "0001-01-01T00:00:00Z"
+      },
+      "created": "2026-10-10T19:54:52.440056869Z",
+      "updated": "2026-10-10T19:54:52.440063017Z"
+    }
+  },
+  {
+    "index": 2,
+    "method": "GET",
+    "path": "/api/v1/labels/143",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 143,
+      "title": "sbt-1-ModelsLabel-1-title",
+      "description": "",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:52Z"
+    }
+  },
+  {
+    "index": 3,
+    "method": "PUT",
+    "path": "/api/v1/teams",
+    "status": 201,
+    "request": {
+      "name": "sbt-1-ModelsTeam-2-name"
+    },
+    "response": {
+      "id": 17,
+      "name": "sbt-1-ModelsTeam-2-name",
+      "description": "",
+      "external_id": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "0001-01-01T00:00:00Z",
+        "updated": "0001-01-01T00:00:00Z"
+      },
+      "members": null,
+      "created": "2026-10-10T19:54:52.759231254Z",
+      "updated": "2026-10-10T19:54:52.759237611Z",
+      "is_public": false
+    }
+  },
+  {
+    "index": 4,
+    "method": "GET",
+    "path": "/api/v1/projects/96",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 96,
+      "title": "sbt-1-ModelsProject-2-title",
+      "description": "",
+      "identifier": "",
+      "hex_color": "",
+      "parent_project_id": 0,
+      "owner": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "is_archived": false,
+      "background_information": null,
+      "background_blur_hash": "",
+      "is_favorite": false,
+      "position": 6291456,
+      "views": [
+        {
+          "id": 385,
+          "title": "List",
+          "project_id": 96,
+          "view_kind": "list",
+          "filter": {
+            "s": "",
+            "sort_by": null,
+            "order_by": null,
+            "filter": "done = false",
+            "filter_include_nulls": false
+          },
+          "position": 100,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 386,
+          "title": "Gantt",
+          "project_id": 96,
+          "view_kind": "gantt",
+          "filter": null,
+          "position": 200,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 387,
+          "title": "Table",
+          "project_id": 96,
+          "view_kind": "table",
+          "filter": null,
+          "position": 300,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 388,
+          "title": "Kanban",
+          "project_id": 96,
+          "view_kind": "kanban",
+          "filter": null,
+          "position": 400,
+          "bucket_configuration_mode": "manual",
+          "bucket_configuration": null,
+          "default_bucket_id": 289,
+          "done_bucket_id": 291,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        }
+      ],
+      "max_permission": null,
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:52Z"
+    }
+  },
+  {
+    "index": 5,
+    "method": "PUT",
+    "path": "/api/v1/teams",
+    "status": 201,
+    "request": {
+      "name": "sbt-1-ModelsTeam-1-name"
+    },
+    "response": {
+      "id": 18,
+      "name": "sbt-1-ModelsTeam-1-name",
+      "description": "",
+      "external_id": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "0001-01-01T00:00:00Z",
+        "updated": "0001-01-01T00:00:00Z"
+      },
+      "members": null,
+      "created": "2026-10-10T19:54:53.159362528Z",
+      "updated": "2026-10-10T19:54:53.159368547Z",
+      "is_public": false
+    }
+  },
+  {
+    "index": 6,
+    "method": "PUT",
+    "path": "/api/v1/projects",
+    "status": 201,
+    "request": {
+      "title": "sbt-1-ModelsProject-1-title"
+    },
+    "response": {
+      "id": 97,
+      "title": "sbt-1-ModelsProject-1-title",
+      "description": "",
+      "identifier": "",
+      "hex_color": "",
+      "parent_project_id": 0,
+      "owner": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "0001-01-01T00:00:00Z",
+        "updated": "0001-01-01T00:00:00Z"
+      },
+      "is_archived": false,
+      "background_information": null,
+      "background_blur_hash": "",
+      "is_favorite": false,
+      "position": 6356992,
+      "views": [
+        {
+          "id": 389,
+          "title": "List",
+          "project_id": 97,
+          "view_kind": "list",
+          "filter": {
+            "s": "",
+            "sort_by": null,
+            "order_by": null,
+            "filter": "done = false",
+            "filter_include_nulls": false
+          },
+          "position": 100,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53.399965701Z",
+          "created": "2026-10-10T19:54:53.399901929Z"
+        },
+        {
+          "id": 390,
+          "title": "Gantt",
+          "project_id": 97,
+          "view_kind": "gantt",
+          "filter": null,
+          "position": 200,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53.401319776Z",
+          "created": "2026-10-10T19:54:53.401217162Z"
+        },
+        {
+          "id": 391,
+          "title": "Table",
+          "project_id": 97,
+          "view_kind": "table",
+          "filter": null,
+          "position": 300,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53.402294965Z",
+          "created": "2026-10-10T19:54:53.402221182Z"
+        },
+        {
+          "id": 392,
+          "title": "Kanban",
+          "project_id": 97,
+          "view_kind": "kanban",
+          "filter": null,
+          "position": 400,
+          "bucket_configuration_mode": "manual",
+          "bucket_configuration": null,
+          "default_bucket_id": 292,
+          "done_bucket_id": 294,
+          "updated": "2026-10-10T19:54:53.404485859Z",
+          "created": "2026-10-10T19:54:53.403186041Z"
+        }
+      ],
+      "max_permission": null,
+      "created": "2026-10-10T19:54:53.399568461Z",
+      "updated": "2026-10-10T19:54:53.399687389Z"
+    }
+  },
+  {
+    "index": 7,
+    "method": "GET",
+    "path": "/api/v1/teams/18",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 18,
+      "name": "sbt-1-ModelsTeam-1-name",
+      "description": "",
+      "external_id": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "members": [
+        {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-09T10:27:29Z",
+          "admin": true
+        }
+      ],
+      "created": "2026-10-10T19:54:53Z",
+      "updated": "2026-10-10T19:54:53Z",
+      "is_public": false
+    }
+  },
+  {
+    "index": 8,
+    "method": "GET",
+    "path": "/api/v1/projects/97",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 97,
+      "title": "sbt-1-ModelsProject-1-title",
+      "description": "",
+      "identifier": "",
+      "hex_color": "",
+      "parent_project_id": 0,
+      "owner": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "is_archived": false,
+      "background_information": null,
+      "background_blur_hash": "",
+      "is_favorite": false,
+      "position": 6356992,
+      "views": [
+        {
+          "id": 389,
+          "title": "List",
+          "project_id": 97,
+          "view_kind": "list",
+          "filter": {
+            "s": "",
+            "sort_by": null,
+            "order_by": null,
+            "filter": "done = false",
+            "filter_include_nulls": false
+          },
+          "position": 100,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 390,
+          "title": "Gantt",
+          "project_id": 97,
+          "view_kind": "gantt",
+          "filter": null,
+          "position": 200,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 391,
+          "title": "Table",
+          "project_id": 97,
+          "view_kind": "table",
+          "filter": null,
+          "position": 300,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 392,
+          "title": "Kanban",
+          "project_id": 97,
+          "view_kind": "kanban",
+          "filter": null,
+          "position": 400,
+          "bucket_configuration_mode": "manual",
+          "bucket_configuration": null,
+          "default_bucket_id": 292,
+          "done_bucket_id": 294,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        }
+      ],
+      "max_permission": null,
+      "created": "2026-10-10T19:54:53Z",
+      "updated": "2026-10-10T19:54:53Z"
+    }
+  },
+  {
+    "index": 9,
+    "method": "GET",
+    "path": "/api/v1/labels/143",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 143,
+      "title": "sbt-1-ModelsLabel-1-title",
+      "description": "",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:52Z"
+    }
+  },
+  {
+    "index": 10,
+    "method": "POST",
+    "path": "/api/v1/labels/143",
+    "status": 200,
+    "request": {
+      "created": "2026-10-10T19:54:52Z",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "description": "sbt-1-ModelsLabel_1-updated",
+      "hex_color": "",
+      "id": 143,
+      "title": "sbt-1-ModelsLabel-1-title",
+      "updated": "2026-10-10T19:54:52Z"
+    },
+    "response": {
+      "id": 143,
+      "title": "sbt-1-ModelsLabel-1-title",
+      "description": "sbt-1-ModelsLabel_1-updated",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:54Z"
+    }
+  },
+  {
+    "index": 11,
+    "method": "PUT",
+    "path": "/api/v1/labels",
+    "status": 201,
+    "request": {
+      "title": "sbt-1-ModelsLabel-2-title"
+    },
+    "response": {
+      "id": 144,
+      "title": "sbt-1-ModelsLabel-2-title",
+      "description": "",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "0001-01-01T00:00:00Z",
+        "updated": "0001-01-01T00:00:00Z"
+      },
+      "created": "2026-10-10T19:54:54.24800613Z",
+      "updated": "2026-10-10T19:54:54.248010759Z"
+    }
+  },
+  {
+    "index": 12,
+    "method": "GET",
+    "path": "/api/v1/projects/97",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 97,
+      "title": "sbt-1-ModelsProject-1-title",
+      "description": "",
+      "identifier": "",
+      "hex_color": "",
+      "parent_project_id": 0,
+      "owner": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "is_archived": false,
+      "background_information": null,
+      "background_blur_hash": "",
+      "is_favorite": false,
+      "position": 6356992,
+      "views": [
+        {
+          "id": 389,
+          "title": "List",
+          "project_id": 97,
+          "view_kind": "list",
+          "filter": {
+            "s": "",
+            "sort_by": null,
+            "order_by": null,
+            "filter": "done = false",
+            "filter_include_nulls": false
+          },
+          "position": 100,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 390,
+          "title": "Gantt",
+          "project_id": 97,
+          "view_kind": "gantt",
+          "filter": null,
+          "position": 200,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 391,
+          "title": "Table",
+          "project_id": 97,
+          "view_kind": "table",
+          "filter": null,
+          "position": 300,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 392,
+          "title": "Kanban",
+          "project_id": 97,
+          "view_kind": "kanban",
+          "filter": null,
+          "position": 400,
+          "bucket_configuration_mode": "manual",
+          "bucket_configuration": null,
+          "default_bucket_id": 292,
+          "done_bucket_id": 294,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        }
+      ],
+      "max_permission": null,
+      "created": "2026-10-10T19:54:53Z",
+      "updated": "2026-10-10T19:54:53Z"
+    }
+  },
+  {
+    "index": 13,
+    "method": "GET",
+    "path": "/api/v1/labels/143",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 143,
+      "title": "sbt-1-ModelsLabel-1-title",
+      "description": "sbt-1-ModelsLabel_1-updated",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:54Z"
+    }
+  },
+  {
+    "index": 14,
+    "method": "GET",
+    "path": "/api/v1/teams/17",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 17,
+      "name": "sbt-1-ModelsTeam-2-name",
+      "description": "",
+      "external_id": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "members": [
+        {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-09T10:27:29Z",
+          "admin": true
+        }
+      ],
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:52Z",
+      "is_public": false
+    }
+  },
+  {
+    "index": 15,
+    "method": "GET",
+    "path": "/api/v1/teams/18",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 18,
+      "name": "sbt-1-ModelsTeam-1-name",
+      "description": "",
+      "external_id": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "members": [
+        {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-09T10:27:29Z",
+          "admin": true
+        }
+      ],
+      "created": "2026-10-10T19:54:53Z",
+      "updated": "2026-10-10T19:54:53Z",
+      "is_public": false
+    }
+  },
+  {
+    "index": 16,
+    "method": "POST",
+    "path": "/api/v1/projects/97",
+    "status": 200,
+    "request": {
+      "background_blur_hash": "",
+      "background_information": null,
+      "created": "2026-10-10T19:54:53Z",
+      "description": "sbt-1-ModelsProject_1-updated",
+      "hex_color": "",
+      "id": 97,
+      "identifier": "",
+      "is_archived": false,
+      "is_favorite": false,
+      "max_permission": null,
+      "owner": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "parent_project_id": 0,
+      "position": 6356992,
+      "title": "sbt-1-ModelsProject-1-title",
+      "updated": "2026-10-10T19:54:53Z",
+      "views": [
+        {
+          "id": 389,
+          "title": "List",
+          "project_id": 97,
+          "view_kind": "list",
+          "filter": {
+            "s": "",
+            "sort_by": null,
+            "order_by": null,
+            "filter": "done = false",
+            "filter_include_nulls": false
+          },
+          "position": 100,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 390,
+          "title": "Gantt",
+          "project_id": 97,
+          "view_kind": "gantt",
+          "filter": null,
+          "position": 200,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 391,
+          "title": "Table",
+          "project_id": 97,
+          "view_kind": "table",
+          "filter": null,
+          "position": 300,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 392,
+          "title": "Kanban",
+          "project_id": 97,
+          "view_kind": "kanban",
+          "filter": null,
+          "position": 400,
+          "bucket_configuration_mode": "manual",
+          "bucket_configuration": null,
+          "default_bucket_id": 292,
+          "done_bucket_id": 294,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        }
+      ]
+    },
+    "response": {
+      "id": 97,
+      "title": "sbt-1-ModelsProject-1-title",
+      "description": "sbt-1-ModelsProject_1-updated",
+      "identifier": "",
+      "hex_color": "",
+      "parent_project_id": 0,
+      "owner": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "is_archived": false,
+      "background_information": null,
+      "background_blur_hash": "",
+      "is_favorite": false,
+      "position": 6356992,
+      "views": [
+        {
+          "id": 389,
+          "title": "List",
+          "project_id": 97,
+          "view_kind": "list",
+          "filter": {
+            "s": "",
+            "sort_by": null,
+            "order_by": null,
+            "filter": "done = false",
+            "filter_include_nulls": false
+          },
+          "position": 100,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 390,
+          "title": "Gantt",
+          "project_id": 97,
+          "view_kind": "gantt",
+          "filter": null,
+          "position": 200,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 391,
+          "title": "Table",
+          "project_id": 97,
+          "view_kind": "table",
+          "filter": null,
+          "position": 300,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 392,
+          "title": "Kanban",
+          "project_id": 97,
+          "view_kind": "kanban",
+          "filter": null,
+          "position": 400,
+          "bucket_configuration_mode": "manual",
+          "bucket_configuration": null,
+          "default_bucket_id": 292,
+          "done_bucket_id": 294,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        }
+      ],
+      "max_permission": null,
+      "created": "2026-10-10T19:54:53Z",
+      "updated": "2026-10-10T19:54:55Z"
+    }
+  },
+  {
+    "index": 17,
+    "method": "GET",
+    "path": "/api/v1/projects/97",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 97,
+      "title": "sbt-1-ModelsProject-1-title",
+      "description": "sbt-1-ModelsProject_1-updated",
+      "identifier": "",
+      "hex_color": "",
+      "parent_project_id": 0,
+      "owner": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "is_archived": false,
+      "background_information": null,
+      "background_blur_hash": "",
+      "is_favorite": false,
+      "position": 6356992,
+      "views": [
+        {
+          "id": 389,
+          "title": "List",
+          "project_id": 97,
+          "view_kind": "list",
+          "filter": {
+            "s": "",
+            "sort_by": null,
+            "order_by": null,
+            "filter": "done = false",
+            "filter_include_nulls": false
+          },
+          "position": 100,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 390,
+          "title": "Gantt",
+          "project_id": 97,
+          "view_kind": "gantt",
+          "filter": null,
+          "position": 200,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 391,
+          "title": "Table",
+          "project_id": 97,
+          "view_kind": "table",
+          "filter": null,
+          "position": 300,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        },
+        {
+          "id": 392,
+          "title": "Kanban",
+          "project_id": 97,
+          "view_kind": "kanban",
+          "filter": null,
+          "position": 400,
+          "bucket_configuration_mode": "manual",
+          "bucket_configuration": null,
+          "default_bucket_id": 292,
+          "done_bucket_id": 294,
+          "updated": "2026-10-10T19:54:53Z",
+          "created": "2026-10-10T19:54:53Z"
+        }
+      ],
+      "max_permission": null,
+      "created": "2026-10-10T19:54:53Z",
+      "updated": "2026-10-10T19:54:55Z"
+    }
+  },
+  {
+    "index": 18,
+    "method": "POST",
+    "path": "/api/v1/teams/18",
+    "status": 200,
+    "request": {
+      "created": "2026-10-10T19:54:53Z",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "description": "sbt-1-ModelsTeam_1-updated",
+      "external_id": "",
+      "id": 18,
+      "is_public": false,
+      "members": [
+        {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-09T10:27:29Z",
+          "admin": true
+        }
+      ],
+      "name": "sbt-1-ModelsTeam-1-name",
+      "updated": "2026-10-10T19:54:53Z"
+    },
+    "response": {
+      "id": 18,
+      "name": "sbt-1-ModelsTeam-1-name",
+      "description": "sbt-1-ModelsTeam_1-updated",
+      "external_id": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "members": [
+        {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-09T10:27:29Z",
+          "admin": true
+        }
+      ],
+      "created": "2026-10-10T19:54:53Z",
+      "updated": "2026-10-10T19:54:55Z",
+      "is_public": false
+    }
+  },
+  {
+    "index": 19,
+    "method": "GET",
+    "path": "/api/v1/teams/18",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 18,
+      "name": "sbt-1-ModelsTeam-1-name",
+      "description": "sbt-1-ModelsTeam_1-updated",
+      "external_id": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "members": [
+        {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-09T10:27:29Z",
+          "admin": true
+        }
+      ],
+      "created": "2026-10-10T19:54:53Z",
+      "updated": "2026-10-10T19:54:55Z",
+      "is_public": false
+    }
+  },
+  {
+    "index": 20,
+    "method": "GET",
+    "path": "/api/v1/projects/96",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 96,
+      "title": "sbt-1-ModelsProject-2-title",
+      "description": "",
+      "identifier": "",
+      "hex_color": "",
+      "parent_project_id": 0,
+      "owner": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "is_archived": false,
+      "background_information": null,
+      "background_blur_hash": "",
+      "is_favorite": false,
+      "position": 6291456,
+      "views": [
+        {
+          "id": 385,
+          "title": "List",
+          "project_id": 96,
+          "view_kind": "list",
+          "filter": {
+            "s": "",
+            "sort_by": null,
+            "order_by": null,
+            "filter": "done = false",
+            "filter_include_nulls": false
+          },
+          "position": 100,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 386,
+          "title": "Gantt",
+          "project_id": 96,
+          "view_kind": "gantt",
+          "filter": null,
+          "position": 200,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 387,
+          "title": "Table",
+          "project_id": 96,
+          "view_kind": "table",
+          "filter": null,
+          "position": 300,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 388,
+          "title": "Kanban",
+          "project_id": 96,
+          "view_kind": "kanban",
+          "filter": null,
+          "position": 400,
+          "bucket_configuration_mode": "manual",
+          "bucket_configuration": null,
+          "default_bucket_id": 289,
+          "done_bucket_id": 291,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        }
+      ],
+      "max_permission": null,
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:52Z"
+    }
+  },
+  {
+    "index": 21,
+    "method": "GET",
+    "path": "/api/v1/labels/144",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 144,
+      "title": "sbt-1-ModelsLabel-2-title",
+      "description": "",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "created": "2026-10-10T19:54:54Z",
+      "updated": "2026-10-10T19:54:54Z"
+    }
+  },
+  {
+    "index": 22,
+    "method": "GET",
+    "path": "/api/v1/teams/17",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 17,
+      "name": "sbt-1-ModelsTeam-2-name",
+      "description": "",
+      "external_id": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "members": [
+        {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-09T10:27:29Z",
+          "admin": true
+        }
+      ],
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:52Z",
+      "is_public": false
+    }
+  },
+  {
+    "index": 23,
+    "method": "POST",
+    "path": "/api/v1/teams/17",
+    "status": 200,
+    "request": {
+      "created": "2026-10-10T19:54:52Z",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "description": "sbt-1-ModelsTeam_2-updated",
+      "external_id": "",
+      "id": 17,
+      "is_public": false,
+      "members": [
+        {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-09T10:27:29Z",
+          "admin": true
+        }
+      ],
+      "name": "sbt-1-ModelsTeam-2-name",
+      "updated": "2026-10-10T19:54:52Z"
+    },
+    "response": {
+      "id": 17,
+      "name": "sbt-1-ModelsTeam-2-name",
+      "description": "sbt-1-ModelsTeam_2-updated",
+      "external_id": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "members": [
+        {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-09T10:27:29Z",
+          "admin": true
+        }
+      ],
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:56Z",
+      "is_public": false
+    }
+  },
+  {
+    "index": 24,
+    "method": "GET",
+    "path": "/api/v1/labels/144",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 144,
+      "title": "sbt-1-ModelsLabel-2-title",
+      "description": "",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "created": "2026-10-10T19:54:54Z",
+      "updated": "2026-10-10T19:54:54Z"
+    }
+  },
+  {
+    "index": 25,
+    "method": "POST",
+    "path": "/api/v1/projects/96",
+    "status": 200,
+    "request": {
+      "background_blur_hash": "",
+      "background_information": null,
+      "created": "2026-10-10T19:54:52Z",
+      "description": "sbt-1-ModelsProject_2-updated",
+      "hex_color": "",
+      "id": 96,
+      "identifier": "",
+      "is_archived": false,
+      "is_favorite": false,
+      "max_permission": null,
+      "owner": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "parent_project_id": 0,
+      "position": 6291456,
+      "title": "sbt-1-ModelsProject-2-title",
+      "updated": "2026-10-10T19:54:52Z",
+      "views": [
+        {
+          "id": 385,
+          "title": "List",
+          "project_id": 96,
+          "view_kind": "list",
+          "filter": {
+            "s": "",
+            "sort_by": null,
+            "order_by": null,
+            "filter": "done = false",
+            "filter_include_nulls": false
+          },
+          "position": 100,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 386,
+          "title": "Gantt",
+          "project_id": 96,
+          "view_kind": "gantt",
+          "filter": null,
+          "position": 200,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 387,
+          "title": "Table",
+          "project_id": 96,
+          "view_kind": "table",
+          "filter": null,
+          "position": 300,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 388,
+          "title": "Kanban",
+          "project_id": 96,
+          "view_kind": "kanban",
+          "filter": null,
+          "position": 400,
+          "bucket_configuration_mode": "manual",
+          "bucket_configuration": null,
+          "default_bucket_id": 289,
+          "done_bucket_id": 291,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        }
+      ]
+    },
+    "response": {
+      "id": 96,
+      "title": "sbt-1-ModelsProject-2-title",
+      "description": "sbt-1-ModelsProject_2-updated",
+      "identifier": "",
+      "hex_color": "",
+      "parent_project_id": 0,
+      "owner": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "is_archived": false,
+      "background_information": null,
+      "background_blur_hash": "",
+      "is_favorite": false,
+      "position": 6291456,
+      "views": [
+        {
+          "id": 385,
+          "title": "List",
+          "project_id": 96,
+          "view_kind": "list",
+          "filter": {
+            "s": "",
+            "sort_by": null,
+            "order_by": null,
+            "filter": "done = false",
+            "filter_include_nulls": false
+          },
+          "position": 100,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 386,
+          "title": "Gantt",
+          "project_id": 96,
+          "view_kind": "gantt",
+          "filter": null,
+          "position": 200,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 387,
+          "title": "Table",
+          "project_id": 96,
+          "view_kind": "table",
+          "filter": null,
+          "position": 300,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 388,
+          "title": "Kanban",
+          "project_id": 96,
+          "view_kind": "kanban",
+          "filter": null,
+          "position": 400,
+          "bucket_configuration_mode": "manual",
+          "bucket_configuration": null,
+          "default_bucket_id": 289,
+          "done_bucket_id": 291,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        }
+      ],
+      "max_permission": null,
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:56Z"
+    }
+  },
+  {
+    "index": 26,
+    "method": "GET",
+    "path": "/api/v1/teams/17",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 17,
+      "name": "sbt-1-ModelsTeam-2-name",
+      "description": "sbt-1-ModelsTeam_2-updated",
+      "external_id": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "members": [
+        {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-09T10:27:29Z",
+          "admin": true
+        }
+      ],
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:56Z",
+      "is_public": false
+    }
+  },
+  {
+    "index": 27,
+    "method": "POST",
+    "path": "/api/v1/labels/144",
+    "status": 200,
+    "request": {
+      "created": "2026-10-10T19:54:54Z",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "description": "sbt-1-ModelsLabel_2-updated",
+      "hex_color": "",
+      "id": 144,
+      "title": "sbt-1-ModelsLabel-2-title",
+      "updated": "2026-10-10T19:54:54Z"
+    },
+    "response": {
+      "id": 144,
+      "title": "sbt-1-ModelsLabel-2-title",
+      "description": "sbt-1-ModelsLabel_2-updated",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "created": "2026-10-10T19:54:54Z",
+      "updated": "2026-10-10T19:54:56Z"
+    }
+  },
+  {
+    "index": 28,
+    "method": "GET",
+    "path": "/api/v1/labels/144",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 144,
+      "title": "sbt-1-ModelsLabel-2-title",
+      "description": "sbt-1-ModelsLabel_2-updated",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "created": "2026-10-10T19:54:54Z",
+      "updated": "2026-10-10T19:54:56Z"
+    }
+  },
+  {
+    "index": 29,
+    "method": "GET",
+    "path": "/api/v1/projects/96",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 96,
+      "title": "sbt-1-ModelsProject-2-title",
+      "description": "sbt-1-ModelsProject_2-updated",
+      "identifier": "",
+      "hex_color": "",
+      "parent_project_id": 0,
+      "owner": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "is_archived": false,
+      "background_information": null,
+      "background_blur_hash": "",
+      "is_favorite": false,
+      "position": 6291456,
+      "views": [
+        {
+          "id": 385,
+          "title": "List",
+          "project_id": 96,
+          "view_kind": "list",
+          "filter": {
+            "s": "",
+            "sort_by": null,
+            "order_by": null,
+            "filter": "done = false",
+            "filter_include_nulls": false
+          },
+          "position": 100,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 386,
+          "title": "Gantt",
+          "project_id": 96,
+          "view_kind": "gantt",
+          "filter": null,
+          "position": 200,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 387,
+          "title": "Table",
+          "project_id": 96,
+          "view_kind": "table",
+          "filter": null,
+          "position": 300,
+          "bucket_configuration_mode": "none",
+          "bucket_configuration": null,
+          "default_bucket_id": 0,
+          "done_bucket_id": 0,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        },
+        {
+          "id": 388,
+          "title": "Kanban",
+          "project_id": 96,
+          "view_kind": "kanban",
+          "filter": null,
+          "position": 400,
+          "bucket_configuration_mode": "manual",
+          "bucket_configuration": null,
+          "default_bucket_id": 289,
+          "done_bucket_id": 291,
+          "updated": "2026-10-10T19:54:52Z",
+          "created": "2026-10-10T19:54:52Z"
+        }
+      ],
+      "max_permission": null,
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:56Z"
+    }
+  },
+  {
+    "index": 30,
+    "method": "GET",
+    "path": "/api/v1/labels/143",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 143,
+      "title": "sbt-1-ModelsLabel-1-title",
+      "description": "sbt-1-ModelsLabel_1-updated",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:54:54Z"
+    }
+  },
+  {
+    "index": 31,
+    "method": "POST",
+    "path": "/api/v1/labels/143",
+    "status": 200,
+    "request": {
+      "created": "2026-10-10T19:54:52Z",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "description": "sbt-1-ModelsLabel_1-updated",
+      "hex_color": "",
+      "id": 143,
+      "title": "",
+      "updated": "2026-10-10T19:54:54Z"
+    },
+    "response": {
+      "id": 143,
+      "title": "",
+      "description": "sbt-1-ModelsLabel_1-updated",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:55:01Z"
+    }
+  },
+  {
+    "index": 32,
+    "method": "GET",
+    "path": "/api/v1/labels/143",
+    "status": 200,
+    "request": null,
+    "response": {
+      "id": 143,
+      "title": "",
+      "description": "sbt-1-ModelsLabel_1-updated",
+      "hex_color": "",
+      "created_by": {
+        "id": 1,
+        "name": "",
+        "username": "SBT-tester",
+        "created": "2026-09-20T08:15:00Z",
+        "updated": "2026-10-09T10:27:29Z"
+      },
+      "created": "2026-10-10T19:54:52Z",
+      "updated": "2026-10-10T19:55:01Z"
+    }
+  }
+]

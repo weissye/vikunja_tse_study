@@ -1,0 +1,79 @@
+{
+  "version": "v017",
+  "status": "NOT_ACCEPTED",
+  "live_vikunja": true,
+  "live_execution_started": true,
+  "live_acceptance_passed": false,
+  "seed": 1,
+  "compiler_sha256": "87de002767350a63649ebf1091ee36bdc350da17de8cb8a42718a7eb6b0ac051",
+  "selection_composer_sha256": "2273dcdde230c02b628883e25212869a41c418e3170d16fd14891900f5e06cd4",
+  "instances": 2,
+  "prefix_depth": 6,
+  "candidate": "all",
+  "deduplicated_plans": 32,
+  "duplicates_removed": 8,
+  "selected_candidates": [
+    "RESOURCE:label",
+    "RESOURCE:project",
+    "RESOURCE:task",
+    "RESOURCE:team"
+  ],
+  "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "server_version": "v2.6.0",
+  "base_url": "http://127.0.0.1:3456/api/v1",
+  "contract_authority": "LIVE_DOCUMENT_CANONICAL_EQUALITY_AND_SERVER_VERSION_MATCH",
+  "live_contract_raw_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "live_contract_canonical_sha256": "c81a3387e21c8b6e86f02d39d0b8501a2aced8a1da43629370819beeda85d977",
+  "label_options_status": 204,
+  "label_allowed_methods": [
+    "OPTIONS",
+    "DELETE",
+    "GET",
+    "POST"
+  ],
+  "contract_override": "PUT /labels/{id} -> POST /labels/{id}; CONTRACT_UNCHANGED",
+  "provengo_jar_sha256": "dda4be276ff517faa06b942d587cad2d342c66d83c9959f7eb3c6c77a8b2fc2b",
+  "provengo_version": "0.7.5-SNAPSHOT",
+  "generated_steps": 220,
+  "expected_negative_checks": 46,
+  "bthreads": 221,
+  "expected_parent_checks": 26,
+  "actor_id": 1,
+  "native_exit": 1,
+  "passed_steps": 176,
+  "callbacks": 177,
+  "successful_live_callbacks": 176,
+  "observed_negative_checks": 30,
+  "status_documentation_findings": [
+    {
+      "step": "team/0/negative/MIN_LENGTH/request",
+      "status": 412,
+      "expected_status": 400,
+      "rejected": true,
+      "status_documented": false,
+      "verdict": "ERROR_STATUS_MISMATCH_CANDIDATE"
+    },
+    {
+      "step": "team/0/negative/MAX_LENGTH/request",
+      "status": 412,
+      "expected_status": 400,
+      "rejected": true,
+      "status_documented": false,
+      "verdict": "ERROR_STATUS_MISMATCH_CANDIDATE"
+    },
+    {
+      "step": "project/0/negative/MIN_LENGTH/request",
+      "status": 412,
+      "expected_status": 400,
+      "rejected": true,
+      "status_documented": false,
+      "verdict": "ERROR_STATUS_MISMATCH_CANDIDATE"
+    }
+  ],
+  "rejected_negative_requests": 34,
+  "unchanged_negative_projections": 29,
+  "passed_negative_checks": 29,
+  "observed_parent_checks": 20,
+  "passed_parent_checks": 20,
+  "error": "ValueError: Negative rejection/state acceptance failed"
+}

@@ -1,0 +1,860 @@
+{
+  "bug_candidate": false,
+  "confirmation_policy": "Reproduce the same violated oracle twice, minimize the schedule, and exclude harness/contract causes before confirmation.",
+  "confirmed_product_bug": false,
+  "evaluation_basis": "external HTTP trace plus generated negative oracle manifest",
+  "oracle_summary": {
+    "deleted-comment-delete-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 4,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 4,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 4
+    },
+    "deleted-comment-read-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 4,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 4,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 4
+    },
+    "deleted-comment-update-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 4,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 4,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 4
+    },
+    "deleted-label-delete-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 3,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 3,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 3
+    },
+    "deleted-label-read-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 3,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 3,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 3
+    },
+    "deleted-label-update-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 3,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 3,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 3
+    },
+    "deleted-project-delete-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 1,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 1,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 1
+    },
+    "deleted-project-read-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 1,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 1,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 1
+    },
+    "deleted-project-update-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 1,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 1,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 1
+    },
+    "deleted-relation-delete-rejected-and-absent": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 5,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 5,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 5
+    },
+    "deleted-task-delete-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 6,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 6,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 6
+    },
+    "deleted-task-read-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 6,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 6,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 6
+    },
+    "deleted-task-update-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 6,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 6,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 6
+    },
+    "unknown-comment-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 1,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 1,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 1
+    },
+    "unknown-label-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 1,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 1,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 1
+    },
+    "unknown-project-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 1,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 1,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 1
+    },
+    "unknown-task-rejected": {
+      "counts": {
+        "INCONCLUSIVE": 0,
+        "PASS": 1,
+        "VIOLATED": 0
+      },
+      "expected_witness_count": 1,
+      "missing_witness_count": 0,
+      "status": "PASS",
+      "witness_count": 1
+    }
+  },
+  "profile": "negative-and-conflict-exploration",
+  "run_status": "PASS",
+  "witness_count": 51,
+  "witnesses": [
+    {
+      "expected": {
+        "status_class": "4xx"
+      },
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "unknown-project-rejected",
+      "result": "PASS",
+      "trigger_event": 7
+    },
+    {
+      "expected": {
+        "status_class": "4xx"
+      },
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "unknown-task-rejected",
+      "result": "PASS",
+      "trigger_event": 5
+    },
+    {
+      "expected": {
+        "status_class": "4xx"
+      },
+      "observed": {
+        "status": 403
+      },
+      "oracle_id": "unknown-label-rejected",
+      "result": "PASS",
+      "trigger_event": 17
+    },
+    {
+      "expected": {
+        "status_class": "4xx"
+      },
+      "observed": {
+        "status": 404
+      },
+      "oracle_id": "unknown-comment-rejected",
+      "result": "PASS",
+      "trigger_event": 9
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 238,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/projects/64",
+        "status": 404
+      },
+      "oracle_id": "deleted-project-read-rejected",
+      "result": "PASS",
+      "trigger_event": 245
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 238,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/projects/64",
+        "status": 404
+      },
+      "oracle_id": "deleted-project-update-rejected",
+      "result": "PASS",
+      "trigger_event": 243
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 238,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/projects/64",
+        "status": 404
+      },
+      "oracle_id": "deleted-project-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 244
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 210,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/360",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-read-rejected",
+      "result": "PASS",
+      "trigger_event": 249
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 210,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/360",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-update-rejected",
+      "result": "PASS",
+      "trigger_event": 229
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 210,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/360",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 232
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 211,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/364",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-read-rejected",
+      "result": "PASS",
+      "trigger_event": 253
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 211,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/364",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-update-rejected",
+      "result": "PASS",
+      "trigger_event": 233
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 211,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/364",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 234
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 212,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/365",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-read-rejected",
+      "result": "PASS",
+      "trigger_event": 254
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 212,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/365",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-update-rejected",
+      "result": "PASS",
+      "trigger_event": 221
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 212,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/365",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 222
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 213,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/363",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-read-rejected",
+      "result": "PASS",
+      "trigger_event": 252
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 213,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/363",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-update-rejected",
+      "result": "PASS",
+      "trigger_event": 226
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 213,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/363",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 230
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 214,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/362",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-read-rejected",
+      "result": "PASS",
+      "trigger_event": 251
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 214,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/362",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-update-rejected",
+      "result": "PASS",
+      "trigger_event": 231
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 214,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/362",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 236
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 224,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/361",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-read-rejected",
+      "result": "PASS",
+      "trigger_event": 250
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 224,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/361",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-update-rejected",
+      "result": "PASS",
+      "trigger_event": 239
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 224,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/361",
+        "status": 404
+      },
+      "oracle_id": "deleted-task-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 240
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 178,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/labels/102",
+        "status": 403
+      },
+      "oracle_id": "deleted-label-read-rejected",
+      "result": "PASS",
+      "trigger_event": 246
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 178,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/labels/102",
+        "status": 404
+      },
+      "oracle_id": "deleted-label-update-rejected",
+      "result": "PASS",
+      "trigger_event": 203
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 178,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/labels/102",
+        "status": 404
+      },
+      "oracle_id": "deleted-label-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 204
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 179,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/labels/103",
+        "status": 403
+      },
+      "oracle_id": "deleted-label-read-rejected",
+      "result": "PASS",
+      "trigger_event": 247
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 179,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/labels/103",
+        "status": 404
+      },
+      "oracle_id": "deleted-label-update-rejected",
+      "result": "PASS",
+      "trigger_event": 197
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 179,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/labels/103",
+        "status": 404
+      },
+      "oracle_id": "deleted-label-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 201
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 182,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/labels/104",
+        "status": 403
+      },
+      "oracle_id": "deleted-label-read-rejected",
+      "result": "PASS",
+      "trigger_event": 248
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 182,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/labels/104",
+        "status": 404
+      },
+      "oracle_id": "deleted-label-update-rejected",
+      "result": "PASS",
+      "trigger_event": 202
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 182,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/labels/104",
+        "status": 404
+      },
+      "oracle_id": "deleted-label-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 206
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 130,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/363/comments/133",
+        "status": 404
+      },
+      "oracle_id": "deleted-comment-read-rejected",
+      "result": "PASS",
+      "trigger_event": 155
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 130,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/363/comments/133",
+        "status": 404
+      },
+      "oracle_id": "deleted-comment-update-rejected",
+      "result": "PASS",
+      "trigger_event": 158
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 130,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/363/comments/133",
+        "status": 404
+      },
+      "oracle_id": "deleted-comment-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 170
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 136,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/364/comments/132",
+        "status": 404
+      },
+      "oracle_id": "deleted-comment-read-rejected",
+      "result": "PASS",
+      "trigger_event": 171
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 136,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/364/comments/132",
+        "status": 404
+      },
+      "oracle_id": "deleted-comment-update-rejected",
+      "result": "PASS",
+      "trigger_event": 172
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 136,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/364/comments/132",
+        "status": 404
+      },
+      "oracle_id": "deleted-comment-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 173
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 138,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/361/comments/130",
+        "status": 404
+      },
+      "oracle_id": "deleted-comment-read-rejected",
+      "result": "PASS",
+      "trigger_event": 189
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 138,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/361/comments/130",
+        "status": 404
+      },
+      "oracle_id": "deleted-comment-update-rejected",
+      "result": "PASS",
+      "trigger_event": 192
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 138,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/361/comments/130",
+        "status": 404
+      },
+      "oracle_id": "deleted-comment-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 193
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 142,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/362/comments/131",
+        "status": 404
+      },
+      "oracle_id": "deleted-comment-read-rejected",
+      "result": "PASS",
+      "trigger_event": 177
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 142,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/362/comments/131",
+        "status": 404
+      },
+      "oracle_id": "deleted-comment-update-rejected",
+      "result": "PASS",
+      "trigger_event": 180
+    },
+    {
+      "expected": {
+        "after_successful_delete_event": 142,
+        "status_class": "4xx"
+      },
+      "observed": {
+        "resource_path": "/tasks/362/comments/131",
+        "status": 404
+      },
+      "oracle_id": "deleted-comment-delete-rejected",
+      "result": "PASS",
+      "trigger_event": 183
+    },
+    {
+      "expected": {
+        "delete_status_class": "4xx",
+        "relation_absent": true
+      },
+      "observed": {
+        "read_status": 200,
+        "relation_present": false,
+        "status": 404
+      },
+      "oracle_id": "deleted-relation-delete-rejected-and-absent",
+      "result": "PASS",
+      "trigger_event": 162
+    },
+    {
+      "expected": {
+        "delete_status_class": "4xx",
+        "relation_absent": true
+      },
+      "observed": {
+        "read_status": 200,
+        "relation_present": false,
+        "status": 404
+      },
+      "oracle_id": "deleted-relation-delete-rejected-and-absent",
+      "result": "PASS",
+      "trigger_event": 152
+    },
+    {
+      "expected": {
+        "delete_status_class": "4xx",
+        "relation_absent": true
+      },
+      "observed": {
+        "read_status": 200,
+        "relation_present": false,
+        "status": 404
+      },
+      "oracle_id": "deleted-relation-delete-rejected-and-absent",
+      "result": "PASS",
+      "trigger_event": 167
+    },
+    {
+      "expected": {
+        "delete_status_class": "4xx",
+        "relation_absent": true
+      },
+      "observed": {
+        "read_status": 200,
+        "relation_present": false,
+        "status": 404
+      },
+      "oracle_id": "deleted-relation-delete-rejected-and-absent",
+      "result": "PASS",
+      "trigger_event": 163
+    },
+    {
+      "expected": {
+        "delete_status_class": "4xx",
+        "relation_absent": true
+      },
+      "observed": {
+        "read_status": 200,
+        "relation_present": false,
+        "status": 404
+      },
+      "oracle_id": "deleted-relation-delete-rejected-and-absent",
+      "result": "PASS",
+      "trigger_event": 175
+    }
+  ]
+}

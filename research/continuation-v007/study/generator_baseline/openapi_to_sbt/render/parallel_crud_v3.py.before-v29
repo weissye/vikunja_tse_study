@@ -1,0 +1,361 @@
+"""Concurrent CRUD schedules with symbolic IDs and runtime REST callbacks.
+
+Every branch in this module is decided at sampling time. HTTP codes and
+server-assigned identifiers are handled exclusively by actuation callbacks.
+"""
+from __future__ import annotations
+
+import json
+import re
+
+from .naming import js_string, safe_identifier
+from .stories_js import _minimal_values, _value_js
+from .parallel_crud import _parallel_update_choice
+from ..inference.values import generate_value
+from ..request_variants import select_request_variant
+
+
+def _rv(owner, field):
+    return 'sbt_' + re.sub(r'[^A-Za-z0-9_]', '_', owner + '_' + field)
+
+
+def _arg(field, context='__args'):
+    return context + '[' + js_string(safe_identifier(field)) + ']'
+
+
+def _url(op, context='__args'):
+    parts = re.split(r'(\{[^}]+\})', op.op.path)
+    return ' + '.join(_arg(part[1:-1], context) if part.startswith('{') else js_string(part)
+                      for part in parts if part)
+
+
+def _body(op, context='__args', opaque=None, override=None):
+    if override is not None:
+        return override
+    if opaque is not None:
+        return 'JSON.stringify(' + opaque + ')'
+    if not op.op.request_body:
+        return None
+    names = op.body_props
+    if not names:
+        raise ValueError('No contract-derived body for ' + op.op.path)
+    fields = ','.join(js_string(raw) + ':' + _arg(raw, context) for raw in names)
+    return 'JSON.stringify({' + fields + '})'
+
+
+def _callback(op, *, capture=None, lookup=None, store_body=None,
+              changed_field=None, changed_value=None, expected=None, build_update=None):
+    codes = expected if expected is not None else op.success_codes
+    if not codes:
+        raise ValueError('No documented successful status for ' + op.op.path)
+    lines = ['function(response) {',
+             'if (' + _value_js(codes) + '.indexOf(response.code) < 0) {'
+             ' pvg.fail(' + js_string('Unexpected HTTP for ' + op.op.method + ' ' + op.op.path) +
+             ' + ":" + response.code); return; }']
+    if lookup:
+        rv, field, expected_rv = lookup
+        lines += [
+            'var items; try { items = JSON.parse(response.body); }'
+            ' catch(err) { pvg.fail("lookup JSON invalid"); return; }',
+            'if (!Array.isArray(items)) { pvg.fail("lookup is not an array"); return; }',
+            'var matches = items.filter(function(item){ return item && item[' + js_string(field) +
+            '] === pvg.rtv.get(' + js_string(expected_rv) + '); });',
+            'if (matches.length !== 1 || !matches[0].id) {'
+            ' pvg.fail("exact lookup missing or ambiguous"); return; }',
+            'pvg.rtv.set(' + js_string(rv) + ', matches[0].id);',
+        ]
+    if capture:
+        rv, key = capture
+        lines += [
+            'var obj = null; try { obj = JSON.parse(response.body); } catch(err) {}',
+            'var value = obj && typeof obj === "object" ? (obj[' + js_string(key) +
+            '] === undefined ? obj.id : obj[' + js_string(key) + ']) : null;',
+            'if (value === undefined || value === null || value === "") {',
+            ' var headers = response.headers || {}; var location = headers.Location || headers.location;',
+            ' if (!location) { for (var name in headers) {'
+            ' if (name.toLowerCase() === "location") { location = headers[name]; break; } } }',
+            ' if (location) value = String(location).split("?")[0].replace(/\\/$/, "").split("/").pop();',
+            '}',
+            'if (value === undefined || value === null || value === "") {'
+            ' pvg.fail("create identifier unavailable"); return; }',
+            'pvg.rtv.set(' + js_string(rv) + ', value);',
+        ]
+    if store_body:
+        lines += ['try { JSON.parse(response.body); } catch(err) {'
+                  ' pvg.fail("read body JSON invalid"); return; }',
+                  'pvg.rtv.set(' + js_string(store_body) + ', response.body);']
+    if build_update:
+        body_var, update_field, update_value = build_update
+        lines += ['var updateBody; try { updateBody = JSON.parse(response.body); }'
+                  ' catch(err) { pvg.fail("update base JSON invalid"); return; }',
+                  'if (!updateBody || typeof updateBody !== "object" ||'
+                  ' Array.isArray(updateBody)) { pvg.fail("update base is not an object"); return; }',
+                  'updateBody[' + js_string(update_field) + ']=' + update_value + ';',
+                  'pvg.rtv.set(' + js_string(body_var) + ',JSON.stringify(updateBody));']
+    if changed_field is not None:
+        lines += ['var observed; try { observed = JSON.parse(response.body); }'
+                  ' catch(err) { pvg.fail("update readback JSON invalid"); return; }',
+                  'if (!observed || observed[' + js_string(changed_field) + '] !== ' +
+                  changed_value + ') { pvg.fail("update readback mismatch"); return; }']
+    lines += ['pvg.success("contract response verified");', '}']
+    return ' '.join(lines)
+
+
+def _request(op, *, context='__args', opaque=None, override_body=None,
+             capture=None, lookup=None, store_body=None, changed_field=None,
+             changed_value=None, expected=None, query_overrides=None,
+             build_update=None):
+    method = op.op.method.lower()
+    if method not in ('get', 'post', 'put', 'patch', 'delete'):
+        raise ValueError('Unsupported CRUD method ' + method)
+    options = ['headers:{Authorization:"Bearer @{getEnv(\'KC_STAGE2_ACCESS_TOKEN\')}"}',
+               'expectedResponseCodes:' + _value_js(expected if expected is not None else op.success_codes)]
+    body = _body(op, context, opaque, override_body)
+    if body is not None:
+        options.append('body:' + body)
+    query = {q: _arg(q, context) for q in op.query_params}
+    query.update(query_overrides or {})
+    if query:
+        fields = []
+        for raw, expression in query.items():
+            if raw in (query_overrides or {}):
+                fields.append('q[' + js_string(raw) + ']=' + expression + ';')
+            else:
+                fields.append('if(' + expression + '!==undefined && ' + expression +
+                              '!==null) q[' + js_string(raw) + ']=' + expression + ';')
+        options.append('parameters:(function(){var q={};' + ''.join(fields) + 'return q;})()')
+    options.append('callback:' + _callback(op, capture=capture, lookup=lookup,
+                                           store_body=store_body,
+                                           changed_field=changed_field,
+                                           changed_value=changed_value, expected=expected,
+                                           build_update=build_update))
+    return 'svc.' + method + '(' + _url(op, context) + ',{' + ','.join(options) + '});'
+
+
+def render_parallel_crud_v3(plan, slug, processes):
+    if not 1 <= processes <= 8 or not 1 <= plan.instances_per_entity <= 8:
+        raise ValueError('logical process / entity instances out of range')
+    by_key = {ep.entity.key: ep for ep in plan.entities}
+    children = {key: set() for key in by_key}
+    for ep in plan.entities:
+        for edge in ep.dependencies:
+            if edge.target in by_key:
+                children[edge.target].add(ep.entity.key)
+    lines = [
+        '// Generated symbolic concurrent CRUD. Callback data is runtime-only.',
+        '// @provengo summon rest', '// @provengo summon rtv',
+        'const SBT_POOL = {}; const SBT_FINISHED = {};',
+        'bthread("parallel-crud:state", function(){ while(true){',
+        'let e=sync({waitFor:EventSet("CRUD state",function(x){'
+        'return x.name==="SBT:InstanceReady" || x.name==="SBT:WorkerFinished";})});',
+        'let k=e.data.process+":"+e.data.entity;',
+        'if(e.name==="SBT:InstanceReady") {'
+        ' if(!SBT_POOL[k]) SBT_POOL[k]=[];'
+        ' SBT_POOL[k].push({owner:e.data.owner,values:e.data.values}); }',
+        'else { if(!SBT_FINISHED[k]) SBT_FINISHED[k]={};'
+        ' SBT_FINISHED[k][e.data.owner]=true;'
+        ' if(SBT_POOL[k]) SBT_POOL[k]=SBT_POOL[k].filter(function(v){return v.owner!==e.data.owner;}); }',
+        '} });',
+    ]
+    for process in range(1, processes + 1):
+        for key in plan.graph.creation_order:
+            ep = by_key.get(key)
+            if ep is None or ep.create_op is None:
+                continue
+            deps = sorted({e.target for e in ep.dependencies if e.target in by_key},
+                          key=lambda k: (-k.count('/'), k))
+            update = _parallel_update_choice(ep) if ep.get_op else None
+            stages = (['readback'] if ep.get_op else []) + ['create']
+            if ep.get_op:
+                stages.append('read')
+            if update:
+                stages.append('update')
+            if ep.delete_op:
+                stages.append('delete')
+            for instance in range(1, plan.instances_per_entity + 1):
+                owner = 'P' + str(process) + ':' + key + ':' + str(instance)
+                tag = js_string(owner)
+                prefix = 'p' + str(process) + '_' + safe_identifier(key.replace('/', '_')) + '_' + str(instance)
+                body_rv = _rv(owner, 'read_body')
+                update_body_rv = _rv(owner, 'update_body')
+                update_field = update[3] if update else None
+                update_value = (_value_js(generate_value(update[4], plan.seed,
+                                  'parallel-crud.' + owner + '.' + update[2], for_request=True))
+                                if update else None)
+                # The observer waits on the worker's *symbolic* stage. Its
+                # own REST GET is a real action and its callback is the oracle.
+                lines += [
+                    'bthread("verify:' + owner + '", function(){',
+                    'for (let stage of ' + _value_js(stages) + ') {',
+                    'let step=sync({waitFor:EventSet("step-or-finish:' + owner + '",function(e){'
+                    'return e.data && e.data.owner===' + tag +
+                    ' && ((e.name==="SBT:CrudStep" && e.data.stage===stage)'
+                    ' || e.name==="SBT:WorkerFinished");})});',
+                    'if(step.name==="SBT:WorkerFinished") return;',
+                ]
+                if ep.get_op:
+                    lines += ['if(stage==="create" || stage==="readback") {',
+                              _request(ep.get_op, context='step.data.values'), '}']
+                    # Create/readback GET needs existence; update GET also
+                    # validates the modified value with a separate callback.
+                    if update:
+                        lines += ['if(stage==="update") ' + _request(
+                            ep.get_op, context='step.data.values',
+                            changed_field=update_field, changed_value=update_value)]
+                    if 404 in ep.get_op.error_codes:
+                        lines += ['if(stage==="delete") ' + _request(
+                            ep.get_op, context='step.data.values', expected=[404])]
+                lines += ['sync({request:Event("SBT:CrudVerified",{owner:' + tag +
+                          ',stage:stage,ok:true})});', '}', '});']
+                has_lookup = (bool(ep.key.fields) and
+                              ep.key.fields[-1].lower().endswith(('id', 'uuid')) and
+                              any(op.kind == 'list' and any(q in op.query_params and
+                                      safe_identifier(q) in ep.create_op.params
+                                      for q in ('username', 'name', 'alias')) for op in ep.ops))
+                if has_lookup:
+                    lines += [
+                        'bthread("verify-lookup:' + owner + '", function(){',
+                        'let step=sync({waitFor:EventSet("lookup-or-finish:' + owner + '",function(e){'
+                        'return e.data && e.data.owner===' + tag +
+                        ' && ((e.name==="SBT:CrudStep" && e.data.stage==="lookup")'
+                        ' || e.name==="SBT:WorkerFinished");})});',
+                        'if(step.name==="SBT:CrudStep")'
+                        ' sync({request:Event("SBT:CrudVerified",{owner:' + tag +
+                        ',stage:"lookup",ok:true})});',
+                        '});',
+                    ]
+                lines += ['bthread("crud:' + owner + '", function() {',
+                          'let __args={}; let __parentBindings={};',
+                          'function finish(reason){ sync({request:Event("SBT:WorkerFinished",'
+                          '{process:' + str(process) + ',entity:' + js_string(key) +
+                          ',owner:' + tag + ',reason:reason})}); }',
+                          'function verified(stage){ sync({request:Event("SBT:CrudStep",'
+                          '{owner:' + tag + ',process:' + str(process) +
+                          ',entity:' + js_string(key) + ',stage:stage,'
+                          'values:Object.assign({},__args)})});'
+                          'sync({waitFor:EventSet("verified:' + owner + '",function(e){'
+                          'return e.name==="SBT:CrudVerified" && e.data.owner===' + tag +
+                          ' && e.data.stage===stage;})}); }']
+                for dep in deps:
+                    pool = js_string(str(process) + ':' + dep)
+                    lines += ['{ function matchingParents(){ return (SBT_POOL[' + pool +
+                              ']||[]).filter(function(parent){ return __args.realm===undefined'
+                              ' || parent.values.realm===__args.realm; }); }',
+                              'while(!matchingParents().length){',
+                              'if(SBT_FINISHED[' + pool + '] && Object.keys(SBT_FINISHED[' + pool +
+                              ']).length===' + str(plan.instances_per_entity) +
+                              '){ finish("parent-unavailable"); return; }',
+                              'sync({waitFor:EventSet("parent:' + owner + '",function(e){'
+                              'return (e.name==="SBT:InstanceReady"||e.name==="SBT:WorkerFinished")'
+                              ' && e.data.process===' + str(process) +
+                              ' && e.data.entity===' + js_string(dep) + ';})});', '}',
+                              'let candidates=matchingParents();',
+                              'let choices=candidates.map(function(parent,index){return Event("SBT:BindParent",'
+                              '{child:' + tag + ',type:' + js_string(dep) + ',index:index});});',
+                              'let picked=sync({request:choices});',
+                              '__parentBindings[' + js_string(dep) + ']=candidates[picked.data.index].values;',
+                              'if(__args.realm===undefined && __parentBindings[' + js_string(dep) +
+                              '].realm!==undefined) __args.realm=__parentBindings[' + js_string(dep) + '].realm;']
+                    for edge in ep.dependencies:
+                        if edge.target == dep:
+                            field = safe_identifier(edge.field_name)
+                            target_key = (field if field in {safe_identifier(k) for k in by_key[dep].key.fields}
+                                          else safe_identifier(by_key[dep].key.fields[-1]))
+                            lines += ['__args[' + js_string(field) + ']='
+                                      '__parentBindings[' + js_string(dep) + '][' +
+                                      js_string(target_key) + '];']
+                    lines.append('}')
+                declarations, values = _minimal_values(
+                    ep.create_op, prefix, plan.seed,
+                    dependency_values={safe_identifier(e.field_name):
+                                       _arg(e.field_name) for e in ep.dependencies if e.target in deps})
+                lines.extend(declarations)
+                for field, expr in values.items():
+                    lines.append('__args[' + js_string(field) + ']=' + expr + ';')
+                media, create_schema = select_request_variant(ep.create_op.op)
+                for raw, schema in (create_schema.get('properties', {})
+                                    if isinstance(create_schema, dict) else {}).items():
+                    field = safe_identifier(raw)
+                    if (field not in values and field not in ('realm',) and
+                            field in ('username', 'clientId', 'name', 'alias') and
+                            field in ep.create_op.params and isinstance(schema, dict) and
+                            schema.get('type') == 'string' and not schema.get('readOnly')):
+                        lines.append('__args[' + js_string(field) + ']=' + _value_js(generate_value(
+                            schema, plan.seed, 'parallel-crud.' + owner + '.create.' + field,
+                            for_request=True)) + ';')
+                        values[field] = 'seeded'
+                opaque = None
+                if ep.create_op.op.request_body and not ep.create_op.body_props:
+                    if key == 'admin/realms' and ep.key.fields == ['realm']:
+                        realm = generate_value({'type': 'string'}, plan.seed,
+                                               'parallel-crud.' + owner + '.realm', for_request=True)
+                        lines.append('__args.realm=' + _value_js(realm) + ';')
+                        opaque = '{realm:__args.realm,enabled: true}'
+                        values['realm'] = 'seeded'
+                    else:
+                        edge = next((e for e in ep.dependencies
+                                     if any(p.rule == 'D5:primitive_association_id_description'
+                                            for p in e.provenance)), None)
+                        if edge is None:
+                            raise ValueError('Opaque body has no inferred parent ID: ' + key)
+                        opaque = _arg(edge.field_name)
+                own = safe_identifier(ep.key.fields[-1]) if ep.key.fields else None
+                known = set(values) | {safe_identifier(e.field_name) for e in ep.dependencies}
+                needs_capture = bool(own and own not in known)
+                own_rv = _rv(owner, own) if needs_capture else None
+                lookup_op = next((op for op in ep.ops if op.kind == 'list' and
+                                  any(q in op.query_params and safe_identifier(q) in values
+                                      for q in ('username', 'name', 'alias'))), None)
+                lookup_label = next((q for q in ('username', 'name', 'alias') if lookup_op and
+                                     q in lookup_op.query_params and safe_identifier(q) in values), None)
+                use_lookup = bool(needs_capture and lookup_label and own.lower().endswith(('id', 'uuid')))
+                if use_lookup and not has_lookup:
+                    raise ValueError('Lookup schedule lacks a verifier for ' + owner)
+                lines.append(_request(ep.create_op, opaque=opaque,
+                                      capture=(own_rv, own) if needs_capture and not use_lookup else None))
+                if use_lookup:
+                    expected_rv = _rv(owner, 'lookup_' + lookup_label)
+                    lines.append('rtv.doStore(' + js_string(expected_rv) +
+                                 ',' + _arg(lookup_label) + ');')
+                    query = {lookup_label: _arg(lookup_label)}
+                    if 'exact' in lookup_op.query_params:
+                        query['exact'] = 'true'
+                    lines.append(_request(lookup_op, lookup=(own_rv, lookup_label,
+                                                               expected_rv),
+                                          query_overrides=query))
+                    lines.append('verified("lookup");')
+                if needs_capture:
+                    lines.append('__args[' + js_string(own) + ']=' +
+                                 js_string('@{' + own_rv + '}') + ';')
+                for field in ep.key.fields:
+                    name = safe_identifier(field)
+                    if name not in known and name != own:
+                        raise ValueError('Unbound composite key field ' + name + ' for ' + key)
+                if ep.get_op:
+                    lines += [_request(ep.get_op), 'verified("readback");']
+                lines += ['verified("create");',
+                          'sync({request:Event("SBT:InstanceReady",{process:' + str(process) +
+                          ',entity:' + js_string(key) + ',owner:' + tag +
+                          ',values:Object.assign({},__args)})});']
+                if ep.get_op:
+                    lines += [_request(ep.get_op, store_body=body_rv,
+                                       build_update=(update_body_rv, update_field, update_value)
+                                       if update else None), 'verified("read");']
+                if update:
+                    op = update[5]
+                    if op.op.method == 'PATCH':
+                        changed = 'JSON.stringify({' + js_string(update_field) + ':' + update_value + '})'
+                    else:
+                        changed = js_string('@{' + update_body_rv + '}')
+                    lines += [_request(op, override_body=changed), 'verified("update");']
+                for child in sorted(children[key]):
+                    pool = js_string(str(process) + ':' + child)
+                    lines += ['while(!SBT_FINISHED[' + pool + '] || Object.keys(SBT_FINISHED[' +
+                              pool + ']).length<' + str(plan.instances_per_entity) + '){',
+                              'sync({waitFor:EventSet("child:' + owner + '",function(e){'
+                              'return e.name==="SBT:WorkerFinished" && e.data.process===' +
+                              str(process) + ' && e.data.entity===' + js_string(child) + ';})});', '}']
+                if ep.delete_op:
+                    lines += [_request(ep.delete_op), 'verified("delete");']
+                lines += ['finish("complete");', '});']
+    return '\n'.join(lines) + '\n'

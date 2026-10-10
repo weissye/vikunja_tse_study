@@ -1,0 +1,40 @@
+{
+  "evaluation_basis": "external redacted HTTP trace",
+  "event_count": 23,
+  "observed_ids": {
+    "project_id": 16,
+    "task_a_id": 16,
+    "task_b_id": 17
+  },
+  "passed_count": 21,
+  "persisted_update_fields": {
+    "done": true,
+    "title": "title_60445"
+  },
+  "phase3b_pilot_passed": true,
+  "profile": "validated-relation-lifecycle",
+  "required_count": 21,
+  "witnesses": {
+    "01_project_created": true,
+    "02_project_read": true,
+    "03_task_a_created": true,
+    "04_task_a_read": true,
+    "05_task_b_created": true,
+    "06_task_b_read": true,
+    "07_relation_created": true,
+    "08_relation_observable_from_a": true,
+    "09_relation_observable_from_b": true,
+    "10_task_updated": true,
+    "11_update_persisted": true,
+    "12_relation_survived_update": true,
+    "13_relation_deleted": true,
+    "14_relation_absent_from_a": true,
+    "15_relation_absent_from_b": true,
+    "16_relation_recreated": true,
+    "17_task_b_deleted": true,
+    "18_no_dangling_relation": true,
+    "19_task_a_deleted": true,
+    "20_project_deleted": true,
+    "21_deletions_observable": true
+  }
+}

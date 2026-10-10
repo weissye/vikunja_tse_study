@@ -1,0 +1,190 @@
+{
+  "oracles": [
+    {
+      "assertions": [
+        {
+          "type": "collection_contains_bound_label"
+        }
+      ],
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "task-labels-list",
+        "path_template": "/tasks/{task}/labels",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "label-attachment-visible",
+      "trigger": {
+        "method": "POST",
+        "operation_id": "task-labels-create",
+        "path_template": "/tasks/{task}/labels",
+        "success_statuses": [
+          201
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "type": "collection_excludes_bound_label"
+        }
+      ],
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "task-labels-list",
+        "path_template": "/tasks/{task}/labels",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "label-detachment-absent",
+      "trigger": {
+        "method": "DELETE",
+        "operation_id": "task-labels-delete",
+        "path_template": "/tasks/{task}/labels/{label}",
+        "success_statuses": [
+          204
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "type": "created_comment_visible_with_written_text"
+        }
+      ],
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "task-comments-read",
+        "path_template": "/tasks/{task}/comments/{commentid}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "comment-create-visible",
+      "trigger": {
+        "method": "POST",
+        "operation_id": "task-comments-create",
+        "path_template": "/tasks/{task}/comments",
+        "success_statuses": [
+          201
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "type": "written_comment_persists"
+        }
+      ],
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "task-comments-read",
+        "path_template": "/tasks/{task}/comments/{commentid}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "comment-update-persistence",
+      "trigger": {
+        "method": "PUT",
+        "operation_id": "task-comments-update",
+        "path_template": "/tasks/{task}/comments/{commentid}",
+        "success_statuses": [
+          200
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "type": "comment_absent"
+        }
+      ],
+      "confidence": "high",
+      "observation": {
+        "absence_statuses": [
+          404
+        ],
+        "method": "GET",
+        "path_template": "/tasks/{task}/comments/{commentid}"
+      },
+      "oracle_id": "comment-delete-absence",
+      "trigger": {
+        "method": "DELETE",
+        "operation_id": "task-comments-delete",
+        "path_template": "/tasks/{task}/comments/{commentid}",
+        "success_statuses": [
+          204
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "type": "relation_visible_from_both_endpoints"
+        }
+      ],
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "tasks-read",
+        "path_template": "/tasks/{task}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "relation-create-visible",
+      "trigger": {
+        "method": "POST",
+        "operation_id": "tasks-relations-create",
+        "path_template": "/tasks/{task}/relations",
+        "success_statuses": [
+          201
+        ]
+      }
+    },
+    {
+      "assertions": [
+        {
+          "type": "relation_absent_from_source"
+        }
+      ],
+      "confidence": "high",
+      "observation": {
+        "method": "GET",
+        "operation_id": "tasks-read",
+        "path_template": "/tasks/{task}",
+        "success_statuses": [
+          200
+        ]
+      },
+      "oracle_id": "relation-delete-absence",
+      "trigger": {
+        "method": "DELETE",
+        "operation_id": "tasks-relations-delete",
+        "path_template": "/tasks/{task}/relations/{relationKind}/{otherTask}",
+        "success_statuses": [
+          204
+        ]
+      }
+    }
+  ],
+  "policy": {
+    "evidence_basis": "external HTTP trace only",
+    "missing_observation": "INCONCLUSIVE",
+    "semantic_mismatch": "VIOLATED",
+    "violation_is": "semantic anomaly candidate, not automatically a confirmed product bug"
+  },
+  "profile": "verified-association-actions",
+  "schema_version": 1,
+  "source": {
+    "kind": "openapi-inferred",
+    "openapi_sha256": "01206e4c7fd3796ec26081c530b0c5332c74f7a245043784cf2046e59ca0d941"
+  }
+}

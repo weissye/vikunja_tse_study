@@ -1,0 +1,58 @@
+{
+  "edges": [
+    {
+      "field_name": "ownerCustomerId",
+      "source": "cars",
+      "target": "customers"
+    },
+    {
+      "field_name": "homeGarageId",
+      "source": "cars",
+      "target": "garages"
+    },
+    {
+      "field_name": "preferredGarageId",
+      "source": "customers",
+      "target": "garages"
+    },
+    {
+      "field_name": "chainId",
+      "source": "garages",
+      "target": "chains"
+    },
+    {
+      "field_name": "carVin",
+      "source": "periodic-maintenance",
+      "target": "cars"
+    },
+    {
+      "field_name": "garageId",
+      "source": "periodic-maintenance",
+      "target": "garages"
+    },
+    {
+      "field_name": "carVin",
+      "source": "repair-orders",
+      "target": "cars"
+    },
+    {
+      "field_name": "customerId",
+      "source": "repair-orders",
+      "target": "customers"
+    },
+    {
+      "field_name": "garageId",
+      "source": "repair-orders",
+      "target": "garages"
+    }
+  ],
+  "nodes": [
+    "cars",
+    "chains",
+    "customers",
+    "garages",
+    "periodic-maintenance",
+    "repair-orders"
+  ],
+  "system": "garage"
+}
