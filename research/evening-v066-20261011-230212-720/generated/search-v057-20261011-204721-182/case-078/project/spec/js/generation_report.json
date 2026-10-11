@@ -1,0 +1,3501 @@
+{
+  "status": "GENERATED_NOT_NATIVE_EXECUTED",
+  "source_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "contract_version": "v2.6.0",
+  "contract_normalization": {
+    "mode": "SWAGGER2_JSON_INTERNAL_VIEW",
+    "source_unchanged": true,
+    "methods_unchanged": true,
+    "ref_rewrite": "#/definitions/ -> #/components/schemas/",
+    "bearer_mapping": "Authorization header API-key declaration treated as bearer integration hypothesis"
+  },
+  "method_adapter": {
+    "version": "v007",
+    "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+    "evidence": "Previously observed local OPTIONS allows POST, not PUT. Runner must re-check this evidence before live generation.",
+    "rules": [
+      {
+        "path": "/labels/{id}",
+        "source_method": "put",
+        "effective_method": "post"
+      }
+    ]
+  },
+  "seed": 1,
+  "instances": 2,
+  "scope_paths": [
+    "/projects",
+    "/projects/{id}/tasks",
+    "/labels"
+  ],
+  "entities": [
+    {
+      "entity": "ModelsProject",
+      "source": [
+        {
+          "pointer": "#/paths/~1projects/put",
+          "rule": "collection creation with 201 plus unique item GET"
+        },
+        {
+          "pointer": "#/paths/~1projects~1{id}/get",
+          "rule": "response id convention; route parameter matched to property"
+        }
+      ],
+      "create_dependencies": [],
+      "embedded_links": [],
+      "identity_mode": "object",
+      "readback": "request-derived projection plus stable identity",
+      "update_field": "description",
+      "delete": "not emitted: absence response is not explicitly documented",
+      "complex_actions": "not emitted: transition effects are not specified by schemas alone"
+    },
+    {
+      "entity": "ModelsTask",
+      "source": [
+        {
+          "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+          "rule": "collection creation with 201 plus unique item GET"
+        },
+        {
+          "pointer": "#/paths/~1tasks~1{id}/get",
+          "rule": "response id convention; route parameter matched to property"
+        },
+        {
+          "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+          "rule": "PATH_PARENT_FROM_SELECTED_COLLECTION_PREFIX",
+          "target": "ModelsProject"
+        }
+      ],
+      "create_dependencies": [
+        {
+          "field": "id",
+          "target": "ModelsProject",
+          "object": false,
+          "path_only": true,
+          "pointer": "#/paths/~1projects~1{id}~1tasks/put"
+        }
+      ],
+      "embedded_links": [],
+      "identity_mode": "object",
+      "readback": "request-derived projection plus stable identity",
+      "update_field": "description",
+      "delete": "not emitted: absence response is not explicitly documented",
+      "complex_actions": "not emitted: transition effects are not specified by schemas alone"
+    },
+    {
+      "entity": "ModelsLabel",
+      "source": [
+        {
+          "pointer": "#/paths/~1labels/put",
+          "rule": "collection creation with 201 plus unique item GET"
+        },
+        {
+          "pointer": "#/paths/~1labels~1{id}/get",
+          "rule": "response id convention; route parameter matched to property"
+        },
+        {
+          "pointer": "#/paths/~1labels~1{id}/put",
+          "rule": "EXPLICIT_METHOD_COMPATIBILITY_ADAPTER",
+          "evidence": "Previously observed local OPTIONS allows POST, not PUT. Runner must re-check this evidence before live generation."
+        }
+      ],
+      "create_dependencies": [],
+      "embedded_links": [],
+      "identity_mode": "object",
+      "readback": "request-derived projection plus stable identity",
+      "update_field": "description",
+      "delete": "not emitted: absence response is not explicitly documented",
+      "complex_actions": "not emitted: transition effects are not specified by schemas alone"
+    }
+  ],
+  "contribution": null,
+  "authentication": {
+    "scheme": "JWTKeyAuth",
+    "external_token": true,
+    "source": "#/components/securitySchemes/JWTKeyAuth"
+  },
+  "project_config": "config/provengo.yml",
+  "inference_policy": "generic schema/title/key conventions; ambiguous cases fail; these conventions are not mathematical consequences of OpenAPI",
+  "negative_schema": {
+    "version": "v007",
+    "cases": [
+      {
+        "id": "ModelsProject/background_blur_hash/TYPE_NUMBER",
+        "resource": "ModelsProject",
+        "field": "background_blur_hash",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/background_blur_hash/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/background_blur_hash/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/background_blur_hash/TYPE_BOOLEAN",
+        "resource": "ModelsProject",
+        "field": "background_blur_hash",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/background_blur_hash/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/background_blur_hash/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/background_blur_hash/TYPE_ARRAY",
+        "resource": "ModelsProject",
+        "field": "background_blur_hash",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/background_blur_hash/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/background_blur_hash/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/background_blur_hash/TYPE_OBJECT",
+        "resource": "ModelsProject",
+        "field": "background_blur_hash",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/background_blur_hash/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/background_blur_hash/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/created/TYPE_NUMBER",
+        "resource": "ModelsProject",
+        "field": "created",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/created/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/created/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/created/TYPE_BOOLEAN",
+        "resource": "ModelsProject",
+        "field": "created",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/created/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/created/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/created/TYPE_ARRAY",
+        "resource": "ModelsProject",
+        "field": "created",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/created/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/created/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/created/TYPE_OBJECT",
+        "resource": "ModelsProject",
+        "field": "created",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/created/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/created/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/description/TYPE_NUMBER",
+        "resource": "ModelsProject",
+        "field": "description",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/description/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/description/TYPE_BOOLEAN",
+        "resource": "ModelsProject",
+        "field": "description",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/description/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/description/TYPE_ARRAY",
+        "resource": "ModelsProject",
+        "field": "description",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/description/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/description/TYPE_OBJECT",
+        "resource": "ModelsProject",
+        "field": "description",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/description/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/hex_color/TYPE_NUMBER",
+        "resource": "ModelsProject",
+        "field": "hex_color",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/hex_color/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/hex_color/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/hex_color/TYPE_BOOLEAN",
+        "resource": "ModelsProject",
+        "field": "hex_color",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/hex_color/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/hex_color/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/hex_color/TYPE_ARRAY",
+        "resource": "ModelsProject",
+        "field": "hex_color",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/hex_color/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/hex_color/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/hex_color/TYPE_OBJECT",
+        "resource": "ModelsProject",
+        "field": "hex_color",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/hex_color/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/hex_color/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/hex_color/MAX_LENGTH",
+        "resource": "ModelsProject",
+        "field": "hex_color",
+        "kind": "MAX_LENGTH",
+        "mutation": "replace",
+        "invalid_value": "xxxxxxxx",
+        "constraint": "maxLength",
+        "declared_constraint": 7,
+        "source_pointer": "#/definitions/models.Project/properties/hex_color/maxLength",
+        "schema_pointer": "#/components/schemas/models.Project/properties/hex_color/maxLength",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/id/TYPE_STRING",
+        "resource": "ModelsProject",
+        "field": "id",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Project/properties/id/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/id/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/id/INTEGER_FRACTION",
+        "resource": "ModelsProject",
+        "field": "id",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Project/properties/id/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/id/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/identifier/TYPE_NUMBER",
+        "resource": "ModelsProject",
+        "field": "identifier",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/identifier/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/identifier/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/identifier/TYPE_BOOLEAN",
+        "resource": "ModelsProject",
+        "field": "identifier",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/identifier/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/identifier/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/identifier/TYPE_ARRAY",
+        "resource": "ModelsProject",
+        "field": "identifier",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/identifier/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/identifier/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/identifier/TYPE_OBJECT",
+        "resource": "ModelsProject",
+        "field": "identifier",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/identifier/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/identifier/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/identifier/MAX_LENGTH",
+        "resource": "ModelsProject",
+        "field": "identifier",
+        "kind": "MAX_LENGTH",
+        "mutation": "replace",
+        "invalid_value": "xxxxxxxxxxx",
+        "constraint": "maxLength",
+        "declared_constraint": 10,
+        "source_pointer": "#/definitions/models.Project/properties/identifier/maxLength",
+        "schema_pointer": "#/components/schemas/models.Project/properties/identifier/maxLength",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/is_archived/TYPE_STRING",
+        "resource": "ModelsProject",
+        "field": "is_archived",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "boolean",
+        "source_pointer": "#/definitions/models.Project/properties/is_archived/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/is_archived/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/is_favorite/TYPE_STRING",
+        "resource": "ModelsProject",
+        "field": "is_favorite",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "boolean",
+        "source_pointer": "#/definitions/models.Project/properties/is_favorite/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/is_favorite/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/max_permission/TYPE_STRING",
+        "resource": "ModelsProject",
+        "field": "max_permission",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Permission/type",
+        "schema_pointer": "#/components/schemas/models.Permission/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/max_permission/INTEGER_FRACTION",
+        "resource": "ModelsProject",
+        "field": "max_permission",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Permission/type",
+        "schema_pointer": "#/components/schemas/models.Permission/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": [
+          "enum"
+        ]
+      },
+      {
+        "id": "ModelsProject/max_permission/ENUM",
+        "resource": "ModelsProject",
+        "field": "max_permission",
+        "kind": "ENUM",
+        "mutation": "replace",
+        "invalid_value": 918273645,
+        "constraint": "enum",
+        "declared_constraint": [
+          0,
+          1,
+          2
+        ],
+        "source_pointer": "#/definitions/models.Permission/enum",
+        "schema_pointer": "#/components/schemas/models.Permission/enum",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/parent_project_id/TYPE_STRING",
+        "resource": "ModelsProject",
+        "field": "parent_project_id",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Project/properties/parent_project_id/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/parent_project_id/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/parent_project_id/INTEGER_FRACTION",
+        "resource": "ModelsProject",
+        "field": "parent_project_id",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Project/properties/parent_project_id/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/parent_project_id/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/position/TYPE_STRING",
+        "resource": "ModelsProject",
+        "field": "position",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "number",
+        "source_pointer": "#/definitions/models.Project/properties/position/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/position/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/title/TYPE_NUMBER",
+        "resource": "ModelsProject",
+        "field": "title",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/title/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/title/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/title/TYPE_BOOLEAN",
+        "resource": "ModelsProject",
+        "field": "title",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/title/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/title/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/title/TYPE_ARRAY",
+        "resource": "ModelsProject",
+        "field": "title",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/title/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/title/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/title/TYPE_OBJECT",
+        "resource": "ModelsProject",
+        "field": "title",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/title/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/title/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/title/MIN_LENGTH",
+        "resource": "ModelsProject",
+        "field": "title",
+        "kind": "MIN_LENGTH",
+        "mutation": "replace",
+        "invalid_value": "",
+        "constraint": "minLength",
+        "declared_constraint": 1,
+        "source_pointer": "#/definitions/models.Project/properties/title/minLength",
+        "schema_pointer": "#/components/schemas/models.Project/properties/title/minLength",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/title/MAX_LENGTH",
+        "resource": "ModelsProject",
+        "field": "title",
+        "kind": "MAX_LENGTH",
+        "mutation": "replace",
+        "invalid_value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "constraint": "maxLength",
+        "declared_constraint": 250,
+        "source_pointer": "#/definitions/models.Project/properties/title/maxLength",
+        "schema_pointer": "#/components/schemas/models.Project/properties/title/maxLength",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/updated/TYPE_NUMBER",
+        "resource": "ModelsProject",
+        "field": "updated",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/updated/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/updated/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/updated/TYPE_BOOLEAN",
+        "resource": "ModelsProject",
+        "field": "updated",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/updated/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/updated/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/updated/TYPE_ARRAY",
+        "resource": "ModelsProject",
+        "field": "updated",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/updated/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/updated/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/updated/TYPE_OBJECT",
+        "resource": "ModelsProject",
+        "field": "updated",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Project/properties/updated/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/updated/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsProject/views/TYPE_STRING",
+        "resource": "ModelsProject",
+        "field": "views",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "array",
+        "source_pointer": "#/definitions/models.Project/properties/views/type",
+        "schema_pointer": "#/components/schemas/models.Project/properties/views/type",
+        "operation": "POST /projects/{id}",
+        "effective_operation": "POST /projects/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/assignees/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "assignees",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "array",
+        "source_pointer": "#/definitions/models.Task/properties/assignees/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/assignees/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/attachments/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "attachments",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "array",
+        "source_pointer": "#/definitions/models.Task/properties/attachments/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/attachments/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/bucket_id/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "bucket_id",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/bucket_id/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/bucket_id/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/bucket_id/INTEGER_FRACTION",
+        "resource": "ModelsTask",
+        "field": "bucket_id",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/bucket_id/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/bucket_id/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/buckets/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "buckets",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "array",
+        "source_pointer": "#/definitions/models.Task/properties/buckets/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/buckets/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/comment_count/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "comment_count",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/comment_count/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/comment_count/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/comment_count/INTEGER_FRACTION",
+        "resource": "ModelsTask",
+        "field": "comment_count",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/comment_count/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/comment_count/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/comments/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "comments",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "array",
+        "source_pointer": "#/definitions/models.Task/properties/comments/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/comments/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/cover_image_attachment_id/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "cover_image_attachment_id",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/cover_image_attachment_id/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/cover_image_attachment_id/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/cover_image_attachment_id/INTEGER_FRACTION",
+        "resource": "ModelsTask",
+        "field": "cover_image_attachment_id",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/cover_image_attachment_id/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/cover_image_attachment_id/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/created/TYPE_NUMBER",
+        "resource": "ModelsTask",
+        "field": "created",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/created/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/created/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/created/TYPE_BOOLEAN",
+        "resource": "ModelsTask",
+        "field": "created",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/created/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/created/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/created/TYPE_ARRAY",
+        "resource": "ModelsTask",
+        "field": "created",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/created/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/created/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/created/TYPE_OBJECT",
+        "resource": "ModelsTask",
+        "field": "created",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/created/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/created/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/deleted_at/TYPE_NUMBER",
+        "resource": "ModelsTask",
+        "field": "deleted_at",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/deleted_at/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/deleted_at/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/deleted_at/TYPE_BOOLEAN",
+        "resource": "ModelsTask",
+        "field": "deleted_at",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/deleted_at/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/deleted_at/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/deleted_at/TYPE_ARRAY",
+        "resource": "ModelsTask",
+        "field": "deleted_at",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/deleted_at/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/deleted_at/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/deleted_at/TYPE_OBJECT",
+        "resource": "ModelsTask",
+        "field": "deleted_at",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/deleted_at/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/deleted_at/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/description/TYPE_NUMBER",
+        "resource": "ModelsTask",
+        "field": "description",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/description/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/description/TYPE_BOOLEAN",
+        "resource": "ModelsTask",
+        "field": "description",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/description/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/description/TYPE_ARRAY",
+        "resource": "ModelsTask",
+        "field": "description",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/description/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/description/TYPE_OBJECT",
+        "resource": "ModelsTask",
+        "field": "description",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/description/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/done/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "done",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "boolean",
+        "source_pointer": "#/definitions/models.Task/properties/done/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/done/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/done_at/TYPE_NUMBER",
+        "resource": "ModelsTask",
+        "field": "done_at",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/done_at/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/done_at/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/done_at/TYPE_BOOLEAN",
+        "resource": "ModelsTask",
+        "field": "done_at",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/done_at/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/done_at/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/done_at/TYPE_ARRAY",
+        "resource": "ModelsTask",
+        "field": "done_at",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/done_at/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/done_at/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/done_at/TYPE_OBJECT",
+        "resource": "ModelsTask",
+        "field": "done_at",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/done_at/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/done_at/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/due_date/TYPE_NUMBER",
+        "resource": "ModelsTask",
+        "field": "due_date",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/due_date/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/due_date/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/due_date/TYPE_BOOLEAN",
+        "resource": "ModelsTask",
+        "field": "due_date",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/due_date/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/due_date/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/due_date/TYPE_ARRAY",
+        "resource": "ModelsTask",
+        "field": "due_date",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/due_date/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/due_date/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/due_date/TYPE_OBJECT",
+        "resource": "ModelsTask",
+        "field": "due_date",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/due_date/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/due_date/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/end_date/TYPE_NUMBER",
+        "resource": "ModelsTask",
+        "field": "end_date",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/end_date/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/end_date/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/end_date/TYPE_BOOLEAN",
+        "resource": "ModelsTask",
+        "field": "end_date",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/end_date/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/end_date/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/end_date/TYPE_ARRAY",
+        "resource": "ModelsTask",
+        "field": "end_date",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/end_date/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/end_date/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/end_date/TYPE_OBJECT",
+        "resource": "ModelsTask",
+        "field": "end_date",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/end_date/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/end_date/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/hex_color/TYPE_NUMBER",
+        "resource": "ModelsTask",
+        "field": "hex_color",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/hex_color/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/hex_color/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/hex_color/TYPE_BOOLEAN",
+        "resource": "ModelsTask",
+        "field": "hex_color",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/hex_color/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/hex_color/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/hex_color/TYPE_ARRAY",
+        "resource": "ModelsTask",
+        "field": "hex_color",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/hex_color/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/hex_color/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/hex_color/TYPE_OBJECT",
+        "resource": "ModelsTask",
+        "field": "hex_color",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/hex_color/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/hex_color/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/hex_color/MAX_LENGTH",
+        "resource": "ModelsTask",
+        "field": "hex_color",
+        "kind": "MAX_LENGTH",
+        "mutation": "replace",
+        "invalid_value": "xxxxxxxx",
+        "constraint": "maxLength",
+        "declared_constraint": 7,
+        "source_pointer": "#/definitions/models.Task/properties/hex_color/maxLength",
+        "schema_pointer": "#/components/schemas/models.Task/properties/hex_color/maxLength",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/id/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "id",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/id/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/id/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/id/INTEGER_FRACTION",
+        "resource": "ModelsTask",
+        "field": "id",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/id/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/id/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/identifier/TYPE_NUMBER",
+        "resource": "ModelsTask",
+        "field": "identifier",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/identifier/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/identifier/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/identifier/TYPE_BOOLEAN",
+        "resource": "ModelsTask",
+        "field": "identifier",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/identifier/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/identifier/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/identifier/TYPE_ARRAY",
+        "resource": "ModelsTask",
+        "field": "identifier",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/identifier/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/identifier/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/identifier/TYPE_OBJECT",
+        "resource": "ModelsTask",
+        "field": "identifier",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/identifier/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/identifier/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/index/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "index",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/index/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/index/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/index/INTEGER_FRACTION",
+        "resource": "ModelsTask",
+        "field": "index",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/index/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/index/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/is_favorite/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "is_favorite",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "boolean",
+        "source_pointer": "#/definitions/models.Task/properties/is_favorite/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/is_favorite/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/is_unread/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "is_unread",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "boolean",
+        "source_pointer": "#/definitions/models.Task/properties/is_unread/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/is_unread/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/labels/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "labels",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "array",
+        "source_pointer": "#/definitions/models.Task/properties/labels/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/labels/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/percent_done/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "percent_done",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "number",
+        "source_pointer": "#/definitions/models.Task/properties/percent_done/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/percent_done/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/position/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "position",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "number",
+        "source_pointer": "#/definitions/models.Task/properties/position/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/position/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/priority/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "priority",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/priority/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/priority/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/priority/INTEGER_FRACTION",
+        "resource": "ModelsTask",
+        "field": "priority",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/priority/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/priority/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/project_id/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "project_id",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/project_id/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/project_id/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/project_id/INTEGER_FRACTION",
+        "resource": "ModelsTask",
+        "field": "project_id",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/project_id/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/project_id/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/reminders/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "reminders",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "array",
+        "source_pointer": "#/definitions/models.Task/properties/reminders/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/reminders/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/repeat_after/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "repeat_after",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/repeat_after/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/repeat_after/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/repeat_after/INTEGER_FRACTION",
+        "resource": "ModelsTask",
+        "field": "repeat_after",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/repeat_after/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/repeat_after/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/start_date/TYPE_NUMBER",
+        "resource": "ModelsTask",
+        "field": "start_date",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/start_date/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/start_date/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/start_date/TYPE_BOOLEAN",
+        "resource": "ModelsTask",
+        "field": "start_date",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/start_date/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/start_date/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/start_date/TYPE_ARRAY",
+        "resource": "ModelsTask",
+        "field": "start_date",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/start_date/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/start_date/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/start_date/TYPE_OBJECT",
+        "resource": "ModelsTask",
+        "field": "start_date",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/start_date/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/start_date/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/time_entries_count/TYPE_STRING",
+        "resource": "ModelsTask",
+        "field": "time_entries_count",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/time_entries_count/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/time_entries_count/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/time_entries_count/INTEGER_FRACTION",
+        "resource": "ModelsTask",
+        "field": "time_entries_count",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Task/properties/time_entries_count/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/time_entries_count/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/title/TYPE_NUMBER",
+        "resource": "ModelsTask",
+        "field": "title",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/title/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/title/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/title/TYPE_BOOLEAN",
+        "resource": "ModelsTask",
+        "field": "title",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/title/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/title/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/title/TYPE_ARRAY",
+        "resource": "ModelsTask",
+        "field": "title",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/title/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/title/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/title/TYPE_OBJECT",
+        "resource": "ModelsTask",
+        "field": "title",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/title/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/title/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/title/MIN_LENGTH",
+        "resource": "ModelsTask",
+        "field": "title",
+        "kind": "MIN_LENGTH",
+        "mutation": "replace",
+        "invalid_value": "",
+        "constraint": "minLength",
+        "declared_constraint": 1,
+        "source_pointer": "#/definitions/models.Task/properties/title/minLength",
+        "schema_pointer": "#/components/schemas/models.Task/properties/title/minLength",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/updated/TYPE_NUMBER",
+        "resource": "ModelsTask",
+        "field": "updated",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/updated/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/updated/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/updated/TYPE_BOOLEAN",
+        "resource": "ModelsTask",
+        "field": "updated",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/updated/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/updated/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/updated/TYPE_ARRAY",
+        "resource": "ModelsTask",
+        "field": "updated",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/updated/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/updated/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsTask/updated/TYPE_OBJECT",
+        "resource": "ModelsTask",
+        "field": "updated",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/updated/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/updated/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/created/TYPE_NUMBER",
+        "resource": "ModelsLabel",
+        "field": "created",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/created/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/created/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/created/TYPE_BOOLEAN",
+        "resource": "ModelsLabel",
+        "field": "created",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/created/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/created/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/created/TYPE_ARRAY",
+        "resource": "ModelsLabel",
+        "field": "created",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/created/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/created/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/created/TYPE_OBJECT",
+        "resource": "ModelsLabel",
+        "field": "created",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/created/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/created/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/description/TYPE_NUMBER",
+        "resource": "ModelsLabel",
+        "field": "description",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/description/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/description/TYPE_BOOLEAN",
+        "resource": "ModelsLabel",
+        "field": "description",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/description/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/description/TYPE_ARRAY",
+        "resource": "ModelsLabel",
+        "field": "description",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/description/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/description/TYPE_OBJECT",
+        "resource": "ModelsLabel",
+        "field": "description",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/description/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/hex_color/TYPE_NUMBER",
+        "resource": "ModelsLabel",
+        "field": "hex_color",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/hex_color/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/hex_color/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/hex_color/TYPE_BOOLEAN",
+        "resource": "ModelsLabel",
+        "field": "hex_color",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/hex_color/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/hex_color/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/hex_color/TYPE_ARRAY",
+        "resource": "ModelsLabel",
+        "field": "hex_color",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/hex_color/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/hex_color/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/hex_color/TYPE_OBJECT",
+        "resource": "ModelsLabel",
+        "field": "hex_color",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/hex_color/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/hex_color/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/hex_color/MAX_LENGTH",
+        "resource": "ModelsLabel",
+        "field": "hex_color",
+        "kind": "MAX_LENGTH",
+        "mutation": "replace",
+        "invalid_value": "xxxxxxxx",
+        "constraint": "maxLength",
+        "declared_constraint": 7,
+        "source_pointer": "#/definitions/models.Label/properties/hex_color/maxLength",
+        "schema_pointer": "#/components/schemas/models.Label/properties/hex_color/maxLength",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/id/TYPE_STRING",
+        "resource": "ModelsLabel",
+        "field": "id",
+        "kind": "TYPE_STRING",
+        "mutation": "replace",
+        "invalid_value": "schema-type-mismatch",
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Label/properties/id/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/id/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/id/INTEGER_FRACTION",
+        "resource": "ModelsLabel",
+        "field": "id",
+        "kind": "INTEGER_FRACTION",
+        "mutation": "replace",
+        "invalid_value": 1.5,
+        "constraint": "type",
+        "declared_constraint": "integer",
+        "source_pointer": "#/definitions/models.Label/properties/id/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/id/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/title/TYPE_NUMBER",
+        "resource": "ModelsLabel",
+        "field": "title",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/title/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/title/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/title/TYPE_BOOLEAN",
+        "resource": "ModelsLabel",
+        "field": "title",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/title/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/title/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/title/TYPE_ARRAY",
+        "resource": "ModelsLabel",
+        "field": "title",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/title/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/title/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/title/TYPE_OBJECT",
+        "resource": "ModelsLabel",
+        "field": "title",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/title/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/title/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/title/MIN_LENGTH",
+        "resource": "ModelsLabel",
+        "field": "title",
+        "kind": "MIN_LENGTH",
+        "mutation": "replace",
+        "invalid_value": "",
+        "constraint": "minLength",
+        "declared_constraint": 1,
+        "source_pointer": "#/definitions/models.Label/properties/title/minLength",
+        "schema_pointer": "#/components/schemas/models.Label/properties/title/minLength",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/title/MAX_LENGTH",
+        "resource": "ModelsLabel",
+        "field": "title",
+        "kind": "MAX_LENGTH",
+        "mutation": "replace",
+        "invalid_value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "constraint": "maxLength",
+        "declared_constraint": 250,
+        "source_pointer": "#/definitions/models.Label/properties/title/maxLength",
+        "schema_pointer": "#/components/schemas/models.Label/properties/title/maxLength",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/updated/TYPE_NUMBER",
+        "resource": "ModelsLabel",
+        "field": "updated",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/updated/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/updated/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/updated/TYPE_BOOLEAN",
+        "resource": "ModelsLabel",
+        "field": "updated",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/updated/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/updated/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/updated/TYPE_ARRAY",
+        "resource": "ModelsLabel",
+        "field": "updated",
+        "kind": "TYPE_ARRAY",
+        "mutation": "replace",
+        "invalid_value": [],
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/updated/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/updated/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      {
+        "id": "ModelsLabel/updated/TYPE_OBJECT",
+        "resource": "ModelsLabel",
+        "field": "updated",
+        "kind": "TYPE_OBJECT",
+        "mutation": "replace",
+        "invalid_value": {},
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Label/properties/updated/type",
+        "schema_pointer": "#/components/schemas/models.Label/properties/updated/type",
+        "operation": "PUT /labels/{id}",
+        "effective_operation": "POST /labels/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "404",
+          "500"
+        ],
+        "compound_constraints": []
+      }
+    ],
+    "blocked": [
+      {
+        "resource": "ModelsProject",
+        "field": "background_information",
+        "reason": "NO_UNAMBIGUOUS_SUPPORTED_TYPE"
+      },
+      {
+        "resource": "ModelsProject",
+        "field": "owner",
+        "reason": "NO_UNAMBIGUOUS_SUPPORTED_TYPE"
+      },
+      {
+        "resource": "ModelsProject",
+        "field": "subscription",
+        "reason": "NO_UNAMBIGUOUS_SUPPORTED_TYPE"
+      },
+      {
+        "resource": "ModelsProject",
+        "field": "views",
+        "reason": "NESTED_FIELD_TRAVERSAL_NOT_IMPLEMENTED"
+      },
+      {
+        "resource": "ModelsTask",
+        "field": "assignees",
+        "reason": "NESTED_FIELD_TRAVERSAL_NOT_IMPLEMENTED"
+      },
+      {
+        "resource": "ModelsTask",
+        "field": "attachments",
+        "reason": "NESTED_FIELD_TRAVERSAL_NOT_IMPLEMENTED"
+      },
+      {
+        "resource": "ModelsTask",
+        "field": "buckets",
+        "reason": "NESTED_FIELD_TRAVERSAL_NOT_IMPLEMENTED"
+      },
+      {
+        "resource": "ModelsTask",
+        "field": "comments",
+        "reason": "NESTED_FIELD_TRAVERSAL_NOT_IMPLEMENTED"
+      },
+      {
+        "resource": "ModelsTask",
+        "field": "created_by",
+        "reason": "NO_UNAMBIGUOUS_SUPPORTED_TYPE"
+      },
+      {
+        "resource": "ModelsTask",
+        "field": "labels",
+        "reason": "NESTED_FIELD_TRAVERSAL_NOT_IMPLEMENTED"
+      },
+      {
+        "resource": "ModelsTask",
+        "field": "reactions",
+        "reason": "NO_UNAMBIGUOUS_SUPPORTED_TYPE"
+      },
+      {
+        "resource": "ModelsTask",
+        "field": "related_tasks",
+        "reason": "NO_UNAMBIGUOUS_SUPPORTED_TYPE"
+      },
+      {
+        "resource": "ModelsTask",
+        "field": "reminders",
+        "reason": "NESTED_FIELD_TRAVERSAL_NOT_IMPLEMENTED"
+      },
+      {
+        "resource": "ModelsTask",
+        "field": "repeat_mode",
+        "reason": "NO_UNAMBIGUOUS_SUPPORTED_TYPE"
+      },
+      {
+        "resource": "ModelsTask",
+        "field": "subscription",
+        "reason": "NO_UNAMBIGUOUS_SUPPORTED_TYPE"
+      },
+      {
+        "resource": "ModelsLabel",
+        "field": "created_by",
+        "reason": "NO_UNAMBIGUOUS_SUPPORTED_TYPE"
+      }
+    ],
+    "rejection_policy": "4xx rejection plus unchanged observed projection; documentation classified independently",
+    "state_policy": "research rejected-write preservation hypothesis, not an OpenAPI postcondition",
+    "scope": "selected Context entities, all supported top-level writable update properties",
+    "deferred_families": [
+      "nullability",
+      "nested-property violations",
+      "create rejection and absence proof",
+      "delete/state transitions",
+      "ownership/authorization",
+      "unsupported constraint classes listed individually"
+    ]
+  },
+  "negative_cases_per_instance": 143,
+  "checkpoint_acceptance": {
+    "search_metadata": {
+      "family": "move_and_field",
+      "prefix_depth": 6,
+      "history": "relation_history",
+      "prefix_mutations": 6,
+      "probe_mutations": 2,
+      "fixed_setup_link_mutations": 4,
+      "reads_count_as_prefix": false,
+      "schedule": "explicit sequential order",
+      "true_concurrency": false,
+      "automatic_scope": "API shapes/identifiers from contract; history and equivalence templates are explicit research inputs",
+      "comparison_group": "move_and_field/d6/relation_history/task2",
+      "paired_prefix_identical": true
+    },
+    "version": "v057",
+    "family": "shared_tasks",
+    "mode": "resume",
+    "relation_spec": {
+      "child_delete_codes": [
+        200
+      ],
+      "child_delete_pointer": "#/paths/~1tasks~1{id}/delete",
+      "target_delete_codes": [
+        200
+      ],
+      "target_delete_pointer": "#/paths/~1labels~1{id}/delete",
+      "child_type": "ModelsTask",
+      "target_type": "ModelsLabel",
+      "parent_type": "ModelsProject",
+      "parent_field": "project_id",
+      "collection": "/tasks/{task}/labels",
+      "remove": "/tasks/{task}/labels/{label}",
+      "child_parameter": "task",
+      "target_parameter": "label",
+      "body_field": "label_id",
+      "attach_method": "PUT",
+      "detach_method": "DELETE",
+      "attach_codes": [
+        201
+      ],
+      "detach_codes": [
+        200
+      ],
+      "read_codes": [
+        200
+      ],
+      "source_pointers": [
+        "#/paths/~1tasks~1{task}~1labels/get",
+        "#/paths/~1tasks~1{task}~1labels/put",
+        "#/paths/~1tasks~1{task}~1labels~1{label}/delete"
+      ],
+      "authority": "Exact response schema + path structure + conventional foreign key; membership/preservation are explicit research hypotheses",
+      "description": {
+        "attach": "Add a label to a task. The user needs to have write-access to the project to be able do this.",
+        "detach": "Remove a label from a task. The user needs to have write-access to the project to be able do this."
+      },
+      "negative_field_pointer": "#/definitions/models.Task/properties/title",
+      "negative_field_type": "string",
+      "shared_task_update_method": "POST",
+      "shared_task_update_codes": [
+        200
+      ],
+      "negative_field_pointers": {
+        "title": "#/definitions/models.Task/properties/title",
+        "project_id": "#/definitions/models.Task/properties/project_id"
+      },
+      "move_authority": "Writable project_id field in task POST schema; movement and collection consistency are explicit research hypotheses, not a guarantee derived from schema alone"
+    },
+    "case_id": "move_and_field-d6-relation_history-task2-alternate",
+    "subjects": {
+      "task": "ModelsTask_2",
+      "other_task": "ModelsTask_1",
+      "label": "ModelsLabel_1",
+      "second_label": "ModelsLabel_2"
+    },
+    "resources": [
+      {
+        "logicalId": "ModelsLabel_1",
+        "resourceType": "ModelsLabel",
+        "expected": {
+          "title": "sbt-1-ModelsLabel-1-title",
+          "description": "sbt-1-ModelsLabel_1-updated"
+        },
+        "revision": 2,
+        "verifiedRevision": 2,
+        "detail_template": "/labels/{id}",
+        "route_parameter": "id"
+      },
+      {
+        "logicalId": "ModelsLabel_2",
+        "resourceType": "ModelsLabel",
+        "expected": {
+          "title": "sbt-1-ModelsLabel-2-title",
+          "description": "sbt-1-ModelsLabel_2-updated"
+        },
+        "revision": 2,
+        "verifiedRevision": 2,
+        "detail_template": "/labels/{id}",
+        "route_parameter": "id"
+      },
+      {
+        "logicalId": "ModelsProject_1",
+        "resourceType": "ModelsProject",
+        "expected": {
+          "title": "sbt-1-ModelsProject-1-title",
+          "description": "sbt-1-ModelsProject_1-updated"
+        },
+        "revision": 2,
+        "verifiedRevision": 2,
+        "detail_template": "/projects/{id}",
+        "route_parameter": "id"
+      },
+      {
+        "logicalId": "ModelsProject_2",
+        "resourceType": "ModelsProject",
+        "expected": {
+          "title": "sbt-1-ModelsProject-2-title",
+          "description": "sbt-1-ModelsProject_2-updated"
+        },
+        "revision": 2,
+        "verifiedRevision": 2,
+        "detail_template": "/projects/{id}",
+        "route_parameter": "id"
+      },
+      {
+        "logicalId": "ModelsTask_1",
+        "resourceType": "ModelsTask",
+        "expected": {
+          "title": "sbt-1-ModelsTask-1-title",
+          "project_id": 76,
+          "description": "sbt-1-ModelsTask_1-updated"
+        },
+        "revision": 2,
+        "verifiedRevision": 2,
+        "detail_template": "/tasks/{id}",
+        "route_parameter": "id"
+      },
+      {
+        "logicalId": "ModelsTask_2",
+        "resourceType": "ModelsTask",
+        "expected": {
+          "title": "sbt-1-ModelsTask-2-title",
+          "project_id": 76,
+          "description": "sbt-1-ModelsTask_2-updated"
+        },
+        "revision": 2,
+        "verifiedRevision": 2,
+        "detail_template": "/tasks/{id}",
+        "route_parameter": "id"
+      }
+    ],
+    "relations": [],
+    "seed": 1,
+    "steps": [
+      {
+        "actor": "B",
+        "task": "ModelsTask_2",
+        "action": "detach",
+        "label": "ModelsLabel_1"
+      },
+      {
+        "actor": "A",
+        "task": "ModelsTask_2",
+        "action": "attach",
+        "label": "ModelsLabel_1"
+      },
+      {
+        "actor": "B",
+        "task": "ModelsTask_2",
+        "field": "project_id",
+        "value": "@{ID_ModelsProject_2}"
+      },
+      {
+        "actor": "B",
+        "task": "ModelsTask_2",
+        "action": "detach",
+        "label": "ModelsLabel_1"
+      },
+      {
+        "actor": "A",
+        "task": "ModelsTask_2",
+        "action": "attach",
+        "label": "ModelsLabel_1"
+      },
+      {
+        "actor": "B",
+        "task": "ModelsTask_2",
+        "field": "project_id",
+        "value": "@{ID_ModelsProject_1}"
+      },
+      {
+        "actor": "A",
+        "task": "ModelsTask_2",
+        "field": "title",
+        "value": "sbt-v057-moved-title"
+      },
+      {
+        "actor": "B",
+        "task": "ModelsTask_2",
+        "field": "project_id",
+        "value": "@{ID_ModelsProject_2}"
+      }
+    ],
+    "expected_checks": 206,
+    "comparison_group": "move_and_field/d6/relation_history/task2",
+    "order": "alternate",
+    "negative_target": "ModelsTask_2",
+    "negative_cases": [
+      {
+        "rule_id": "STRING_TYPE_ARRAY",
+        "field": "title",
+        "value": []
+      },
+      {
+        "rule_id": "INTEGER_TYPE_OBJECT",
+        "field": "project_id",
+        "value": {}
+      }
+    ],
+    "project_membership_observer": true,
+    "preserve_task_labels": true,
+    "prefix_actor": "A",
+    "final_memberships": {
+      "ModelsTask_2": [
+        "ModelsLabel_1",
+        "ModelsLabel_2"
+      ],
+      "ModelsTask_1": [
+        "ModelsLabel_1",
+        "ModelsLabel_2"
+      ]
+    }
+  },
+  "oracle_policy": "expected request projection, generic write/read preservation hypothesis; no observed-response learning of expected quantity",
+  "unsupported": [
+    "Recipe contribution quantity transitions",
+    "Merge equivalence and quantity algebra",
+    "Copy deep-isolation policy",
+    "Cross-account authorization policy",
+    "DELETE absence when not documented"
+  ],
+  "native_executed": false,
+  "sut_executed": false,
+  "file_sha256": {
+    "interfaces.vikunja.js": "e7fc85adf7503b9268949a9e9268eb916838feca55e2feac680e0b3d125dd437",
+    "dal.js": "bceb161bd92826d60c87e59cc79a049a7abb50326dd502ebd056e4fe3d90313f",
+    "stories.vikunja.js": "ed14fe6fc642a4f5bd06ee03d9c78c8a6e0ea7cd84e681695d64fe64d1e6e0a9"
+  }
+}

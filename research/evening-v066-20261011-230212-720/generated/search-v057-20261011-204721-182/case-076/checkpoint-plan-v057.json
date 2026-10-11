@@ -1,0 +1,234 @@
+{
+  "search_metadata": {
+    "family": "different_tasks",
+    "prefix_depth": 6,
+    "history": "relation_history",
+    "prefix_mutations": 6,
+    "probe_mutations": 2,
+    "fixed_setup_link_mutations": 4,
+    "reads_count_as_prefix": false,
+    "schedule": "explicit sequential order",
+    "true_concurrency": false,
+    "automatic_scope": "API shapes/identifiers from contract; history and equivalence templates are explicit research inputs",
+    "comparison_group": "different_tasks/d6/relation_history/task2",
+    "paired_prefix_identical": true
+  },
+  "version": "v057",
+  "family": "shared_tasks",
+  "mode": "resume",
+  "relation_spec": {
+    "child_delete_codes": [
+      200
+    ],
+    "child_delete_pointer": "#/paths/~1tasks~1{id}/delete",
+    "target_delete_codes": [
+      200
+    ],
+    "target_delete_pointer": "#/paths/~1labels~1{id}/delete",
+    "child_type": "ModelsTask",
+    "target_type": "ModelsLabel",
+    "parent_type": "ModelsProject",
+    "parent_field": "project_id",
+    "collection": "/tasks/{task}/labels",
+    "remove": "/tasks/{task}/labels/{label}",
+    "child_parameter": "task",
+    "target_parameter": "label",
+    "body_field": "label_id",
+    "attach_method": "PUT",
+    "detach_method": "DELETE",
+    "attach_codes": [
+      201
+    ],
+    "detach_codes": [
+      200
+    ],
+    "read_codes": [
+      200
+    ],
+    "source_pointers": [
+      "#/paths/~1tasks~1{task}~1labels/get",
+      "#/paths/~1tasks~1{task}~1labels/put",
+      "#/paths/~1tasks~1{task}~1labels~1{label}/delete"
+    ],
+    "authority": "Exact response schema + path structure + conventional foreign key; membership/preservation are explicit research hypotheses",
+    "description": {
+      "attach": "Add a label to a task. The user needs to have write-access to the project to be able do this.",
+      "detach": "Remove a label from a task. The user needs to have write-access to the project to be able do this."
+    },
+    "negative_field_pointer": "#/definitions/models.Task/properties/title",
+    "negative_field_type": "string",
+    "shared_task_update_method": "POST",
+    "shared_task_update_codes": [
+      200
+    ],
+    "negative_field_pointers": {
+      "title": "#/definitions/models.Task/properties/title",
+      "project_id": "#/definitions/models.Task/properties/project_id"
+    },
+    "move_authority": "Writable project_id field in task POST schema; movement and collection consistency are explicit research hypotheses, not a guarantee derived from schema alone"
+  },
+  "case_id": "different_tasks-d6-relation_history-task2-alternate",
+  "subjects": {
+    "task": "ModelsTask_2",
+    "other_task": "ModelsTask_1",
+    "label": "ModelsLabel_1",
+    "second_label": "ModelsLabel_2"
+  },
+  "resources": [
+    {
+      "logicalId": "ModelsLabel_1",
+      "resourceType": "ModelsLabel",
+      "expected": {
+        "title": "sbt-1-ModelsLabel-1-title",
+        "description": "sbt-1-ModelsLabel_1-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/labels/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsLabel_2",
+      "resourceType": "ModelsLabel",
+      "expected": {
+        "title": "sbt-1-ModelsLabel-2-title",
+        "description": "sbt-1-ModelsLabel_2-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/labels/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsProject_1",
+      "resourceType": "ModelsProject",
+      "expected": {
+        "title": "sbt-1-ModelsProject-1-title",
+        "description": "sbt-1-ModelsProject_1-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/projects/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsProject_2",
+      "resourceType": "ModelsProject",
+      "expected": {
+        "title": "sbt-1-ModelsProject-2-title",
+        "description": "sbt-1-ModelsProject_2-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/projects/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsTask_1",
+      "resourceType": "ModelsTask",
+      "expected": {
+        "title": "sbt-1-ModelsTask-1-title",
+        "project_id": 76,
+        "description": "sbt-1-ModelsTask_1-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/tasks/{id}",
+      "route_parameter": "id"
+    },
+    {
+      "logicalId": "ModelsTask_2",
+      "resourceType": "ModelsTask",
+      "expected": {
+        "title": "sbt-1-ModelsTask-2-title",
+        "project_id": 76,
+        "description": "sbt-1-ModelsTask_2-updated"
+      },
+      "revision": 2,
+      "verifiedRevision": 2,
+      "detail_template": "/tasks/{id}",
+      "route_parameter": "id"
+    }
+  ],
+  "relations": [],
+  "seed": 1,
+  "steps": [
+    {
+      "actor": "B",
+      "task": "ModelsTask_2",
+      "action": "detach",
+      "label": "ModelsLabel_1"
+    },
+    {
+      "actor": "A",
+      "task": "ModelsTask_2",
+      "action": "attach",
+      "label": "ModelsLabel_1"
+    },
+    {
+      "actor": "B",
+      "task": "ModelsTask_2",
+      "field": "project_id",
+      "value": "@{ID_ModelsProject_2}"
+    },
+    {
+      "actor": "B",
+      "task": "ModelsTask_2",
+      "action": "detach",
+      "label": "ModelsLabel_1"
+    },
+    {
+      "actor": "A",
+      "task": "ModelsTask_2",
+      "action": "attach",
+      "label": "ModelsLabel_1"
+    },
+    {
+      "actor": "B",
+      "task": "ModelsTask_2",
+      "field": "project_id",
+      "value": "@{ID_ModelsProject_1}"
+    },
+    {
+      "actor": "B",
+      "task": "ModelsTask_1",
+      "field": "description",
+      "value": "sbt-v057-other-task"
+    },
+    {
+      "actor": "A",
+      "task": "ModelsTask_2",
+      "field": "title",
+      "value": "sbt-v057-first-task"
+    }
+  ],
+  "expected_checks": 206,
+  "comparison_group": "different_tasks/d6/relation_history/task2",
+  "order": "alternate",
+  "negative_target": "ModelsTask_2",
+  "negative_cases": [
+    {
+      "rule_id": "STRING_TYPE_ARRAY",
+      "field": "title",
+      "value": []
+    },
+    {
+      "rule_id": "INTEGER_TYPE_OBJECT",
+      "field": "project_id",
+      "value": {}
+    }
+  ],
+  "project_membership_observer": true,
+  "preserve_task_labels": true,
+  "prefix_actor": "A",
+  "final_memberships": {
+    "ModelsTask_2": [
+      "ModelsLabel_1",
+      "ModelsLabel_2"
+    ],
+    "ModelsTask_1": [
+      "ModelsLabel_1",
+      "ModelsLabel_2"
+    ]
+  }
+}
