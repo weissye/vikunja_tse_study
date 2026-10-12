@@ -1,0 +1,49 @@
+{
+  "mapping_version": 1,
+  "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "rules": [
+    {
+      "id": "saved-filter-create-request-v073",
+      "method": "PUT",
+      "path": "/filters",
+      "request_schema": {
+        "type": "object",
+        "required": [
+          "title",
+          "filters"
+        ],
+        "properties": {
+          "title": {
+            "description": "The title of the filter.",
+            "type": "string",
+            "maxLength": 250,
+            "minLength": 1
+          },
+          "filters": {
+            "type": "object",
+            "properties": {
+              "filter": {
+                "description": "The filter query to match tasks by. Check out https://vikunja.io/docs/filters for a full explanation.",
+                "type": "string"
+              }
+            },
+            "default": {
+              "filter": "done = false"
+            }
+          }
+        }
+      },
+      "provenance": {
+        "contract_pointer": "#/definitions/models.SavedFilter/properties/title",
+        "official_documentation": "https://vikunja.io/help/saved-filters/",
+        "observation": "v070 sent {} and received 412; this mapping is an explicit positive-input hypothesis, not an automatically inferred request schema",
+        "live_evidence": "review_v072.zip: HTTP 412, invalid_fields=[filters: non zero value required]",
+        "filters_source_pointer": "#/definitions/models.SavedFilter/properties/filters",
+        "query_source_pointer": "#/definitions/models.TaskCollection/properties/filter",
+        "fixture_default_source": "https://vikunja.io/help/saved-filters/ (default new saved-filter query: done = false)",
+        "fixture_policy": "Explicit minimal positive-input fixture, not a claim that all request bodies must use this query"
+      },
+      "validation_requirement": "Create generated title plus filters.filter; independent GET confirms ID and request-derived title/query projection"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "config_version": 1,
+  "experiment_id": "recovery-acceptance-v082",
+  "model": {
+    "name": "vikunja",
+    "base_url": "http://127.0.0.1:13474"
+  },
+  "instances": {
+    "default": 3,
+    "per_entity": {}
+  },
+  "fixtures": {
+    "seed": 1
+  },
+  "render": {
+    "profile": "unified",
+    "negative_schema": true
+  },
+  "budgets": {
+    "max_events": null,
+    "max_total_instances": 4096
+  },
+  "actors": {
+    "users": 1,
+    "sessions_per_user": 1
+  },
+  "missing_information": {
+    "policy": "block"
+  },
+  "recovery": {
+    "policy": "cold_snapshot_restore",
+    "negative_rule_ids": [
+      "ModelsLabel/title/MIN_LENGTH",
+      "ModelsLabel/title/TYPE_ARRAY",
+      "ModelsTask/title/MIN_LENGTH",
+      "ModelsTask/title/TYPE_ARRAY",
+      "ModelsTeam/name/TYPE_ARRAY",
+      "ModelsTeam/name/MIN_LENGTH"
+    ]
+  }
+}
