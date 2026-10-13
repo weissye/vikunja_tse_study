@@ -1,0 +1,461 @@
+{
+  "status": "LIVE_ACCEPTANCE_READY_NOT_EXECUTED",
+  "candidate_count": 117,
+  "selected": [
+    {
+      "resource_type": "ModelsTeam",
+      "logical_id": "ModelsTeam_3",
+      "profile": "free_stale_disjoint_fields",
+      "session_fields": {
+        "A": {
+          "field": "description",
+          "minLength": 0,
+          "maxLength": null,
+          "domain": "plain_string"
+        },
+        "B": {
+          "field": "name",
+          "minLength": 1,
+          "maxLength": 250,
+          "domain": "plain_string"
+        }
+      },
+      "writable_fields": [
+        "created",
+        "created_by",
+        "description",
+        "external_id",
+        "id",
+        "is_public",
+        "members",
+        "name",
+        "updated"
+      ],
+      "read_route": "/teams/{id}",
+      "write_method": "POST",
+      "provenance": {
+        "resource_inference": [
+          {
+            "pointer": "#/paths/~1teams/put",
+            "rule": "collection creation with 201 plus unique item GET"
+          },
+          {
+            "pointer": "#/paths/~1teams~1{id}/get",
+            "rule": "response id convention; route parameter matched to property"
+          }
+        ],
+        "read_operation_pointer": "#/paths/~1teams~1{id}/get",
+        "write_operation_pointer": "#/paths/~1teams~1{id}/post",
+        "effective_write_method": "post",
+        "schema_fields": {
+          "description": {
+            "description": "The team's description.",
+            "type": "string"
+          },
+          "name": {
+            "description": "The name of this team.",
+            "type": "string",
+            "maxLength": 250,
+            "minLength": 1
+          }
+        }
+      },
+      "oracle_authority": "OBSERVATION_ONLY",
+      "oracle_reason": "Request schemas do not prove partial-update preservation or lost-update prevention",
+      "shared_physical_resource": true,
+      "id": "INTERACTION_1",
+      "route_expression": "\"/teams/PLACEHOLDER\".replace(\"PLACEHOLDER\",\"@{ROUTE_\"+key+\"}\")"
+    },
+    {
+      "resource_type": "ModelsLabel",
+      "logical_id": "ModelsLabel_1",
+      "profile": "shared_read_disjoint_fields",
+      "session_fields": {
+        "A": {
+          "field": "description",
+          "minLength": 0,
+          "maxLength": null,
+          "domain": "plain_string"
+        },
+        "B": {
+          "field": "hex_color",
+          "minLength": 0,
+          "maxLength": 7,
+          "domain": "hex_rgb"
+        }
+      },
+      "writable_fields": [
+        "created",
+        "created_by",
+        "description",
+        "hex_color",
+        "id",
+        "title",
+        "updated"
+      ],
+      "read_route": "/labels/{id}",
+      "write_method": "POST",
+      "provenance": {
+        "resource_inference": [
+          {
+            "pointer": "#/paths/~1labels/put",
+            "rule": "collection creation with 201 plus unique item GET"
+          },
+          {
+            "pointer": "#/paths/~1labels~1{id}/get",
+            "rule": "response id convention; route parameter matched to property"
+          },
+          {
+            "pointer": "#/paths/~1labels~1{id}/put",
+            "rule": "EXPLICIT_METHOD_COMPATIBILITY_ADAPTER",
+            "evidence": "Previously observed local OPTIONS allows POST, not PUT. Runner must re-check this evidence before live generation."
+          }
+        ],
+        "read_operation_pointer": "#/paths/~1labels~1{id}/get",
+        "write_operation_pointer": "#/paths/~1labels~1{id}/put",
+        "effective_write_method": "post",
+        "schema_fields": {
+          "description": {
+            "description": "The label description.",
+            "type": "string"
+          },
+          "hex_color": {
+            "description": "The color this label has in hex format.",
+            "type": "string",
+            "maxLength": 7
+          }
+        }
+      },
+      "oracle_authority": "OBSERVATION_ONLY",
+      "oracle_reason": "Request schemas do not prove partial-update preservation or lost-update prevention",
+      "shared_physical_resource": true,
+      "id": "INTERACTION_2",
+      "route_expression": "\"/labels/PLACEHOLDER\".replace(\"PLACEHOLDER\",\"@{ROUTE_\"+key+\"}\")"
+    },
+    {
+      "resource_type": "ModelsProject",
+      "logical_id": "ModelsProject_3",
+      "profile": "shared_read_same_field",
+      "session_fields": {
+        "A": {
+          "field": "hex_color",
+          "minLength": 0,
+          "maxLength": 7,
+          "domain": "hex_rgb"
+        },
+        "B": {
+          "field": "hex_color",
+          "minLength": 0,
+          "maxLength": 7,
+          "domain": "hex_rgb"
+        }
+      },
+      "writable_fields": [
+        "background_blur_hash",
+        "background_information",
+        "created",
+        "description",
+        "hex_color",
+        "id",
+        "identifier",
+        "is_archived",
+        "is_favorite",
+        "max_permission",
+        "owner",
+        "parent_project_id",
+        "position",
+        "subscription",
+        "title",
+        "updated",
+        "views"
+      ],
+      "read_route": "/projects/{id}",
+      "write_method": "POST",
+      "provenance": {
+        "resource_inference": [
+          {
+            "pointer": "#/paths/~1projects/put",
+            "rule": "collection creation with 201 plus unique item GET"
+          },
+          {
+            "pointer": "#/paths/~1projects~1{id}/get",
+            "rule": "response id convention; route parameter matched to property"
+          }
+        ],
+        "read_operation_pointer": "#/paths/~1projects~1{id}/get",
+        "write_operation_pointer": "#/paths/~1projects~1{id}/post",
+        "effective_write_method": "post",
+        "schema_fields": {
+          "hex_color": {
+            "description": "The hex color of this project",
+            "type": "string",
+            "maxLength": 7
+          }
+        }
+      },
+      "oracle_authority": "OBSERVATION_ONLY",
+      "oracle_reason": "Request schemas do not prove partial-update preservation or lost-update prevention",
+      "shared_physical_resource": true,
+      "id": "INTERACTION_3",
+      "route_expression": "\"/projects/PLACEHOLDER\".replace(\"PLACEHOLDER\",\"@{ROUTE_\"+key+\"}\")"
+    },
+    {
+      "resource_type": "ModelsTask",
+      "logical_id": "ModelsTask_3",
+      "profile": "free_stale_disjoint_fields",
+      "session_fields": {
+        "A": {
+          "field": "hex_color",
+          "minLength": 0,
+          "maxLength": 7,
+          "domain": "hex_rgb"
+        },
+        "B": {
+          "field": "title",
+          "minLength": 1,
+          "maxLength": null,
+          "domain": "plain_string"
+        }
+      },
+      "writable_fields": [
+        "assignees",
+        "attachments",
+        "bucket_id",
+        "buckets",
+        "comment_count",
+        "comments",
+        "cover_image_attachment_id",
+        "created",
+        "created_by",
+        "deleted_at",
+        "description",
+        "done",
+        "done_at",
+        "due_date",
+        "end_date",
+        "hex_color",
+        "id",
+        "identifier",
+        "index",
+        "is_favorite",
+        "is_unread",
+        "labels",
+        "percent_done",
+        "position",
+        "priority",
+        "project_id",
+        "reactions",
+        "related_tasks",
+        "reminders",
+        "repeat_after",
+        "repeat_mode",
+        "start_date",
+        "subscription",
+        "time_entries_count",
+        "title",
+        "updated"
+      ],
+      "read_route": "/tasks/{id}",
+      "write_method": "POST",
+      "provenance": {
+        "resource_inference": [
+          {
+            "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+            "rule": "collection creation with 201 plus unique item GET"
+          },
+          {
+            "pointer": "#/paths/~1tasks~1{id}/get",
+            "rule": "response id convention; route parameter matched to property"
+          },
+          {
+            "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+            "rule": "PATH_PARENT_FROM_SELECTED_COLLECTION_PREFIX",
+            "target": "ModelsProject"
+          }
+        ],
+        "read_operation_pointer": "#/paths/~1tasks~1{id}/get",
+        "write_operation_pointer": "#/paths/~1tasks~1{id}/post",
+        "effective_write_method": "post",
+        "schema_fields": {
+          "hex_color": {
+            "description": "The task color in hex",
+            "type": "string",
+            "maxLength": 7
+          },
+          "title": {
+            "description": "The task text. This is what you'll see in the project.",
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "oracle_authority": "OBSERVATION_ONLY",
+      "oracle_reason": "Request schemas do not prove partial-update preservation or lost-update prevention",
+      "shared_physical_resource": true,
+      "id": "INTERACTION_4",
+      "route_expression": "\"/tasks/PLACEHOLDER\".replace(\"PLACEHOLDER\",\"@{ROUTE_\"+key+\"}\")"
+    },
+    {
+      "resource_type": "ModelsProjectView",
+      "logical_id": "ModelsProjectView_2",
+      "profile": "shared_read_same_field",
+      "session_fields": {
+        "A": {
+          "field": "title",
+          "minLength": 1,
+          "maxLength": 250,
+          "domain": "plain_string"
+        },
+        "B": {
+          "field": "title",
+          "minLength": 1,
+          "maxLength": 250,
+          "domain": "plain_string"
+        }
+      },
+      "writable_fields": [
+        "bucket_configuration",
+        "bucket_configuration_mode",
+        "created",
+        "default_bucket_id",
+        "done_bucket_id",
+        "filter",
+        "id",
+        "position",
+        "project_id",
+        "title",
+        "updated",
+        "view_kind"
+      ],
+      "read_route": "/projects/{project}/views/{id}",
+      "write_method": "POST",
+      "provenance": {
+        "resource_inference": [
+          {
+            "pointer": "#/paths/~1projects~1{project}~1views/put",
+            "rule": "collection creation with 201 plus unique item GET"
+          },
+          {
+            "pointer": "#/paths/~1projects~1{project}~1views~1{id}/get",
+            "rule": "response id convention; route parameter matched to property"
+          },
+          {
+            "pointer": "#/paths/~1projects~1{project}~1views/put",
+            "rule": "PATH_PARENT_FROM_SELECTED_COLLECTION_PREFIX",
+            "target": "ModelsProject"
+          }
+        ],
+        "read_operation_pointer": "#/paths/~1projects~1{project}~1views~1{id}/get",
+        "write_operation_pointer": "#/paths/~1projects~1{project}~1views~1{id}/post",
+        "effective_write_method": "post",
+        "schema_fields": {
+          "title": {
+            "description": "The title of this view",
+            "type": "string",
+            "maxLength": 250,
+            "minLength": 1
+          }
+        }
+      },
+      "oracle_authority": "OBSERVATION_ONLY",
+      "oracle_reason": "Request schemas do not prove partial-update preservation or lost-update prevention",
+      "shared_physical_resource": true,
+      "id": "INTERACTION_5",
+      "route_expression": "\"/projects/{project}/views/PLACEHOLDER\".replace(\"PLACEHOLDER\",\"@{ROUTE_\"+key+\"}\").replace(\"{project}\",\"@{PARENT_\"+key+\"_project}\")"
+    },
+    {
+      "resource_type": "ModelsProject",
+      "logical_id": "ModelsProject_2",
+      "profile": "shared_read_disjoint_fields",
+      "session_fields": {
+        "A": {
+          "field": "description",
+          "minLength": 0,
+          "maxLength": null,
+          "domain": "plain_string"
+        },
+        "B": {
+          "field": "hex_color",
+          "minLength": 0,
+          "maxLength": 7,
+          "domain": "hex_rgb"
+        }
+      },
+      "writable_fields": [
+        "background_blur_hash",
+        "background_information",
+        "created",
+        "description",
+        "hex_color",
+        "id",
+        "identifier",
+        "is_archived",
+        "is_favorite",
+        "max_permission",
+        "owner",
+        "parent_project_id",
+        "position",
+        "subscription",
+        "title",
+        "updated",
+        "views"
+      ],
+      "read_route": "/projects/{id}",
+      "write_method": "POST",
+      "provenance": {
+        "resource_inference": [
+          {
+            "pointer": "#/paths/~1projects/put",
+            "rule": "collection creation with 201 plus unique item GET"
+          },
+          {
+            "pointer": "#/paths/~1projects~1{id}/get",
+            "rule": "response id convention; route parameter matched to property"
+          }
+        ],
+        "read_operation_pointer": "#/paths/~1projects~1{id}/get",
+        "write_operation_pointer": "#/paths/~1projects~1{id}/post",
+        "effective_write_method": "post",
+        "schema_fields": {
+          "description": {
+            "description": "The description of the project.",
+            "type": "string"
+          },
+          "hex_color": {
+            "description": "The hex color of this project",
+            "type": "string",
+            "maxLength": 7
+          }
+        }
+      },
+      "oracle_authority": "OBSERVATION_ONLY",
+      "oracle_reason": "Request schemas do not prove partial-update preservation or lost-update prevention",
+      "shared_physical_resource": true,
+      "id": "INTERACTION_6",
+      "route_expression": "\"/projects/PLACEHOLDER\".replace(\"PLACEHOLDER\",\"@{ROUTE_\"+key+\"}\")"
+    }
+  ],
+  "blocked": [
+    {
+      "resource": "ModelsTaskComment",
+      "reason": "No supported writable observable update fields",
+      "details": []
+    },
+    {
+      "resource": "ModelsSavedFilter",
+      "reason": "No supported writable observable update fields",
+      "details": []
+    },
+    {
+      "resource": "ModelsLinkSharing",
+      "reason": "No supported writable observable update fields",
+      "details": []
+    }
+  ],
+  "live_blockers": [],
+  "oracle_limitations": [
+    "Observational output only; no universal lost-update semantics inferred"
+  ],
+  "reconciliation_policy": "Cold restore + API prefix + unchanged business Context, same JVM",
+  "generation_is_automatic": true
+}
