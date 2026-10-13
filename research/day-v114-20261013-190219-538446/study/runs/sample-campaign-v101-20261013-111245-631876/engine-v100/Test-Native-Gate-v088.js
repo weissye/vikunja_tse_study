@@ -1,0 +1,16 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const all=fs.readFileSync(process.argv[2],'utf8');
+const part=all.slice(all.indexOf('bthread("native session readiness and restart gate"'),all.indexOf('bthread("per-operation shared resource windows"'));
+const events=[{name:'SessionReady',data:{session:'A'}},{name:'SessionReady',data:{session:'B'}},{name:'POST',data:{model:{action:'checkpoint',session:'B',caseId:'case'}}},{name:'SessionsInvalidated',data:{}},{name:'SessionReady',data:{session:'A'}},{name:'SessionReady',data:{session:'B'}},{name:'POST',data:{model:{action:'negative_attempt',session:'B',caseId:'case'}}},{name:'SessionsInvalidated',data:{}},{name:'SessionReady',data:{session:'A'}},{name:'SessionReady',data:{session:'B'}},{name:'GET',data:{model:{action:'negative_readback',session:'B',caseId:'case'}}}];
+const models=[{action:'authenticate',session:'A'},{action:'update',session:'A'},{action:'update',session:'B'},{action:'negative_attempt',session:'B',caseId:'case'},{action:'negative_readback',session:'B',caseId:'case'}];
+let index=0;const halt={},rows=[];const c={bp:{all:{},EventSet:(n,p)=>p},bthread:(n,f)=>{try{f()}catch(e){if(e!==halt)throw e}},sync:o=>{if(index===events.length+1)throw halt;rows.push(models.map(m=>o.block({name:'HTTP',data:{model:m}})));return events[index++]||{name:'Stop',data:{}}}};
+vm.createContext(c);vm.runInContext(part,c);
+assert.deepStrictEqual(rows[0],[false,true,true,true,true]);
+assert.deepStrictEqual(rows[2],[false,false,false,false,false]);
+assert.deepStrictEqual(rows[3],[false,true,true,true,true]);
+assert.deepStrictEqual(rows[5],[false,true,true,true,true]);
+assert.deepStrictEqual(rows[6],[false,true,true,false,false]);
+assert.deepStrictEqual(rows[7],[false,true,true,true,true]);
+assert.deepStrictEqual(rows[10],[false,true,true,false,false]);
+assert.deepStrictEqual(rows[11],[false,false,false,false,false]);
+console.log('V088_NATIVE_LOGIN_RECOVERY_GATE_PASS');

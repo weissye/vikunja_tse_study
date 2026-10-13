@@ -1,0 +1,44 @@
+{
+  "version": "v091",
+  "all_requirements_satisfied": false,
+  "native_execution": false,
+  "live_execution": false,
+  "implemented": {
+    "one_project_three_js": true,
+    "native_login_bthreads": 2,
+    "shared_resources": 80,
+    "same_template_per_session": true,
+    "workflow_bthreads": 160,
+    "automatic_supported_field_selection": true,
+    "positive_updates_planned": 260,
+    "negative_cases_planned": 1300,
+    "no_external_login_initiation": true,
+    "per_operation_not_whole_workflow_windows": true,
+    "parent_dependency_order_independent": true,
+    "cartesian_multi_parent_planner_retained": true,
+    "same_jvm_recovery_protocol": true,
+    "shared_code_templates": true,
+    "distinct_factory_parameter_bindings_tested": true,
+    "description_value_domains": true
+  },
+  "remaining": {
+    "pure_contract_only_creation": false,
+    "reason": "Inherited explicit saved-filter request mapping is not declared by the frozen contract",
+    "all_contract_entities_operations": false,
+    "selected_types": 8,
+    "unsupported_negative_rules": 139,
+    "positive_failure_recovery": false,
+    "authentication_429_backoff_in_model": false,
+    "native_frozen_jar_compatibility_accepted": false
+  },
+  "local_validation": [
+    "80 creations/160 same-template session workflows/1380 negatives",
+    "JavaScript syntax 3/3",
+    "native-event-only login gateway protocol",
+    "both sessions invalidated and reauthenticated after cold checkpoint/restore",
+    "strict original finding preserved and API rollback verified",
+    "actual emitted session/recovery blocker executed in Node",
+    "actual negative callback preserves failure and enforces verified recovery",
+    "nested route callback regression"
+  ]
+}

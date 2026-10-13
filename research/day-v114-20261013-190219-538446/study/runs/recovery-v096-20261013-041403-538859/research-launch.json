@@ -1,0 +1,43 @@
+{
+  "config_version": 1,
+  "experiment_id": "native-two-sessions",
+  "model": {
+    "name": "vikunja",
+    "base_url": "http://127.0.0.1:13488"
+  },
+  "instances": {
+    "default": 3,
+    "per_entity": {}
+  },
+  "fixtures": {
+    "seed": 1,
+    "namespace": "recovery-v096-20261013-041403-538859"
+  },
+  "render": {
+    "profile": "unified",
+    "negative_schema": true
+  },
+  "budgets": {
+    "max_events": 200000,
+    "max_total_instances": 4096,
+    "soft_seconds": 600,
+    "drain_seconds": 300
+  },
+  "actors": {
+    "users": 1,
+    "sessions_per_user": 2,
+    "shared_workflows": "derive_from_contract"
+  },
+  "missing_information": {
+    "policy": "block"
+  },
+  "recovery": {
+    "policy": "cold_snapshot_restore",
+    "negative_rule_ids": []
+  },
+  "sampling": {
+    "negative_limit": 8,
+    "seed": 1,
+    "completed_case_ids": []
+  }
+}

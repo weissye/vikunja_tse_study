@@ -1,0 +1,13 @@
+const vm=require('vm'),fs=require('fs'),assert=require('assert');
+const code=fs.readFileSync(process.argv[2],'utf8');let args,failures=[];const vars={ROUTE_ModelsProject_1:101,ID_ModelsProject_1:101};
+const c={RESTSession:function(url,n,opt){this.baseURL=url;this.defaultHeaders=opt.headers},bp:{EventSet:()=>({}),Event:()=>({}),log:{info:()=>{}}},pvg:{rtv:{get:k=>vars[k],set:(k,v)=>vars[k]=v},fail:s=>failures.push(s)}};
+vm.createContext(c);vm.runInContext(code,c);c.requestRest=(...a)=>args=a;
+const resolve=s=>s.replace(/@\{([^}]+)\}/g,(_,k)=>vars[k]);
+c.createModelsLinkSharing('ModelsLinkSharing_1',{name:'valid',permission:0},{ModelsProject:{id:'ModelsProject_1'}});
+assert.strictEqual(resolve(args[1]),'/projects/101/shares');
+args[5]({body:'{"id":501,"hash":"test-only-capability","name":"valid","permission":0}'});
+c.verifyModelsLinkSharing({id:'ModelsLinkSharing_1',expected:{name:'valid',permission:0},revision:1});
+assert.strictEqual(resolve(args[1]),'/projects/101/shares/501');
+args[5]({body:'{"id":501,"hash":"test-only-capability","name":"valid","permission":0}'});assert.strictEqual(failures.length,0);
+args[5]({body:'{"id":502,"name":"valid","permission":0}'});assert(failures.length>0);
+console.log('V082_SHARE_ID_ROUTE_AND_ACTUAL_VERIFIER_PASS');

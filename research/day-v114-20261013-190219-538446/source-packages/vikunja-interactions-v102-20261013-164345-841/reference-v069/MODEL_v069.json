@@ -1,0 +1,269 @@
+{
+  "version": "v069",
+  "status": "UNIFIED_GENERATED_NOT_NATIVE_EXECUTED",
+  "project_count": 1,
+  "context_count": 1,
+  "instances_per_independent_entity": 3,
+  "instance_counts": {
+    "ModelsProject": 3,
+    "ModelsTask": 3,
+    "ModelsLabel": 3,
+    "ModelsSavedFilter": 3,
+    "ModelsLinkSharing": 3,
+    "ModelsProjectView": 3,
+    "ModelsTaskComment": 3,
+    "ModelsTeam": 3
+  },
+  "bindings": {
+    "ModelsProject": [
+      {
+        "id": "ModelsProject_1",
+        "fixture_index": 1,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsProject_2",
+        "fixture_index": 2,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsProject_3",
+        "fixture_index": 3,
+        "bindings": {}
+      }
+    ],
+    "ModelsTask": [
+      {
+        "id": "ModelsTask_1",
+        "fixture_index": 1,
+        "bindings": {
+          "ModelsProject": "ModelsProject_1"
+        }
+      },
+      {
+        "id": "ModelsTask_2",
+        "fixture_index": 2,
+        "bindings": {
+          "ModelsProject": "ModelsProject_2"
+        }
+      },
+      {
+        "id": "ModelsTask_3",
+        "fixture_index": 3,
+        "bindings": {
+          "ModelsProject": "ModelsProject_3"
+        }
+      }
+    ],
+    "ModelsLabel": [
+      {
+        "id": "ModelsLabel_1",
+        "fixture_index": 1,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsLabel_2",
+        "fixture_index": 2,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsLabel_3",
+        "fixture_index": 3,
+        "bindings": {}
+      }
+    ],
+    "ModelsSavedFilter": [
+      {
+        "id": "ModelsSavedFilter_1",
+        "fixture_index": 1,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsSavedFilter_2",
+        "fixture_index": 2,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsSavedFilter_3",
+        "fixture_index": 3,
+        "bindings": {}
+      }
+    ],
+    "ModelsLinkSharing": [
+      {
+        "id": "ModelsLinkSharing_1",
+        "fixture_index": 1,
+        "bindings": {
+          "ModelsProject": "ModelsProject_1"
+        }
+      },
+      {
+        "id": "ModelsLinkSharing_2",
+        "fixture_index": 2,
+        "bindings": {
+          "ModelsProject": "ModelsProject_2"
+        }
+      },
+      {
+        "id": "ModelsLinkSharing_3",
+        "fixture_index": 3,
+        "bindings": {
+          "ModelsProject": "ModelsProject_3"
+        }
+      }
+    ],
+    "ModelsProjectView": [
+      {
+        "id": "ModelsProjectView_1",
+        "fixture_index": 1,
+        "bindings": {
+          "ModelsProject": "ModelsProject_1"
+        }
+      },
+      {
+        "id": "ModelsProjectView_2",
+        "fixture_index": 2,
+        "bindings": {
+          "ModelsProject": "ModelsProject_2"
+        }
+      },
+      {
+        "id": "ModelsProjectView_3",
+        "fixture_index": 3,
+        "bindings": {
+          "ModelsProject": "ModelsProject_3"
+        }
+      }
+    ],
+    "ModelsTaskComment": [
+      {
+        "id": "ModelsTaskComment_1",
+        "fixture_index": 1,
+        "bindings": {
+          "ModelsTask": "ModelsTask_1"
+        }
+      },
+      {
+        "id": "ModelsTaskComment_2",
+        "fixture_index": 2,
+        "bindings": {
+          "ModelsTask": "ModelsTask_2"
+        }
+      },
+      {
+        "id": "ModelsTaskComment_3",
+        "fixture_index": 3,
+        "bindings": {
+          "ModelsTask": "ModelsTask_3"
+        }
+      }
+    ],
+    "ModelsTeam": [
+      {
+        "id": "ModelsTeam_1",
+        "fixture_index": 1,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsTeam_2",
+        "fixture_index": 2,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsTeam_3",
+        "fixture_index": 3,
+        "bindings": {}
+      }
+    ]
+  },
+  "resources": [
+    "/projects",
+    "/projects/{id}/tasks",
+    "/labels",
+    "/filters",
+    "/projects/{project}/shares",
+    "/projects/{project}/views",
+    "/tasks/{taskID}/comments",
+    "/teams"
+  ],
+  "unsupported_candidates": [
+    {
+      "path": "/projects/{id}/teams",
+      "reason": "ValueError: Ambiguous/missing item GET: /projects/{id}/teams"
+    },
+    {
+      "path": "/projects/{id}/users",
+      "reason": "ValueError: Ambiguous/missing item GET: /projects/{id}/users"
+    },
+    {
+      "path": "/projects/{id}/views/{view}/buckets",
+      "reason": "ValueError: Ambiguous/missing item GET: /projects/{id}/views/{view}/buckets"
+    },
+    {
+      "path": "/projects/{id}/webhooks",
+      "reason": "ValueError: Ambiguous/missing item GET: /projects/{id}/webhooks"
+    },
+    {
+      "path": "/projects/{projectID}/duplicate",
+      "reason": "ValueError: Ambiguous/missing item GET: /projects/{projectID}/duplicate"
+    },
+    {
+      "path": "/subscriptions/{entity}/{entityID}",
+      "reason": "ValueError: Ambiguous/missing item GET: /subscriptions/{entity}/{entityID}"
+    },
+    {
+      "path": "/tasks/{taskID}/assignees",
+      "reason": "ValueError: Ambiguous/missing item GET: /tasks/{taskID}/assignees"
+    },
+    {
+      "path": "/tasks/{taskID}/assignees/bulk",
+      "reason": "ValueError: Ambiguous/missing item GET: /tasks/{taskID}/assignees/bulk"
+    },
+    {
+      "path": "/tasks/{taskID}/duplicate",
+      "reason": "ValueError: Ambiguous/missing item GET: /tasks/{taskID}/duplicate"
+    },
+    {
+      "path": "/tasks/{taskID}/labels/bulk",
+      "reason": "ValueError: Ambiguous/missing item GET: /tasks/{taskID}/labels/bulk"
+    },
+    {
+      "path": "/tasks/{taskID}/relations",
+      "reason": "ValueError: Ambiguous/missing item GET: /tasks/{taskID}/relations"
+    },
+    {
+      "path": "/tasks/{task}/labels",
+      "reason": "ValueError: Ambiguous/missing item GET: /tasks/{task}/labels"
+    },
+    {
+      "path": "/teams/{id}/members",
+      "reason": "ValueError: Ambiguous/missing item GET: /teams/{id}/members"
+    },
+    {
+      "path": "/tokens",
+      "reason": "ValueError: Ambiguous/missing item GET: /tokens"
+    },
+    {
+      "path": "/{kind}/{id}/reactions",
+      "reason": "ValueError: Ambiguous/missing item GET: /{kind}/{id}/reactions"
+    }
+  ],
+  "all_contract_operations_covered": false,
+  "negative_scheduling": "independent bthread per rule per instance; eligible after verified creation; no before-update gate",
+  "scheduling": "Provengo event selection; no ordered campaign steps",
+  "prefix": "runtime event history; no fixed length claim",
+  "native_execution": false,
+  "live_execution": false,
+  "actor_scope": "single identity; multi-user integration not yet included",
+  "original_renderer": "generator_v56 with source-level v069 changes",
+  "known_limits": [
+    "A verifier failure still ends the native run; automatic recovery is not integrated in this delivery",
+    "8 supported resource families, not all 170 operations",
+    "Per-resource oracle isolation restricts writes during a negative observation window"
+  ],
+  "file_sha256": {
+    "spec/js/stories.vikunja.js": "ad3fe9a000508e190f70f2b2c38a1d64c3ce6eba40374226e40d18e36ce67b50",
+    "spec/js/dal.js": "97c055ddd54d542c4334c267edec3680915c602dbad7baf8ed5b43257c9c4e31",
+    "spec/js/interfaces.vikunja.js": "9afaedd6f497db78e309bbeb5e1a20b24f1f4fd45c389e68d8d7ef9a37be7d9e"
+  }
+}

@@ -1,0 +1,961 @@
+{
+  "version": "v103",
+  "status": "NOT_ACCEPTED",
+  "native_execution": true,
+  "live_execution": true,
+  "run_seed": 3,
+  "fixture_seed": 1,
+  "planned_interaction_groups": 6,
+  "planned": {
+    "resources": 24,
+    "session_workflows": 48,
+    "positive_updates": 78,
+    "negative_checks": 8
+  },
+  "native_pid": 27640,
+  "native_launches": 1,
+  "error": "17:26:44.834 WARN [RUN>random] FAIL: A REST call returned the unexpected response code.",
+  "completed_interaction_restorations": 5,
+  "created_resources": 21,
+  "recorded_http_requests": 215,
+  "native_login_requests": 34,
+  "completed_recoveries": 3,
+  "native_exit": 1,
+  "post_failure_markers_excluded": 0,
+  "interaction_complete": [
+    {
+      "groupId": "INTERACTION_6",
+      "model_state_equal": true
+    },
+    {
+      "groupId": "INTERACTION_3",
+      "model_state_equal": true
+    },
+    {
+      "groupId": "INTERACTION_4",
+      "model_state_equal": true
+    },
+    {
+      "groupId": "INTERACTION_2",
+      "model_state_equal": true
+    },
+    {
+      "groupId": "INTERACTION_1",
+      "model_state_equal": true
+    }
+  ],
+  "interaction_restore_checks": [
+    {
+      "groupId": "INTERACTION_6",
+      "storage_equal": true,
+      "api_prefix_equal": true,
+      "safe_to_continue": true,
+      "group_protocol_valid": true,
+      "oracle_authority": "OBSERVATION_ONLY"
+    },
+    {
+      "groupId": "INTERACTION_3",
+      "storage_equal": true,
+      "api_prefix_equal": true,
+      "safe_to_continue": true,
+      "group_protocol_valid": true,
+      "oracle_authority": "OBSERVATION_ONLY"
+    },
+    {
+      "groupId": "INTERACTION_4",
+      "storage_equal": true,
+      "api_prefix_equal": true,
+      "safe_to_continue": true,
+      "group_protocol_valid": true,
+      "oracle_authority": "OBSERVATION_ONLY"
+    },
+    {
+      "groupId": "INTERACTION_2",
+      "storage_equal": true,
+      "api_prefix_equal": true,
+      "safe_to_continue": true,
+      "group_protocol_valid": true,
+      "oracle_authority": "OBSERVATION_ONLY"
+    },
+    {
+      "groupId": "INTERACTION_1",
+      "storage_equal": true,
+      "api_prefix_equal": true,
+      "safe_to_continue": true,
+      "group_protocol_valid": true,
+      "oracle_authority": "OBSERVATION_ONLY"
+    }
+  ],
+  "negative_checks": [
+    {
+      "evidence_version": 1,
+      "rule_id": "ModelsTask/description/TYPE_NUMBER",
+      "source_pointer": "#/definitions/models.Task/properties/description/type",
+      "rule": {
+        "id": "ModelsTask/description/TYPE_NUMBER",
+        "resource": "ModelsTask",
+        "field": "description",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Task/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Task/properties/description/type",
+        "operation": "POST /tasks/{id}",
+        "effective_operation": "POST /tasks/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "403",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      "logicalId": "ModelsTask_3",
+      "resource_id": 455,
+      "expected_revision": 1,
+      "readback_status": 200,
+      "request_body": {
+        "assignees": null,
+        "attachments": null,
+        "bucket_id": 0,
+        "cover_image_attachment_id": 0,
+        "created": "2026-10-13T14:22:45Z",
+        "created_by": {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-11T06:06:45Z"
+        },
+        "description": 42,
+        "done": false,
+        "done_at": "0001-01-01T00:00:00Z",
+        "due_date": "0001-01-01T00:00:00Z",
+        "end_date": "0001-01-01T00:00:00Z",
+        "hex_color": "",
+        "id": 455,
+        "identifier": "#1",
+        "index": 1,
+        "is_favorite": false,
+        "labels": null,
+        "percent_done": 0,
+        "position": 0,
+        "priority": 0,
+        "project_id": 131,
+        "reactions": null,
+        "related_tasks": {},
+        "reminders": null,
+        "repeat_after": 0,
+        "repeat_mode": 0,
+        "start_date": "0001-01-01T00:00:00Z",
+        "subscription": {
+          "id": 455,
+          "entity": "task",
+          "entity_id": 455,
+          "created": "2026-10-13T14:22:45Z"
+        },
+        "title": "sbt-1-ModelsTask-3-title",
+        "updated": "2026-10-13T14:22:45Z"
+      },
+      "before_projection": {
+        "assignees": {
+          "present": true,
+          "value": null
+        },
+        "attachments": {
+          "present": true,
+          "value": null
+        },
+        "bucket_id": {
+          "present": true,
+          "value": 0
+        },
+        "buckets": {
+          "present": false
+        },
+        "comment_count": {
+          "present": false
+        },
+        "comments": {
+          "present": false
+        },
+        "cover_image_attachment_id": {
+          "present": true,
+          "value": 0
+        },
+        "created": {
+          "present": true,
+          "value": "2026-10-13T14:22:45Z"
+        },
+        "created_by": {
+          "present": true,
+          "value": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-11T06:06:45Z"
+          }
+        },
+        "deleted_at": {
+          "present": false
+        },
+        "description": {
+          "present": true,
+          "value": ""
+        },
+        "done": {
+          "present": true,
+          "value": false
+        },
+        "done_at": {
+          "present": true,
+          "value": "0001-01-01T00:00:00Z"
+        },
+        "due_date": {
+          "present": true,
+          "value": "0001-01-01T00:00:00Z"
+        },
+        "end_date": {
+          "present": true,
+          "value": "0001-01-01T00:00:00Z"
+        },
+        "hex_color": {
+          "present": true,
+          "value": ""
+        },
+        "id": {
+          "present": true,
+          "value": 455
+        },
+        "identifier": {
+          "present": true,
+          "value": "#1"
+        },
+        "index": {
+          "present": true,
+          "value": 1
+        },
+        "is_favorite": {
+          "present": true,
+          "value": false
+        },
+        "is_unread": {
+          "present": false
+        },
+        "labels": {
+          "present": true,
+          "value": null
+        },
+        "percent_done": {
+          "present": true,
+          "value": 0
+        },
+        "position": {
+          "present": true,
+          "value": 0
+        },
+        "priority": {
+          "present": true,
+          "value": 0
+        },
+        "project_id": {
+          "present": true,
+          "value": 131
+        },
+        "reactions": {
+          "present": true,
+          "value": null
+        },
+        "related_tasks": {
+          "present": true,
+          "value": {}
+        },
+        "reminders": {
+          "present": true,
+          "value": null
+        },
+        "repeat_after": {
+          "present": true,
+          "value": 0
+        },
+        "repeat_mode": {
+          "present": true,
+          "value": 0
+        },
+        "start_date": {
+          "present": true,
+          "value": "0001-01-01T00:00:00Z"
+        },
+        "subscription": {
+          "present": true,
+          "value": {
+            "id": 455,
+            "entity": "task",
+            "entity_id": 455,
+            "created": "2026-10-13T14:22:45Z"
+          }
+        },
+        "time_entries_count": {
+          "present": false
+        },
+        "title": {
+          "present": true,
+          "value": "sbt-1-ModelsTask-3-title"
+        },
+        "updated": {
+          "present": true,
+          "value": "2026-10-13T14:22:45Z"
+        }
+      },
+      "after_projection": {
+        "assignees": {
+          "present": true,
+          "value": null
+        },
+        "attachments": {
+          "present": true,
+          "value": null
+        },
+        "bucket_id": {
+          "present": true,
+          "value": 0
+        },
+        "buckets": {
+          "present": false
+        },
+        "comment_count": {
+          "present": false
+        },
+        "comments": {
+          "present": false
+        },
+        "cover_image_attachment_id": {
+          "present": true,
+          "value": 0
+        },
+        "created": {
+          "present": true,
+          "value": "2026-10-13T14:22:45Z"
+        },
+        "created_by": {
+          "present": true,
+          "value": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-11T06:06:45Z"
+          }
+        },
+        "deleted_at": {
+          "present": false
+        },
+        "description": {
+          "present": true,
+          "value": ""
+        },
+        "done": {
+          "present": true,
+          "value": false
+        },
+        "done_at": {
+          "present": true,
+          "value": "0001-01-01T00:00:00Z"
+        },
+        "due_date": {
+          "present": true,
+          "value": "0001-01-01T00:00:00Z"
+        },
+        "end_date": {
+          "present": true,
+          "value": "0001-01-01T00:00:00Z"
+        },
+        "hex_color": {
+          "present": true,
+          "value": ""
+        },
+        "id": {
+          "present": true,
+          "value": 455
+        },
+        "identifier": {
+          "present": true,
+          "value": "#1"
+        },
+        "index": {
+          "present": true,
+          "value": 1
+        },
+        "is_favorite": {
+          "present": true,
+          "value": false
+        },
+        "is_unread": {
+          "present": false
+        },
+        "labels": {
+          "present": true,
+          "value": null
+        },
+        "percent_done": {
+          "present": true,
+          "value": 0
+        },
+        "position": {
+          "present": true,
+          "value": 0
+        },
+        "priority": {
+          "present": true,
+          "value": 0
+        },
+        "project_id": {
+          "present": true,
+          "value": 131
+        },
+        "reactions": {
+          "present": true,
+          "value": null
+        },
+        "related_tasks": {
+          "present": true,
+          "value": {}
+        },
+        "reminders": {
+          "present": true,
+          "value": null
+        },
+        "repeat_after": {
+          "present": true,
+          "value": 0
+        },
+        "repeat_mode": {
+          "present": true,
+          "value": 0
+        },
+        "start_date": {
+          "present": true,
+          "value": "0001-01-01T00:00:00Z"
+        },
+        "subscription": {
+          "present": true,
+          "value": {
+            "id": 455,
+            "entity": "task",
+            "entity_id": 455,
+            "created": "2026-10-13T14:22:45Z"
+          }
+        },
+        "time_entries_count": {
+          "present": false
+        },
+        "title": {
+          "present": true,
+          "value": "sbt-1-ModelsTask-3-title"
+        },
+        "updated": {
+          "present": true,
+          "value": "2026-10-13T14:22:45Z"
+        }
+      },
+      "changed_fields": [],
+      "checked_field": "description",
+      "checked_field_before": {
+        "present": true,
+        "value": ""
+      },
+      "checked_field_after": {
+        "present": true,
+        "value": ""
+      },
+      "caseId": "NEG_A_ModelsTask_3_0",
+      "status": 400,
+      "rejected": true,
+      "status_documented": true,
+      "state_projection_unchanged": true,
+      "observation_available": true,
+      "observation_error": null,
+      "verdict": "PASS",
+      "pass": true
+    },
+    {
+      "evidence_version": 1,
+      "rule_id": "ModelsTeam/description/TYPE_BOOLEAN",
+      "source_pointer": "#/definitions/models.Team/properties/description/type",
+      "rule": {
+        "id": "ModelsTeam/description/TYPE_BOOLEAN",
+        "resource": "ModelsTeam",
+        "field": "description",
+        "kind": "TYPE_BOOLEAN",
+        "mutation": "replace",
+        "invalid_value": false,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Team/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Team/properties/description/type",
+        "operation": "POST /teams/{id}",
+        "effective_operation": "POST /teams/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      "logicalId": "ModelsTeam_1",
+      "resource_id": 45,
+      "expected_revision": 1,
+      "readback_status": 200,
+      "request_body": {
+        "created": "2026-10-13T14:22:39Z",
+        "created_by": {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-11T06:06:45Z"
+        },
+        "description": false,
+        "external_id": "",
+        "id": 45,
+        "is_public": false,
+        "members": [
+          {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-11T06:06:45Z",
+            "admin": true
+          }
+        ],
+        "name": "sbt-1-ModelsTeam-1-name",
+        "updated": "2026-10-13T14:22:39Z"
+      },
+      "before_projection": {
+        "created": {
+          "present": true,
+          "value": "2026-10-13T14:22:39Z"
+        },
+        "created_by": {
+          "present": true,
+          "value": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-11T06:06:45Z"
+          }
+        },
+        "description": {
+          "present": true,
+          "value": ""
+        },
+        "external_id": {
+          "present": true,
+          "value": ""
+        },
+        "id": {
+          "present": true,
+          "value": 45
+        },
+        "is_public": {
+          "present": true,
+          "value": false
+        },
+        "members": {
+          "present": true,
+          "value": [
+            {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-11T06:06:45Z",
+              "admin": true
+            }
+          ]
+        },
+        "name": {
+          "present": true,
+          "value": "sbt-1-ModelsTeam-1-name"
+        },
+        "updated": {
+          "present": true,
+          "value": "2026-10-13T14:22:39Z"
+        }
+      },
+      "after_projection": {
+        "created": {
+          "present": true,
+          "value": "2026-10-13T14:22:39Z"
+        },
+        "created_by": {
+          "present": true,
+          "value": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-11T06:06:45Z"
+          }
+        },
+        "description": {
+          "present": true,
+          "value": ""
+        },
+        "external_id": {
+          "present": true,
+          "value": ""
+        },
+        "id": {
+          "present": true,
+          "value": 45
+        },
+        "is_public": {
+          "present": true,
+          "value": false
+        },
+        "members": {
+          "present": true,
+          "value": [
+            {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-11T06:06:45Z",
+              "admin": true
+            }
+          ]
+        },
+        "name": {
+          "present": true,
+          "value": "sbt-1-ModelsTeam-1-name"
+        },
+        "updated": {
+          "present": true,
+          "value": "2026-10-13T14:22:39Z"
+        }
+      },
+      "changed_fields": [],
+      "checked_field": "description",
+      "checked_field_before": {
+        "present": true,
+        "value": ""
+      },
+      "checked_field_after": {
+        "present": true,
+        "value": ""
+      },
+      "caseId": "NEG_B_ModelsTeam_1_1",
+      "status": 400,
+      "rejected": true,
+      "status_documented": true,
+      "state_projection_unchanged": true,
+      "observation_available": true,
+      "observation_error": null,
+      "verdict": "PASS",
+      "pass": true
+    },
+    {
+      "evidence_version": 1,
+      "rule_id": "ModelsTeam/description/TYPE_NUMBER",
+      "source_pointer": "#/definitions/models.Team/properties/description/type",
+      "rule": {
+        "id": "ModelsTeam/description/TYPE_NUMBER",
+        "resource": "ModelsTeam",
+        "field": "description",
+        "kind": "TYPE_NUMBER",
+        "mutation": "replace",
+        "invalid_value": 42,
+        "constraint": "type",
+        "declared_constraint": "string",
+        "source_pointer": "#/definitions/models.Team/properties/description/type",
+        "schema_pointer": "#/components/schemas/models.Team/properties/description/type",
+        "operation": "POST /teams/{id}",
+        "effective_operation": "POST /teams/{id}",
+        "documented_statuses": [
+          "200",
+          "400",
+          "500"
+        ],
+        "compound_constraints": []
+      },
+      "logicalId": "ModelsTeam_2",
+      "resource_id": 46,
+      "expected_revision": 3,
+      "readback_status": 200,
+      "request_body": {
+        "created": "2026-10-13T14:22:40Z",
+        "created_by": {
+          "id": 1,
+          "name": "",
+          "username": "SBT-tester",
+          "created": "2026-09-20T08:15:00Z",
+          "updated": "2026-10-11T06:06:45Z"
+        },
+        "description": 42,
+        "external_id": "",
+        "id": 46,
+        "is_public": false,
+        "members": [
+          {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-11T06:06:45Z",
+            "admin": true
+          }
+        ],
+        "name": "sbt-B-ModelsTeam_2-name",
+        "updated": "2026-10-13T14:25:39Z"
+      },
+      "before_projection": {
+        "created": {
+          "present": true,
+          "value": "2026-10-13T14:22:40Z"
+        },
+        "created_by": {
+          "present": true,
+          "value": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-11T06:06:45Z"
+          }
+        },
+        "description": {
+          "present": true,
+          "value": "sbt-B-ModelsTeam_2-description"
+        },
+        "external_id": {
+          "present": true,
+          "value": ""
+        },
+        "id": {
+          "present": true,
+          "value": 46
+        },
+        "is_public": {
+          "present": true,
+          "value": false
+        },
+        "members": {
+          "present": true,
+          "value": [
+            {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-11T06:06:45Z",
+              "admin": true
+            }
+          ]
+        },
+        "name": {
+          "present": true,
+          "value": "sbt-B-ModelsTeam_2-name"
+        },
+        "updated": {
+          "present": true,
+          "value": "2026-10-13T14:25:39Z"
+        }
+      },
+      "after_projection": {
+        "created": {
+          "present": true,
+          "value": "2026-10-13T14:22:40Z"
+        },
+        "created_by": {
+          "present": true,
+          "value": {
+            "id": 1,
+            "name": "",
+            "username": "SBT-tester",
+            "created": "2026-09-20T08:15:00Z",
+            "updated": "2026-10-11T06:06:45Z"
+          }
+        },
+        "description": {
+          "present": true,
+          "value": "sbt-B-ModelsTeam_2-description"
+        },
+        "external_id": {
+          "present": true,
+          "value": ""
+        },
+        "id": {
+          "present": true,
+          "value": 46
+        },
+        "is_public": {
+          "present": true,
+          "value": false
+        },
+        "members": {
+          "present": true,
+          "value": [
+            {
+              "id": 1,
+              "name": "",
+              "username": "SBT-tester",
+              "created": "2026-09-20T08:15:00Z",
+              "updated": "2026-10-11T06:06:45Z",
+              "admin": true
+            }
+          ]
+        },
+        "name": {
+          "present": true,
+          "value": "sbt-B-ModelsTeam_2-name"
+        },
+        "updated": {
+          "present": true,
+          "value": "2026-10-13T14:25:39Z"
+        }
+      },
+      "changed_fields": [],
+      "checked_field": "description",
+      "checked_field_before": {
+        "present": true,
+        "value": "sbt-B-ModelsTeam_2-description"
+      },
+      "checked_field_after": {
+        "present": true,
+        "value": "sbt-B-ModelsTeam_2-description"
+      },
+      "caseId": "NEG_A_ModelsTeam_2_0",
+      "status": 400,
+      "rejected": true,
+      "status_documented": true,
+      "state_projection_unchanged": true,
+      "observation_available": true,
+      "observation_error": null,
+      "verdict": "PASS",
+      "pass": true
+    }
+  ],
+  "recovery_checks": [
+    {
+      "caseId": "NEG_A_ModelsTask_3_0",
+      "oracle_pass": true,
+      "recovery_verified": true,
+      "snapshot_restored": true,
+      "api_prefix_equal": true
+    },
+    {
+      "caseId": "NEG_B_ModelsTeam_1_1",
+      "oracle_pass": true,
+      "recovery_verified": true,
+      "snapshot_restored": true,
+      "api_prefix_equal": true
+    },
+    {
+      "caseId": "NEG_A_ModelsTeam_2_0",
+      "oracle_pass": true,
+      "recovery_verified": true,
+      "snapshot_restored": true,
+      "api_prefix_equal": true
+    }
+  ],
+  "findings": [],
+  "completed_workflows": 13,
+  "positive_updates": 30,
+  "sampling": {
+    "candidate_count": 390,
+    "selected": [
+      {
+        "case_id": "NEG_B_ModelsProjectView_2_4",
+        "rule_id": "ModelsProjectView/title/MIN_LENGTH",
+        "resource_type": "ModelsProjectView",
+        "logical_id": "ModelsProjectView_2",
+        "session": "B",
+        "field": "title",
+        "kind": "MIN_LENGTH"
+      },
+      {
+        "case_id": "NEG_A_ModelsTask_3_0",
+        "rule_id": "ModelsTask/description/TYPE_NUMBER",
+        "resource_type": "ModelsTask",
+        "logical_id": "ModelsTask_3",
+        "session": "A",
+        "field": "description",
+        "kind": "TYPE_NUMBER"
+      },
+      {
+        "case_id": "NEG_A_ModelsTeam_2_0",
+        "rule_id": "ModelsTeam/description/TYPE_NUMBER",
+        "resource_type": "ModelsTeam",
+        "logical_id": "ModelsTeam_2",
+        "session": "A",
+        "field": "description",
+        "kind": "TYPE_NUMBER"
+      },
+      {
+        "case_id": "NEG_B_ModelsLabel_2_2",
+        "rule_id": "ModelsLabel/description/TYPE_ARRAY",
+        "resource_type": "ModelsLabel",
+        "logical_id": "ModelsLabel_2",
+        "session": "B",
+        "field": "description",
+        "kind": "TYPE_ARRAY"
+      },
+      {
+        "case_id": "NEG_A_ModelsProject_2_6",
+        "rule_id": "ModelsProject/hex_color/TYPE_ARRAY",
+        "resource_type": "ModelsProject",
+        "logical_id": "ModelsProject_2",
+        "session": "A",
+        "field": "hex_color",
+        "kind": "TYPE_ARRAY"
+      },
+      {
+        "case_id": "NEG_A_ModelsProjectView_2_2",
+        "rule_id": "ModelsProjectView/title/TYPE_ARRAY",
+        "resource_type": "ModelsProjectView",
+        "logical_id": "ModelsProjectView_2",
+        "session": "A",
+        "field": "title",
+        "kind": "TYPE_ARRAY"
+      },
+      {
+        "case_id": "NEG_B_ModelsTask_1_7",
+        "rule_id": "ModelsTask/hex_color/TYPE_OBJECT",
+        "resource_type": "ModelsTask",
+        "logical_id": "ModelsTask_1",
+        "session": "B",
+        "field": "hex_color",
+        "kind": "TYPE_OBJECT"
+      },
+      {
+        "case_id": "NEG_B_ModelsTeam_1_1",
+        "rule_id": "ModelsTeam/description/TYPE_BOOLEAN",
+        "resource_type": "ModelsTeam",
+        "logical_id": "ModelsTeam_1",
+        "session": "B",
+        "field": "description",
+        "kind": "TYPE_BOOLEAN"
+      }
+    ],
+    "completed_case_ids": [
+      "NEG_A_ModelsTask_3_0",
+      "NEG_B_ModelsTeam_1_1",
+      "NEG_A_ModelsTeam_2_0"
+    ],
+    "selected_not_completed": [
+      "NEG_A_ModelsProjectView_2_2",
+      "NEG_A_ModelsProject_2_6",
+      "NEG_B_ModelsLabel_2_2",
+      "NEG_B_ModelsProjectView_2_4",
+      "NEG_B_ModelsTask_1_7"
+    ],
+    "omitted_count": 382
+  }
+}

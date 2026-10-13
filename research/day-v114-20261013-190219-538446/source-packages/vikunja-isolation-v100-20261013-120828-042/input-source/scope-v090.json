@@ -1,0 +1,72 @@
+{
+  "resources": [
+    "/projects",
+    "/projects/{id}/tasks",
+    "/labels",
+    "/projects/{project}/views",
+    "/tasks/{taskID}/comments",
+    "/teams",
+    "/filters",
+    "/projects/{project}/shares"
+  ],
+  "instances_per_entity": 10,
+  "negative_rule_ids": [
+    "ModelsLabel/title/MIN_LENGTH",
+    "ModelsLabel/title/TYPE_ARRAY",
+    "ModelsTask/title/MIN_LENGTH",
+    "ModelsTask/title/TYPE_ARRAY",
+    "ModelsTeam/name/TYPE_ARRAY",
+    "ModelsTeam/name/MIN_LENGTH"
+  ],
+  "relationship_checks": [
+    {
+      "child": "ModelsTask",
+      "parent": "ModelsProject",
+      "response_field": "project_id",
+      "creation_parameter": "id",
+      "provenance": "Existing v069/v075 generator expectedBody mapping, validated against selected response schema"
+    },
+    {
+      "child": "ModelsProjectView",
+      "parent": "ModelsProject",
+      "response_field": "project_id",
+      "creation_parameter": "project",
+      "provenance": "Existing generic expectedBody mapping and contract field"
+    },
+    {
+      "child": "ModelsTaskComment",
+      "parent": "ModelsTask",
+      "response_field": null,
+      "creation_parameter": "taskID",
+      "provenance": "Contract nested route; independent GET via same parent and returned comment identity, no task_id field available"
+    },
+    {
+      "child": "ModelsLinkSharing",
+      "parent": "ModelsProject",
+      "response_field": null,
+      "creation_parameter": "project",
+      "provenance": "Nested owner GET under bound project plus returned share ID; response has no project_id field"
+    }
+  ],
+  "update_field_overrides": {
+    "ModelsProjectView": "title"
+  },
+  "extra_fixture_fields": {
+    "ModelsProjectView": [
+      "view_kind"
+    ]
+  },
+  "request_mappings": "request-mappings-v073.json",
+  "fixture_fields_override": {
+    "ModelsLinkSharing": [
+      "name",
+      "permission"
+    ]
+  },
+  "sensitive_response_fields": {
+    "ModelsLinkSharing": [
+      "hash",
+      "password"
+    ]
+  }
+}

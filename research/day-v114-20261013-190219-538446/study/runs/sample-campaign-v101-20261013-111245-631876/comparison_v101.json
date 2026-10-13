@@ -1,0 +1,1741 @@
+{
+  "version": "v101",
+  "runs_in_order": [
+    {
+      "review_sha256": "308568decbae18dd13b7c38bf408ca5e7e6494901bb80b2b1c31e94d4a8e279f",
+      "verified_files": 20,
+      "status": "V100_SAMPLE_COMPLETED",
+      "run_seed": 3,
+      "sample_seed": 1,
+      "elapsed_seconds": 284.58,
+      "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+      "scope_entities": [
+        "ModelsLabel",
+        "ModelsLinkSharing",
+        "ModelsProject",
+        "ModelsProjectView",
+        "ModelsSavedFilter",
+        "ModelsTask",
+        "ModelsTaskComment",
+        "ModelsTeam"
+      ],
+      "planned": {
+        "resources": 24,
+        "session_workflows": 48,
+        "positive_updates": 78,
+        "negative_checks": 8
+      },
+      "created_resources": 24,
+      "positive_updates": 78,
+      "completed_workflows": 48,
+      "selected_cases": [
+        {
+          "case_id": "NEG_B_ModelsProjectView_3_1",
+          "rule_id": "ModelsProjectView/title/TYPE_BOOLEAN",
+          "resource_type": "ModelsProjectView",
+          "logical_id": "ModelsProjectView_3",
+          "session": "B",
+          "field": "title",
+          "kind": "TYPE_BOOLEAN"
+        },
+        {
+          "case_id": "NEG_A_ModelsTask_2_2",
+          "rule_id": "ModelsTask/description/TYPE_ARRAY",
+          "resource_type": "ModelsTask",
+          "logical_id": "ModelsTask_2",
+          "session": "A",
+          "field": "description",
+          "kind": "TYPE_ARRAY"
+        },
+        {
+          "case_id": "NEG_A_ModelsTeam_2_1",
+          "rule_id": "ModelsTeam/description/TYPE_BOOLEAN",
+          "resource_type": "ModelsTeam",
+          "logical_id": "ModelsTeam_2",
+          "session": "A",
+          "field": "description",
+          "kind": "TYPE_BOOLEAN"
+        },
+        {
+          "case_id": "NEG_A_ModelsLabel_2_3",
+          "rule_id": "ModelsLabel/description/TYPE_OBJECT",
+          "resource_type": "ModelsLabel",
+          "logical_id": "ModelsLabel_2",
+          "session": "A",
+          "field": "description",
+          "kind": "TYPE_OBJECT"
+        },
+        {
+          "case_id": "NEG_A_ModelsProject_1_14",
+          "rule_id": "ModelsProject/title/TYPE_NUMBER",
+          "resource_type": "ModelsProject",
+          "logical_id": "ModelsProject_1",
+          "session": "A",
+          "field": "title",
+          "kind": "TYPE_NUMBER"
+        },
+        {
+          "case_id": "NEG_A_ModelsProjectView_3_3",
+          "rule_id": "ModelsProjectView/title/TYPE_OBJECT",
+          "resource_type": "ModelsProjectView",
+          "logical_id": "ModelsProjectView_3",
+          "session": "A",
+          "field": "title",
+          "kind": "TYPE_OBJECT"
+        },
+        {
+          "case_id": "NEG_B_ModelsTask_2_8",
+          "rule_id": "ModelsTask/hex_color/MAX_LENGTH",
+          "resource_type": "ModelsTask",
+          "logical_id": "ModelsTask_2",
+          "session": "B",
+          "field": "hex_color",
+          "kind": "MAX_LENGTH"
+        },
+        {
+          "case_id": "NEG_B_ModelsTeam_3_4",
+          "rule_id": "ModelsTeam/name/TYPE_NUMBER",
+          "resource_type": "ModelsTeam",
+          "logical_id": "ModelsTeam_3",
+          "session": "B",
+          "field": "name",
+          "kind": "TYPE_NUMBER"
+        }
+      ],
+      "supported_rule_count": 65,
+      "supported_runtime_case_count": 390,
+      "source_catalog_rule_count": 204,
+      "checked_rules": [
+        "ModelsLabel/description/TYPE_OBJECT",
+        "ModelsProject/title/TYPE_NUMBER",
+        "ModelsProjectView/title/TYPE_BOOLEAN",
+        "ModelsProjectView/title/TYPE_OBJECT",
+        "ModelsTask/description/TYPE_ARRAY",
+        "ModelsTask/hex_color/MAX_LENGTH",
+        "ModelsTeam/description/TYPE_BOOLEAN",
+        "ModelsTeam/name/TYPE_NUMBER"
+      ],
+      "negative_checked": 8,
+      "verified_recoveries": 8,
+      "findings": [],
+      "undocumented_statuses": [
+        {
+          "case_id": "NEG_B_ModelsTask_2_8",
+          "rule_id": "ModelsTask/hex_color/MAX_LENGTH",
+          "status": 412
+        }
+      ],
+      "state_observations": [
+        {
+          "case_id": "NEG_A_ModelsTeam_2_1",
+          "abstract_state_sha256": "2c5b34149971f4797d67ae725b64b4bd7f613a3161f367e29364f0d3ebb156d9",
+          "abstract_state": {
+            "ModelsLabel_1": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "fixture",
+                "hex_color": "fixture",
+                "title": "fixture"
+              }
+            },
+            "ModelsLabel_2": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "fixture",
+                "title": "fixture"
+              }
+            },
+            "ModelsLabel_3": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "fixture",
+                "hex_color": "fixture",
+                "title": "fixture"
+              }
+            },
+            "ModelsLinkSharing_1": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_2": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsProjectView_1": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "title": "fixture"
+              }
+            },
+            "ModelsProject_1": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "fixture",
+                "hex_color": "fixture",
+                "identifier": "fixture",
+                "title": "fixture"
+              }
+            },
+            "ModelsProject_2": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "fixture",
+                "identifier": "fixture",
+                "title": "fixture"
+              }
+            },
+            "ModelsProject_3": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "fixture",
+                "identifier": "fixture",
+                "title": "fixture"
+              }
+            },
+            "ModelsSavedFilter_1": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_2": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_3": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsTeam_1": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "fixture",
+                "name": "fixture"
+              }
+            },
+            "ModelsTeam_2": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "fixture",
+                "name": "fixture"
+              }
+            },
+            "ModelsTeam_3": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "name": "fixture"
+              }
+            }
+          },
+          "concrete_prefix_sha256": "cdc7aa189c567b8d7fa1eee2cbae56f90827f3b645acf6f97f40f1765262bf95",
+          "successful_create_update_requests_before": 19,
+          "selected_event_log_entries_before_attempt": 91,
+          "raw_state_hash_is_not_semantic_novelty": true
+        },
+        {
+          "case_id": "NEG_A_ModelsLabel_2_3",
+          "abstract_state_sha256": "cadf7b279bf8d8e7d6b7f5e8c6a7ffe4d37982e786eaa091ce8c436b21935b36",
+          "abstract_state": {
+            "ModelsLabel_1": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_B",
+                "title": "fixture"
+              }
+            },
+            "ModelsLabel_2": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsLabel_3": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "fixture"
+              }
+            },
+            "ModelsLinkSharing_1": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_2": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_3": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsProjectView_1": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProjectView_2": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "title": "fixture"
+              }
+            },
+            "ModelsProjectView_3": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "title": "session_B"
+              }
+            },
+            "ModelsProject_1": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "fixture",
+                "identifier": "fixture",
+                "title": "fixture"
+              }
+            },
+            "ModelsProject_2": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_B",
+                "identifier": "fixture",
+                "title": "fixture"
+              }
+            },
+            "ModelsProject_3": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "identifier": "session_A",
+                "title": "fixture"
+              }
+            },
+            "ModelsSavedFilter_1": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_2": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_3": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_1": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_2": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_3": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTask_1": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "fixture"
+              }
+            },
+            "ModelsTask_2": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "fixture",
+                "title": "fixture"
+              }
+            },
+            "ModelsTask_3": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "fixture",
+                "title": "fixture"
+              }
+            },
+            "ModelsTeam_1": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "name": "session_A"
+              }
+            },
+            "ModelsTeam_2": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "fixture"
+              }
+            },
+            "ModelsTeam_3": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_A"
+              }
+            }
+          },
+          "concrete_prefix_sha256": "a556369122727a9e17c3943b503636003ffd01049a33f440f44534b64e082848",
+          "successful_create_update_requests_before": 54,
+          "selected_event_log_entries_before_attempt": 401,
+          "raw_state_hash_is_not_semantic_novelty": true
+        },
+        {
+          "case_id": "NEG_B_ModelsTeam_3_4",
+          "abstract_state_sha256": "227852e39f242fbf05650cc2b837feca6543966f5daa414f5fb56f7078a495ee",
+          "abstract_state": {
+            "ModelsLabel_1": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_B"
+              }
+            },
+            "ModelsLabel_2": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_B"
+              }
+            },
+            "ModelsLabel_3": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsLinkSharing_1": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_2": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_3": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsProjectView_1": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProjectView_2": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "title": "session_B"
+              }
+            },
+            "ModelsProjectView_3": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProject_1": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_A",
+                "identifier": "fixture",
+                "title": "fixture"
+              }
+            },
+            "ModelsProject_2": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_B",
+                "identifier": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsProject_3": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_A",
+                "identifier": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsSavedFilter_1": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_2": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_3": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_1": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_2": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_3": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTask_1": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "title": "session_A"
+              }
+            },
+            "ModelsTask_2": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsTask_3": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsTeam_1": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            },
+            "ModelsTeam_2": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            },
+            "ModelsTeam_3": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            }
+          },
+          "concrete_prefix_sha256": "6f251db7efded9f6b148e738e37f53ad3ef74020f5c246456548edb72950cb3d",
+          "successful_create_update_requests_before": 80,
+          "selected_event_log_entries_before_attempt": 615,
+          "raw_state_hash_is_not_semantic_novelty": true
+        },
+        {
+          "case_id": "NEG_B_ModelsProjectView_3_1",
+          "abstract_state_sha256": "711559106abc7d5c65bdddda927ddc18d0b2c1df2f120577e913730076166c1c",
+          "abstract_state": {
+            "ModelsLabel_1": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsLabel_2": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsLabel_3": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_B",
+                "title": "session_A"
+              }
+            },
+            "ModelsLinkSharing_1": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_2": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_3": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsProjectView_1": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProjectView_2": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "title": "session_B"
+              }
+            },
+            "ModelsProjectView_3": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProject_1": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_A",
+                "identifier": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsProject_2": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "identifier": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsProject_3": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "identifier": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsSavedFilter_1": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_2": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_3": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_1": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_2": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_3": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTask_1": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsTask_2": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsTask_3": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_B"
+              }
+            },
+            "ModelsTeam_1": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            },
+            "ModelsTeam_2": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "name": "session_A"
+              }
+            },
+            "ModelsTeam_3": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            }
+          },
+          "concrete_prefix_sha256": "7448bbb35f88261ec6a97362cab5a66974334e618728962d68b0aecd488fa34f",
+          "successful_create_update_requests_before": 101,
+          "selected_event_log_entries_before_attempt": 802,
+          "raw_state_hash_is_not_semantic_novelty": true
+        },
+        {
+          "case_id": "NEG_A_ModelsTask_2_2",
+          "abstract_state_sha256": "92ea2556ad163c64ea40cf131166d5e8759e04cebdf923a3e3a106af978ef434",
+          "abstract_state": {
+            "ModelsLabel_1": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsLabel_2": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsLabel_3": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_B",
+                "title": "session_A"
+              }
+            },
+            "ModelsLinkSharing_1": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_2": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_3": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsProjectView_1": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProjectView_2": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "title": "session_B"
+              }
+            },
+            "ModelsProjectView_3": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProject_1": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_A",
+                "identifier": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsProject_2": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "identifier": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsProject_3": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "identifier": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsSavedFilter_1": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_2": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_3": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_1": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_2": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_3": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTask_1": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsTask_2": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsTask_3": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsTeam_1": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            },
+            "ModelsTeam_2": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "name": "session_A"
+              }
+            },
+            "ModelsTeam_3": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            }
+          },
+          "concrete_prefix_sha256": "e5d0fb28049ff4c96bb771cc84c3bbf4df527887fb218d27b68ad33096cf67f6",
+          "successful_create_update_requests_before": 102,
+          "selected_event_log_entries_before_attempt": 841,
+          "raw_state_hash_is_not_semantic_novelty": true
+        },
+        {
+          "case_id": "NEG_A_ModelsProject_1_14",
+          "abstract_state_sha256": "92ea2556ad163c64ea40cf131166d5e8759e04cebdf923a3e3a106af978ef434",
+          "abstract_state": {
+            "ModelsLabel_1": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsLabel_2": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsLabel_3": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_B",
+                "title": "session_A"
+              }
+            },
+            "ModelsLinkSharing_1": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_2": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_3": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsProjectView_1": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProjectView_2": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "title": "session_B"
+              }
+            },
+            "ModelsProjectView_3": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProject_1": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_A",
+                "identifier": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsProject_2": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "identifier": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsProject_3": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "identifier": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsSavedFilter_1": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_2": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_3": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_1": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_2": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_3": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTask_1": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsTask_2": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsTask_3": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsTeam_1": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            },
+            "ModelsTeam_2": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "name": "session_A"
+              }
+            },
+            "ModelsTeam_3": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            }
+          },
+          "concrete_prefix_sha256": "e5d0fb28049ff4c96bb771cc84c3bbf4df527887fb218d27b68ad33096cf67f6",
+          "successful_create_update_requests_before": 102,
+          "selected_event_log_entries_before_attempt": 858,
+          "raw_state_hash_is_not_semantic_novelty": true
+        },
+        {
+          "case_id": "NEG_B_ModelsTask_2_8",
+          "abstract_state_sha256": "92ea2556ad163c64ea40cf131166d5e8759e04cebdf923a3e3a106af978ef434",
+          "abstract_state": {
+            "ModelsLabel_1": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsLabel_2": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsLabel_3": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_B",
+                "title": "session_A"
+              }
+            },
+            "ModelsLinkSharing_1": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_2": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_3": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsProjectView_1": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProjectView_2": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "title": "session_B"
+              }
+            },
+            "ModelsProjectView_3": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProject_1": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_A",
+                "identifier": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsProject_2": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "identifier": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsProject_3": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "identifier": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsSavedFilter_1": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_2": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_3": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_1": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_2": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_3": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTask_1": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsTask_2": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsTask_3": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsTeam_1": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            },
+            "ModelsTeam_2": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "name": "session_A"
+              }
+            },
+            "ModelsTeam_3": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            }
+          },
+          "concrete_prefix_sha256": "e5d0fb28049ff4c96bb771cc84c3bbf4df527887fb218d27b68ad33096cf67f6",
+          "successful_create_update_requests_before": 102,
+          "selected_event_log_entries_before_attempt": 877,
+          "raw_state_hash_is_not_semantic_novelty": true
+        },
+        {
+          "case_id": "NEG_A_ModelsProjectView_3_3",
+          "abstract_state_sha256": "92ea2556ad163c64ea40cf131166d5e8759e04cebdf923a3e3a106af978ef434",
+          "abstract_state": {
+            "ModelsLabel_1": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsLabel_2": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsLabel_3": {
+              "type": "ModelsLabel",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_B",
+                "title": "session_A"
+              }
+            },
+            "ModelsLinkSharing_1": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_2": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsLinkSharing_3": {
+              "type": "ModelsLinkSharing",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsProjectView_1": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProjectView_2": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "title": "session_B"
+              }
+            },
+            "ModelsProjectView_3": {
+              "type": "ModelsProjectView",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "title": "session_A"
+              }
+            },
+            "ModelsProject_1": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_A",
+                "identifier": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsProject_2": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "identifier": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsProject_3": {
+              "type": "ModelsProject",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "identifier": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsSavedFilter_1": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_2": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsSavedFilter_3": {
+              "type": "ModelsSavedFilter",
+              "bound_parents": {},
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_1": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_1"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_2": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_2"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTaskComment_3": {
+              "type": "ModelsTaskComment",
+              "bound_parents": {
+                "ModelsTask": "ModelsTask_3"
+              },
+              "field_provenance": {}
+            },
+            "ModelsTask_1": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_1"
+              },
+              "field_provenance": {
+                "description": "session_B",
+                "hex_color": "session_B",
+                "title": "session_B"
+              }
+            },
+            "ModelsTask_2": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_2"
+              },
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsTask_3": {
+              "type": "ModelsTask",
+              "bound_parents": {
+                "ModelsProject": "ModelsProject_3"
+              },
+              "field_provenance": {
+                "description": "session_A",
+                "hex_color": "session_A",
+                "title": "session_A"
+              }
+            },
+            "ModelsTeam_1": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            },
+            "ModelsTeam_2": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_A",
+                "name": "session_A"
+              }
+            },
+            "ModelsTeam_3": {
+              "type": "ModelsTeam",
+              "bound_parents": {},
+              "field_provenance": {
+                "description": "session_B",
+                "name": "session_B"
+              }
+            }
+          },
+          "concrete_prefix_sha256": "e5d0fb28049ff4c96bb771cc84c3bbf4df527887fb218d27b68ad33096cf67f6",
+          "successful_create_update_requests_before": 102,
+          "selected_event_log_entries_before_attempt": 895,
+          "raw_state_hash_is_not_semantic_novelty": true
+        }
+      ],
+      "scope": "State abstraction: resource presence + logical parent bindings + supported-field fixture/A/B/other provenance. Omits timestamps/physical IDs and most field values; not full semantic state or exhaustive state-space coverage.",
+      "new_checked_rules": [
+        "ModelsLabel/description/TYPE_OBJECT",
+        "ModelsProject/title/TYPE_NUMBER",
+        "ModelsProjectView/title/TYPE_BOOLEAN",
+        "ModelsProjectView/title/TYPE_OBJECT",
+        "ModelsTask/description/TYPE_ARRAY",
+        "ModelsTask/hex_color/MAX_LENGTH",
+        "ModelsTeam/description/TYPE_BOOLEAN",
+        "ModelsTeam/name/TYPE_NUMBER"
+      ],
+      "new_abstract_state_count": 5,
+      "distinct_abstract_states": 5
+    }
+  ],
+  "cumulative_checked_rule_count": 8,
+  "cumulative_abstract_state_count": 5,
+  "full_contract_coverage": false,
+  "novelty_basis": "Baseline first; rule IDs and explicitly abstracted logical states; fresh IDs/timestamps alone do not count as state novelty.",
+  "status": "V101_STATIC_READY",
+  "live_execution": false,
+  "engine_modified": false,
+  "error": null,
+  "configured_samples": 2,
+  "completed_child_runs": 0,
+  "child_runs": []
+}

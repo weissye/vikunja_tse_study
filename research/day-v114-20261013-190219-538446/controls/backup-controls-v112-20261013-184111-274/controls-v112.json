@@ -1,0 +1,18 @@
+﻿[
+    {
+        "Control":  "NO_RESTART",
+        "VersionBefore":  "v2.6.0",
+        "VersionAfter":  "v2.6.0",
+        "Scope":  "API readiness only; no research writes"
+    },
+    {
+        "Control":  "STOP_START_WITHOUT_RESTORE",
+        "VersionAfter":  "v2.6.0",
+        "Scope":  "Cold copy and API readiness; no storage replacement"
+    },
+    {
+        "Control":  "OFFLINE_RESTORE_COPY",
+        "ContentEqual":  true,
+        "Scope":  "File contents only; no live restore or metadata equality claim"
+    }
+]

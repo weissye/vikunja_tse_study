@@ -1,0 +1,96 @@
+{
+  "config_version": 1,
+  "experiment_id": "native-two-sessions",
+  "model": {
+    "name": "vikunja",
+    "base_url": "http://127.0.0.1:13488"
+  },
+  "instances": {
+    "default": 3,
+    "per_entity": {}
+  },
+  "fixtures": {
+    "seed": 1,
+    "namespace": "recovery-v103-20261013-140749-178058"
+  },
+  "render": {
+    "profile": "unified",
+    "negative_schema": true
+  },
+  "budgets": {
+    "max_events": 200000,
+    "max_total_instances": 4096,
+    "soft_seconds": 600,
+    "drain_seconds": 300
+  },
+  "actors": {
+    "users": 1,
+    "sessions_per_user": 2,
+    "shared_workflows": "derive_from_contract"
+  },
+  "missing_information": {
+    "policy": "block"
+  },
+  "recovery": {
+    "policy": "cold_snapshot_restore",
+    "negative_rule_ids": []
+  },
+  "sampling": {
+    "negative_limit": 8,
+    "seed": 1,
+    "completed_case_ids": [
+      "NEG_A_ModelsLabel_1_11",
+      "NEG_A_ModelsLabel_1_5",
+      "NEG_A_ModelsLabel_1_6",
+      "NEG_A_ModelsLabel_1_8",
+      "NEG_A_ModelsLabel_2_3",
+      "NEG_A_ModelsProjectView_1_2",
+      "NEG_A_ModelsProjectView_2_4",
+      "NEG_A_ModelsProjectView_2_5",
+      "NEG_A_ModelsProjectView_3_0",
+      "NEG_A_ModelsProjectView_3_3",
+      "NEG_A_ModelsProject_1_12",
+      "NEG_A_ModelsProject_1_14",
+      "NEG_A_ModelsProject_1_5",
+      "NEG_A_ModelsProject_3_17",
+      "NEG_A_ModelsTask_1_6",
+      "NEG_A_ModelsTask_2_2",
+      "NEG_A_ModelsTask_2_6",
+      "NEG_A_ModelsTask_3_1",
+      "NEG_A_ModelsTask_3_5",
+      "NEG_A_ModelsTeam_2_1",
+      "NEG_A_ModelsTeam_3_0",
+      "NEG_A_ModelsTeam_3_5",
+      "NEG_B_ModelsLabel_1_7",
+      "NEG_B_ModelsLabel_3_1",
+      "NEG_B_ModelsProjectView_1_3",
+      "NEG_B_ModelsProjectView_2_1",
+      "NEG_B_ModelsProjectView_2_3",
+      "NEG_B_ModelsProjectView_3_1",
+      "NEG_B_ModelsProjectView_3_2",
+      "NEG_B_ModelsProject_1_18",
+      "NEG_B_ModelsProject_3_13",
+      "NEG_B_ModelsProject_3_16",
+      "NEG_B_ModelsTask_1_13",
+      "NEG_B_ModelsTask_2_13",
+      "NEG_B_ModelsTask_2_3",
+      "NEG_B_ModelsTask_2_7",
+      "NEG_B_ModelsTask_2_8",
+      "NEG_B_ModelsTask_3_5",
+      "NEG_B_ModelsTeam_1_6",
+      "NEG_B_ModelsTeam_2_0",
+      "NEG_B_ModelsTeam_2_6",
+      "NEG_B_ModelsTeam_3_4"
+    ]
+  },
+  "interactions": {
+    "enabled": true,
+    "max_groups": 6,
+    "seed": 1,
+    "profiles": [
+      "shared_read_same_field",
+      "shared_read_disjoint_fields",
+      "free_stale_disjoint_fields"
+    ]
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "authority": "CONSERVATIVE_DEPENDENCY_CLOSURE_FROM_IR",
+  "instances": {
+    "ModelsLabel_1": [
+      "ModelsLabel_1"
+    ],
+    "ModelsLabel_2": [
+      "ModelsLabel_2"
+    ],
+    "ModelsLabel_3": [
+      "ModelsLabel_3"
+    ],
+    "ModelsProject_1": [
+      "ModelsProject_1"
+    ],
+    "ModelsLinkSharing_1": [
+      "ModelsLinkSharing_1",
+      "ModelsProject_1"
+    ],
+    "ModelsProject_2": [
+      "ModelsProject_2"
+    ],
+    "ModelsLinkSharing_2": [
+      "ModelsLinkSharing_2",
+      "ModelsProject_2"
+    ],
+    "ModelsProject_3": [
+      "ModelsProject_3"
+    ],
+    "ModelsLinkSharing_3": [
+      "ModelsLinkSharing_3",
+      "ModelsProject_3"
+    ],
+    "ModelsProjectView_1": [
+      "ModelsProjectView_1",
+      "ModelsProject_1"
+    ],
+    "ModelsProjectView_2": [
+      "ModelsProjectView_2",
+      "ModelsProject_2"
+    ],
+    "ModelsProjectView_3": [
+      "ModelsProjectView_3",
+      "ModelsProject_3"
+    ],
+    "ModelsSavedFilter_1": [
+      "ModelsSavedFilter_1"
+    ],
+    "ModelsSavedFilter_2": [
+      "ModelsSavedFilter_2"
+    ],
+    "ModelsSavedFilter_3": [
+      "ModelsSavedFilter_3"
+    ],
+    "ModelsTask_1": [
+      "ModelsProject_1",
+      "ModelsTask_1"
+    ],
+    "ModelsTaskComment_1": [
+      "ModelsProject_1",
+      "ModelsTaskComment_1",
+      "ModelsTask_1"
+    ],
+    "ModelsTask_2": [
+      "ModelsProject_2",
+      "ModelsTask_2"
+    ],
+    "ModelsTaskComment_2": [
+      "ModelsProject_2",
+      "ModelsTaskComment_2",
+      "ModelsTask_2"
+    ],
+    "ModelsTask_3": [
+      "ModelsProject_3",
+      "ModelsTask_3"
+    ],
+    "ModelsTaskComment_3": [
+      "ModelsProject_3",
+      "ModelsTaskComment_3",
+      "ModelsTask_3"
+    ],
+    "ModelsTeam_1": [
+      "ModelsTeam_1"
+    ],
+    "ModelsTeam_2": [
+      "ModelsTeam_2"
+    ],
+    "ModelsTeam_3": [
+      "ModelsTeam_3"
+    ]
+  },
+  "provenance": {
+    "ModelsProject": [],
+    "ModelsTask": [
+      {
+        "field": "id",
+        "target": "ModelsProject",
+        "object": false,
+        "path_only": true,
+        "pointer": "#/paths/~1projects~1{id}~1tasks/put"
+      }
+    ],
+    "ModelsLabel": [],
+    "ModelsProjectView": [
+      {
+        "field": "project",
+        "target": "ModelsProject",
+        "object": false,
+        "path_only": true,
+        "pointer": "#/paths/~1projects~1{project}~1views/put"
+      }
+    ],
+    "ModelsTaskComment": [
+      {
+        "field": "taskID",
+        "target": "ModelsTask",
+        "object": false,
+        "path_only": true,
+        "pointer": "#/paths/~1tasks~1{taskID}~1comments/put"
+      }
+    ],
+    "ModelsTeam": [],
+    "ModelsSavedFilter": [],
+    "ModelsLinkSharing": [
+      {
+        "field": "project",
+        "target": "ModelsProject",
+        "object": false,
+        "path_only": true,
+        "pointer": "#/paths/~1projects~1{project}~1shares/put"
+      }
+    ]
+  },
+  "scope": "Potential effects on self and transitive bound parents; dependency is not proof of an actual write side effect. Dynamic undeclared links are outside this derivation."
+}

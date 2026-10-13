@@ -1,0 +1,12 @@
+{
+  "version": "v007",
+  "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "evidence": "Previously observed local OPTIONS allows POST, not PUT. Runner must re-check this evidence before live generation.",
+  "rules": [
+    {
+      "path": "/labels/{id}",
+      "source_method": "put",
+      "effective_method": "post"
+    }
+  ]
+}

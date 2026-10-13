@@ -1,0 +1,74 @@
+{
+  "resources": [
+    "/projects",
+    "/projects/{id}/tasks",
+    "/labels",
+    "/filters",
+    "/projects/{project}/shares",
+    "/projects/{project}/views",
+    "/tasks/{taskID}/comments",
+    "/teams"
+  ],
+  "unsupported_candidates": [
+    {
+      "path": "/projects/{id}/teams",
+      "reason": "ValueError: Ambiguous/missing item GET: /projects/{id}/teams"
+    },
+    {
+      "path": "/projects/{id}/users",
+      "reason": "ValueError: Ambiguous/missing item GET: /projects/{id}/users"
+    },
+    {
+      "path": "/projects/{id}/views/{view}/buckets",
+      "reason": "ValueError: Ambiguous/missing item GET: /projects/{id}/views/{view}/buckets"
+    },
+    {
+      "path": "/projects/{id}/webhooks",
+      "reason": "ValueError: Ambiguous/missing item GET: /projects/{id}/webhooks"
+    },
+    {
+      "path": "/projects/{projectID}/duplicate",
+      "reason": "ValueError: Ambiguous/missing item GET: /projects/{projectID}/duplicate"
+    },
+    {
+      "path": "/subscriptions/{entity}/{entityID}",
+      "reason": "ValueError: Ambiguous/missing item GET: /subscriptions/{entity}/{entityID}"
+    },
+    {
+      "path": "/tasks/{taskID}/assignees",
+      "reason": "ValueError: Ambiguous/missing item GET: /tasks/{taskID}/assignees"
+    },
+    {
+      "path": "/tasks/{taskID}/assignees/bulk",
+      "reason": "ValueError: Ambiguous/missing item GET: /tasks/{taskID}/assignees/bulk"
+    },
+    {
+      "path": "/tasks/{taskID}/duplicate",
+      "reason": "ValueError: Ambiguous/missing item GET: /tasks/{taskID}/duplicate"
+    },
+    {
+      "path": "/tasks/{taskID}/labels/bulk",
+      "reason": "ValueError: Ambiguous/missing item GET: /tasks/{taskID}/labels/bulk"
+    },
+    {
+      "path": "/tasks/{taskID}/relations",
+      "reason": "ValueError: Ambiguous/missing item GET: /tasks/{taskID}/relations"
+    },
+    {
+      "path": "/tasks/{task}/labels",
+      "reason": "ValueError: Ambiguous/missing item GET: /tasks/{task}/labels"
+    },
+    {
+      "path": "/teams/{id}/members",
+      "reason": "ValueError: Ambiguous/missing item GET: /teams/{id}/members"
+    },
+    {
+      "path": "/tokens",
+      "reason": "ValueError: Ambiguous/missing item GET: /tokens"
+    },
+    {
+      "path": "/{kind}/{id}/reactions",
+      "reason": "ValueError: Ambiguous/missing item GET: /{kind}/{id}/reactions"
+    }
+  ]
+}

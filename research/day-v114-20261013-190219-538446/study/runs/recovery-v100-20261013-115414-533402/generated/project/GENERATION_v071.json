@@ -1,0 +1,2622 @@
+{
+  "version": "v071",
+  "status": "IR_ONLY_STATIC_GENERATION_COMPLETE",
+  "ir_sha256": "f42c9ec948bfba86a1cd83da4b9fa25478426a8e97f1ad1c8e4f64ca86d039d7",
+  "config_sha256": "cc076b862e4290dbbcb93993b078473a01a4087c9da54adfe1a996e1a4be0a9b",
+  "contract_sha256": "171e238314089ca9b1c5c6fa3f87cf7f80a7c2a55934d1d6c228b39d48b65843",
+  "experiment_id": "native-two-sessions",
+  "renderer_profile": "unified",
+  "contract_file_read_by_emitter": false,
+  "instance_bindings": {
+    "ModelsProject": [
+      {
+        "id": "ModelsProject_1",
+        "fixture_index": 1,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsProject_2",
+        "fixture_index": 2,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsProject_3",
+        "fixture_index": 3,
+        "bindings": {}
+      }
+    ],
+    "ModelsTask": [
+      {
+        "id": "ModelsTask_1",
+        "fixture_index": 1,
+        "bindings": {
+          "ModelsProject": "ModelsProject_1"
+        }
+      },
+      {
+        "id": "ModelsTask_2",
+        "fixture_index": 2,
+        "bindings": {
+          "ModelsProject": "ModelsProject_2"
+        }
+      },
+      {
+        "id": "ModelsTask_3",
+        "fixture_index": 3,
+        "bindings": {
+          "ModelsProject": "ModelsProject_3"
+        }
+      }
+    ],
+    "ModelsLabel": [
+      {
+        "id": "ModelsLabel_1",
+        "fixture_index": 1,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsLabel_2",
+        "fixture_index": 2,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsLabel_3",
+        "fixture_index": 3,
+        "bindings": {}
+      }
+    ],
+    "ModelsProjectView": [
+      {
+        "id": "ModelsProjectView_1",
+        "fixture_index": 1,
+        "bindings": {
+          "ModelsProject": "ModelsProject_1"
+        }
+      },
+      {
+        "id": "ModelsProjectView_2",
+        "fixture_index": 2,
+        "bindings": {
+          "ModelsProject": "ModelsProject_2"
+        }
+      },
+      {
+        "id": "ModelsProjectView_3",
+        "fixture_index": 3,
+        "bindings": {
+          "ModelsProject": "ModelsProject_3"
+        }
+      }
+    ],
+    "ModelsTaskComment": [
+      {
+        "id": "ModelsTaskComment_1",
+        "fixture_index": 1,
+        "bindings": {
+          "ModelsTask": "ModelsTask_1"
+        }
+      },
+      {
+        "id": "ModelsTaskComment_2",
+        "fixture_index": 2,
+        "bindings": {
+          "ModelsTask": "ModelsTask_2"
+        }
+      },
+      {
+        "id": "ModelsTaskComment_3",
+        "fixture_index": 3,
+        "bindings": {
+          "ModelsTask": "ModelsTask_3"
+        }
+      }
+    ],
+    "ModelsTeam": [
+      {
+        "id": "ModelsTeam_1",
+        "fixture_index": 1,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsTeam_2",
+        "fixture_index": 2,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsTeam_3",
+        "fixture_index": 3,
+        "bindings": {}
+      }
+    ],
+    "ModelsSavedFilter": [
+      {
+        "id": "ModelsSavedFilter_1",
+        "fixture_index": 1,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsSavedFilter_2",
+        "fixture_index": 2,
+        "bindings": {}
+      },
+      {
+        "id": "ModelsSavedFilter_3",
+        "fixture_index": 3,
+        "bindings": {}
+      }
+    ],
+    "ModelsLinkSharing": [
+      {
+        "id": "ModelsLinkSharing_1",
+        "fixture_index": 1,
+        "bindings": {
+          "ModelsProject": "ModelsProject_1"
+        }
+      },
+      {
+        "id": "ModelsLinkSharing_2",
+        "fixture_index": 2,
+        "bindings": {
+          "ModelsProject": "ModelsProject_2"
+        }
+      },
+      {
+        "id": "ModelsLinkSharing_3",
+        "fixture_index": 3,
+        "bindings": {
+          "ModelsProject": "ModelsProject_3"
+        }
+      }
+    ]
+  },
+  "entity_reports": [
+    {
+      "entity": "ModelsProject",
+      "source": [
+        {
+          "pointer": "#/paths/~1projects/put",
+          "rule": "collection creation with 201 plus unique item GET"
+        },
+        {
+          "pointer": "#/paths/~1projects~1{id}/get",
+          "rule": "response id convention; route parameter matched to property"
+        }
+      ],
+      "create_dependencies": [],
+      "embedded_links": [],
+      "identity_mode": "object",
+      "readback": "request-derived projection plus stable identity",
+      "update_field": "description",
+      "delete": "not emitted: absence response is not explicitly documented",
+      "complex_actions": "not emitted: transition effects are not specified by schemas alone"
+    },
+    {
+      "entity": "ModelsTask",
+      "source": [
+        {
+          "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+          "rule": "collection creation with 201 plus unique item GET"
+        },
+        {
+          "pointer": "#/paths/~1tasks~1{id}/get",
+          "rule": "response id convention; route parameter matched to property"
+        },
+        {
+          "pointer": "#/paths/~1projects~1{id}~1tasks/put",
+          "rule": "PATH_PARENT_FROM_SELECTED_COLLECTION_PREFIX",
+          "target": "ModelsProject"
+        }
+      ],
+      "create_dependencies": [
+        {
+          "field": "id",
+          "target": "ModelsProject",
+          "object": false,
+          "path_only": true,
+          "pointer": "#/paths/~1projects~1{id}~1tasks/put"
+        }
+      ],
+      "embedded_links": [],
+      "identity_mode": "object",
+      "readback": "request-derived projection plus stable identity",
+      "update_field": "description",
+      "delete": "not emitted: absence response is not explicitly documented",
+      "complex_actions": "not emitted: transition effects are not specified by schemas alone"
+    },
+    {
+      "entity": "ModelsLabel",
+      "source": [
+        {
+          "pointer": "#/paths/~1labels/put",
+          "rule": "collection creation with 201 plus unique item GET"
+        },
+        {
+          "pointer": "#/paths/~1labels~1{id}/get",
+          "rule": "response id convention; route parameter matched to property"
+        },
+        {
+          "pointer": "#/paths/~1labels~1{id}/put",
+          "rule": "EXPLICIT_METHOD_COMPATIBILITY_ADAPTER",
+          "evidence": "Previously observed local OPTIONS allows POST, not PUT. Runner must re-check this evidence before live generation."
+        }
+      ],
+      "create_dependencies": [],
+      "embedded_links": [],
+      "identity_mode": "object",
+      "readback": "request-derived projection plus stable identity",
+      "update_field": "description",
+      "delete": "not emitted: absence response is not explicitly documented",
+      "complex_actions": "not emitted: transition effects are not specified by schemas alone"
+    },
+    {
+      "entity": "ModelsProjectView",
+      "source": [
+        {
+          "pointer": "#/paths/~1projects~1{project}~1views/put",
+          "rule": "collection creation with 201 plus unique item GET"
+        },
+        {
+          "pointer": "#/paths/~1projects~1{project}~1views~1{id}/get",
+          "rule": "response id convention; route parameter matched to property"
+        },
+        {
+          "pointer": "#/paths/~1projects~1{project}~1views/put",
+          "rule": "PATH_PARENT_FROM_SELECTED_COLLECTION_PREFIX",
+          "target": "ModelsProject"
+        }
+      ],
+      "create_dependencies": [
+        {
+          "field": "project",
+          "target": "ModelsProject",
+          "object": false,
+          "path_only": true,
+          "pointer": "#/paths/~1projects~1{project}~1views/put"
+        }
+      ],
+      "embedded_links": [],
+      "identity_mode": "object",
+      "readback": "request-derived projection plus stable identity",
+      "update_field": "title",
+      "delete": "not emitted: absence response is not explicitly documented",
+      "complex_actions": "not emitted: transition effects are not specified by schemas alone"
+    },
+    {
+      "entity": "ModelsTaskComment",
+      "source": [
+        {
+          "pointer": "#/paths/~1tasks~1{taskID}~1comments/put",
+          "rule": "collection creation with 201 plus unique item GET"
+        },
+        {
+          "pointer": "#/paths/~1tasks~1{taskID}~1comments~1{commentID}/get",
+          "rule": "response id convention; route parameter matched to property"
+        },
+        {
+          "pointer": "#/paths/~1tasks~1{taskID}~1comments/put",
+          "rule": "PATH_PARENT_FROM_SELECTED_COLLECTION_PREFIX",
+          "target": "ModelsTask"
+        }
+      ],
+      "create_dependencies": [
+        {
+          "field": "taskID",
+          "target": "ModelsTask",
+          "object": false,
+          "path_only": true,
+          "pointer": "#/paths/~1tasks~1{taskID}~1comments/put"
+        }
+      ],
+      "embedded_links": [],
+      "identity_mode": "object",
+      "readback": "request-derived projection plus stable identity",
+      "update_field": null,
+      "delete": "not emitted: absence response is not explicitly documented",
+      "complex_actions": "not emitted: transition effects are not specified by schemas alone"
+    },
+    {
+      "entity": "ModelsTeam",
+      "source": [
+        {
+          "pointer": "#/paths/~1teams/put",
+          "rule": "collection creation with 201 plus unique item GET"
+        },
+        {
+          "pointer": "#/paths/~1teams~1{id}/get",
+          "rule": "response id convention; route parameter matched to property"
+        }
+      ],
+      "create_dependencies": [],
+      "embedded_links": [],
+      "identity_mode": "object",
+      "readback": "request-derived projection plus stable identity",
+      "update_field": "description",
+      "delete": "not emitted: absence response is not explicitly documented",
+      "complex_actions": "not emitted: transition effects are not specified by schemas alone"
+    },
+    {
+      "entity": "ModelsSavedFilter",
+      "source": [
+        {
+          "pointer": "#/paths/~1filters/put",
+          "rule": "collection creation with 201 plus unique item GET"
+        },
+        {
+          "pointer": "#/paths/~1filters~1{id}/get",
+          "rule": "response id convention; route parameter matched to property"
+        },
+        {
+          "pointer": "#/paths/~1filters/put/requestBody",
+          "rule": "EXPLICIT_EXTERNAL_REQUEST_MAPPING",
+          "mapping_id": "saved-filter-create-request-v073",
+          "source_authority": "RESEARCH_MAPPING_NOT_DECLARED_REQUEST_SCHEMA",
+          "validation_requirement": "Create generated title plus filters.filter; independent GET confirms ID and request-derived title/query projection",
+          "evidence": {
+            "contract_pointer": "#/definitions/models.SavedFilter/properties/title",
+            "official_documentation": "https://vikunja.io/help/saved-filters/",
+            "observation": "v070 sent {} and received 412; this mapping is an explicit positive-input hypothesis, not an automatically inferred request schema",
+            "live_evidence": "review_v072.zip: HTTP 412, invalid_fields=[filters: non zero value required]",
+            "filters_source_pointer": "#/definitions/models.SavedFilter/properties/filters",
+            "query_source_pointer": "#/definitions/models.TaskCollection/properties/filter",
+            "fixture_default_source": "https://vikunja.io/help/saved-filters/ (default new saved-filter query: done = false)",
+            "fixture_policy": "Explicit minimal positive-input fixture, not a claim that all request bodies must use this query"
+          }
+        }
+      ],
+      "create_dependencies": [],
+      "embedded_links": [],
+      "identity_mode": "object",
+      "readback": "request-derived projection plus stable identity",
+      "update_field": null,
+      "delete": "not emitted: absence response is not explicitly documented",
+      "complex_actions": "not emitted: transition effects are not specified by schemas alone"
+    },
+    {
+      "entity": "ModelsLinkSharing",
+      "source": [
+        {
+          "pointer": "#/paths/~1projects~1{project}~1shares/put",
+          "rule": "collection creation with 201 plus unique item GET"
+        },
+        {
+          "pointer": "#/paths/~1projects~1{project}~1shares~1{share}/get",
+          "rule": "response id convention; route parameter matched to property"
+        },
+        {
+          "pointer": "#/paths/~1projects~1{project}~1shares/put",
+          "rule": "PATH_PARENT_FROM_SELECTED_COLLECTION_PREFIX",
+          "target": "ModelsProject"
+        }
+      ],
+      "create_dependencies": [
+        {
+          "field": "project",
+          "target": "ModelsProject",
+          "object": false,
+          "path_only": true,
+          "pointer": "#/paths/~1projects~1{project}~1shares/put"
+        }
+      ],
+      "embedded_links": [],
+      "identity_mode": "object",
+      "readback": "request-derived projection plus stable identity",
+      "update_field": null,
+      "delete": "not emitted: absence response is not explicitly documented",
+      "complex_actions": "not emitted: transition effects are not specified by schemas alone"
+    }
+  ],
+  "shared_session_workflows": [
+    {
+      "case_id": "WORK_A_ModelsProject_1",
+      "logical_id": "ModelsProject_1",
+      "session": "A",
+      "entity": "ModelsProject",
+      "fields": [
+        "description",
+        "hex_color",
+        "identifier",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "background_blur_hash",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "background_information",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_archived",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_favorite",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "max_permission",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "owner",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "parent_project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "subscription",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "views",
+          "reason": "unsupported scalar/format/domain constraint"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsProject_1",
+      "logical_id": "ModelsProject_1",
+      "session": "B",
+      "entity": "ModelsProject",
+      "fields": [
+        "description",
+        "hex_color",
+        "identifier",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "background_blur_hash",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "background_information",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_archived",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_favorite",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "max_permission",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "owner",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "parent_project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "subscription",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "views",
+          "reason": "unsupported scalar/format/domain constraint"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsProject_2",
+      "logical_id": "ModelsProject_2",
+      "session": "A",
+      "entity": "ModelsProject",
+      "fields": [
+        "description",
+        "hex_color",
+        "identifier",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "background_blur_hash",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "background_information",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_archived",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_favorite",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "max_permission",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "owner",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "parent_project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "subscription",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "views",
+          "reason": "unsupported scalar/format/domain constraint"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsProject_2",
+      "logical_id": "ModelsProject_2",
+      "session": "B",
+      "entity": "ModelsProject",
+      "fields": [
+        "description",
+        "hex_color",
+        "identifier",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "background_blur_hash",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "background_information",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_archived",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_favorite",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "max_permission",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "owner",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "parent_project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "subscription",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "views",
+          "reason": "unsupported scalar/format/domain constraint"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsProject_3",
+      "logical_id": "ModelsProject_3",
+      "session": "A",
+      "entity": "ModelsProject",
+      "fields": [
+        "description",
+        "hex_color",
+        "identifier",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "background_blur_hash",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "background_information",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_archived",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_favorite",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "max_permission",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "owner",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "parent_project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "subscription",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "views",
+          "reason": "unsupported scalar/format/domain constraint"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsProject_3",
+      "logical_id": "ModelsProject_3",
+      "session": "B",
+      "entity": "ModelsProject",
+      "fields": [
+        "description",
+        "hex_color",
+        "identifier",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "background_blur_hash",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "background_information",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_archived",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_favorite",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "max_permission",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "owner",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "parent_project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "subscription",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "views",
+          "reason": "unsupported scalar/format/domain constraint"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsTask_1",
+      "logical_id": "ModelsTask_1",
+      "session": "A",
+      "entity": "ModelsTask",
+      "fields": [
+        "description",
+        "hex_color",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "assignees",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "attachments",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "buckets",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "comment_count",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "comments",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "cover_image_attachment_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "deleted_at",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "done",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "done_at",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "due_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "end_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "identifier",
+          "reason": "description-derived observation; writable semantics unresolved"
+        },
+        {
+          "field": "index",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_favorite",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_unread",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "labels",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "percent_done",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "priority",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "reactions",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "related_tasks",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "reminders",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "repeat_after",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "repeat_mode",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "start_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "subscription",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "time_entries_count",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsTask_1",
+      "logical_id": "ModelsTask_1",
+      "session": "B",
+      "entity": "ModelsTask",
+      "fields": [
+        "description",
+        "hex_color",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "assignees",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "attachments",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "buckets",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "comment_count",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "comments",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "cover_image_attachment_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "deleted_at",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "done",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "done_at",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "due_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "end_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "identifier",
+          "reason": "description-derived observation; writable semantics unresolved"
+        },
+        {
+          "field": "index",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_favorite",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_unread",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "labels",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "percent_done",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "priority",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "reactions",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "related_tasks",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "reminders",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "repeat_after",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "repeat_mode",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "start_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "subscription",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "time_entries_count",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsTask_2",
+      "logical_id": "ModelsTask_2",
+      "session": "A",
+      "entity": "ModelsTask",
+      "fields": [
+        "description",
+        "hex_color",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "assignees",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "attachments",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "buckets",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "comment_count",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "comments",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "cover_image_attachment_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "deleted_at",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "done",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "done_at",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "due_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "end_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "identifier",
+          "reason": "description-derived observation; writable semantics unresolved"
+        },
+        {
+          "field": "index",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_favorite",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_unread",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "labels",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "percent_done",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "priority",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "reactions",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "related_tasks",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "reminders",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "repeat_after",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "repeat_mode",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "start_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "subscription",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "time_entries_count",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsTask_2",
+      "logical_id": "ModelsTask_2",
+      "session": "B",
+      "entity": "ModelsTask",
+      "fields": [
+        "description",
+        "hex_color",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "assignees",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "attachments",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "buckets",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "comment_count",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "comments",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "cover_image_attachment_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "deleted_at",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "done",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "done_at",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "due_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "end_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "identifier",
+          "reason": "description-derived observation; writable semantics unresolved"
+        },
+        {
+          "field": "index",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_favorite",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_unread",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "labels",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "percent_done",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "priority",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "reactions",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "related_tasks",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "reminders",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "repeat_after",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "repeat_mode",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "start_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "subscription",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "time_entries_count",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsTask_3",
+      "logical_id": "ModelsTask_3",
+      "session": "A",
+      "entity": "ModelsTask",
+      "fields": [
+        "description",
+        "hex_color",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "assignees",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "attachments",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "buckets",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "comment_count",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "comments",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "cover_image_attachment_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "deleted_at",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "done",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "done_at",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "due_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "end_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "identifier",
+          "reason": "description-derived observation; writable semantics unresolved"
+        },
+        {
+          "field": "index",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_favorite",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_unread",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "labels",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "percent_done",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "priority",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "reactions",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "related_tasks",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "reminders",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "repeat_after",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "repeat_mode",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "start_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "subscription",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "time_entries_count",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsTask_3",
+      "logical_id": "ModelsTask_3",
+      "session": "B",
+      "entity": "ModelsTask",
+      "fields": [
+        "description",
+        "hex_color",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "assignees",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "attachments",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "buckets",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "comment_count",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "comments",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "cover_image_attachment_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "deleted_at",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "done",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "done_at",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "due_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "end_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "identifier",
+          "reason": "description-derived observation; writable semantics unresolved"
+        },
+        {
+          "field": "index",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_favorite",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_unread",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "labels",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "percent_done",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "priority",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "reactions",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "related_tasks",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "reminders",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "repeat_after",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "repeat_mode",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "start_date",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "subscription",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "time_entries_count",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsLabel_1",
+      "logical_id": "ModelsLabel_1",
+      "session": "A",
+      "entity": "ModelsLabel",
+      "fields": [
+        "description",
+        "hex_color",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsLabel_1",
+      "logical_id": "ModelsLabel_1",
+      "session": "B",
+      "entity": "ModelsLabel",
+      "fields": [
+        "description",
+        "hex_color",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsLabel_2",
+      "logical_id": "ModelsLabel_2",
+      "session": "A",
+      "entity": "ModelsLabel",
+      "fields": [
+        "description",
+        "hex_color",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsLabel_2",
+      "logical_id": "ModelsLabel_2",
+      "session": "B",
+      "entity": "ModelsLabel",
+      "fields": [
+        "description",
+        "hex_color",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsLabel_3",
+      "logical_id": "ModelsLabel_3",
+      "session": "A",
+      "entity": "ModelsLabel",
+      "fields": [
+        "description",
+        "hex_color",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsLabel_3",
+      "logical_id": "ModelsLabel_3",
+      "session": "B",
+      "entity": "ModelsLabel",
+      "fields": [
+        "description",
+        "hex_color",
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsProjectView_1",
+      "logical_id": "ModelsProjectView_1",
+      "session": "A",
+      "entity": "ModelsProjectView",
+      "fields": [
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "bucket_configuration",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "bucket_configuration_mode",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "default_bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "done_bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "filter",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "view_kind",
+          "reason": "unsupported scalar/format/domain constraint"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsProjectView_1",
+      "logical_id": "ModelsProjectView_1",
+      "session": "B",
+      "entity": "ModelsProjectView",
+      "fields": [
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "bucket_configuration",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "bucket_configuration_mode",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "default_bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "done_bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "filter",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "view_kind",
+          "reason": "unsupported scalar/format/domain constraint"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsProjectView_2",
+      "logical_id": "ModelsProjectView_2",
+      "session": "A",
+      "entity": "ModelsProjectView",
+      "fields": [
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "bucket_configuration",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "bucket_configuration_mode",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "default_bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "done_bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "filter",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "view_kind",
+          "reason": "unsupported scalar/format/domain constraint"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsProjectView_2",
+      "logical_id": "ModelsProjectView_2",
+      "session": "B",
+      "entity": "ModelsProjectView",
+      "fields": [
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "bucket_configuration",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "bucket_configuration_mode",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "default_bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "done_bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "filter",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "view_kind",
+          "reason": "unsupported scalar/format/domain constraint"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsProjectView_3",
+      "logical_id": "ModelsProjectView_3",
+      "session": "A",
+      "entity": "ModelsProjectView",
+      "fields": [
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "bucket_configuration",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "bucket_configuration_mode",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "default_bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "done_bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "filter",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "view_kind",
+          "reason": "unsupported scalar/format/domain constraint"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsProjectView_3",
+      "logical_id": "ModelsProjectView_3",
+      "session": "B",
+      "entity": "ModelsProjectView",
+      "fields": [
+        "title"
+      ],
+      "blocked_fields": [
+        {
+          "field": "bucket_configuration",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "bucket_configuration_mode",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "default_bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "done_bucket_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "filter",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "position",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "project_id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "view_kind",
+          "reason": "unsupported scalar/format/domain constraint"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsTaskComment_1",
+      "logical_id": "ModelsTaskComment_1",
+      "session": "A",
+      "entity": "ModelsTaskComment",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_B_ModelsTaskComment_1",
+      "logical_id": "ModelsTaskComment_1",
+      "session": "B",
+      "entity": "ModelsTaskComment",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_A_ModelsTaskComment_2",
+      "logical_id": "ModelsTaskComment_2",
+      "session": "A",
+      "entity": "ModelsTaskComment",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_B_ModelsTaskComment_2",
+      "logical_id": "ModelsTaskComment_2",
+      "session": "B",
+      "entity": "ModelsTaskComment",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_A_ModelsTaskComment_3",
+      "logical_id": "ModelsTaskComment_3",
+      "session": "A",
+      "entity": "ModelsTaskComment",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_B_ModelsTaskComment_3",
+      "logical_id": "ModelsTaskComment_3",
+      "session": "B",
+      "entity": "ModelsTaskComment",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_A_ModelsTeam_1",
+      "logical_id": "ModelsTeam_1",
+      "session": "A",
+      "entity": "ModelsTeam",
+      "fields": [
+        "description",
+        "name"
+      ],
+      "blocked_fields": [
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "external_id",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_public",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "members",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsTeam_1",
+      "logical_id": "ModelsTeam_1",
+      "session": "B",
+      "entity": "ModelsTeam",
+      "fields": [
+        "description",
+        "name"
+      ],
+      "blocked_fields": [
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "external_id",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_public",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "members",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsTeam_2",
+      "logical_id": "ModelsTeam_2",
+      "session": "A",
+      "entity": "ModelsTeam",
+      "fields": [
+        "description",
+        "name"
+      ],
+      "blocked_fields": [
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "external_id",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_public",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "members",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsTeam_2",
+      "logical_id": "ModelsTeam_2",
+      "session": "B",
+      "entity": "ModelsTeam",
+      "fields": [
+        "description",
+        "name"
+      ],
+      "blocked_fields": [
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "external_id",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_public",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "members",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsTeam_3",
+      "logical_id": "ModelsTeam_3",
+      "session": "A",
+      "entity": "ModelsTeam",
+      "fields": [
+        "description",
+        "name"
+      ],
+      "blocked_fields": [
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "external_id",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_public",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "members",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_B_ModelsTeam_3",
+      "logical_id": "ModelsTeam_3",
+      "session": "B",
+      "entity": "ModelsTeam",
+      "fields": [
+        "description",
+        "name"
+      ],
+      "blocked_fields": [
+        {
+          "field": "created",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "created_by",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "external_id",
+          "reason": "identity/temporal/server metadata candidate"
+        },
+        {
+          "field": "id",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "is_public",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "members",
+          "reason": "unsupported scalar/format/domain constraint"
+        },
+        {
+          "field": "updated",
+          "reason": "identity/temporal/server metadata candidate"
+        }
+      ],
+      "behavior_kind": "UPDATE_AND_READ"
+    },
+    {
+      "case_id": "WORK_A_ModelsSavedFilter_1",
+      "logical_id": "ModelsSavedFilter_1",
+      "session": "A",
+      "entity": "ModelsSavedFilter",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_B_ModelsSavedFilter_1",
+      "logical_id": "ModelsSavedFilter_1",
+      "session": "B",
+      "entity": "ModelsSavedFilter",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_A_ModelsSavedFilter_2",
+      "logical_id": "ModelsSavedFilter_2",
+      "session": "A",
+      "entity": "ModelsSavedFilter",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_B_ModelsSavedFilter_2",
+      "logical_id": "ModelsSavedFilter_2",
+      "session": "B",
+      "entity": "ModelsSavedFilter",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_A_ModelsSavedFilter_3",
+      "logical_id": "ModelsSavedFilter_3",
+      "session": "A",
+      "entity": "ModelsSavedFilter",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_B_ModelsSavedFilter_3",
+      "logical_id": "ModelsSavedFilter_3",
+      "session": "B",
+      "entity": "ModelsSavedFilter",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_A_ModelsLinkSharing_1",
+      "logical_id": "ModelsLinkSharing_1",
+      "session": "A",
+      "entity": "ModelsLinkSharing",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_B_ModelsLinkSharing_1",
+      "logical_id": "ModelsLinkSharing_1",
+      "session": "B",
+      "entity": "ModelsLinkSharing",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_A_ModelsLinkSharing_2",
+      "logical_id": "ModelsLinkSharing_2",
+      "session": "A",
+      "entity": "ModelsLinkSharing",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_B_ModelsLinkSharing_2",
+      "logical_id": "ModelsLinkSharing_2",
+      "session": "B",
+      "entity": "ModelsLinkSharing",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_A_ModelsLinkSharing_3",
+      "logical_id": "ModelsLinkSharing_3",
+      "session": "A",
+      "entity": "ModelsLinkSharing",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    },
+    {
+      "case_id": "WORK_B_ModelsLinkSharing_3",
+      "logical_id": "ModelsLinkSharing_3",
+      "session": "B",
+      "entity": "ModelsLinkSharing",
+      "fields": [],
+      "blocked_fields": [],
+      "behavior_kind": "READ_ONLY"
+    }
+  ],
+  "negative_checks": 8,
+  "warnings": [],
+  "missing_information_policy": "block",
+  "native_execution": false,
+  "live_execution": false,
+  "file_sha256": {
+    "spec/js/dal.js": "287049cefe0832d86d4b3318b882511a12013bde192eee3fb796d96d3a2e1d80",
+    "spec/js/interfaces.vikunja.js": "ad0f0a630548d77a3ee96b9e6c15730e257c8c1c34525c37bb6e5e23e2e54eaf",
+    "spec/js/stories.vikunja.js": "3f544069942ca21e877aaba33f95202467b678959411f1929da73a103a176fc7"
+  }
+}
